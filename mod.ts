@@ -1,1 +1,1 @@
-export { helloWorld } from "./hello-world";
+export { sayHello } from "./say-hello";

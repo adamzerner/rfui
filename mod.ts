@@ -1,5 +1,5 @@
-export { sayHello } from "./say-hello";
-
+import { sayHello } from "./say-hello";
+export { sayHello }
 /**
  * This is a description of the `addOne` function.
  * 

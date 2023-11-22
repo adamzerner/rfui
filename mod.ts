@@ -1,5 +1,5 @@
-import { sayHello } from "./say-hello";
-export { sayHello }
+export { sayHello } from "./say-hello.ts" assert { type: "export" };
+
 /**
  * This is a description of the `addOne` function.
  * 

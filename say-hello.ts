@@ -1,10 +1,9 @@
 /**
  * This is a description of the `sayHello` function.
  * 
- * @function
+ * @function sayHello
  * @example
- * // returns 'Hello Alice'
- * `sayHello('Alice')`;
+ * sayHello('Alice') // 'Hello Alice'
  */
 export const sayHello = (name: string) => {
   return `Hello ${name}`;

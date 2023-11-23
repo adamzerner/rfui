@@ -12,6 +12,9 @@ export default () => {
           <li>
             <Link href="/atoms/link">Link</Link>
           </li>
+          <li>
+            <Link href="/atoms/new-tab-icon">NewTabIcon</Link>
+          </li>
         </ul>
       </div>
       <div>

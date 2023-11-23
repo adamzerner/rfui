@@ -32,6 +32,17 @@ export const Button = (
   let className = "";
 
   className += " " + (() => {
+    switch (kind) {
+      case "primary":
+        return "bg-primary-500 text-primary-50 hover:bg-primary-300";
+      case "secondary":
+        return "border-1 border-neutral-500 hover:bg-neutral-100";
+      case "tertiary":
+        return "underline";
+    }
+  })();
+
+  className += " " + (() => {
     switch (size) {
       case "sm":
         return "px-2 py-1";
@@ -45,17 +56,6 @@ export const Button = (
   })();
 
   className += " " + (() => {
-    switch (kind) {
-      case "primary":
-        return "bg-primary-500 text-primary-50 hover:bg-primary-300";
-      case "secondary":
-        return "border-1 border-neutral-500 hover:bg-neutral-100";
-      case "tertiary":
-        return "underline";
-    }
-  })();
-
-  className += " " + (() => {
     switch (rounded) {
       case "sm":
         return "rounded";
@@ -65,6 +65,19 @@ export const Button = (
         return "rounded-full";
       case "square":
         return "rounded-none";
+    }
+  })();
+
+  className += " " + (() => {
+    if (rest.disabled) {
+      switch (kind) {
+        case "primary":
+          return "cursor-not-allowed bg-primary-300";
+        case "secondary":
+          return "cursor-not-allowed text-neutral-500 border-neutral-300 hover:bg-[#fff]";
+        case "tertiary":
+          return "cursor-not-allowed underline text-neutral-500";
+      }
     }
   })();
 

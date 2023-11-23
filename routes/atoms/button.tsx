@@ -95,6 +95,15 @@ export default () => {
             <Button kind="secondary" _rightIcon={<span>→</span>}>next</Button>
           </div>
         </Examples>
+        <Examples title="Disabled">
+          <div class="flex gap-3">
+            <Button disabled={true} kind="primary">
+              previous
+            </Button>
+            <Button disabled={true} kind="secondary">previous</Button>
+            <Button disabled={true} kind="tertiary">previous</Button>
+          </div>
+        </Examples>
       </div>
     </>
   );

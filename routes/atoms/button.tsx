@@ -18,90 +18,103 @@ export default () => {
         <Examples title="Kind">
           <div class="flex gap-3">
             <Button kind="primary">
-              submit
+              Submit
             </Button>
-            <Button kind="secondary">submit</Button>
-            <Button kind="tertiary">submit</Button>
+            <Button kind="secondary">Submit</Button>
+            <Button kind="tertiary">Submit</Button>
           </div>
         </Examples>
         <Examples title="Size">
           <div class="flex gap-3">
             <Button kind="primary" size="sm">
-              submit
+              Submit
             </Button>
-            <Button kind="secondary" size="sm">submit</Button>
-            <Button kind="tertiary" size="sm">submit</Button>
+            <Button kind="secondary" size="sm">Submit</Button>
+            <Button kind="tertiary" size="sm">Submit</Button>
           </div>
           <div class="flex gap-3">
             <Button kind="primary" size="md">
-              submit
+              Submit
             </Button>
-            <Button kind="secondary" size="md">submit</Button>
-            <Button kind="tertiary" size="md">submit</Button>
+            <Button kind="secondary" size="md">Submit</Button>
+            <Button kind="tertiary" size="md">Submit</Button>
           </div>
           <div class="flex gap-3">
             <Button kind="primary" size="lg">
-              submit
+              Submit
             </Button>
-            <Button kind="secondary" size="lg">submit</Button>
-            <Button kind="tertiary" size="lg">submit</Button>
+            <Button kind="secondary" size="lg">Submit</Button>
+            <Button kind="tertiary" size="lg">Submit</Button>
           </div>
           <div class="w-full flex flex-col gap-3">
-            <Button kind="primary" size="block">submit</Button>
-            <Button kind="secondary" size="block">submit</Button>
+            <Button kind="primary" size="block">Submit</Button>
+            <Button kind="secondary" size="block">Submit</Button>
           </div>
         </Examples>
         <Examples title="Rounded">
           <div class="flex gap-3">
             <Button kind="primary" rounded="square">
-              submit
+              Submit
             </Button>
-            <Button kind="secondary" rounded="square">submit</Button>
-            <Button kind="tertiary" rounded="square">submit</Button>
+            <Button kind="secondary" rounded="square">Submit</Button>
+            <Button kind="tertiary" rounded="square">Submit</Button>
           </div>
           <div class="flex gap-3">
             <Button kind="primary" rounded="sm">
-              submit
+              Submit
             </Button>
-            <Button kind="secondary" rounded="sm">submit</Button>
-            <Button kind="tertiary" rounded="sm">submit</Button>
+            <Button kind="secondary" rounded="sm">Submit</Button>
+            <Button kind="tertiary" rounded="sm">Submit</Button>
           </div>
           <div class="flex gap-3">
             <Button kind="primary" rounded="lg">
-              submit
+              Submit
             </Button>
-            <Button kind="secondary" rounded="lg">submit</Button>
-            <Button kind="tertiary" rounded="lg">submit</Button>
+            <Button kind="secondary" rounded="lg">Submit</Button>
+            <Button kind="tertiary" rounded="lg">Submit</Button>
           </div>
           <div class="flex gap-3">
             <Button kind="primary" rounded="full">
-              submit
+              Submit
             </Button>
-            <Button kind="secondary" rounded="full">submit</Button>
-            <Button kind="tertiary" rounded="full">submit</Button>
+            <Button kind="secondary" rounded="full">Submit</Button>
+            <Button kind="tertiary" rounded="full">Submit</Button>
           </div>
         </Examples>
         <Examples title="Icon">
           <div class="flex gap-3">
             <Button kind="primary" icon={<span>←</span>}>
-              previous
+              Previous
             </Button>
-            <Button kind="secondary" icon={<span>←</span>}>previous</Button>
+            <Button kind="secondary" icon={<span>←</span>}>Previous</Button>
           </div>
           <div class="flex gap-3">
             <Button kind="primary" _rightIcon={<span>→</span>}>
-              next
+              Next
             </Button>
-            <Button kind="secondary" _rightIcon={<span>→</span>}>next</Button>
+            <Button kind="secondary" _rightIcon={<span>→</span>}>Next</Button>
           </div>
         </Examples>
         <Examples title="Disabled">
           <div class="flex gap-3">
             <Button disabled={true} kind="primary">
-              previous
+              Submit
             </Button>
-            <Button disabled={true} kind="secondary">previous</Button>
-            <Button disabled={true} kind="tertiary">previous</Button>
+            <Button disabled={true} kind="secondary">Submit</Button>
+            <Button disabled={true} kind="tertiary">Submit</Button>
+          </div>
+        </Examples>
+        <Examples title="Loading">
+          <div class="flex gap-3">
+            <Button kind="primary" isLoading loadingContent="Submitting...">
+              Submit
+            </Button>
+            <Button kind="secondary" isLoading loadingContent="Submitting...">
+              Submit
+            </Button>
+            <Button kind="tertiary" isLoading loadingContent="Submitting...">
+              Submit
+            </Button>
           </div>
         </Examples>
       </div>

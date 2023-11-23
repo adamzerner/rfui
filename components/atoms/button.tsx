@@ -1,6 +1,5 @@
 import type { JSX } from "preact";
 import { ComponentChild } from "preact";
-// TODO: disabled, isLoading
 /** *
  * @function Button
  *
@@ -16,6 +15,8 @@ export const Button = (
     kind = "secondary",
     size = "md",
     rounded = "sm",
+    isLoading = false,
+    loadingContent,
     icon,
     _rightIcon,
     children,
@@ -24,6 +25,8 @@ export const Button = (
     kind?: "primary" | "secondary" | "tertiary";
     size?: "sm" | "md" | "lg" | "block";
     rounded?: "sm" | "lg" | "full" | "square";
+    isLoading?: boolean;
+    loadingContent?: string | JSX.Element;
     icon?: JSX.Element;
     _rightIcon?: JSX.Element; // better to align left https://ux.stackexchange.com/q/56023/39046
     children: ComponentChild;
@@ -69,7 +72,7 @@ export const Button = (
   })();
 
   className += " " + (() => {
-    if (rest.disabled) {
+    if (rest.disabled || isLoading) {
       switch (kind) {
         case "primary":
           return "cursor-not-allowed bg-primary-300";
@@ -88,7 +91,7 @@ export const Button = (
   return (
     <button {...rest} class={className}>
       {icon && <span class="mr-1">{icon}</span>}
-      {children}
+      {isLoading && loadingContent ? loadingContent : children}
       {_rightIcon && <span class="ml-1">{_rightIcon}</span>}
     </button>
   );

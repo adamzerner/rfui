@@ -2,10 +2,8 @@ import { LayoutProps } from "$fresh/server.ts";
 
 export default ({ Component }: LayoutProps) => {
   return (
-    <div>
-      <nav>navbar</nav>
+    <div class="w-[900px] mx-auto mt-16 mb-6">
       <Component />
-      <footer>footer</footer>
     </div>
   );
 };

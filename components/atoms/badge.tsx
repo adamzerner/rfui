@@ -1,5 +1,7 @@
 import { ComponentChild, JSX } from "preact";
 
+// TODO: default with different colors; rounded (sm, lg, square, full); with icon
+
 /** *
  * @function Badge
  *

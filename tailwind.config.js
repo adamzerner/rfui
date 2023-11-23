@@ -1,5 +1,5 @@
 module.exports = {
-  theme: {
+    theme: {
     fontFamily: {
       sans: "concourse_3",
       serif: "equity_a",
@@ -81,4 +81,4 @@ module.exports = {
       },
     },
   },
-};
+}

@@ -1,5 +1,6 @@
 import type { JSX } from "preact";
 import { ComponentChild } from "preact";
+
 /** *
  * @function Button
  *
@@ -9,7 +10,6 @@ import { ComponentChild } from "preact";
  * @example
  * <Button type="primary">Submit</Button>
  */
-
 export const Button = (
   {
     kind = "secondary",

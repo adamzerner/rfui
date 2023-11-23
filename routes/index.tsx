@@ -5,7 +5,7 @@ export default () => {
         <div>Atoms</div>
         <ul class="list-disc list-inside">
           <li>
-            <a href="/atoms/button">Button</a>
+            <a href="/atoms/button" class="underline">Button</a>
           </li>
         </ul>
       </div>

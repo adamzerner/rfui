@@ -17,3 +17,9 @@ To create a new version of this library:
 - Use https://github.com/adamzerner/rfui/releases/new
 - Update CHANGELOG.md
 - Follow [semantic versioning](https://semver.org/)
+
+## Philosophy
+
+1. Scale down
+2. Limit your choices
+3. Prioritize documentation

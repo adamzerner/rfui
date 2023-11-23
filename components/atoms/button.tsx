@@ -1,7 +1,7 @@
 import type { JSX } from "preact";
 import { ComponentChild } from "preact";
 
-// TODO: isLoading, icon, disabled
+// TODO: disabled, icon, isLoading
 /**
  * This is a description of the `sayHello` function.
  *

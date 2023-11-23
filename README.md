@@ -9,3 +9,11 @@ It is currently in a very early stage. See the
 I am following the
 [Atomic Design Methodlogy](https://atomicdesign.bradfrost.com/chapter-2/) by
 breaking components into "atoms", "molecules" and organisms.
+
+## Versioning
+
+To create a new version of this library:
+
+- Use https://github.com/adamzerner/rfui/releases/new
+- Update CHANGELOG.md
+- Follow [semantic versioning](https://semver.org/)

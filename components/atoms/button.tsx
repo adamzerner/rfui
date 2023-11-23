@@ -1,6 +1,6 @@
 import type { JSX } from "preact";
 import { ComponentChild } from "preact";
-// TODO: icon, disabled, isLoading, JSDoc
+// TODO: disabled, isLoading, JSDoc
 /**
  * This is a description of the `sayHello` function.
  *
@@ -12,25 +12,25 @@ import { ComponentChild } from "preact";
 export const Button = (
   {
     kind = "secondary",
-    sz = "md",
+    size = "md",
     rounded = "sm",
-    leftIcon,
+    icon,
     _rightIcon,
     children,
     ...rest
   }: {
     kind?: "primary" | "secondary" | "tertiary";
-    sz?: "sm" | "md" | "lg" | "block";
+    size?: "sm" | "md" | "lg" | "block";
     rounded?: "sm" | "lg" | "full" | "square";
-    leftIcon?: JSX.Element;
+    icon?: JSX.Element;
     _rightIcon?: JSX.Element; // better to align left https://ux.stackexchange.com/q/56023/39046
     children: ComponentChild;
-  } & JSX.HTMLAttributes<HTMLButtonElement>,
+  } & Omit<JSX.HTMLAttributes<HTMLButtonElement>, "icon" | "size">,
 ) => {
   let className = "";
 
   className += " " + (() => {
-    switch (sz) {
+    switch (size) {
       case "sm":
         return "px-2 py-1";
       case "md":
@@ -72,7 +72,7 @@ export const Button = (
 
   return (
     <button {...rest} class={className}>
-      {leftIcon && <span class="mr-1">{leftIcon}</span>}
+      {icon && <span class="mr-1">{icon}</span>}
       {children}
       {_rightIcon && <span class="ml-1">{_rightIcon}</span>}
     </button>

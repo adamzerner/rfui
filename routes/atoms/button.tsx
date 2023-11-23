@@ -26,29 +26,29 @@ export default () => {
         </Examples>
         <Examples title="Size">
           <div class="flex gap-3">
-            <Button kind="primary" sz="sm">
+            <Button kind="primary" size="sm">
               submit
             </Button>
-            <Button kind="secondary" sz="sm">submit</Button>
-            <Button kind="tertiary" sz="sm">submit</Button>
+            <Button kind="secondary" size="sm">submit</Button>
+            <Button kind="tertiary" size="sm">submit</Button>
           </div>
           <div class="flex gap-3">
-            <Button kind="primary" sz="md">
+            <Button kind="primary" size="md">
               submit
             </Button>
-            <Button kind="secondary" sz="md">submit</Button>
-            <Button kind="tertiary" sz="md">submit</Button>
+            <Button kind="secondary" size="md">submit</Button>
+            <Button kind="tertiary" size="md">submit</Button>
           </div>
           <div class="flex gap-3">
-            <Button kind="primary" sz="lg">
+            <Button kind="primary" size="lg">
               submit
             </Button>
-            <Button kind="secondary" sz="lg">submit</Button>
-            <Button kind="tertiary" sz="lg">submit</Button>
+            <Button kind="secondary" size="lg">submit</Button>
+            <Button kind="tertiary" size="lg">submit</Button>
           </div>
           <div class="w-full flex flex-col gap-3">
-            <Button kind="primary" sz="block">submit</Button>
-            <Button kind="secondary" sz="block">submit</Button>
+            <Button kind="primary" size="block">submit</Button>
+            <Button kind="secondary" size="block">submit</Button>
           </div>
         </Examples>
         <Examples title="Rounded">
@@ -83,10 +83,10 @@ export default () => {
         </Examples>
         <Examples title="Icon">
           <div class="flex gap-3">
-            <Button kind="primary" leftIcon={<span>←</span>}>
+            <Button kind="primary" icon={<span>←</span>}>
               previous
             </Button>
-            <Button kind="secondary" leftIcon={<span>←</span>}>previous</Button>
+            <Button kind="secondary" icon={<span>←</span>}>previous</Button>
           </div>
           <div class="flex gap-3">
             <Button kind="primary" _rightIcon={<span>→</span>}>

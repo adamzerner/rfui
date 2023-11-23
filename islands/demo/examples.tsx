@@ -5,7 +5,7 @@ export const Examples = (
 ) => {
   return (
     <div>
-      <div class="mb-12">
+      <div class="mb-8">
         <a
           href={githubUrl}
           class="underline"
@@ -15,7 +15,7 @@ export const Examples = (
           {githubUrl}
         </a>
       </div>
-      <div class="flex flex-col gap-8 items-start">{children}</div>
+      <div class="flex flex-col gap-7 items-start">{children}</div>
     </div>
   );
 };

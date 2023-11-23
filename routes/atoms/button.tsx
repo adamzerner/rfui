@@ -4,7 +4,8 @@ import { Examples } from "@/islands/demo/examples.tsx";
 export default () => {
   return (
     <div class="flex flex-col gap-8">
-      <Examples title="Source code">
+      <div>
+        <div class="text-2xl mb-3">Source code</div>
         <a
           href="https://github.com/adamzerner/rfui/blob/master/routes/atoms/button.tsx"
           class="underline"
@@ -13,7 +14,7 @@ export default () => {
         >
           https://github.com/adamzerner/rfui/blob/master/routes/atoms/button.tsx
         </a>
-      </Examples>
+      </div>
       <Examples title="Kind">
         <div class="flex gap-3">
           <Button kind="primary">

@@ -1,3 +1,5 @@
+import { Link } from "@/components/atoms/link.tsx";
+
 export default () => {
   return (
     <div class="flex flex-col gap-5">
@@ -5,7 +7,10 @@ export default () => {
         <div>Atoms</div>
         <ul class="list-disc list-inside">
           <li>
-            <a href="/atoms/button" class="underline">Button</a>
+            <Link href="/atoms/button">Button</Link>
+          </li>
+          <li>
+            <Link href="/atoms/link">Link</Link>
           </li>
         </ul>
       </div>

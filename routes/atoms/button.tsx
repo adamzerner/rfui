@@ -49,7 +49,6 @@ export default () => {
           <div class="w-full flex flex-col gap-3">
             <Button kind="primary" sz="block">submit</Button>
             <Button kind="secondary" sz="block">submit</Button>
-            <Button kind="tertiary" sz="block">submit</Button>
           </div>
         </Examples>
         <Examples title="Rounded">
@@ -80,6 +79,20 @@ export default () => {
             </Button>
             <Button kind="secondary" rounded="full">submit</Button>
             <Button kind="tertiary" rounded="full">submit</Button>
+          </div>
+        </Examples>
+        <Examples title="Icon">
+          <div class="flex gap-3">
+            <Button kind="primary" leftIcon={<span>←</span>}>
+              previous
+            </Button>
+            <Button kind="secondary" leftIcon={<span>←</span>}>previous</Button>
+          </div>
+          <div class="flex gap-3">
+            <Button kind="primary" _rightIcon={<span>→</span>}>
+              next
+            </Button>
+            <Button kind="secondary" _rightIcon={<span>→</span>}>next</Button>
           </div>
         </Examples>
       </div>

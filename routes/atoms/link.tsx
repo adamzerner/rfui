@@ -1,4 +1,4 @@
-import { Button } from "@/components/atoms/button.tsx";
+import { Link } from "@/components/atoms/link.tsx";
 import { Examples } from "@/islands/demo/examples.tsx";
 
 export default () => {
@@ -6,22 +6,54 @@ export default () => {
     <div class="flex flex-col gap-8">
       <div>
         <div class="text-2xl mb-3">Source code</div>
-        <a
-          href="https://github.com/adamzerner/rfui/blob/master/routes/atoms/link.tsx"
-          class="underline"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
+        <Link href="https://github.com/adamzerner/rfui/blob/master/routes/atoms/link.tsx">
           https://github.com/adamzerner/rfui/blob/master/routes/atoms/link.tsx
-        </a>
+        </Link>
       </div>
-      <Examples title="Kind">
+      <Examples title="Underline">
         <div class="flex gap-3">
-          <Button kind="primary">
-            Submit
-          </Button>
-          <Button kind="secondary">Submit</Button>
-          <Button kind="tertiary">Submit</Button>
+          <Link underline="always" href="https://example.com">always</Link>
+          <Link underline="hover" href="https://example.com">hover</Link>
+          <Link underline="none" href="https://example.com">none</Link>
+        </div>
+      </Examples>
+      <Examples title="New tab">
+        <div class="flex gap-3">
+          <Link _newTab href="https://example.com" underline="always">
+            _newTab
+          </Link>
+          <Link _newTab href="https://example.com" underline="hover">
+            _newTab
+          </Link>
+          <Link _newTab href="https://example.com" underline="none">
+            _newTab
+          </Link>
+        </div>
+        <div class="flex gap-3">
+          <Link
+            _newTab
+            _includeNewTabIcon
+            href="https://example.com"
+            underline="always"
+          >
+            _newTab _includeNewTabIcon
+          </Link>
+          <Link
+            _newTab
+            _includeNewTabIcon
+            href="https://example.com"
+            underline="hover"
+          >
+            _newTab _includeNewTabIcon
+          </Link>
+          <Link
+            _newTab
+            _includeNewTabIcon
+            href="https://example.com"
+            underline="none"
+          >
+            _newTab _includeNewTabIcon
+          </Link>
         </div>
       </Examples>
     </div>

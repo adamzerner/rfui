@@ -4,11 +4,13 @@ import { ComponentChild } from "preact";
 /** *
  * @function Button
  *
- * @param icon An icon that will be placed to the left of the button's text. Placing it to the left as opposed to the right is a best practice. See https://ux.stackexchange.com/q/56023/39046
+ * @param icon An icon that will be placed to the left of the button's text. Placing it to the left as opposed to the right is a best practice. See https://ux.stackexchange.com/q/56023/39046.
  * @param _rightIcon An icon that will be placed to the right of the button's text. Typically not a good idea, but useful for something like "Next →".
  *
  * @example
  * <Button type="primary">Submit</Button>
+ * <Button isLoading loadingContent="Submitting...">Submit</Button>
+ * <Button isLoading loadingContent={<em>Submitting...</em>}>Submit</Button>
  */
 export const Button = (
   {

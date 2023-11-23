@@ -20,6 +20,9 @@ To create a new version of this library:
 
 ## Philosophy
 
-1. Scale down
-2. Limit your choices
-3. Prioritize documentation
+1. Opinionated
+2. Scale down
+3. Limit your choices
+4. Prioritize documentation
+5. Pit of success (eg. by providing tips and references to best practices, and
+   by prefixing with underscores)

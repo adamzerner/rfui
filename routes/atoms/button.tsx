@@ -1,4 +1,5 @@
 import { Button } from "@/components/atoms/button.tsx";
+import { Link } from "@/components/atoms/link.tsx";
 import { Examples } from "@/islands/demo/examples.tsx";
 
 export default () => {
@@ -6,14 +7,9 @@ export default () => {
     <div class="flex flex-col gap-8">
       <div>
         <div class="text-2xl mb-3">Source code</div>
-        <a
-          href="https://github.com/adamzerner/rfui/blob/master/routes/atoms/button.tsx"
-          class="underline"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
+        <Link href="https://github.com/adamzerner/rfui/blob/master/routes/atoms/button.tsx">
           https://github.com/adamzerner/rfui/blob/master/routes/atoms/button.tsx
-        </a>
+        </Link>
       </div>
       <Examples title="Kind">
         <div class="flex gap-3">

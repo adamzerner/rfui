@@ -46,6 +46,11 @@ export default () => {
             <Button kind="secondary" sz="lg">submit</Button>
             <Button kind="tertiary" sz="lg">submit</Button>
           </div>
+          <div class="w-full flex flex-col gap-3">
+            <Button kind="primary" sz="block">submit</Button>
+            <Button kind="secondary" sz="block">submit</Button>
+            <Button kind="tertiary" sz="block">submit</Button>
+          </div>
         </Examples>
         <Examples title="Rounded">
           <div class="flex gap-3">

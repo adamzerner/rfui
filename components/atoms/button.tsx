@@ -1,6 +1,7 @@
 import type { JSX } from "preact";
 import { ComponentChild } from "preact";
 
+// TODO: isLoading, icon, disabled
 /**
  * This is a description of the `sayHello` function.
  *
@@ -28,7 +29,7 @@ export const Button = (
       case "lg":
         return "px-4 py-3";
       case "block":
-        return "w-full px-4 py-3";
+        return "w-full px-4 py-2";
     }
   })();
 

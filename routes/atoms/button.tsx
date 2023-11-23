@@ -3,7 +3,7 @@ import { Examples } from "@/islands/demo/examples.tsx";
 
 export default () => {
   return (
-    <Examples>
+    <Examples githubUrl="https://github.com/adamzerner/rfui/blob/master/routes/atoms/button.tsx">
       <Button kind="primary">
         submit
       </Button>

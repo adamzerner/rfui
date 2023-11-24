@@ -8,7 +8,7 @@ import * as $2 from "./routes/_layout.tsx";
 import * as $3 from "./routes/atoms/badge.tsx";
 import * as $4 from "./routes/atoms/button.tsx";
 import * as $5 from "./routes/atoms/link.tsx";
-import * as $6 from "./routes/atoms/new-tab-icon.tsx";
+import * as $6 from "./routes/icons/new-tab-icon.tsx";
 import * as $7 from "./routes/index.tsx";
 import * as $$0 from "./islands/demo/example.tsx";
 import * as $$1 from "./islands/demo/examples.tsx";
@@ -21,7 +21,7 @@ const manifest = {
     "./routes/atoms/badge.tsx": $3,
     "./routes/atoms/button.tsx": $4,
     "./routes/atoms/link.tsx": $5,
-    "./routes/atoms/new-tab-icon.tsx": $6,
+    "./routes/icons/new-tab-icon.tsx": $6,
     "./routes/index.tsx": $7,
   },
   islands: {

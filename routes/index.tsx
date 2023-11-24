@@ -31,7 +31,7 @@ export default () => {
         <div>Icons</div>
         <ul class="list-disc list-inside">
           <li>
-            <Link href="/atoms/new-tab-icon">NewTabIcon</Link>
+            <Link href="/icons/new-tab-icon">NewTabIcon</Link>
           </li>
         </ul>
       </div>

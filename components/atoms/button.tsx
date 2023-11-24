@@ -14,7 +14,7 @@ import { ComponentChild } from "preact";
  */
 export const Button = (
   {
-    kind = "secondary",
+    variant = "secondary",
     size = "md",
     rounded = "sm",
     isLoading = false,
@@ -24,7 +24,7 @@ export const Button = (
     children,
     ...rest
   }: {
-    kind?: "primary" | "secondary" | "tertiary";
+    variant?: "primary" | "secondary" | "tertiary";
     size?: "sm" | "md" | "lg" | "block";
     rounded?: "sm" | "lg" | "full" | "square";
     isLoading?: boolean;
@@ -37,7 +37,7 @@ export const Button = (
   let className = "";
 
   className += " " + (() => {
-    switch (kind) {
+    switch (variant) {
       case "primary":
         return "bg-primary-500 text-primary-50 hover:bg-primary-300";
       case "secondary":
@@ -75,7 +75,7 @@ export const Button = (
 
   className += " " + (() => {
     if (rest.disabled || isLoading) {
-      switch (kind) {
+      switch (variant) {
         case "primary":
           return "cursor-not-allowed bg-primary-300";
         case "secondary":

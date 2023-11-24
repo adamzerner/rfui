@@ -11,104 +11,104 @@ export default () => {
           https://github.com/adamzerner/rfui/blob/master/routes/atoms/button.tsx
         </Link>
       </div>
-      <Examples title="Kind">
+      <Examples title="Variant">
         <div class="flex gap-3">
-          <Button kind="primary">
+          <Button variant="primary">
             Submit
           </Button>
-          <Button kind="secondary">Submit</Button>
-          <Button kind="tertiary">Submit</Button>
+          <Button variant="secondary">Submit</Button>
+          <Button variant="tertiary">Submit</Button>
         </div>
       </Examples>
       <Examples title="Size">
         <div class="flex gap-3">
-          <Button kind="primary" size="sm">
+          <Button variant="primary" size="sm">
             Submit
           </Button>
-          <Button kind="secondary" size="sm">Submit</Button>
-          <Button kind="tertiary" size="sm">Submit</Button>
+          <Button variant="secondary" size="sm">Submit</Button>
+          <Button variant="tertiary" size="sm">Submit</Button>
         </div>
         <div class="flex gap-3">
-          <Button kind="primary" size="md">
+          <Button variant="primary" size="md">
             Submit
           </Button>
-          <Button kind="secondary" size="md">Submit</Button>
-          <Button kind="tertiary" size="md">Submit</Button>
+          <Button variant="secondary" size="md">Submit</Button>
+          <Button variant="tertiary" size="md">Submit</Button>
         </div>
         <div class="flex gap-3">
-          <Button kind="primary" size="lg">
+          <Button variant="primary" size="lg">
             Submit
           </Button>
-          <Button kind="secondary" size="lg">Submit</Button>
-          <Button kind="tertiary" size="lg">Submit</Button>
+          <Button variant="secondary" size="lg">Submit</Button>
+          <Button variant="tertiary" size="lg">Submit</Button>
         </div>
         <div class="w-full flex flex-col gap-3">
-          <Button kind="primary" size="block">Submit</Button>
-          <Button kind="secondary" size="block">Submit</Button>
+          <Button variant="primary" size="block">Submit</Button>
+          <Button variant="secondary" size="block">Submit</Button>
         </div>
       </Examples>
       <Examples title="Rounded">
         <div class="flex gap-3">
-          <Button kind="primary" rounded="square">
+          <Button variant="primary" rounded="square">
             Submit
           </Button>
-          <Button kind="secondary" rounded="square">Submit</Button>
-          <Button kind="tertiary" rounded="square">Submit</Button>
+          <Button variant="secondary" rounded="square">Submit</Button>
+          <Button variant="tertiary" rounded="square">Submit</Button>
         </div>
         <div class="flex gap-3">
-          <Button kind="primary" rounded="sm">
+          <Button variant="primary" rounded="sm">
             Submit
           </Button>
-          <Button kind="secondary" rounded="sm">Submit</Button>
-          <Button kind="tertiary" rounded="sm">Submit</Button>
+          <Button variant="secondary" rounded="sm">Submit</Button>
+          <Button variant="tertiary" rounded="sm">Submit</Button>
         </div>
         <div class="flex gap-3">
-          <Button kind="primary" rounded="lg">
+          <Button variant="primary" rounded="lg">
             Submit
           </Button>
-          <Button kind="secondary" rounded="lg">Submit</Button>
-          <Button kind="tertiary" rounded="lg">Submit</Button>
+          <Button variant="secondary" rounded="lg">Submit</Button>
+          <Button variant="tertiary" rounded="lg">Submit</Button>
         </div>
         <div class="flex gap-3">
-          <Button kind="primary" rounded="full">
+          <Button variant="primary" rounded="full">
             Submit
           </Button>
-          <Button kind="secondary" rounded="full">Submit</Button>
-          <Button kind="tertiary" rounded="full">Submit</Button>
+          <Button variant="secondary" rounded="full">Submit</Button>
+          <Button variant="tertiary" rounded="full">Submit</Button>
         </div>
       </Examples>
       <Examples title="Icon">
         <div class="flex gap-3">
-          <Button kind="primary" icon={<span>←</span>}>
+          <Button variant="primary" icon={<span>←</span>}>
             Previous
           </Button>
-          <Button kind="secondary" icon={<span>←</span>}>Previous</Button>
+          <Button variant="secondary" icon={<span>←</span>}>Previous</Button>
         </div>
         <div class="flex gap-3">
-          <Button kind="primary" _rightIcon={<span>→</span>}>
+          <Button variant="primary" _rightIcon={<span>→</span>}>
             Next
           </Button>
-          <Button kind="secondary" _rightIcon={<span>→</span>}>Next</Button>
+          <Button variant="secondary" _rightIcon={<span>→</span>}>Next</Button>
         </div>
       </Examples>
       <Examples title="Disabled">
         <div class="flex gap-3">
-          <Button disabled={true} kind="primary">
+          <Button disabled={true} variant="primary">
             Submit
           </Button>
-          <Button disabled={true} kind="secondary">Submit</Button>
-          <Button disabled={true} kind="tertiary">Submit</Button>
+          <Button disabled={true} variant="secondary">Submit</Button>
+          <Button disabled={true} variant="tertiary">Submit</Button>
         </div>
       </Examples>
       <Examples title="Loading">
         <div class="flex gap-3">
-          <Button kind="primary" isLoading loadingContent="Submitting...">
+          <Button variant="primary" isLoading loadingContent="Submitting...">
             Submit
           </Button>
-          <Button kind="secondary" isLoading loadingContent="Submitting...">
+          <Button variant="secondary" isLoading loadingContent="Submitting...">
             Submit
           </Button>
-          <Button kind="tertiary" isLoading loadingContent="Submitting...">
+          <Button variant="tertiary" isLoading loadingContent="Submitting...">
             Submit
           </Button>
         </div>

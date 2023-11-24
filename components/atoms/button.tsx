@@ -26,7 +26,7 @@ export const Button = (
   }: {
     variant?: "primary" | "secondary" | "tertiary";
     size?: "sm" | "md" | "lg" | "block";
-    rounded?: "sm" | "lg" | "full" | "square";
+    rounded?: "square" | "sm" | "lg" | "full";
     isLoading?: boolean;
     loadingContent?: string | JSX.Element;
     icon?: JSX.Element;
@@ -62,14 +62,14 @@ export const Button = (
 
   className += " " + (() => {
     switch (rounded) {
+      case "square":
+        return "rounded-none";
       case "sm":
         return "rounded";
       case "lg":
         return "rounded-lg";
       case "full":
         return "rounded-full";
-      case "square":
-        return "rounded-none";
     }
   })();
 

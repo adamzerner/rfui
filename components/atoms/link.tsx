@@ -1,6 +1,6 @@
+import { NewTabIcon } from "@/components/icons/new-tab-icon.tsx";
 import type { JSX } from "preact";
 import { ComponentChild } from "preact";
-import { NewTabIcon } from "./new-tab-icon.tsx";
 
 /** *
  * @function Link

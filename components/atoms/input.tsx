@@ -1,6 +1,6 @@
 import type { JSX } from "preact";
 
-// TODO: disabled, readonly, helper text, error text, invalid, required
+// TODO: disabled, readonly, helper text, error text, invalid, required, focus state
 /** *
  * @function Input
  * *

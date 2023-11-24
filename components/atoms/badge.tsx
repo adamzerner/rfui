@@ -1,7 +1,5 @@
 import { ComponentChild, JSX } from "preact";
 
-// TODO: with icon
-
 /** *
  * @function Badge
  *
@@ -44,9 +42,9 @@ export const Badge = (
       case "sm":
         return "px-1 text-xs";
       case "md":
-        return "px-2 py-1 text-sm";
+        return "px-2 text-sm";
       case "lg":
-        return "px-3 py-2 text-md";
+        return "px-3 py-1 text-md";
     }
   })();
 

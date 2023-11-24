@@ -11,8 +11,10 @@ import * as $5 from "./routes/atoms/input.tsx";
 import * as $6 from "./routes/atoms/link.tsx";
 import * as $7 from "./routes/icons/new-tab-icon.tsx";
 import * as $8 from "./routes/index.tsx";
+import * as $9 from "./routes/molecules/password-input.tsx";
 import * as $$0 from "./islands/demo/example.tsx";
 import * as $$1 from "./islands/demo/examples.tsx";
+import * as $$2 from "./islands/molecules/password-input.tsx";
 
 const manifest = {
   routes: {
@@ -25,10 +27,12 @@ const manifest = {
     "./routes/atoms/link.tsx": $6,
     "./routes/icons/new-tab-icon.tsx": $7,
     "./routes/index.tsx": $8,
+    "./routes/molecules/password-input.tsx": $9,
   },
   islands: {
     "./islands/demo/example.tsx": $$0,
     "./islands/demo/examples.tsx": $$1,
+    "./islands/molecules/password-input.tsx": $$2,
   },
   baseUrl: import.meta.url,
 };

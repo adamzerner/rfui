@@ -22,7 +22,10 @@ export default () => {
       </div>
       <div>
         <div>Molecules</div>
-        <ul>
+        <ul class="list-disc list-inside">
+          <li>
+            <Link href="/molecules/password-input">PasswordInput</Link>
+          </li>
         </ul>
       </div>
       <div>

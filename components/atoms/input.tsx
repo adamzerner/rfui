@@ -1,6 +1,5 @@
 import type { JSX } from "preact";
 
-// TODO: type
 /** *
  * @function Input
  * *

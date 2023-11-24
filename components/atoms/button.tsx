@@ -45,7 +45,7 @@ export const Button = (
   className += " " + (() => {
     switch (variant) {
       case "primary":
-        return "bg-primary-700 text-[#fff] hover:bg-primary-500";
+        return "bg-primary-500 text-[#fff] hover:bg-primary-400";
       case "secondary":
         return "border-1 border-primary-500 text-primary-900 hover:bg-primary-50";
       case "tertiary":

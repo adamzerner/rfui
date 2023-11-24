@@ -24,7 +24,13 @@ export const Button = (
     children,
     ...rest
   }: {
-    variant?: "primary" | "secondary" | "tertiary";
+    variant?:
+      | "primary"
+      | "secondary"
+      | "tertiary"
+      | "danger-primary"
+      | "danger-secondary"
+      | "danger-tertiary";
     size?: "sm" | "md" | "lg" | "block";
     rounded?: "square" | "sm" | "lg" | "full";
     isLoading?: boolean;
@@ -39,11 +45,17 @@ export const Button = (
   className += " " + (() => {
     switch (variant) {
       case "primary":
-        return "bg-primary-500 text-primary-50 hover:bg-primary-300";
+        return "bg-primary-500 text-[#fff] hover:bg-primary-300";
       case "secondary":
-        return "border-1 border-neutral-500 hover:bg-neutral-100";
+        return "border-1 border-neutral-500 text-neutral-900 hover:bg-neutral-100";
       case "tertiary":
-        return "underline";
+        return "underline"; // https://ux.stackexchange.com/a/5494/39046
+      case "danger-primary":
+        return "bg-supporting-red-500 text-[#fff] hover:bg-supporting-red-300";
+      case "danger-secondary":
+        return "border-1 border-supporting-red-500 text-supporting-red-900 hover:bg-supporting-red-100";
+      case "danger-tertiary":
+        return "underline text-supporting-red-900";
     }
   })();
 

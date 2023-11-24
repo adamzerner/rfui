@@ -20,6 +20,19 @@ export default () => {
           <Button variant="tertiary">Submit</Button>
         </div>
       </Examples>
+      <Examples title="Danger variants">
+        <div class="flex gap-3">
+          <Button variant="danger-primary">
+            Submit
+          </Button>
+          <Button variant="danger-secondary">
+            Submit
+          </Button>
+          <Button variant="danger-tertiary">
+            Submit
+          </Button>
+        </div>
+      </Examples>
       <Examples title="Size">
         <div class="flex gap-3">
           <Button variant="primary" size="sm">

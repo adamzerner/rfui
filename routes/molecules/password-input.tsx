@@ -11,10 +11,23 @@ export default () => {
           https://github.com/adamzerner/rfui/blob/master/routes/molecules/password-input.tsx
         </Link>
       </div>
-      <Examples title="TODO">
-        <div class="flex gap-3">
-          <PasswordInput />
+      <Examples title="Size">
+        <div class="flex flex-col gap-5">
+          <PasswordInput size="sm" />
+          <PasswordInput size="md" />
+          <PasswordInput size="lg" />
         </div>
+      </Examples>
+      <Examples title="Rounded">
+        <div class="flex flex-col gap-5">
+          <PasswordInput rounded="square" />
+          <PasswordInput rounded="sm" />
+          <PasswordInput rounded="lg" />
+          <PasswordInput rounded="full" />
+        </div>
+      </Examples>
+      <Examples title="Invalid">
+        <PasswordInput invalid />
       </Examples>
     </div>
   );

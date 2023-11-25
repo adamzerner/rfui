@@ -23,11 +23,30 @@ export const PasswordInput = (
   const toggleShouldShow = () => {
     setShouldShow((v) => !v);
   };
+  const buttonClass = (() => {
+    if (size === "lg") {
+      return "text-lg";
+    } else if (size === "md") {
+      return "text-md py-1";
+    } else if (size === "sm") {
+      return "text-sm";
+    }
+  })();
 
   return (
-    <div>
-      <Input type={shouldShow ? "text" : "password"} />
-      <Button size="sm" class="ml-1" onClick={toggleShouldShow}>
+    <div class="flex gap-1 items-center">
+      <Input
+        type={shouldShow ? "text" : "password"}
+        size={size}
+        rounded={rounded}
+        invalid={invalid}
+      />
+      <Button
+        class={buttonClass}
+        onClick={toggleShouldShow}
+        rounded={rounded}
+        variant={invalid ? "danger-tertiary" : "tertiary"}
+      >
         {shouldShow ? "Hide" : "Show"}
       </Button>
     </div>

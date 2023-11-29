@@ -29,7 +29,7 @@ export const PasswordInput = (
     setShouldShow((v) => !v);
   };
   const buttonClass = (() => {
-    let s = `bg-${invalid ? "supporting-red" : "neutral"}-50 px-1`;
+    let s = "bg-neutral-50 px-1";
 
     if (size === "lg") {
       s += " text-md";
@@ -47,6 +47,10 @@ export const PasswordInput = (
       s += " rounded-lg";
     } else if (rounded === "full") {
       s += " rounded-full";
+    }
+
+    if (invalid) {
+      s += " bg-supporting-red-50 text-supporting-red-900";
     }
 
     return s;

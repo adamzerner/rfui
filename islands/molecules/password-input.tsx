@@ -4,7 +4,7 @@ import { useState } from "preact/hooks";
 
 /** *
  * @function PasswordInput
- * *
+ *
  * @example
  * <Input type="text" />
  */
@@ -65,6 +65,7 @@ export const PasswordInput = (
         invalid={invalid}
       />
       <button
+        type="button"
         onClick={toggleShouldShow}
         class={buttonClass}
         style={{ minWidth: 45 }}

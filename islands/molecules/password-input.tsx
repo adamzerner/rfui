@@ -1,4 +1,3 @@
-import { Button } from "@/components/atoms/button.tsx";
 import { Input } from "@/components/atoms/input.tsx";
 import { useState } from "preact/hooks";
 
@@ -24,31 +23,40 @@ export const PasswordInput = (
     setShouldShow((v) => !v);
   };
   const buttonClass = (() => {
+    let s = `bg-${invalid ? "supporting-red" : "neutral"}-50 px-1`;
+
     if (size === "lg") {
-      return "text-lg";
+      s += " text-md";
     } else if (size === "md") {
-      return "text-md py-1";
+      s += " text-sm";
     } else if (size === "sm") {
-      return "text-sm";
+      s += " text-xs";
     }
+
+    if (rounded === "square") {
+      s += " rounded-none";
+    } else if (rounded === "sm") {
+      s += " rounded";
+    } else if (rounded === "lg") {
+      s += " rounded-lg";
+    } else if (rounded === "full") {
+      s += " rounded-full";
+    }
+
+    return s;
   })();
 
   return (
-    <div class="flex gap-1 items-center">
+    <div class="flex gap-1 items-stretch">
       <Input
         type={shouldShow ? "text" : "password"}
         size={size}
         rounded={rounded}
         invalid={invalid}
       />
-      <Button
-        class={buttonClass}
-        onClick={toggleShouldShow}
-        rounded={rounded}
-        variant={invalid ? "danger-tertiary" : "tertiary"}
-      >
+      <button onClick={toggleShouldShow} class={buttonClass}>
         {shouldShow ? "Hide" : "Show"}
-      </Button>
+      </button>
     </div>
   );
 };

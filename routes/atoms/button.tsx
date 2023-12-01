@@ -1,5 +1,6 @@
 import { Button } from "@/components/atoms/button.tsx";
 import { Link } from "@/components/atoms/link.tsx";
+import { Flex } from "@/components/helpers/flex.tsx";
 import { Examples } from "@/islands/demo/examples.tsx";
 
 export default () => {
@@ -12,16 +13,16 @@ export default () => {
         </Link>
       </div>
       <Examples title="Variant">
-        <div class="flex gap-3">
+        <Flex gap="3">
           <Button variant="primary">
             Submit
           </Button>
           <Button variant="secondary">Submit</Button>
           <Button variant="tertiary">Submit</Button>
-        </div>
+        </Flex>
       </Examples>
       <Examples title="Danger variants">
-        <div class="flex gap-3">
+        <Flex gap="3">
           <Button variant="danger-primary">
             Submit
           </Button>
@@ -31,90 +32,90 @@ export default () => {
           <Button variant="danger-tertiary">
             Submit
           </Button>
-        </div>
+        </Flex>
       </Examples>
       <Examples title="Size">
-        <div class="flex gap-3">
+        <Flex gap="3">
           <Button variant="primary" size="sm">
             Submit
           </Button>
           <Button variant="secondary" size="sm">Submit</Button>
           <Button variant="tertiary" size="sm">Submit</Button>
-        </div>
-        <div class="flex gap-3">
+        </Flex>
+        <Flex gap="3">
           <Button variant="primary" size="md">
             Submit
           </Button>
           <Button variant="secondary" size="md">Submit</Button>
           <Button variant="tertiary" size="md">Submit</Button>
-        </div>
-        <div class="flex gap-3">
+        </Flex>
+        <Flex gap="3">
           <Button variant="primary" size="lg">
             Submit
           </Button>
           <Button variant="secondary" size="lg">Submit</Button>
           <Button variant="tertiary" size="lg">Submit</Button>
-        </div>
+        </Flex>
         <div class="w-full flex flex-col gap-3">
           <Button variant="primary" size="block">Submit</Button>
           <Button variant="secondary" size="block">Submit</Button>
         </div>
       </Examples>
       <Examples title="Rounded">
-        <div class="flex gap-3">
+        <Flex gap="3">
           <Button variant="primary" rounded="square">
             Submit
           </Button>
           <Button variant="secondary" rounded="square">Submit</Button>
           <Button variant="tertiary" rounded="square">Submit</Button>
-        </div>
-        <div class="flex gap-3">
+        </Flex>
+        <Flex gap="3">
           <Button variant="primary" rounded="sm">
             Submit
           </Button>
           <Button variant="secondary" rounded="sm">Submit</Button>
           <Button variant="tertiary" rounded="sm">Submit</Button>
-        </div>
-        <div class="flex gap-3">
+        </Flex>
+        <Flex gap="3">
           <Button variant="primary" rounded="lg">
             Submit
           </Button>
           <Button variant="secondary" rounded="lg">Submit</Button>
           <Button variant="tertiary" rounded="lg">Submit</Button>
-        </div>
-        <div class="flex gap-3">
+        </Flex>
+        <Flex gap="3">
           <Button variant="primary" rounded="full">
             Submit
           </Button>
           <Button variant="secondary" rounded="full">Submit</Button>
           <Button variant="tertiary" rounded="full">Submit</Button>
-        </div>
+        </Flex>
       </Examples>
       <Examples title="Icon">
-        <div class="flex gap-3">
+        <Flex gap="3">
           <Button variant="primary" icon={<span>←</span>}>
             Previous
           </Button>
           <Button variant="secondary" icon={<span>←</span>}>Previous</Button>
-        </div>
-        <div class="flex gap-3">
+        </Flex>
+        <Flex gap="3">
           <Button variant="primary" _rightIcon={<span>→</span>}>
             Next
           </Button>
           <Button variant="secondary" _rightIcon={<span>→</span>}>Next</Button>
-        </div>
+        </Flex>
       </Examples>
       <Examples title="Disabled">
-        <div class="flex gap-3">
+        <Flex gap="3">
           <Button disabled={true} variant="primary">
             Submit
           </Button>
           <Button disabled={true} variant="secondary">Submit</Button>
           <Button disabled={true} variant="tertiary">Submit</Button>
-        </div>
+        </Flex>
       </Examples>
       <Examples title="Loading">
-        <div class="flex gap-3">
+        <Flex gap="3">
           <Button variant="primary" isLoading loadingContent="Submitting...">
             Submit
           </Button>
@@ -124,7 +125,7 @@ export default () => {
           <Button variant="tertiary" isLoading loadingContent="Submitting...">
             Submit
           </Button>
-        </div>
+        </Flex>
       </Examples>
     </div>
   );

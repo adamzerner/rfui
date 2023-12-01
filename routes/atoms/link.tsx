@@ -1,4 +1,5 @@
 import { Link } from "@/components/atoms/link.tsx";
+import { Flex } from "@/components/helpers/flex.tsx";
 import { Examples } from "@/islands/demo/examples.tsx";
 
 export default () => {
@@ -11,14 +12,14 @@ export default () => {
         </Link>
       </div>
       <Examples title="Underline">
-        <div class="flex gap-3">
+        <Flex gap="3">
           <Link underline="always" href="https://example.com">always</Link>
           <Link underline="hover" href="https://example.com">hover</Link>
           <Link underline="none" href="https://example.com">none</Link>
-        </div>
+        </Flex>
       </Examples>
       <Examples title="New tab">
-        <div class="flex gap-3">
+        <Flex gap="3">
           <Link _newTab href="https://example.com" underline="always">
             _newTab
           </Link>
@@ -28,8 +29,8 @@ export default () => {
           <Link _newTab href="https://example.com" underline="none">
             _newTab
           </Link>
-        </div>
-        <div class="flex gap-3">
+        </Flex>
+        <Flex gap="3">
           <Link
             _newTab
             _includeNewTabIcon
@@ -54,7 +55,7 @@ export default () => {
           >
             _newTab _includeNewTabIcon
           </Link>
-        </div>
+        </Flex>
       </Examples>
     </div>
   );

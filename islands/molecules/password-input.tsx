@@ -1,4 +1,5 @@
 import { Input } from "@/components/atoms/input.tsx";
+import { Flex } from "@/components/helpers/flex.tsx";
 import { JSX } from "preact";
 import { useState } from "preact/hooks";
 
@@ -67,7 +68,7 @@ export const PasswordInput = (
   })();
 
   return (
-    <div class="flex gap-1 items-stretch" {...rest}>
+    <Flex gap="1" class="items-stretch" {...rest}>
       <Input
         type={shouldShow ? "text" : "password"}
         size={size}
@@ -82,6 +83,6 @@ export const PasswordInput = (
       >
         {shouldShow ? "Hide" : "Show"}
       </button>
-    </div>
+    </Flex>
   );
 };

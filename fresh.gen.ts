@@ -2,43 +2,44 @@
 // This file SHOULD be checked into source version control.
 // This file is automatically updated during development when running `dev.ts`.
 
-import * as $0 from "./routes/_404.tsx";
-import * as $1 from "./routes/_app.tsx";
-import * as $2 from "./routes/_layout.tsx";
-import * as $3 from "./routes/atoms/badge.tsx";
-import * as $4 from "./routes/atoms/button.tsx";
-import * as $5 from "./routes/atoms/input.tsx";
-import * as $6 from "./routes/atoms/link.tsx";
-import * as $7 from "./routes/helpers/flex.tsx";
-import * as $8 from "./routes/helpers/stack.tsx";
-import * as $9 from "./routes/icons/new-tab-icon.tsx";
-import * as $10 from "./routes/index.tsx";
-import * as $11 from "./routes/molecules/password-input.tsx";
-import * as $$0 from "./islands/demo/example.tsx";
-import * as $$1 from "./islands/demo/examples.tsx";
-import * as $$2 from "./islands/molecules/password-input.tsx";
+import * as $_404 from "./routes/_404.tsx";
+import * as $_app from "./routes/_app.tsx";
+import * as $_layout from "./routes/_layout.tsx";
+import * as $atoms_badge from "./routes/atoms/badge.tsx";
+import * as $atoms_button from "./routes/atoms/button.tsx";
+import * as $atoms_input from "./routes/atoms/input.tsx";
+import * as $atoms_link from "./routes/atoms/link.tsx";
+import * as $helpers_flex from "./routes/helpers/flex.tsx";
+import * as $helpers_stack from "./routes/helpers/stack.tsx";
+import * as $icons_new_tab_icon from "./routes/icons/new-tab-icon.tsx";
+import * as $index from "./routes/index.tsx";
+import * as $molecules_password_input from "./routes/molecules/password-input.tsx";
+import * as $demo_example from "./islands/demo/example.tsx";
+import * as $demo_examples from "./islands/demo/examples.tsx";
+import * as $molecules_password_input_1 from "./islands/molecules/password-input.tsx";
+import { type Manifest } from "$fresh/server.ts";
 
 const manifest = {
   routes: {
-    "./routes/_404.tsx": $0,
-    "./routes/_app.tsx": $1,
-    "./routes/_layout.tsx": $2,
-    "./routes/atoms/badge.tsx": $3,
-    "./routes/atoms/button.tsx": $4,
-    "./routes/atoms/input.tsx": $5,
-    "./routes/atoms/link.tsx": $6,
-    "./routes/helpers/flex.tsx": $7,
-    "./routes/helpers/stack.tsx": $8,
-    "./routes/icons/new-tab-icon.tsx": $9,
-    "./routes/index.tsx": $10,
-    "./routes/molecules/password-input.tsx": $11,
+    "./routes/_404.tsx": $_404,
+    "./routes/_app.tsx": $_app,
+    "./routes/_layout.tsx": $_layout,
+    "./routes/atoms/badge.tsx": $atoms_badge,
+    "./routes/atoms/button.tsx": $atoms_button,
+    "./routes/atoms/input.tsx": $atoms_input,
+    "./routes/atoms/link.tsx": $atoms_link,
+    "./routes/helpers/flex.tsx": $helpers_flex,
+    "./routes/helpers/stack.tsx": $helpers_stack,
+    "./routes/icons/new-tab-icon.tsx": $icons_new_tab_icon,
+    "./routes/index.tsx": $index,
+    "./routes/molecules/password-input.tsx": $molecules_password_input,
   },
   islands: {
-    "./islands/demo/example.tsx": $$0,
-    "./islands/demo/examples.tsx": $$1,
-    "./islands/molecules/password-input.tsx": $$2,
+    "./islands/demo/example.tsx": $demo_example,
+    "./islands/demo/examples.tsx": $demo_examples,
+    "./islands/molecules/password-input.tsx": $molecules_password_input_1,
   },
   baseUrl: import.meta.url,
-};
+} satisfies Manifest;
 
 export default manifest;

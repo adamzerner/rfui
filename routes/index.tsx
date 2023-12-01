@@ -34,6 +34,14 @@ export default () => {
         </ul>
       </div>
       <div>
+        <div>Helpers</div>
+        <ul class="list-disc list-inside">
+          <li>
+            <Link href="/helpers/flex">Flex</Link>
+          </li>
+        </ul>
+      </div>
+      <div>
         <div>Icons</div>
         <ul class="list-disc list-inside">
           <li>

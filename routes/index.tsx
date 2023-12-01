@@ -39,6 +39,9 @@ export default () => {
           <li>
             <Link href="/helpers/flex">Flex</Link>
           </li>
+          <li>
+            <Link href="/helpers/stack">Stack</Link>
+          </li>
         </ul>
       </div>
       <div>

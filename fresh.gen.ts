@@ -10,9 +10,10 @@ import * as $4 from "./routes/atoms/button.tsx";
 import * as $5 from "./routes/atoms/input.tsx";
 import * as $6 from "./routes/atoms/link.tsx";
 import * as $7 from "./routes/helpers/flex.tsx";
-import * as $8 from "./routes/icons/new-tab-icon.tsx";
-import * as $9 from "./routes/index.tsx";
-import * as $10 from "./routes/molecules/password-input.tsx";
+import * as $8 from "./routes/helpers/stack.tsx";
+import * as $9 from "./routes/icons/new-tab-icon.tsx";
+import * as $10 from "./routes/index.tsx";
+import * as $11 from "./routes/molecules/password-input.tsx";
 import * as $$0 from "./islands/demo/example.tsx";
 import * as $$1 from "./islands/demo/examples.tsx";
 import * as $$2 from "./islands/molecules/password-input.tsx";
@@ -27,9 +28,10 @@ const manifest = {
     "./routes/atoms/input.tsx": $5,
     "./routes/atoms/link.tsx": $6,
     "./routes/helpers/flex.tsx": $7,
-    "./routes/icons/new-tab-icon.tsx": $8,
-    "./routes/index.tsx": $9,
-    "./routes/molecules/password-input.tsx": $10,
+    "./routes/helpers/stack.tsx": $8,
+    "./routes/icons/new-tab-icon.tsx": $9,
+    "./routes/index.tsx": $10,
+    "./routes/molecules/password-input.tsx": $11,
   },
   islands: {
     "./islands/demo/example.tsx": $$0,

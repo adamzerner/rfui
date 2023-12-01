@@ -1,11 +1,12 @@
 import { Button } from "@/components/atoms/button.tsx";
 import { Link } from "@/components/atoms/link.tsx";
 import { Flex } from "@/components/helpers/flex.tsx";
+import { Stack } from "@/components/helpers/stack.tsx";
 import { Examples } from "@/islands/demo/examples.tsx";
 
 export default () => {
   return (
-    <div class="flex flex-col gap-8">
+    <Stack gap="8">
       <div>
         <div class="text-2xl mb-3">Source code</div>
         <Link href="https://github.com/adamzerner/rfui/blob/master/routes/atoms/button.tsx">
@@ -56,10 +57,10 @@ export default () => {
           <Button variant="secondary" size="lg">Submit</Button>
           <Button variant="tertiary" size="lg">Submit</Button>
         </Flex>
-        <div class="w-full flex flex-col gap-3">
+        <Stack gap="3" class="w-full">
           <Button variant="primary" size="block">Submit</Button>
           <Button variant="secondary" size="block">Submit</Button>
-        </div>
+        </Stack>
       </Examples>
       <Examples title="Rounded">
         <Flex gap="3">
@@ -127,6 +128,6 @@ export default () => {
           </Button>
         </Flex>
       </Examples>
-    </div>
+    </Stack>
   );
 };

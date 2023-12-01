@@ -1,3 +1,4 @@
+import { Stack } from "@/components/helpers/stack.tsx";
 import { ComponentChild } from "preact";
 
 export const Examples = (
@@ -6,7 +7,7 @@ export const Examples = (
   return (
     <div>
       <div class="mb-5 text-4xl">{title}</div>
-      <div class="flex flex-col gap-7 items-start">{children}</div>
+      <Stack gap="7" class="items-start">{children}</Stack>
     </div>
   );
 };

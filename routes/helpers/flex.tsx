@@ -1,9 +1,10 @@
 import { Link } from "@/components/atoms/link.tsx";
 import { Flex } from "@/components/helpers/flex.tsx";
+import { Stack } from "@/components/helpers/stack.tsx";
 
 export default () => {
   return (
-    <div class="flex flex-col gap-8">
+    <Stack gap="8">
       <div>
         <div class="text-2xl mb-3">Source code</div>
         <Link href="https://github.com/adamzerner/rfui/blob/master/routes/helpers/flex.tsx">
@@ -17,6 +18,6 @@ export default () => {
           <div>right</div>
         </Flex>
       </div>
-    </div>
+    </Stack>
   );
 };

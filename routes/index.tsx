@@ -1,8 +1,9 @@
 import { Link } from "@/components/atoms/link.tsx";
+import { Stack } from "@/components/helpers/stack.tsx";
 
 export default () => {
   return (
-    <div class="flex flex-col gap-5">
+    <Stack gap="5">
       <div>
         <div>Atoms</div>
         <ul class="list-disc list-inside">
@@ -52,6 +53,6 @@ export default () => {
           </li>
         </ul>
       </div>
-    </div>
+    </Stack>
   );
 };

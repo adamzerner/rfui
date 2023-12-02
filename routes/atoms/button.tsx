@@ -6,7 +6,7 @@ import { Examples } from "@/islands/demo/examples.tsx";
 
 export default () => {
   return (
-    <Stack gap="8">
+    <Stack class="gap-8">
       <div>
         <div class="text-2xl mb-3">Source code</div>
         <Link href="https://github.com/adamzerner/rfui/blob/master/routes/atoms/button.tsx">
@@ -14,7 +14,7 @@ export default () => {
         </Link>
       </div>
       <Examples title="Variant">
-        <Flex gap="3">
+        <Flex class="gap-3">
           <Button variant="primary">
             Submit
           </Button>
@@ -23,7 +23,7 @@ export default () => {
         </Flex>
       </Examples>
       <Examples title="Danger variants">
-        <Flex gap="3">
+        <Flex class="gap-3">
           <Button variant="danger-primary">
             Submit
           </Button>
@@ -36,55 +36,55 @@ export default () => {
         </Flex>
       </Examples>
       <Examples title="Size">
-        <Flex gap="3">
+        <Flex class="gap-3">
           <Button variant="primary" size="sm">
             Submit
           </Button>
           <Button variant="secondary" size="sm">Submit</Button>
           <Button variant="tertiary" size="sm">Submit</Button>
         </Flex>
-        <Flex gap="3">
+        <Flex class="gap-3">
           <Button variant="primary" size="md">
             Submit
           </Button>
           <Button variant="secondary" size="md">Submit</Button>
           <Button variant="tertiary" size="md">Submit</Button>
         </Flex>
-        <Flex gap="3">
+        <Flex class="gap-3">
           <Button variant="primary" size="lg">
             Submit
           </Button>
           <Button variant="secondary" size="lg">Submit</Button>
           <Button variant="tertiary" size="lg">Submit</Button>
         </Flex>
-        <Stack gap="3" class="w-full">
+        <Stack class="gap-3 w-full">
           <Button variant="primary" size="block">Submit</Button>
           <Button variant="secondary" size="block">Submit</Button>
         </Stack>
       </Examples>
       <Examples title="Rounded">
-        <Flex gap="3">
+        <Flex class="gap-3">
           <Button variant="primary" rounded="square">
             Submit
           </Button>
           <Button variant="secondary" rounded="square">Submit</Button>
           <Button variant="tertiary" rounded="square">Submit</Button>
         </Flex>
-        <Flex gap="3">
+        <Flex class="gap-3">
           <Button variant="primary" rounded="sm">
             Submit
           </Button>
           <Button variant="secondary" rounded="sm">Submit</Button>
           <Button variant="tertiary" rounded="sm">Submit</Button>
         </Flex>
-        <Flex gap="3">
+        <Flex class="gap-3">
           <Button variant="primary" rounded="lg">
             Submit
           </Button>
           <Button variant="secondary" rounded="lg">Submit</Button>
           <Button variant="tertiary" rounded="lg">Submit</Button>
         </Flex>
-        <Flex gap="3">
+        <Flex class="gap-3">
           <Button variant="primary" rounded="full">
             Submit
           </Button>
@@ -93,13 +93,13 @@ export default () => {
         </Flex>
       </Examples>
       <Examples title="Icon">
-        <Flex gap="3">
+        <Flex class="gap-3">
           <Button variant="primary" icon={<span>←</span>}>
             Previous
           </Button>
           <Button variant="secondary" icon={<span>←</span>}>Previous</Button>
         </Flex>
-        <Flex gap="3">
+        <Flex class="gap-3">
           <Button variant="primary" _rightIcon={<span>→</span>}>
             Next
           </Button>
@@ -107,7 +107,7 @@ export default () => {
         </Flex>
       </Examples>
       <Examples title="Disabled">
-        <Flex gap="3">
+        <Flex class="gap-3">
           <Button disabled={true} variant="primary">
             Submit
           </Button>
@@ -116,7 +116,7 @@ export default () => {
         </Flex>
       </Examples>
       <Examples title="Loading">
-        <Flex gap="3">
+        <Flex class="gap-3">
           <Button variant="primary" isLoading loadingContent="Submitting...">
             Submit
           </Button>

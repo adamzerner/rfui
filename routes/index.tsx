@@ -3,7 +3,7 @@ import { Stack } from "@/components/helpers/stack.tsx";
 
 export default () => {
   return (
-    <Stack gap="5">
+    <Stack class="gap-5">
       <div>
         <div>Atoms</div>
         <ul class="list-disc list-inside">

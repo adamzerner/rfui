@@ -5,7 +5,7 @@ import { Examples } from "@/islands/demo/examples.tsx";
 
 export default () => {
   return (
-    <Stack gap="8">
+    <Stack class="gap-8">
       <div>
         <div class="text-2xl mb-3">Source code</div>
         <Link href="https://github.com/adamzerner/rfui/blob/master/routes/atoms/link.tsx">
@@ -13,14 +13,14 @@ export default () => {
         </Link>
       </div>
       <Examples title="Underline">
-        <Flex gap="3">
+        <Flex class="gap-3">
           <Link underline="always" href="https://example.com">always</Link>
           <Link underline="hover" href="https://example.com">hover</Link>
           <Link underline="none" href="https://example.com">none</Link>
         </Flex>
       </Examples>
       <Examples title="New tab">
-        <Flex gap="3">
+        <Flex class="gap-3">
           <Link _newTab href="https://example.com" underline="always">
             _newTab
           </Link>
@@ -31,7 +31,7 @@ export default () => {
             _newTab
           </Link>
         </Flex>
-        <Flex gap="3">
+        <Flex class="gap-3">
           <Link
             _newTab
             _includeNewTabIcon

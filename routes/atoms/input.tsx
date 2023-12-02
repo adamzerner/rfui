@@ -5,7 +5,7 @@ import { Examples } from "@/islands/demo/examples.tsx";
 
 export default () => {
   return (
-    <Stack gap="8">
+    <Stack class="gap-8">
       <div>
         <div class="text-2xl mb-3">Source code</div>
         <Link href="https://github.com/adamzerner/rfui/blob/master/routes/atoms/input.tsx">
@@ -13,14 +13,14 @@ export default () => {
         </Link>
       </div>
       <Examples title="Size">
-        <Stack gap="5">
+        <Stack class="gap-5">
           <Input size="sm" />
           <Input size="md" />
           <Input size="lg" />
         </Stack>
       </Examples>
       <Examples title="Rounded">
-        <Stack gap="5">
+        <Stack class="gap-5">
           <Input rounded="square" />
           <Input rounded="sm" />
           <Input rounded="lg" />
@@ -37,7 +37,7 @@ export default () => {
         <Input invalid value="example" />
       </Examples>
       <Examples title="Type">
-        <Stack gap="5">
+        <Stack class="gap-5">
           <Input type="text" placeholder="text" />
           <Input type="email" placeholder="email" />
           <Input type="number" />

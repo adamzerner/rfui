@@ -4,7 +4,7 @@ import { Stack } from "@/components/helpers/stack.tsx";
 
 export default () => {
   return (
-    <Stack gap="8">
+    <Stack class="gap-8">
       <div>
         <div class="text-2xl mb-3">Source code</div>
         <Link href="https://github.com/adamzerner/rfui/blob/master/routes/helpers/flex.tsx">
@@ -12,7 +12,7 @@ export default () => {
         </Link>
       </div>
       <div>
-        <Flex gap="2">
+        <Flex class="gap-8">
           <div>left</div>
           <div>middle</div>
           <div>right</div>

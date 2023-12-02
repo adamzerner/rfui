@@ -3,18 +3,16 @@ import { ComponentChild, JSX } from "preact";
 /** *
  * @function Flex
  *
- * @param gap `gap="2"` leads to the class having `gap-2`
- *
  * @example
- * <Flex gap="2">
+ * <Flex>
  *   <div>left</div>
  *   <div>middle</div>
  *   <div>right</div>
  * </Flex>
  */
 export const Flex = (
-  { gap, children, ...rest }:
-    & { gap?: string; children: ComponentChild }
+  { children, ...rest }:
+    & { children: ComponentChild }
     & JSX.HTMLAttributes<HTMLDivElement>,
 ) => {
   const { class: classFromRest, ...restWithoutClass } = rest;
@@ -22,10 +20,6 @@ export const Flex = (
 
   if (classFromRest) {
     classValue += ` ${classFromRest}`;
-  }
-
-  if (typeof gap === "string") {
-    classValue += ` gap-${gap}`;
   }
 
   return (

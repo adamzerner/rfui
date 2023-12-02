@@ -68,7 +68,7 @@ export const PasswordInput = (
   })();
 
   return (
-    <Flex gap="1" class="items-stretch" {...rest}>
+    <Flex class="gap-1 items-stretch" {...rest}>
       <Input
         type={shouldShow ? "text" : "password"}
         size={size}

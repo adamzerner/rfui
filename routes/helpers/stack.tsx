@@ -11,7 +11,7 @@ export default () => {
         </Link>
       </div>
       <div>
-        <Stack gap="2">
+        <Stack class="gap-2">
           <div>top</div>
           <div>middle</div>
           <div>bottom</div>

@@ -7,7 +7,7 @@ export const Examples = (
   return (
     <div>
       <div class="mb-5 text-4xl">{title}</div>
-      <Stack gap="7" class="items-start">{children}</Stack>
+      <Stack class="gap-7 items-start">{children}</Stack>
     </div>
   );
 };

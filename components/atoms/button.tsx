@@ -47,13 +47,13 @@ export const Button = (
       case "primary":
         return "bg-primary-500 text-[#fff] hover:bg-primary-400";
       case "secondary":
-        return "border-1 border-primary-500 text-primary-900 hover:bg-primary-50";
+        return "border border-primary-500 text-primary-900 hover:bg-primary-50";
       case "tertiary":
         return "underline"; // https://ux.stackexchange.com/a/5494/39046
       case "danger-primary":
         return "bg-supporting-red-500 text-[#fff] hover:bg-supporting-red-300";
       case "danger-secondary":
-        return "border-1 border-supporting-red-500 text-supporting-red-900 hover:bg-supporting-red-50";
+        return "border border-supporting-red-500 text-supporting-red-900 hover:bg-supporting-red-50";
       case "danger-tertiary":
         return "underline text-supporting-red-900";
     }

@@ -19,7 +19,7 @@ export const Input = (
   } & Omit<JSX.HTMLAttributes<HTMLInputElement>, "size">,
 ) => {
   let className =
-    "border-1 border-neutral-300 px-2 py-1 focus:outline-none focus:border-neutral-700 focus:shadow-sm";
+    "border border-neutral-300 px-2 py-1 focus:outline-none focus:border-neutral-700 focus:shadow-sm";
 
   className += " " + (() => {
     switch (size) {

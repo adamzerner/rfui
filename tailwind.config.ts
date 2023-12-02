@@ -1,5 +1,10 @@
-module.exports = {
-    theme: {
+import { type Config } from "tailwindcss";
+
+export default {
+  content: [
+    "{routes,islands,components}/**/*.{ts,tsx}",
+  ],
+  theme: {
     fontFamily: {
       sans: "concourse_3",
       serif: "equity_a",
@@ -103,4 +108,4 @@ module.exports = {
       },
     },
   },
-}
+} as Config;

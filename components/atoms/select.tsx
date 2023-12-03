@@ -6,7 +6,11 @@ import { ComponentChild, JSX } from "preact";
  * Doesn't really have readonly: https://stackoverflow.com/q/368813/1927876
  *
  * @example
- * <Select></Select>
+ * <Select>
+ *   <option value="foo">foo</option>
+ *   <option value="bar">bar</option>
+ *   <option value="baz">baz</option>
+ * </Select>
  */
 export const Select = (
   {
@@ -23,7 +27,7 @@ export const Select = (
   } & Omit<JSX.HTMLAttributes<HTMLSelectElement>, "size">,
 ) => {
   let className =
-    "border border-neutral-300 bg-[#fff] px-2 py-1 focus:outline-none focus:border-neutral-700 focus:shadow-sm";
+    "border border-neutral-300 bg-[#fff] px-2 py-1 appearance-none focus:outline-none focus:border-neutral-700 focus:shadow-sm";
 
   className += " " + (() => {
     switch (size) {

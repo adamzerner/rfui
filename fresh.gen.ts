@@ -11,6 +11,7 @@ import * as $atoms_checkbox from "./routes/atoms/checkbox.tsx";
 import * as $atoms_input from "./routes/atoms/input.tsx";
 import * as $atoms_link from "./routes/atoms/link.tsx";
 import * as $atoms_radio_button from "./routes/atoms/radio-button.tsx";
+import * as $atoms_select from "./routes/atoms/select.tsx";
 import * as $atoms_textarea from "./routes/atoms/textarea.tsx";
 import * as $helpers_flex from "./routes/helpers/flex.tsx";
 import * as $helpers_stack from "./routes/helpers/stack.tsx";
@@ -33,6 +34,7 @@ const manifest = {
     "./routes/atoms/input.tsx": $atoms_input,
     "./routes/atoms/link.tsx": $atoms_link,
     "./routes/atoms/radio-button.tsx": $atoms_radio_button,
+    "./routes/atoms/select.tsx": $atoms_select,
     "./routes/atoms/textarea.tsx": $atoms_textarea,
     "./routes/helpers/flex.tsx": $helpers_flex,
     "./routes/helpers/stack.tsx": $helpers_stack,

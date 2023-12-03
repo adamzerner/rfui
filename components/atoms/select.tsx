@@ -26,6 +26,17 @@ export const Select = (
     "border border-neutral-300 bg-[#fff] px-2 py-1 focus:outline-none focus:border-neutral-700 focus:shadow-sm";
 
   className += " " + (() => {
+    switch (size) {
+      case "sm":
+        return "px-2 text-sm";
+      case "md":
+        return "px-2 py-1";
+      case "lg":
+        return "px-3 py-2 text-lg";
+    }
+  })();
+
+  className += " " + (() => {
     switch (rounded) {
       case "square":
         return "rounded-none";

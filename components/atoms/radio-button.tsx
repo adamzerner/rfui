@@ -1,18 +1,18 @@
 import type { JSX } from "preact";
 
 /** *
- * @function Checkbox
+ * @function RadioButton
  *
  * Inspiration: https://css-tricks.com/zero-trickery-custom-radios-and-checkboxes/
  *
- * Readonly isn't really an option: https://stackoverflow.com/q/155291/1927876
+ * Readonly isn't really an option: https://stackoverflow.com/q/1953017/1927876
  *
- * Discussion of the cursor property https://ux.stackexchange.com/q/23266/39046
+ * Discussion of the cursor property: https://ux.stackexchange.com/q/23266/39046
  *
  * @example
- * <Checkbox />
+ * <RadioButton />
  */
-export const Checkbox = (
+export const RadioButton = (
   {
     size = "md",
     invalid = false,
@@ -50,7 +50,7 @@ export const Checkbox = (
   return (
     <input
       {...rest}
-      type="checkbox"
+      type="radio"
       class={className}
     />
   );

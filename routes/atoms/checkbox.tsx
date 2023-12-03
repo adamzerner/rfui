@@ -19,19 +19,8 @@ export default () => {
           <Checkbox size="lg" />
         </Stack>
       </Examples>
-      <Examples title="Rounded">
-        <Stack class="gap-5">
-          <Checkbox rounded="square" />
-          <Checkbox rounded="sm" />
-          <Checkbox rounded="lg" />
-          <Checkbox rounded="full" />
-        </Stack>
-      </Examples>
       <Examples title="Disabled">
         <Checkbox disabled />
-      </Examples>
-      <Examples title="Readonly">
-        <Checkbox readonly value="example" />
       </Examples>
       <Examples title="Invalid">
         <Checkbox invalid value="example" />

@@ -48,6 +48,8 @@ export const Select = (
         return "rounded";
       case "lg":
         return "rounded-lg";
+      case "full":
+        return "rounded-full";
     }
   })();
 

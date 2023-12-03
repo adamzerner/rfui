@@ -14,27 +14,67 @@ export default () => {
       </div>
       <Examples title="Size">
         <Stack class="gap-5">
-          <Select size="sm"></Select>
-          <Select size="md"></Select>
-          <Select size="lg"></Select>
+          <Select size="sm">
+            <option value="foo">foo</option>
+            <option value="bar">bar</option>
+            <option value="baz">baz</option>
+          </Select>
+          <Select size="md">
+            <option value="foo">foo</option>
+            <option value="bar">bar</option>
+            <option value="baz">baz</option>
+          </Select>
+          <Select size="lg">
+            <option value="foo">foo</option>
+            <option value="bar">bar</option>
+            <option value="baz">baz</option>
+          </Select>
         </Stack>
       </Examples>
       <Examples title="Rounded">
         <Stack class="gap-5">
-          <Select rounded="square"></Select>
-          <Select rounded="sm"></Select>
-          <Select rounded="lg"></Select>
-          <Select rounded="full"></Select>
+          <Select rounded="square">
+            <option value="foo">foo</option>
+            <option value="bar">bar</option>
+            <option value="baz">baz</option>
+          </Select>
+          <Select rounded="sm">
+            <option value="foo">foo</option>
+            <option value="bar">bar</option>
+            <option value="baz">baz</option>
+          </Select>
+          <Select rounded="lg">
+            <option value="foo">foo</option>
+            <option value="bar">bar</option>
+            <option value="baz">baz</option>
+          </Select>
+          <Select rounded="full">
+            <option value="foo">foo</option>
+            <option value="bar">bar</option>
+            <option value="baz">baz</option>
+          </Select>
         </Stack>
       </Examples>
       <Examples title="Disabled">
-        <Select disabled></Select>
+        <Select disabled>
+          <option value="foo">foo</option>
+          <option value="bar">bar</option>
+          <option value="baz">baz</option>
+        </Select>
       </Examples>
       <Examples title="Readonly">
-        <Select readonly></Select>
+        <Select readonly>
+          <option value="foo">foo</option>
+          <option value="bar">bar</option>
+          <option value="baz">baz</option>
+        </Select>
       </Examples>
       <Examples title="Invalid">
-        <Select invalid></Select>
+        <Select invalid>
+          <option value="foo">foo</option>
+          <option value="bar">bar</option>
+          <option value="baz">baz</option>
+        </Select>
       </Examples>
     </Stack>
   );

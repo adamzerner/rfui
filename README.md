@@ -27,3 +27,4 @@ To create a new version of this library:
 5. Pit of success (eg. by providing tips and references to best practices, and
    by prefixing with underscores)
 6. Pretty (Bootstrap is actually _ugly_)
+7. Use the platform

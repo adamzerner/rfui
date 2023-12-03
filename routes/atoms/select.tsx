@@ -62,13 +62,6 @@ export default () => {
           <option value="baz">baz</option>
         </Select>
       </Examples>
-      <Examples title="Readonly">
-        <Select readonly>
-          <option value="foo">foo</option>
-          <option value="bar">bar</option>
-          <option value="baz">baz</option>
-        </Select>
-      </Examples>
       <Examples title="Invalid">
         <Select invalid>
           <option value="foo">foo</option>

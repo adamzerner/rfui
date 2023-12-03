@@ -9,6 +9,7 @@ import * as $atoms_badge from "./routes/atoms/badge.tsx";
 import * as $atoms_button from "./routes/atoms/button.tsx";
 import * as $atoms_input from "./routes/atoms/input.tsx";
 import * as $atoms_link from "./routes/atoms/link.tsx";
+import * as $atoms_textarea from "./routes/atoms/textarea.tsx";
 import * as $helpers_flex from "./routes/helpers/flex.tsx";
 import * as $helpers_stack from "./routes/helpers/stack.tsx";
 import * as $icons_new_tab_icon from "./routes/icons/new-tab-icon.tsx";
@@ -28,6 +29,7 @@ const manifest = {
     "./routes/atoms/button.tsx": $atoms_button,
     "./routes/atoms/input.tsx": $atoms_input,
     "./routes/atoms/link.tsx": $atoms_link,
+    "./routes/atoms/textarea.tsx": $atoms_textarea,
     "./routes/helpers/flex.tsx": $helpers_flex,
     "./routes/helpers/stack.tsx": $helpers_stack,
     "./routes/icons/new-tab-icon.tsx": $icons_new_tab_icon,

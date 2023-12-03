@@ -19,6 +19,9 @@ export default () => {
           <li>
             <Link href="/atoms/link">Link</Link>
           </li>
+          <li>
+            <Link href="/atoms/textarea">Textarea</Link>
+          </li>
         </ul>
       </div>
       <div>

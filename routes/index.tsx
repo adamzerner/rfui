@@ -14,6 +14,9 @@ export default () => {
             <Link href="/atoms/button">Button</Link>
           </li>
           <li>
+            <Link href="/atoms/checkbox">Checkbox</Link>
+          </li>
+          <li>
             <Link href="/atoms/input">Input</Link>
           </li>
           <li>

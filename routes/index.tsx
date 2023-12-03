@@ -29,6 +29,9 @@ export default () => {
             <Link href="/atoms/select">Select</Link>
           </li>
           <li>
+            <Link href="/atoms/table">Table</Link>
+          </li>
+          <li>
             <Link href="/atoms/textarea">Textarea</Link>
           </li>
         </ul>

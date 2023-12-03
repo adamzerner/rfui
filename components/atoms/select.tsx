@@ -27,7 +27,7 @@ export const Select = (
   } & Omit<JSX.HTMLAttributes<HTMLSelectElement>, "size">,
 ) => {
   let className =
-    "border border-neutral-300 bg-[#fff] px-2 py-1 appearance-none focus:outline-none focus:border-neutral-700 focus:shadow-sm";
+    "border border-neutral-300 bg-[#fff] px-2 py-1 cursor-pointer focus:outline-none focus:border-neutral-700 focus:shadow-sm";
 
   className += " " + (() => {
     switch (size) {

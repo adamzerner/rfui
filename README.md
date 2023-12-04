@@ -28,3 +28,4 @@ To create a new version of this library:
    by prefixing with underscores)
 6. Pretty (Bootstrap is actually _ugly_)
 7. Use the platform
+8. Pareto solutions > high customizability

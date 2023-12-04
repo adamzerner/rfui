@@ -12,36 +12,40 @@ export default () => {
           https://github.com/adamzerner/rfui/blob/master/routes/atoms/table.tsx
         </Link>
       </div>
-      <Examples title="Size">
-        <Stack class="gap-5">
-          <Table>
-            <thead>
-              <tr>
-                <th>name</th>
-                <th>age</th>
-                <th>city</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Alice</td>
-                <td>21</td>
-                <td>Boston</td>
-              </tr>
-              <tr>
-                <td>Bob</td>
-                <td>27</td>
-                <td>Seattle</td>
-              </tr>
-              <tr>
-                <td>Carol</td>
-                <td>39</td>
-                <td>Arlington</td>
-              </tr>
-            </tbody>
-          </Table>
-        </Stack>
+      <Examples title="Striped">
+        <Table striped>
+          <TableContent />
+        </Table>
       </Examples>
     </Stack>
   );
 };
+
+const TableContent = () => (
+  <>
+    <thead>
+      <tr>
+        <th>name</th>
+        <th>age</th>
+        <th>city</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Alice</td>
+        <td>21</td>
+        <td>Boston</td>
+      </tr>
+      <tr>
+        <td>Bob</td>
+        <td>27</td>
+        <td>Seattle</td>
+      </tr>
+      <tr>
+        <td>Carol</td>
+        <td>39</td>
+        <td>Arlington</td>
+      </tr>
+    </tbody>
+  </>
+);

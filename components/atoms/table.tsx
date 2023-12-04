@@ -1,12 +1,6 @@
 import TailwindConfig from "@/tailwind.config.ts";
 import { ComponentChild, JSX } from "preact";
 
-/*
-
-TODO:
-- Think about overflow
-
-*/
 /** *
  * @function Table
  *

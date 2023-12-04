@@ -6,7 +6,6 @@ import { ComponentChild, JSX } from "preact";
 TODO:
 - Sticky header
 - Sticky left column
-- Condensed
 - Think about overflow
 - Expand row
 - Pagination
@@ -52,12 +51,14 @@ export const Table = (
     bordered = true,
     hover = true,
     striped = false,
+    condensed = false,
     children,
     ...rest
   }: {
     bordered?: boolean;
     hover?: boolean;
     striped?: boolean;
+    condensed?: boolean;
     children?: ComponentChild;
   } & JSX.HTMLAttributes<HTMLTableElement>,
 ) => {
@@ -73,6 +74,10 @@ export const Table = (
 
   if (striped) {
     className += " striped";
+  }
+
+  if (condensed) {
+    className += " condensed";
   }
 
   if (rest.class) {
@@ -96,10 +101,19 @@ export const Table = (
           TailwindConfig.theme?.colors.neutral[100]
         };
           }
+
+          table.rfui-table.condensed th {
+            padding-bottom: ${TailwindConfig.theme.extend?.spacing[1]};
+          }
           
           table.rfui-table td {
             padding-top: ${TailwindConfig.theme.extend?.spacing[5]};
             padding-bottom: ${TailwindConfig.theme.extend?.spacing[5]};
+          }
+
+          table.rfui-table.condensed td {
+            padding-top: ${TailwindConfig.theme.extend?.spacing[3]};
+            padding-bottom: ${TailwindConfig.theme.extend?.spacing[3]};
           }
 
           table.rfui-table.bordered td {
@@ -121,6 +135,12 @@ export const Table = (
             padding-left: ${TailwindConfig.theme.extend?.spacing[4]};
             padding-right: ${TailwindConfig.theme.extend?.spacing[4]};
             text-align: left;
+          }
+
+          table.rfui-table.condensed th,
+          table.rfui-table.condensed td {
+            padding-left: ${TailwindConfig.theme.extend?.spacing[2]};
+            padding-right: ${TailwindConfig.theme.extend?.spacing[2]};
           }
 
           table.rfui-table.striped tr:nth-child(even) {

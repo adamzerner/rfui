@@ -37,6 +37,11 @@ export default () => {
           <TableContent />
         </Table>
       </Examples>
+      <Examples title="Condensed">
+        <Table condensed>
+          <TableContent />
+        </Table>
+      </Examples>
     </Stack>
   );
 };

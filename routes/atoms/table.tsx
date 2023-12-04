@@ -22,8 +22,8 @@ export default () => {
           <TableContent />
         </Table>
       </Examples>
-      <Examples title="Hover">
-        <Table hover>
+      <Examples title="No hover">
+        <Table hover={false}>
           <TableContent />
         </Table>
       </Examples>
@@ -34,11 +34,6 @@ export default () => {
       </Examples>
       <Examples title="Striped with border">
         <Table striped>
-          <TableContent />
-        </Table>
-      </Examples>
-      <Examples title="Striped with hover">
-        <Table striped hover>
           <TableContent />
         </Table>
       </Examples>

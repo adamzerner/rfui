@@ -50,7 +50,7 @@ TODO:
 export const Table = (
   {
     bordered = true,
-    hover = false,
+    hover = true,
     striped = false,
     children,
     ...rest

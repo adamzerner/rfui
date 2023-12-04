@@ -7,11 +7,6 @@ TODO:
 - Sticky left column
 - Make sure responsiveness works
 - Think about overflow
----
-- Expand row
-- Pagination
-- Sorting
-- Filters
 
 */
 /** *

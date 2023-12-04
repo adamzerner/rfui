@@ -4,7 +4,6 @@ import { ComponentChild, JSX } from "preact";
 /*
 
 TODO:
-- Sticky left column
 - Make sure responsiveness works
 - Think about overflow
 
@@ -83,11 +82,11 @@ export const Table = (
   }
 
   if (stickyHeader) {
-    className += " sticky-header";
+    className += " sticky-header"; // https://css-tricks.com/making-tables-with-sticky-header-and-footers-got-a-bit-easier/
   }
 
   if (stickyFirstColumn) {
-    className += " sticky-first-column";
+    className += " sticky-first-column"; // https://css-tricks.com/making-tables-with-sticky-header-and-footers-got-a-bit-easier/
   }
 
   if (rest.class) {
@@ -113,17 +112,19 @@ export const Table = (
         };
           }
           
-          table.rfui-table.sticky-header th {
+          table.rfui-table.sticky-header thead {
             position: sticky;
-            top: 0;
-            z-index: 1;
+            inset-block-start: 0;
+            z-index: 2;
             background: ${TailwindConfig.theme?.colors.neutral[50]}; 
           }
 
-          table.rfui-table.sticky-first-column th:first-child {
+          table.rfui-table.sticky-first-column tr th:first-child,
+          table.rfui-table.sticky-first-column tr td:first-child {
             position: sticky;
-            top: 0;
-            z-index: 2;
+            inset-inline-start: 0;
+            z-index: 1;
+            background: ${TailwindConfig.theme?.colors.neutral[50]}; 
           }
 
           table.rfui-table.condensed th {

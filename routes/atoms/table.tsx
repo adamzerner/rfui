@@ -37,11 +37,6 @@ export default () => {
           <TableContent />
         </Table>
       </Examples>
-      <Examples title="Condensed">
-        <Table condensed>
-          <TableContent />
-        </Table>
-      </Examples>
       <Examples title="Sticky header">
         <Table stickyHeader>
           <TableContent />
@@ -54,6 +49,11 @@ export default () => {
       </Examples>
       <Examples title="Sticky header and first column">
         <Table stickyHeader stickyFirstColumn>
+          <TableContent />
+        </Table>
+      </Examples>
+      <Examples title="Condensed">
+        <Table condensed>
           <TableContent />
         </Table>
       </Examples>
@@ -83,8 +83,7 @@ const TableContent = () => {
   }, {
     name: "David",
     age: 41,
-    city:
-      "New York, New York, New York, New York, New York, New York, New York, New York, New York, New York, New York",
+    city: "New York",
     occupation: "HR",
     salary: "$90,000",
   }, {

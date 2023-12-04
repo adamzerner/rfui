@@ -12,6 +12,11 @@ export default () => {
           https://github.com/adamzerner/rfui/blob/master/routes/atoms/table.tsx
         </Link>
       </div>
+      <Examples title="Standard">
+        <Table>
+          <TableContent />
+        </Table>
+      </Examples>
       <Examples title="Striped">
         <Table striped>
           <TableContent />
@@ -21,53 +26,61 @@ export default () => {
   );
 };
 
-const TableContent = () => (
-  <>
-    <thead>
-      <tr>
-        <th>name</th>
-        <th>age</th>
-        <th>city</th>
-        <th>occupation</th>
-        <th>salary</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Alice</td>
-        <td>21</td>
-        <td>Boston</td>
-        <td>Software Engineer</td>
-        <td>$120k</td>
-      </tr>
-      <tr>
-        <td>Bob</td>
-        <td>27</td>
-        <td>Seattle</td>
-        <td>Product Manager</td>
-        <td>$105k</td>
-      </tr>
-      <tr>
-        <td>Carol</td>
-        <td>39</td>
-        <td>Arlington</td>
-        <td>UX Researcher</td>
-        <td>$160k</td>
-      </tr>
-      <tr>
-        <td>David</td>
-        <td>41</td>
-        <td>New York</td>
-        <td>HR</td>
-        <td>$90k</td>
-      </tr>
-      <tr>
-        <td>Emily</td>
-        <td>25</td>
-        <td>Portland</td>
-        <td>QA Engineer</td>
-        <td>$60k</td>
-      </tr>
-    </tbody>
-  </>
-);
+const TableContent = () => {
+  const users = [{
+    name: "Alice",
+    age: 21,
+    city: "Boston",
+    occupation: "Software Engineer",
+    salary: "$120,000",
+  }, {
+    name: "Bob",
+    age: 27,
+    city: "Seattle",
+    occupation: "Product Manager",
+    salary: "$105,000",
+  }, {
+    name: "Carol",
+    age: 39,
+    city: "Arlington",
+    occupation: "UX Researcher",
+    salary: "$160,000",
+  }, {
+    name: "David",
+    age: 41,
+    city: "New York",
+    occupation: "HR",
+    salary: "$90,000",
+  }, {
+    name: "Emily",
+    age: 25,
+    city: "Portland",
+    occupation: "QA Engineer",
+    salary: "$60,000",
+  }];
+
+  return (
+    <>
+      <thead>
+        <tr>
+          <th>name</th>
+          <th class="!text-right">age</th>
+          <th>city</th>
+          <th>occupation</th>
+          <th class="!text-right">salary</th>
+        </tr>
+      </thead>
+      <tbody>
+        {users.map((user) => (
+          <tr>
+            <td>{user.name}</td>
+            <td class="!text-right">{user.age}</td>
+            <td>{user.city}</td>
+            <td>{user.occupation}</td>
+            <td class="!text-right">{user.salary}</td>
+          </tr>
+        ))}
+      </tbody>
+    </>
+  );
+};

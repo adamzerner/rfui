@@ -28,6 +28,8 @@ const TableContent = () => (
         <th>name</th>
         <th>age</th>
         <th>city</th>
+        <th>occupation</th>
+        <th>salary</th>
       </tr>
     </thead>
     <tbody>
@@ -35,16 +37,36 @@ const TableContent = () => (
         <td>Alice</td>
         <td>21</td>
         <td>Boston</td>
+        <td>Software Engineer</td>
+        <td>$120k</td>
       </tr>
       <tr>
         <td>Bob</td>
         <td>27</td>
         <td>Seattle</td>
+        <td>Product Manager</td>
+        <td>$105k</td>
       </tr>
       <tr>
         <td>Carol</td>
         <td>39</td>
         <td>Arlington</td>
+        <td>UX Researcher</td>
+        <td>$160k</td>
+      </tr>
+      <tr>
+        <td>David</td>
+        <td>41</td>
+        <td>New York</td>
+        <td>HR</td>
+        <td>$90k</td>
+      </tr>
+      <tr>
+        <td>Emily</td>
+        <td>25</td>
+        <td>Portland</td>
+        <td>QA Engineer</td>
+        <td>$60k</td>
       </tr>
     </tbody>
   </>

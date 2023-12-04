@@ -51,7 +51,9 @@ export const Table = (
       <style>
         {`
           table.rfui-table td {
-            padding: 20px 10px;
+            padding: ${TailwindConfig.theme.extend?.spacing[5]} ${
+          TailwindConfig.theme.extend?.spacing[4]
+        };
           }
 
           table.rfui-table.striped tr:nth-child(even) {

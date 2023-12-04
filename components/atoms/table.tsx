@@ -27,6 +27,8 @@ TODO:
  *
  * For responsive design, consider removing columns, combining data across multiple cells into one cell, and providing a way to click a cell to navigate to some sort of other view with more detail, such as a modal or a new page. See https://ux.stackexchange.com/a/9766/39046.
  *
+ * Making the header or first column sticky is helpful when the user needs to cross-reference and avoid losing context.
+ *
  * @example
  * <Table>
  *   <thead>
@@ -54,6 +56,7 @@ export const Table = (
     striped = false,
     condensed = false,
     stickyHeader = false,
+    stickyFirstColumn = false,
     children,
     ...rest
   }: {
@@ -62,6 +65,7 @@ export const Table = (
     striped?: boolean;
     condensed?: boolean;
     stickyHeader?: boolean;
+    stickyFirstColumn?: boolean;
     children?: ComponentChild;
   } & JSX.HTMLAttributes<HTMLTableElement>,
 ) => {
@@ -85,6 +89,10 @@ export const Table = (
 
   if (stickyHeader) {
     className += " sticky-header";
+  }
+
+  if (stickyFirstColumn) {
+    className += " sticky-first-column";
   }
 
   if (rest.class) {
@@ -113,7 +121,14 @@ export const Table = (
           table.rfui-table.sticky-header th {
             position: sticky;
             top: 0;
+            z-index: 1;
             background: ${TailwindConfig.theme?.colors.neutral[50]}; 
+          }
+
+          table.rfui-table.sticky-first-column th:first-child {
+            position: sticky;
+            top: 0;
+            z-index: 2;
           }
 
           table.rfui-table.condensed th {

@@ -4,7 +4,6 @@ import { ComponentChild, JSX } from "preact";
 /*
 
 TODO:
-- Make sure responsiveness works
 - Think about overflow
 
 */
@@ -97,10 +96,6 @@ export const Table = (
     <>
       <style>
         {`
-          table.rfui-table {
-            overflow-x: scroll;
-          }
-
           table.rfui-table th {
             font-weight: normal;
             text-transform: uppercase;
@@ -129,6 +124,12 @@ export const Table = (
 
           table.rfui-table.condensed th {
             padding-bottom: ${TailwindConfig.theme.extend?.spacing[1]};
+          }
+
+          table.rfui-table td,
+          table.rfui-table th {
+            overflow-wrap: anywhere;
+            word-break: break-all;
           }
           
           table.rfui-table td {

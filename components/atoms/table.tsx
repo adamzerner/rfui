@@ -88,11 +88,11 @@ export const Table = (
           }
 
           table.rfui-table th {
-              font-weight: normal;
-              text-transform: uppercase;
-              font-size: 0.75em;
-              padding-bottom: ${TailwindConfig.theme.extend?.spacing[2]};
-              border-bottom: 1px solid ${
+            font-weight: normal;
+            text-transform: uppercase;
+            font-size: 0.75em;
+            padding-bottom: ${TailwindConfig.theme.extend?.spacing[2]};
+            border-bottom: 1px solid ${
           TailwindConfig.theme?.colors.neutral[100]
         };
           }

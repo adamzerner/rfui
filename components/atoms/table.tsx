@@ -5,7 +5,6 @@ import { ComponentChild, JSX } from "preact";
 
 TODO:
 - De-emphasize headings (smaller, lighter, all caps)
-- Border
 - Hover
 - Condensed
 - Scroll for responsiveness (https://ux.stackexchange.com/a/9766/39046)
@@ -48,15 +47,21 @@ TODO:
  */
 export const Table = (
   {
+    bordered = true,
     striped = false,
     children,
     ...rest
   }: {
+    bordered?: boolean;
     striped?: boolean;
     children?: ComponentChild;
   } & JSX.HTMLAttributes<HTMLTableElement>,
 ) => {
   let className = "rfui-table";
+
+  if (bordered) {
+    className += " bordered";
+  }
 
   if (striped) {
     className += " striped";
@@ -73,6 +78,9 @@ export const Table = (
           table.rfui-table td {
             padding-top: ${TailwindConfig.theme.extend?.spacing[5]};
             padding-bottom: ${TailwindConfig.theme.extend?.spacing[5]};
+          }
+
+          table.rfui-table.bordered td {
             border-bottom: 1px solid ${
           TailwindConfig.theme?.colors.neutral[100]
         };
@@ -81,7 +89,7 @@ export const Table = (
           table.rfui-table th {
             padding-bottom: ${TailwindConfig.theme.extend?.spacing[2]};
             border-bottom: 1px solid ${
-          TailwindConfig.theme?.colors.neutral[200]
+          TailwindConfig.theme?.colors.neutral[100]
         };
           }
 

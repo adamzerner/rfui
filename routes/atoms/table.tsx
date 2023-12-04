@@ -17,7 +17,17 @@ export default () => {
           <TableContent />
         </Table>
       </Examples>
+      <Examples title="No border">
+        <Table bordered={false}>
+          <TableContent />
+        </Table>
+      </Examples>
       <Examples title="Striped">
+        <Table striped bordered={false}>
+          <TableContent />
+        </Table>
+      </Examples>
+      <Examples title="Striped with border">
         <Table striped>
           <TableContent />
         </Table>

@@ -42,6 +42,16 @@ export default () => {
           <TableContent />
         </Table>
       </Examples>
+      <Examples title="Sticky header">
+        <Table stickyHeader>
+          <TableContent />
+        </Table>
+      </Examples>
+      <Examples title="Sticky header">
+        <Table stickyHeader>
+          <TableContent />
+        </Table>
+      </Examples>
     </Stack>
   );
 };

@@ -4,7 +4,6 @@ import { ComponentChild, JSX } from "preact";
 /*
 
 TODO:
-- Sticky header
 - Sticky left column
 - Make sure responsiveness works
 - Think about overflow
@@ -54,6 +53,7 @@ export const Table = (
     hover = true,
     striped = false,
     condensed = false,
+    stickyHeader = false,
     children,
     ...rest
   }: {
@@ -61,6 +61,7 @@ export const Table = (
     hover?: boolean;
     striped?: boolean;
     condensed?: boolean;
+    stickyHeader?: boolean;
     children?: ComponentChild;
   } & JSX.HTMLAttributes<HTMLTableElement>,
 ) => {
@@ -82,6 +83,10 @@ export const Table = (
     className += " condensed";
   }
 
+  if (stickyHeader) {
+    className += " sticky-header";
+  }
+
   if (rest.class) {
     className += ` ${rest.class}`;
   }
@@ -98,10 +103,17 @@ export const Table = (
             font-weight: normal;
             text-transform: uppercase;
             font-size: 0.75em;
+            padding-top: ${TailwindConfig.theme.extend?.spacing[2]};
             padding-bottom: ${TailwindConfig.theme.extend?.spacing[2]};
             border-bottom: 1px solid ${
           TailwindConfig.theme?.colors.neutral[100]
         };
+          }
+          
+          table.rfui-table.sticky-header th {
+            position: sticky;
+            top: 0;
+            background: ${TailwindConfig.theme?.colors.neutral[50]}; 
           }
 
           table.rfui-table.condensed th {

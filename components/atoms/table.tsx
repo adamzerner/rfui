@@ -4,7 +4,6 @@ import { ComponentChild, JSX } from "preact";
 /*
 
 TODO:
-- Hover
 - Condensed
 - Scroll for responsiveness (https://ux.stackexchange.com/a/9766/39046)
 - Think about overflow
@@ -49,11 +48,13 @@ TODO:
 export const Table = (
   {
     bordered = true,
+    hover = false,
     striped = false,
     children,
     ...rest
   }: {
     bordered?: boolean;
+    hover?: boolean;
     striped?: boolean;
     children?: ComponentChild;
   } & JSX.HTMLAttributes<HTMLTableElement>,
@@ -62,6 +63,10 @@ export const Table = (
 
   if (bordered) {
     className += " bordered";
+  }
+
+  if (hover) {
+    className += " hover";
   }
 
   if (striped) {
@@ -95,6 +100,14 @@ export const Table = (
             border-bottom: 1px solid ${
           TailwindConfig.theme?.colors.neutral[100]
         };
+          }
+
+          table.rfui-table.hover tr:hover td {
+            background: ${TailwindConfig.theme?.colors.neutral[50]}; 
+          }
+
+          table.rfui-table.hover.striped tr:hover td {
+            background: ${TailwindConfig.theme?.colors.neutral[100]}; 
           }
 
           table.rfui-table th,

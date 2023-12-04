@@ -4,10 +4,10 @@ import { ComponentChild, JSX } from "preact";
 /*
 
 TODO:
-- Condensed
-- Scroll for responsiveness (https://ux.stackexchange.com/a/9766/39046)
-- Think about overflow
 - Sticky header
+- Sticky left column
+- Condensed
+- Think about overflow
 - Expand row
 - Pagination
 - Sorting
@@ -24,6 +24,8 @@ TODO:
  * Discussions of utilizing zebra stripes: https://ux.stackexchange.com/q/3562/39046, https://ux.stackexchange.com/q/60715/39046.
  *
  * By default, headings are in uppercase. If you don't want this, apply a class of `"!normal-case"` to the `th` elements in order to provide `text-transform: none;`.
+ *
+ * For responsive design, consider removing columns, combining data across multiple cells into one cell, and providing a way to click a cell to navigate to some sort of other view with more detail, such as a modal or a new page. See https://ux.stackexchange.com/a/9766/39046.
  *
  * @example
  * <Table>
@@ -81,6 +83,10 @@ export const Table = (
     <>
       <style>
         {`
+          table.rfui-table {
+            overflow-x: scroll;
+          }
+
           table.rfui-table th {
               font-weight: normal;
               text-transform: uppercase;

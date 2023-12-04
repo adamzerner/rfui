@@ -24,7 +24,7 @@ TODO:
  *
  * Content is left-aligned by default. However, you'll probably want to right-align numerical content. See https://ux.stackexchange.com/q/24066/39046.
  *
- * Discussions of utilizing zebra stripes: https://ux.stackexchange.com/q/24066/39046, https://ux.stackexchange.com/q/60715/39046.
+ * Discussions of utilizing zebra stripes: https://ux.stackexchange.com/q/3562/39046, https://ux.stackexchange.com/q/60715/39046.
  *
  * @example
  * <Table>
@@ -73,6 +73,16 @@ export const Table = (
           table.rfui-table td {
             padding-top: ${TailwindConfig.theme.extend?.spacing[5]};
             padding-bottom: ${TailwindConfig.theme.extend?.spacing[5]};
+            border-bottom: 1px solid ${
+          TailwindConfig.theme?.colors.neutral[100]
+        };
+          }
+
+          table.rfui-table th {
+            padding-bottom: ${TailwindConfig.theme.extend?.spacing[2]};
+            border-bottom: 1px solid ${
+          TailwindConfig.theme?.colors.neutral[200]
+        };
           }
 
           table.rfui-table th,

@@ -4,7 +4,6 @@ import { ComponentChild, JSX } from "preact";
 /*
 
 TODO:
-- De-emphasize headings (smaller, lighter, all caps)
 - Hover
 - Condensed
 - Scroll for responsiveness (https://ux.stackexchange.com/a/9766/39046)
@@ -24,6 +23,8 @@ TODO:
  * Content is left-aligned by default. However, you'll probably want to right-align numerical content. See https://ux.stackexchange.com/q/24066/39046.
  *
  * Discussions of utilizing zebra stripes: https://ux.stackexchange.com/q/3562/39046, https://ux.stackexchange.com/q/60715/39046.
+ *
+ * By default, headings are in uppercase. If you don't want this, apply a class of `"!normal-case"` to the `th` elements in order to provide `text-transform: none;`.
  *
  * @example
  * <Table>
@@ -75,19 +76,22 @@ export const Table = (
     <>
       <style>
         {`
+          table.rfui-table th {
+              font-weight: normal;
+              text-transform: uppercase;
+              font-size: 0.75em;
+              padding-bottom: ${TailwindConfig.theme.extend?.spacing[2]};
+              border-bottom: 1px solid ${
+          TailwindConfig.theme?.colors.neutral[100]
+        };
+          }
+          
           table.rfui-table td {
             padding-top: ${TailwindConfig.theme.extend?.spacing[5]};
             padding-bottom: ${TailwindConfig.theme.extend?.spacing[5]};
           }
 
           table.rfui-table.bordered td {
-            border-bottom: 1px solid ${
-          TailwindConfig.theme?.colors.neutral[100]
-        };
-          }
-
-          table.rfui-table th {
-            padding-bottom: ${TailwindConfig.theme.extend?.spacing[2]};
             border-bottom: 1px solid ${
           TailwindConfig.theme?.colors.neutral[100]
         };

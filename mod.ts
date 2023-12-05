@@ -9,6 +9,7 @@ export { Select } from "./components/atoms/select.tsx";
 export { Table } from "./components/atoms/table.tsx";
 export { Textarea } from "./components/atoms/textarea.tsx";
 
+export { FormField } from "./components/molecules/form-field.tsx";
 export { PasswordInput } from "./islands/molecules/password-input.tsx";
 
 export { Flex } from "./components/helpers/flex.tsx";

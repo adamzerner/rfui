@@ -1,6 +1,7 @@
 export { Badge } from "./components/atoms/badge.tsx";
 export { Button } from "./components/atoms/button.tsx";
 export { Checkbox } from "./components/atoms/checkbox.tsx";
+export { Highlight } from "./components/atoms/highlight.tsx";
 export { Input } from "./components/atoms/input.tsx";
 export { Link } from "./components/atoms/link.tsx";
 export { RadioButton } from "./components/atoms/radio-button.tsx";

@@ -8,6 +8,7 @@ import * as $_layout from "./routes/_layout.tsx";
 import * as $atoms_badge from "./routes/atoms/badge.tsx";
 import * as $atoms_button from "./routes/atoms/button.tsx";
 import * as $atoms_checkbox from "./routes/atoms/checkbox.tsx";
+import * as $atoms_highlight from "./routes/atoms/highlight.tsx";
 import * as $atoms_input from "./routes/atoms/input.tsx";
 import * as $atoms_link from "./routes/atoms/link.tsx";
 import * as $atoms_radio_button from "./routes/atoms/radio-button.tsx";
@@ -32,6 +33,7 @@ const manifest = {
     "./routes/atoms/badge.tsx": $atoms_badge,
     "./routes/atoms/button.tsx": $atoms_button,
     "./routes/atoms/checkbox.tsx": $atoms_checkbox,
+    "./routes/atoms/highlight.tsx": $atoms_highlight,
     "./routes/atoms/input.tsx": $atoms_input,
     "./routes/atoms/link.tsx": $atoms_link,
     "./routes/atoms/radio-button.tsx": $atoms_radio_button,

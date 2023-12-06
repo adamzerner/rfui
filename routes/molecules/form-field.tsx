@@ -14,7 +14,7 @@ export default () => {
       </div>
       <Examples title="Default">
         <Stack class="gap-5">
-          <FormField />
+          <FormField label="Name" />
         </Stack>
       </Examples>
     </Stack>

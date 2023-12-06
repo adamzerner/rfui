@@ -4,9 +4,9 @@ import type { JSX } from "preact";
 /*
 
 TODO:
-- Error message
 - Size
 - Width
+- Type
 
 */
 /** *
@@ -27,6 +27,7 @@ export const FormField = (
     size = "md",
     rounded = "sm",
     invalid = false,
+    errorText,
     inputRest,
     helperText,
   }: {
@@ -38,6 +39,7 @@ export const FormField = (
     size?: "sm" | "md" | "lg";
     rounded?: "square" | "sm" | "lg" | "full";
     invalid?: boolean;
+    errorText?: string;
     inputRest?: Omit<JSX.HTMLAttributes<HTMLInputElement>, "size">;
     helperText?: string;
   },
@@ -58,6 +60,11 @@ export const FormField = (
         {!required && optionalIndicator === "asterisk" && <sup>*</sup>}
       </label>
       <div class="text-sm text-neutral-500 mb-1">{helperText}</div>
+      {invalid && errorText && (
+        <div class="text-sm text-supporting-red-500 mb-1">
+          🛑 {errorText}
+        </div>
+      )}
       <Input
         id={id}
         type={type}

@@ -22,6 +22,30 @@ export default () => {
           helperText="Your first and last name"
         />
       </Examples>
+      <Examples title="Invalid">
+        <FormField
+          type="text"
+          label="Name"
+          invalid
+        />
+      </Examples>
+      <Examples title="Error text">
+        <FormField
+          type="text"
+          label="Name"
+          invalid
+          errorText="Invalid name"
+        />
+      </Examples>
+      <Examples title="Helper and error text">
+        <FormField
+          type="text"
+          label="Name"
+          helperText="Your first and last name"
+          invalid
+          errorText="Invalid name"
+        />
+      </Examples>
       <Examples title="Required">
         <Stack class="gap-5">
           <FormField

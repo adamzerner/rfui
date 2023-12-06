@@ -19,7 +19,7 @@ export default () => {
         <FormField
           type="text"
           label="Name"
-          helperText="The user's first and last name"
+          helperText="Your first and last name"
         />
       </Examples>
       <Examples title="Required">

@@ -15,6 +15,7 @@ export const FormField = (
     rounded = "sm",
     invalid = false,
     inputRest,
+    helperText,
   }: {
     label: string;
     type?: JSX.HTMLAttributes<HTMLInputElement>["type"];
@@ -22,21 +23,26 @@ export const FormField = (
     rounded?: "square" | "sm" | "lg" | "full";
     invalid?: boolean;
     inputRest?: Omit<JSX.HTMLAttributes<HTMLInputElement>, "size">;
+    helperText?: string;
   },
 ) => {
+  const id = crypto.randomUUID();
+
   return (
     <div>
-      <label>
+      <label for={id}>
         {label}
-        <Input
-          type={type}
-          size={size}
-          rounded={rounded}
-          invalid={invalid}
-          class="block"
-          {...inputRest}
-        />
       </label>
+      <div>{helperText}</div>
+      <Input
+        id={id}
+        type={type}
+        size={size}
+        rounded={rounded}
+        invalid={invalid}
+        class="block"
+        {...inputRest}
+      />
     </div>
   );
 };

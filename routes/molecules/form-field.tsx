@@ -13,9 +13,14 @@ export default () => {
         </Link>
       </div>
       <Examples title="Default">
-        <Stack class="gap-5">
-          <FormField label="Name" />
-        </Stack>
+        <FormField label="Name" type="text" />
+      </Examples>
+      <Examples title="Helper text">
+        <FormField
+          label="Name"
+          type="text"
+          helperText="The user's first and last name"
+        />
       </Examples>
     </Stack>
   );

@@ -22,6 +22,36 @@ export default () => {
           helperText="The user's first and last name"
         />
       </Examples>
+      <Examples title="Required">
+        <Stack class="gap-5">
+          <FormField
+            type="text"
+            label="Name"
+            required
+            requiredIndicator="text"
+          />
+          <FormField
+            type="text"
+            label="Name"
+            required
+            requiredIndicator="asterisk"
+          />
+        </Stack>
+      </Examples>
+      <Examples title="Optional">
+        <Stack class="gap-5">
+          <FormField
+            type="text"
+            label="Name"
+            optionalIndicator="text"
+          />
+          <FormField
+            type="text"
+            label="Name"
+            optionalIndicator="asterisk"
+          />
+        </Stack>
+      </Examples>
     </Stack>
   );
 };

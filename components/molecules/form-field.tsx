@@ -4,7 +4,6 @@ import type { JSX } from "preact";
 /*
 
 TODO:
-- Size
 - Width
 - Type
 
@@ -45,23 +44,35 @@ export const FormField = (
   },
 ) => {
   const id = crypto.randomUUID();
+  const [smallFontClass, normalFontClass] = (() => {
+    switch (size) {
+      case "sm":
+        return ["text-xs", "text-sm"];
+      case "md":
+        return ["text-sm", "text-base"];
+      case "lg":
+        return ["text-base", "text-lg"];
+    }
+  })();
 
   return (
     <div>
-      <label for={id} class="mb-1">
+      <label for={id} class={`mb-1 ${normalFontClass}`}>
         {label}{" "}
         {required && requiredIndicator === "text" && (
-          <span class="text-neutral-500 text-xs">(required)</span>
+          <span class={`text-neutral-500 ${smallFontClass}`}>
+            (required)
+          </span>
         )}
         {required && requiredIndicator === "asterisk" && <sup>*</sup>}
         {!required && optionalIndicator === "text" && (
-          <span class="text-neutral-500 text-xs">(optional)</span>
+          <span class={`text-neutral-500 ${smallFontClass}`}>(optional)</span>
         )}
         {!required && optionalIndicator === "asterisk" && <sup>*</sup>}
       </label>
-      <div class="text-sm text-neutral-500 mb-1">{helperText}</div>
+      <div class={`${smallFontClass} text-neutral-500 mb-1`}>{helperText}</div>
       {invalid && errorText && (
-        <div class="text-sm text-supporting-red-500 mb-1">
+        <div class={`${smallFontClass} text-supporting-red-500 mb-1`}>
           🛑 {errorText}
         </div>
       )}

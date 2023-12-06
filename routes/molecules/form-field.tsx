@@ -76,6 +76,34 @@ export default () => {
           />
         </Stack>
       </Examples>
+      <Examples title="Size">
+        <Stack class="gap-5">
+          <FormField
+            type="text"
+            label="Name"
+            size="sm"
+            required
+            requiredIndicator="text"
+            helperText="First and last name"
+          />
+          <FormField
+            type="text"
+            label="Name"
+            size="md"
+            required
+            requiredIndicator="text"
+            helperText="First and last name"
+          />
+          <FormField
+            type="text"
+            label="Name"
+            size="lg"
+            required
+            requiredIndicator="text"
+            helperText="First and last name"
+          />
+        </Stack>
+      </Examples>
     </Stack>
   );
 };

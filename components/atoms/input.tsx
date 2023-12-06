@@ -26,9 +26,9 @@ export const Input = (
       case "sm":
         return "px-2 text-sm";
       case "md":
-        return "px-2 py-1";
+        return "px-3 py-2";
       case "lg":
-        return "px-3 py-2 text-lg";
+        return "px-4 py-3 text-lg";
     }
   })();
 

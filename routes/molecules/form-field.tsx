@@ -13,12 +13,12 @@ export default () => {
         </Link>
       </div>
       <Examples title="Default">
-        <FormField label="Name" type="text" />
+        <FormField type="text" label="Name" />
       </Examples>
       <Examples title="Helper text">
         <FormField
-          label="Name"
           type="text"
+          label="Name"
           helperText="The user's first and last name"
         />
       </Examples>

@@ -1,6 +1,14 @@
 import { Input } from "@/components/atoms/input.tsx";
 import type { JSX } from "preact";
 
+/*
+
+TODO:
+- Required
+- Width
+- Error message
+
+*/
 /** *
  * @function FormField
  * *

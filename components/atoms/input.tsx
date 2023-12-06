@@ -2,7 +2,7 @@ import type { JSX } from "preact";
 
 /** *
  * @function Input
- * *
+ *
  * @example
  * <Input type="text" />
  */

@@ -30,10 +30,10 @@ export const FormField = (
 
   return (
     <div>
-      <label for={id}>
+      <label for={id} class="mb-2">
         {label}
       </label>
-      <div>{helperText}</div>
+      <div class="text-sm text-neutral-500 mb-1">{helperText}</div>
       <Input
         id={id}
         type={type}

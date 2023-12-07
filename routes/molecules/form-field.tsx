@@ -13,34 +13,34 @@ export default () => {
         </Link>
       </div>
       <Examples title="Default">
-        <FormField type="text" label="Name" />
+        <FormField label="Name" type="text" />
       </Examples>
       <Examples title="Helper text">
         <FormField
-          type="text"
           label="Name"
+          type="text"
           helperText="Your first and last name"
         />
       </Examples>
       <Examples title="Invalid">
         <FormField
-          type="text"
           label="Name"
+          type="text"
           invalid
         />
       </Examples>
       <Examples title="Error text">
         <FormField
-          type="text"
           label="Name"
+          type="text"
           invalid
           errorText="Invalid name"
         />
       </Examples>
       <Examples title="Helper and error text">
         <FormField
-          type="text"
           label="Name"
+          type="text"
           helperText="Your first and last name"
           invalid
           errorText="Invalid name"
@@ -49,14 +49,14 @@ export default () => {
       <Examples title="Required">
         <Stack class="gap-5">
           <FormField
-            type="text"
             label="Name"
+            type="text"
             required
             requiredIndicator="text"
           />
           <FormField
-            type="text"
             label="Name"
+            type="text"
             required
             requiredIndicator="asterisk"
           />
@@ -65,13 +65,13 @@ export default () => {
       <Examples title="Optional">
         <Stack class="gap-5">
           <FormField
-            type="text"
             label="Name"
+            type="text"
             optionalIndicator="text"
           />
           <FormField
-            type="text"
             label="Name"
+            type="text"
             optionalIndicator="asterisk"
           />
         </Stack>
@@ -79,24 +79,24 @@ export default () => {
       <Examples title="Size">
         <Stack class="gap-5">
           <FormField
-            type="text"
             label="Name"
+            type="text"
             size="sm"
             required
             requiredIndicator="text"
             helperText="First and last name"
           />
           <FormField
-            type="text"
             label="Name"
+            type="text"
             size="md"
             required
             requiredIndicator="text"
             helperText="First and last name"
           />
           <FormField
-            type="text"
             label="Name"
+            type="text"
             size="lg"
             required
             requiredIndicator="text"
@@ -107,25 +107,39 @@ export default () => {
       <Examples title="Width">
         <Stack class="gap-5">
           <FormField
-            type="text"
             label="Name on card"
+            type="text"
             class="w-14"
           />
           <FormField
-            type="text"
             label="Card number"
+            type="text"
             class="w-14"
           />
           <FormField
-            type="text"
             label="Expiry date"
+            type="text"
             class="w-10"
           />
           <FormField
-            type="text"
             label="CVC"
+            type="text"
             class="w-10"
           />
+        </Stack>
+      </Examples>
+      <Examples title="Type">
+        <Stack class="gap-5">
+          <FormField label="Name" type="text" />
+          <FormField label="Email" type="email" />
+          <FormField label="Age" type="number" />
+          <FormField label="Password" type="password" value="foobar" />
+          <FormField label="Birthday" type="date" />
+          <FormField label="Appointment" type="datetime-local" />
+          <FormField label="Bed time" type="time" />
+          <FormField label="Profile photo" type="file" />
+          <FormField label="Mood" type="range" />
+          <FormField label="Favorite color" type="color" />
         </Stack>
       </Examples>
     </Stack>

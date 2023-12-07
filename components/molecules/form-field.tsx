@@ -1,24 +1,19 @@
 import { Input } from "@/components/atoms/input.tsx";
 import type { JSX } from "preact";
 
-/*
-
-TODO:
-- Width
-- Type
-
-*/
 /** *
  * @function FormField
  *
  * @param requiredIndicator See https://ux.stackexchange.com/q/840/39046 for a discussion.
  *
  * @example
- * <FormField type="text" label="Name" />
+ * <FormField label="Name" type="text" />
  */
 export const FormField = (
   {
     label,
+    name,
+    value,
     type,
     required = false,
     requiredIndicator = "none",
@@ -32,6 +27,8 @@ export const FormField = (
     ...rest
   }: {
     label: string;
+    name?: JSX.HTMLAttributes<HTMLInputElement>["name"];
+    value?: JSX.HTMLAttributes<HTMLInputElement>["value"];
     type?: JSX.HTMLAttributes<HTMLInputElement>["type"];
     required?: boolean;
     requiredIndicator?: "text" | "asterisk" | "none";
@@ -41,7 +38,10 @@ export const FormField = (
     rounded?: "square" | "sm" | "lg" | "full";
     invalid?: boolean;
     errorText?: string;
-    inputRest?: Omit<JSX.HTMLAttributes<HTMLInputElement>, "size">;
+    inputRest?: Omit<
+      JSX.HTMLAttributes<HTMLInputElement>,
+      "name" | "value" | "type" | "required" | "size" | "rounded" | "invalid"
+    >;
   } & Omit<JSX.HTMLAttributes<HTMLDivElement>, "size">,
 ) => {
   const id = crypto.randomUUID();
@@ -79,12 +79,14 @@ export const FormField = (
       )}
       <Input
         id={id}
+        name={name}
+        value={value}
         type={type}
         required={required}
         size={size}
         rounded={rounded}
         invalid={invalid}
-        class="block w-full"
+        class={`block w-full ${inputRest?.class}`}
         {...inputRest}
       />
     </div>

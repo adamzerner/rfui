@@ -21,9 +21,11 @@ import * as $icons_new_tab_icon from "./routes/icons/new-tab-icon.tsx";
 import * as $index from "./routes/index.tsx";
 import * as $molecules_form_field from "./routes/molecules/form-field.tsx";
 import * as $molecules_password_input from "./routes/molecules/password-input.tsx";
+import * as $molecules_stepper from "./routes/molecules/stepper.tsx";
 import * as $demo_example from "./islands/demo/example.tsx";
 import * as $demo_examples from "./islands/demo/examples.tsx";
 import * as $molecules_password_input_1 from "./islands/molecules/password-input.tsx";
+import * as $molecules_stepper_1 from "./islands/molecules/stepper.tsx";
 import { type Manifest } from "$fresh/server.ts";
 
 const manifest = {
@@ -47,11 +49,13 @@ const manifest = {
     "./routes/index.tsx": $index,
     "./routes/molecules/form-field.tsx": $molecules_form_field,
     "./routes/molecules/password-input.tsx": $molecules_password_input,
+    "./routes/molecules/stepper.tsx": $molecules_stepper,
   },
   islands: {
     "./islands/demo/example.tsx": $demo_example,
     "./islands/demo/examples.tsx": $demo_examples,
     "./islands/molecules/password-input.tsx": $molecules_password_input_1,
+    "./islands/molecules/stepper.tsx": $molecules_stepper_1,
   },
   baseUrl: import.meta.url,
 } satisfies Manifest;

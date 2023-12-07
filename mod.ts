@@ -11,6 +11,7 @@ export { Textarea } from "./components/atoms/textarea.tsx";
 
 export { FormField } from "./components/molecules/form-field.tsx";
 export { PasswordInput } from "./islands/molecules/password-input.tsx";
+export { Stepper } from "./islands/molecules/stepper.tsx";
 
 export { Flex } from "./components/helpers/flex.tsx";
 export { Stack } from "./components/helpers/stack.tsx";

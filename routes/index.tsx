@@ -48,6 +48,9 @@ export default () => {
           <li>
             <Link href="/molecules/password-input">PasswordInput</Link>
           </li>
+          <li>
+            <Link href="/molecules/stepper">Stepper</Link>
+          </li>
         </ul>
       </div>
       <div>

@@ -16,17 +16,21 @@ TODO:
  */
 export const Stepper = (
   {
+    name,
     size = "md",
     rounded = "sm",
     startingValue = 0,
-    name,
+    min,
+    max,
     ...rest
   }: {
+    name?: string;
     size?: "sm" | "md" | "lg";
     rounded?: "square" | "sm" | "lg" | "full";
     startingValue?: number;
-    name?: string;
-  } & Omit<JSX.HTMLAttributes<HTMLDivElement>, "size">,
+    min?: number;
+    max?: number;
+  } & Omit<JSX.HTMLAttributes<HTMLDivElement>, "size" | "min" | "max">,
 ) => {
   const [value, setValue] = useState(startingValue);
   const increment = () => {
@@ -35,8 +39,9 @@ export const Stepper = (
   const decrement = () => {
     setValue((v) => v - 1);
   };
-  let buttonClass =
-    "border border-neutral-500 text-neutral-500 hover:text-neutral-700 hover:border-neutral-700";
+  const isMinDisabled = min !== undefined && value <= min;
+  const isMaxDisabled = max !== undefined && value >= max;
+  let buttonClass = "border border-neutral-500";
   let leftButtonClass = "";
   let rightButtonClass = "";
   let divClass =
@@ -72,6 +77,20 @@ export const Stepper = (
       break;
   }
 
+  if (isMinDisabled) {
+    leftButtonClass += " cursor-not-allowed text-neutral-300";
+  } else {
+    leftButtonClass +=
+      " text-neutral-500 hover:text-neutral-700 hover:border-neutral-700";
+  }
+
+  if (isMaxDisabled) {
+    rightButtonClass += " cursor-not-allowed text-neutral-300";
+  } else {
+    rightButtonClass +=
+      " text-neutral-500 hover:text-neutral-700 hover:border-neutral-700";
+  }
+
   return (
     <Flex {...rest}>
       {name &&
@@ -79,7 +98,8 @@ export const Stepper = (
       <button
         type="button"
         onClick={decrement}
-        class={`${buttonClass} ${leftButtonClass}`}
+        class={`${leftButtonClass} ${buttonClass}`}
+        disabled={isMinDisabled}
       >
         ﹣
       </button>
@@ -87,7 +107,8 @@ export const Stepper = (
       <button
         type="button"
         onClick={increment}
-        class={`${buttonClass} ${rightButtonClass}`}
+        class={`${rightButtonClass} ${buttonClass}`}
+        disabled={isMaxDisabled}
       >
         +
       </button>

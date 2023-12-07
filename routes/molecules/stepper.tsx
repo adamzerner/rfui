@@ -30,6 +30,9 @@ export default () => {
       <Examples title="Name">
         <Stepper name="age" />
       </Examples>
+      <Examples title="Min and max">
+        <Stepper min={0} max={5} />
+      </Examples>
     </Stack>
   );
 };

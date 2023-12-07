@@ -6,17 +6,20 @@ import type { JSX } from "preact";
  * @example
  * <Input type="text" />
  */
+
+export type InputType = {
+  size?: "sm" | "md" | "lg";
+  rounded?: "square" | "sm" | "lg" | "full";
+  invalid?: boolean;
+} & Omit<JSX.HTMLAttributes<HTMLInputElement>, "size">;
+
 export const Input = (
   {
     size = "md",
     rounded = "sm",
     invalid = false,
     ...rest
-  }: {
-    size?: "sm" | "md" | "lg";
-    rounded?: "square" | "sm" | "lg" | "full";
-    invalid?: boolean;
-  } & Omit<JSX.HTMLAttributes<HTMLInputElement>, "size">,
+  }: InputType,
 ) => {
   let className =
     "border border-neutral-500 px-2 py-1 focus:outline-none focus:border-neutral-900 focus:shadow-sm";

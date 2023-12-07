@@ -1,9 +1,7 @@
-import { Input } from "@/components/atoms/input.tsx";
+import { Input, InputType } from "@/components/atoms/input.tsx";
 import { Flex } from "@/components/helpers/flex.tsx";
 import { JSX } from "preact";
 import { useState } from "preact/hooks";
-
-// TODO: Fix it such that you could pass stuff like `name` and `value`. I probably wanna pass `...rest` to `Input` and get rid of `size`, `rounded` and `invalid`.
 
 /** *
  * @function PasswordInput
@@ -23,17 +21,13 @@ import { useState } from "preact/hooks";
  */
 export const PasswordInput = (
   {
-    size = "md",
-    rounded = "sm",
-    invalid = false,
     defaultVisibility = "hidden",
-    ...rest
+    containerProps,
+    ...inputProps
   }: {
-    size?: "sm" | "md" | "lg";
-    rounded?: "square" | "sm" | "lg" | "full";
-    invalid?: boolean;
     defaultVisibility?: "hidden" | "shown";
-  } & Omit<JSX.HTMLAttributes<HTMLDivElement>, "size">,
+    containerProps?: Omit<JSX.HTMLAttributes<HTMLDivElement>, "size">;
+  } & InputType,
 ) => {
   const [shouldShow, setShouldShow] = useState(
     defaultVisibility === "hidden" ? false : true,
@@ -44,38 +38,42 @@ export const PasswordInput = (
   const buttonClass = (() => {
     let s = "bg-neutral-50 px-1";
 
-    if (size === "lg") {
-      s += " text-md";
-    } else if (size === "md") {
-      s += " text-sm";
-    } else if (size === "sm") {
-      s += " text-xs";
+    if ("size" in inputProps) {
+      if (inputProps.size === "lg") {
+        s += " text-md";
+      } else if (inputProps.size === "md") {
+        s += " text-sm";
+      } else if (inputProps.size === "sm") {
+        s += " text-xs";
+      }
     }
 
-    if (rounded === "square") {
-      s += " rounded-none";
-    } else if (rounded === "sm") {
-      s += " rounded";
-    } else if (rounded === "lg") {
-      s += " rounded-lg";
-    } else if (rounded === "full") {
-      s += " rounded-full";
+    if ("rounded" in inputProps) {
+      if (inputProps.rounded === "square") {
+        s += " rounded-none";
+      } else if (inputProps.rounded === "sm") {
+        s += " rounded";
+      } else if (inputProps.rounded === "lg") {
+        s += " rounded-lg";
+      } else if (inputProps.rounded === "full") {
+        s += " rounded-full";
+      }
     }
 
-    if (invalid) {
-      s += " bg-supporting-red-50 text-supporting-red-900";
+    if ("invalid" in inputProps) {
+      if (inputProps.invalid) {
+        s += " bg-supporting-red-50 text-supporting-red-900";
+      }
     }
 
     return s;
   })();
 
   return (
-    <Flex class="gap-1 items-stretch" {...rest}>
+    <Flex class="gap-1 items-stretch" {...containerProps}>
       <Input
         type={shouldShow ? "text" : "password"}
-        size={size}
-        rounded={rounded}
-        invalid={invalid}
+        {...inputProps}
       />
       <button
         type="button"

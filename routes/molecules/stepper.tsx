@@ -19,6 +19,14 @@ export default () => {
           <Stepper size="lg" />
         </Stack>
       </Examples>
+      <Examples title="Rounded">
+        <Stack class="gap-5">
+          <Stepper rounded="square" />
+          <Stepper rounded="sm" />
+          <Stepper rounded="lg" />
+          <Stepper rounded="full" />
+        </Stack>
+      </Examples>
     </Stack>
   );
 };

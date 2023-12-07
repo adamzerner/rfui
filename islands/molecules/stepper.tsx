@@ -13,11 +13,13 @@ export const Stepper = (
     size = "md",
     rounded = "sm",
     startingValue = 0,
+    name,
     ...rest
   }: {
     size?: "sm" | "md" | "lg";
     rounded?: "square" | "sm" | "lg" | "full";
     startingValue?: number;
+    name?: string;
   } & Omit<JSX.HTMLAttributes<HTMLDivElement>, "size">,
 ) => {
   const [value, setValue] = useState(startingValue);
@@ -65,6 +67,8 @@ export const Stepper = (
 
   return (
     <Flex {...rest}>
+      {name &&
+        <input type="hidden" name={name} value={value} />}
       <button
         type="button"
         onClick={decrement}

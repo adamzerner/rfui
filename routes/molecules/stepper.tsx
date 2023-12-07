@@ -27,6 +27,9 @@ export default () => {
           <Stepper rounded="full" />
         </Stack>
       </Examples>
+      <Examples title="Name">
+        <Stepper name="age" />
+      </Examples>
     </Stack>
   );
 };

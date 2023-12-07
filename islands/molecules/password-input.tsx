@@ -3,6 +3,8 @@ import { Flex } from "@/components/helpers/flex.tsx";
 import { JSX } from "preact";
 import { useState } from "preact/hooks";
 
+// TODO: Fix it such that you could pass stuff like `name` and `value`. I probably wanna pass `...rest` to `Input` and get rid of `size`, `rounded` and `invalid`.
+
 /** *
  * @function PasswordInput
  *

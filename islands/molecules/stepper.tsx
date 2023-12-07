@@ -37,15 +37,15 @@ export const Stepper = (
 
   switch (size) {
     case "sm":
-      buttonClass += " w-7 h-7";
+      buttonClass += " w-7 h-7 text-lg";
       divClass += " w-7 h-7";
       break;
     case "md":
-      buttonClass += " w-8 h-8 text-xl";
+      buttonClass += " w-8 h-8 text-2xl";
       divClass += " w-8 h-8 text-xl";
       break;
     case "lg":
-      buttonClass += " w-9 h-9 text-2xl";
+      buttonClass += " w-9 h-9 text-3xl";
       divClass += " w-9 h-9 text-2xl";
       break;
   }
@@ -74,7 +74,7 @@ export const Stepper = (
         onClick={decrement}
         class={`${buttonClass} ${leftButtonClass}`}
       >
-        -
+        ﹣
       </button>
       <div class={divClass}>{value}</div>
       <button

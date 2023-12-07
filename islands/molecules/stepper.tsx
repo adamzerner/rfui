@@ -11,10 +11,12 @@ import { useState } from "preact/hooks";
 export const Stepper = (
   {
     size = "md",
+    rounded = "sm",
     startingValue = 0,
     ...rest
   }: {
     size?: "sm" | "md" | "lg";
+    rounded?: "square" | "sm" | "lg" | "full";
     startingValue?: number;
   } & Omit<JSX.HTMLAttributes<HTMLDivElement>, "size">,
 ) => {
@@ -25,8 +27,11 @@ export const Stepper = (
   const decrement = () => {
     setValue((v) => v - 1);
   };
-  let buttonClass = "border";
-  let divClass = "border-y text-center";
+  let buttonClass = "border border-neutral-500 text-neutral-500";
+  let leftButtonClass = "";
+  let rightButtonClass = "";
+  let divClass =
+    "border-y border-neutral-500 flex justify-center items-center bg-neutral-50";
 
   switch (size) {
     case "sm":
@@ -34,12 +39,27 @@ export const Stepper = (
       divClass += " w-7 h-7";
       break;
     case "md":
-      buttonClass += " w-8 h-8";
-      divClass += " w-8 h-8";
+      buttonClass += " w-8 h-8 text-xl";
+      divClass += " w-8 h-8 text-xl";
       break;
     case "lg":
-      buttonClass += " w-9 h-9";
-      divClass += " w-9 h-9";
+      buttonClass += " w-9 h-9 text-2xl";
+      divClass += " w-9 h-9 text-2xl";
+      break;
+  }
+
+  switch (rounded) {
+    case "sm":
+      leftButtonClass += " rounded-l-sm";
+      rightButtonClass += " rounded-r-sm";
+      break;
+    case "lg":
+      leftButtonClass += " rounded-l-lg";
+      rightButtonClass += " rounded-r-lg";
+      break;
+    case "full":
+      leftButtonClass += " rounded-l-full";
+      rightButtonClass += " rounded-r-full";
       break;
   }
 
@@ -48,12 +68,16 @@ export const Stepper = (
       <button
         type="button"
         onClick={decrement}
-        class={buttonClass}
+        class={`${buttonClass} ${leftButtonClass}`}
       >
         -
       </button>
-      <div class={`${divClass} flex justify-center items-center`}>{value}</div>
-      <button type="button" onClick={increment} class={buttonClass}>
+      <div class={divClass}>{value}</div>
+      <button
+        type="button"
+        onClick={increment}
+        class={`${buttonClass} ${rightButtonClass}`}
+      >
         +
       </button>
     </Flex>

@@ -1,10 +1,12 @@
 import { ComponentChild } from "preact";
 import { useState } from "preact/hooks";
 
+type ExampleType = {
+  children: ComponentChild;
+};
+
 export const Example = (
-  { children }: {
-    children: ComponentChild;
-  },
+  { children }: ExampleType,
 ) => {
   const [shouldShowCode, setShouldShowCode] = useState(true);
   const toggleShouldShowCode = () => {

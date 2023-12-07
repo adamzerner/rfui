@@ -1,6 +1,10 @@
 import type { JSX } from "preact";
 import { ComponentChild } from "preact";
 
+export type HighlightType = {
+  children: ComponentChild;
+} & JSX.HTMLAttributes<HTMLUnknownElement>;
+
 /** *
  * @function Highlight
  *
@@ -11,9 +15,7 @@ export const Highlight = (
   {
     children,
     ...rest
-  }: {
-    children: ComponentChild;
-  } & JSX.HTMLAttributes<HTMLUnknownElement>,
+  }: HighlightType,
 ) => {
   let className = "bg-primary-100";
 

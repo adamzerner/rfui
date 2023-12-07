@@ -1,5 +1,10 @@
 import type { JSX } from "preact";
 
+export type RadioButtonType = {
+  size?: "sm" | "md" | "lg";
+  invalid?: boolean;
+} & Omit<JSX.HTMLAttributes<HTMLInputElement>, "size">;
+
 /** *
  * @function RadioButton
  *
@@ -17,10 +22,7 @@ export const RadioButton = (
     size = "md",
     invalid = false,
     ...rest
-  }: {
-    size?: "sm" | "md" | "lg";
-    invalid?: boolean;
-  } & Omit<JSX.HTMLAttributes<HTMLInputElement>, "size">,
+  }: RadioButtonType,
 ) => {
   let className = "accent-primary-500 cursor-pointer";
 

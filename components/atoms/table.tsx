@@ -1,6 +1,16 @@
 import TailwindConfig from "@/tailwind.config.ts";
 import { ComponentChild, JSX } from "preact";
 
+export type TableType = {
+  bordered?: boolean;
+  hover?: boolean;
+  striped?: boolean;
+  condensed?: boolean;
+  stickyHeader?: boolean;
+  stickyFirstColumn?: boolean;
+  children?: ComponentChild;
+} & JSX.HTMLAttributes<HTMLTableElement>;
+
 /** *
  * @function Table
  *
@@ -46,15 +56,7 @@ export const Table = (
     stickyFirstColumn = false,
     children,
     ...rest
-  }: {
-    bordered?: boolean;
-    hover?: boolean;
-    striped?: boolean;
-    condensed?: boolean;
-    stickyHeader?: boolean;
-    stickyFirstColumn?: boolean;
-    children?: ComponentChild;
-  } & JSX.HTMLAttributes<HTMLTableElement>,
+  }: TableType,
 ) => {
   let className = "rfui-table";
 

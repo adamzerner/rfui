@@ -2,6 +2,14 @@ import { NewTabIcon } from "@/components/icons/new-tab-icon.tsx";
 import type { JSX } from "preact";
 import { ComponentChild } from "preact";
 
+export type LinkType = {
+  href: string;
+  _newTab?: boolean;
+  _includeNewTabIcon?: boolean;
+  underline?: "always" | "hover" | "none";
+  children: ComponentChild;
+} & JSX.HTMLAttributes<HTMLAnchorElement>;
+
 /** *
  * @function Link
  *
@@ -21,13 +29,7 @@ export const Link = (
     underline = "always",
     children,
     ...rest
-  }: {
-    href: string;
-    _newTab?: boolean;
-    _includeNewTabIcon?: boolean;
-    underline?: "always" | "hover" | "none";
-    children: ComponentChild;
-  } & JSX.HTMLAttributes<HTMLAnchorElement>,
+  }: LinkType,
 ) => {
   let className = "cursor-pointer";
 

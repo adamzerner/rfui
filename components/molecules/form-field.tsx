@@ -1,6 +1,25 @@
 import { Input } from "@/components/atoms/input.tsx";
 import type { JSX } from "preact";
 
+export type FormFieldType = {
+  label: string;
+  name?: JSX.HTMLAttributes<HTMLInputElement>["name"];
+  value?: JSX.HTMLAttributes<HTMLInputElement>["value"];
+  type?: JSX.HTMLAttributes<HTMLInputElement>["type"];
+  required?: boolean;
+  requiredIndicator?: "text" | "asterisk" | "none";
+  optionalIndicator?: "text" | "asterisk" | "none";
+  helperText?: string;
+  size?: "sm" | "md" | "lg";
+  rounded?: "square" | "sm" | "lg" | "full";
+  invalid?: boolean;
+  errorText?: string;
+  inputRest?: Omit<
+    JSX.HTMLAttributes<HTMLInputElement>,
+    "name" | "value" | "type" | "required" | "size" | "rounded" | "invalid"
+  >;
+} & Omit<JSX.HTMLAttributes<HTMLDivElement>, "size">;
+
 /** *
  * @function FormField
  *
@@ -25,24 +44,7 @@ export const FormField = (
     errorText,
     inputRest,
     ...rest
-  }: {
-    label: string;
-    name?: JSX.HTMLAttributes<HTMLInputElement>["name"];
-    value?: JSX.HTMLAttributes<HTMLInputElement>["value"];
-    type?: JSX.HTMLAttributes<HTMLInputElement>["type"];
-    required?: boolean;
-    requiredIndicator?: "text" | "asterisk" | "none";
-    optionalIndicator?: "text" | "asterisk" | "none";
-    helperText?: string;
-    size?: "sm" | "md" | "lg";
-    rounded?: "square" | "sm" | "lg" | "full";
-    invalid?: boolean;
-    errorText?: string;
-    inputRest?: Omit<
-      JSX.HTMLAttributes<HTMLInputElement>,
-      "name" | "value" | "type" | "required" | "size" | "rounded" | "invalid"
-    >;
-  } & Omit<JSX.HTMLAttributes<HTMLDivElement>, "size">,
+  }: FormFieldType,
 ) => {
   const id = crypto.randomUUID();
   const [smallFontClass, normalFontClass] = (() => {

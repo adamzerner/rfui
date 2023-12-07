@@ -1,5 +1,10 @@
 import type { JSX } from "preact";
 
+export type CheckboxType = {
+  size?: "sm" | "md" | "lg";
+  invalid?: boolean;
+} & Omit<JSX.HTMLAttributes<HTMLInputElement>, "size">;
+
 /** *
  * @function Checkbox
  *
@@ -17,10 +22,7 @@ export const Checkbox = (
     size = "md",
     invalid = false,
     ...rest
-  }: {
-    size?: "sm" | "md" | "lg";
-    invalid?: boolean;
-  } & Omit<JSX.HTMLAttributes<HTMLInputElement>, "size">,
+  }: CheckboxType,
 ) => {
   let className = "accent-primary-500 cursor-pointer";
 

@@ -1,6 +1,23 @@
 import type { JSX } from "preact";
 import { ComponentChild } from "preact";
 
+export type ButtonType = {
+  variant?:
+    | "primary"
+    | "secondary"
+    | "tertiary"
+    | "danger-primary"
+    | "danger-secondary"
+    | "danger-tertiary";
+  size?: "sm" | "md" | "lg" | "block";
+  rounded?: "square" | "sm" | "lg" | "full";
+  isLoading?: boolean;
+  loadingContent?: string | JSX.Element;
+  icon?: JSX.Element;
+  _rightIcon?: JSX.Element; // better to align left https://ux.stackexchange.com/q/56023/39046
+  children: ComponentChild;
+} & Omit<JSX.HTMLAttributes<HTMLButtonElement>, "icon" | "size">;
+
 /** *
  * @function Button
  *
@@ -23,22 +40,7 @@ export const Button = (
     _rightIcon,
     children,
     ...rest
-  }: {
-    variant?:
-      | "primary"
-      | "secondary"
-      | "tertiary"
-      | "danger-primary"
-      | "danger-secondary"
-      | "danger-tertiary";
-    size?: "sm" | "md" | "lg" | "block";
-    rounded?: "square" | "sm" | "lg" | "full";
-    isLoading?: boolean;
-    loadingContent?: string | JSX.Element;
-    icon?: JSX.Element;
-    _rightIcon?: JSX.Element; // better to align left https://ux.stackexchange.com/q/56023/39046
-    children: ComponentChild;
-  } & Omit<JSX.HTMLAttributes<HTMLButtonElement>, "icon" | "size">,
+  }: ButtonType,
 ) => {
   let className = "";
 

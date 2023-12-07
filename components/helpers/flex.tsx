@@ -1,5 +1,9 @@
 import { ComponentChild, JSX } from "preact";
 
+export type FlexType =
+  & { children: ComponentChild }
+  & JSX.HTMLAttributes<HTMLDivElement>;
+
 /** *
  * @function Flex
  *
@@ -11,9 +15,7 @@ import { ComponentChild, JSX } from "preact";
  * </Flex>
  */
 export const Flex = (
-  { children, ...rest }:
-    & { children: ComponentChild }
-    & JSX.HTMLAttributes<HTMLDivElement>,
+  { children, ...rest }: FlexType,
 ) => {
   const { class: classFromRest, ...restWithoutClass } = rest;
   let classValue = "flex";

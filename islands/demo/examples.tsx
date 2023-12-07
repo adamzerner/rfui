@@ -1,8 +1,10 @@
 import { Stack } from "@/components/helpers/stack.tsx";
 import { ComponentChild } from "preact";
 
+type ExamplesType = { title: string; children: ComponentChild };
+
 export const Examples = (
-  { title, children }: { title: string; children: ComponentChild },
+  { title, children }: ExamplesType,
 ) => {
   return (
     <div>

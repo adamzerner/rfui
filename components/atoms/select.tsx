@@ -1,5 +1,12 @@
 import { ComponentChild, JSX } from "preact";
 
+export type SelectType = {
+  size?: "sm" | "md" | "lg";
+  rounded?: "square" | "sm" | "lg" | "full";
+  invalid?: boolean;
+  children?: ComponentChild;
+} & Omit<JSX.HTMLAttributes<HTMLSelectElement>, "size">;
+
 /** *
  * @function Select
  *
@@ -19,12 +26,7 @@ export const Select = (
     invalid = false,
     children,
     ...rest
-  }: {
-    size?: "sm" | "md" | "lg";
-    rounded?: "square" | "sm" | "lg" | "full";
-    invalid?: boolean;
-    children?: ComponentChild;
-  } & Omit<JSX.HTMLAttributes<HTMLSelectElement>, "size">,
+  }: SelectType,
 ) => {
   let className =
     "border border-neutral-500 bg-[#fff] px-2 py-1 cursor-pointer focus:outline-none focus:border-neutral-900 focus:shadow-sm";

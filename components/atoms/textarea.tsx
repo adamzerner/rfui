@@ -1,5 +1,11 @@
 import { ComponentChild, JSX } from "preact";
 
+export type TextareaType = {
+  rounded?: "square" | "sm" | "lg";
+  invalid?: boolean;
+  children?: ComponentChild;
+} & JSX.HTMLAttributes<HTMLTextAreaElement>;
+
 /** *
  * @function Textarea
  *
@@ -12,11 +18,7 @@ export const Textarea = (
     invalid = false,
     children,
     ...rest
-  }: {
-    rounded?: "square" | "sm" | "lg";
-    invalid?: boolean;
-    children?: ComponentChild;
-  } & JSX.HTMLAttributes<HTMLTextAreaElement>,
+  }: TextareaType,
 ) => {
   let className =
     "border border-neutral-500 px-2 py-1 focus:outline-none focus:border-neutral-900 focus:shadow-sm";

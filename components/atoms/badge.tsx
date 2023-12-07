@@ -1,5 +1,12 @@
 import { ComponentChild, JSX } from "preact";
 
+export type BadgeType = {
+  type?: "neutral" | "info" | "success" | "warning" | "danger";
+  size?: "sm" | "md" | "lg";
+  rounded?: "square" | "sm" | "lg" | "full";
+  children: ComponentChild;
+} & Omit<JSX.HTMLAttributes<HTMLDivElement>, "size">;
+
 /** *
  * @function Badge
  *
@@ -13,12 +20,7 @@ export const Badge = (
     rounded = "sm",
     children,
     ...rest
-  }: {
-    type?: "neutral" | "info" | "success" | "warning" | "danger";
-    size?: "sm" | "md" | "lg";
-    rounded?: "square" | "sm" | "lg" | "full";
-    children: ComponentChild;
-  } & Omit<JSX.HTMLAttributes<HTMLDivElement>, "size">,
+  }: BadgeType,
 ) => {
   let className = "";
 

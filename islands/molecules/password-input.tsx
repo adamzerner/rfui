@@ -3,6 +3,11 @@ import { Flex } from "@/components/helpers/flex.tsx";
 import { JSX } from "preact";
 import { useState } from "preact/hooks";
 
+export type PasswordInputType = {
+  defaultVisibility?: "hidden" | "shown";
+  containerProps?: Omit<JSX.HTMLAttributes<HTMLDivElement>, "size">;
+} & InputType;
+
 /** *
  * @function PasswordInput
  *
@@ -24,10 +29,7 @@ export const PasswordInput = (
     defaultVisibility = "hidden",
     containerProps,
     ...inputProps
-  }: {
-    defaultVisibility?: "hidden" | "shown";
-    containerProps?: Omit<JSX.HTMLAttributes<HTMLDivElement>, "size">;
-  } & InputType,
+  }: PasswordInputType,
 ) => {
   const [shouldShow, setShouldShow] = useState(
     defaultVisibility === "hidden" ? false : true,

@@ -2,6 +2,15 @@ import { Flex } from "@/components/helpers/flex.tsx";
 import { JSX } from "preact";
 import { useState } from "preact/hooks";
 
+export type StepperType = {
+  name?: string;
+  size?: "sm" | "md" | "lg";
+  rounded?: "square" | "sm" | "lg" | "full";
+  startingValue?: number;
+  min?: number;
+  max?: number;
+} & Omit<JSX.HTMLAttributes<HTMLDivElement>, "size" | "min" | "max">;
+
 /** *
  * @function Stepper
  *
@@ -17,14 +26,7 @@ export const Stepper = (
     min,
     max,
     ...rest
-  }: {
-    name?: string;
-    size?: "sm" | "md" | "lg";
-    rounded?: "square" | "sm" | "lg" | "full";
-    startingValue?: number;
-    min?: number;
-    max?: number;
-  } & Omit<JSX.HTMLAttributes<HTMLDivElement>, "size" | "min" | "max">,
+  }: StepperType,
 ) => {
   const [value, setValue] = useState(startingValue);
   const increment = () => {

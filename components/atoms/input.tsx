@@ -1,18 +1,17 @@
 import type { JSX } from "preact";
 
-/** *
- * @function Input
- *
- * @example
- * <Input type="text" />
- */
-
 export type InputType = {
   size?: "sm" | "md" | "lg";
   rounded?: "square" | "sm" | "lg" | "full";
   invalid?: boolean;
 } & Omit<JSX.HTMLAttributes<HTMLInputElement>, "size">;
 
+/** *
+ * @function Input
+ *
+ * @example
+ * <Input type="text" />
+ */
 export const Input = (
   {
     size = "md",

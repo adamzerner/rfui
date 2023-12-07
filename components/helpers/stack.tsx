@@ -1,5 +1,9 @@
 import { ComponentChild, JSX } from "preact";
 
+export type StackType =
+  & { children: ComponentChild }
+  & JSX.HTMLAttributes<HTMLDivElement>;
+
 /** *
  * @function Stack
  *
@@ -11,9 +15,7 @@ import { ComponentChild, JSX } from "preact";
  * </Stack>
  */
 export const Stack = (
-  { children, ...rest }:
-    & { children: ComponentChild }
-    & JSX.HTMLAttributes<HTMLDivElement>,
+  { children, ...rest }: StackType,
 ) => {
   const { class: classFromRest, ...restWithoutClass } = rest;
   let classValue = "flex flex-col";

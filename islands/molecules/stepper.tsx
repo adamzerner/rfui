@@ -2,12 +2,6 @@ import { Flex } from "@/components/helpers/flex.tsx";
 import { JSX } from "preact";
 import { useState } from "preact/hooks";
 
-/*
-
-TODO:
-- Min and max size + disabled
-
-*/
 /** *
  * @function Stepper
  *

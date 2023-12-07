@@ -23,25 +23,26 @@ export const FormField = (
     required = false,
     requiredIndicator = "none",
     optionalIndicator = "none",
+    helperText,
     size = "md",
     rounded = "sm",
     invalid = false,
     errorText,
     inputRest,
-    helperText,
+    ...rest
   }: {
     label: string;
     type?: JSX.HTMLAttributes<HTMLInputElement>["type"];
     required?: boolean;
     requiredIndicator?: "text" | "asterisk" | "none";
     optionalIndicator?: "text" | "asterisk" | "none";
+    helperText?: string;
     size?: "sm" | "md" | "lg";
     rounded?: "square" | "sm" | "lg" | "full";
     invalid?: boolean;
     errorText?: string;
     inputRest?: Omit<JSX.HTMLAttributes<HTMLInputElement>, "size">;
-    helperText?: string;
-  },
+  } & Omit<JSX.HTMLAttributes<HTMLDivElement>, "size">,
 ) => {
   const id = crypto.randomUUID();
   const [smallFontClass, normalFontClass] = (() => {
@@ -56,8 +57,8 @@ export const FormField = (
   })();
 
   return (
-    <div>
-      <label for={id} class={`mb-1 ${normalFontClass}`}>
+    <div {...rest}>
+      <label for={id} class={`mb-1 block ${normalFontClass}`}>
         {label}{" "}
         {required && requiredIndicator === "text" && (
           <span class={`text-neutral-500 ${smallFontClass}`}>
@@ -83,7 +84,7 @@ export const FormField = (
         size={size}
         rounded={rounded}
         invalid={invalid}
-        class="block"
+        class="block w-full"
         {...inputRest}
       />
     </div>

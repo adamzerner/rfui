@@ -104,6 +104,30 @@ export default () => {
           />
         </Stack>
       </Examples>
+      <Examples title="Width">
+        <Stack class="gap-5">
+          <FormField
+            type="text"
+            label="Name on card"
+            class="w-14"
+          />
+          <FormField
+            type="text"
+            label="Card number"
+            class="w-14"
+          />
+          <FormField
+            type="text"
+            label="Expiry date"
+            class="w-10"
+          />
+          <FormField
+            type="text"
+            label="CVC"
+            class="w-10"
+          />
+        </Stack>
+      </Examples>
     </Stack>
   );
 };

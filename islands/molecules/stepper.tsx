@@ -2,6 +2,12 @@ import { Flex } from "@/components/helpers/flex.tsx";
 import { JSX } from "preact";
 import { useState } from "preact/hooks";
 
+/*
+
+TODO:
+- Min and max size + disabled
+
+*/
 /** *
  * @function Stepper
  *
@@ -29,7 +35,8 @@ export const Stepper = (
   const decrement = () => {
     setValue((v) => v - 1);
   };
-  let buttonClass = "border border-neutral-500 text-neutral-500";
+  let buttonClass =
+    "border border-neutral-500 text-neutral-500 hover:text-neutral-700 hover:border-neutral-700";
   let leftButtonClass = "";
   let rightButtonClass = "";
   let divClass =

@@ -1,6 +1,11 @@
 import { Link } from "@/components/atoms/link.tsx";
 import { Stack } from "@/components/helpers/stack.tsx";
-import { Card, CardBody, CardFooter, CardHeader } from "@/components/molecules/card.tsx";
+import {
+  Card,
+  CardBody,
+  CardFooter,
+  CardHeader,
+} from "@/components/molecules/card.tsx";
 import { Examples } from "@/islands/demo/examples.tsx";
 
 export default () => {
@@ -38,6 +43,49 @@ export default () => {
           <CardBody>Body</CardBody>
           <CardFooter>Footer</CardFooter>
         </Card>
+      </Examples>
+      <Examples title="Rounded">
+        <Stack class="gap-5">
+          <Card rounded="square">
+            <CardHeader>Header</CardHeader>
+            <CardBody>Body</CardBody>
+            <CardFooter>Footer</CardFooter>
+          </Card>
+          <Card rounded="sm">
+            <CardHeader>Header</CardHeader>
+            <CardBody>Body</CardBody>
+            <CardFooter>Footer</CardFooter>
+          </Card>
+          <Card rounded="lg">
+            <CardHeader>Header</CardHeader>
+            <CardBody>Body</CardBody>
+            <CardFooter>Footer</CardFooter>
+          </Card>
+        </Stack>
+      </Examples>
+      <Examples title="Width">
+        <Stack class="gap-5 w-full">
+          <Card width="sm">
+            <CardHeader>Header</CardHeader>
+            <CardBody>Body</CardBody>
+            <CardFooter>Footer</CardFooter>
+          </Card>
+          <Card width="md">
+            <CardHeader>Header</CardHeader>
+            <CardBody>Body</CardBody>
+            <CardFooter>Footer</CardFooter>
+          </Card>
+          <Card width="lg">
+            <CardHeader>Header</CardHeader>
+            <CardBody>Body</CardBody>
+            <CardFooter>Footer</CardFooter>
+          </Card>
+          <Card width="full">
+            <CardHeader>Header</CardHeader>
+            <CardBody>Body</CardBody>
+            <CardFooter>Footer</CardFooter>
+          </Card>
+        </Stack>
       </Examples>
     </Stack>
   );

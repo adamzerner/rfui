@@ -1,6 +1,6 @@
 import { Link } from "@/components/atoms/link.tsx";
 import { Stack } from "@/components/helpers/stack.tsx";
-import { Card } from "@/components/molecules/card.tsx";
+import { Card, CardBody, CardHeader } from "@/components/molecules/card.tsx";
 import { Examples } from "@/islands/demo/examples.tsx";
 
 export default () => {
@@ -13,7 +13,18 @@ export default () => {
         </Link>
       </div>
       <Examples title="Default">
-        <Card>Examle</Card>
+        <Card>Example</Card>
+      </Examples>
+      <Examples title="CardBody">
+        <Card>
+          <CardBody>Body</CardBody>
+        </Card>
+      </Examples>
+      <Examples title="CardHeader and CardBody">
+        <Card>
+          <CardHeader>Header</CardHeader>
+          <CardBody>Body</CardBody>
+        </Card>
       </Examples>
     </Stack>
   );

@@ -18,12 +18,15 @@ export const Card = (
     ...rest
   }: CardType,
 ) => {
-  const [cardHeader, cardBody] = getComponents(children);
+  const [cardHeader, cardBody, cardFooter] = getComponents(children);
 
   return (
     <div {...rest}>
-      <div>{cardHeader}</div>
+      {cardHeader &&
+        <div>{cardHeader}</div>}
       <div>{cardBody}</div>
+      {cardFooter &&
+        <div>{cardFooter}</div>}
     </div>
   );
 };
@@ -41,13 +44,33 @@ const getComponents = (children: ComponentChild) => {
     (child) => child && child.type && child.type.name === "CardBody",
   );
 
-  return [cardHeader, cardBody];
+  const cardFooter = children.find(
+    (child) => child && child.type && child.type.name === "CardFooter",
+  );
+
+  return [cardHeader, cardBody, cardFooter];
 };
 
-export const CardHeader = ({ children, ...rest }: { children: ComponentChild } & JSX.HTMLAttributes<HTMLDivElement>) => {
+export const CardHeader = (
+  { children, ...rest }:
+    & { children: ComponentChild }
+    & JSX.HTMLAttributes<HTMLDivElement>,
+) => {
   return <div {...rest}>{children}</div>;
 };
 
-export const CardBody = ({ children, ...rest }: { children: ComponentChild } & JSX.HTMLAttributes<HTMLDivElement>) => {
+export const CardBody = (
+  { children, ...rest }:
+    & { children: ComponentChild }
+    & JSX.HTMLAttributes<HTMLDivElement>,
+) => {
+  return <div {...rest}>{children}</div>;
+};
+
+export const CardFooter = (
+  { children, ...rest }:
+    & { children: ComponentChild }
+    & JSX.HTMLAttributes<HTMLDivElement>,
+) => {
   return <div {...rest}>{children}</div>;
 };

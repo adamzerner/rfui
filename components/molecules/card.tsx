@@ -5,6 +5,16 @@ export type CardType = {
   children: ComponentChild;
 } & Omit<JSX.HTMLAttributes<HTMLDivElement>, "size">;
 
+/*
+
+TODO:
+- Rounded
+- Shadow
+- Size
+- topAccent; leftAccent
+
+*/
+
 /** *
  * @function Card
  *
@@ -19,14 +29,19 @@ export const Card = (
   }: CardType,
 ) => {
   const [cardHeader, cardBody, cardFooter] = getComponents(children);
+  let containerClass = "w-full max-w-md " + rest.class;
+  let sharedClass = "border-neutral-100 p-5 ";
+  let cardHeaderClass = sharedClass + "border-x border-t";
+  let cardBodyClass = sharedClass + "border";
+  let cardFooterClass = sharedClass + "border-x border-b";
 
   return (
-    <div {...rest}>
+    <div class={containerClass} {...rest}>
       {cardHeader &&
-        <div>{cardHeader}</div>}
-      <div>{cardBody}</div>
+        <div class={cardHeaderClass}>{cardHeader}</div>}
+      <div class={cardBodyClass}>{cardBody}</div>
       {cardFooter &&
-        <div>{cardFooter}</div>}
+        <div class={cardFooterClass}>{cardFooter}</div>}
     </div>
   );
 };

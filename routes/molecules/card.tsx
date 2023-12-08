@@ -87,6 +87,25 @@ export default () => {
           </Card>
         </Stack>
       </Examples>
+      <Examples title="Shadow">
+        <Stack class="gap-5">
+          <Card shadow="sm">
+            <CardHeader>Header</CardHeader>
+            <CardBody>Body</CardBody>
+            <CardFooter>Footer</CardFooter>
+          </Card>
+          <Card shadow="md">
+            <CardHeader>Header</CardHeader>
+            <CardBody>Body</CardBody>
+            <CardFooter>Footer</CardFooter>
+          </Card>
+          <Card shadow="lg">
+            <CardHeader>Header</CardHeader>
+            <CardBody>Body</CardBody>
+            <CardFooter>Footer</CardFooter>
+          </Card>
+        </Stack>
+      </Examples>
     </Stack>
   );
 };

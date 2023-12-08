@@ -1,4 +1,6 @@
+import { Button } from "@/components/atoms/button.tsx";
 import { Link } from "@/components/atoms/link.tsx";
+import { Flex } from "@/components/helpers/flex.tsx";
 import { Stack } from "@/components/helpers/stack.tsx";
 import {
   Card,
@@ -6,6 +8,7 @@ import {
   CardFooter,
   CardHeader,
 } from "@/components/molecules/card.tsx";
+import { FormField } from "@/components/molecules/form-field.tsx";
 import { Examples } from "@/islands/demo/examples.tsx";
 
 export default () => {
@@ -105,6 +108,29 @@ export default () => {
             <CardFooter>Footer</CardFooter>
           </Card>
         </Stack>
+      </Examples>
+      <Examples title="Realistic">
+        <Card>
+          <CardHeader>
+            <h1 class="font-bold tracking-wide">Profile</h1>
+          </CardHeader>
+          <CardBody>
+            <div class="text-neutral-500 mb-6">
+              Please fill out the following information.
+            </div>
+            <Stack class="gap-3">
+              <FormField label="Name" type="text" />
+              <FormField label="Email" type="email" />
+              <FormField label="Age" type="number" />
+            </Stack>
+          </CardBody>
+          <CardFooter>
+            <Flex class="gap-2">
+              <Button variant="primary">Submit</Button>
+              <Button>Cancel</Button>
+            </Flex>
+          </CardFooter>
+        </Card>
       </Examples>
     </Stack>
   );

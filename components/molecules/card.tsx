@@ -10,7 +10,6 @@ export type CardType = {
 /*
 
 TODO:
-- Shadow
 - topAccent; leftAccent
 
 */

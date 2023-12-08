@@ -112,7 +112,7 @@ export default () => {
       <Examples title="Realistic">
         <Card>
           <CardHeader>
-            <h1 class="font-bold">Profile</h1>
+            <h1 class="font-bold tracking-wide">Profile</h1>
           </CardHeader>
           <CardBody>
             <div class="text-neutral-500 mb-6">

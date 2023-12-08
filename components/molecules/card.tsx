@@ -13,6 +13,7 @@ export type CardType = {
 
 TODO:
 - Improve CardHeader
+- Think about border
 
 */
 

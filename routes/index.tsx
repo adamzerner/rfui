@@ -43,6 +43,9 @@ export default () => {
         <div>Molecules</div>
         <ul class="list-disc list-inside">
           <li>
+            <Link href="/molecules/card">Card</Link>
+          </li>
+          <li>
             <Link href="/molecules/form-field">FormField</Link>
           </li>
           <li>

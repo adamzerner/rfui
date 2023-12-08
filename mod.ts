@@ -19,6 +19,8 @@ export type { TableType } from "./components/atoms/table.tsx";
 export { Textarea } from "./components/atoms/textarea.tsx";
 export type { TextareaType } from "./components/atoms/textarea.tsx";
 
+export { Card } from "./components/molecules/card.tsx";
+export type { CardType } from "./components/molecules/card.tsx";
 export { FormField } from "./components/molecules/form-field.tsx";
 export type { FormFieldType } from "./components/molecules/form-field.tsx";
 export { PasswordInput } from "./islands/molecules/password-input.tsx";

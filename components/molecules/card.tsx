@@ -3,6 +3,7 @@ import type { ComponentChild, JSX } from "preact";
 export type CardType = {
   rounded?: "square" | "sm" | "lg";
   width?: "sm" | "md" | "lg" | "full";
+  shadow?: "sm" | "md" | "lg";
   children: ComponentChild;
 } & Omit<JSX.HTMLAttributes<HTMLDivElement>, "size">;
 
@@ -24,16 +25,17 @@ export const Card = (
   {
     rounded = "sm",
     width = "md",
+    shadow = "md",
     children,
     ...rest
   }: CardType,
 ) => {
   const [cardHeader, cardBody, cardFooter] = getComponents(children);
-  let containerClass = "max-w-full";
-  let sharedClass = "border-neutral-100 p-5";
-  let cardHeaderClass = sharedClass + " border-x border-t";
-  let cardBodyClass = sharedClass + " border";
-  let cardFooterClass = sharedClass + " border-x border-b";
+  const sharedClass = "p-5 border-neutral-100";
+  const cardHeaderClass = sharedClass + " border-b";
+  const cardBodyClass = sharedClass;
+  const cardFooterClass = sharedClass + " border-t";
+  let containerClass = "max-w-full border border-neutral-100";
 
   containerClass += " " + (() => {
     switch (width) {
@@ -48,47 +50,27 @@ export const Card = (
     }
   })();
 
-  switch (rounded) {
-    case "square":
-      cardHeaderClass += " rounded-t-none";
-      cardFooterClass += " rounded-b-none";
+  containerClass += " " + (() => {
+    switch (shadow) {
+      case "sm":
+        return "shadow-sm";
+      case "md":
+        return "shadow";
+      case "lg":
+        return "shadow-md";
+    }
+  })();
 
-      if (!cardHeader) {
-        cardBodyClass += " rounded-t-none";
-      }
-
-      if (!cardFooter) {
-        cardBodyClass += " rounded-b-none";
-      }
-
-      break;
-    case "sm":
-      cardHeaderClass += " rounded-t-sm";
-      cardFooterClass += " rounded-b-sm";
-
-      if (!cardHeader) {
-        cardBodyClass += " rounded-t-sm";
-      }
-
-      if (!cardFooter) {
-        cardBodyClass += " rounded-b-sm";
-      }
-
-      break;
-    case "lg":
-      cardHeaderClass += " rounded-t-lg";
-      cardFooterClass += " rounded-b-lg";
-
-      if (!cardHeader) {
-        cardBodyClass += " rounded-t-lg";
-      }
-
-      if (!cardFooter) {
-        cardBodyClass += " rounded-b-lg";
-      }
-
-      break;
-  }
+  containerClass += " " + (() => {
+    switch (rounded) {
+      case "square":
+        return "rounded-none";
+      case "sm":
+        return "rounded";
+      case "lg":
+        return "rounded-lg";
+    }
+  })();
 
   return (
     <div class={containerClass} {...rest}>

@@ -4,13 +4,15 @@ export type CardType = {
   rounded?: "square" | "sm" | "lg";
   width?: "sm" | "md" | "lg" | "full";
   shadow?: "sm" | "md" | "lg";
+  topAccent?: boolean;
+  leftAccent?: boolean;
   children: ComponentChild;
 } & Omit<JSX.HTMLAttributes<HTMLDivElement>, "size">;
 
 /*
 
 TODO:
-- topAccent; leftAccent
+- Improve CardHeader
 
 */
 
@@ -25,6 +27,8 @@ export const Card = (
     rounded = "sm",
     width = "md",
     shadow = "md",
+    topAccent = false,
+    leftAccent = false,
     children,
     ...rest
   }: CardType,
@@ -35,6 +39,14 @@ export const Card = (
   const cardBodyClass = sharedClass;
   const cardFooterClass = sharedClass + " border-t";
   let containerClass = "max-w-full border border-neutral-100";
+
+  if (topAccent) {
+    containerClass += " border-t-primary-500 border-t-2";
+  }
+
+  if (leftAccent) {
+    containerClass += " border-l-primary-500 border-l-2";
+  }
 
   containerClass += " " + (() => {
     switch (width) {

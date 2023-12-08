@@ -112,7 +112,53 @@ export default () => {
       <Examples title="Realistic">
         <Card>
           <CardHeader>
-            <h1 class="font-bold tracking-wide">Profile</h1>
+            <h1 class="font-bold">Profile</h1>
+          </CardHeader>
+          <CardBody>
+            <div class="text-neutral-500 mb-6">
+              Please fill out the following information.
+            </div>
+            <Stack class="gap-3">
+              <FormField label="Name" type="text" />
+              <FormField label="Email" type="email" />
+              <FormField label="Age" type="number" />
+            </Stack>
+          </CardBody>
+          <CardFooter>
+            <Flex class="gap-2">
+              <Button variant="primary">Submit</Button>
+              <Button>Cancel</Button>
+            </Flex>
+          </CardFooter>
+        </Card>
+      </Examples>
+      <Examples title="Top accent">
+        <Card topAccent rounded="square">
+          <CardHeader>
+            <h1 class="font-bold">Profile</h1>
+          </CardHeader>
+          <CardBody>
+            <div class="text-neutral-500 mb-6">
+              Please fill out the following information.
+            </div>
+            <Stack class="gap-3">
+              <FormField label="Name" type="text" />
+              <FormField label="Email" type="email" />
+              <FormField label="Age" type="number" />
+            </Stack>
+          </CardBody>
+          <CardFooter>
+            <Flex class="gap-2">
+              <Button variant="primary">Submit</Button>
+              <Button>Cancel</Button>
+            </Flex>
+          </CardFooter>
+        </Card>
+      </Examples>
+      <Examples title="Left accent">
+        <Card leftAccent rounded="square">
+          <CardHeader>
+            <h1 class="font-bold">Profile</h1>
           </CardHeader>
           <CardBody>
             <div class="text-neutral-500 mb-6">

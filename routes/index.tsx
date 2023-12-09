@@ -1,85 +1,60 @@
 import { Link } from "@/components/atoms/link.tsx";
+import { Flex } from "@/components/helpers/flex.tsx";
 import { Stack } from "@/components/helpers/stack.tsx";
 
 export default () => {
   return (
-    <Stack class="gap-5">
-      <div>
-        <div>Atoms</div>
-        <ul class="list-disc list-inside">
-          <li>
-            <Link href="/atoms/badge">Badge</Link>
-          </li>
-          <li>
-            <Link href="/atoms/button">Button</Link>
-          </li>
-          <li>
-            <Link href="/atoms/checkbox">Checkbox</Link>
-          </li>
-          <li>
-            <Link href="/atoms/highlight">Highlight</Link>
-          </li>
-          <li>
-            <Link href="/atoms/input">Input</Link>
-          </li>
-          <li>
-            <Link href="/atoms/link">Link</Link>
-          </li>
-          <li>
-            <Link href="/atoms/radio-button">RadioButton</Link>
-          </li>
-          <li>
-            <Link href="/atoms/select">Select</Link>
-          </li>
-          <li>
-            <Link href="/atoms/table">Table</Link>
-          </li>
-          <li>
-            <Link href="/atoms/textarea">Textarea</Link>
-          </li>
-        </ul>
-      </div>
-      <div>
-        <div>Molecules</div>
-        <ul class="list-disc list-inside">
-          <li>
-            <Link href="/molecules/card">Card</Link>
-          </li>
-          <li>
-            <Link href="/molecules/form-field">FormField</Link>
-          </li>
-          <li>
-            <Link href="/molecules/password-input">PasswordInput</Link>
-          </li>
-          <li>
-            <Link href="/molecules/stepper">Stepper</Link>
-          </li>
-        </ul>
-      </div>
-      <div>
-        <div>Organisms</div>
-        <ul>
-        </ul>
-      </div>
-      <div>
-        <div>Helpers</div>
-        <ul class="list-disc list-inside">
-          <li>
-            <Link href="/helpers/flex">Flex</Link>
-          </li>
-          <li>
-            <Link href="/helpers/stack">Stack</Link>
-          </li>
-        </ul>
-      </div>
-      <div>
-        <div>Icons</div>
-        <ul class="list-disc list-inside">
-          <li>
-            <Link href="/icons/new-tab-icon">NewTabIcon</Link>
-          </li>
-        </ul>
-      </div>
-    </Stack>
+    <Flex class="mt-9">
+      <Stack class="gap-8">
+        <div>
+          <div class="font-bold text-neutral-700 mb-4">Atoms</div>
+          <Stack class="gap-2">
+            <Link underline="hover" href="/atoms/badge">Badge</Link>
+            <Link underline="hover" href="/atoms/button">Button</Link>
+            <Link underline="hover" href="/atoms/checkbox">Checkbox</Link>
+            <Link underline="hover" href="/atoms/highlight">Highlight</Link>
+            <Link underline="hover" href="/atoms/input">Input</Link>
+            <Link underline="hover" href="/atoms/link">Link</Link>
+            <Link underline="hover" href="/atoms/radio-button">
+              RadioButton
+            </Link>
+            <Link underline="hover" href="/atoms/select">Select</Link>
+            <Link underline="hover" href="/atoms/table">Table</Link>
+            <Link underline="hover" href="/atoms/textarea">Textarea</Link>
+          </Stack>
+        </div>
+        <div>
+          <div class="font-bold text-neutral-700 mb-4">Molecules</div>
+          <Stack class="gap-2">
+            <Link underline="hover" href="/molecules/card">Card</Link>
+            <Link underline="hover" href="/molecules/form-field">
+              FormField
+            </Link>
+            <Link underline="hover" href="/molecules/password-input">
+              PasswordInput
+            </Link>
+            <Link underline="hover" href="/molecules/stepper">Stepper</Link>
+          </Stack>
+        </div>
+        <div>
+          <div class="font-bold text-neutral-700 mb-4">Organisms</div>
+          <Stack class="gap-2">
+          </Stack>
+        </div>
+        <div>
+          <div class="font-bold text-neutral-700 mb-4">Helpers</div>
+          <Stack class="gap-2s">
+            <Link underline="hover" href="/helpers/flex">Flex</Link>
+            <Link underline="hover" href="/helpers/stack">Stack</Link>
+          </Stack>
+        </div>
+        <div>
+          <div class="font-bold text-neutral-700 mb-4">Icons</div>
+          <Stack class="gap-2">
+            <Link underline="hover" href="/icons/new-tab-icon">NewTabIcon</Link>
+          </Stack>
+        </div>
+      </Stack>
+    </Flex>
   );
 };

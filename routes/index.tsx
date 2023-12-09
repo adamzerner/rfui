@@ -120,7 +120,7 @@ const Category = ({ children }: { children: ComponentChild }) => {
 
 const Item = ({ children }: { children: ComponentChild }) => {
   return (
-    <Card width="sm">
+    <Card condensed style={{ width: 200 }}>
       <CardHeader>{children}</CardHeader>
       <CardBody>[image]</CardBody>
     </Card>

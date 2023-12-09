@@ -4,13 +4,6 @@ import { Stack } from "@/components/helpers/stack.tsx";
 import { Card, CardBody, CardFooter } from "@/components/molecules/card.tsx";
 import { ComponentChild } from "preact";
 
-/*
-
-TODO:
-- Real images
-
-*/
-
 export default () => {
   return (
     <Flex class="mt-9 gap-11">

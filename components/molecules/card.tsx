@@ -27,7 +27,7 @@ export const Card = (
   {
     rounded = "sm",
     width = "md",
-    shadow = "md",
+    shadow = "sm",
     topAccent = false,
     leftAccent = false,
     children,
@@ -65,11 +65,11 @@ export const Card = (
   containerClass += " " + (() => {
     switch (shadow) {
       case "sm":
-        return "shadow-sm";
-      case "md":
         return "shadow";
-      case "lg":
+      case "md":
         return "shadow-md";
+      case "lg":
+        return "shadow-lg";
     }
   })();
 

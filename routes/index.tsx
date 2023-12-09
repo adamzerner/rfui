@@ -6,7 +6,7 @@ import { ComponentChild } from "preact";
 
 export default () => {
   return (
-    <Flex class="mt-9">
+    <Flex class="mt-9 gap-11">
       <LeftNav />
       <Main />
     </Flex>
@@ -15,7 +15,7 @@ export default () => {
 
 const LeftNav = () => {
   return (
-    <Stack class="gap-8 mr-10">
+    <Stack class="gap-8">
       <div>
         <div class="font-bold text-neutral-700 mb-4">Atoms</div>
         <Stack class="gap-2">
@@ -120,7 +120,7 @@ const Category = ({ children }: { children: ComponentChild }) => {
 
 const Item = ({ children }: { children: ComponentChild }) => {
   return (
-    <Card condensed style={{ width: 200 }}>
+    <Card padding="sm" style={{ width: 200 }}>
       <CardHeader>{children}</CardHeader>
       <CardBody>[image]</CardBody>
     </Card>

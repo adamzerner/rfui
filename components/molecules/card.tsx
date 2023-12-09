@@ -39,6 +39,7 @@ export const Card = (
   const cardHeaderClass = sharedClass + " border-b";
   const cardBodyClass = sharedClass;
   const cardFooterClass = sharedClass + " border-t";
+  const { class: restClass, ...restWithoutClass } = rest;
   let containerClass = "max-w-full border border-neutral-100";
 
   if (topAccent) {
@@ -52,11 +53,11 @@ export const Card = (
   containerClass += " " + (() => {
     switch (width) {
       case "sm":
-        return "w-[450px]";
+        return "w-[300px]";
       case "md":
         return "w-[600px]";
       case "lg":
-        return "w-[750px]";
+        return "w-[900px]";
       case "full":
         return "w-full";
     }
@@ -84,8 +85,12 @@ export const Card = (
     }
   })();
 
+  if (restClass) {
+    containerClass += ` ${restClass}`;
+  }
+
   return (
-    <div class={containerClass} {...rest}>
+    <div class={containerClass} {...restWithoutClass}>
       {cardHeader &&
         <div class={cardHeaderClass}>{cardHeader}</div>}
       <div class={cardBodyClass}>{cardBody}</div>

@@ -4,8 +4,8 @@ export default {
   ],
   theme: {
     fontFamily: {
-      sans: "concourse_3",
-      serif: "equity_a",
+      sans: "concourse_3, 'Open Sans', sans-serif",
+      serif: "equity_a, serif",
     },
     colors: {
       primary: {

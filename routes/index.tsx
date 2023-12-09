@@ -4,6 +4,15 @@ import { Stack } from "@/components/helpers/stack.tsx";
 import { Card, CardBody, CardHeader } from "@/components/molecules/card.tsx";
 import { ComponentChild } from "preact";
 
+/*
+
+TODO:
+- Placeholder image
+- Responsive design
+- Real images
+
+*/
+
 export default () => {
   return (
     <Flex class="mt-9 gap-11">
@@ -126,7 +135,7 @@ const Item = (
 ) => {
   return (
     <Link underline="none" href={href}>
-      <Card padding="sm" style={{ width: 200 }}>
+      <Card padding="sm" style={{ width: 200 }} class="hover:shadow-md">
         <CardHeader>{name}</CardHeader>
         <CardBody>[image]</CardBody>
       </Card>

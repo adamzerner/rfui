@@ -76,38 +76,38 @@ const Main = () => {
       <Flex>
         <Category>Atoms</Category>
         <Flex class="flex-wrap gap-5">
-          <Item>Badge</Item>
-          <Item>Button</Item>
-          <Item>Checkbox</Item>
-          <Item>Highlight</Item>
-          <Item>Input</Item>
-          <Item>Link</Item>
-          <Item>RadioButton</Item>
-          <Item>Select</Item>
-          <Item>Table</Item>
-          <Item>Textarea</Item>
+          <Item name="Badge" href="/atoms/badge" />
+          <Item name="Button" href="/atoms/button" />
+          <Item name="Checkbox" href="/atoms/checkbox" />
+          <Item name="Highlight" href="/atoms/highlight" />
+          <Item name="Input" href="/atoms/input" />
+          <Item name="Link" href="/atoms/link" />
+          <Item name="RadioButton" href="/atoms/radio-button" />
+          <Item name="Select" href="/atoms/select" />
+          <Item name="Table" href="/atoms/table" />
+          <Item name="Textarea" href="/atoms/textarea" />
         </Flex>
       </Flex>
       <Flex>
         <Category>Molecules</Category>
         <Flex class="flex-wrap gap-5">
-          <Item>Card</Item>
-          <Item>FormField</Item>
-          <Item>PasswordInput</Item>
-          <Item>Stepper</Item>
+          <Item name="Card" href="/molecules/card" />
+          <Item name="FormField" href="/molecules/form-field" />
+          <Item name="PasswordInput" href="/molecules/password-input" />
+          <Item name="Stepper" href="/molecules/stepper" />
         </Flex>
       </Flex>
       <Flex>
         <Category>Helpers</Category>
         <Flex class="flex-wrap gap-5">
-          <Item>Flex</Item>
-          <Item>Stack</Item>
+          <Item name="Flex" href="/helpers/flex" />
+          <Item name="Stack" href="/helpers/stack" />
         </Flex>
       </Flex>
       <Flex>
         <Category>Icons</Category>
         <Flex class="flex-wrap gap-5">
-          <Item>NewTabIcon</Item>
+          <Item name="NewTabIcon" href="/icons/new-tab-icon" />
         </Flex>
       </Flex>
     </Stack>
@@ -118,11 +118,18 @@ const Category = ({ children }: { children: ComponentChild }) => {
   return <div class="flex-none w-10 text-3xl mr-8">{children}</div>;
 };
 
-const Item = ({ children }: { children: ComponentChild }) => {
+const Item = (
+  { name, href }: {
+    name: string;
+    href: string;
+  },
+) => {
   return (
-    <Card padding="sm" style={{ width: 200 }}>
-      <CardHeader>{children}</CardHeader>
-      <CardBody>[image]</CardBody>
-    </Card>
+    <Link underline="none" href={href}>
+      <Card padding="sm" style={{ width: 200 }}>
+        <CardHeader>{name}</CardHeader>
+        <CardBody>[image]</CardBody>
+      </Card>
+    </Link>
   );
 };

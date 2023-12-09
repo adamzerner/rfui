@@ -1,7 +1,7 @@
 import { Link } from "@/components/atoms/link.tsx";
 import { Flex } from "@/components/helpers/flex.tsx";
 import { Stack } from "@/components/helpers/stack.tsx";
-import { Card, CardBody, CardHeader } from "@/components/molecules/card.tsx";
+import { Card, CardBody, CardFooter } from "@/components/molecules/card.tsx";
 import { ComponentChild } from "preact";
 
 /*
@@ -135,10 +135,10 @@ const Item = (
   return (
     <Link underline="none" href={href}>
       <Card padding="sm" style={{ width: 200 }} class="hover:shadow-md">
-        <CardHeader>{name}</CardHeader>
         <CardBody>
           <image src="https://placehold.co/200" />
         </CardBody>
+        <CardFooter>{name}</CardFooter>
       </Card>
     </Link>
   );

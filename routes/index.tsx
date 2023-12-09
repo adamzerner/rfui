@@ -7,7 +7,6 @@ import { ComponentChild } from "preact";
 /*
 
 TODO:
-- Responsive design
 - Real images
 
 */
@@ -23,7 +22,7 @@ export default () => {
 
 const LeftNav = () => {
   return (
-    <Stack class="gap-8">
+    <Stack class="gap-8 hidden lg:flex">
       <div>
         <div class="font-bold text-neutral-700 mb-4">Atoms</div>
         <Stack class="gap-2">
@@ -80,10 +79,10 @@ const LeftNav = () => {
 
 const Main = () => {
   return (
-    <Stack class="gap-8">
-      <Flex>
+    <Stack class="gap-10 lg:gap-8">
+      <div class="lg:flex">
         <Category>Atoms</Category>
-        <Flex class="flex-wrap gap-5">
+        <Flex class="flex-wrap gap-6 lg:gap-5">
           <Item name="Badge" href="/atoms/badge" />
           <Item name="Button" href="/atoms/button" />
           <Item name="Checkbox" href="/atoms/checkbox" />
@@ -95,35 +94,39 @@ const Main = () => {
           <Item name="Table" href="/atoms/table" />
           <Item name="Textarea" href="/atoms/textarea" />
         </Flex>
-      </Flex>
-      <Flex>
+      </div>
+      <div class="lg:flex">
         <Category>Molecules</Category>
-        <Flex class="flex-wrap gap-5">
+        <Flex class="flex-wrap gap-6 lg:gap-5">
           <Item name="Card" href="/molecules/card" />
           <Item name="FormField" href="/molecules/form-field" />
           <Item name="PasswordInput" href="/molecules/password-input" />
           <Item name="Stepper" href="/molecules/stepper" />
         </Flex>
-      </Flex>
-      <Flex>
+      </div>
+      <div class="lg:flex">
         <Category>Helpers</Category>
-        <Flex class="flex-wrap gap-5">
+        <Flex class="flex-wrap gap-6 lg:gap-5">
           <Item name="Flex" href="/helpers/flex" />
           <Item name="Stack" href="/helpers/stack" />
         </Flex>
-      </Flex>
-      <Flex>
+      </div>
+      <div class="lg:flex">
         <Category>Icons</Category>
-        <Flex class="flex-wrap gap-5">
+        <Flex class="flex-wrap gap-6 lg:gap-5">
           <Item name="NewTabIcon" href="/icons/new-tab-icon" />
         </Flex>
-      </Flex>
+      </div>
     </Stack>
   );
 };
 
 const Category = ({ children }: { children: ComponentChild }) => {
-  return <div class="flex-none w-10 text-3xl mr-8">{children}</div>;
+  return (
+    <div class="flex-none w-10 text-5xl lg:text-3xl mr-8 mb-6 lg:mb-auto">
+      {children}
+    </div>
+  );
 };
 
 const Item = (
@@ -134,7 +137,11 @@ const Item = (
 ) => {
   return (
     <Link underline="none" href={href}>
-      <Card padding="sm" style={{ width: 200 }} class="hover:shadow-md">
+      <Card
+        padding="sm"
+        style={{ width: 200 }}
+        class="hover:shadow-lg lg:hover:shadow-md"
+      >
         <CardBody>
           <image src="https://placehold.co/200" />
         </CardBody>

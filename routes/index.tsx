@@ -137,7 +137,9 @@ const Item = (
     <Link underline="none" href={href}>
       <Card padding="sm" style={{ width: 200 }} class="hover:shadow-md">
         <CardHeader>{name}</CardHeader>
-        <CardBody>[image]</CardBody>
+        <CardBody>
+          <image src="https://placehold.co/200" />
+        </CardBody>
       </Card>
     </Link>
   );

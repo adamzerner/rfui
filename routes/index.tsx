@@ -7,7 +7,6 @@ import { ComponentChild } from "preact";
 /*
 
 TODO:
-- Placeholder image
 - Responsive design
 - Real images
 

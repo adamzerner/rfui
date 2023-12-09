@@ -109,6 +109,25 @@ export default () => {
           </Card>
         </Stack>
       </Examples>
+      <Examples title="Padding">
+        <Stack class="gap-5">
+          <Card padding="sm">
+            <CardHeader>Header</CardHeader>
+            <CardBody>Body</CardBody>
+            <CardFooter>Footer</CardFooter>
+          </Card>
+          <Card padding="md">
+            <CardHeader>Header</CardHeader>
+            <CardBody>Body</CardBody>
+            <CardFooter>Footer</CardFooter>
+          </Card>
+          <Card padding="lg">
+            <CardHeader>Header</CardHeader>
+            <CardBody>Body</CardBody>
+            <CardFooter>Footer</CardFooter>
+          </Card>
+        </Stack>
+      </Examples>
       <Examples title="Realistic">
         <Card>
           <CardHeader>

@@ -4,9 +4,9 @@ export type CardType = {
   rounded?: "square" | "sm" | "lg";
   width?: "sm" | "md" | "lg" | "full";
   shadow?: "sm" | "md" | "lg";
+  padding?: "sm" | "md" | "lg";
   topAccent?: boolean;
   leftAccent?: boolean;
-  condensed?: boolean;
   children: ComponentChild;
 } & Omit<JSX.HTMLAttributes<HTMLDivElement>, "size">;
 
@@ -31,14 +31,25 @@ export const Card = (
     shadow = "sm",
     topAccent = false,
     leftAccent = false,
-    condensed = false,
+    padding = "md",
     children,
     ...rest
   }: CardType,
 ) => {
   const [cardHeader, cardBody, cardFooter] = getComponents(children);
   let sharedClass = "border-neutral-100";
-  sharedClass += condensed ? " p-3" : " p-5";
+
+  sharedClass += " " + (() => {
+    switch (padding) {
+      case "sm":
+        return "p-3";
+      case "md":
+        return "p-5";
+      case "lg":
+        return "p-7";
+    }
+  })();
+
   const cardHeaderClass = sharedClass + " border-b";
   const cardBodyClass = sharedClass;
   const cardFooterClass = sharedClass + " border-t";

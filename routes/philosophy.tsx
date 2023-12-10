@@ -1,5 +1,53 @@
+import { Link } from "@/components/atoms/link.tsx";
+import { Stack } from "@/components/helpers/stack.tsx";
+
 export default () => {
-  return <div>Under construction</div>;
+  return (
+    <div>
+      <div class="text-3xl text-neutral-700 mt-9 mb-7">Philosophy</div>
+      <Stack class="max-w-prose gap-5 leading-relaxed">
+        <p>
+          Before working on RFUI, I spent a bunch of time looking into existing
+          component libraries and design systems.{" "}
+          <Link href="https://getbootstrap.com/">Bootstrap</Link>,{" "}
+          <Link href="https://chakra-ui.com/">Chakra</Link>,{" "}
+          <Link href="https://mui.com/material-ui/">Material UI</Link>,{" "}
+          <Link href="https://ant.design">
+            Ant Design
+          </Link>,{" "}
+          <Link href="https://tailwindui.com/">Tailwind UI</Link>. Other stuff
+          from blog posts like{" "}
+          <Link href="https://retool.com/blog/react-component-libraries">
+            this
+          </Link>.
+        </p>
+        <p>
+          For various reasons, none of them really felt satisfying to me.
+        </p>
+        <p>
+          I also looked in to a bunch of paid templates and libraries. I would
+          have been happy to spend thousands of dollars on something, but none
+          of the paid options really spoke to me either.
+        </p>
+        <p>So then: I decided to build my own.</p>
+        <p>
+          I suppose this probably isn't surprising. I suppose that most library
+          authors have a similar story to tell: they wanted a certain tool,
+          weren't happy with the existing options, and so decided to build their
+          own.
+        </p>
+        <p>
+          Anyway, that's the backstory. Moving on, I think it'd be good if I
+          talk a bit about what my philosophy is here. What sorts of beliefs and
+          strong opinions inspired this work? What goals do I have? What am I
+          aiming for? What am I trying to accomplish?
+        </p>
+        <p>
+          Here's a list:
+        </p>
+      </Stack>
+    </div>
+  );
 };
 
 // # Overview

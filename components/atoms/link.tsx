@@ -54,7 +54,8 @@ export const Link = (
       target={_newTab ? "_blank" : undefined}
       rel={_newTab ? "noopener noreferrer" : undefined}
     >
-      {children} {_newTab && _includeNewTabIcon && <NewTabIcon />}
+      {children}
+      {_newTab && _includeNewTabIcon && <NewTabIcon />}
     </a>
   );
 };

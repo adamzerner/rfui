@@ -68,7 +68,7 @@ const TheFooter = () => {
         <FooterHeading>Help</FooterHeading>
         <FooterItem href="/faq">FAQ</FooterItem>
         <FooterItem href="mailto:adamzerner@protonmail.com">
-          Email
+          Contact
         </FooterItem>
       </FooterColumn>
     </Footer>

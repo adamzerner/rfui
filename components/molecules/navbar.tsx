@@ -9,10 +9,10 @@ export type NavbarType = {
 /*
 
 TODO:
-- Spacing (mess with `Container` component; check Bootstrap)
 - Background
-- Active (de-emphasize non-active)
+- Spacing (mess with `Container` component; check Bootstrap)
 - Responsive
+- Fix demo
 
 */
 
@@ -79,13 +79,19 @@ export const NavbarRight = (
 };
 
 export const NavbarItem = (
-  { children, ...rest }:
-    & { children: ComponentChild }
+  { isActive = false, children, ...rest }:
+    & { isActive?: boolean; children: ComponentChild }
     & LinkType,
 ) => {
   const { class: restClass, ...restWithoutClass } = rest;
-  let containerClass =
-    "py-6 border-b border-b-neutral-50 hover:border-b-primary-500";
+  let containerClass = "py-6 border-b";
+
+  if (isActive) {
+    containerClass += " border-b-primary-500 pointer-events-none";
+  } else {
+    containerClass +=
+      " border-b-neutral-50 hover:border-b-neutral-500 text-neutral-700";
+  }
 
   if (restClass) {
     containerClass += ` ${restClass}`;

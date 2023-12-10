@@ -15,6 +15,7 @@ import * as $atoms_radio_button from "./routes/atoms/radio-button.tsx";
 import * as $atoms_select from "./routes/atoms/select.tsx";
 import * as $atoms_table from "./routes/atoms/table.tsx";
 import * as $atoms_textarea from "./routes/atoms/textarea.tsx";
+import * as $faq from "./routes/faq.tsx";
 import * as $getting_started from "./routes/getting-started.tsx";
 import * as $helpers_container from "./routes/helpers/container.tsx";
 import * as $helpers_flex from "./routes/helpers/flex.tsx";
@@ -48,6 +49,7 @@ const manifest = {
     "./routes/atoms/select.tsx": $atoms_select,
     "./routes/atoms/table.tsx": $atoms_table,
     "./routes/atoms/textarea.tsx": $atoms_textarea,
+    "./routes/faq.tsx": $faq,
     "./routes/getting-started.tsx": $getting_started,
     "./routes/helpers/container.tsx": $helpers_container,
     "./routes/helpers/flex.tsx": $helpers_flex,

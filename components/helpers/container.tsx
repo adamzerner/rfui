@@ -36,7 +36,6 @@ export const Container = (
   if (classFromRest) {
     classValue += ` ${classFromRest}`;
   }
-  console.log(classValue);
 
   return (
     <div class={classValue} {...restWithoutClass}>

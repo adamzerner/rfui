@@ -1,5 +1,3 @@
-// Philadelphia and Ivanhoe
-
 export { Badge } from "./components/atoms/badge.tsx";
 export type { BadgeType } from "./components/atoms/badge.tsx";
 export { Button } from "./components/atoms/button.tsx";

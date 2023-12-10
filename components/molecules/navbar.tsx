@@ -11,6 +11,7 @@ export type NavbarType = {
 TODO:
 - Background
 - Hover
+- Active (de-emphasize non-active)
 
 */
 
@@ -58,24 +59,20 @@ const getComponents = (children: ComponentChild) => {
   );
 
   if (!navbarLeft && !navbarRight) {
-    return [children];
+    return [<Flex class="gap-2">{children}</Flex>];
   }
 
   return [navbarLeft, navbarRight];
 };
 
 export const NavbarLeft = (
-  { children, ...rest }:
-    & { children: ComponentChild }
-    & JSX.HTMLAttributes<HTMLDivElement>,
+  { children }: { children: ComponentChild },
 ) => {
   return <Flex class="gap-2">{children}</Flex>;
 };
 
 export const NavbarRight = (
-  { children, ...rest }:
-    & { children: ComponentChild }
-    & JSX.HTMLAttributes<HTMLDivElement>,
+  { children }: { children: ComponentChild },
 ) => {
   return <Flex class="gap-2">{children}</Flex>;
 };

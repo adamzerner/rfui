@@ -40,6 +40,9 @@ const LeftNav = () => {
           <Link underline="hover" href="/molecules/form-field">
             FormField
           </Link>
+          <Link underline="hover" href="/molecules/navbar">
+            Navbar
+          </Link>
           <Link underline="hover" href="/molecules/password-input">
             PasswordInput
           </Link>
@@ -93,6 +96,7 @@ const Main = () => {
         <Flex class="flex-wrap gap-6 lg:gap-5">
           <Item name="Card" href="/molecules/card" />
           <Item name="FormField" href="/molecules/form-field" />
+          <Item name="Navbar" href="/molecules/navbar" />
           <Item name="PasswordInput" href="/molecules/password-input" />
           <Item name="Stepper" href="/molecules/stepper" />
         </Flex>

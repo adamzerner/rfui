@@ -21,6 +21,7 @@ import * as $icons_new_tab_icon from "./routes/icons/new-tab-icon.tsx";
 import * as $index from "./routes/index.tsx";
 import * as $molecules_card from "./routes/molecules/card.tsx";
 import * as $molecules_form_field from "./routes/molecules/form-field.tsx";
+import * as $molecules_navbar from "./routes/molecules/navbar.tsx";
 import * as $molecules_password_input from "./routes/molecules/password-input.tsx";
 import * as $molecules_stepper from "./routes/molecules/stepper.tsx";
 import * as $demo_example from "./islands/demo/example.tsx";
@@ -50,6 +51,7 @@ const manifest = {
     "./routes/index.tsx": $index,
     "./routes/molecules/card.tsx": $molecules_card,
     "./routes/molecules/form-field.tsx": $molecules_form_field,
+    "./routes/molecules/navbar.tsx": $molecules_navbar,
     "./routes/molecules/password-input.tsx": $molecules_password_input,
     "./routes/molecules/stepper.tsx": $molecules_stepper,
   },

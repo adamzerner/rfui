@@ -23,6 +23,8 @@ export { Card } from "./components/molecules/card.tsx";
 export type { CardType } from "./components/molecules/card.tsx";
 export { FormField } from "./components/molecules/form-field.tsx";
 export type { FormFieldType } from "./components/molecules/form-field.tsx";
+export { Navbar } from "./components/molecules/navbar.tsx";
+export type { NavbarType } from "./components/molecules/navbar.tsx";
 export { PasswordInput } from "./islands/molecules/password-input.tsx";
 export type { PasswordInputType } from "./islands/molecules/password-input.tsx";
 export { Stepper } from "./islands/molecules/stepper.tsx";

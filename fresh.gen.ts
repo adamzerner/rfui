@@ -15,6 +15,7 @@ import * as $atoms_radio_button from "./routes/atoms/radio-button.tsx";
 import * as $atoms_select from "./routes/atoms/select.tsx";
 import * as $atoms_table from "./routes/atoms/table.tsx";
 import * as $atoms_textarea from "./routes/atoms/textarea.tsx";
+import * as $getting_started from "./routes/getting-started.tsx";
 import * as $helpers_flex from "./routes/helpers/flex.tsx";
 import * as $helpers_stack from "./routes/helpers/stack.tsx";
 import * as $icons_new_tab_icon from "./routes/icons/new-tab-icon.tsx";
@@ -24,6 +25,7 @@ import * as $molecules_form_field from "./routes/molecules/form-field.tsx";
 import * as $molecules_navbar from "./routes/molecules/navbar.tsx";
 import * as $molecules_password_input from "./routes/molecules/password-input.tsx";
 import * as $molecules_stepper from "./routes/molecules/stepper.tsx";
+import * as $philosophy from "./routes/philosophy.tsx";
 import * as $demo_example from "./islands/demo/example.tsx";
 import * as $demo_examples from "./islands/demo/examples.tsx";
 import * as $molecules_password_input_1 from "./islands/molecules/password-input.tsx";
@@ -45,6 +47,7 @@ const manifest = {
     "./routes/atoms/select.tsx": $atoms_select,
     "./routes/atoms/table.tsx": $atoms_table,
     "./routes/atoms/textarea.tsx": $atoms_textarea,
+    "./routes/getting-started.tsx": $getting_started,
     "./routes/helpers/flex.tsx": $helpers_flex,
     "./routes/helpers/stack.tsx": $helpers_stack,
     "./routes/icons/new-tab-icon.tsx": $icons_new_tab_icon,
@@ -54,6 +57,7 @@ const manifest = {
     "./routes/molecules/navbar.tsx": $molecules_navbar,
     "./routes/molecules/password-input.tsx": $molecules_password_input,
     "./routes/molecules/stepper.tsx": $molecules_stepper,
+    "./routes/philosophy.tsx": $philosophy,
   },
   islands: {
     "./islands/demo/example.tsx": $demo_example,

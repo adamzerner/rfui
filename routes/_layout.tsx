@@ -1,13 +1,17 @@
 import { PageProps } from "$fresh/server.ts";
-import { Link } from "../components/atoms/link.tsx";
+import { Navbar, NavbarItem } from "../components/molecules/navbar.tsx";
 
 export default ({ Component }: PageProps) => {
   return (
-    <div class="max-w-[1200px] mx-4 lg:mx-auto mt-8 mb-6 font-sans">
-      <div class="mb-6">
-        <Link href="/">Home</Link>
+    <>
+      <Navbar>
+        <NavbarItem href="/">Components</NavbarItem>
+        <NavbarItem href="/getting-started">Getting Starting</NavbarItem>
+        <NavbarItem href="/philosophy">Philosophy</NavbarItem>
+      </Navbar>
+      <div class="max-w-[1200px] mx-4 lg:mx-auto mt-8 mb-6 font-sans">
+        <Component />
       </div>
-      <Component />
-    </div>
+    </>
   );
 };

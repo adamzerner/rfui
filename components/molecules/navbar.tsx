@@ -9,9 +9,11 @@ export type NavbarType = {
 /*
 
 TODO:
+- Spacing (mess with `Container` component)
 - Background
-- Hover
+- Hover (fix how it pushes stuff down)
 - Active (de-emphasize non-active)
+- Responsive
 
 */
 
@@ -29,7 +31,7 @@ export const Navbar = (
 ) => {
   const [navbarLeft, navbarRight] = getComponents(children);
   const { class: restClass, ...restWithoutClass } = rest;
-  let containerClass = "w-full bg-neutral-50";
+  let containerClass = "w-full px-auto bg-neutral-50";
 
   if (restClass) {
     containerClass += ` ${restClass}`;
@@ -37,7 +39,7 @@ export const Navbar = (
 
   return (
     <div class={containerClass} {...restWithoutClass}>
-      <Flex class="justify-between w-full px-7">
+      <Flex class="justify-between w-full max-w-[1200px] mx-4 lg:mx-auto">
         {navbarLeft && navbarLeft}
         {navbarRight && navbarRight}
       </Flex>
@@ -59,7 +61,7 @@ const getComponents = (children: ComponentChild) => {
   );
 
   if (!navbarLeft && !navbarRight) {
-    return [<Flex class="gap-2">{children}</Flex>];
+    return [<Flex class="gap-6">{children}</Flex>];
   }
 
   return [navbarLeft, navbarRight];
@@ -68,13 +70,13 @@ const getComponents = (children: ComponentChild) => {
 export const NavbarLeft = (
   { children }: { children: ComponentChild },
 ) => {
-  return <Flex class="gap-2">{children}</Flex>;
+  return <Flex class="gap-6">{children}</Flex>;
 };
 
 export const NavbarRight = (
   { children }: { children: ComponentChild },
 ) => {
-  return <Flex class="gap-2">{children}</Flex>;
+  return <Flex class="gap-6">{children}</Flex>;
 };
 
 export const NavbarItem = (
@@ -83,7 +85,7 @@ export const NavbarItem = (
     & LinkType,
 ) => {
   const { class: restClass, ...restWithoutClass } = rest;
-  let containerClass = "py-6 px-3 hover:border-b border-b-neutral-500";
+  let containerClass = "py-6 hover:border-b border-b-neutral-500";
 
   if (restClass) {
     containerClass += ` ${restClass}`;

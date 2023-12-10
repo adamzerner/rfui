@@ -9,7 +9,7 @@ export type NavbarType = {
 /*
 
 TODO:
-- Spacing (mess with `Container` component)
+- Spacing (mess with `Container` component; check Bootstrap)
 - Background
 - Hover (fix how it pushes stuff down)
 - Active (de-emphasize non-active)

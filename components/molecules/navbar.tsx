@@ -4,7 +4,7 @@ import type { ComponentChild, JSX } from "preact";
 
 export type NavbarType = {
   children: ComponentChild;
-} & Omit<JSX.HTMLAttributes<HTMLDivElement>, "size">;
+} & Omit<JSX.HTMLAttributes<HTMLElement>, "size">;
 
 /*
 
@@ -38,12 +38,12 @@ export const Navbar = (
   }
 
   return (
-    <div class={containerClass} {...restWithoutClass}>
+    <nav class={containerClass} {...restWithoutClass}>
       <Flex class="justify-between w-full max-w-[1200px] mx-4 lg:mx-auto">
         {navbarLeft && navbarLeft}
         {navbarRight && navbarRight}
       </Flex>
-    </div>
+    </nav>
   );
 };
 

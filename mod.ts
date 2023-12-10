@@ -40,11 +40,3 @@ export { Stack } from "./components/helpers/stack.tsx";
 export type { StackType } from "./components/helpers/stack.tsx";
 
 export { NewTabIcon } from "./components/icons/new-tab-icon.tsx";
-
-/** *
- * @module rfui
- *
- * test
- *
- * foo bar baz
- */

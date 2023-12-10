@@ -34,7 +34,7 @@ export const Footer = (
       case "neutral":
         return "bg-neutral-700 text-neutral-50";
       case "none":
-        return "border-b border-b-neutral-100";
+        return "border-t border-t-neutral-100";
     }
   })();
 

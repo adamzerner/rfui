@@ -7,18 +7,9 @@ import type { ComponentChild, JSX } from "preact";
 export type NavbarType = {
   size?: ContainerType["size"];
   background?: "neutral" | "none";
+  sticky?: boolean;
   children: ComponentChild;
 } & Omit<JSX.HTMLAttributes<HTMLElement>, "size">;
-
-/*
-
-TODO:
-- Fix demo
-- Responsive
-- Fixed (https://react-bootstrap.github.io/docs/components/navbar#placement)
-- Sticky
-
-*/
 
 /** *
  * @function Navbar
@@ -30,6 +21,7 @@ export const Navbar = (
   {
     size,
     background = "neutral",
+    sticky = false,
     children,
     ...rest
   }: NavbarType,
@@ -37,6 +29,10 @@ export const Navbar = (
   const [navbarLeft, navbarRight] = getComponents(children);
   const { class: restClass, ...restWithoutClass } = rest;
   let containerClass = "w-full px-auto";
+
+  if (sticky) {
+    containerClass += " sticky top-0 left-0";
+  }
 
   containerClass += " " + (() => {
     switch (background) {

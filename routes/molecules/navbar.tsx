@@ -18,14 +18,14 @@ export default () => {
         </Link>
       </div>
       <Examples title="Default">
-        <Navbar>
+        <Navbar size="xl">
           <NavbarItem href="https://one.com">One</NavbarItem>
           <NavbarItem href="https://two.com">Two</NavbarItem>
         </Navbar>
       </Examples>
 
       <Examples title="NavbarLeft">
-        <Navbar>
+        <Navbar size="xl">
           <NavbarLeft>
             <NavbarItem href="https://one.com">One</NavbarItem>
             <NavbarItem href="https://two.com">Two</NavbarItem>
@@ -33,7 +33,7 @@ export default () => {
         </Navbar>
       </Examples>
       <Examples title="NavbarLeft and NavbarRight">
-        <Navbar>
+        <Navbar size="xl">
           <NavbarLeft>
             <NavbarItem href="https://one.com">One</NavbarItem>
             <NavbarItem href="https://two.com">Two</NavbarItem>
@@ -46,7 +46,7 @@ export default () => {
       </Examples>
       <Examples title="Background">
         <Stack class="gap-5 w-full">
-          <Navbar background="neutral">
+          <Navbar size="xl" background="neutral">
             <NavbarLeft>
               <NavbarItem href="https://one.com">One</NavbarItem>
               <NavbarItem href="https://two.com">Two</NavbarItem>
@@ -56,7 +56,7 @@ export default () => {
               <NavbarItem href="https://four.com">Four</NavbarItem>
             </NavbarRight>
           </Navbar>
-          <Navbar background="none">
+          <Navbar size="xl" background="none">
             <NavbarLeft>
               <NavbarItem href="https://one.com">One</NavbarItem>
               <NavbarItem href="https://two.com">Two</NavbarItem>

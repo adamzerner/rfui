@@ -16,7 +16,7 @@ export const Container = (
   { size = "lg", children, ...rest }: ContainerType,
 ) => {
   const { class: classFromRest, ...restWithoutClass } = rest;
-  let classValue = "mx-4 lg:mx-auto";
+  let classValue = "mx-6 lg:mx-auto";
 
   switch (size) {
     case "sm":

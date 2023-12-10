@@ -3,16 +3,18 @@ import { Flex } from "@/components/helpers/flex.tsx";
 import type { ComponentChild, JSX } from "preact";
 
 export type NavbarType = {
+  background?: "neutral" | "none";
   children: ComponentChild;
 } & Omit<JSX.HTMLAttributes<HTMLElement>, "size">;
 
 /*
 
 TODO:
-- Background
-- Spacing (mess with `Container` component; check Bootstrap)
+- Spacing (mess with `Container` component; check Bootstrap) https://react-bootstrap.github.io/docs/components/navbar#containers
+  - Fix demo
 - Responsive
-- Fix demo
+- Fixed (https://react-bootstrap.github.io/docs/components/navbar#placement)
+- Sticky
 
 */
 
@@ -24,13 +26,23 @@ TODO:
  */
 export const Navbar = (
   {
+    background = "neutral",
     children,
     ...rest
   }: NavbarType,
 ) => {
   const [navbarLeft, navbarRight] = getComponents(children);
   const { class: restClass, ...restWithoutClass } = rest;
-  let containerClass = "w-full px-auto bg-neutral-50";
+  let containerClass = "w-full px-auto";
+
+  containerClass += " " + (() => {
+    switch (background) {
+      case "neutral":
+        return "bg-neutral-50";
+      case "none":
+        return "border-b border-b-neutral-100";
+    }
+  })();
 
   if (restClass) {
     containerClass += ` ${restClass}`;

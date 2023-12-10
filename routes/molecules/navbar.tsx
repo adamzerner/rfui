@@ -44,6 +44,30 @@ export default () => {
           </NavbarRight>
         </Navbar>
       </Examples>
+      <Examples title="Background">
+        <Stack class="gap-5 w-full">
+          <Navbar background="neutral">
+            <NavbarLeft>
+              <NavbarItem href="https://one.com">One</NavbarItem>
+              <NavbarItem href="https://two.com">Two</NavbarItem>
+            </NavbarLeft>
+            <NavbarRight>
+              <NavbarItem href="https://three.com">Three</NavbarItem>
+              <NavbarItem href="https://four.com">Four</NavbarItem>
+            </NavbarRight>
+          </Navbar>
+          <Navbar background="none">
+            <NavbarLeft>
+              <NavbarItem href="https://one.com">One</NavbarItem>
+              <NavbarItem href="https://two.com">Two</NavbarItem>
+            </NavbarLeft>
+            <NavbarRight>
+              <NavbarItem href="https://three.com">Three</NavbarItem>
+              <NavbarItem href="https://four.com">Four</NavbarItem>
+            </NavbarRight>
+          </Navbar>
+        </Stack>
+      </Examples>
     </Stack>
   );
 };

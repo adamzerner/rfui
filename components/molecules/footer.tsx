@@ -58,7 +58,7 @@ export const FooterColumn = ({ children }: { children: ComponentChild }) => {
 };
 
 export const FooterHeading = ({ children }: { children: ComponentChild }) => {
-  return <div class="text-xl font-bold mb-3">{children}</div>;
+  return <div class="text-xl font-bold mb-3 text-neutral-200">{children}</div>;
 };
 
 export const FooterItem = (

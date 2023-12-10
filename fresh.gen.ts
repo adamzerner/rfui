@@ -16,6 +16,7 @@ import * as $atoms_select from "./routes/atoms/select.tsx";
 import * as $atoms_table from "./routes/atoms/table.tsx";
 import * as $atoms_textarea from "./routes/atoms/textarea.tsx";
 import * as $getting_started from "./routes/getting-started.tsx";
+import * as $helpers_container from "./routes/helpers/container.tsx";
 import * as $helpers_flex from "./routes/helpers/flex.tsx";
 import * as $helpers_stack from "./routes/helpers/stack.tsx";
 import * as $icons_new_tab_icon from "./routes/icons/new-tab-icon.tsx";
@@ -48,6 +49,7 @@ const manifest = {
     "./routes/atoms/table.tsx": $atoms_table,
     "./routes/atoms/textarea.tsx": $atoms_textarea,
     "./routes/getting-started.tsx": $getting_started,
+    "./routes/helpers/container.tsx": $helpers_container,
     "./routes/helpers/flex.tsx": $helpers_flex,
     "./routes/helpers/stack.tsx": $helpers_stack,
     "./routes/icons/new-tab-icon.tsx": $icons_new_tab_icon,

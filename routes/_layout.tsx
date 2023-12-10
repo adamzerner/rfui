@@ -1,10 +1,11 @@
 import { PageProps } from "$fresh/server.ts";
+import { Container } from "../components/helpers/container.tsx";
 import { Navbar, NavbarItem } from "../components/molecules/navbar.tsx";
 
 export default ({ Component, route }: PageProps) => {
   return (
     <>
-      <Navbar>
+      <Navbar size="xl">
         <NavbarItem href="/" isActive={route === "/"}>Components</NavbarItem>
         <NavbarItem
           href="/getting-started"
@@ -16,9 +17,9 @@ export default ({ Component, route }: PageProps) => {
           Philosophy
         </NavbarItem>
       </Navbar>
-      <div class="max-w-[1200px] mx-4 lg:mx-auto mt-8 mb-6 font-sans">
+      <Container size="xl" class="mt-8 mb-6 font-sans">
         <Component />
-      </div>
+      </Container>
     </>
   );
 };

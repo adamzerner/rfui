@@ -1,8 +1,11 @@
 import { Link, LinkType } from "@/components/atoms/link.tsx";
+import type { ContainerType } from "@/components/helpers/container.tsx";
+import { Container } from "@/components/helpers/container.tsx";
 import { Flex } from "@/components/helpers/flex.tsx";
 import type { ComponentChild, JSX } from "preact";
 
 export type NavbarType = {
+  size?: ContainerType["size"];
   background?: "neutral" | "none";
   children: ComponentChild;
 } & Omit<JSX.HTMLAttributes<HTMLElement>, "size">;
@@ -10,8 +13,7 @@ export type NavbarType = {
 /*
 
 TODO:
-- Spacing (mess with `Container` component; check Bootstrap) https://react-bootstrap.github.io/docs/components/navbar#containers
-  - Fix demo
+- Fix demo
 - Responsive
 - Fixed (https://react-bootstrap.github.io/docs/components/navbar#placement)
 - Sticky
@@ -26,6 +28,7 @@ TODO:
  */
 export const Navbar = (
   {
+    size,
     background = "neutral",
     children,
     ...rest
@@ -50,10 +53,12 @@ export const Navbar = (
 
   return (
     <nav class={containerClass} {...restWithoutClass}>
-      <Flex class="justify-between w-full max-w-[1200px] mx-4 lg:mx-auto">
-        {navbarLeft && navbarLeft}
-        {navbarRight && navbarRight}
-      </Flex>
+      <Container size={size}>
+        <Flex class="justify-between w-full">
+          {navbarLeft && navbarLeft}
+          {navbarRight && navbarRight}
+        </Flex>
+      </Container>
     </nav>
   );
 };

@@ -30,6 +30,8 @@ export type { PasswordInputType } from "./islands/molecules/password-input.tsx";
 export { Stepper } from "./islands/molecules/stepper.tsx";
 export type { StepperType } from "./islands/molecules/stepper.tsx";
 
+export { Container } from "./components/helpers/container.tsx";
+export type { ContainerType } from "./components/helpers/container.tsx";
 export { Flex } from "./components/helpers/flex.tsx";
 export type { FlexType } from "./components/helpers/flex.tsx";
 export { Stack } from "./components/helpers/stack.tsx";

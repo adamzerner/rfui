@@ -58,7 +58,8 @@ const LeftNav = () => {
       }
       <div>
         <div class="font-bold text-neutral-700 mb-4">Helpers</div>
-        <Stack class="gap-2s">
+        <Stack class="gap-2">
+          <Link underline="hover" href="/helpers/container">Container</Link>
           <Link underline="hover" href="/helpers/flex">Flex</Link>
           <Link underline="hover" href="/helpers/stack">Stack</Link>
         </Stack>
@@ -104,6 +105,7 @@ const Main = () => {
       <div class="lg:flex">
         <Category>Helpers</Category>
         <Flex class="flex-wrap gap-6 lg:gap-5">
+          <Item name="Container" href="/helpers/container" />
           <Item name="Flex" href="/helpers/flex" />
           <Item name="Stack" href="/helpers/stack" />
         </Flex>

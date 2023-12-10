@@ -3,9 +3,9 @@ import { Stack } from "@/components/helpers/stack.tsx";
 
 export default () => {
   return (
-    <div>
-      <div class="text-3xl text-neutral-700 mt-9 mb-7">Philosophy</div>
-      <Stack class="max-w-prose gap-5 leading-relaxed">
+    <div class="max-w-prose">
+      <h1 class="text-3xl text-neutral-700 mt-9 mb-7">Philosophy</h1>
+      <Stack class="gap-4 leading-relaxed">
         <p>
           Before working on RFUI, I spent a bunch of time looking into existing
           component libraries and design systems.{" "}
@@ -42,9 +42,33 @@ export default () => {
           strong opinions inspired this work? What goals do I have? What am I
           aiming for? What am I trying to accomplish?
         </p>
+        <div>
+          <p class="mb-2">
+            Here's a list:
+          </p>
+          <ol class="list-decimal list-inside flex flex-col gap-1">
+            <li>Opinionated</li>
+            <li>Scale down</li>
+            <li>Pit of success</li>
+            <li>Pre-built components</li>
+            <li>Pretty</li>
+            <li>Docs and DX</li>
+            <li>Use the platform</li>
+          </ol>
+        </div>
+      </Stack>
+      <h2 class="text-2xl text-neutral-700 mt-8 mb-5">Opinionated</h2>
+      <Stack class="gap-4 leading-relaxed">
+        <p>If you try to please everyone you end up pleasing no one.</p>
         <p>
-          Here's a list:
+          With RFUI, I'm not trying to please everyone. I'm trying to please a
+          subset of people. A subset of peole who have certain needs, and who
+          share certain opinions.
         </p>
+      </Stack>
+      <h2 class="text-2xl text-neutral-700 mt-8 mb-5">Scale down</h2>
+      <Stack class="gap-4 leading-relaxed">
+        <p>dfsfsd</p>
       </Stack>
     </div>
   );
@@ -73,10 +97,9 @@ export default () => {
 // ## Philosophy
 // 1. Opinionated
 // 2. Scale down
-// 3. Limit your choices
-// 4. Prioritize documentation
+//      Pareto solutions > high customizability
 // 5. Pit of success (eg. by providing tips and references to best practices, and
-//    by prefixing with underscores)
+//      Limit your choices
+// 4. Prioritize documentation
 // 6. Pretty (Bootstrap is actually _ugly_)
 // 7. Use the platform
-// 8. Pareto solutions > high customizability

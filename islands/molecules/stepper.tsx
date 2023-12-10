@@ -60,8 +60,8 @@ export const Stepper = (
 
   switch (rounded) {
     case "sm":
-      leftButtonClass += " rounded-l-sm";
-      rightButtonClass += " rounded-r-sm";
+      leftButtonClass += " rounded-l";
+      rightButtonClass += " rounded-r";
       break;
     case "lg":
       leftButtonClass += " rounded-l-lg";

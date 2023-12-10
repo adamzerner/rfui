@@ -156,6 +156,33 @@ export default () => {
             warn against it
           </Link>.
         </p>
+        <p>
+          Another way I tried to do this in RFUI is by limiting choices and
+          customizability. In the world of design, people often recommend that
+          you impose constraints on yourself.
+        </p>
+        <p>
+          For example, by deciding on a color palatte. Without a color palatte,
+          every time you need to decide what color to use, you have basically an
+          infinite set of colors to choose from. Having so many choices if
+          usually paralyzing, not helpful. And it also makes it difficult to be
+          consistent with your color use.
+        </p>
+        <p>
+          It's not just color. It is recommended that you set up similar things
+          up front like a "font size palatte" and a "spacing palatte". And this
+          isn't some sort of way of providing training wheels to inexperienced
+          designers. No, it's recommended for experienced designers as well.
+        </p>
+        <p>
+          In RFUI, I try to be smart about the choices I provide. I try to
+          provide a "palatte" that will be optimal for most people, in most
+          situations. For example, by choosing three or four options for how
+          "rounded" various components are.
+        </p>
+      </Stack>
+      <h2 class="text-2xl text-neutral-700 mt-8 mb-5">Pre-built components</h2>
+      <Stack class="gap-4 leading-relaxed">
       </Stack>
     </div>
   );

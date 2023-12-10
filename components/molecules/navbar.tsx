@@ -11,7 +11,6 @@ export type NavbarType = {
 TODO:
 - Spacing (mess with `Container` component; check Bootstrap)
 - Background
-- Hover (fix how it pushes stuff down)
 - Active (de-emphasize non-active)
 - Responsive
 
@@ -85,7 +84,8 @@ export const NavbarItem = (
     & LinkType,
 ) => {
   const { class: restClass, ...restWithoutClass } = rest;
-  let containerClass = "py-6 hover:border-b border-b-neutral-500";
+  let containerClass =
+    "py-6 border-b border-b-neutral-50 hover:border-b-primary-500";
 
   if (restClass) {
     containerClass += ` ${restClass}`;

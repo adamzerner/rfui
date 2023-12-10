@@ -21,6 +21,8 @@ export type { TextareaType } from "./components/atoms/textarea.tsx";
 
 export { Card } from "./components/molecules/card.tsx";
 export type { CardType } from "./components/molecules/card.tsx";
+export { Footer } from "./components/molecules/footer.tsx";
+export type { FooterType } from "./components/molecules/footer.tsx";
 export { FormField } from "./components/molecules/form-field.tsx";
 export type { FormFieldType } from "./components/molecules/form-field.tsx";
 export { Navbar } from "./components/molecules/navbar.tsx";

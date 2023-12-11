@@ -164,20 +164,21 @@ export default () => {
         <p>
           For example, by deciding on a color palatte. Without a color palatte,
           every time you need to decide what color to use, you have basically an
-          infinite set of colors to choose from. Having so many choices if
+          infinite set of colors to choose from. Having so many choices is
           usually paralyzing, not helpful. And it also makes it difficult to be
-          consistent with your color use.
+          consistent with your color usage.
         </p>
         <p>
-          It's not just color. It is recommended that you set up similar things
-          up front like a "font size palatte" and a "spacing palatte". And this
-          isn't some sort of way of providing training wheels to inexperienced
-          designers. No, it's recommended for experienced designers as well.
+          It's not just color though. It is recommended that you also set up
+          things like a "font size palatte" and a "spacing palatte" from the
+          beginning. And this isn't just some sort of way of providing training
+          wheels to inexperienced designers. No, it's recommended for
+          experienced designers as well.
         </p>
         <p>
           In RFUI, I try to be smart about the choices I provide. I try to
           provide a "palatte" that will be optimal for most people, in most
-          situations. For example, by choosing three or four options for how
+          situations. For example, by providing three or four options for how
           "rounded" various components are.
         </p>
       </Stack>
@@ -209,7 +210,7 @@ export default () => {
       <Stack class="gap-4 leading-relaxed">
         <p>
           On the other hand, there are libraries that have all of these
-          pre-built, easy to use components, but unfortunately, they're pretty
+          pre-built, easy to use components. But unfortunately, they're pretty
           ugly.
         </p>
         <p>
@@ -218,7 +219,7 @@ export default () => {
           I'm looking at you, Bootstrap. But I also find Chakra's components to
           be pretty uninspiring a lot of the time as well.
         </p>
-        <p>I want the components in my library to look genuinely good.</p>
+        <p>I want the components in my library to genuinely look good.</p>
       </Stack>
       <h2 class="text-2xl text-neutral-700 mt-8 mb-5">Developer experience</h2>
       <Stack class="gap-4 leading-relaxed">
@@ -339,7 +340,17 @@ export default () => {
       </Stack>
       <h2 class="text-2xl text-neutral-700 mt-8 mb-5">Avoid dependencies</h2>
       <Stack class="gap-4 leading-relaxed">
-        <p></p>
+        <p>
+          The more time I spend as a software engineer, the more I find
+          dependencies to be a pain.{" "}
+          <Link href="https://medium.com/inside-bukalapak/the-chaos-of-maintaining-software-dependencies-and-how-to-tame-them-413cc233d800">
+            This blog post
+          </Link>{" "}
+          does a decent job of discussing it.
+        </p>
+        <p>
+          In RFUI I will try really hard to avoid introducing new dependencies.
+        </p>
       </Stack>
     </div>
   );

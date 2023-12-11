@@ -4,7 +4,7 @@ import { Stack } from "@/components/helpers/stack.tsx";
 export default () => {
   return (
     <div class="max-w-prose text-lg">
-      <h1 class="text-3xl text-neutral-700 mt-9 mb-7">Philosophy</h1>
+      <h1 class="text-4xl text-neutral-700 mt-9 mb-7">Philosophy</h1>
       <Stack class="gap-4 leading-relaxed">
         <p>
           Before working on RFUI, I spent a bunch of time looking into existing
@@ -285,7 +285,57 @@ export default () => {
       </Stack>
       <h2 class="text-2xl text-neutral-700 mt-8 mb-5">Use the platform</h2>
       <Stack class="gap-4 leading-relaxed">
-        <p></p>
+        <p>
+          I've been noticing a trend recently of so-called{" "}
+          <code>#useThePlatform</code>. And I like it.
+        </p>
+        <p>
+          <Link href="https://remix.run/">Remix</Link>{" "}
+          seems to really lean into it.{" "}
+          <Link href="https://fresh.deno.dev/">Fresh</Link>{" "}
+          too. For example, both web frameworks use the native{" "}
+          <Link href="https://developer.mozilla.org/en-US/docs/Web/API/Request">
+            <code>Request</code>
+          </Link>{" "}
+          and{" "}
+          <Link href="https://developer.mozilla.org/en-US/docs/Web/API/Response">
+            <code>Response</code>
+          </Link>{" "}
+          objects from the{" "}
+          <Link href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API">
+            Fetch API
+          </Link>. On the other hand, our old friend{" "}
+          <Link href="http://expressjs.com/">Express</Link>{" "}
+          has their own request and response objects.
+        </p>
+        <p>I try to lean into this "use the platform" idea in RFUI as well.</p>
+        <p>
+          For example, for the <code>Checkbox</code> and{" "}
+          <code>RadioButton</code>{" "}
+          components, I spent a bunch of time researching how to style them.
+          There's lots of different approaches that involve using{" "}
+          <code>{"<div>"}</code>{" "}
+          elements to build your own custom components. But in the end, I
+          decided on simply utilizing the <code>width</code>,{" "}
+          <code>height</code>, and <code>accent-color</code>{" "}
+          CSS properties (thanks{" "}
+          <Link href="https://css-tricks.com/zero-trickery-custom-radios-and-checkboxes">
+            CSS Tricks
+          </Link>). Other approaches probably look a little better, but I prefer
+          to "use the platform" and stick to actually having{" "}
+          <code>{'<input type="checkbox" />'}</code> and{" "}
+          <code>{'<input type="radio" />'}</code>.
+        </p>
+        <p>
+          The <code>Select</code>{" "}
+          component is another example of this. It's notoriously difficult to
+          style <code>{"<select>"}</code> and <code>{"<option>"}</code>{" "}
+          elements, so if you want a good looking select component you usually
+          have to use <code>{"<div>"}</code>{" "}
+          elements. I'd prefer to avoid this though. It has a bunch of subtle
+          downsides. I prefer to avoid those downsides and "use the platform" in
+          exchange for the component being slightly less pretty.
+        </p>
       </Stack>
       <h2 class="text-2xl text-neutral-700 mt-8 mb-5">Avoid dependencies</h2>
       <Stack class="gap-4 leading-relaxed">

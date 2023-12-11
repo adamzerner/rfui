@@ -9,7 +9,12 @@ export type CodeBlockType = {
  * @function CodeBlock
  *
  * @example
- * <CodeBlock>const name = 'foo';</CodeBlock>
+ * <CodeBlock>
+{`const firstName = 'John';
+const lastName = 'Doe';
+const fullName = firstName + " " + lastName;
+`}
+  </CodeBlock>
  */
 export const CodeBlock = (
   {

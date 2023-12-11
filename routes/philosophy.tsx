@@ -1,4 +1,5 @@
 import { Blockquote } from "@/components/atoms/blockquote.tsx";
+import { CodeBlock } from "@/components/atoms/code-block.tsx";
 import { InlineCode } from "@/components/atoms/inline-code.tsx";
 import { Link } from "@/components/atoms/link.tsx";
 import { Stack } from "@/components/helpers/stack.tsx";
@@ -194,11 +195,15 @@ export default () => {
         </p>
         <p>
           But I still don't want to use them. Why? Because they don't actually
-          give me code. Like, as a developer, I want to just be able to do{" "}
-          <InlineCode>
-            {'<Button variant="primary" type="submit">Submit</Button>'}
-          </InlineCode>. I don't want to have to build that{" "}
-          <InlineCode>Button</InlineCode> component myself.
+          give me code. Like, as a developer, I want to just be able to do:
+        </p>
+        <CodeBlock>
+          {'<Button variant="primary" type="submit">Submit</Button>'}
+        </CodeBlock>
+        <p>
+          I don't want to have to build that <InlineCode>Button</InlineCode>
+          {" "}
+          component myself.
         </p>
         <p>
           To be fair, Tailwind UI does provide you with React{" "}

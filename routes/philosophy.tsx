@@ -183,37 +183,55 @@ export default () => {
       </Stack>
       <h2 class="text-2xl text-neutral-700 mt-8 mb-5">Pre-built components</h2>
       <Stack class="gap-4 leading-relaxed">
+        <p>
+          There are some component libraries that I think I'd be comfortable
+          using. In particular,{" "}
+          <Link href="https://tailwindui.com/">Tailwind UI</Link>{" "}
+          and a few other paid ones. Well, at least I think they look good.
+        </p>
+        <p>
+          But I still don't want to use them. Why? Because they don't actually
+          give me code. Like, as a developer, I want to just be able to do{" "}
+          <code>
+            {'<Button variant="primary" type="submit">Submit</Button>'}
+          </code>. I don't want to have to build that <code>Button</code>{" "}
+          component myself.
+        </p>
+        <p>
+          To be fair, Tailwind UI does provide you with React{" "}
+          <em>code examples</em>. But they don't actually provide you with{" "}
+          <em>components</em>. You'd have to write the components based off of
+          the code examples they provide you with. Doing that is just very time
+          consuming and not something I want to deal with.
+        </p>
+      </Stack>
+      <h2 class="text-2xl text-neutral-700 mt-8 mb-5">Pretty</h2>
+      <Stack class="gap-4 leading-relaxed">
+        <p>
+          On the other hand, there are libraries that have all of these
+          pre-built, easy to use components, but unfortunately, they're pretty
+          ugly.
+        </p>
+        <p>
+          What do I have in mind? Well, it starts with something that rhymes
+          with moot and ends with something that rhymes with zap. That's right:
+          I'm looking at you, Bootstrap. But I also find Chakra's components to
+          be pretty uninspiring a lot of the time as well.
+        </p>
+        <p>I want the components in my library to look genuinely good.</p>
+      </Stack>
+      <h2 class="text-2xl text-neutral-700 mt-8 mb-5">Docs and DX</h2>
+      <Stack class="gap-4 leading-relaxed">
+        <p></p>
+      </Stack>
+      <h2 class="text-2xl text-neutral-700 mt-8 mb-5">Use the platform</h2>
+      <Stack class="gap-4 leading-relaxed">
+        <p></p>
+      </Stack>
+      <h2 class="text-2xl text-neutral-700 mt-8 mb-5">Avoid dependencies</h2>
+      <Stack class="gap-4 leading-relaxed">
+        <p></p>
       </Stack>
     </div>
   );
 };
-
-// # Overview
-
-// The goal of this project is to have a component library that I can use that is
-// inspired by the book [Refactoring UI](https://www.refactoringui.com/).
-
-// It is currently in a very early stage. See the
-// [project page](https://github.com/users/adamzerner/projects/2/views/1).
-
-// I am following the
-// [Atomic Design Methodlogy](https://atomicdesign.bradfrost.com/chapter-2/) by
-// breaking components into "atoms", "molecules" and organisms.
-
-// ## Versioning
-
-// To create a new version of this library:
-
-// - Use https://github.com/adamzerner/rfui/releases/new
-// - Update CHANGELOG.md
-// - Follow [semantic versioning](https://semver.org/)
-
-// ## Philosophy
-// 1. Opinionated
-// 2. Scale down
-//      Pareto solutions > high customizability
-// 5. Pit of success (eg. by providing tips and references to best practices, and
-//      Limit your choices
-// 4. Prioritize documentation
-// 6. Pretty (Bootstrap is actually _ugly_)
-// 7. Use the platform

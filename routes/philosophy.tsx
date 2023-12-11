@@ -1,4 +1,5 @@
 import { Blockquote } from "@/components/atoms/blockquote.tsx";
+import { InlineCode } from "@/components/atoms/inline-code.tsx";
 import { Link } from "@/components/atoms/link.tsx";
 import { Stack } from "@/components/helpers/stack.tsx";
 
@@ -194,10 +195,10 @@ export default () => {
         <p>
           But I still don't want to use them. Why? Because they don't actually
           give me code. Like, as a developer, I want to just be able to do{" "}
-          <code>
+          <InlineCode>
             {'<Button variant="primary" type="submit">Submit</Button>'}
-          </code>. I don't want to have to build that <code>Button</code>{" "}
-          component myself.
+          </InlineCode>. I don't want to have to build that{" "}
+          <InlineCode>Button</InlineCode> component myself.
         </p>
         <p>
           To be fair, Tailwind UI does provide you with React{" "}
@@ -289,7 +290,7 @@ export default () => {
       <Stack class="gap-4 leading-relaxed">
         <p>
           I've been noticing a trend recently of so-called{" "}
-          <code>#useThePlatform</code>. And I like it.
+          <InlineCode>#useThePlatform</InlineCode>. And I like it.
         </p>
         <p>
           <Link href="https://remix.run/">Remix</Link>{" "}
@@ -297,11 +298,11 @@ export default () => {
           <Link href="https://fresh.deno.dev/">Fresh</Link>{" "}
           too. For example, both web frameworks use the native{" "}
           <Link href="https://developer.mozilla.org/en-US/docs/Web/API/Request">
-            <code>Request</code>
+            <InlineCode>Request</InlineCode>
           </Link>{" "}
           and{" "}
           <Link href="https://developer.mozilla.org/en-US/docs/Web/API/Response">
-            <code>Response</code>
+            <InlineCode>Response</InlineCode>
           </Link>{" "}
           objects from the{" "}
           <Link href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API">
@@ -312,28 +313,29 @@ export default () => {
         </p>
         <p>I try to lean into this "use the platform" idea in RFUI as well.</p>
         <p>
-          For example, for the <code>Checkbox</code> and{" "}
-          <code>RadioButton</code>{" "}
+          For example, for the <InlineCode>Checkbox</InlineCode> and{" "}
+          <InlineCode>RadioButton</InlineCode>{" "}
           components, I spent a bunch of time researching how to style them.
           There's lots of different approaches that involve using{" "}
-          <code>{"<div>"}</code>{" "}
+          <InlineCode>{"<div>"}</InlineCode>{" "}
           elements to build your own custom components. But in the end, I
-          decided on simply utilizing the <code>width</code>,{" "}
-          <code>height</code>, and <code>accent-color</code>{" "}
-          CSS properties (thanks{" "}
+          decided on simply utilizing the <InlineCode>width</InlineCode>,{" "}
+          <InlineCode>height</InlineCode>, and{" "}
+          <InlineCode>accent-color</InlineCode> CSS properties (thanks{" "}
           <Link href="https://css-tricks.com/zero-trickery-custom-radios-and-checkboxes">
             CSS Tricks
           </Link>). Other approaches probably look a little better, but I prefer
           to "use the platform" and stick to actually having{" "}
-          <code>{'<input type="checkbox" />'}</code> and{" "}
-          <code>{'<input type="radio" />'}</code>.
+          <InlineCode>{'<input type="checkbox" />'}</InlineCode> and{" "}
+          <InlineCode>{'<input type="radio" />'}</InlineCode>.
         </p>
         <p>
-          The <code>Select</code>{" "}
+          The <InlineCode>Select</InlineCode>{" "}
           component is another example of this. It's notoriously difficult to
-          style <code>{"<select>"}</code> and <code>{"<option>"}</code>{" "}
+          style <InlineCode>{"<select>"}</InlineCode> and{" "}
+          <InlineCode>{"<option>"}</InlineCode>{" "}
           elements, so if you want a good looking select component you usually
-          have to use <code>{"<div>"}</code>{" "}
+          have to use <InlineCode>{"<div>"}</InlineCode>{" "}
           elements. I'd prefer to avoid this though. It has a bunch of subtle
           downsides. I prefer to avoid those downsides and "use the platform" in
           exchange for the component being slightly less pretty.

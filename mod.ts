@@ -10,6 +10,8 @@ export { CodeBlock } from "./components/atoms/code-block.tsx";
 export type { CodeBlockType } from "./components/atoms/code-block.tsx";
 export { Highlight } from "./components/atoms/highlight.tsx";
 export type { HighlightType } from "./components/atoms/highlight.tsx";
+export { InlineCode } from "./components/atoms/inline-code.tsx";
+export type { InlineCodeType } from "./components/atoms/inline-code.tsx";
 export { Input } from "./components/atoms/input.tsx";
 export type { InputType } from "./components/atoms/input.tsx";
 export { Link } from "./components/atoms/link.tsx";

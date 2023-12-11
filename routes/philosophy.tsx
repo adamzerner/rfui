@@ -3,7 +3,7 @@ import { Stack } from "@/components/helpers/stack.tsx";
 
 export default () => {
   return (
-    <div class="max-w-prose">
+    <div class="max-w-prose text-lg">
       <h1 class="text-3xl text-neutral-700 mt-9 mb-7">Philosophy</h1>
       <Stack class="gap-4 leading-relaxed">
         <p>
@@ -253,9 +253,34 @@ export default () => {
           to spend a lot of time on it.
         </p>
         <p>
-          One thing in particular is that I would like to do user interviews and
-          user research. I think it's absolutely crucial. If you'd be willing to
-          participate in that, please let me know.
+          Let me be more concrete. I want to prioritize answering questions,
+          writing clear docs, addressing any bugs or GitHub Issues that are
+          raised and providing helpful examples.
+        </p>
+        <p>
+          Now that I write this out, I'm starting to realize that this is my
+          first open source project and I very well might be a little naive and
+          starry-eyed. I don't know what to say about that though. We'll see how
+          it goes.
+        </p>
+        <p>
+          Another thing in particular is that I would like to do user interviews
+          and user research. I{" "}
+          <Link href="https://twitter.com/paulg/status/898476047263518720">
+            think
+          </Link>{" "}
+          <Link href="https://sensible.com/rocket-surgery-made-easy/">
+            it's
+          </Link>{" "}
+          <Link href="https://blog.codinghorror.com/low-fi-usability-testing/">
+            absolutely
+          </Link>{" "}
+          <Link href="https://ux.stackexchange.com/a/53835/39046">
+            crucial
+          </Link>. If you'd be willing to participate in that, please{" "}
+          <Link href="mailto:adamzerner@protonmail.com">
+            let me know
+          </Link>.
         </p>
       </Stack>
       <h2 class="text-2xl text-neutral-700 mt-8 mb-5">Use the platform</h2>

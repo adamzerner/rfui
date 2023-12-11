@@ -52,7 +52,7 @@ export default () => {
             <li>Pit of success</li>
             <li>Pre-built components</li>
             <li>Pretty</li>
-            <li>Docs and DX</li>
+            <li>Developer experience</li>
             <li>Use the platform</li>
             <li>Avoid dependencies</li>
           </ol>
@@ -220,9 +220,43 @@ export default () => {
         </p>
         <p>I want the components in my library to look genuinely good.</p>
       </Stack>
-      <h2 class="text-2xl text-neutral-700 mt-8 mb-5">Docs and DX</h2>
+      <h2 class="text-2xl text-neutral-700 mt-8 mb-5">Developer experience</h2>
       <Stack class="gap-4 leading-relaxed">
-        <p></p>
+        <p>
+          Perhaps it's tautological, but I want to provide a good developer
+          experience.
+        </p>
+        <p>
+          I'm building a library. My target audience is developers. I want
+          people in my target audience to have a good experience. I want
+          developers to have a good experience. Why else would I be spending my
+          time on this?
+        </p>
+        <p>
+          Maybe some better questions to ask are where other libraries fail to
+          provide a good developer experience, why this is, and what I aim to do
+          differently.
+        </p>
+        <p>
+          Well, I'm not sure, but I think it probably boils down to what sorts
+          of things are fun (for most library authors) to work on, and what
+          sorts of things are not fun. Building new features and functionality
+          are typically fun. Writing docs, fixing bugs, responding to questions,
+          and trying to make things easy for others to understand are all things
+          that typically are not fun. To oversimpify.
+        </p>
+        <p>
+          Personally, I enjoy focusing on those things that (I assume) most
+          others don't think are fun. I want this library to be "good". Making
+          it "good" is generally fun for me. I think the developer experience as
+          a whole is what determines whether or not it's "good". And so, I plan
+          to spend a lot of time on it.
+        </p>
+        <p>
+          One thing in particular is that I would like to do user interviews and
+          user research. I think it's absolutely crucial. If you'd be willing to
+          participate in that, please let me know.
+        </p>
       </Stack>
       <h2 class="text-2xl text-neutral-700 mt-8 mb-5">Use the platform</h2>
       <Stack class="gap-4 leading-relaxed">

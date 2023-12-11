@@ -349,7 +349,7 @@ export default () => {
           does a decent job of discussing it.
         </p>
         <p>
-          In RFUI I will try really hard to avoid introducing new dependencies.
+          In RFUI I will try pretty hard to avoid introducing new dependencies.
         </p>
       </Stack>
     </div>

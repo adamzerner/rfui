@@ -137,12 +137,12 @@ export default () => {
           by Jeff Atwood. It's such a good idea.
         </p>
         <p>
-          A good tool should make it make it{" "}
+          A good tool should make it{" "}
           <em>hard to do bad things</em>. Don't just say "We're just a tool.
           It's your responsibility as the programmer to not do bad things".
         </p>
         <p>
-          A good tool should also make it make it{" "}
+          A good tool should also make it{" "}
           <em>easy to do good things</em>. Don't just say "We're just a tool.
           It's your responsibility as the programmer to use the tool to do good
           things".

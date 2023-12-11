@@ -20,6 +20,7 @@ const LeftNav = () => {
         <div class="font-bold text-neutral-700 mb-4">Atoms</div>
         <Stack class="gap-2">
           <Link underline="hover" href="/atoms/badge">Badge</Link>
+          <Link underline="hover" href="/atoms/blockquote">Blockquote</Link>
           <Link underline="hover" href="/atoms/button">Button</Link>
           <Link underline="hover" href="/atoms/checkbox">Checkbox</Link>
           <Link underline="hover" href="/atoms/highlight">Highlight</Link>
@@ -84,6 +85,7 @@ const Main = () => {
         <Category>Atoms</Category>
         <Flex class="flex-wrap gap-6 lg:gap-5">
           <Item name="Badge" href="/atoms/badge" />
+          <Item name="Blockquote" href="/atoms/blockquote" />
           <Item name="Button" href="/atoms/button" />
           <Item name="Checkbox" href="/atoms/checkbox" />
           <Item name="Highlight" href="/atoms/highlight" />

@@ -6,6 +6,7 @@ import * as $_404 from "./routes/_404.tsx";
 import * as $_app from "./routes/_app.tsx";
 import * as $_layout from "./routes/_layout.tsx";
 import * as $atoms_badge from "./routes/atoms/badge.tsx";
+import * as $atoms_blockquote from "./routes/atoms/blockquote.tsx";
 import * as $atoms_button from "./routes/atoms/button.tsx";
 import * as $atoms_checkbox from "./routes/atoms/checkbox.tsx";
 import * as $atoms_highlight from "./routes/atoms/highlight.tsx";
@@ -41,6 +42,7 @@ const manifest = {
     "./routes/_app.tsx": $_app,
     "./routes/_layout.tsx": $_layout,
     "./routes/atoms/badge.tsx": $atoms_badge,
+    "./routes/atoms/blockquote.tsx": $atoms_blockquote,
     "./routes/atoms/button.tsx": $atoms_button,
     "./routes/atoms/checkbox.tsx": $atoms_checkbox,
     "./routes/atoms/highlight.tsx": $atoms_highlight,

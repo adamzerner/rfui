@@ -1,3 +1,4 @@
+import { Blockquote } from "@/components/atoms/blockquote.tsx";
 import { Link } from "@/components/atoms/link.tsx";
 import { Stack } from "@/components/helpers/stack.tsx";
 
@@ -97,7 +98,7 @@ export default () => {
             Node's Complexity Problem
           </Link>:
         </p>
-        <blockquote class="border-l border-neutral-300 pl-5 text-neutral-700 flex flex-col gap-3">
+        <Blockquote>
           <p>
             Starting a new project in Node.js requires several steps before you
             can actually start programming. Setup TypeScript. Setup your testing
@@ -112,7 +113,7 @@ export default () => {
             Programming should be just that — programming — and not configuring
             tools before you write a single line of code.
           </p>
-        </blockquote>
+        </Blockquote>
         <p>
           On the other hand, I think Deno does a great job of scaling down. If
           you want to use Deno for a simple project, you basically can just get

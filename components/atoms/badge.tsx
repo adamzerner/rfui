@@ -22,6 +22,7 @@ export const Badge = (
     ...rest
   }: BadgeType,
 ) => {
+  const { class: restClass, ...restWithoutClass } = rest;
   let className = "";
 
   className += " " + (() => {
@@ -63,13 +64,13 @@ export const Badge = (
     }
   })();
 
-  if (rest.class) {
-    className += ` ${rest.class}`;
+  if (restClass) {
+    className += ` ${restClass}`;
   }
 
   return (
     <div
-      {...rest}
+      {...restWithoutClass}
       class={className}
     >
       {children}

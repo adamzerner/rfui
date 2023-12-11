@@ -28,7 +28,7 @@ const TheNavbar = ({ route }: { route: string }) => {
         href="/getting-started"
         isActive={route === "/getting-started"}
       >
-        Getting Starting
+        Getting Started
       </NavbarItem>
       <NavbarItem href="/philosophy" isActive={route === "/philosophy"}>
         Philosophy

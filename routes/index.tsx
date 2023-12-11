@@ -23,6 +23,7 @@ const LeftNav = () => {
           <Link underline="hover" href="/atoms/blockquote">Blockquote</Link>
           <Link underline="hover" href="/atoms/button">Button</Link>
           <Link underline="hover" href="/atoms/checkbox">Checkbox</Link>
+          <Link underline="hover" href="/atoms/code-block">CodeBlock</Link>
           <Link underline="hover" href="/atoms/highlight">Highlight</Link>
           <Link underline="hover" href="/atoms/input">Input</Link>
           <Link underline="hover" href="/atoms/link">Link</Link>
@@ -88,6 +89,7 @@ const Main = () => {
           <Item name="Blockquote" href="/atoms/blockquote" />
           <Item name="Button" href="/atoms/button" />
           <Item name="Checkbox" href="/atoms/checkbox" />
+          <Item name="CodeBlock" href="/atoms/code-block" />
           <Item name="Highlight" href="/atoms/highlight" />
           <Item name="Input" href="/atoms/input" />
           <Item name="Link" href="/atoms/link" />

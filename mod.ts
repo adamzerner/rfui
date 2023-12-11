@@ -6,6 +6,8 @@ export { Button } from "./components/atoms/button.tsx";
 export type { ButtonType } from "./components/atoms/button.tsx";
 export { Checkbox } from "./components/atoms/checkbox.tsx";
 export type { CheckboxType } from "./components/atoms/checkbox.tsx";
+export { CodeBlock } from "./components/atoms/code-block.tsx";
+export type { CodeBlockType } from "./components/atoms/code-block.tsx";
 export { Highlight } from "./components/atoms/highlight.tsx";
 export type { HighlightType } from "./components/atoms/highlight.tsx";
 export { Input } from "./components/atoms/input.tsx";

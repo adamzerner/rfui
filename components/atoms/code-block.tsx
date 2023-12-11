@@ -3,7 +3,7 @@ import { ComponentChild } from "preact";
 
 export type CodeBlockType = {
   children: ComponentChild;
-} & JSX.HTMLAttributes<HTMLPreElement>;
+} & JSX.HTMLAttributes<HTMLElement>;
 
 /** *
  * @function CodeBlock
@@ -18,18 +18,18 @@ export const CodeBlock = (
   }: CodeBlockType,
 ) => {
   const { class: restClass, ...restWithoutClass } = rest;
-  let className = "block p-5 bg-neutral-300";
+  let className = "block p-5 bg-neutral-50 whitespace-pre-wrap";
 
   if (restClass) {
     className += ` ${restClass}`;
   }
 
   return (
-    <pre
+    <code
       {...restWithoutClass}
       class={className}
     >
-      <code>{children}</code>
-    </pre>
+      {children}
+    </code>
   );
 };

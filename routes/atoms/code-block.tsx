@@ -14,10 +14,10 @@ export default () => {
       </div>
       <Examples title="Default">
         <CodeBlock>
-          <pre>
-            const firstName = 'John';
-            const lastName = 'Doe';
-          </pre>
+          {`const firstName = 'John';
+const lastName = 'Doe';
+const fullName = firstName + " " + lastName;
+`}
         </CodeBlock>
       </Examples>
     </Stack>

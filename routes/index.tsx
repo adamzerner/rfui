@@ -39,6 +39,7 @@ const LeftNav = () => {
       <div>
         <div class="font-bold text-neutral-700 mb-4">Molecules</div>
         <Stack class="gap-2">
+          <Link underline="hover" href="/molecules/alert">Alert</Link>
           <Link underline="hover" href="/molecules/card">Card</Link>
           <Link underline="hover" href="/molecules/footer">
             Footer
@@ -104,6 +105,7 @@ const Main = () => {
       <div class="lg:flex">
         <Category>Molecules</Category>
         <Flex class="flex-wrap gap-6 lg:gap-5">
+          <Item name="Alert" href="/molecules/alert" />
           <Item name="Card" href="/molecules/card" />
           <Item name="Footer" href="/molecules/footer" />
           <Item name="FormField" href="/molecules/form-field" />

@@ -25,13 +25,34 @@ export type { TableType } from "./components/atoms/table.tsx";
 export { Textarea } from "./components/atoms/textarea.tsx";
 export type { TextareaType } from "./components/atoms/textarea.tsx";
 
-export { Card } from "./components/molecules/card.tsx";
+export {
+  Alert,
+  AlertBody,
+  AlertHeader,
+} from "./components/molecules/alert.tsx";
+export type { AlertType } from "./components/molecules/alert.tsx";
+export {
+  Card,
+  CardBody,
+  CardFooter,
+  CardHeader,
+} from "./components/molecules/card.tsx";
 export type { CardType } from "./components/molecules/card.tsx";
-export { Footer } from "./components/molecules/footer.tsx";
+export {
+  Footer,
+  FooterColumn,
+  FooterHeading,
+  FooterItem,
+} from "./components/molecules/footer.tsx";
 export type { FooterType } from "./components/molecules/footer.tsx";
 export { FormField } from "./components/molecules/form-field.tsx";
 export type { FormFieldType } from "./components/molecules/form-field.tsx";
-export { Navbar } from "./components/molecules/navbar.tsx";
+export {
+  Navbar,
+  NavbarItem,
+  NavbarLeft,
+  NavbarRight,
+} from "./components/molecules/navbar.tsx";
 export type { NavbarType } from "./components/molecules/navbar.tsx";
 export { PasswordInput } from "./islands/molecules/password-input.tsx";
 export type { PasswordInputType } from "./islands/molecules/password-input.tsx";

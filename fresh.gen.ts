@@ -25,6 +25,7 @@ import * as $helpers_flex from "./routes/helpers/flex.tsx";
 import * as $helpers_stack from "./routes/helpers/stack.tsx";
 import * as $icons_new_tab_icon from "./routes/icons/new-tab-icon.tsx";
 import * as $index from "./routes/index.tsx";
+import * as $molecules_alert from "./routes/molecules/alert.tsx";
 import * as $molecules_card from "./routes/molecules/card.tsx";
 import * as $molecules_footer from "./routes/molecules/footer.tsx";
 import * as $molecules_form_field from "./routes/molecules/form-field.tsx";
@@ -63,6 +64,7 @@ const manifest = {
     "./routes/helpers/stack.tsx": $helpers_stack,
     "./routes/icons/new-tab-icon.tsx": $icons_new_tab_icon,
     "./routes/index.tsx": $index,
+    "./routes/molecules/alert.tsx": $molecules_alert,
     "./routes/molecules/card.tsx": $molecules_card,
     "./routes/molecules/footer.tsx": $molecules_footer,
     "./routes/molecules/form-field.tsx": $molecules_form_field,

@@ -28,7 +28,7 @@ export default () => {
           For various reasons, none of them really felt satisfying to me.
         </p>
         <p>
-          I also looked in to a bunch of paid templates and libraries. I would
+          I also looked into a bunch of paid templates and libraries. I would
           have been happy to spend thousands of dollars on something, but none
           of the paid options really spoke to me either.
         </p>

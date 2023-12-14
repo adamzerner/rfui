@@ -19,7 +19,7 @@ export default () => {
       </Examples>
       <Examples title="AlertHeader and AlertBody">
         <Alert>
-          <AlertHeader>Success</AlertHeader>
+          <AlertHeader class="font-bold">Success</AlertHeader>
           <AlertBody>Your profile has been saved.</AlertBody>
         </Alert>
       </Examples>
@@ -47,25 +47,25 @@ export default () => {
           </Alert>
         </Stack>
       </Examples>
-      <Examples title="Dismissable">
+      <Examples title="Not dismissable">
         <Stack class="gap-5 w-full">
-          <Alert isDismissable variant="success">
+          <Alert isDismissable={false} variant="success">
             <AlertHeader>Success</AlertHeader>
             <AlertBody>Your profile has been saved.</AlertBody>
           </Alert>
-          <Alert isDismissable variant="info">
+          <Alert isDismissable={false} variant="info">
             <AlertHeader>Note</AlertHeader>
             <AlertBody>Your account has been updated.</AlertBody>
           </Alert>
-          <Alert isDismissable variant="warning">
+          <Alert isDismissable={false} variant="warning">
             <AlertHeader>Warning</AlertHeader>
             <AlertBody>Your plan is set to expire.</AlertBody>
           </Alert>
-          <Alert isDismissable variant="danger">
+          <Alert isDismissable={false} variant="danger">
             <AlertHeader>Danger</AlertHeader>
             <AlertBody>Your payment method is inactive.</AlertBody>
           </Alert>
-          <Alert isDismissable variant="neutral">
+          <Alert isDismissable={false} variant="neutral">
             <AlertHeader>Note</AlertHeader>
             <AlertBody>Your account has been updated.</AlertBody>
           </Alert>

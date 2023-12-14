@@ -1,3 +1,5 @@
+// Something about this being an island is making the types weird.
+// deno-lint-ignore-file no-explicit-any
 import { Flex } from "@/components/helpers/flex.tsx";
 import { CloseIcon } from "@/components/icons/close-icon.tsx";
 import type { ComponentChild, JSX } from "preact";
@@ -6,7 +8,7 @@ import { useState } from "preact/hooks";
 export type AlertType = {
   variant?: "success" | "info" | "warning" | "danger" | "neutral";
   isDismissable?: boolean;
-  children: ComponentChild;
+  children: any;
 } & Omit<JSX.HTMLAttributes<HTMLDivElement>, "size">;
 
 /** *
@@ -23,7 +25,7 @@ export type AlertType = {
 export const Alert = (
   {
     variant = "neutral",
-    isDismissable = false,
+    isDismissable = true,
     children,
     ...rest
   }: AlertType,
@@ -99,17 +101,17 @@ export const Alert = (
   );
 };
 
-const getComponents = (children: ComponentChild) => {
-  if (!Array.isArray(children)) {
-    return [undefined, children];
+const getComponents = ({ props }: any) => {
+  if (!Array.isArray(props.children)) {
+    return [undefined, props.children];
   }
 
-  const alertHeader = children.find(
-    (child) => child && child.type && child.type.name === "AlertHeader",
+  const alertHeader = props.children.find(
+    (child: any) => child && child.type && child.type.name === "AlertHeader",
   );
 
-  const alertBody = children.find(
-    (child) => child && child.type && child.type.name === "AlertBody",
+  const alertBody = props.children.find(
+    (child: any) => child && child.type && child.type.name === "AlertBody",
   );
 
   return [alertHeader, alertBody];
@@ -141,7 +143,7 @@ const Icon = ({ variant }: { variant: AlertType["variant"] }) => {
           viewBox="0 0 24 24"
           strokeWidth={1.5}
           stroke="currentColor"
-          className="w-6 h-6 text-supporting-green-500"
+          className="w-6 h-6 self-start text-supporting-green-500"
         >
           <path
             strokeLinecap="round"
@@ -159,7 +161,7 @@ const Icon = ({ variant }: { variant: AlertType["variant"] }) => {
           viewBox="0 0 24 24"
           strokeWidth={1.5}
           stroke="currentColor"
-          className="w-6 h-6 text-primary-500"
+          className="w-6 h-6 self-start text-primary-500"
         >
           <path
             strokeLinecap="round"
@@ -177,7 +179,7 @@ const Icon = ({ variant }: { variant: AlertType["variant"] }) => {
           viewBox="0 0 24 24"
           strokeWidth={1.5}
           stroke="currentColor"
-          className="w-6 h-6 text-supporting-yellow-700"
+          className="w-6 h-6 self-start text-supporting-yellow-700"
         >
           <path
             strokeLinecap="round"
@@ -195,7 +197,7 @@ const Icon = ({ variant }: { variant: AlertType["variant"] }) => {
           viewBox="0 0 24 24"
           strokeWidth={1.5}
           stroke="currentColor"
-          className="w-6 h-6 text-supporting-red-500"
+          className="w-6 h-6 self-start text-supporting-red-500"
         >
           <path
             strokeLinecap="round"
@@ -213,7 +215,7 @@ const Icon = ({ variant }: { variant: AlertType["variant"] }) => {
           viewBox="0 0 24 24"
           strokeWidth={1.5}
           stroke="currentColor"
-          className="w-6 h-6 text-neutral-500"
+          className="w-6 h-6 self-start text-neutral-500"
         >
           <path
             strokeLinecap="round"

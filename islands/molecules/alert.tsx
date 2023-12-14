@@ -9,20 +9,16 @@ export type AlertType = {
   children: ComponentChild;
 } & Omit<JSX.HTMLAttributes<HTMLDivElement>, "size">;
 
-/*
-
-TODO:
-- Dismissable
-
-*/
-
 /** *
  * @function Alert
  *
  * Don't overdo it. If you "cry wolf", users become numb to alerts. https://ux.stackexchange.com/q/44609/39046
  *
  * @example
- * <Alert></Alert>
+ * <Alert>
+ *   <AlertHeader>Success</AlertHeader>
+ *   <AlertBody>Your profile has been updated.</AlertBody>
+ * </Alert>
  */
 export const Alert = (
   {

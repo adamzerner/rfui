@@ -1,3 +1,4 @@
+import { Flex } from "@/components/helpers/flex.tsx";
 import type { ComponentChild, JSX } from "preact";
 
 export type AlertType = {
@@ -8,7 +9,6 @@ export type AlertType = {
 /*
 
 TODO:
-- Variant
 - Icon
 
 */
@@ -100,9 +100,14 @@ export const Alert = (
 
   return (
     <div class={containerClass} {...restWithoutClass}>
-      {alertHeader &&
-        <div class={alertHeaderClass}>{alertHeader}</div>}
-      <div class={alertBodyClass}>{alertBody}</div>
+      <Flex class="gap-3">
+        <div>ℹ️</div>
+        <div>
+          {alertHeader &&
+            <div class={alertHeaderClass}>{alertHeader}</div>}
+          <div class={alertBodyClass}>{alertBody}</div>
+        </div>
+      </Flex>
     </div>
   );
 };

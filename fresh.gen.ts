@@ -23,6 +23,7 @@ import * as $getting_started from "./routes/getting-started.tsx";
 import * as $helpers_container from "./routes/helpers/container.tsx";
 import * as $helpers_flex from "./routes/helpers/flex.tsx";
 import * as $helpers_stack from "./routes/helpers/stack.tsx";
+import * as $icons_close_icon from "./routes/icons/close-icon.tsx";
 import * as $icons_new_tab_icon from "./routes/icons/new-tab-icon.tsx";
 import * as $index from "./routes/index.tsx";
 import * as $molecules_alert from "./routes/molecules/alert.tsx";
@@ -63,6 +64,7 @@ const manifest = {
     "./routes/helpers/container.tsx": $helpers_container,
     "./routes/helpers/flex.tsx": $helpers_flex,
     "./routes/helpers/stack.tsx": $helpers_stack,
+    "./routes/icons/close-icon.tsx": $icons_close_icon,
     "./routes/icons/new-tab-icon.tsx": $icons_new_tab_icon,
     "./routes/index.tsx": $index,
     "./routes/molecules/alert.tsx": $molecules_alert,

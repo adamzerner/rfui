@@ -62,4 +62,5 @@ export type { FlexType } from "./components/helpers/flex.tsx";
 export { Stack } from "./components/helpers/stack.tsx";
 export type { StackType } from "./components/helpers/stack.tsx";
 
+export { CloseIcon } from "./components/icons/close-icon.tsx";
 export { NewTabIcon } from "./components/icons/new-tab-icon.tsx";

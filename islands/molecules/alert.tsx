@@ -1,8 +1,11 @@
 import { Flex } from "@/components/helpers/flex.tsx";
+import { CloseIcon } from "@/components/icons/close-icon.tsx";
 import type { ComponentChild, JSX } from "preact";
+import { useState } from "preact/hooks";
 
 export type AlertType = {
   variant?: "success" | "info" | "warning" | "danger" | "neutral";
+  isDismissable?: boolean;
   children: ComponentChild;
 } & Omit<JSX.HTMLAttributes<HTMLDivElement>, "size">;
 
@@ -24,6 +27,7 @@ TODO:
 export const Alert = (
   {
     variant = "neutral",
+    isDismissable = false,
     children,
     ...rest
   }: AlertType,
@@ -56,6 +60,7 @@ export const Alert = (
     danger: "text-supporting-red-900",
     neutral: "text-neutral-900",
   };
+  const [isShown, setIsShown] = useState(true);
   const { class: restClass, ...restWithoutClass } = rest;
   const [alertHeader, alertBody] = getComponents(children);
   let alertHeaderClass = "text-lg font-bold mb-2";
@@ -71,15 +76,28 @@ export const Alert = (
     containerClass += ` ${restClass}`;
   }
 
+  if (!isShown) {
+    return null;
+  }
+
   return (
     <div class={containerClass} {...restWithoutClass}>
-      <Flex class="gap-3">
+      <Flex class="gap-5 justify-between items-center">
         <Icon variant={variant} />
-        <div>
+        <div class="flex-1">
           {alertHeader &&
             <div class={alertHeaderClass}>{alertHeader}</div>}
           <div class={alertBodyClass}>{alertBody}</div>
         </div>
+        {isDismissable &&
+          (
+            <CloseIcon
+              className={headerTextColorMap[variant]}
+              onClick={() => {
+                setIsShown(false);
+              }}
+            />
+          )}
       </Flex>
     </div>
   );

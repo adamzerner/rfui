@@ -1,11 +1,7 @@
 import { Link } from "@/components/atoms/link.tsx";
 import { Stack } from "@/components/helpers/stack.tsx";
-import {
-  Alert,
-  AlertBody,
-  AlertHeader,
-} from "@/components/molecules/alert.tsx";
 import { Examples } from "@/islands/demo/examples.tsx";
+import { Alert, AlertBody, AlertHeader } from "@/islands/molecules/alert.tsx";
 
 export default () => {
   return (
@@ -46,6 +42,30 @@ export default () => {
             <AlertBody>Your payment method is inactive.</AlertBody>
           </Alert>
           <Alert variant="neutral">
+            <AlertHeader>Note</AlertHeader>
+            <AlertBody>Your account has been updated.</AlertBody>
+          </Alert>
+        </Stack>
+      </Examples>
+      <Examples title="Dismissable">
+        <Stack class="gap-5 w-full">
+          <Alert isDismissable variant="success">
+            <AlertHeader>Success</AlertHeader>
+            <AlertBody>Your profile has been saved.</AlertBody>
+          </Alert>
+          <Alert isDismissable variant="info">
+            <AlertHeader>Note</AlertHeader>
+            <AlertBody>Your account has been updated.</AlertBody>
+          </Alert>
+          <Alert isDismissable variant="warning">
+            <AlertHeader>Warning</AlertHeader>
+            <AlertBody>Your plan is set to expire.</AlertBody>
+          </Alert>
+          <Alert isDismissable variant="danger">
+            <AlertHeader>Danger</AlertHeader>
+            <AlertBody>Your payment method is inactive.</AlertBody>
+          </Alert>
+          <Alert isDismissable variant="neutral">
             <AlertHeader>Note</AlertHeader>
             <AlertBody>Your account has been updated.</AlertBody>
           </Alert>

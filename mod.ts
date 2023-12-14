@@ -26,12 +26,6 @@ export { Textarea } from "./components/atoms/textarea.tsx";
 export type { TextareaType } from "./components/atoms/textarea.tsx";
 
 export {
-  Alert,
-  AlertBody,
-  AlertHeader,
-} from "./components/molecules/alert.tsx";
-export type { AlertType } from "./components/molecules/alert.tsx";
-export {
   Card,
   CardBody,
   CardFooter,
@@ -54,6 +48,8 @@ export {
   NavbarRight,
 } from "./components/molecules/navbar.tsx";
 export type { NavbarType } from "./components/molecules/navbar.tsx";
+export { Alert, AlertBody, AlertHeader } from "./islands/molecules/alert.tsx";
+export type { AlertType } from "./islands/molecules/alert.tsx";
 export { PasswordInput } from "./islands/molecules/password-input.tsx";
 export type { PasswordInputType } from "./islands/molecules/password-input.tsx";
 export { Stepper } from "./islands/molecules/stepper.tsx";

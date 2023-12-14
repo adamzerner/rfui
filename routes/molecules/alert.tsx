@@ -1,6 +1,10 @@
 import { Link } from "@/components/atoms/link.tsx";
 import { Stack } from "@/components/helpers/stack.tsx";
-import { Alert } from "@/components/molecules/alert.tsx";
+import {
+  Alert,
+  AlertBody,
+  AlertHeader,
+} from "@/components/molecules/alert.tsx";
 import { Examples } from "@/islands/demo/examples.tsx";
 
 export default () => {
@@ -15,6 +19,12 @@ export default () => {
       <Examples title="Default">
         <Alert>
           Example
+        </Alert>
+      </Examples>
+      <Examples title="AlertHeader and AlertBody">
+        <Alert>
+          <AlertHeader>Success</AlertHeader>
+          <AlertBody>Your profile has been saved.</AlertBody>
         </Alert>
       </Examples>
     </Stack>

@@ -10,6 +10,7 @@ export type AlertType = {
 
 TODO:
 - Icon
+- Dismissable
 
 */
 
@@ -28,6 +29,14 @@ export const Alert = (
     ...rest
   }: AlertType,
 ) => {
+  const colorMap = {
+    success: "supporting-green",
+    info: "primary",
+    warning: "supporting-yellow",
+    danger: "supporting-red",
+    neutral: "neutral",
+  };
+  const color = colorMap[variant];
   const [alertHeader, alertBody] = getComponents(children);
   let alertHeaderClass = "text-lg font-bold mb-2";
   let alertBodyClass = "text-neutral-900";
@@ -101,7 +110,7 @@ export const Alert = (
   return (
     <div class={containerClass} {...restWithoutClass}>
       <Flex class="gap-3">
-        <div>ℹ️</div>
+        <Icon variant={variant} />
         <div>
           {alertHeader &&
             <div class={alertHeaderClass}>{alertHeader}</div>}
@@ -142,4 +151,98 @@ export const AlertBody = (
     & JSX.HTMLAttributes<HTMLDivElement>,
 ) => {
   return <div {...rest}>{children}</div>;
+};
+
+const Icon = ({ variant }: { variant: AlertType["variant"] }) => {
+  switch (variant) {
+    case "success":
+      return (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          strokeWidth={1.5}
+          stroke="currentColor"
+          className="w-6 h-6 text-supporting-green-500"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+          />
+        </svg>
+      );
+
+    case "info":
+      return (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          strokeWidth={1.5}
+          stroke="currentColor"
+          className="w-6 h-6 text-primary-500"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z"
+          />
+        </svg>
+      );
+
+    case "warning":
+      return (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          strokeWidth={1.5}
+          stroke="currentColor"
+          className="w-6 h-6 text-supporting-yellow-700"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z"
+          />
+        </svg>
+      );
+
+    case "danger":
+      return (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          strokeWidth={1.5}
+          stroke="currentColor"
+          className="w-6 h-6 text-supporting-red-500"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+          />
+        </svg>
+      );
+
+    default:
+      return (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          strokeWidth={1.5}
+          stroke="currentColor"
+          className="w-6 h-6 text-neutral-500"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z"
+          />
+        </svg>
+      );
+  }
 };

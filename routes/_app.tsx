@@ -2,7 +2,7 @@ import { PageProps } from "$fresh/server.ts";
 
 export default ({ Component }: PageProps) => {
   return (
-    <html>
+    <html lang="en">
       <head>
         <title>RFUI</title>
         <link rel="stylesheet" type="text/css" href="/app.css" />

@@ -62,7 +62,7 @@ export const Alert = (
   const { class: restClass, ...restWithoutClass } = rest;
   const [alertHeader, alertBody] = getComponents(children);
   let alertHeaderClass = "text-lg font-bold mb-2";
-  let alertBodyClass = "text-neutral-900";
+  let alertBodyClass = "";
   let containerClass = "w-full p-5 border-l-4";
 
   containerClass += ` ${borderMap[variant]}`;

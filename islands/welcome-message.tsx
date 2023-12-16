@@ -3,7 +3,7 @@ import { Alert, AlertBody, AlertHeader } from "@/islands/molecules/alert.tsx";
 import { useEffect, useState } from "preact/hooks";
 
 export const WelcomeMessage = () => {
-  const [hasVisitedBefore, setHasVisitedBefore] = useState(false);
+  const [hasVisitedBefore, setHasVisitedBefore] = useState(true);
 
   useEffect(() => {
     if (localStorage.getItem("hasVisitedBefore")) {
@@ -25,7 +25,7 @@ export const WelcomeMessage = () => {
           Since it's your first time here, you might want to check these pages
           out:
         </p>
-        <ul class="list-disc list-inside">
+        <ul class="list-disc list-inside mb-3">
           <li>
             <Link href="/about">About</Link>
           </li>
@@ -36,6 +36,13 @@ export const WelcomeMessage = () => {
             <Link href="/philosophy">Philosophy</Link>
           </li>
         </ul>
+        <p>
+          If you have any thoughts or questions, don't hesitate to reach out:
+          {" "}
+          <Link href="mailto:adamzerner@protonmail.com">
+            adamzerner@protonmail.com
+          </Link>.
+        </p>
       </AlertBody>
     </Alert>
   );

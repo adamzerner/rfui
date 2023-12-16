@@ -14,9 +14,9 @@ export const WelcomeMessage = () => {
     }
   }, []);
 
-  // if (hasVisitedBefore) {
-  //   return null;
-  // }
+  if (hasVisitedBefore) {
+    return null;
+  }
 
   return (
     <Alert variant="info" class="mb-10">

@@ -45,11 +45,11 @@ export const Alert = (
     neutral: "bg-neutral-50",
   };
   const headerTextColorMap = {
-    success: "text-supporting-green-500",
-    info: "text-primary-500",
-    warning: "text-supporting-yellow-700",
-    danger: "text-supporting-red-500",
-    neutral: "text-neutral-500",
+    success: "text-supporting-green-700",
+    info: "text-primary-700",
+    warning: "text-supporting-yellow-800",
+    danger: "text-supporting-red-700",
+    neutral: "text-neutral-700",
   };
   const bodyTextColorMap = {
     success: "text-supporting-green-900",

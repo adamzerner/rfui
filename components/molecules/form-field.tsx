@@ -63,19 +63,19 @@ export const FormField = (
       <label for={id} class={`mb-1 block ${normalFontClass}`}>
         {label}{" "}
         {required && requiredIndicator === "text" && (
-          <span class={`text-neutral-500 ${smallFontClass}`}>
+          <span class={`text-neutral-700 ${smallFontClass}`}>
             (required)
           </span>
         )}
         {required && requiredIndicator === "asterisk" && <sup>*</sup>}
         {!required && optionalIndicator === "text" && (
-          <span class={`text-neutral-500 ${smallFontClass}`}>(optional)</span>
+          <span class={`text-neutral-700 ${smallFontClass}`}>(optional)</span>
         )}
         {!required && optionalIndicator === "asterisk" && <sup>*</sup>}
       </label>
-      <div class={`${smallFontClass} text-neutral-500 mb-1`}>{helperText}</div>
+      <div class={`${smallFontClass} text-neutral-700 mb-1`}>{helperText}</div>
       {invalid && errorText && (
-        <div class={`${smallFontClass} text-supporting-red-500 mb-1`}>
+        <div class={`${smallFontClass} text-supporting-red-700 mb-1`}>
           🛑 {errorText}
         </div>
       )}

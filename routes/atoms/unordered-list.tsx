@@ -33,6 +33,11 @@ export default () => {
             <li>Two</li>
             <li>Three</li>
           </UnorderedList>
+          <UnorderedList bulletType="check">
+            <li>One</li>
+            <li>Two</li>
+            <li>Three</li>
+          </UnorderedList>
         </Stack>
       </Examples>
     </Stack>

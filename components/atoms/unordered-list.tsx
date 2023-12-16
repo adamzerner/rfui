@@ -7,13 +7,6 @@ export type UnorderedListType = {
   children: ComponentChild;
 } & JSX.HTMLAttributes<HTMLUListElement>;
 
-/*
-
-TODO:
-- Mention how to approach it if you want to customize the bullet type
-
-*/
-
 /** *
  * @function UnorderedList
  *

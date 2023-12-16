@@ -1,5 +1,6 @@
 import { Link } from "@/components/atoms/link.tsx";
 import { UnorderedList } from "@/components/atoms/unordered-list.tsx";
+import { Flex } from "@/components/helpers/flex.tsx";
 import { Stack } from "@/components/helpers/stack.tsx";
 import { Examples } from "@/islands/demo/examples.tsx";
 
@@ -97,6 +98,28 @@ export default () => {
             <li>Three</li>
           </UnorderedList>
         </Stack>
+      </Examples>
+      <Examples title="Custom">
+        <UnorderedList class="list-none">
+          <li>
+            <Flex class="gap-2">
+              <span>😎</span>
+              One
+            </Flex>
+          </li>
+          <li>
+            <Flex class="gap-2">
+              <span>😎</span>
+              Two
+            </Flex>
+          </li>
+          <li>
+            <Flex class="gap-2">
+              <span>😎</span>
+              Three
+            </Flex>
+          </li>
+        </UnorderedList>
       </Examples>
     </Stack>
   );

@@ -30,9 +30,6 @@ const TheNavbar = ({ route }: { route: string }) => {
       >
         Getting Started
       </NavbarItem>
-      <NavbarItem href="/philosophy" isActive={route === "/philosophy"}>
-        Philosophy
-      </NavbarItem>
     </Navbar>
   );
 };
@@ -44,6 +41,7 @@ const TheFooter = () => {
         <FooterHeading>RFUI</FooterHeading>
         <FooterItem href="/">Components</FooterItem>
         <FooterItem href="/getting-started">Getting Started</FooterItem>
+        <FooterItem href="/about">About</FooterItem>
         <FooterItem href="/philosophy">Philosophy</FooterItem>
       </FooterColumn>
       <FooterColumn>

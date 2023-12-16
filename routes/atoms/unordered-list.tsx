@@ -38,6 +38,64 @@ export default () => {
             <li>Two</li>
             <li>Three</li>
           </UnorderedList>
+          <UnorderedList bulletType="arrow">
+            <li>One</li>
+            <li>Two</li>
+            <li>Three</li>
+          </UnorderedList>
+          <UnorderedList bulletType="triangle">
+            <li>One</li>
+            <li>Two</li>
+            <li>Three</li>
+          </UnorderedList>
+        </Stack>
+      </Examples>
+      <Examples title="Bigger">
+        <Stack class="gap-5">
+          <UnorderedList bulletType="bullet" class="text-xl">
+            <li>One</li>
+            <li>Two</li>
+            <li>Three</li>
+          </UnorderedList>
+          <UnorderedList bulletType="check" class="text-xl">
+            <li>One</li>
+            <li>Two</li>
+            <li>Three</li>
+          </UnorderedList>
+          <UnorderedList bulletType="arrow" class="text-xl">
+            <li>One</li>
+            <li>Two</li>
+            <li>Three</li>
+          </UnorderedList>
+          <UnorderedList bulletType="triangle" class="text-xl">
+            <li>One</li>
+            <li>Two</li>
+            <li>Three</li>
+          </UnorderedList>
+        </Stack>
+      </Examples>
+      <Examples title="Color">
+        <Stack class="gap-5">
+          <UnorderedList bulletType="bullet" class="text-neutral-500">
+            <li>One</li>
+            <li>Two</li>
+            <li>Three</li>
+          </UnorderedList>
+          <UnorderedList bulletType="check" class="text-neutral-500">
+            <li>One</li>
+            <li>Two</li>
+            <li>Three</li>
+          </UnorderedList>
+          <UnorderedList bulletType="arrow" class="text-neutral-500">
+            <li>One</li>
+            <li>Two</li>
+            <li>Three</li>
+          </UnorderedList>
+          <UnorderedList bulletType="triangle" class="text-neutral-500">
+            <li>One</li>
+            <li>Two</li>
+            <li>Three</li>
+          </UnorderedList>
         </Stack>
       </Examples>
     </Stack>

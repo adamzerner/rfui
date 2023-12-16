@@ -71,13 +71,6 @@ const LeftNav = () => {
           <Link underline="hover" href="/helpers/stack">Stack</Link>
         </Stack>
       </div>
-      <div>
-        <div class="font-bold text-neutral-700 mb-4">Icons</div>
-        <Stack class="gap-2">
-          <Link underline="hover" href="/icons/close-icon">CloseIcon</Link>
-          <Link underline="hover" href="/icons/new-tab-icon">NewTabIcon</Link>
-        </Stack>
-      </div>
     </Stack>
   );
 };
@@ -121,13 +114,6 @@ const Main = () => {
           <Item name="Container" href="/helpers/container" />
           <Item name="Flex" href="/helpers/flex" />
           <Item name="Stack" href="/helpers/stack" />
-        </Flex>
-      </div>
-      <div class="lg:flex">
-        <Category>Icons</Category>
-        <Flex class="flex-wrap gap-6 lg:gap-5">
-          <Item name="CloseIcon" href="/icons/close-icon" />
-          <Item name="NewTabIcon" href="/icons/new-tab-icon" />
         </Flex>
       </div>
     </Stack>

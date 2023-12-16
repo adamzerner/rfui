@@ -102,8 +102,6 @@ export const Alert = (
 };
 
 const getComponents = ({ props }: any) => {
-  console.log(props.children);
-
   if (!Array.isArray(props.children)) {
     return [undefined, props.children];
   }

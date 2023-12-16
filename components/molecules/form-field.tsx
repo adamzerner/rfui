@@ -1,4 +1,6 @@
 import { Input } from "@/components/atoms/input.tsx";
+import { Flex } from "@/components/helpers/flex.tsx";
+import { XCircleIcon } from "@/components/icons/x-circle-icon.tsx";
 import type { JSX } from "preact";
 
 export type FormFieldType = {
@@ -75,9 +77,12 @@ export const FormField = (
       </label>
       <div class={`${smallFontClass} text-neutral-700 mb-1`}>{helperText}</div>
       {invalid && errorText && (
-        <div class={`${smallFontClass} text-supporting-red-700 mb-1`}>
-          🛑 {errorText}
-        </div>
+        <Flex
+          class={`${smallFontClass} text-supporting-red-700 mb-1 gap-1 items-center`}
+        >
+          <XCircleIcon className={size === "sm" ? "w-4 h-4" : null} />{" "}
+          {errorText}
+        </Flex>
       )}
       <Input
         id={id}

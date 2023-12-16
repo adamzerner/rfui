@@ -1,6 +1,8 @@
 import { ComponentChild, JSX } from "preact";
 
 export type UnorderedListType = {
+  bulletType?: "bullet" | "check";
+  bulletLocation?: "inside" | "outside";
   children: ComponentChild;
 } & JSX.HTMLAttributes<HTMLUListElement>;
 
@@ -16,12 +18,24 @@ export type UnorderedListType = {
  */
 export const UnorderedList = (
   {
+    bulletType = "bullet",
+    bulletLocation = "inside",
     children,
     ...rest
   }: UnorderedListType,
 ) => {
   const { class: restClass, ...restWithoutClass } = rest;
-  let className = "";
+  let className = "flex flex-col gap-2";
+
+  const bulletTypeMap = {
+    bullet: "list-disc",
+    check: "",
+  };
+  className += ` ${bulletTypeMap[bulletType]}`;
+
+  className += ` ${
+    bulletLocation === "inside" ? "list-inside" : "list-outside"
+  }`;
 
   if (restClass) {
     className += ` ${restClass}`;

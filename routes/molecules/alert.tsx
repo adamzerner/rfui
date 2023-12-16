@@ -19,7 +19,7 @@ export default () => {
       </Examples>
       <Examples title="AlertHeader and AlertBody">
         <Alert>
-          <AlertHeader class="font-bold">Success</AlertHeader>
+          <AlertHeader>Success</AlertHeader>
           <AlertBody>Your profile has been saved.</AlertBody>
         </Alert>
       </Examples>

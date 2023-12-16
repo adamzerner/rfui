@@ -34,6 +34,9 @@ const LeftNav = () => {
           <Link underline="hover" href="/atoms/select">Select</Link>
           <Link underline="hover" href="/atoms/table">Table</Link>
           <Link underline="hover" href="/atoms/textarea">Textarea</Link>
+          <Link underline="hover" href="/atoms/unordered-list">
+            UnorderedList
+          </Link>
         </Stack>
       </div>
       <div>
@@ -94,6 +97,7 @@ const Main = () => {
           <Item name="Select" href="/atoms/select" />
           <Item name="Table" href="/atoms/table" />
           <Item name="Textarea" href="/atoms/textarea" />
+          <Item name="UnorderedList" href="/atoms/unordered-list" />
         </Flex>
       </div>
       <div class="lg:flex">

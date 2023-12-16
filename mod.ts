@@ -24,6 +24,8 @@ export { Table } from "./components/atoms/table.tsx";
 export type { TableType } from "./components/atoms/table.tsx";
 export { Textarea } from "./components/atoms/textarea.tsx";
 export type { TextareaType } from "./components/atoms/textarea.tsx";
+export { UnorderedList } from "./components/atoms/unordered-list.tsx";
+export type { UnorderedListType } from "./components/atoms/unordered-list.tsx";
 
 export {
   Card,

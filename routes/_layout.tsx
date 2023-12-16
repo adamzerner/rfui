@@ -1,18 +1,20 @@
 import { PageProps } from "$fresh/server.ts";
-import { Container } from "../components/helpers/container.tsx";
+import { Container } from "@/components/helpers/container.tsx";
 import {
   Footer,
   FooterColumn,
   FooterHeading,
   FooterItem,
-} from "../components/molecules/footer.tsx";
-import { Navbar, NavbarItem } from "../components/molecules/navbar.tsx";
+} from "@/components/molecules/footer.tsx";
+import { Navbar, NavbarItem } from "@/components/molecules/navbar.tsx";
+import { WelcomeMessage } from "@/islands/welcome-message.tsx";
 
 export default ({ Component, route }: PageProps) => {
   return (
     <>
       <TheNavbar route={route} />
       <Container size="xl" class="mt-8 mb-6 font-sans min-h-[200px]">
+        <WelcomeMessage />
         <Component />
       </Container>
       <TheFooter />

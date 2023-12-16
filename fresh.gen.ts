@@ -38,6 +38,7 @@ import * as $demo_examples from "./islands/demo/examples.tsx";
 import * as $molecules_alert_1 from "./islands/molecules/alert.tsx";
 import * as $molecules_password_input_1 from "./islands/molecules/password-input.tsx";
 import * as $molecules_stepper_1 from "./islands/molecules/stepper.tsx";
+import * as $welcome_message from "./islands/welcome-message.tsx";
 import { type Manifest } from "$fresh/server.ts";
 
 const manifest = {
@@ -80,6 +81,7 @@ const manifest = {
     "./islands/molecules/alert.tsx": $molecules_alert_1,
     "./islands/molecules/password-input.tsx": $molecules_password_input_1,
     "./islands/molecules/stepper.tsx": $molecules_stepper_1,
+    "./islands/welcome-message.tsx": $welcome_message,
   },
   baseUrl: import.meta.url,
 } satisfies Manifest;

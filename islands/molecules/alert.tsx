@@ -90,7 +90,7 @@ export const Alert = (
         {isDismissable &&
           (
             <CloseIcon
-              className={headerTextColorMap[variant]}
+              className={`${headerTextColorMap[variant]} self-start`}
               onClick={() => {
                 setIsShown(false);
               }}
@@ -101,16 +101,20 @@ export const Alert = (
   );
 };
 
-const getComponents = ({ props }: any) => {
-  if (!Array.isArray(props.children)) {
-    return [undefined, props.children];
+const getComponents = (props: any) => {
+  const children = props?.type?.name === "ServerComponent"
+    ? props.props.children
+    : props;
+
+  if (!Array.isArray(children)) {
+    return [undefined, children];
   }
 
-  const alertHeader = props.children.find(
+  const alertHeader = children.find(
     (child: any) => child && child.type && child.type.name === AlertHeader.name,
   );
 
-  const alertBody = props.children.find(
+  const alertBody = children.find(
     (child: any) => child && child.type && child.type.name === AlertBody.name,
   );
 

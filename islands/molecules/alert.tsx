@@ -107,13 +107,11 @@ const getComponents = ({ props }: any) => {
   }
 
   const alertHeader = props.children.find(
-    (child: any) =>
-      child && child.type && child.type.displayName === "AlertHeader",
+    (child: any) => child && child.type && child.type.name === "AlertHeader",
   );
 
   const alertBody = props.children.find(
-    (child: any) =>
-      child && child.type && child.type.displayName === "AlertBody",
+    (child: any) => child && child.type && child.type.name === "AlertBody",
   );
 
   return [alertHeader, alertBody];

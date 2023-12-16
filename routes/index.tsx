@@ -156,7 +156,7 @@ const Item = (
         class="hover:shadow-lg lg:hover:shadow-md"
       >
         <CardBody>
-          <image src="https://placehold.co/200" alt="Placeholder image" />
+          <img src="https://placehold.co/200" alt="Placeholder image" />
         </CardBody>
         <CardFooter>{name}</CardFooter>
       </Card>

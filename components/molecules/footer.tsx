@@ -45,7 +45,7 @@ export const Footer = (
   return (
     <footer class={containerClass} {...restWithoutClass}>
       <Container size={size}>
-        <Flex class="w-full gap-9 md:gap-10 flex-col md:flex-row">
+        <Flex class="w-full gap-9 md:gap-11 flex-col md:flex-row">
           {children}
         </Flex>
       </Container>

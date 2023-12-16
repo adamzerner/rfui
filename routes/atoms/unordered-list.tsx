@@ -19,6 +19,22 @@ export default () => {
           <li>Three</li>
         </UnorderedList>
       </Examples>
+      <Examples title="Outside">
+        <UnorderedList bulletLocation="outside">
+          <li>One</li>
+          <li>Two</li>
+          <li>Three</li>
+        </UnorderedList>
+      </Examples>
+      <Examples title="Bullet type">
+        <Stack class="gap-5">
+          <UnorderedList bulletType="bullet">
+            <li>One</li>
+            <li>Two</li>
+            <li>Three</li>
+          </UnorderedList>
+        </Stack>
+      </Examples>
     </Stack>
   );
 };

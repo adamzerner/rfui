@@ -23,7 +23,8 @@ export default () => {
           <AlertBody>Your profile has been saved.</AlertBody>
         </Alert>
       </Examples>
-      <Examples title="Variant">
+      {
+        /* <Examples title="Variant">
         <Stack class="gap-5 w-full">
           <Alert variant="success">
             <AlertHeader>Success</AlertHeader>
@@ -70,7 +71,8 @@ export default () => {
             <AlertBody>Your account has been updated.</AlertBody>
           </Alert>
         </Stack>
-      </Examples>
+      </Examples> */
+      }
     </Stack>
   );
 };

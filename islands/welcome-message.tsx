@@ -1,4 +1,5 @@
 import { Link } from "@/components/atoms/link.tsx";
+import { UnorderedList } from "@/components/atoms/unordered-list.tsx";
 import { Alert, AlertBody, AlertHeader } from "@/islands/molecules/alert.tsx";
 import { useEffect, useState } from "preact/hooks";
 
@@ -13,9 +14,9 @@ export const WelcomeMessage = () => {
     }
   }, []);
 
-  if (hasVisitedBefore) {
-    return null;
-  }
+  // if (hasVisitedBefore) {
+  //   return null;
+  // }
 
   return (
     <Alert variant="info" class="mb-10">
@@ -25,7 +26,7 @@ export const WelcomeMessage = () => {
           Since it's your first time here, you might want to check these pages
           out:
         </p>
-        <ul class="list-disc list-inside mb-3">
+        <UnorderedList class="mt-2 mb-4" bulletType="triangle">
           <li>
             <Link href="/about">About</Link>
           </li>
@@ -35,7 +36,7 @@ export const WelcomeMessage = () => {
           <li>
             <Link href="/philosophy">Philosophy</Link>
           </li>
-        </ul>
+        </UnorderedList>
         <p>
           If you have any thoughts or questions, don't hesitate to reach out:
           {" "}

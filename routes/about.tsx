@@ -93,7 +93,7 @@ const SubmitButton = () => {
           alt="Atomic Design visualization"
           class="max-w-full w-96"
         />
-        <p class="text-sm italic w-96 max-w-full">
+        <p class="text-sm italic w-96 max-w-full leading-relaxed">
           Right now I don't have plans to get into templates or pages. If I ever
           do it'll probably be pretty far down the road.
         </p>

@@ -2,13 +2,13 @@ import { Blockquote } from "@/components/atoms/blockquote.tsx";
 import { CodeBlock } from "@/components/atoms/code-block.tsx";
 import { InlineCode } from "@/components/atoms/inline-code.tsx";
 import { Link } from "@/components/atoms/link.tsx";
-import { Stack } from "@/components/helpers/stack.tsx";
+import { Text } from "@/components/atoms/text.tsx";
 
 export default () => {
   return (
-    <div class="max-w-prose text-lg">
+    <div>
       <h1 class="text-4xl text-neutral-700 mt-9 mb-7">Philosophy</h1>
-      <Stack class="gap-4 leading-relaxed">
+      <Text>
         <p>
           Before working on RFUI, I spent a bunch of time looking into existing
           component libraries and design systems.{" "}
@@ -60,18 +60,18 @@ export default () => {
             <li>Avoid dependencies</li>
           </ol>
         </div>
-      </Stack>
+      </Text>
       <h2 class="text-2xl text-neutral-700 mt-8 mb-5">Opinionated</h2>
-      <Stack class="gap-4 leading-relaxed">
+      <Text>
         <p>If you try to please everyone you end up pleasing no one.</p>
         <p>
           With RFUI, I'm not trying to please everyone. I'm trying to please a
           subset of people. A subset of peole who have certain needs, and who
           share certain opinions.
         </p>
-      </Stack>
+      </Text>
       <h2 class="text-2xl text-neutral-700 mt-8 mb-5">Scale down</h2>
-      <Stack class="gap-4 leading-relaxed">
+      <Text>
         <p>
           I recall someone from the Deno team writing or speaking about this
           idea. I can't find a reference though. The closest thing I could find
@@ -126,9 +126,9 @@ export default () => {
           I have the same goal for RFUI. I want RFUI to be a good choice for
           smaller projects. I want RFUI to scale down.
         </p>
-      </Stack>
+      </Text>
       <h2 class="text-2xl text-neutral-700 mt-8 mb-5">Pit of success</h2>
-      <Stack class="gap-4 leading-relaxed">
+      <Text>
         <p>
           One of my favorite blog posts is{" "}
           <Link href="https://blog.codinghorror.com/falling-into-the-pit-of-success/">
@@ -184,9 +184,9 @@ export default () => {
           situations. For example, by providing three or four options for how
           "rounded" various components are.
         </p>
-      </Stack>
+      </Text>
       <h2 class="text-2xl text-neutral-700 mt-8 mb-5">Pre-built components</h2>
-      <Stack class="gap-4 leading-relaxed">
+      <Text>
         <p>
           There are some component libraries that I think I'd be comfortable
           using. In particular,{" "}
@@ -212,9 +212,9 @@ export default () => {
           the code examples they provide you with. Doing that is just very time
           consuming and not something I want to deal with.
         </p>
-      </Stack>
+      </Text>
       <h2 class="text-2xl text-neutral-700 mt-8 mb-5">Pretty</h2>
-      <Stack class="gap-4 leading-relaxed">
+      <Text>
         <p>
           On the other hand, there are libraries that have all of these
           pre-built, easy to use components. But unfortunately, they're pretty
@@ -227,9 +227,9 @@ export default () => {
           be pretty uninspiring a lot of the time as well.
         </p>
         <p>I want the components in my library to genuinely look good.</p>
-      </Stack>
+      </Text>
       <h2 class="text-2xl text-neutral-700 mt-8 mb-5">Developer experience</h2>
-      <Stack class="gap-4 leading-relaxed">
+      <Text>
         <p>
           Perhaps it's tautological, but I want to provide a good developer
           experience.
@@ -290,9 +290,9 @@ export default () => {
             let me know
           </Link>.
         </p>
-      </Stack>
+      </Text>
       <h2 class="text-2xl text-neutral-700 mt-8 mb-5">Use the platform</h2>
-      <Stack class="gap-4 leading-relaxed">
+      <Text>
         <p>
           I've been noticing a trend recently of so-called{" "}
           <InlineCode>#useThePlatform</InlineCode>. And I like it.
@@ -345,9 +345,9 @@ export default () => {
           downsides. I prefer to avoid those downsides and "use the platform" in
           exchange for the component being slightly less pretty.
         </p>
-      </Stack>
+      </Text>
       <h2 class="text-2xl text-neutral-700 mt-8 mb-5">Avoid dependencies</h2>
-      <Stack class="gap-4 leading-relaxed">
+      <Text>
         <p>
           The more time I spend as a software engineer, the more I find
           dependencies to be a pain.{" "}
@@ -359,7 +359,7 @@ export default () => {
         <p>
           In RFUI I will try pretty hard to avoid introducing new dependencies.
         </p>
-      </Stack>
+      </Text>
     </div>
   );
 };

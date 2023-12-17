@@ -22,6 +22,8 @@ export { Select } from "./components/atoms/select.tsx";
 export type { SelectType } from "./components/atoms/select.tsx";
 export { Table } from "./components/atoms/table.tsx";
 export type { TableType } from "./components/atoms/table.tsx";
+export { Text } from "./components/atoms/text.tsx";
+export type { TextType } from "./components/atoms/text.tsx";
 export { Textarea } from "./components/atoms/textarea.tsx";
 export type { TextareaType } from "./components/atoms/textarea.tsx";
 export { UnorderedList } from "./components/atoms/unordered-list.tsx";

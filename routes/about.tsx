@@ -78,6 +78,26 @@ const SubmitButton = () => {
           </li>
         </UL>
       </Text>
+
+      <H2>Atomic Design</H2>
+      <Text>
+        <p>
+          RFUI follows the{" "}
+          <Link href="https://atomicdesign.bradfrost.com/chapter-2/">
+            Atomic Design Methodlogy
+          </Link>{" "}
+          by breaking components into "atoms", "molecules" and "organisms".
+        </p>
+        <img
+          src="https://atomicdesign.bradfrost.com/images/content/atomic-design-process.png"
+          alt="Atomic Design visualization"
+          class="max-w-full w-96"
+        />
+        <p class="text-sm italic w-96 max-w-full">
+          Right now I don't have plans to get into templates or pages. If I ever
+          do it'll probably be pretty far down the road.
+        </p>
+      </Text>
     </div>
   );
 };

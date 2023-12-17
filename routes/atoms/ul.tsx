@@ -1,8 +1,8 @@
 import { Link } from "@/components/atoms/link.tsx";
+import { UL } from "@/components/atoms/ul.tsx";
 import { Flex } from "@/components/helpers/flex.tsx";
 import { Stack } from "@/components/helpers/stack.tsx";
 import { Examples } from "@/islands/demo/examples.tsx";
-import { UL } from "../../components/atoms/ul.tsx";
 
 export default () => {
   return (

@@ -1,7 +1,7 @@
 import { Link } from "@/components/atoms/link.tsx";
+import { UL } from "@/components/atoms/ul.tsx";
 import { Alert, AlertBody, AlertHeader } from "@/islands/molecules/alert.tsx";
 import { useEffect, useState } from "preact/hooks";
-import { UL } from "../components/atoms/ul.tsx";
 
 export const WelcomeMessage = () => {
   const [hasVisitedBefore, setHasVisitedBefore] = useState(true);

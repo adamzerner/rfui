@@ -1,13 +1,15 @@
 import { CodeBlock } from "@/components/atoms/code-block.tsx";
 import { H1 } from "@/components/atoms/h1.tsx";
+import { H2 } from "@/components/atoms/h2.tsx";
 import { Link } from "@/components/atoms/link.tsx";
-import { Stack } from "@/components/helpers/stack.tsx";
+import { Text } from "@/components/atoms/text.tsx";
+import { UL } from "@/components/atoms/ul.tsx";
 
 export default () => {
   return (
     <div class="max-w-prose text-lg">
       <H1>About</H1>
-      <Stack class="gap-4 leading-relaxed">
+      <Text>
         <p>
           Like{"  "}
           <Link href="https://react-bootstrap.github.io/">
@@ -30,7 +32,30 @@ const SubmitButton = () => {
 };
 `}
         </CodeBlock>
-      </Stack>
+      </Text>
+
+      <H2>Accessibility</H2>
+      <Text>
+        <p>
+          RFUI aims to meet accessibility standards and follow best practices.
+        </p>
+        <UL>
+          <li>All components meet WCAG 2.1 AA standards.</li>
+          <li>
+            The popular{" "}
+            <Link href="https://www.deque.com/axe/devtools/">axe DevTools</Link>
+            {" "}
+            browser plugin shows no issues for any components.
+          </li>
+          <li>
+            All components receive a{" "}
+            <Link href="https://developer.chrome.com/docs/lighthouse/overview/">
+              Google Lighthouse
+            </Link>{" "}
+            score of 100 for accessibility.
+          </li>
+        </UL>
+      </Text>
     </div>
   );
 };

@@ -1,6 +1,7 @@
 import { CodeBlock } from "@/components/atoms/code-block.tsx";
 import { H1 } from "@/components/atoms/h1.tsx";
 import { H2 } from "@/components/atoms/h2.tsx";
+import { InlineCode } from "@/components/atoms/inline-code.tsx";
 import { Link } from "@/components/atoms/link.tsx";
 import { OL } from "@/components/atoms/ol.tsx";
 import { Text } from "@/components/atoms/text.tsx";
@@ -61,6 +62,100 @@ const SubmitButton = () => {
         </OL>
       </Text>
 
+      <H2>Target Audience</H2>
+      <Text>
+        <p>
+          As mentioned on the{" "}
+          <Link href="/philosophy">philosophy page</Link>, I intended to be a
+          bit opinionated with RFUI. If you try to please everyone, you end up
+          pleasing no one.
+        </p>
+        <p>
+          So then, who do I intend to please? In short: people building apps
+          that are aiming for a "straightforward" design. RFUI's components are
+          built with that audience in mind.
+        </p>
+        <p>
+          If you are aiming for a design that is moreso "innovative", "unique"
+          or "funky", RFUI probably isn't for you.
+        </p>
+        <p>
+          Similarly, if you want to extend and customize these components a lot,
+          RFUI also probably isn't for you. But if you only anticipate a
+          small-to-medium need for customization, RFUI should be totally fine.
+          Most apps probably fall under the latter umbrella.
+        </p>
+      </Text>
+
+      <H2>Atomic Design</H2>
+      <Text>
+        <p>
+          RFUI follows the{" "}
+          <Link href="https://atomicdesign.bradfrost.com/chapter-2/">
+            Atomic Design Methodlogy
+          </Link>{" "}
+          by breaking components into "atoms", "molecules" and "organisms".
+        </p>
+        <img
+          src="https://atomicdesign.bradfrost.com/images/content/atomic-design-process.png"
+          alt="Atomic Design visualization"
+          class="max-w-full w-96"
+        />
+        <p class="text-sm italic w-96 max-w-full leading-relaxed">
+          Right now I don't have plans to get into templates or pages. If I ever
+          do it'll probably be pretty far down the road.
+        </p>
+      </Text>
+
+      <H2>UX</H2>
+      <Text>
+        <p>
+          Not everyone is a UX expert. A lot of times design is done by a
+          product manager or a developer. And even when something is designed by
+          a UX designer, mistakes can still be made.
+        </p>
+        <p>
+          RFUI tries to nudge － and sometimes <em>shove</em>{" "}
+          － you in the direction of avoiding UX mistakes. Some examples:
+        </p>
+        <UL>
+          <li>
+            The <InlineCode>Text</InlineCode>{" "}
+            component uses the Tailwind class of{" "}
+            <InlineCode>max-w-prose</InlineCode>, which ensures a{" "}
+            <Link href="https://practicaltypography.com/line-length.html">
+              comfortable line length
+            </Link>{" "}
+            is used.
+          </li>
+          <li>
+            It is{" "}
+            <Link href="https://www.nngroup.com/articles/new-browser-windows-and-tabs/">
+              generally inadvisible
+            </Link>{" "}
+            to have links open in a new tab. So then, RFUI's{" "}
+            <InlineCode>Link</InlineCode>{" "}
+            component nudges you away from doing so by prefixing the attribute
+            with an underscore:{" "}
+            <InlineCode>_newTab</InlineCode>. It also elaborates and provides a
+            reference in the JSDoc documentation.
+          </li>
+          <li>
+            It is{" "}
+            <Link href="https://ux.stackexchange.com/q/56023/39046">
+              recommended
+            </Link>{" "}
+            to place icons to the left of button content rather than the right.
+            To nudge you in this direction, the <InlineCode>Button</InlineCode>
+            {" "}
+            component accepts parameters of <InlineCode>icon</InlineCode> and
+            {" "}
+            <InlineCode>_rightIcon</InlineCode>. It also explains the
+            recommendation and links to a source via JSDoc.
+          </li>
+        </UL>
+      </Text>
+
       <H2>Accessibility</H2>
       <Text>
         <p>
@@ -82,26 +177,6 @@ const SubmitButton = () => {
             score of 100 for accessibility.
           </li>
         </UL>
-      </Text>
-
-      <H2>Atomic Design</H2>
-      <Text>
-        <p>
-          RFUI follows the{" "}
-          <Link href="https://atomicdesign.bradfrost.com/chapter-2/">
-            Atomic Design Methodlogy
-          </Link>{" "}
-          by breaking components into "atoms", "molecules" and "organisms".
-        </p>
-        <img
-          src="https://atomicdesign.bradfrost.com/images/content/atomic-design-process.png"
-          alt="Atomic Design visualization"
-          class="max-w-full w-96"
-        />
-        <p class="text-sm italic w-96 max-w-full leading-relaxed">
-          Right now I don't have plans to get into templates or pages. If I ever
-          do it'll probably be pretty far down the road.
-        </p>
       </Text>
     </div>
   );

@@ -17,6 +17,7 @@ import * as $atoms_highlight from "./routes/atoms/highlight.tsx";
 import * as $atoms_inline_code from "./routes/atoms/inline-code.tsx";
 import * as $atoms_input from "./routes/atoms/input.tsx";
 import * as $atoms_link from "./routes/atoms/link.tsx";
+import * as $atoms_ol from "./routes/atoms/ol.tsx";
 import * as $atoms_radio_button from "./routes/atoms/radio-button.tsx";
 import * as $atoms_select from "./routes/atoms/select.tsx";
 import * as $atoms_table from "./routes/atoms/table.tsx";
@@ -62,6 +63,7 @@ const manifest = {
     "./routes/atoms/inline-code.tsx": $atoms_inline_code,
     "./routes/atoms/input.tsx": $atoms_input,
     "./routes/atoms/link.tsx": $atoms_link,
+    "./routes/atoms/ol.tsx": $atoms_ol,
     "./routes/atoms/radio-button.tsx": $atoms_radio_button,
     "./routes/atoms/select.tsx": $atoms_select,
     "./routes/atoms/table.tsx": $atoms_table,

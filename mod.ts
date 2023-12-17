@@ -20,6 +20,8 @@ export { Input } from "./components/atoms/input.tsx";
 export type { InputType } from "./components/atoms/input.tsx";
 export { Link } from "./components/atoms/link.tsx";
 export type { LinkType } from "./components/atoms/link.tsx";
+export { OL } from "./components/atoms/ol.tsx";
+export type { OLType } from "./components/atoms/ol.tsx";
 export { RadioButton } from "./components/atoms/radio-button.tsx";
 export type { RadioButtonType } from "./components/atoms/radio-button.tsx";
 export { Select } from "./components/atoms/select.tsx";

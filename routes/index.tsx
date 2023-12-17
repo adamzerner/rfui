@@ -30,6 +30,7 @@ const LeftNav = () => {
           <Link underline="hover" href="/atoms/inline-code">InlineCode</Link>
           <Link underline="hover" href="/atoms/input">Input</Link>
           <Link underline="hover" href="/atoms/link">Link</Link>
+          <Link underline="hover" href="/atoms/ol">OL</Link>
           <Link underline="hover" href="/atoms/radio-button">
             RadioButton
           </Link>
@@ -98,6 +99,7 @@ const Main = () => {
           <Item name="InlineCode" href="/atoms/inline-code" />
           <Item name="Input" href="/atoms/input" />
           <Item name="Link" href="/atoms/link" />
+          <Item name="OL" href="/atoms/ol" />
           <Item name="RadioButton" href="/atoms/radio-button" />
           <Item name="Select" href="/atoms/select" />
           <Item name="Table" href="/atoms/table" />

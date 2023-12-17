@@ -4,6 +4,7 @@ import { H1 } from "@/components/atoms/h1.tsx";
 import { H2 } from "@/components/atoms/h2.tsx";
 import { InlineCode } from "@/components/atoms/inline-code.tsx";
 import { Link } from "@/components/atoms/link.tsx";
+import { OL } from "@/components/atoms/ol.tsx";
 import { Text } from "@/components/atoms/text.tsx";
 
 export default () => {
@@ -51,7 +52,7 @@ export default () => {
           <p class="mb-2">
             Here's a list:
           </p>
-          <ol class="list-decimal list-inside flex flex-col gap-1">
+          <OL>
             <li>Opinionated</li>
             <li>Scale down</li>
             <li>Pit of success</li>
@@ -60,7 +61,7 @@ export default () => {
             <li>Developer experience</li>
             <li>Use the platform</li>
             <li>Avoid dependencies</li>
-          </ol>
+          </OL>
         </div>
       </Text>
       <H2>Opinionated</H2>

@@ -1,11 +1,12 @@
 import { CodeBlock } from "@/components/atoms/code-block.tsx";
+import { H1 } from "@/components/atoms/h1.tsx";
 import { Link } from "@/components/atoms/link.tsx";
 import { Stack } from "@/components/helpers/stack.tsx";
 
 export default () => {
   return (
     <div class="max-w-prose text-lg">
-      <h1 class="text-4xl text-neutral-700 mt-9 mb-7">About</h1>
+      <H1>About</H1>
       <Stack class="gap-4 leading-relaxed">
         <p>
           Like{"  "}

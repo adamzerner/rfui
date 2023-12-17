@@ -11,6 +11,8 @@ import * as $atoms_blockquote from "./routes/atoms/blockquote.tsx";
 import * as $atoms_button from "./routes/atoms/button.tsx";
 import * as $atoms_checkbox from "./routes/atoms/checkbox.tsx";
 import * as $atoms_code_block from "./routes/atoms/code-block.tsx";
+import * as $atoms_h1 from "./routes/atoms/h1.tsx";
+import * as $atoms_h2 from "./routes/atoms/h2.tsx";
 import * as $atoms_highlight from "./routes/atoms/highlight.tsx";
 import * as $atoms_inline_code from "./routes/atoms/inline-code.tsx";
 import * as $atoms_input from "./routes/atoms/input.tsx";
@@ -54,6 +56,8 @@ const manifest = {
     "./routes/atoms/button.tsx": $atoms_button,
     "./routes/atoms/checkbox.tsx": $atoms_checkbox,
     "./routes/atoms/code-block.tsx": $atoms_code_block,
+    "./routes/atoms/h1.tsx": $atoms_h1,
+    "./routes/atoms/h2.tsx": $atoms_h2,
     "./routes/atoms/highlight.tsx": $atoms_highlight,
     "./routes/atoms/inline-code.tsx": $atoms_inline_code,
     "./routes/atoms/input.tsx": $atoms_input,

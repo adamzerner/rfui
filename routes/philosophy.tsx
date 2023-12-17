@@ -1,5 +1,7 @@
 import { Blockquote } from "@/components/atoms/blockquote.tsx";
 import { CodeBlock } from "@/components/atoms/code-block.tsx";
+import { H1 } from "@/components/atoms/h1.tsx";
+import { H2 } from "@/components/atoms/h2.tsx";
 import { InlineCode } from "@/components/atoms/inline-code.tsx";
 import { Link } from "@/components/atoms/link.tsx";
 import { Text } from "@/components/atoms/text.tsx";
@@ -7,7 +9,7 @@ import { Text } from "@/components/atoms/text.tsx";
 export default () => {
   return (
     <div>
-      <h1 class="text-4xl text-neutral-700 mt-9 mb-7">Philosophy</h1>
+      <H1>Philosophy</H1>
       <Text>
         <p>
           Before working on RFUI, I spent a bunch of time looking into existing
@@ -61,7 +63,7 @@ export default () => {
           </ol>
         </div>
       </Text>
-      <h2 class="text-2xl text-neutral-700 mt-8 mb-5">Opinionated</h2>
+      <H2>Opinionated</H2>
       <Text>
         <p>If you try to please everyone you end up pleasing no one.</p>
         <p>
@@ -70,7 +72,7 @@ export default () => {
           share certain opinions.
         </p>
       </Text>
-      <h2 class="text-2xl text-neutral-700 mt-8 mb-5">Scale down</h2>
+      <H2>Scale down</H2>
       <Text>
         <p>
           I recall someone from the Deno team writing or speaking about this
@@ -127,7 +129,7 @@ export default () => {
           smaller projects. I want RFUI to scale down.
         </p>
       </Text>
-      <h2 class="text-2xl text-neutral-700 mt-8 mb-5">Pit of success</h2>
+      <H2>Pit of success</H2>
       <Text>
         <p>
           One of my favorite blog posts is{" "}
@@ -185,7 +187,7 @@ export default () => {
           "rounded" various components are.
         </p>
       </Text>
-      <h2 class="text-2xl text-neutral-700 mt-8 mb-5">Pre-built components</h2>
+      <H2>Pre-built components</H2>
       <Text>
         <p>
           There are some component libraries that I think I'd be comfortable
@@ -213,7 +215,7 @@ export default () => {
           consuming and not something I want to deal with.
         </p>
       </Text>
-      <h2 class="text-2xl text-neutral-700 mt-8 mb-5">Pretty</h2>
+      <H2>Pretty</H2>
       <Text>
         <p>
           On the other hand, there are libraries that have all of these
@@ -228,7 +230,7 @@ export default () => {
         </p>
         <p>I want the components in my library to genuinely look good.</p>
       </Text>
-      <h2 class="text-2xl text-neutral-700 mt-8 mb-5">Developer experience</h2>
+      <H2>Developer experience</H2>
       <Text>
         <p>
           Perhaps it's tautological, but I want to provide a good developer
@@ -291,7 +293,7 @@ export default () => {
           </Link>.
         </p>
       </Text>
-      <h2 class="text-2xl text-neutral-700 mt-8 mb-5">Use the platform</h2>
+      <H2>Use the platform</H2>
       <Text>
         <p>
           I've been noticing a trend recently of so-called{" "}
@@ -346,7 +348,7 @@ export default () => {
           exchange for the component being slightly less pretty.
         </p>
       </Text>
-      <h2 class="text-2xl text-neutral-700 mt-8 mb-5">Avoid dependencies</h2>
+      <H2>Avoid dependencies</H2>
       <Text>
         <p>
           The more time I spend as a software engineer, the more I find

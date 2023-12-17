@@ -22,7 +22,7 @@ import * as $atoms_select from "./routes/atoms/select.tsx";
 import * as $atoms_table from "./routes/atoms/table.tsx";
 import * as $atoms_text from "./routes/atoms/text.tsx";
 import * as $atoms_textarea from "./routes/atoms/textarea.tsx";
-import * as $atoms_unordered_list from "./routes/atoms/unordered-list.tsx";
+import * as $atoms_ul from "./routes/atoms/ul.tsx";
 import * as $faq from "./routes/faq.tsx";
 import * as $getting_started from "./routes/getting-started.tsx";
 import * as $helpers_container from "./routes/helpers/container.tsx";
@@ -67,7 +67,7 @@ const manifest = {
     "./routes/atoms/table.tsx": $atoms_table,
     "./routes/atoms/text.tsx": $atoms_text,
     "./routes/atoms/textarea.tsx": $atoms_textarea,
-    "./routes/atoms/unordered-list.tsx": $atoms_unordered_list,
+    "./routes/atoms/ul.tsx": $atoms_ul,
     "./routes/faq.tsx": $faq,
     "./routes/getting-started.tsx": $getting_started,
     "./routes/helpers/container.tsx": $helpers_container,

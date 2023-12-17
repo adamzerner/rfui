@@ -1,6 +1,6 @@
 import { ComponentChild, JSX } from "preact";
 
-export type UnorderedListType = {
+export type ULType = {
   bulletType?: "bullet" | "check" | "arrow" | "triangle";
   customBulletType?: string;
   bulletLocation?: "inside" | "outside";
@@ -8,24 +8,24 @@ export type UnorderedListType = {
 } & JSX.HTMLAttributes<HTMLUListElement>;
 
 /** *
- * @function UnorderedList
+ * @function UL
  *
  * Useful blog post: https://css-tricks.com/list-style-recipes/
  *
  * @example
- * <UnorderedList>
+ * <UL>
  *   <li>One</li>
  *   <li>Two</li>
  *   <li>Three</li>
- * </UnorderedList>
+ * </UL>
  */
-export const UnorderedList = (
+export const UL = (
   {
     bulletType = "bullet",
     bulletLocation = "inside",
     children,
     ...rest
-  }: UnorderedListType,
+  }: ULType,
 ) => {
   const { class: restClass, ...restWithoutClass } = rest;
   let className = "rfui-unordered-list flex flex-col gap-2";

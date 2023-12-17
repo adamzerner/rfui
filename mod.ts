@@ -30,8 +30,8 @@ export { Text } from "./components/atoms/text.tsx";
 export type { TextType } from "./components/atoms/text.tsx";
 export { Textarea } from "./components/atoms/textarea.tsx";
 export type { TextareaType } from "./components/atoms/textarea.tsx";
-export { UnorderedList } from "./components/atoms/unordered-list.tsx";
-export type { UnorderedListType } from "./components/atoms/unordered-list.tsx";
+export { UL } from "./components/atoms/ul.tsx";
+export type { ULType } from "./components/atoms/ul.tsx";
 
 export {
   Card,

@@ -21,11 +21,28 @@ export default () => {
         </UL>
       </Examples>
       <Examples title="Outside">
-        <UL bulletLocation="outside">
-          <li>One</li>
-          <li>Two</li>
-          <li>Three</li>
-        </UL>
+        <Stack class="gap-5">
+          <UL bulletLocation="outside" bulletType="bullet">
+            <li>One</li>
+            <li>Two</li>
+            <li>Three</li>
+          </UL>
+          <UL bulletLocation="outside" bulletType="check">
+            <li>One</li>
+            <li>Two</li>
+            <li>Three</li>
+          </UL>
+          <UL bulletLocation="outside" bulletType="arrow">
+            <li>One</li>
+            <li>Two</li>
+            <li>Three</li>
+          </UL>
+          <UL bulletLocation="outside" bulletType="triangle">
+            <li>One</li>
+            <li>Two</li>
+            <li>Three</li>
+          </UL>
+        </Stack>
       </Examples>
       <Examples title="Bullet type">
         <Stack class="gap-5">
@@ -100,7 +117,7 @@ export default () => {
         </Stack>
       </Examples>
       <Examples title="Custom">
-        <UL class="list-none">
+        <UL bulletType="none">
           <li>
             <Flex class="gap-2">
               <span>😎</span>

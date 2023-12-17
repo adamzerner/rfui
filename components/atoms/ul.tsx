@@ -1,8 +1,7 @@
 import { ComponentChild, JSX } from "preact";
 
 export type ULType = {
-  bulletType?: "bullet" | "check" | "arrow" | "triangle";
-  customBulletType?: string;
+  bulletType?: "bullet" | "check" | "arrow" | "triangle" | "none";
   bulletLocation?: "inside" | "outside";
   children: ComponentChild;
 } & JSX.HTMLAttributes<HTMLUListElement>;
@@ -28,19 +27,24 @@ export const UL = (
   }: ULType,
 ) => {
   const { class: restClass, ...restWithoutClass } = rest;
-  let className = "rfui-unordered-list flex flex-col gap-2";
+  let className = "rfui-unordered-list flex flex-col gap-2 list-outside";
 
   const bulletTypeMap = {
     bullet: "list-disc",
     check: "list-check",
     arrow: "list-arrow",
     triangle: "list-triangle",
+    none: "list-none",
   };
   className += ` ${bulletTypeMap[bulletType]}`;
 
-  className += ` ${
-    bulletLocation === "inside" ? "list-inside" : "list-outside"
-  }`;
+  if (bulletLocation === "inside" && bulletType === "bullet") {
+    className += " ml-4";
+  }
+
+  if (bulletLocation === "outside" && bulletType !== "bullet") {
+    className += " -ml-4";
+  }
 
   if (restClass) {
     className += ` ${restClass}`;

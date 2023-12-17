@@ -38,7 +38,12 @@ const SubmitButton = () => {
       <H2>Philosophy</H2>
       <Text>
         <p>
-          RFUI tries to abide by the following principles. See the{" "}
+          In short, the idea is to be pretty minimal and to place a very strong
+          focus on developer experience.
+        </p>
+        <p>
+          To elaborate a bit, RFUI tries to abide by the following principles.
+          See the{" "}
           <Link href="/philosophy">
             philosophy page
           </Link>{" "}

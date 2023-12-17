@@ -18,6 +18,7 @@ export default ({ Component, route }: PageProps) => {
         <Component />
       </Container>
       <TheFooter />
+      <div class="background-anchor pt-10"></div>
     </>
   );
 };

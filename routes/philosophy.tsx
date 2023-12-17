@@ -64,6 +64,7 @@ export default () => {
           </OL>
         </div>
       </Text>
+
       <H2>Opinionated</H2>
       <Text>
         <p>If you try to please everyone you end up pleasing no one.</p>
@@ -73,6 +74,7 @@ export default () => {
           share certain opinions.
         </p>
       </Text>
+
       <H2>Scale down</H2>
       <Text>
         <p>
@@ -130,6 +132,7 @@ export default () => {
           smaller projects. I want RFUI to scale down.
         </p>
       </Text>
+
       <H2>Pit of success</H2>
       <Text>
         <p>
@@ -188,6 +191,7 @@ export default () => {
           "rounded" various components are.
         </p>
       </Text>
+
       <H2>Pre-built components</H2>
       <Text>
         <p>
@@ -216,6 +220,7 @@ export default () => {
           consuming and not something I want to deal with.
         </p>
       </Text>
+
       <H2>Pretty</H2>
       <Text>
         <p>
@@ -231,6 +236,7 @@ export default () => {
         </p>
         <p>I want the components in my library to genuinely look good.</p>
       </Text>
+
       <H2>Developer experience</H2>
       <Text>
         <p>
@@ -294,6 +300,7 @@ export default () => {
           </Link>.
         </p>
       </Text>
+
       <H2>Use the platform</H2>
       <Text>
         <p>
@@ -349,6 +356,7 @@ export default () => {
           exchange for the component being slightly less pretty.
         </p>
       </Text>
+
       <H2>Avoid dependencies</H2>
       <Text>
         <p>

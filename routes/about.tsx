@@ -2,6 +2,7 @@ import { CodeBlock } from "@/components/atoms/code-block.tsx";
 import { H1 } from "@/components/atoms/h1.tsx";
 import { H2 } from "@/components/atoms/h2.tsx";
 import { Link } from "@/components/atoms/link.tsx";
+import { OL } from "@/components/atoms/ol.tsx";
 import { Text } from "@/components/atoms/text.tsx";
 import { UL } from "@/components/atoms/ul.tsx";
 
@@ -11,14 +12,14 @@ export default () => {
       <H1>About</H1>
       <Text>
         <p>
-          Like{"  "}
+          Similar{"  "}
           <Link href="https://react-bootstrap.github.io/">
             React Bootstrap
           </Link>{" "}
           and{" "}
           <Link href="https://chakra-ui.com/">Chakra UI</Link>, RFUI is a
-          component library for React and Preact apps. It lets you do something
-          like this:
+          component library for React and Preact apps. It lets you do stuff like
+          this:
         </p>
         <CodeBlock>
           {`import { Button } from "rfui";
@@ -32,6 +33,27 @@ const SubmitButton = () => {
 };
 `}
         </CodeBlock>
+      </Text>
+
+      <H2>Philosophy</H2>
+      <Text>
+        <p>
+          RFUI tries to abide by the following principles. See the{" "}
+          <Link href="/philosophy">
+            philosophy page
+          </Link>{" "}
+          for more information.
+        </p>
+        <OL>
+          <li>Opinionated</li>
+          <li>Scale down</li>
+          <li>Pit of success</li>
+          <li>Pre-built components</li>
+          <li>Pretty</li>
+          <li>Developer experience</li>
+          <li>Use the platform</li>
+          <li>Avoid dependencies</li>
+        </OL>
       </Text>
 
       <H2>Accessibility</H2>

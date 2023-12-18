@@ -4,6 +4,7 @@ import { H2 } from "@/components/atoms/h2.tsx";
 import { Link } from "@/components/atoms/link.tsx";
 import { Text } from "@/components/atoms/text.tsx";
 import { Flex } from "@/components/helpers/flex.tsx";
+import { Stack } from "@/components/helpers/stack.tsx";
 import { Card } from "@/components/molecules/card.tsx";
 import { LeftNav } from "@/routes/index.tsx";
 import { JSX } from "preact";
@@ -29,7 +30,7 @@ export const ComponentDocsPage = (
         <Header componentName={componentName} sourceCodeUrl={sourceCodeUrl} />
         <Sections sections={sections} />
       </main>
-      <div>On this page</div>
+      <OnThisPage sectionTitles={sections.map((s) => s.title)} />
     </Flex>
   );
 };
@@ -65,7 +66,7 @@ const Sections = (
     <>
       {sections.map((section) => (
         <section>
-          <H2>{section.title}</H2>
+          <H2 id={section.title}>{section.title}</H2>
           {section.description &&
             (
               <Text size="sm" class="!leading-loose mb-6">
@@ -77,5 +78,20 @@ const Sections = (
         </section>
       ))}
     </>
+  );
+};
+
+const OnThisPage = ({ sectionTitles }: { sectionTitles: string[] }) => {
+  return (
+    <nav>
+      <div class="font-bold text-neutral-700 mb-4">On this page</div>
+      <Stack class="gap-2">
+        {sectionTitles.map((sectionTitle) => (
+          <Link underline="hover" href={`#${sectionTitle}`}>
+            {sectionTitle}
+          </Link>
+        ))}
+      </Stack>
+    </nav>
   );
 };

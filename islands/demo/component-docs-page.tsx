@@ -66,7 +66,7 @@ const Sections = (
     <>
       {sections.map((section) => (
         <section>
-          <H2 id={section.title}>{section.title}</H2>
+          <H2 id={section.title.toLowerCase()}>{section.title}</H2>
           {section.description &&
             (
               <Text size="sm" class="!leading-loose mb-6">
@@ -87,7 +87,7 @@ const OnThisPage = ({ sectionTitles }: { sectionTitles: string[] }) => {
       <div class="font-bold text-neutral-700 mb-4">On this page</div>
       <Stack class="gap-2">
         {sectionTitles.map((sectionTitle) => (
-          <Link underline="hover" href={`#${sectionTitle}`}>
+          <Link underline="hover" href={`#${sectionTitle.toLowerCase()}`}>
             {sectionTitle}
           </Link>
         ))}

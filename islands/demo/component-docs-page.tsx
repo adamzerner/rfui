@@ -66,7 +66,11 @@ const Sections = (
     <>
       {sections.map((section) => (
         <section>
-          <H2 id={section.title.toLowerCase()}>{section.title}</H2>
+          <H2 id={section.title.toLowerCase()}>
+            <Link href={`#${section.title.toLowerCase()}`} underline="hover">
+              {section.title}
+            </Link>
+          </H2>
           {section.description &&
             (
               <Text size="sm" class="!leading-loose mb-6">

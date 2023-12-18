@@ -24,7 +24,7 @@ export const ComponentDocsPage = (
   { componentName, sourceCodeUrl, sections }: ComponentDocsPageType,
 ) => {
   return (
-    <Flex class="mt-9 gap-11">
+    <Flex class="mt-9 gap-11 max-w-full">
       <LeftNav />
       <main class="flex-1 max-w-full">
         <Header componentName={componentName} sourceCodeUrl={sourceCodeUrl} />

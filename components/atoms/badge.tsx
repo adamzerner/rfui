@@ -7,8 +7,10 @@ export type BadgeType = {
   children: ComponentChild;
 } & Omit<JSX.HTMLAttributes<HTMLDivElement>, "size">;
 
-/** *
+/**
  * @function Badge
+ *
+ * @see {@link https://rfui.deno.dev/atoms/badge}
  *
  * @example
  * <Badge>Example</Badge>
@@ -23,7 +25,7 @@ export const Badge = (
   }: BadgeType,
 ) => {
   const { class: restClass, ...restWithoutClass } = rest;
-  let className = "";
+  let className = "inline";
 
   className += " " + (() => {
     switch (type) {

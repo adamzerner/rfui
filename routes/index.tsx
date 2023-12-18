@@ -13,7 +13,7 @@ export default () => {
   );
 };
 
-const LeftNav = () => {
+export const LeftNav = () => {
   return (
     <Stack class="gap-8 hidden lg:flex">
       <div>
@@ -132,7 +132,7 @@ const Main = () => {
   );
 };
 
-const Category = ({ children }: { children: ComponentChild }) => {
+export const Category = ({ children }: { children: ComponentChild }) => {
   return (
     <div class="flex-none w-10 text-5xl lg:text-3xl mr-8 mb-6 lg:mb-auto">
       {children}

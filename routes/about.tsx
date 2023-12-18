@@ -13,7 +13,7 @@ export default () => {
       <H1>About</H1>
       <Text>
         <p>
-          Similar{"  "}
+          Similar to{"  "}
           <Link href="https://react-bootstrap.github.io/">
             React Bootstrap
           </Link>{" "}

@@ -26,37 +26,56 @@ export const ComponentDocsPage = (
     <Flex class="mt-9 gap-11">
       <LeftNav />
       <main class="flex-1">
-        <section>
-          <H1 class="!mt-0">{componentName}</H1>
-          <Text>
-            <Link
-              href={sourceCodeUrl}
-              _includeNewTabIcon
-              _newTab
-              class="inline"
-            >
-              Source code
-            </Link>
-          </Text>
-          <CodeBlock class="mt-6">
-            {`import { ${componentName} } from "rfui";`}
-          </CodeBlock>
-        </section>
-        {sections.map((section) => (
-          <section>
-            <H2>{section.title}</H2>
-            {section.description &&
-              (
-                <Text size="sm" class="!leading-loose mb-6">
-                  {section.description}
-                </Text>
-              )}
-            <Card>{section.example()}</Card>
-            {section.exampleCode()}
-          </section>
-        ))}
+        <Header componentName={componentName} sourceCodeUrl={sourceCodeUrl} />
+        <Sections sections={sections} />
       </main>
       <div>On this page</div>
     </Flex>
+  );
+};
+
+const Header = ({ componentName, sourceCodeUrl }: {
+  componentName: ComponentDocsPageType["componentName"];
+  sourceCodeUrl: ComponentDocsPageType["sourceCodeUrl"];
+}) => {
+  return (
+    <header>
+      <H1 class="!mt-0">{componentName}</H1>
+      <Text>
+        <Link
+          href={sourceCodeUrl}
+          _includeNewTabIcon
+          _newTab
+          class="inline"
+        >
+          Source code
+        </Link>
+      </Text>
+      <CodeBlock class="mt-6">
+        {`import { ${componentName} } from "rfui";`}
+      </CodeBlock>
+    </header>
+  );
+};
+
+const Sections = (
+  { sections }: { sections: ComponentDocsPageType["sections"] },
+) => {
+  return (
+    <>
+      {sections.map((section) => (
+        <section>
+          <H2>{section.title}</H2>
+          {section.description &&
+            (
+              <Text size="sm" class="!leading-loose mb-6">
+                {section.description}
+              </Text>
+            )}
+          <Card>{section.example()}</Card>
+          {section.exampleCode()}
+        </section>
+      ))}
+    </>
   );
 };

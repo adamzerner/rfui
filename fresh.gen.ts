@@ -38,6 +38,7 @@ import * as $molecules_navbar from "./routes/molecules/navbar.tsx";
 import * as $molecules_password_input from "./routes/molecules/password-input.tsx";
 import * as $molecules_stepper from "./routes/molecules/stepper.tsx";
 import * as $philosophy from "./routes/philosophy.tsx";
+import * as $demo_component_docs_page from "./islands/demo/component-docs-page.tsx";
 import * as $demo_example from "./islands/demo/example.tsx";
 import * as $demo_examples from "./islands/demo/examples.tsx";
 import * as $molecules_alert_1 from "./islands/molecules/alert.tsx";
@@ -86,6 +87,7 @@ const manifest = {
     "./routes/philosophy.tsx": $philosophy,
   },
   islands: {
+    "./islands/demo/component-docs-page.tsx": $demo_component_docs_page,
     "./islands/demo/example.tsx": $demo_example,
     "./islands/demo/examples.tsx": $demo_examples,
     "./islands/molecules/alert.tsx": $molecules_alert_1,

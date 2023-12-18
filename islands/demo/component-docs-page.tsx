@@ -26,7 +26,7 @@ export const ComponentDocsPage = (
   return (
     <Flex class="mt-9 gap-11">
       <LeftNav />
-      <main class="flex-1">
+      <main class="flex-1 max-w-full">
         <Header componentName={componentName} sourceCodeUrl={sourceCodeUrl} />
         <Sections sections={sections} />
       </main>
@@ -87,7 +87,7 @@ const Sections = (
 
 const OnThisPage = ({ sectionTitles }: { sectionTitles: string[] }) => {
   return (
-    <nav>
+    <nav class="hidden lg:block">
       <div class="font-bold text-neutral-700 mb-4">On this page</div>
       <Stack class="gap-2">
         {sectionTitles.map((sectionTitle) => (

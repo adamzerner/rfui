@@ -71,9 +71,9 @@ const SubmitButton = () => {
           pleasing no one.
         </p>
         <p>
-          So then, who do I intend to please? In short: people building apps
-          that are aiming for a "straightforward" design. RFUI's components are
-          built with that audience in mind.
+          So then, who do I intend to please? In short: people building apps who
+          are aiming for a "straightforward" design. RFUI's components are built
+          with that audience in mind.
         </p>
         <p>
           If you are aiming for a design that is moreso "innovative", "unique"

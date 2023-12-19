@@ -51,25 +51,27 @@ const Header = ({ componentName, sourceCodeUrl, example }: {
   example: () => JSX.Element;
 }) => {
   return (
-    <header>
-      <H1 class="!mt-0 !mb-5">{componentName}</H1>
-      <Card width="full" padding="lg" class="mb-5">
-        {example()}
-      </Card>
-      <Text>
-        <Link
-          href={sourceCodeUrl}
-          _includeNewTabIcon
-          _newTab
-          class="inline"
-        >
-          Source code
-        </Link>
-      </Text>
-      <CodeBlock class="mt-5">
-        {`import { ${componentName} } from "rfui";`}
-      </CodeBlock>
-    </header>
+    <nav class="mb-9">
+      <H1 class="!mt-0">{componentName}</H1>
+      <Stack class="gap-5">
+        <Text>
+          <Link
+            href={sourceCodeUrl}
+            _includeNewTabIcon
+            _newTab
+            class="inline w-fit"
+          >
+            Source code
+          </Link>
+        </Text>
+        <Card width="full" padding="lg">
+          {example()}
+        </Card>
+        <CodeBlock>
+          {`import { ${componentName} } from "rfui";`}
+        </CodeBlock>
+      </Stack>
+    </nav>
   );
 };
 

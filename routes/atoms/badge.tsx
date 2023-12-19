@@ -190,12 +190,34 @@ export default () => {
       </CodeBlock>
     ),
   }];
+  const props = [{
+    name: "type",
+    type: '"neutral" | "info" | "success" | "warning" | "danger"',
+    default: '"neutral"',
+    notes: "-",
+  }, {
+    name: "size",
+    type: '"sm" | "md" | "lg"',
+    default: '"md"',
+    notes: "-",
+  }, {
+    name: "rounded",
+    type: '"square" | "sm" | "lg" | "full"',
+    default: '"sm"',
+    notes: "-",
+  }, {
+    name: "children",
+    type: "ComponentChild",
+    default: "-",
+    notes: "-",
+  }];
 
   return (
     <ComponentDocsPage
       componentName="Badge"
       sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/atoms/badge.tsx"
       sections={sections}
+      props={props}
     />
   );
 };

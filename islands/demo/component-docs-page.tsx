@@ -1,13 +1,24 @@
 import { CodeBlock } from "@/components/atoms/code-block.tsx";
 import { H1 } from "@/components/atoms/h1.tsx";
 import { H2 } from "@/components/atoms/h2.tsx";
+import { InlineCode } from "@/components/atoms/inline-code.tsx";
 import { Link } from "@/components/atoms/link.tsx";
+import { Table } from "@/components/atoms/table.tsx";
 import { Text } from "@/components/atoms/text.tsx";
 import { Flex } from "@/components/helpers/flex.tsx";
 import { Stack } from "@/components/helpers/stack.tsx";
 import { Card } from "@/components/molecules/card.tsx";
 import { LeftNav } from "@/routes/index.tsx";
 import { JSX } from "preact";
+
+/*
+
+TODO:
+- Link to corresponding section
+- Reconsider table
+- Deal with text wrapping
+
+*/
 
 type ComponentDocsPageType = {
   componentName: string;
@@ -18,10 +29,16 @@ type ComponentDocsPageType = {
     example: () => JSX.Element;
     exampleCode: () => JSX.Element;
   }[];
+  props: {
+    name: string;
+    type: string;
+    default: string;
+    notes: string;
+  }[];
 };
 
 export const ComponentDocsPage = (
-  { componentName, sourceCodeUrl, sections }: ComponentDocsPageType,
+  { componentName, sourceCodeUrl, sections, props }: ComponentDocsPageType,
 ) => {
   const basicExample = sections.find((s) => s.title === "Basic")?.example;
 
@@ -39,6 +56,7 @@ export const ComponentDocsPage = (
           example={basicExample}
         />
         <Sections sections={sections} />
+        <Props props={props} />
       </main>
       <OnThisPage sectionTitles={sections.map((s) => s.title)} />
     </Flex>
@@ -113,5 +131,39 @@ const OnThisPage = ({ sectionTitles }: { sectionTitles: string[] }) => {
         ))}
       </Stack>
     </nav>
+  );
+};
+
+const Props = ({ props }: { props: ComponentDocsPageType["props"] }) => {
+  return (
+    <section class="mt-10">
+      <H1 id="props">
+        <Link href="#props" underline="hover">Props</Link>
+      </H1>
+      <Table class="w-full">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Default</th>
+          </tr>
+        </thead>
+        <tbody>
+          {props.map((prop) => (
+            <tr>
+              <td>
+                {prop.name}
+              </td>
+              <td>
+                <InlineCode>{prop.type}</InlineCode>
+              </td>
+              <td>
+                <InlineCode>{prop.default}</InlineCode>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </Table>
+    </section>
   );
 };

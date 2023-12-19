@@ -7,6 +7,8 @@ export type ContainerType =
 /** *
  * @function Container
  *
+ * @see {@link https://rfui.deno.dev/helpers/container}
+ *
  * @example
  * <Container>
  *   ...

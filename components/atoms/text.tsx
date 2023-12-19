@@ -9,6 +9,8 @@ export type TextType = {
 /** *
  * @function Text
  *
+ * @see {@link https://rfui.deno.dev/atoms/text}
+ *
  * @example
  * <Text>
  *   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Volutpat odio facilisis mauris sit.</p>

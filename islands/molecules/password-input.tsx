@@ -11,6 +11,8 @@ export type PasswordInputType = {
 /** *
  * @function PasswordInput
  *
+ * @see {@link https://rfui.deno.dev/molecules/password-input}
+ *
  * @param defaultVisibility `"hidden"` or `"shown"`. Consider the factors at play here, including:
  * 1. Usability: Seeing * as you type instead of characters like "a" and "b" can hurt usability.
  * 2. Actual security: In public places, ***** can prevent malicious onlookers from stealing your password.

@@ -10,6 +10,8 @@ export type SelectType = {
 /** *
  * @function Select
  *
+ * @see {@link https://rfui.deno.dev/atoms/select}
+ *
  * Doesn't really have readonly: https://stackoverflow.com/q/368813/1927876
  *
  * @example

@@ -7,6 +7,8 @@ export type FlexType =
 /** *
  * @function Flex
  *
+ * @see {@link https://rfui.deno.dev/helpers/flex}
+ *
  * @example
  * <Flex>
  *   <div>left</div>

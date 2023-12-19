@@ -21,6 +21,8 @@ TODO:
 /** *
  * @function Card
  *
+ * @see {@link https://rfui.deno.dev/molecules/card}
+ *
  * @example
  * <Card></Card>
  */

@@ -8,6 +8,8 @@ export type OLType = {
 /** *
  * @function OL
  *
+ * @see {@link https://rfui.deno.dev/atoms/ol}
+ *
  * @example
  * <OL>
  *   <li>First</li>

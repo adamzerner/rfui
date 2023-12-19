@@ -14,6 +14,8 @@ export type TableType = {
 /** *
  * @function Table
  *
+ * @see {@link https://rfui.deno.dev/atoms/table}
+ *
  * Tailwind classes applied to what you pass into `Table` as `children` probably won't have a high enough precedence to be applied. To force them to be applied, utilize `!important` (https://tailwindcss.com/docs/configuration#important) by doing eg. `!text-right` instead of just `text-right`.
  *
  * Content is left-aligned by default. However, you'll probably want to right-align numerical content. See https://ux.stackexchange.com/q/24066/39046.

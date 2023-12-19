@@ -9,6 +9,8 @@ export type InputType = {
 /** *
  * @function Input
  *
+ * @see {@link https://rfui.deno.dev/atoms/input}
+ *
  * @example
  * <Input type="text" />
  */

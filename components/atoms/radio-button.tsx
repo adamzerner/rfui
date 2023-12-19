@@ -8,6 +8,8 @@ export type RadioButtonType = {
 /** *
  * @function RadioButton
  *
+ * @see {@link https://rfui.deno.dev/atoms/radio-button}
+ *
  * Inspiration: https://css-tricks.com/zero-trickery-custom-radios-and-checkboxes/
  *
  * Readonly isn't really an option: https://stackoverflow.com/q/1953017/1927876

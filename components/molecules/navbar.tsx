@@ -14,6 +14,8 @@ export type NavbarType = {
 /** *
  * @function Navbar
  *
+ * @see {@link https://rfui.deno.dev/molecules/navbar}
+ *
  * @example
  * <Navbar></Navbar>
  */

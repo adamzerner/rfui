@@ -21,6 +21,8 @@ export type ButtonType = {
 /** *
  * @function Button
  *
+ * @see {@link https://rfui.deno.dev/atoms/button}
+ *
  * @param icon An icon that will be placed to the left of the button's text. Placing it to the left as opposed to the right is a best practice. See https://ux.stackexchange.com/q/56023/39046.
  * @param _rightIcon An icon that will be placed to the right of the button's text. Typically not a good idea, but useful for something like "Next →".
  *

@@ -8,6 +8,8 @@ export type HighlightType = {
 /** *
  * @function Highlight
  *
+ * @see {@link https://rfui.deno.dev/atoms/highlight}
+ *
  * @example
  * <div>Lorem ipsum <Highlight>dolor</Highlight> sit amet, consectetur.</div>
  */

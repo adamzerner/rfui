@@ -9,6 +9,8 @@ export type TextareaType = {
 /** *
  * @function Textarea
  *
+ * @see {@link https://rfui.deno.dev/atoms/textarea}
+ *
  * @example
  * <Textarea></Textarea>
  */

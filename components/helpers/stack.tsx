@@ -7,6 +7,8 @@ export type StackType =
 /** *
  * @function Stack
  *
+ * @see {@link https://rfui.deno.dev/helpers/stack}
+ *
  * @example
  * <Stack>
  *   <div>top</div>

@@ -8,6 +8,8 @@ export type BlockquoteType = {
 /** *
  * @function Blockquote
  *
+ * @see {@link https://rfui.deno.dev/atoms/blockquote}
+ *
  * @example
  * <Blockquote>All models are wrong. Some models are useful.</Blockquote>
  */

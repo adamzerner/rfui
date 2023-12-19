@@ -8,6 +8,8 @@ export type CodeBlockType = {
 /** *
  * @function CodeBlock
  *
+ * @see {@link https://rfui.deno.dev/atoms/code-block}
+ *
  * @example
  * <CodeBlock>
 {`const firstName = 'John';

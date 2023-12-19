@@ -13,6 +13,8 @@ export type LinkType = {
 /** *
  * @function Link
  *
+ * @see {@link https://rfui.deno.dev/atoms/link}
+ *
  * @param _newTab Sets `target="blank"` and `rel="noopener noreferrer"` to get the link to open in a new tab.
  *
  * Note: It is generally inadvisable to do this. See https://www.nngroup.com/articles/new-browser-windows-and-tabs/.

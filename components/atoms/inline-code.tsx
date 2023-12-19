@@ -8,6 +8,8 @@ export type InlineCodeType = {
 /** *
  * @function InlineCode
  *
+ * @see {@link https://rfui.deno.dev/atoms/inline-code}
+ *
  * @example
  * <div>
  *   When I wrote <InlineCode>sayHello("John")</InlineCode> it didn't work.

@@ -23,11 +23,21 @@ type ComponentDocsPageType = {
 export const ComponentDocsPage = (
   { componentName, sourceCodeUrl, sections }: ComponentDocsPageType,
 ) => {
+  const basicExample = sections.find((s) => s.title === "Basic")?.example;
+
+  if (!basicExample) {
+    throw new Error("All components should have a basic example.");
+  }
+
   return (
     <Flex class="mt-9 gap-11 max-w-full">
       <LeftNav />
       <main class="flex-1 max-w-full">
-        <Header componentName={componentName} sourceCodeUrl={sourceCodeUrl} />
+        <Header
+          componentName={componentName}
+          sourceCodeUrl={sourceCodeUrl}
+          example={basicExample}
+        />
         <Sections sections={sections} />
       </main>
       <OnThisPage sectionTitles={sections.map((s) => s.title)} />
@@ -35,13 +45,17 @@ export const ComponentDocsPage = (
   );
 };
 
-const Header = ({ componentName, sourceCodeUrl }: {
+const Header = ({ componentName, sourceCodeUrl, example }: {
   componentName: ComponentDocsPageType["componentName"];
   sourceCodeUrl: ComponentDocsPageType["sourceCodeUrl"];
+  example: () => JSX.Element;
 }) => {
   return (
     <header>
-      <H1 class="!mt-0">{componentName}</H1>
+      <H1 class="!mt-0 !mb-5">{componentName}</H1>
+      <Card width="full" padding="lg" class="mb-5">
+        {example()}
+      </Card>
       <Text>
         <Link
           href={sourceCodeUrl}
@@ -52,7 +66,7 @@ const Header = ({ componentName, sourceCodeUrl }: {
           Source code
         </Link>
       </Text>
-      <CodeBlock class="mt-6">
+      <CodeBlock class="mt-5">
         {`import { ${componentName} } from "rfui";`}
       </CodeBlock>
     </header>
@@ -77,7 +91,7 @@ const Sections = (
                 {section.description}
               </Text>
             )}
-          <Card>{section.example()}</Card>
+          <Card width="full">{section.example()}</Card>
           {section.exampleCode()}
         </section>
       ))}

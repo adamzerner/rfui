@@ -13,12 +13,19 @@ export default () => {
         </Link>
       </div>
       <Examples title="Default">
-        <CodeBlock>
-          {`const firstName = 'John';
+        <CodeBlock
+          code={`const firstName = 'John';
 const lastName = 'Doe';
-const fullName = firstName + " " + lastName;
-`}
-        </CodeBlock>
+const fullName = firstName + " " + lastName;`}
+        />
+      </Examples>
+      <Examples title="Language">
+        <CodeBlock
+          language="ts"
+          code={`const firstName = 'John';
+const lastName = 'Doe';
+const fullName = firstName + " " + lastName;`}
+        />
       </Examples>
     </Stack>
   );

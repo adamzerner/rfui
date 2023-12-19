@@ -6,6 +6,7 @@ export default ({ Component }: PageProps) => {
       <head>
         <title>RFUI</title>
         <link rel="stylesheet" type="text/css" href="/app.css" />
+        <link rel="stylesheet" type="text/css" href="/prism.css" />
         <link
           href="https://fonts.googleapis.com/css?family=Open+Sans"
           rel="stylesheet"
@@ -15,6 +16,8 @@ export default ({ Component }: PageProps) => {
       </head>
       <body>
         <Component />
+        <script src="/prism.js"></script>
+        <script>Prism.highlightAll();</script>
       </body>
     </html>
   );

@@ -22,8 +22,10 @@ export default () => {
           component library for React and Preact apps. It lets you do stuff like
           this:
         </p>
-        <CodeBlock>
-          {`import { Button } from "rfui";
+
+        <CodeBlock
+          language="tsx"
+          code={`import { Button } from "rfui";
 
 const SubmitButton = () => {
   return (
@@ -33,7 +35,7 @@ const SubmitButton = () => {
   );
 };
 `}
-        </CodeBlock>
+        />
       </Text>
 
       <H2>Philosophy</H2>

@@ -10,9 +10,7 @@ export default () => {
     title: "Basic",
     example: () => <Badge>Basic</Badge>,
     exampleCode: () => (
-      <CodeBlock class="mt-4">
-        {`<Badge>Basic</Badge>`}
-      </CodeBlock>
+      <CodeBlock class="mt-4" language="tsx" code={`<Badge>Basic</Badge>`} />
     ),
   }, {
     title: "Type",
@@ -37,8 +35,10 @@ export default () => {
       </Flex>
     ),
     exampleCode: () => (
-      <CodeBlock class="mt-4">
-        {`<Flex class="gap-3">
+      <CodeBlock
+        class="mt-4"
+        language="tsx"
+        code={`<Flex class="gap-3">
   <Badge type="neutral">neutral</Badge>
   <Badge type="info">info</Badge>
   <Badge type="success">success</Badge>
@@ -46,7 +46,7 @@ export default () => {
   <Badge type="danger">danger</Badge>
 </Flex>
 `}
-      </CodeBlock>
+      />
     ),
   }, {
     title: "Size",
@@ -84,8 +84,10 @@ export default () => {
       </Stack>
     ),
     exampleCode: () => (
-      <CodeBlock class="mt-4">
-        {`<Stack class="gap-5">
+      <CodeBlock
+        class="mt-4"
+        language="tsx"
+        code={`<Stack class="gap-5">
   <Flex class="gap-3">
     <Badge type="neutral" size="sm">neutral</Badge>
     <Badge type="info" size="sm">info</Badge>
@@ -109,7 +111,7 @@ export default () => {
   </Flex>
 </Stack>
 `}
-      </CodeBlock>
+      />
     ),
   }, {
     title: "Rounded",
@@ -155,8 +157,10 @@ export default () => {
       </Stack>
     ),
     exampleCode: () => (
-      <CodeBlock class="mt-4">
-        {`<Stack class="gap-5">
+      <CodeBlock
+        class="mt-4"
+        language="tsx"
+        code={`<Stack class="gap-5">
   <Flex class="gap-3">
     <Badge type="neutral" rounded="square">neutral</Badge>
     <Badge type="info" rounded="square">info</Badge>
@@ -187,7 +191,7 @@ export default () => {
   </Flex>
 </Stack>
 `}
-      </CodeBlock>
+      />
     ),
   }];
   const props = [{

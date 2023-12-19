@@ -10,13 +10,6 @@ import { Card } from "@/components/molecules/card.tsx";
 import { LeftNav } from "@/routes/index.tsx";
 import { JSX } from "preact";
 
-/*
-
-TODO:
-- Design as rows
-
-*/
-
 type ComponentDocsPageType = {
   componentName: string;
   sourceCodeUrl: string;
@@ -82,9 +75,10 @@ const Header = ({ componentName, sourceCodeUrl, example }: {
         <Card width="full" padding="lg">
           {example()}
         </Card>
-        <CodeBlock>
-          {`import { ${componentName} } from "rfui";`}
-        </CodeBlock>
+        <CodeBlock
+          language="ts"
+          code={`import { ${componentName} } from "rfui";`}
+        />
       </Stack>
     </nav>
   );
@@ -155,12 +149,17 @@ const Props = ({ props }: { props: ComponentDocsPageType["props"] }) => {
             <Stack class="gap-5 col-span-2 text-sm">
               <div>
                 <div class="mb-3">Type</div>
-                <CodeBlock>{prop.type}</CodeBlock>
+                <CodeBlock language="ts" code={prop.type} />
               </div>
-              <div>
+              <div class="self-start">
                 <div class="mb-3">Default</div>
                 {prop.default
-                  ? <InlineCode>{prop.default}</InlineCode>
+                  ? (
+                    <CodeBlock
+                      language="ts"
+                      code={prop.default}
+                    />
+                  )
                   : <div class="text-xs">none</div>}
               </div>
               {prop.notes &&

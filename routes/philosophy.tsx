@@ -204,9 +204,12 @@ export default () => {
           But I still don't want to use them. Why? Because they don't actually
           give me code. Like, as a developer, I want to just be able to do:
         </p>
-        <CodeBlock>
-          {'<Button variant="primary" type="submit">Submit</Button>'}
-        </CodeBlock>
+        <CodeBlock
+          language="tsx"
+          code={`<Button variant="primary" type="submit">
+  Submit
+</Button>`}
+        />
         <p>
           I don't want to have to build that <InlineCode>Button</InlineCode>
           {" "}

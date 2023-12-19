@@ -3,7 +3,6 @@ import { H1 } from "@/components/atoms/h1.tsx";
 import { H2 } from "@/components/atoms/h2.tsx";
 import { InlineCode } from "@/components/atoms/inline-code.tsx";
 import { Link } from "@/components/atoms/link.tsx";
-import { Table } from "@/components/atoms/table.tsx";
 import { Text } from "@/components/atoms/text.tsx";
 import { Flex } from "@/components/helpers/flex.tsx";
 import { Stack } from "@/components/helpers/stack.tsx";
@@ -14,12 +13,7 @@ import { JSX } from "preact";
 /*
 
 TODO:
-- Link to corresponding section
-- Reconsider table
-  - https://ux.stackexchange.com/q/73668/39046
-  - My books
-  - https://ux.stackexchange.com/questions/tagged/tables?tab=votes&page=2&pagesize=15
-- Deal with text wrapping
+- Design as rows
 
 */
 
@@ -143,30 +137,21 @@ const Props = ({ props }: { props: ComponentDocsPageType["props"] }) => {
       <H1 id="props">
         <Link href="#props" underline="hover">Props</Link>
       </H1>
-      <Table class="w-full">
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Default</th>
-          </tr>
-        </thead>
-        <tbody>
-          {props.map((prop) => (
-            <tr>
-              <td>
-                {prop.name}
-              </td>
-              <td>
-                <InlineCode>{prop.type}</InlineCode>
-              </td>
-              <td>
-                <InlineCode>{prop.default}</InlineCode>
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </Table>
+      <Stack class="gap-8">
+        {props.map((prop) => (
+          <Stack class="gap-5">
+            <div>
+              <InlineCode>{prop.name}</InlineCode>
+            </div>
+            <div>
+              <InlineCode>{prop.type}</InlineCode>
+            </div>
+            <div>
+              <InlineCode>{prop.default}</InlineCode>
+            </div>
+          </Stack>
+        ))}
+      </Stack>
     </section>
   );
 };

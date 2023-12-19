@@ -140,10 +140,10 @@ const Props = ({ props }: { props: ComponentDocsPageType["props"] }) => {
       <H1 id="props">
         <Link href="#props" underline="hover">Props</Link>
       </H1>
-      <div class="grid grid-cols-3 gap-y-10 justify-items-start place-items-start">
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-y-5 sm:gap-y-10 justify-items-start place-items-start">
         {props.map((prop) => (
           <>
-            <InlineCode class="text-2xl">
+            <InlineCode class="text-2xl first-of-type:mt-0 mt-8 sm:mt-0">
               {prop.name}
             </InlineCode>
             <Stack class="gap-5 col-span-2 text-sm">

@@ -51,7 +51,7 @@ const Header = ({ componentName, sourceCodeUrl, example }: {
   example: () => JSX.Element;
 }) => {
   return (
-    <nav class="mb-9">
+    <nav class="mb-10">
       <H1 class="!mt-0">{componentName}</H1>
       <Stack class="gap-5">
         <Text>

@@ -16,6 +16,9 @@ import { JSX } from "preact";
 TODO:
 - Link to corresponding section
 - Reconsider table
+  - https://ux.stackexchange.com/q/73668/39046
+  - My books
+  - https://ux.stackexchange.com/questions/tagged/tables?tab=votes&page=2&pagesize=15
 - Deal with text wrapping
 
 */

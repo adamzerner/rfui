@@ -143,8 +143,12 @@ const Props = ({ props }: { props: ComponentDocsPageType["props"] }) => {
       <div class="grid grid-cols-1 sm:grid-cols-3 gap-y-5 sm:gap-y-10 justify-items-start place-items-start">
         {props.map((prop) => (
           <>
-            <Link href={`#${prop.name.toLowerCase()}`} underline="hover">
-              <InlineCode class="text-2xl first-of-type:mt-0 mt-8 sm:mt-0">
+            <Link
+              href={`#${prop.name.toLowerCase()}`}
+              underline="hover"
+              class="text-2xl first-of-type:mt-0 mt-8 sm:mt-0"
+            >
+              <InlineCode>
                 {prop.name}
               </InlineCode>
             </Link>

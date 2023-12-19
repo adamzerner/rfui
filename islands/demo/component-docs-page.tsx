@@ -29,8 +29,8 @@ type ComponentDocsPageType = {
   props: {
     name: string;
     type: string;
-    default: string;
-    notes: string;
+    default: string | null;
+    notes: JSX.Element | string | null;
   }[];
 };
 
@@ -126,6 +126,9 @@ const OnThisPage = ({ sectionTitles }: { sectionTitles: string[] }) => {
             {sectionTitle}
           </Link>
         ))}
+        <Link underline="hover" href="#props">
+          Props
+        </Link>
       </Stack>
     </nav>
   );
@@ -137,21 +140,34 @@ const Props = ({ props }: { props: ComponentDocsPageType["props"] }) => {
       <H1 id="props">
         <Link href="#props" underline="hover">Props</Link>
       </H1>
-      <Stack class="gap-8">
+      <div class="grid grid-cols-3 gap-y-10 justify-items-start place-items-start">
         {props.map((prop) => (
-          <Stack class="gap-5">
-            <div>
-              <InlineCode>{prop.name}</InlineCode>
-            </div>
-            <div>
-              <InlineCode>{prop.type}</InlineCode>
-            </div>
-            <div>
-              <InlineCode>{prop.default}</InlineCode>
-            </div>
-          </Stack>
+          <>
+            <InlineCode class="text-2xl">
+              {prop.name}
+            </InlineCode>
+            <Stack class="gap-5 col-span-2 text-sm">
+              <div>
+                <div class="mb-3">Type</div>
+                <CodeBlock>{prop.type}</CodeBlock>
+              </div>
+              <div>
+                <div class="mb-3">Default</div>
+                {prop.default
+                  ? <InlineCode>{prop.default}</InlineCode>
+                  : <div class="text-xs">none</div>}
+              </div>
+              {prop.notes &&
+                (
+                  <div>
+                    <div class="mb-3">Notes</div>
+                    <div>{prop.notes}</div>
+                  </div>
+                )}
+            </Stack>
+          </>
         ))}
-      </Stack>
+      </div>
     </section>
   );
 };

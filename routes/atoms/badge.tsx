@@ -194,22 +194,22 @@ export default () => {
     name: "type",
     type: '"neutral" | "info" | "success" | "warning" | "danger"',
     default: '"neutral"',
-    notes: "-",
+    notes: null,
   }, {
     name: "size",
     type: '"sm" | "md" | "lg"',
     default: '"md"',
-    notes: "-",
+    notes: null,
   }, {
     name: "rounded",
     type: '"square" | "sm" | "lg" | "full"',
     default: '"sm"',
-    notes: "-",
+    notes: null,
   }, {
     name: "children",
     type: "ComponentChild",
-    default: "-",
-    notes: "-",
+    default: null,
+    notes: null,
   }];
 
   return (

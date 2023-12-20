@@ -237,7 +237,11 @@ export default () => {
           I'm looking at you, Bootstrap. But I also find Chakra's components to
           be rather uninspiring a lot of the time as well.
         </p>
-        <p>I want the components in my library to genuinely look good.</p>
+        <p>
+          I want the components in my library to genuinely look good, be
+          loveable instead of just viable, and provide users with a sense of
+          delight.
+        </p>
       </Text>
 
       <H2>Developer experience</H2>

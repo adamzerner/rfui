@@ -264,28 +264,31 @@ export default () => {
         <p>
           Well, I'm not sure, but I think it probably boils down to what sorts
           of things are fun (for most library authors) to work on, and what
-          sorts of things are not fun. Building new features and functionality
-          are typically fun. Writing docs, fixing bugs, responding to questions,
-          and trying to make things easy for others to understand are all things
-          that typically are not fun. To oversimpify.
+          sorts of things are not fun. Building new features is typically fun.
+          Writing docs, fixing bugs, responding to questions, and trying to make
+          things easy for others to understand are all things that typically are
+          not fun.
         </p>
         <p>
-          Personally, I enjoy focusing on those things that (I assume) most
-          others don't think are fun. I want this library to be "good". Making
-          it "good" is generally fun for me. I think the developer experience as
-          a whole is what determines whether or not it's "good". And so, I plan
-          to spend a lot of time on it.
+          Personally, I enjoy focusing on the things that (I assume) most others
+          don't think are fun. I want this library to be "good". Making it
+          "good" is generally fun for me. I think the developer experience as a
+          whole is what determines whether or not it's "good". And so, I plan to
+          spend a lot of time on it.
         </p>
         <p>
           Let me be more concrete. I want to prioritize answering questions,
           writing clear docs, addressing any bugs or GitHub Issues that are
-          raised and providing helpful examples.
+          raised, and providing helpful examples.
         </p>
         <p>
           Now that I write this out, I'm starting to realize that this is my
           first open source project and I very well might be a little naive and
-          starry-eyed. I don't know what to say about that though. We'll see how
-          it goes.
+          starry-eyed. I don't know what to say about that though. Hey,{" "}
+          <Link href="https://github.com/tailwindlabs/tailwindcss">
+            Tailwind
+          </Link>{" "}
+          does a pretty fantastic job at it. We'll see how it goes.
         </p>
         <p>
           Another thing in particular is that I would like to do user interviews
@@ -301,7 +304,7 @@ export default () => {
           </Link>{" "}
           <Link href="https://ux.stackexchange.com/a/53835/39046">
             crucial
-          </Link>. If you'd be willing to participate in that, please{" "}
+          </Link>. If you'd be willing to chat with me, please{" "}
           <Link href="mailto:adamzerner@protonmail.com">
             let me know
           </Link>.
@@ -331,9 +334,9 @@ export default () => {
             Fetch API
           </Link>. On the other hand, our old friend{" "}
           <Link href="http://expressjs.com/">Express</Link>{" "}
-          has their own request and response objects.
+          has its own request and response objects.
         </p>
-        <p>I try to lean into this "use the platform" idea in RFUI as well.</p>
+        <p>I try to lean into this "use the platform" idea in RFUI.</p>
         <p>
           For example, for the <InlineCode>Checkbox</InlineCode> and{" "}
           <InlineCode>RadioButton</InlineCode>{" "}
@@ -349,7 +352,8 @@ export default () => {
           </Link>). Other approaches probably look a little better, but I prefer
           to "use the platform" and stick to actually having{" "}
           <InlineCode>{'<input type="checkbox" />'}</InlineCode> and{" "}
-          <InlineCode>{'<input type="radio" />'}</InlineCode>.
+          <InlineCode>{'<input type="radio" />'}</InlineCode> (without{" "}
+          <InlineCode>hidden</InlineCode>).
         </p>
         <p>
           The <InlineCode>Select</InlineCode>{" "}

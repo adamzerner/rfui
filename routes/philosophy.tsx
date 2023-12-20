@@ -206,7 +206,7 @@ export default () => {
         </p>
         <CodeBlock
           language="tsx"
-          code={`<Button variant="primary" type="submit">
+          code={`<Button variant="secondary" type="submit">
   Submit
 </Button>`}
         />
@@ -228,14 +228,14 @@ export default () => {
       <Text>
         <p>
           On the other hand, there are libraries that have all of these
-          pre-built, easy to use components. But unfortunately, they're pretty
+          pre-built, easy to use components. But unfortunately, they're kinda
           ugly.
         </p>
         <p>
           What do I have in mind? Well, it starts with something that rhymes
           with moot and ends with something that rhymes with zap. That's right:
           I'm looking at you, Bootstrap. But I also find Chakra's components to
-          be pretty uninspiring a lot of the time as well.
+          be rather uninspiring a lot of the time as well.
         </p>
         <p>I want the components in my library to genuinely look good.</p>
       </Text>

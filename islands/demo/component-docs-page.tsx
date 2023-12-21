@@ -38,7 +38,7 @@ export const ComponentDocsPage = (
 
   return (
     <Flex class="mt-9 gap-11 max-w-full">
-      <Stack class="gap-8 hidden lg:block">
+      <Stack class="gap-8 hidden lg:flex">
         <OnThisPage sectionTitles={sections.map((s) => s.title)} />
         <LeftNav />
       </Stack>

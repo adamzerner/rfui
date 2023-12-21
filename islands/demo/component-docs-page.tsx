@@ -38,7 +38,10 @@ export const ComponentDocsPage = (
 
   return (
     <Flex class="mt-9 gap-11 max-w-full">
-      <LeftNav />
+      <Stack class="gap-8">
+        <OnThisPage sectionTitles={sections.map((s) => s.title)} />
+        <LeftNav />
+      </Stack>
       <main class="flex-1 max-w-full">
         <Header
           componentName={componentName}
@@ -48,7 +51,6 @@ export const ComponentDocsPage = (
         <Sections sections={sections} />
         <Props props={props} />
       </main>
-      <OnThisPage sectionTitles={sections.map((s) => s.title)} />
     </Flex>
   );
 };
@@ -112,11 +114,14 @@ const Sections = (
 
 const OnThisPage = ({ sectionTitles }: { sectionTitles: string[] }) => {
   return (
-    <nav class="hidden lg:block">
+    <nav class="hidden lg:block pb-8 border-b border-b-neutral-100">
       <div class="font-bold text-neutral-700 mb-4">On this page</div>
       <Stack class="gap-2">
         {sectionTitles.map((sectionTitle) => (
-          <Link underline="hover" href={`#${sectionTitle.toLowerCase()}`}>
+          <Link
+            underline="hover"
+            href={`#${sectionTitle.toLowerCase()}`}
+          >
             {sectionTitle}
           </Link>
         ))}

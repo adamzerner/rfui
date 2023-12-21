@@ -38,7 +38,7 @@ export const ComponentDocsPage = (
 
   return (
     <Flex class="mt-9 gap-11 max-w-full">
-      <Stack class="gap-8">
+      <Stack class="gap-8 hidden lg:block">
         <OnThisPage sectionTitles={sections.map((s) => s.title)} />
         <LeftNav />
       </Stack>
@@ -114,7 +114,7 @@ const Sections = (
 
 const OnThisPage = ({ sectionTitles }: { sectionTitles: string[] }) => {
   return (
-    <nav class="hidden lg:block pb-8 border-b border-b-neutral-100">
+    <nav class="pb-8 border-b border-b-neutral-100">
       <div class="font-bold text-neutral-700 mb-4">On this page</div>
       <Stack class="gap-2">
         {sectionTitles.map((sectionTitle) => (

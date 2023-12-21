@@ -102,7 +102,7 @@ const Sections = (
                 {section.description}
               </Text>
             )}
-          <Card width="full">{section.example()}</Card>
+          <Card width="full" class="mb-4">{section.example()}</Card>
           {section.exampleCode()}
         </section>
       ))}

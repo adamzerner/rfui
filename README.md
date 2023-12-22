@@ -34,9 +34,11 @@ If users want `CodeBlock` to have syntax highlighting, they'll have to use
    languages and plugins you need. Ie. if you want to let users copy the code to
    their clipboard, you'll need to include the
    ["Copy to Clipboard Button" plugin](https://prismjs.com/plugins/copy-to-clipboard/).
-2. Load them with something like `<script src="/prism.js"></script>` and
+2. If you want stuff in code blocks to wrap, change `white-space:pre` in
+   `prism.css` to `white-space:pre-wrap`.
+3. Load them with something like `<script src="/prism.js"></script>` and
    `<link rel="stylesheet" type="text/css" href="/prism.css" />`.
-3. After your JavaScript has loaded you (might?) need to call
+4. After your JavaScript has loaded you (might?) need to call
    `Prism.highlightAll();`. One way to do this is to include
    `<script>Prism.highlightAll();</script>` right before `</body>`.
 

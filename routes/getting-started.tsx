@@ -4,7 +4,7 @@ import { Stack } from "@/components/helpers/stack.tsx";
 export default () => {
   return (
     <div class="max-w-prose text-lg">
-      <H1>Getting Started</H1>
+      <H1>Getting started</H1>
       <Stack class="gap-4 leading-relaxed">
         Under construction.
       </Stack>

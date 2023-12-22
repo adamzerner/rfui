@@ -31,7 +31,7 @@ export const WelcomeMessage = () => {
             <Link href="/about">About</Link>
           </li>
           <li>
-            <Link href="/getting-started">Getting Started</Link>
+            <Link href="/getting-started">Getting started</Link>
           </li>
           <li>
             <Link href="/philosophy">Philosophy</Link>

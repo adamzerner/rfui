@@ -30,7 +30,7 @@ const TheNavbar = ({ route }: { route: string }) => {
         href="/getting-started"
         isActive={route === "/getting-started"}
       >
-        Getting Started
+        Getting started
       </NavbarItem>
     </Navbar>
   );
@@ -50,7 +50,7 @@ const TheFooter = () => {
       <FooterColumn>
         <FooterHeading>Docs</FooterHeading>
         <FooterItem href="/">Components</FooterItem>
-        <FooterItem href="/getting-started">Getting Started</FooterItem>
+        <FooterItem href="/getting-started">Getting started</FooterItem>
         <FooterItem href="/tutorial">Tutorial</FooterItem>
       </FooterColumn>
       <FooterColumn>

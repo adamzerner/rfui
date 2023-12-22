@@ -70,7 +70,7 @@ const SubmitButton = () => {
         </OL>
       </Text>
 
-      <H2>Target Audience</H2>
+      <H2>Target audience</H2>
       <Text>
         <p>
           As mentioned on the{" "}

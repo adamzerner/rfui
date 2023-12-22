@@ -27,7 +27,6 @@ export default () => {
       />
     ),
   }, {
-    // "bullet" | "check" | "arrow" | "triangle" | "none"
     title: "Bullet type",
     description: (
       <div>

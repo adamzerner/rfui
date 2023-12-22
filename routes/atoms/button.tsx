@@ -1,6 +1,7 @@
 import { Button } from "@/components/atoms/button.tsx";
 import { CodeBlock } from "@/components/atoms/code-block.tsx";
 import { Link } from "@/components/atoms/link.tsx";
+import { Stack } from "@/components/helpers/stack.tsx";
 import { ComponentDocsPage } from "@/islands/demo/component-docs-page.tsx";
 
 export default () => {
@@ -51,7 +52,24 @@ export default () => {
     required: false,
     type: "JSX.Element",
     default: null,
-    notes: null,
+    notes: (
+      <Stack class="gap-3">
+        <p>
+          An icon that will be placed to the left of the button's text. Placing
+          it to the left as opposed to the right is a{" "}
+          <Link href="https://ux.stackexchange.com/q/56023/39046">
+            best practice
+          </Link>.
+        </p>
+        <p>
+          Consider{" "}
+          <Link href="https://uxmyths.com/post/715009009/myth-icons-enhance-usability">
+            Myth #13: Icons enhance usability
+          </Link>{" "}
+          before using a standalone icon, or even before using an icon at all.
+        </p>
+      </Stack>
+    ),
   }, {
     name: "_rightIcon",
     required: false,
@@ -59,13 +77,10 @@ export default () => {
     default: null,
     notes: (
       <div>
-        It is{" "}
+        An icon that will be placed to the right of the button's text.{" "}
         <Link href="https://ux.stackexchange.com/q/56023/39046">
-          generally preferred
-        </Link>{" "}
-        to place icons to the left of the content rather than the right.
-        However, if you still want to, you can use this property to place the
-        icon to the right.
+          Typically not a good idea
+        </Link>, but useful for something like "Next →".
       </div>
     ),
   }, {

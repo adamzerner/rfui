@@ -1,5 +1,6 @@
 import { Button } from "@/components/atoms/button.tsx";
 import { CodeBlock } from "@/components/atoms/code-block.tsx";
+import { InlineCode } from "@/components/atoms/inline-code.tsx";
 import { Link } from "@/components/atoms/link.tsx";
 import { Stack } from "@/components/helpers/stack.tsx";
 import { ComponentDocsPage } from "@/islands/demo/component-docs-page.tsx";
@@ -40,13 +41,18 @@ export default () => {
     required: false,
     type: "boolean",
     default: "false",
-    notes: null,
+    notes: "When true, the button will appear disabled.",
   }, {
     name: "loadingContent",
     required: false,
     type: "string | JSX.Element",
     default: null,
-    notes: null,
+    notes: (
+      <div>
+        The text to change the button's content to when loading. Ie. when{" "}
+        <InlineCode>isLoading</InlineCode> is <InlineCode>true</InlineCode>.
+      </div>
+    ),
   }, {
     name: "icon",
     required: false,

@@ -12,7 +12,7 @@ export type CodeBlockType = {
  *
  * @see {@link https://rfui.deno.dev/atoms/code-block}
  *
- * @param language - See {@link https://prismjs.com/index.html#supported-languages}. And make sure that when you download Prism that you check off the languages you need.
+ * @param language - See {@link https://prismjs.com/index.html#supported-languages}. And make sure when you download Prism that you check off the languages you need.
  *
  * @example
  * <CodeBlock

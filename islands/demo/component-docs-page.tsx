@@ -101,7 +101,7 @@ const Sections = (
           </H2>
           {section.description &&
             (
-              <Text size="sm" class="!leading-loose mb-6">
+              <Text size="sm" class="mb-6">
                 {section.description}
               </Text>
             )}

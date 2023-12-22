@@ -201,7 +201,7 @@ export default () => {
   }, {
     title: "Icon",
     description: (
-      <Stack class="gap-3 leading-normal">
+      <Stack class="gap-3">
         <p>
           An icon that will be placed to the left of the button's text. Placing
           it to the left as opposed to the right is a{" "}

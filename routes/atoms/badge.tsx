@@ -196,21 +196,25 @@ export default () => {
   }];
   const props = [{
     name: "type",
+    required: false,
     type: '"neutral" | "info" | "success" | "warning" | "danger"',
     default: '"neutral"',
     notes: null,
   }, {
     name: "size",
+    required: false,
     type: '"sm" | "md" | "lg"',
     default: '"md"',
     notes: null,
   }, {
     name: "rounded",
+    required: false,
     type: '"square" | "sm" | "lg" | "full"',
     default: '"sm"',
     notes: null,
   }, {
     name: "children",
+    required: true,
     type: "ComponentChild",
     default: null,
     notes: null,

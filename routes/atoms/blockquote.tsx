@@ -107,6 +107,7 @@ export default () => {
   }];
   const props = [{
     name: "children",
+    required: true,
     type: "ComponentChild",
     default: null,
     notes: null,

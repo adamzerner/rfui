@@ -11,17 +11,17 @@ export type PasswordInputType = {
 /** *
  * @function PasswordInput
  *
+ * Related reading:
+ * - https://www.nngroup.com/articles/stop-password-masking
+ * - https://www.lukew.com/ff/entry.asp?1653
+ * - https://ux.stackexchange.com/q/144503/39046
+ *
  * @see {@link https://rfui.deno.dev/molecules/password-input}
  *
  * @param defaultVisibility `"hidden"` or `"shown"`. Consider the factors at play here, including:
  * 1. Usability: Seeing * as you type instead of characters like "a" and "b" can hurt usability.
  * 2. Actual security: In public places, ***** can prevent malicious onlookers from stealing your password.
  * 3. Perceived security: Some users expect to see * as they type their password and might question how secure your website is if they see their password in plaintext by default instead.
- *
- * Related reading:
- * - https://www.nngroup.com/articles/stop-password-masking
- * - https://www.lukew.com/ff/entry.asp?1653
- * - https://ux.stackexchange.com/q/144503/39046
  *
  * @example
  * <PasswordInput name="password" />

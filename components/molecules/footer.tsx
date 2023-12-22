@@ -13,9 +13,9 @@ export type FooterType = {
 /** *
  * @function Footer
  *
- * @see {@link https://rfui.deno.dev/molecules/footer}
- *
  * UX guidelines: https://www.nngroup.com/articles/footers/
+ *
+ * @see {@link https://rfui.deno.dev/molecules/footer}
  *
  * @example
  * <Footer></Footer>

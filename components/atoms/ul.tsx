@@ -9,9 +9,9 @@ export type ULType = {
 /** *
  * @function UL
  *
- * @see {@link https://rfui.deno.dev/atoms/ul}
- *
  * Useful blog post: https://css-tricks.com/list-style-recipes/
+ *
+ * @see {@link https://rfui.deno.dev/atoms/ul}
  *
  * @example
  * <UL>

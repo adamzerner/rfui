@@ -14,8 +14,6 @@ export type TableType = {
 /** *
  * @function Table
  *
- * @see {@link https://rfui.deno.dev/atoms/table}
- *
  * Tailwind classes applied to what you pass into `Table` as `children` probably won't have a high enough precedence to be applied. To force them to be applied, utilize `!important` (https://tailwindcss.com/docs/configuration#important) by doing eg. `!text-right` instead of just `text-right`.
  *
  * Content is left-aligned by default. However, you'll probably want to right-align numerical content. See https://ux.stackexchange.com/q/24066/39046.
@@ -27,6 +25,8 @@ export type TableType = {
  * For responsive design, consider removing columns, combining data across multiple cells into one cell, and providing a way to click a cell to navigate to some sort of other view with more detail, such as a modal or a new page. See https://ux.stackexchange.com/a/9766/39046.
  *
  * Making the header or first column sticky is helpful when the user needs to cross-reference and avoid losing context.
+ *
+ * @see {@link https://rfui.deno.dev/atoms/table}
  *
  * @example
  * <Table>

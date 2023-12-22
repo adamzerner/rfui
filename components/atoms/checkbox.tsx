@@ -8,13 +8,13 @@ export type CheckboxType = {
 /** *
  * @function Checkbox
  *
- * @see {@link https://rfui.deno.dev/atoms/checkbox}
- *
  * Inspiration: https://css-tricks.com/zero-trickery-custom-radios-and-checkboxes/
  *
  * Readonly isn't really an option: https://stackoverflow.com/q/155291/1927876
  *
  * Discussion of the cursor property https://ux.stackexchange.com/q/23266/39046
+ *
+ * @see {@link https://rfui.deno.dev/atoms/checkbox}
  *
  * @example
  * <Checkbox />

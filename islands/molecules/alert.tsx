@@ -14,9 +14,9 @@ export type AlertType = {
 /** *
  * @function Alert
  *
- * @see {@link https://rfui.deno.dev/molecules/alert}
- *
  * Don't overdo it. If you "cry wolf", users become numb to alerts. https://ux.stackexchange.com/q/44609/39046
+ *
+ * @see {@link https://rfui.deno.dev/molecules/alert}
  *
  * @example
  * <Alert>

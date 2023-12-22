@@ -40,19 +40,23 @@ const TheFooter = () => {
   return (
     <Footer size="xl">
       <FooterColumn>
-        <FooterHeading>RFUI</FooterHeading>
-        <FooterItem href="/">Components</FooterItem>
-        <FooterItem href="/getting-started">Getting Started</FooterItem>
+        <FooterHeading>About</FooterHeading>
         <FooterItem href="/about">About</FooterItem>
         <FooterItem href="/philosophy">Philosophy</FooterItem>
+        <FooterItem href="https://github.com/users/adamzerner/projects/2">
+          Roadmap
+        </FooterItem>
+      </FooterColumn>
+      <FooterColumn>
+        <FooterHeading>Docs</FooterHeading>
+        <FooterItem href="/">Components</FooterItem>
+        <FooterItem href="/getting-started">Getting Started</FooterItem>
+        <FooterItem href="/tutorial">Tutorial</FooterItem>
       </FooterColumn>
       <FooterColumn>
         <FooterHeading>Code</FooterHeading>
         <FooterItem href="https://github.com/adamzerner/rfui">
           GitHub
-        </FooterItem>
-        <FooterItem href="https://github.com/users/adamzerner/projects/2">
-          Roadmap
         </FooterItem>
         <FooterItem href="https://github.com/adamzerner/rfui/blob/master/CHANGELOG.md">
           Changelog
@@ -66,10 +70,10 @@ const TheFooter = () => {
       </FooterColumn>
       <FooterColumn>
         <FooterHeading>Help</FooterHeading>
-        <FooterItem href="/faq">FAQ</FooterItem>
         <FooterItem href="mailto:adamzerner@protonmail.com">
           Contact
         </FooterItem>
+        <FooterItem href="/faq">FAQ</FooterItem>
       </FooterColumn>
     </Footer>
   );

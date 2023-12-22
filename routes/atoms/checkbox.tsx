@@ -74,18 +74,3 @@ export default () => {
     />
   );
 };
-
-// import { Checkbox } from "@/components/atoms/checkbox.tsx";
-// import { Link } from "@/components/atoms/link.tsx";
-// import { Stack } from "@/components/helpers/stack.tsx";
-// import { Examples } from "@/islands/demo/examples.tsx";
-
-// export default () => {
-//   return (
-//     <Stack class="gap-8">
-//       <Examples title="Invalid">
-//         <Checkbox invalid />
-//       </Examples>
-//     </Stack>
-//   );
-// };

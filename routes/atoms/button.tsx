@@ -2,6 +2,7 @@ import { Button } from "@/components/atoms/button.tsx";
 import { CodeBlock } from "@/components/atoms/code-block.tsx";
 import { InlineCode } from "@/components/atoms/inline-code.tsx";
 import { Link } from "@/components/atoms/link.tsx";
+import { Flex } from "@/components/helpers/flex.tsx";
 import { Stack } from "@/components/helpers/stack.tsx";
 import { ComponentDocsPage } from "@/islands/demo/component-docs-page.tsx";
 
@@ -14,6 +15,340 @@ export default () => {
         class="mt-4"
         language="tsx"
         code={`<Button>Example</Button>`}
+      />
+    ),
+  }, {
+    title: "Variant",
+    description: (
+      <div>
+        Set <InlineCode>variant</InlineCode> to either{" "}
+        <InlineCode>"primary"</InlineCode>,{" "}
+        <InlineCode>"secondary"</InlineCode>, or{" "}
+        <InlineCode>"tertiary"</InlineCode>. Defaults to{" "}
+        <InlineCode>"secondary"</InlineCode>.
+      </div>
+    ),
+    example: () => (
+      <Flex class="gap-3">
+        <Button variant="primary">Primary</Button>
+        <Button variant="secondary">Secondary</Button>
+        <Button variant="tertiary">Tertiary</Button>
+      </Flex>
+    ),
+    exampleCode: () => (
+      <CodeBlock
+        class="mt-4"
+        language="tsx"
+        code={`<Flex class="gap-3">
+  <Button variant="primary">Primary</Button>
+  <Button variant="secondary">Secondary</Button>
+  <Button variant="tertiary">Tertiary</Button>
+</Flex>`}
+      />
+    ),
+  }, {
+    title: "Danger variants",
+    description: (
+      <p>
+        Set <InlineCode>variant</InlineCode> to either{" "}
+        <InlineCode>"danger-primary"</InlineCode>,{" "}
+        <InlineCode>"danger-secondary"</InlineCode>, or{" "}
+        <InlineCode>"danger-tertiary"</InlineCode>.
+      </p>
+    ),
+    example: () => (
+      <Flex class="gap-3">
+        <Button variant="danger-primary">Primary</Button>
+        <Button variant="danger-secondary">Secondary</Button>
+        <Button variant="danger-tertiary">Tertiary</Button>
+      </Flex>
+    ),
+    exampleCode: () => (
+      <CodeBlock
+        class="mt-4"
+        language="tsx"
+        code={`<Flex class="gap-3">
+  <Button variant="danger-primary">Primary</Button>
+  <Button variant="danger-secondary">Secondary</Button>
+  <Button variant="danger-tertiary">Tertiary</Button>
+</Flex>`}
+      />
+    ),
+  }, {
+    title: "Size",
+    description: (
+      <p>
+        Set <InlineCode>size</InlineCode> to either{" "}
+        <InlineCode>"sm"</InlineCode>, <InlineCode>"md"</InlineCode>,{" "}
+        <InlineCode>"lg"</InlineCode>, or{" "}
+        <InlineCode>"block"</InlineCode>. Defaults to{" "}
+        <InlineCode>"md"</InlineCode>.
+      </p>
+    ),
+    example: () => (
+      <Stack class="gap-5">
+        <Flex class="gap-3">
+          <Button variant="primary" size="sm">Primary</Button>
+          <Button variant="secondary" size="sm">Secondary</Button>
+          <Button variant="tertiary" size="sm">Tertiary</Button>
+        </Flex>
+        <Flex class="gap-3">
+          <Button variant="primary" size="md">Primary</Button>
+          <Button variant="secondary" size="md">Secondary</Button>
+          <Button variant="tertiary" size="md">Tertiary</Button>
+        </Flex>
+        <Flex class="gap-3">
+          <Button variant="primary" size="lg">Primary</Button>
+          <Button variant="secondary" size="lg">Secondary</Button>
+          <Button variant="tertiary" size="lg">Tertiary</Button>
+        </Flex>
+        <Stack class="gap-3 w-full">
+          <Button variant="primary" size="block">Primary</Button>
+          <Button variant="secondary" size="block">Secondary</Button>
+        </Stack>
+      </Stack>
+    ),
+    exampleCode: () => (
+      <CodeBlock
+        class="mt-4"
+        language="tsx"
+        code={`<Stack class="gap-5">
+  <Flex class="gap-3">
+    <Button variant="primary" size="sm">Primary</Button>
+    <Button variant="secondary" size="sm">Secondary</Button>
+    <Button variant="tertiary" size="sm">Tertiary</Button>
+  </Flex>
+  <Flex class="gap-3">
+    <Button variant="primary" size="md">Primary</Button>
+    <Button variant="secondary" size="md">Secondary</Button>
+    <Button variant="tertiary" size="md">Tertiary</Button>
+  </Flex>
+  <Flex class="gap-3">
+    <Button variant="primary" size="lg">Primary</Button>
+    <Button variant="secondary" size="lg">Secondary</Button>
+    <Button variant="tertiary" size="lg">Tertiary</Button>
+  </Flex>
+  <Stack class="gap-3 w-full">
+    <Button variant="primary" size="block">Primary</Button>
+    <Button variant="secondary" size="block">Secondary</Button>
+  </Stack>
+</Stack>`}
+      />
+    ),
+  }, {
+    title: "Rounded",
+    description: (
+      <div>
+        Set <InlineCode>rounded</InlineCode> to either{" "}
+        <InlineCode>"square"</InlineCode>, <InlineCode>"sm"</InlineCode>,{" "}
+        <InlineCode>"lg"</InlineCode>, or{" "}
+        <InlineCode>"full"</InlineCode>. Defaults to{" "}
+        <InlineCode>"sm"</InlineCode>.
+      </div>
+    ),
+    example: () => (
+      <Stack class="gap-5">
+        <Flex class="gap-3">
+          <Button variant="primary" rounded="square">Primary</Button>
+          <Button variant="secondary" rounded="square">Secondary</Button>
+          <Button variant="tertiary" rounded="square">Tertiary</Button>
+        </Flex>
+        <Flex class="gap-3">
+          <Button variant="primary" rounded="sm">Primary</Button>
+          <Button variant="secondary" rounded="sm">Secondary</Button>
+          <Button variant="tertiary" rounded="sm">Tertiary</Button>
+        </Flex>
+        <Flex class="gap-3">
+          <Button variant="primary" rounded="lg">Primary</Button>
+          <Button variant="secondary" rounded="lg">Secondary</Button>
+          <Button variant="tertiary" rounded="lg">Tertiary</Button>
+        </Flex>
+        <Flex class="gap-3">
+          <Button variant="primary" rounded="full">Primary</Button>
+          <Button variant="secondary" rounded="full">Secondary</Button>
+          <Button variant="tertiary" rounded="full">Tertiary</Button>
+        </Flex>
+      </Stack>
+    ),
+    exampleCode: () => (
+      <CodeBlock
+        class="mt-4"
+        language="tsx"
+        code={`<Stack class="gap-5">
+  <Flex class="gap-3">
+    <Button variant="primary" rounded="square">Primary</Button>
+    <Button variant="secondary" rounded="square">Secondary</Button>
+    <Button variant="tertiary" rounded="square">Tertiary</Button>
+  </Flex>
+  <Flex class="gap-3">
+    <Button variant="primary" rounded="sm">Primary</Button>
+    <Button variant="secondary" rounded="sm">Secondary</Button>
+    <Button variant="tertiary" rounded="sm">Tertiary</Button>
+  </Flex>
+  <Flex class="gap-3">
+    <Button variant="primary" rounded="lg">Primary</Button>
+    <Button variant="secondary" rounded="lg">Secondary</Button>
+    <Button variant="tertiary" rounded="lg">Tertiary</Button>
+  </Flex>
+  <Flex class="gap-3">
+    <Button variant="primary" rounded="full">Primary</Button>
+    <Button variant="secondary" rounded="full">Secondary</Button>
+    <Button variant="tertiary" rounded="full">Tertiary</Button>
+  </Flex>
+</Stack>`}
+      />
+    ),
+  }, {
+    title: "Icon",
+    description: (
+      <Stack class="gap-3 leading-normal">
+        <p>
+          An icon that will be placed to the left of the button's text. Placing
+          it to the left as opposed to the right is a{" "}
+          <Link href="https://ux.stackexchange.com/q/56023/39046">
+            best practice
+          </Link>.
+        </p>
+        <p>
+          Consider{" "}
+          <Link href="https://uxmyths.com/post/715009009/myth-icons-enhance-usability">
+            Myth #13: Icons enhance usability
+          </Link>{" "}
+          before using a standalone icon, or even before using an icon at all.
+        </p>
+      </Stack>
+    ),
+    example: () => (
+      <Flex class="gap-3">
+        <Button variant="primary" icon={<span>←</span>}>
+          Previous
+        </Button>
+        <Button variant="secondary" icon={<span>←</span>}>
+          Previous
+        </Button>
+      </Flex>
+    ),
+    exampleCode: () => (
+      <CodeBlock
+        class="mt-4"
+        language="tsx"
+        code={`<Flex class="gap-3">
+  <Button variant="primary" icon={<span>←</span>}>
+    Previous
+  </Button>
+  <Button variant="secondary" icon={<span>←</span>}>
+    Previous
+  </Button>
+</Flex>`}
+      />
+    ),
+  }, {
+    title: "Right icon",
+    description: (
+      <div>
+        An icon that will be placed to the right of the button's text.{" "}
+        <Link href="https://ux.stackexchange.com/q/56023/39046">
+          Typically not a good idea
+        </Link>, but useful for something like "Next →".
+      </div>
+    ),
+    example: () => (
+      <Flex class="gap-3">
+        <Button variant="primary" _rightIcon={<span>→</span>}>
+          Next
+        </Button>
+        <Button variant="secondary" _rightIcon={<span>→</span>}>
+          Next
+        </Button>
+      </Flex>
+    ),
+    exampleCode: () => (
+      <CodeBlock
+        class="mt-4"
+        language="tsx"
+        code={`<Flex class="gap-3">
+  <Button variant="primary" _rightIcon={<span>→</span>}>
+    Next
+  </Button>
+  <Button variant="secondary" _rightIcon={<span>→</span>}>
+    Next
+  </Button>
+</Flex>`}
+      />
+    ),
+  }, {
+    title: "Disabled",
+    description: (
+      <div>
+        Set <InlineCode>disabled</InlineCode> to either{" "}
+        <InlineCode>true</InlineCode> or{" "}
+        <InlineCode>false</InlineCode>. Defaults to{" "}
+        <InlineCode>false</InlineCode>.
+      </div>
+    ),
+    example: () => (
+      <Flex class="gap-3">
+        <Button disabled variant="primary">Primary</Button>
+        <Button disabled variant="secondary">Secondary</Button>
+        <Button disabled variant="tertiary">Tertiary</Button>
+      </Flex>
+    ),
+    exampleCode: () => (
+      <CodeBlock
+        class="mt-4"
+        language="tsx"
+        code={`<Flex class="gap-3">
+  <Button disabled variant="primary">Primary</Button>
+  <Button disabled variant="secondary">Secondary</Button>
+  <Button disabled variant="tertiary">Tertiary</Button>
+</Flex>`}
+      />
+    ),
+  }, {
+    title: "Loading",
+    description: (
+      <Stack class="gap-3">
+        <p>
+          Set <InlineCode>isLoading</InlineCode> to either{" "}
+          <InlineCode>true</InlineCode> or{" "}
+          <InlineCode>false</InlineCode>. Defaults to{" "}
+          <InlineCode>false</InlineCode>.
+        </p>
+        <p>
+          Set <InlineCode>loadingContent</InlineCode>{" "}
+          to the content you want to display when{" "}
+          <InlineCode>isLoading</InlineCode> is <InlineCode>true</InlineCode>.
+        </p>
+      </Stack>
+    ),
+    example: () => (
+      <Flex class="gap-3">
+        <Button variant="primary" isLoading loadingContent="Loading...">
+          Primary
+        </Button>
+        <Button variant="secondary" isLoading loadingContent="Loading...">
+          Secondary
+        </Button>
+        <Button variant="tertiary" isLoading loadingContent="Loading...">
+          Tertiary
+        </Button>
+      </Flex>
+    ),
+    exampleCode: () => (
+      <CodeBlock
+        class="mt-4"
+        language="tsx"
+        code={`<Flex class="gap-3">
+  <Button variant="primary" isLoading loadingContent="Loading...">
+    Primary
+  </Button>
+  <Button variant="secondary" isLoading loadingContent="Loading...">
+    Secondary
+  </Button>
+  <Button variant="tertiary" isLoading loadingContent="Loading...">
+    Tertiary
+  </Button>
+</Flex>`}
       />
     ),
   }];
@@ -106,125 +441,3 @@ export default () => {
     />
   );
 };
-
-// export default () => {
-//   return (
-//     <Stack class="gap-8">
-//       <Examples title="Variant">
-//         <Flex class="gap-3">
-//           <Button variant="primary">
-//             Submit
-//           </Button>
-//           <Button variant="secondary">Submit</Button>
-//           <Button variant="tertiary">Submit</Button>
-//         </Flex>
-//       </Examples>
-//       <Examples title="Danger variants">
-//         <Flex class="gap-3">
-//           <Button variant="danger-primary">
-//             Submit
-//           </Button>
-//           <Button variant="danger-secondary">
-//             Submit
-//           </Button>
-//           <Button variant="danger-tertiary">
-//             Submit
-//           </Button>
-//         </Flex>
-//       </Examples>
-//       <Examples title="Size">
-//         <Flex class="gap-3">
-//           <Button variant="primary" size="sm">
-//             Submit
-//           </Button>
-//           <Button variant="secondary" size="sm">Submit</Button>
-//           <Button variant="tertiary" size="sm">Submit</Button>
-//         </Flex>
-//         <Flex class="gap-3">
-//           <Button variant="primary" size="md">
-//             Submit
-//           </Button>
-//           <Button variant="secondary" size="md">Submit</Button>
-//           <Button variant="tertiary" size="md">Submit</Button>
-//         </Flex>
-//         <Flex class="gap-3">
-//           <Button variant="primary" size="lg">
-//             Submit
-//           </Button>
-//           <Button variant="secondary" size="lg">Submit</Button>
-//           <Button variant="tertiary" size="lg">Submit</Button>
-//         </Flex>
-//         <Stack class="gap-3 w-full">
-//           <Button variant="primary" size="block">Submit</Button>
-//           <Button variant="secondary" size="block">Submit</Button>
-//         </Stack>
-//       </Examples>
-//       <Examples title="Rounded">
-//         <Flex class="gap-3">
-//           <Button variant="primary" rounded="square">
-//             Submit
-//           </Button>
-//           <Button variant="secondary" rounded="square">Submit</Button>
-//           <Button variant="tertiary" rounded="square">Submit</Button>
-//         </Flex>
-//         <Flex class="gap-3">
-//           <Button variant="primary" rounded="sm">
-//             Submit
-//           </Button>
-//           <Button variant="secondary" rounded="sm">Submit</Button>
-//           <Button variant="tertiary" rounded="sm">Submit</Button>
-//         </Flex>
-//         <Flex class="gap-3">
-//           <Button variant="primary" rounded="lg">
-//             Submit
-//           </Button>
-//           <Button variant="secondary" rounded="lg">Submit</Button>
-//           <Button variant="tertiary" rounded="lg">Submit</Button>
-//         </Flex>
-//         <Flex class="gap-3">
-//           <Button variant="primary" rounded="full">
-//             Submit
-//           </Button>
-//           <Button variant="secondary" rounded="full">Submit</Button>
-//           <Button variant="tertiary" rounded="full">Submit</Button>
-//         </Flex>
-//       </Examples>
-//       <Examples title="Icon">
-//         <Flex class="gap-3">
-//           <Button variant="primary" icon={<span>←</span>}>
-//             Previous
-//           </Button>
-//           <Button variant="secondary" icon={<span>←</span>}>Previous</Button>
-//         </Flex>
-//         <Flex class="gap-3">
-//           <Button variant="primary" _rightIcon={<span>→</span>}>
-//             Next
-//           </Button>
-//           <Button variant="secondary" _rightIcon={<span>→</span>}>Next</Button>
-//         </Flex>
-//       </Examples>
-//       <Examples title="Disabled">
-//         <Flex class="gap-3">
-//           <Button disabled={true} variant="primary">
-//             Submit
-//           </Button>
-//           <Button disabled={true} variant="secondary">Submit</Button>
-//           <Button disabled={true} variant="tertiary">Submit</Button>
-//         </Flex>
-//       </Examples>
-//       <Examples title="Loading">
-//         <Flex class="gap-3">
-//           <Button variant="primary" isLoading loadingContent="Submitting...">
-//             Submit
-//           </Button>
-//           <Button variant="secondary" isLoading loadingContent="Submitting...">
-//             Submit
-//           </Button>
-//           <Button variant="tertiary" isLoading loadingContent="Submitting...">
-//             Submit
-//           </Button>
-//         </Flex>
-//       </Examples>
-//     </Stack>
-//   );
-// };

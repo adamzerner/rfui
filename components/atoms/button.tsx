@@ -49,9 +49,9 @@ export const Button = (
   className += " " + (() => {
     switch (variant) {
       case "primary":
-        return "bg-primary-700 text-[#fff] hover:bg-primary-500";
+        return "text-[#fff]";
       case "secondary":
-        return "border border-primary-500 text-primary-900 hover:bg-primary-50";
+        return "border";
       case "tertiary":
         return "underline"; // https://ux.stackexchange.com/a/5494/39046
       case "danger-primary":
@@ -97,7 +97,16 @@ export const Button = (
         case "secondary":
           return "cursor-not-allowed text-neutral-500 border-neutral-300 hover:bg-[#fff]";
         case "tertiary":
-          return "cursor-not-allowed underline text-neutral-600";
+          return "cursor-not-allowed text-neutral-600";
+      }
+    } else {
+      switch (variant) {
+        case "primary":
+          return "bg-primary-700 hover:bg-primary-500";
+        case "secondary":
+          return "border-primary-500 text-primary-900 hover:bg-primary-50";
+        case "tertiary":
+          return "";
       }
     }
   })();

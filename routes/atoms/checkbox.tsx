@@ -1,35 +1,67 @@
 import { Checkbox } from "@/components/atoms/checkbox.tsx";
+import { CodeBlock } from "@/components/atoms/code-block.tsx";
+import { Stack } from "@/components/helpers/stack.tsx";
 import { ComponentDocsPage } from "@/islands/demo/component-docs-page.tsx";
 
 export default () => {
   const sections = [{
     title: "Basic",
     example: () => <Checkbox />,
-    exampleCode: () => <Checkbox />,
+    exampleCode: () => (
+      <CodeBlock class="mt-4" language="tsx" code={`<Checkbox />`} />
+    ),
+  }, {
+    title: "Size",
+    example: () => (
+      <Stack class="gap-5">
+        <Checkbox size="sm" />
+        <Checkbox size="md" />
+        <Checkbox size="lg" />
+      </Stack>
+    ),
+    exampleCode: () => (
+      <CodeBlock
+        class="mt-4"
+        language="tsx"
+        code={`<Stack class="gap-5">
+  <Checkbox size="sm" />
+  <Checkbox size="md" />
+  <Checkbox size="lg" />
+</Stack>`}
+      />
+    ),
+  }, {
+    title: "Disabled",
+    example: () => <Checkbox disabled />,
+    exampleCode: () => (
+      <CodeBlock
+        class="mt-4"
+        language="tsx"
+        code={`<Checkbox disabled />`}
+      />
+    ),
+  }, {
+    title: "Invalid",
+    example: () => <Checkbox invalid />,
+    exampleCode: () => (
+      <CodeBlock
+        class="mt-4"
+        language="tsx"
+        code={`<Checkbox invalid />`}
+      />
+    ),
   }];
   const props = [{
-    name: "type",
-    required: false,
-    type: '"neutral" | "info" | "success" | "warning" | "danger"',
-    default: '"neutral"',
-    notes: null,
-  }, {
     name: "size",
     required: false,
     type: '"sm" | "md" | "lg"',
     default: '"md"',
     notes: null,
   }, {
-    name: "rounded",
+    name: "invalid",
     required: false,
-    type: '"square" | "sm" | "lg" | "full"',
-    default: '"sm"',
-    notes: null,
-  }, {
-    name: "children",
-    required: true,
-    type: "ComponentChild",
-    default: null,
+    type: '"sm" | "md" | "lg"',
+    default: '"md"',
     notes: null,
   }];
 
@@ -51,22 +83,6 @@ export default () => {
 // export default () => {
 //   return (
 //     <Stack class="gap-8">
-//       <div>
-//         <div class="text-2xl mb-3">Source code</div>
-//         <Link href="https://github.com/adamzerner/rfui/blob/master/routes/atoms/checkbox.tsx">
-//           https://github.com/adamzerner/rfui/blob/master/routes/atoms/checkbox.tsx
-//         </Link>
-//       </div>
-//       <Examples title="Size">
-//         <Stack class="gap-5">
-//           <Checkbox size="sm" />
-//           <Checkbox size="md" />
-//           <Checkbox size="lg" />
-//         </Stack>
-//       </Examples>
-//       <Examples title="Disabled">
-//         <Checkbox disabled />
-//       </Examples>
 //       <Examples title="Invalid">
 //         <Checkbox invalid />
 //       </Examples>

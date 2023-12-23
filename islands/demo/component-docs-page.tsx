@@ -34,7 +34,7 @@ export const ComponentDocsPage = (
   const basicExample = sections.find((s) => s.title === "Basic")?.example;
 
   if (!basicExample) {
-    throw new Error("All components should have a basic example.");
+    return null;
   }
 
   return (

@@ -87,12 +87,7 @@ export const Alert = (
         <div class="flex-1">
           {alertHeader &&
             <div class={alertHeaderClass}>{alertHeader}</div>}
-          <div
-            class={alertBodyClass}
-            onClick={() => {
-              console.log("body");
-            }}
-          >
+          <div class={alertBodyClass}>
             {alertBody}
           </div>
         </div>

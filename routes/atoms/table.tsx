@@ -1,121 +1,591 @@
+import { CodeBlock } from "@/components/atoms/code-block.tsx";
+import { InlineCode } from "@/components/atoms/inline-code.tsx";
 import { Link } from "@/components/atoms/link.tsx";
 import { Table } from "@/components/atoms/table.tsx";
 import { Stack } from "@/components/helpers/stack.tsx";
-import { Examples } from "@/islands/demo/examples.tsx";
+import { ComponentDocsPage } from "@/islands/demo/component-docs-page.tsx";
 
 export default () => {
-  return (
-    <Stack class="gap-8">
+  const sections = [{
+    title: "Basic",
+    example: () => (
+      <Table>
+        <thead>
+          <tr>
+            <th>name</th>
+            <th>age</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Alice</td>
+            <td>19</td>
+          </tr>
+          <tr>
+            <td>Bob</td>
+            <td>25</td>
+          </tr>
+        </tbody>
+      </Table>
+    ),
+    exampleCode: () => (
+      <CodeBlock
+        class="mt-4"
+        language="tsx"
+        code={`<Table>
+  <thead>
+    <tr>
+      <th>name</th>
+      <th>age</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Alice</td>
+      <td>19</td>
+    </tr>
+    <tr>
+      <td>Bob</td>
+      <td>25</td>
+    </tr>
+  </tbody>
+</Table>`}
+      />
+    ),
+  }, {
+    title: "No border",
+    description: (
       <div>
-        <div class="text-2xl mb-3">Source code</div>
-        <Link href="https://github.com/adamzerner/rfui/blob/master/routes/atoms/table.tsx">
-          https://github.com/adamzerner/rfui/blob/master/routes/atoms/table.tsx
-        </Link>
+        Set <InlineCode>bordered</InlineCode> to <InlineCode>false</InlineCode>.
       </div>
-      <Examples title="Standard">
-        <Table>
-          <TableContent />
-        </Table>
-      </Examples>
-      <Examples title="No border">
-        <Table bordered={false}>
-          <TableContent />
-        </Table>
-      </Examples>
-      <Examples title="No hover">
-        <Table hover={false}>
-          <TableContent />
-        </Table>
-      </Examples>
-      <Examples title="Striped">
-        <Table striped bordered={false}>
-          <TableContent />
-        </Table>
-      </Examples>
-      <Examples title="Striped with border">
-        <Table striped>
-          <TableContent />
-        </Table>
-      </Examples>
-      <Examples title="Sticky header">
-        <Table stickyHeader>
-          <TableContent />
-        </Table>
-      </Examples>
-      <Examples title="Sticky first column">
-        <Table stickyFirstColumn>
-          <TableContent />
-        </Table>
-      </Examples>
-      <Examples title="Sticky header and first column">
-        <Table stickyHeader stickyFirstColumn>
-          <TableContent />
-        </Table>
-      </Examples>
-      <Examples title="Condensed">
-        <Table condensed>
-          <TableContent />
-        </Table>
-      </Examples>
-    </Stack>
-  );
-};
-
-const TableContent = () => {
-  const users = [{
-    name: "Alice",
-    age: 21,
-    city: "Boston",
-    occupation: "Software Engineer",
-    salary: "$120,000",
+    ),
+    example: () => (
+      <Table bordered={false}>
+        <thead>
+          <tr>
+            <th>name</th>
+            <th>age</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Alice</td>
+            <td>19</td>
+          </tr>
+          <tr>
+            <td>Bob</td>
+            <td>25</td>
+          </tr>
+        </tbody>
+      </Table>
+    ),
+    exampleCode: () => (
+      <CodeBlock
+        class="mt-4"
+        language="tsx"
+        code={`<Table bordered={false}>
+  <thead>
+    <tr>
+      <th>name</th>
+      <th>age</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Alice</td>
+      <td>19</td>
+    </tr>
+    <tr>
+      <td>Bob</td>
+      <td>25</td>
+    </tr>
+  </tbody>
+</Table>`}
+      />
+    ),
   }, {
-    name: "Bob",
-    age: 27,
-    city: "Seattle",
-    occupation: "Product Manager",
-    salary: "$105,000",
+    title: "No hover",
+    description: (
+      <div>
+        Set <InlineCode>hover</InlineCode> to <InlineCode>false</InlineCode>.
+      </div>
+    ),
+    example: () => (
+      <Table hover={false}>
+        <thead>
+          <tr>
+            <th>name</th>
+            <th>age</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Alice</td>
+            <td>19</td>
+          </tr>
+          <tr>
+            <td>Bob</td>
+            <td>25</td>
+          </tr>
+        </tbody>
+      </Table>
+    ),
+    exampleCode: () => (
+      <CodeBlock
+        class="mt-4"
+        language="tsx"
+        code={`<Table hover={false}>
+  <thead>
+    <tr>
+      <th>name</th>
+      <th>age</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Alice</td>
+      <td>19</td>
+    </tr>
+    <tr>
+      <td>Bob</td>
+      <td>25</td>
+    </tr>
+  </tbody>
+</Table>`}
+      />
+    ),
   }, {
-    name: "Carol",
-    age: 39,
-    city: "Arlington",
-    occupation: "UX Researcher",
-    salary: "$160,000",
+    title: "Striped",
+    description: (
+      <Stack class="gap-3">
+        <div>
+          Set <InlineCode>striped</InlineCode> to <InlineCode>true</InlineCode>
+          {" "}
+          and <InlineCode>bordered</InlineCode> to{" "}
+          <InlineCode>false</InlineCode>.
+        </div>
+        <div>
+          Discussions of utilizing zebra stripes:
+          <Link href="https://ux.stackexchange.com/q/3562/39046">
+            https://ux.stackexchange.com/q/3562/39046
+          </Link>,{" "}
+          <Link href="https://ux.stackexchange.com/q/60715/39046">
+            https://ux.stackexchange.com/q/60715/39046
+          </Link>.
+        </div>
+      </Stack>
+    ),
+    example: () => (
+      <Table striped bordered={false}>
+        <thead>
+          <tr>
+            <th>name</th>
+            <th>age</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Alice</td>
+            <td>19</td>
+          </tr>
+          <tr>
+            <td>Bob</td>
+            <td>25</td>
+          </tr>
+          <tr>
+            <td>Carol</td>
+            <td>22</td>
+          </tr>
+          <tr>
+            <td>Dave</td>
+            <td>34</td>
+          </tr>
+        </tbody>
+      </Table>
+    ),
+    exampleCode: () => (
+      <CodeBlock
+        class="mt-4"
+        language="tsx"
+        code={`<Table striped bordered={false}>
+  <thead>
+    <tr>
+      <th>name</th>
+      <th>age</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Alice</td>
+      <td>19</td>
+    </tr>
+    <tr>
+      <td>Bob</td>
+      <td>25</td>
+    </tr>
+    <tr>
+      <td>Carol</td>
+      <td>22</td>
+    </tr>
+    <tr>
+      <td>Dave</td>
+      <td>34</td>
+    </tr>
+  </tbody>
+</Table>`}
+      />
+    ),
   }, {
-    name: "David",
-    age: 41,
-    city: "New York",
-    occupation: "HR",
-    salary: "$90,000",
+    title: "Striped with border",
+    description: (
+      <div>
+        Set <InlineCode>striped</InlineCode> to <InlineCode>true</InlineCode>.
+      </div>
+    ),
+    example: () => (
+      <Table striped>
+        <thead>
+          <tr>
+            <th>name</th>
+            <th>age</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Alice</td>
+            <td>19</td>
+          </tr>
+          <tr>
+            <td>Bob</td>
+            <td>25</td>
+          </tr>
+          <tr>
+            <td>Carol</td>
+            <td>22</td>
+          </tr>
+          <tr>
+            <td>Dave</td>
+            <td>34</td>
+          </tr>
+        </tbody>
+      </Table>
+    ),
+    exampleCode: () => (
+      <CodeBlock
+        class="mt-4"
+        language="tsx"
+        code={`<Table striped>
+  <thead>
+    <tr>
+      <th>name</th>
+      <th>age</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Alice</td>
+      <td>19</td>
+    </tr>
+    <tr>
+      <td>Bob</td>
+      <td>25</td>
+    </tr>
+    <tr>
+      <td>Carol</td>
+      <td>22</td>
+    </tr>
+    <tr>
+      <td>Dave</td>
+      <td>34</td>
+    </tr>
+  </tbody>
+</Table>`}
+      />
+    ),
   }, {
-    name: "Emily",
-    age: 25,
-    city: "Portland",
-    occupation: "QA Engineer",
-    salary: "$60,000",
+    title: "Sticky header",
+    description: (
+      <Stack class="gap-3">
+        <div>
+          Set <InlineCode>stickyHeader</InlineCode> to{" "}
+          <InlineCode>true</InlineCode>.
+        </div>
+        <div>
+          Making the header sticky is helpful when the user needs to
+          cross-reference and avoid losing context.
+        </div>
+      </Stack>
+    ),
+    example: () => (
+      <Table stickyHeader>
+        <thead>
+          <tr>
+            <th>name</th>
+            <th>age</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Alice</td>
+            <td>19</td>
+          </tr>
+          <tr>
+            <td>Bob</td>
+            <td>25</td>
+          </tr>
+        </tbody>
+      </Table>
+    ),
+    exampleCode: () => (
+      <CodeBlock
+        class="mt-4"
+        language="tsx"
+        code={`<Table stickyHeader>
+  <thead>
+    <tr>
+      <th>name</th>
+      <th>age</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Alice</td>
+      <td>19</td>
+    </tr>
+    <tr>
+      <td>Bob</td>
+      <td>25</td>
+    </tr>
+  </tbody>
+</Table>`}
+      />
+    ),
+  }, {
+    title: "Sticky first column",
+    description: (
+      <Stack class="gap-3">
+        <div>
+          Set <InlineCode>stickyFirstColumn</InlineCode> to{" "}
+          <InlineCode>true</InlineCode>.
+        </div>
+        <div>
+          Making the first column sticky is helpful when the user needs to
+          cross-reference and avoid losing context.
+        </div>
+      </Stack>
+    ),
+    example: () => (
+      <Table stickyFirstColumn>
+        <thead>
+          <tr>
+            <th>name</th>
+            <th>age</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Alice</td>
+            <td>19</td>
+          </tr>
+          <tr>
+            <td>Bob</td>
+            <td>25</td>
+          </tr>
+        </tbody>
+      </Table>
+    ),
+    exampleCode: () => (
+      <CodeBlock
+        class="mt-4"
+        language="tsx"
+        code={`<Table stickyFirstColumn>
+  <thead>
+    <tr>
+      <th>name</th>
+      <th>age</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Alice</td>
+      <td>19</td>
+    </tr>
+    <tr>
+      <td>Bob</td>
+      <td>25</td>
+    </tr>
+  </tbody>
+</Table>`}
+      />
+    ),
+  }, {
+    title: "Sticky header and first column",
+    description: (
+      <div>
+        Set <InlineCode>stickyHeader</InlineCode> to{" "}
+        <InlineCode>true</InlineCode> and{" "}
+        <InlineCode>stickyFirstColumn</InlineCode> to{" "}
+        <InlineCode>true</InlineCode>.
+      </div>
+    ),
+    example: () => (
+      <Table stickyHeader stickyFirstColumn>
+        <thead>
+          <tr>
+            <th>name</th>
+            <th>age</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Alice</td>
+            <td>19</td>
+          </tr>
+          <tr>
+            <td>Bob</td>
+            <td>25</td>
+          </tr>
+        </tbody>
+      </Table>
+    ),
+    exampleCode: () => (
+      <CodeBlock
+        class="mt-4"
+        language="tsx"
+        code={`<Table stickyHeader>
+  <thead>
+    <tr>
+      <th>name</th>
+      <th>age</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Alice</td>
+      <td>19</td>
+    </tr>
+    <tr>
+      <td>Bob</td>
+      <td>25</td>
+    </tr>
+  </tbody>
+</Table>`}
+      />
+    ),
+  }, {
+    title: "Condensed",
+    description: (
+      <div>
+        Set <InlineCode>condensed</InlineCode> to <InlineCode>true</InlineCode>.
+      </div>
+    ),
+    example: () => (
+      <Table condensed>
+        <thead>
+          <tr>
+            <th>name</th>
+            <th>age</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Alice</td>
+            <td>19</td>
+          </tr>
+          <tr>
+            <td>Bob</td>
+            <td>25</td>
+          </tr>
+        </tbody>
+      </Table>
+    ),
+    exampleCode: () => (
+      <CodeBlock
+        class="mt-4"
+        language="tsx"
+        code={`<Table condensed>
+  <thead>
+    <tr>
+      <th>name</th>
+      <th>age</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Alice</td>
+      <td>19</td>
+    </tr>
+    <tr>
+      <td>Bob</td>
+      <td>25</td>
+    </tr>
+  </tbody>
+</Table>`}
+      />
+    ),
+  }];
+  const props = [{
+    name: "bordered",
+    required: false,
+    type: "boolean",
+    default: "true",
+    notes: null,
+  }, {
+    name: "hover",
+    required: false,
+    type: "boolean",
+    default: "true",
+    notes: null,
+  }, {
+    name: "striped",
+    required: false,
+    type: "boolean",
+    default: "false",
+    notes: (
+      <div>
+        Discussions of utilizing zebra stripes:{" "}
+        <Link href="https://ux.stackexchange.com/q/3562/39046">
+          https://ux.stackexchange.com/q/3562/39046
+        </Link>,{" "}
+        <Link href="https://ux.stackexchange.com/q/60715/39046">
+          https://ux.stackexchange.com/q/60715/39046
+        </Link>.
+      </div>
+    ),
+  }, {
+    name: "condensed",
+    required: false,
+    type: "boolean",
+    default: "false",
+    notes: null,
+  }, {
+    name: "stickyHeader",
+    required: false,
+    type: "boolean",
+    default: "false",
+    notes:
+      "Making the header sticky is helpful when the user needs to cross-reference and avoid losing context.",
+  }, {
+    name: "stickyFirstColumn",
+    required: false,
+    type: "boolean",
+    default: "false",
+    notes:
+      "Making the first column sticky is helpful when the user needs to cross-reference and avoid losing context.",
+  }, {
+    name: "children",
+    required: true,
+    type: "ComponentChild",
+    default: null,
+    notes: null,
   }];
 
   return (
-    <>
-      <thead>
-        <tr>
-          <th>name</th>
-          <th class="!text-right">age</th>
-          <th>city</th>
-          <th>occupation</th>
-          <th class="!text-right">salary</th>
-        </tr>
-      </thead>
-      <tbody>
-        {users.map((user) => (
-          <tr>
-            <td>{user.name}</td>
-            <td class="!text-right">{user.age}</td>
-            <td>{user.city}</td>
-            <td>{user.occupation}</td>
-            <td class="!text-right">{user.salary}</td>
-          </tr>
-        ))}
-      </tbody>
-    </>
+    <ComponentDocsPage
+      componentName="Table"
+      sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/atoms/table.tsx"
+      sections={sections}
+      props={props}
+    />
   );
 };

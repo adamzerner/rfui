@@ -337,32 +337,3 @@ export default () => {
     />
   );
 };
-
-// export default () => {
-//   return (
-//     <Stack class="gap-8">
-//       <Examples title="Custom">
-//         <UL bulletType="none">
-//           <li>
-//             <Flex class="gap-2">
-//               <span>😎</span>
-//               One
-//             </Flex>
-//           </li>
-//           <li>
-//             <Flex class="gap-2">
-//               <span>😎</span>
-//               Two
-//             </Flex>
-//           </li>
-//           <li>
-//             <Flex class="gap-2">
-//               <span>😎</span>
-//               Three
-//             </Flex>
-//           </li>
-//         </UL>
-//       </Examples>
-//     </Stack>
-//   );
-// };

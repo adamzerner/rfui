@@ -223,12 +223,3 @@ export default () => {
   );
 };
 
-// export default () => {
-//   return (
-//     <Stack class="gap-8">
-//       <Examples title="New tab">
-//
-//       </Examples>
-//     </Stack>
-//   );
-// };

@@ -140,16 +140,3 @@ export default () => {
     />
   );
 };
-
-// export default () => {
-//   return (
-//     <Stack class="gap-8">
-//       <Examples title="Name">
-//         <Stepper name="age" />
-//       </Examples>
-//       <Examples title="Min and max">
-//         <Stepper min={0} max={5} />
-//       </Examples>
-//     </Stack>
-//   );
-// };

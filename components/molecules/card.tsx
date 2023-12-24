@@ -24,7 +24,7 @@ TODO:
  * @see {@link https://rfui.deno.dev/molecules/card}
  *
  * @example
- * <Card></Card>
+ * <Card>Example</Card>
  */
 export const Card = (
   {

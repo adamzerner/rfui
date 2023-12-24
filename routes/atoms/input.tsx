@@ -142,7 +142,7 @@ export default () => {
       </div>
     ),
     example: () => (
-      <Stack class="gap-5 w-fit">
+      <Stack class="gap-5">
         <Input type="text" placeholder="text" />
         <Input type="email" placeholder="email" />
         <Input type="number" />
@@ -159,7 +159,7 @@ export default () => {
       <CodeBlock
         class="mt-4"
         language="tsx"
-        code={`<Stack class="gap-5 w-fit">
+        code={`<Stack class="gap-5">
   <Input type="text" placeholder="text" />
   <Input type="email" placeholder="email" />
   <Input type="number" />

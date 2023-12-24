@@ -10,14 +10,6 @@ export type CardType = {
   children: ComponentChild;
 } & Omit<JSX.HTMLAttributes<HTMLDivElement>, "size">;
 
-/*
-
-TODO:
-- Improve CardHeader
-- Think about border
-
-*/
-
 /** *
  * @function Card
  *

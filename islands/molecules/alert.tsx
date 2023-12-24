@@ -83,7 +83,9 @@ export const Alert = (
   return (
     <div class={containerClass} {...restWithoutClass}>
       <Flex class="gap-5 justify-between items-center">
-        <Icon variant={variant} />
+        <span class="hidden sm:inline">
+          <Icon variant={variant} />
+        </span>
         <div class="flex-1">
           {alertHeader &&
             <div class={alertHeaderClass}>{alertHeader}</div>}

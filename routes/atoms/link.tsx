@@ -61,8 +61,8 @@ export default () => {
       </div>
     ),
     example: () => (
-      <Stack class="gap-5">
-        <Flex class="gap-3">
+      <Stack class="gap-8">
+        <Stack class="gap-5">
           <Link _newTab href="https://example.com" underline="always">
             _newTab
           </Link>
@@ -72,8 +72,8 @@ export default () => {
           <Link _newTab href="https://example.com" underline="none">
             _newTab
           </Link>
-        </Flex>
-        <Flex class="gap-3">
+        </Stack>
+        <Stack class="gap-5">
           <Link
             _newTab
             _includeNewTabIcon
@@ -98,15 +98,15 @@ export default () => {
           >
             _includeNewTabIcon
           </Link>
-        </Flex>
+        </Stack>
       </Stack>
     ),
     exampleCode: () => (
       <CodeBlock
         class="mt-4"
         language="tsx"
-        code={`<Stack class="gap-5">
-  <Flex class="gap-3">
+        code={`<Stack class="gap-8">
+  <Stack class="gap-5">
     <Link _newTab href="https://example.com" underline="always">
       _newTab
     </Link>
@@ -116,15 +116,15 @@ export default () => {
     <Link _newTab href="https://example.com" underline="none">
       _newTab
     </Link>
-  </Flex>
-  <Flex class="gap-3">
+  </Stack>
+  <Stack class="gap-5">
     <Link
       _newTab
       _includeNewTabIcon
       href="https://example.com"
       underline="always"
     >
-      _newTab _includeNewTabIcon
+      _includeNewTabIcon
     </Link>
     <Link
       _newTab
@@ -132,7 +132,7 @@ export default () => {
       href="https://example.com"
       underline="hover"
     >
-      _newTab _includeNewTabIcon
+      _includeNewTabIcon
     </Link>
     <Link
       _newTab
@@ -140,9 +140,9 @@ export default () => {
       href="https://example.com"
       underline="none"
     >
-      _newTab _includeNewTabIcon
+      _includeNewTabIcon
     </Link>
-  </Flex>
+  </Stack>
 </Stack>`}
       />
     ),
@@ -222,4 +222,3 @@ export default () => {
     />
   );
 };
-

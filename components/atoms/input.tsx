@@ -23,7 +23,7 @@ export const Input = (
   }: InputType,
 ) => {
   let className =
-    "border border-neutral-500 px-2 py-1 focus:outline-none focus:border-neutral-900 focus:shadow-sm";
+    "border border-neutral-500 px-2 py-1 w-full focus:outline-none focus:border-neutral-900 focus:shadow-sm";
 
   className += " " + (() => {
     switch (size) {

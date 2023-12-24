@@ -243,12 +243,12 @@ export default () => {
         <FormField
           label="Name on card"
           type="text"
-          class="w-14"
+          class="w-14 max-w-full"
         />
         <FormField
           label="Card number"
           type="text"
-          class="w-14"
+          class="w-14 max-w-full"
         />
         <FormField
           label="Expiry date"
@@ -270,12 +270,12 @@ export default () => {
   <FormField
     label="Name on card"
     type="text"
-    class="w-14"
+    class="w-14 max-w-full"
   />
   <FormField
     label="Card number"
     type="text"
-    class="w-14"
+    class="w-14 max-w-full"
   />
   <FormField
     label="Expiry date"

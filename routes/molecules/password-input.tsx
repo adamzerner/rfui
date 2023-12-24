@@ -1,35 +1,233 @@
+import { CodeBlock } from "@/components/atoms/code-block.tsx";
+import { InlineCode } from "@/components/atoms/inline-code.tsx";
 import { Link } from "@/components/atoms/link.tsx";
+import { OL } from "@/components/atoms/ol.tsx";
+import { UL } from "@/components/atoms/ul.tsx";
 import { Stack } from "@/components/helpers/stack.tsx";
-import { Examples } from "@/islands/demo/examples.tsx";
+import { ComponentDocsPage } from "@/islands/demo/component-docs-page.tsx";
 import { PasswordInput } from "@/islands/molecules/password-input.tsx";
 
 export default () => {
-  return (
-    <Stack class="gap-8">
+  const sections = [{
+    title: "Basic",
+    example: () => <PasswordInput />,
+    exampleCode: () => (
+      <CodeBlock
+        class="mt-4"
+        language="tsx"
+        code={`<PasswordInput />`}
+      />
+    ),
+  }, {
+    title: "Default visible",
+    description: (
       <div>
-        <div class="text-2xl mb-3">Source code</div>
-        <Link href="https://github.com/adamzerner/rfui/blob/master/routes/molecules/password-input.tsx">
-          https://github.com/adamzerner/rfui/blob/master/routes/molecules/password-input.tsx
-        </Link>
+        <div class="mb-2">Consider the factors at play here, including:</div>
+        <OL>
+          <li>
+            Usability: Seeing * as you type instead of characters like "a" and
+            "b" can hurt usability.
+          </li>
+          <li>
+            Actual security: In public places, ***** can prevent malicious
+            onlookers from stealing your password.
+          </li>
+          <li>
+            Perceived security: Some users expect to see * as they type their
+            password and might question how secure your website is if they see
+            their password in plaintext by default instead.
+          </li>
+        </OL>
+        <div class="mt-4 mb-2">
+          Related reading:
+        </div>
+        <UL>
+          <li>
+            <Link href="https://www.nngroup.com/articles/stop-password-masking">
+              Stop Password Masking
+            </Link>
+          </li>
+          <li>
+            <Link href="https://www.lukew.com/ff/entry.asp?1653">
+              Mobile Design Details: Hide/Show Passwords
+            </Link>
+          </li>
+          <li>
+            <Link href="https://ux.stackexchange.com/q/144503/39046">
+              Is password-unmasking worth the potential security downside?
+            </Link>
+          </li>
+        </UL>
       </div>
-      <Examples title="Size">
-        <Stack class="gap-5">
-          <PasswordInput size="sm" />
-          <PasswordInput size="md" />
-          <PasswordInput size="lg" />
-        </Stack>
-      </Examples>
-      <Examples title="Rounded">
-        <Stack class="gap-5">
-          <PasswordInput rounded="square" />
-          <PasswordInput rounded="sm" />
-          <PasswordInput rounded="lg" />
-          <PasswordInput rounded="full" />
-        </Stack>
-      </Examples>
-      <Examples title="Invalid">
-        <PasswordInput invalid />
-      </Examples>
-    </Stack>
+    ),
+    example: () => <PasswordInput defaultVisibility="shown" />,
+    exampleCode: () => (
+      <CodeBlock
+        class="mt-4"
+        language="tsx"
+        code={`<PasswordInput defaultVisibility="shown" />`}
+      />
+    ),
+  }, {
+    title: "Size",
+    description: (
+      <div>
+        Set <InlineCode>size</InlineCode> to <InlineCode>"sm"</InlineCode>,{" "}
+        <InlineCode>"md"</InlineCode>, or{" "}
+        <InlineCode>"lg"</InlineCode>. Defaults to{" "}
+        <InlineCode>"md"</InlineCode>.
+      </div>
+    ),
+    example: () => (
+      <Stack class="gap-5">
+        <PasswordInput size="sm" />
+        <PasswordInput size="md" />
+        <PasswordInput size="lg" />
+      </Stack>
+    ),
+    exampleCode: () => (
+      <CodeBlock
+        class="mt-4"
+        language="tsx"
+        code={`<Stack class="gap-5">
+  <PasswordInput size="sm" />
+  <PasswordInput size="md" />
+  <PasswordInput size="lg" />
+</Stack>`}
+      />
+    ),
+  }, {
+    title: "Rounded",
+    description: (
+      <div>
+        Set <InlineCode>rounded</InlineCode> to{" "}
+        <InlineCode>"square"</InlineCode>, <InlineCode>"sm"</InlineCode>,{" "}
+        <InlineCode>"lg"</InlineCode>, or{" "}
+        <InlineCode>"full"</InlineCode>. Defaults to{" "}
+        <InlineCode>"sm"</InlineCode>.
+      </div>
+    ),
+    example: () => (
+      <Stack class="gap-5">
+        <PasswordInput rounded="square" />
+        <PasswordInput rounded="sm" />
+        <PasswordInput rounded="lg" />
+        <PasswordInput rounded="full" />
+      </Stack>
+    ),
+    exampleCode: () => (
+      <CodeBlock
+        class="mt-4"
+        language="tsx"
+        code={`<Stack class="gap-5">
+  <PasswordInput rounded="square" />
+  <PasswordInput rounded="sm" />
+  <PasswordInput rounded="lg" />
+  <PasswordInput rounded="full" />
+</Stack>`}
+      />
+    ),
+  }, {
+    title: "Invalid",
+    description: (
+      <div>
+        Set <InlineCode>invalid</InlineCode> to <InlineCode>true</InlineCode> or
+        {" "}
+        <InlineCode>false</InlineCode>. Defaults to{" "}
+        <InlineCode>false</InlineCode>.
+      </div>
+    ),
+    example: () => <PasswordInput invalid />,
+    exampleCode: () => (
+      <CodeBlock
+        class="mt-4"
+        language="tsx"
+        code={`<PasswordInput invalid />`}
+      />
+    ),
+  }];
+  const props = [{
+    name: "defaultVisibility",
+    required: false,
+    type: '"hidden" | "shown"',
+    default: '"hidden"',
+    notes: (
+      <div>
+        <div class="mb-3">
+          Whether the password is displayed with asterisks (like this: ******)
+          or in plain text (like this: foobar).
+        </div>
+        <div class="mb-2">Consider the factors at play here, including:</div>
+        <OL>
+          <li>
+            Usability: Seeing * as you type instead of characters like "a" and
+            "b" can hurt usability.
+          </li>
+          <li>
+            Actual security: In public places, ***** can prevent malicious
+            onlookers from stealing your password.
+          </li>
+          <li>
+            Perceived security: Some users expect to see * as they type their
+            password and might question how secure your website is if they see
+            their password in plaintext by default instead.
+          </li>
+        </OL>
+        <div class="mt-4 mb-2">
+          Related reading:
+        </div>
+        <UL>
+          <li>
+            <Link href="https://www.nngroup.com/articles/stop-password-masking">
+              Stop Password Masking
+            </Link>
+          </li>
+          <li>
+            <Link href="https://www.lukew.com/ff/entry.asp?1653">
+              Mobile Design Details: Hide/Show Passwords
+            </Link>
+          </li>
+          <li>
+            <Link href="https://ux.stackexchange.com/q/144503/39046">
+              Is password-unmasking worth the potential security downside?
+            </Link>
+          </li>
+        </UL>
+      </div>
+    ),
+  }, {
+    name: "containerProps",
+    required: false,
+    type: 'Omit<JSX.HTMLAttributes<HTMLDivElement>, "size">',
+    default: null,
+    notes: (
+      <div>
+        <div>
+          The structure of <InlineCode>PasswordInput</InlineCode>{" "}
+          is something like this:
+        </div>
+        <CodeBlock
+          language="tsx"
+          code={`<Flex>
+  <Input />
+  <button></button>
+</Flex>`}
+        />
+        <div class="mt-4 mb-3">
+          <InlineCode>containerProps</InlineCode> will get passed to{" "}
+          <InlineCode>Flex</InlineCode> like this:
+        </div>
+        <CodeBlock language="tsx" code={`<Flex {...containerProps}>`} />
+      </div>
+    ),
+  }];
+
+  return (
+    <ComponentDocsPage
+      componentName="PasswordInput"
+      sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/molecules/password-input.tsx"
+      sections={sections}
+      props={props}
+    />
   );
 };

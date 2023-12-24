@@ -40,7 +40,7 @@ export const PasswordInput = (
     setShouldShow((v) => !v);
   };
   const buttonClass = (() => {
-    let s = "bg-neutral-50 px-1";
+    let s = "bg-neutral-50 px-2";
 
     if ("size" in inputProps) {
       if (inputProps.size === "lg") {
@@ -83,7 +83,6 @@ export const PasswordInput = (
         type="button"
         onClick={toggleShouldShow}
         class={buttonClass}
-        style={{ minWidth: 45 }}
       >
         {shouldShow ? "Hide" : "Show"}
       </button>

@@ -10,7 +10,7 @@ import { Card } from "@/components/molecules/card.tsx";
 import { LeftNav } from "@/routes/index.tsx";
 import { JSX } from "preact";
 
-type ComponentDocsPageType = {
+export type ComponentDocsPageType = {
   componentName: string;
   sourceCodeUrl: string;
   sections: {

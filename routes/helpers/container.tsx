@@ -1,21 +1,40 @@
-import { Link } from "@/components/atoms/link.tsx";
+import { CodeBlock } from "@/components/atoms/code-block.tsx";
 import { Container } from "@/components/helpers/container.tsx";
-import { Stack } from "@/components/helpers/stack.tsx";
+import { ComponentDocsPage } from "@/islands/demo/component-docs-page.tsx";
 
 export default () => {
+  const sections = [{
+    title: "Basic",
+    example: () => <Container class="bg-neutral-50">Example</Container>,
+    exampleCode: () => (
+      <CodeBlock
+        class="mt-4"
+        language="tsx"
+        code={`<Container class="bg-neutral-50">Example</Container>`}
+      />
+    ),
+  }];
+  const props = [{
+    name: "size",
+    required: false,
+    type: '"sm" | "md" | "lg" | "xl"',
+    default: '"lg"',
+    notes:
+      "The screen size that you want the width of the inner content to be.",
+  }, {
+    name: "children",
+    required: true,
+    type: "ComponentChild",
+    default: null,
+    notes: null,
+  }];
+
   return (
-    <Stack class="gap-8">
-      <div>
-        <div class="text-2xl mb-3">Source code</div>
-        <Link href="https://github.com/adamzerner/rfui/blob/master/routes/helpers/container.tsx">
-          https://github.com/adamzerner/rfui/blob/master/routes/helpers/container.tsx
-        </Link>
-      </div>
-      <div>
-        <Container class="bg-neutral-100">
-          <div>content</div>
-        </Container>
-      </div>
-    </Stack>
+    <ComponentDocsPage
+      componentName="Container"
+      sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/helpers/container.tsx"
+      sections={sections}
+      props={props}
+    />
   );
 };

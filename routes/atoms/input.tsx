@@ -183,7 +183,7 @@ export default () => {
   }, {
     name: "rounded",
     required: false,
-    type: '"square" | "sm" | "lg" | "full',
+    type: '"square" | "sm" | "lg" | "full"',
     default: '"sm"',
     notes: null,
   }, {

@@ -1,22 +1,43 @@
-import { Link } from "@/components/atoms/link.tsx";
+import { CodeBlock } from "@/components/atoms/code-block.tsx";
 import { Stack } from "@/components/helpers/stack.tsx";
+import { ComponentDocsPage } from "@/islands/demo/component-docs-page.tsx";
 
 export default () => {
+  const sections = [{
+    title: "Basic",
+    example: () => (
+      <Stack class="gap-5">
+        <div>top</div>
+        <div>middle</div>
+        <div>bottom</div>
+      </Stack>
+    ),
+    exampleCode: () => (
+      <CodeBlock
+        class="mt-4"
+        language="tsx"
+        code={`<Stack class="gap-5">
+  <div>top</div>
+  <div>middle</div>
+  <div>bottom</div>
+</Stack>`}
+      />
+    ),
+  }];
+  const props = [{
+    name: "children",
+    required: true,
+    type: "ComponentChild",
+    default: null,
+    notes: null,
+  }];
+
   return (
-    <div class="flex flex-col gap-8">
-      <div>
-        <div class="text-2xl mb-3">Source code</div>
-        <Link href="https://github.com/adamzerner/rfui/blob/master/routes/helpers/stack.tsx">
-          https://github.com/adamzerner/rfui/blob/master/routes/helpers/stack.tsx
-        </Link>
-      </div>
-      <div>
-        <Stack class="gap-2">
-          <div>top</div>
-          <div>middle</div>
-          <div>bottom</div>
-        </Stack>
-      </div>
-    </div>
+    <ComponentDocsPage
+      componentName="Stack"
+      sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/helpers/stack.tsx"
+      sections={sections}
+      props={props}
+    />
   );
 };

@@ -26,7 +26,7 @@ export default () => {
       </p>
     ),
     example: () => (
-      <Flex class="gap-3">
+      <Flex class="gap-3 flex-wrap">
         <Badge type="neutral">neutral</Badge>
         <Badge type="info">info</Badge>
         <Badge type="success">success</Badge>
@@ -38,7 +38,7 @@ export default () => {
       <CodeBlock
         class="mt-4"
         language="tsx"
-        code={`<Flex class="gap-3">
+        code={`<Flex class="gap-3 flex-wrap">
   <Badge type="neutral">neutral</Badge>
   <Badge type="info">info</Badge>
   <Badge type="success">success</Badge>
@@ -60,21 +60,21 @@ export default () => {
     ),
     example: () => (
       <Stack class="gap-5">
-        <Flex class="gap-3">
+        <Flex class="gap-3 flex-wrap">
           <Badge type="neutral" size="sm">neutral</Badge>
           <Badge type="info" size="sm">info</Badge>
           <Badge type="success" size="sm">success</Badge>
           <Badge type="warning" size="sm">warning</Badge>
           <Badge type="danger" size="sm">danger</Badge>
         </Flex>
-        <Flex class="gap-3">
+        <Flex class="gap-3 flex-wrap">
           <Badge type="neutral" size="md">neutral</Badge>
           <Badge type="info" size="md">info</Badge>
           <Badge type="success" size="md">success</Badge>
           <Badge type="warning" size="md">warning</Badge>
           <Badge type="danger" size="md">danger</Badge>
         </Flex>
-        <Flex class="gap-3">
+        <Flex class="gap-3 flex-wrap">
           <Badge type="neutral" size="lg">neutral</Badge>
           <Badge type="info" size="lg">info</Badge>
           <Badge type="success" size="lg">success</Badge>
@@ -88,21 +88,21 @@ export default () => {
         class="mt-4"
         language="tsx"
         code={`<Stack class="gap-5">
-  <Flex class="gap-3">
+  <Flex class="gap-3 flex-wrap">
     <Badge type="neutral" size="sm">neutral</Badge>
     <Badge type="info" size="sm">info</Badge>
     <Badge type="success" size="sm">success</Badge>
     <Badge type="warning" size="sm">warning</Badge>
     <Badge type="danger" size="sm">danger</Badge>
   </Flex>
-  <Flex class="gap-3">
+  <Flex class="gap-3 flex-wrap">
     <Badge type="neutral" size="md">neutral</Badge>
     <Badge type="info" size="md">info</Badge>
     <Badge type="success" size="md">success</Badge>
     <Badge type="warning" size="md">warning</Badge>
     <Badge type="danger" size="md">danger</Badge>
   </Flex>
-  <Flex class="gap-3">
+  <Flex class="gap-3 flex-wrap">
     <Badge type="neutral" size="lg">neutral</Badge>
     <Badge type="info" size="lg">info</Badge>
     <Badge type="success" size="lg">success</Badge>
@@ -126,28 +126,28 @@ export default () => {
     ),
     example: () => (
       <Stack class="gap-5">
-        <Flex class="gap-3">
+        <Flex class="gap-3 flex-wrap">
           <Badge type="neutral" rounded="square">neutral</Badge>
           <Badge type="info" rounded="square">info</Badge>
           <Badge type="success" rounded="square">success</Badge>
           <Badge type="warning" rounded="square">warning</Badge>
           <Badge type="danger" rounded="square">danger</Badge>
         </Flex>
-        <Flex class="gap-3">
+        <Flex class="gap-3 flex-wrap">
           <Badge type="neutral" rounded="sm">neutral</Badge>
           <Badge type="info" rounded="sm">info</Badge>
           <Badge type="success" rounded="sm">success</Badge>
           <Badge type="warning" rounded="sm">warning</Badge>
           <Badge type="danger" rounded="sm">danger</Badge>
         </Flex>
-        <Flex class="gap-3">
+        <Flex class="gap-3 flex-wrap">
           <Badge type="neutral" rounded="lg">neutral</Badge>
           <Badge type="info" rounded="lg">info</Badge>
           <Badge type="success" rounded="lg">success</Badge>
           <Badge type="warning" rounded="lg">warning</Badge>
           <Badge type="danger" rounded="lg">danger</Badge>
         </Flex>
-        <Flex class="gap-3">
+        <Flex class="gap-3 flex-wrap">
           <Badge type="neutral" rounded="full">neutral</Badge>
           <Badge type="info" rounded="full">info</Badge>
           <Badge type="success" rounded="full">success</Badge>
@@ -161,28 +161,28 @@ export default () => {
         class="mt-4"
         language="tsx"
         code={`<Stack class="gap-5">
-  <Flex class="gap-3">
+  <Flex class="gap-3 flex-wrap">
     <Badge type="neutral" rounded="square">neutral</Badge>
     <Badge type="info" rounded="square">info</Badge>
     <Badge type="success" rounded="square">success</Badge>
     <Badge type="warning" rounded="square">warning</Badge>
     <Badge type="danger" rounded="square">danger</Badge>
   </Flex>
-  <Flex class="gap-3">
+  <Flex class="gap-3 flex-wrap">
     <Badge type="neutral" rounded="sm">neutral</Badge>
     <Badge type="info" rounded="sm">info</Badge>
     <Badge type="success" rounded="sm">success</Badge>
     <Badge type="warning" rounded="sm">warning</Badge>
     <Badge type="danger" rounded="sm">danger</Badge>
   </Flex>
-  <Flex class="gap-3">
+  <Flex class="gap-3 flex-wrap">
     <Badge type="neutral" rounded="lg">neutral</Badge>
     <Badge type="info" rounded="lg">info</Badge>
     <Badge type="success" rounded="lg">success</Badge>
     <Badge type="warning" rounded="lg">warning</Badge>
     <Badge type="danger" rounded="lg">danger</Badge>
   </Flex>
-  <Flex class="gap-3">
+  <Flex class="gap-3 flex-wrap">
     <Badge type="neutral" rounded="full">neutral</Badge>
     <Badge type="info" rounded="full">info</Badge>
     <Badge type="success" rounded="full">success</Badge>

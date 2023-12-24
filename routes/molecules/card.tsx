@@ -588,8 +588,8 @@ export default () => {
 
   return (
     <ComponentDocsPage
-      componentName="Alert"
-      sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/atoms/alert.tsx"
+      componentName="Card"
+      sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/atoms/card.tsx"
       sections={sections}
       props={props}
     />

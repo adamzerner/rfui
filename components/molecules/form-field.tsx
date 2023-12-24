@@ -30,7 +30,7 @@ export type FormFieldType = {
  * @param requiredIndicator See https://ux.stackexchange.com/q/840/39046 for a discussion.
  *
  * @example
- * <FormField label="Name" type="text" />
+ * <FormField label="Name" />
  */
 export const FormField = (
   {

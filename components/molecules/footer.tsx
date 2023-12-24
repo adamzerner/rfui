@@ -22,7 +22,7 @@ export type FooterType = {
  */
 export const Footer = (
   {
-    size,
+    size = "md",
     background = "neutral",
     children,
     ...rest
@@ -59,8 +59,17 @@ export const FooterColumn = ({ children }: { children: ComponentChild }) => {
   return <Stack class="gap-5">{children}</Stack>;
 };
 
-export const FooterHeading = ({ children }: { children: ComponentChild }) => {
-  return <div class="text-xl font-bold mb-3 text-neutral-200">{children}</div>;
+export const FooterHeading = (
+  { background = "neutral", children }: {
+    background?: "neutral" | "none";
+    children: ComponentChild;
+  },
+) => {
+  const textColor = background === "neutral"
+    ? "text-neutral-200"
+    : "text-neutral-500";
+
+  return <div class={`text-xl font-bold mb-3 ${textColor}`}>{children}</div>;
 };
 
 export const FooterItem = (

@@ -12,7 +12,7 @@ import { JSX } from "preact";
 
 export type ComponentDocsPageType = {
   componentName: string;
-  description?: string;
+  notes?: string | JSX.Element;
   sourceCodeUrl: string;
   sections: {
     title: string;
@@ -30,7 +30,7 @@ export type ComponentDocsPageType = {
 };
 
 export const ComponentDocsPage = (
-  { componentName, description, sourceCodeUrl, sections, props }:
+  { componentName, notes, sourceCodeUrl, sections, props }:
     ComponentDocsPageType,
 ) => {
   const basicExample = sections.find((s) => s.title === "Basic")?.example;
@@ -48,7 +48,7 @@ export const ComponentDocsPage = (
       <main class="flex-1 max-w-full">
         <Header
           componentName={componentName}
-          description={description}
+          notes={notes}
           sourceCodeUrl={sourceCodeUrl}
           example={basicExample}
         />
@@ -59,9 +59,9 @@ export const ComponentDocsPage = (
   );
 };
 
-const Header = ({ componentName, description, sourceCodeUrl, example }: {
+const Header = ({ componentName, notes, sourceCodeUrl, example }: {
   componentName: ComponentDocsPageType["componentName"];
-  description: ComponentDocsPageType["description"];
+  notes: ComponentDocsPageType["notes"];
   sourceCodeUrl: ComponentDocsPageType["sourceCodeUrl"];
   example: () => JSX.Element;
 }) => {
@@ -70,8 +70,8 @@ const Header = ({ componentName, description, sourceCodeUrl, example }: {
       <H1 class="!mt-0">{componentName}</H1>
       <Stack class="gap-5">
         <Text>
-          {description &&
-            <p class="text-2xl mb-4">{description}</p>}
+          {notes &&
+            <p>{notes}</p>}
           <Link
             href={sourceCodeUrl}
             _includeNewTabIcon

@@ -8,6 +8,16 @@ import { ComponentDocsPage } from "@/islands/demo/component-docs-page.tsx";
 import { PasswordInput } from "@/islands/molecules/password-input.tsx";
 
 export default () => {
+  const notes = (
+    <div>
+      The ability to see your password in plain text as you're typing{" "}
+      <Link href="https://www.nngroup.com/articles/stop-password-masking">
+        often
+      </Link>{" "}
+      <Link href="https://www.lukew.com/ff/entry.asp?1653">improves</Link>{" "}
+      <Link href="https://ux.stackexchange.com/q/144503/39046">usability</Link>.
+    </div>
+  );
   const sections = [{
     title: "Basic",
     example: () => <PasswordInput />,
@@ -225,6 +235,7 @@ export default () => {
   return (
     <ComponentDocsPage
       componentName="PasswordInput"
+      notes={notes}
       sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/molecules/password-input.tsx"
       sections={sections}
       props={props}

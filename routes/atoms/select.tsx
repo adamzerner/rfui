@@ -1,10 +1,24 @@
 import { CodeBlock } from "@/components/atoms/code-block.tsx";
 import { InlineCode } from "@/components/atoms/inline-code.tsx";
+import { Link } from "@/components/atoms/link.tsx";
 import { Select } from "@/components/atoms/select.tsx";
 import { Stack } from "@/components/helpers/stack.tsx";
 import { ComponentDocsPage } from "@/islands/demo/component-docs-page.tsx";
 
 export default () => {
+  const notes = (
+    <div>
+      Select dropdowns are{" "}
+      <Link href="https://ux.stackexchange.com/q/456/39046">appropriate</Link>
+      {" "}
+      when you are allowing the user to choose between many options. If there
+      are only a few options to choose from, prefer the{" "}
+      <Link href="/atoms/radio-button">
+        <InlineCode>RadioButton</InlineCode>
+      </Link>{" "}
+      component.
+    </div>
+  );
   const sections = [{
     title: "Basic",
     example: () => (
@@ -216,6 +230,7 @@ export default () => {
   return (
     <ComponentDocsPage
       componentName="Select"
+      notes={notes}
       sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/atoms/select.tsx"
       sections={sections}
       props={props}

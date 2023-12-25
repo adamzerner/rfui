@@ -83,7 +83,7 @@ export const Alert = (
   return (
     <div class={containerClass} {...restWithoutClass}>
       <Flex class="gap-5 justify-between items-center">
-        <span class="hidden sm:inline">
+        <span class="hidden sm:inline self-start">
           <Icon variant={variant} />
         </span>
         <div class="flex-1">
@@ -153,7 +153,7 @@ const Icon = ({ variant }: { variant: AlertType["variant"] }) => {
           viewBox="0 0 24 24"
           strokeWidth={1.5}
           stroke="currentColor"
-          className="w-6 h-6 self-start text-supporting-green-500"
+          className="w-6 h-6 text-supporting-green-500"
         >
           <path
             strokeLinecap="round"
@@ -171,7 +171,7 @@ const Icon = ({ variant }: { variant: AlertType["variant"] }) => {
           viewBox="0 0 24 24"
           strokeWidth={1.5}
           stroke="currentColor"
-          className="w-6 h-6 self-start text-primary-500"
+          className="w-6 h-6 text-primary-500"
         >
           <path
             strokeLinecap="round"
@@ -189,7 +189,7 @@ const Icon = ({ variant }: { variant: AlertType["variant"] }) => {
           viewBox="0 0 24 24"
           strokeWidth={1.5}
           stroke="currentColor"
-          className="w-6 h-6 self-start text-supporting-yellow-700"
+          className="w-6 h-6 text-supporting-yellow-700"
         >
           <path
             strokeLinecap="round"
@@ -207,7 +207,7 @@ const Icon = ({ variant }: { variant: AlertType["variant"] }) => {
           viewBox="0 0 24 24"
           strokeWidth={1.5}
           stroke="currentColor"
-          className="w-6 h-6 self-start text-supporting-red-500"
+          className="w-6 h-6 text-supporting-red-500"
         >
           <path
             strokeLinecap="round"
@@ -225,7 +225,7 @@ const Icon = ({ variant }: { variant: AlertType["variant"] }) => {
           viewBox="0 0 24 24"
           strokeWidth={1.5}
           stroke="currentColor"
-          className="w-6 h-6 self-start text-neutral-500"
+          className="w-6 h-6 text-neutral-500"
         >
           <path
             strokeLinecap="round"

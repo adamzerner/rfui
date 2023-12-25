@@ -198,6 +198,109 @@ export default () => {
 </Footer>`}
       />
     ),
+  }, {
+    title: "Without default margin",
+    description: (
+      <Stack class="gap-3">
+        <div>
+          By default, there is a top margin applied to the footer. This is
+          helpful by providing a sensible default. However, you can override
+          this default margin if you'd like as shown below.
+        </div>
+        <div>
+          The example below uses{" "}
+          <Link href="https://tailwindcss.com/docs/configuration#important-modifier">
+            Tailwind's imporant modifier
+          </Link>{" "}
+          to make sure that the custom margin takes precedence over the original
+          margin. You may need or want to take a different approach.
+        </div>
+      </Stack>
+    ),
+    example: () => (
+      <Footer class="!mt-0">
+        <FooterColumn>
+          <FooterHeading>About</FooterHeading>
+          <FooterItem href="/about">About</FooterItem>
+          <FooterItem href="/philosophy">Philosophy</FooterItem>
+          <FooterItem href="https://github.com/users/adamzerner/projects/2">
+            Roadmap
+          </FooterItem>
+        </FooterColumn>
+        <FooterColumn>
+          <FooterHeading>Docs</FooterHeading>
+          <FooterItem href="/">Components</FooterItem>
+          <FooterItem href="/getting-started">Getting started</FooterItem>
+          <FooterItem href="/tutorial">Tutorial</FooterItem>
+        </FooterColumn>
+        <FooterColumn>
+          <FooterHeading>Code</FooterHeading>
+          <FooterItem href="https://github.com/adamzerner/rfui">
+            GitHub
+          </FooterItem>
+          <FooterItem href="https://github.com/adamzerner/rfui/blob/master/CHANGELOG.md">
+            Changelog
+          </FooterItem>
+          <FooterItem href="https://github.com/adamzerner/rfui/blob/master/CONTRIBUTING.md">
+            Contributing
+          </FooterItem>
+          <FooterItem href="https://github.com/adamzerner/rfui/blob/master/LICENSE">
+            License
+          </FooterItem>
+        </FooterColumn>
+        <FooterColumn>
+          <FooterHeading>Help</FooterHeading>
+          <FooterItem href="mailto:adamzerner@protonmail.com">
+            Contact
+          </FooterItem>
+          <FooterItem href="/faq">FAQ</FooterItem>
+        </FooterColumn>
+      </Footer>
+    ),
+    exampleCode: () => (
+      <CodeBlock
+        class="mt-4"
+        language="tsx"
+        code={`<Footer class="!mt-0">
+  <FooterColumn>
+    <FooterHeading>About</FooterHeading>
+    <FooterItem href="/about">About</FooterItem>
+    <FooterItem href="/philosophy">Philosophy</FooterItem>
+    <FooterItem href="https://github.com/users/adamzerner/projects/2">
+      Roadmap
+    </FooterItem>
+  </FooterColumn>
+  <FooterColumn>
+    <FooterHeading>Docs</FooterHeading>
+    <FooterItem href="/">Components</FooterItem>
+    <FooterItem href="/getting-started">Getting started</FooterItem>
+    <FooterItem href="/tutorial">Tutorial</FooterItem>
+  </FooterColumn>
+  <FooterColumn>
+    <FooterHeading>Code</FooterHeading>
+    <FooterItem href="https://github.com/adamzerner/rfui">
+      GitHub
+    </FooterItem>
+    <FooterItem href="https://github.com/adamzerner/rfui/blob/master/CHANGELOG.md">
+      Changelog
+    </FooterItem>
+    <FooterItem href="https://github.com/adamzerner/rfui/blob/master/CONTRIBUTING.md">
+      Contributing
+    </FooterItem>
+    <FooterItem href="https://github.com/adamzerner/rfui/blob/master/LICENSE">
+      License
+    </FooterItem>
+  </FooterColumn>
+  <FooterColumn>
+    <FooterHeading>Help</FooterHeading>
+    <FooterItem href="mailto:adamzerner@protonmail.com">
+      Contact
+    </FooterItem>
+    <FooterItem href="/faq">FAQ</FooterItem>
+  </FooterColumn>
+</Footer>`}
+      />
+    ),
   }];
   const props = [{
     name: "size",

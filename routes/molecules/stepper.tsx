@@ -5,6 +5,8 @@ import { ComponentDocsPage } from "@/islands/demo/component-docs-page.tsx";
 import { Stepper } from "@/islands/molecules/stepper.tsx";
 
 export default () => {
+  const notes =
+    "A stepper component like this provides users an easy way to select the number they want in a few easy clicks.";
   const sections = [{
     title: "Basic",
     example: () => <Stepper />,
@@ -134,6 +136,7 @@ export default () => {
   return (
     <ComponentDocsPage
       componentName="Stepper"
+      notes={notes}
       sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/molecules/stepper.tsx"
       sections={sections}
       props={props}

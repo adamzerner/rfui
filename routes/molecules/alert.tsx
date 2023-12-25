@@ -1,10 +1,19 @@
 import { CodeBlock } from "@/components/atoms/code-block.tsx";
 import { InlineCode } from "@/components/atoms/inline-code.tsx";
+import { Link } from "@/components/atoms/link.tsx";
 import { Stack } from "@/components/helpers/stack.tsx";
 import { ComponentDocsPage } from "@/islands/demo/component-docs-page.tsx";
 import { Alert, AlertBody, AlertHeader } from "@/islands/molecules/alert.tsx";
 
 export default () => {
+  const notes = (
+    <div>
+      Don't overdo it. If you "cry wolf", users will become{" "}
+      <Link href="https://ux.stackexchange.com/q/44609/39046">
+        numb to alerts
+      </Link>.
+    </div>
+  );
   const sections = [{
     title: "Basic",
     example: () => <Alert>Your profile has been saved</Alert>,
@@ -181,6 +190,7 @@ export default () => {
   return (
     <ComponentDocsPage
       componentName="Alert"
+      notes={notes}
       sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/atoms/alert.tsx"
       sections={sections}
       props={props}

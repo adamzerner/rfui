@@ -70,8 +70,11 @@ const Header = ({ componentName, notes, sourceCodeUrl, example }: {
       <H1 class="!mt-0">{componentName}</H1>
       <Stack class="gap-5">
         <Text>
-          {notes &&
-            <p>{notes}</p>}
+          {notes && (
+            <div class="text-base leading-relaxed text-neutral-700">
+              {notes}
+            </div>
+          )}
           <Link
             href={sourceCodeUrl}
             _includeNewTabIcon

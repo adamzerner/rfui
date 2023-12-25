@@ -50,15 +50,28 @@ export default () => {
   }, {
     title: "New tab",
     description: (
-      <div>
-        It is important to indicate that links are clickable. Underlining is a
-        popular way of achieving this goal, but there are many others. The best
-        approach will depend on the context. See{" "}
-        <Link href="https://www.nngroup.com/articles/clickable-elements/">
-          Beyond Blue Links: Making Clickable Elements Recognizable
-        </Link>{" "}
-        for more information.
-      </div>
+      <Stack class="gap-3">
+        <div>
+          Sets <InlineCode>target="blank"</InlineCode> and{" "}
+          <InlineCode>rel="noopener noreferrer"</InlineCode>{" "}
+          to get the link to open in a new tab.
+        </div>
+        <div>
+          Note: Despite being relatively commonly seen on the web, it is
+          generally inadvisable to do this. See{" "}
+          <Link href="https://www.nngroup.com/articles/new-browser-windows-and-tabs/">
+            Opening Links in New Browser Windows and Tabs
+          </Link>
+          .
+        </div>
+        <div>
+          Note: When <InlineCode>_newTab</InlineCode> is{" "}
+          <InlineCode>true</InlineCode>, if{" "}
+          <InlineCode>_includeNewTabIcon</InlineCode> is also{" "}
+          <InlineCode>true</InlineCode>, there will be an icon at the end of the
+          text indicating that the link will open in a new tab.
+        </div>
+      </Stack>
     ),
     example: () => (
       <Stack class="gap-8">

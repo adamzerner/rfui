@@ -1,9 +1,24 @@
 import { CodeBlock } from "@/components/atoms/code-block.tsx";
 import { InlineCode } from "@/components/atoms/inline-code.tsx";
+import { Link } from "@/components/atoms/link.tsx";
 import { Text } from "@/components/atoms/text.tsx";
 import { ComponentDocsPage } from "@/islands/demo/component-docs-page.tsx";
 
 export default () => {
+  const notes = (
+    <div>
+      To ensure that the line length is{" "}
+      <Link href="https://practicaltypography.com/line-length.html">
+        comfortable
+      </Link>{" "}
+      for people to read, this <InlineCode>Text</InlineCode>{" "}
+      component utilizes Tailwind's{" "}
+      <Link href="https://tailwindcss.com/docs/max-width#reading-width">
+        <InlineCode>max-w-prose</InlineCode>
+      </Link>{" "}
+      class.
+    </div>
+  );
   const sections = [{
     title: "Basic",
     example: () => (
@@ -159,6 +174,7 @@ export default () => {
   return (
     <ComponentDocsPage
       componentName="Text"
+      notes={notes}
       sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/atoms/text.tsx"
       sections={sections}
       props={props}

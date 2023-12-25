@@ -21,7 +21,8 @@ export default () => {
       <div>
         Set <InlineCode>rounded</InlineCode> to{" "}
         <InlineCode>"square"</InlineCode>, <InlineCode>"sm"</InlineCode> or{" "}
-        <InlineCode>"lg"</InlineCode>.
+        <InlineCode>"lg"</InlineCode>. Defaults to{" "}
+        <InlineCode>"sm"</InlineCode>.
       </div>
     ),
     example: () => (
@@ -46,9 +47,7 @@ export default () => {
     title: "Disabled",
     description: (
       <div>
-        Set <InlineCode>disabled</InlineCode> to <InlineCode>true</InlineCode>
-        {" "}
-        or <InlineCode>false</InlineCode>.
+        Set <InlineCode>disabled</InlineCode> to <InlineCode>true</InlineCode>.
       </div>
     ),
     example: () => <Textarea disabled></Textarea>,
@@ -63,9 +62,7 @@ export default () => {
     title: "Readonly",
     description: (
       <div>
-        Set <InlineCode>readonly</InlineCode> to <InlineCode>true</InlineCode>
-        {" "}
-        or <InlineCode>false</InlineCode>.
+        Set <InlineCode>readonly</InlineCode> to <InlineCode>true</InlineCode>.
       </div>
     ),
     example: () => <Textarea readonly>Example</Textarea>,
@@ -80,9 +77,7 @@ export default () => {
     title: "Invalid",
     description: (
       <div>
-        Set <InlineCode>invalid</InlineCode> to <InlineCode>true</InlineCode> or
-        {" "}
-        <InlineCode>false</InlineCode>.
+        Set <InlineCode>invalid</InlineCode> to <InlineCode>true</InlineCode>.
       </div>
     ),
     example: () => <Textarea invalid>Example</Textarea>,

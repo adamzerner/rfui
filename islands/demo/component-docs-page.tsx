@@ -128,7 +128,7 @@ const OnThisPage = ({ sectionTitles }: { sectionTitles: string[] }) => {
         {sectionTitles.map((sectionTitle) => (
           <Link
             underline="hover"
-            href={`#${sectionTitle.toLowerCase()}`}
+            href={`#${sectionTitle.toLowerCase().split(/\s+/).join("-")}`}
           >
             {sectionTitle}
           </Link>

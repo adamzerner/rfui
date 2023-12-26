@@ -224,6 +224,32 @@ export default () => {
     type: "ComponentChild",
     default: null,
     notes: null,
+  }, {
+    name: "...rest",
+    required: false,
+    type: "JSX.HTMLAttributes<HTMLAnchorElement>",
+    default: null,
+    notes: (
+      <div>
+        <div class="leading-relaxed">
+          See the docs for{" "}
+          <Link href="/rest-parameters">rest parameters</Link>. For{" "}
+          <InlineCode>Link</InlineCode>, you could pass anything you normally
+          would pass to <InlineCode>{"<a>"}</InlineCode>{" "}
+          because the return value{" "}
+          <Link href="https://github.com/adamzerner/rfui/blob/master/components/atoms/link.tsx">
+            looks something like
+          </Link>{" "}
+          this:
+        </div>
+        <CodeBlock
+          language="tsx"
+          code={`<a class={className} {...restWithoutClass}>
+  {children}
+</a>`}
+        />
+      </div>
+    ),
   }];
 
   return (

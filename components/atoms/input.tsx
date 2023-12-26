@@ -22,6 +22,7 @@ export const Input = (
     ...rest
   }: InputType,
 ) => {
+  const { class: restClass, ...restWithoutClass } = rest;
   let className =
     "border border-neutral-500 px-2 py-1 w-full focus:outline-none focus:border-neutral-900 focus:shadow-sm";
 
@@ -62,14 +63,14 @@ export const Input = (
       " border-supporting-red-300 bg-supporting-red-50 text-supporting-red-900 focus:border-supporting-red-700";
   }
 
-  if (rest.class) {
-    className += ` ${rest.class}`;
+  if (restClass) {
+    className += ` ${restClass}`;
   }
 
   return (
     <input
-      {...rest}
       class={className}
+      {...restWithoutClass}
     />
   );
 };

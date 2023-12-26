@@ -444,7 +444,7 @@ export default () => {
           would pass to <InlineCode>{"<button>"}</InlineCode>{" "}
           because the container{" "}
           <Link href="https://github.com/adamzerner/rfui/blob/master/components/atoms/button.tsx">
-            looks like
+            looks something like
           </Link>{" "}
           this:
         </div>

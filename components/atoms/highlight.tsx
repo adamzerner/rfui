@@ -19,16 +19,17 @@ export const Highlight = (
     ...rest
   }: HighlightType,
 ) => {
+  const { class: restClass, ...restWithoutClass } = rest;
   let className = "bg-primary-100";
 
-  if (rest.class) {
-    className += ` ${rest.class}`;
+  if (restClass) {
+    className += ` ${restClass}`;
   }
 
   return (
     <mark
-      {...rest}
       class={className}
+      {...restWithoutClass}
     >
       {children}
     </mark>

@@ -80,7 +80,7 @@ export default () => {
           <InlineCode>{'<input type="checkbox" />'}</InlineCode>{" "}
           because the return value{" "}
           <Link href="https://github.com/adamzerner/rfui/blob/master/components/atoms/checkbox.tsx">
-            looks like
+            looks something like
           </Link>{" "}
           this:
         </div>

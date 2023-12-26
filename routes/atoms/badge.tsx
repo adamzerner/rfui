@@ -233,7 +233,7 @@ export default () => {
           would pass to <InlineCode>{"<div>"}</InlineCode> because the container
           {" "}
           <Link href="https://github.com/adamzerner/rfui/blob/master/components/atoms/badge.tsx">
-            looks like
+            looks something like
           </Link>{" "}
           this:
         </div>

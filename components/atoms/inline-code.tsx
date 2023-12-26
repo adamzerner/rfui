@@ -30,8 +30,8 @@ export const InlineCode = (
 
   return (
     <code
-      {...restWithoutClass}
       class={className}
+      {...restWithoutClass}
     >
       {children}
     </code>

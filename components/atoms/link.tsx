@@ -28,6 +28,7 @@ export const Link = (
     ...rest
   }: LinkType,
 ) => {
+  const { class: restClass, ...restWithoutClass } = rest;
   let className = "cursor-pointer";
 
   className += " " + (() => {
@@ -39,17 +40,17 @@ export const Link = (
     }
   })();
 
-  if (rest.class) {
-    className += ` ${rest.class}`;
+  if (restClass) {
+    className += ` ${restClass}`;
   }
 
   return (
     <a
-      {...rest}
       href={href}
       class={className}
       target={_newTab ? "_blank" : undefined}
       rel={_newTab ? "noopener noreferrer" : undefined}
+      {...restWithoutClass}
     >
       {children}
       {_newTab && _includeNewTabIcon && <NewTabIcon />}

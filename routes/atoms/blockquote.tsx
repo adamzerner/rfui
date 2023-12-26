@@ -127,7 +127,7 @@ export default () => {
           normally would pass to <InlineCode>{"<blockquote>"}</InlineCode>{" "}
           because the container{" "}
           <Link href="https://github.com/adamzerner/rfui/blob/master/components/atoms/blockquote.tsx">
-            looks like
+            looks something like
           </Link>{" "}
           this:
         </div>

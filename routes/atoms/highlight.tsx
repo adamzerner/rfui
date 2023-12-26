@@ -1,5 +1,7 @@
 import { CodeBlock } from "@/components/atoms/code-block.tsx";
 import { Highlight } from "@/components/atoms/highlight.tsx";
+import { InlineCode } from "@/components/atoms/inline-code.tsx";
+import { Link } from "@/components/atoms/link.tsx";
 import { ComponentDocsPage } from "@/islands/demo/component-docs-page.tsx";
 
 export default () => {
@@ -68,12 +70,41 @@ export default () => {
     type: "ComponentChild",
     default: null,
     notes: null,
+  }, {
+    name: "...rest",
+    required: false,
+    type: "JSX.HTMLAttributes<HTMLUnknownElement>",
+    default: null,
+    notes: (
+      <div>
+        <div class="leading-relaxed">
+          See the docs for{" "}
+          <Link href="/rest-parameters">rest parameters</Link>. For{" "}
+          <InlineCode>Highlight</InlineCode>, you could pass anything you
+          normally would pass to <InlineCode>{"<mark>"}</InlineCode>{" "}
+          because the return value{" "}
+          <Link href="https://github.com/adamzerner/rfui/blob/master/components/atoms/highlight.tsx">
+            looks something like
+          </Link>{" "}
+          this:
+        </div>
+        <CodeBlock
+          language="tsx"
+          code={`<mark
+  class={className}
+  {...restWithoutClass}
+>
+  {children}
+</mark>`}
+        />
+      </div>
+    ),
   }];
 
   return (
     <ComponentDocsPage
-      componentName="InlineCode"
-      sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/atoms/inline-code.tsx"
+      componentName="Highlight"
+      sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/atoms/highlight.tsx"
       sections={sections}
       props={props}
     />

@@ -37,8 +37,8 @@ export const OL = (
 
   return (
     <ol
-      {...restWithoutClass}
       class={className}
+      {...restWithoutClass}
     >
       {children}
     </ol>

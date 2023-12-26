@@ -1,5 +1,6 @@
 import { CodeBlock } from "@/components/atoms/code-block.tsx";
 import { H2 } from "@/components/atoms/h2.tsx";
+import { InlineCode } from "@/components/atoms/inline-code.tsx";
 import { Link } from "@/components/atoms/link.tsx";
 import { Text } from "@/components/atoms/text.tsx";
 import { Stack } from "@/components/helpers/stack.tsx";
@@ -126,6 +127,35 @@ export default () => {
     type: "ComponentChild",
     default: null,
     notes: null,
+  }, {
+    name: "...rest",
+    required: false,
+    type: "JSX.HTMLAttributes<HTMLHeadingElement>",
+    default: null,
+    notes: (
+      <div>
+        <div class="leading-relaxed">
+          See the docs for{" "}
+          <Link href="/rest-parameters">rest parameters</Link>. For{" "}
+          <InlineCode>H2</InlineCode>, you could pass anything you normally
+          would pass to <InlineCode>{"<h2>"}</InlineCode>{" "}
+          because the return value{" "}
+          <Link href="https://github.com/adamzerner/rfui/blob/master/components/atoms/h2.tsx">
+            looks something like
+          </Link>{" "}
+          this:
+        </div>
+        <CodeBlock
+          language="tsx"
+          code={`<h2
+  class={className}
+  {...restWithoutClass}
+>
+  ...
+</h2>`}
+        />
+      </div>
+    ),
   }];
 
   return (

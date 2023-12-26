@@ -27,8 +27,8 @@ export const H1 = (
 
   return (
     <h1
-      {...restWithoutClass}
       class={className}
+      {...restWithoutClass}
     >
       {children}
     </h1>

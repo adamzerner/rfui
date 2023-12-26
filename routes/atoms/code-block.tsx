@@ -124,7 +124,7 @@ const fullName = firstName + " " + lastName;\`}
           normally would pass to <InlineCode>{"<pre>"}</InlineCode>{" "}
           because the return value{" "}
           <Link href="https://github.com/adamzerner/rfui/blob/master/components/atoms/code-block.tsx">
-            looks like
+            looks something like
           </Link>{" "}
           this:
         </div>

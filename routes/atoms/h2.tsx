@@ -82,8 +82,45 @@ export default () => {
         code={`<H2 class="!my-2">Hello world</H2>`}
       />
     ),
+  }, {
+    title: "In-page link",
+    description: (
+      <div>
+        <div>Makes the header an in-page link by returning the following:</div>
+        <CodeBlock
+          language="tsx"
+          code={`<h2 id={inPageLink} class={className} {...restWithoutClass}>
+  <Link href={\`#\${inPageLink}\`} underline="hover">{children}</Link>
+</h2>`}
+        />
+      </div>
+    ),
+    example: () => <H2 inPageLink="hello-world">Hello world</H2>,
+    exampleCode: () => (
+      <CodeBlock
+        class="mt-4"
+        language="tsx"
+        code={`<H2 inPageLink="hello-world">Hello world</H2>`}
+      />
+    ),
   }];
   const props = [{
+    name: "inPageLink",
+    required: false,
+    type: "string",
+    default: null,
+    notes: (
+      <div>
+        <div>Makes the header an in-page link by returning the following:</div>
+        <CodeBlock
+          language="tsx"
+          code={`<h2 id={inPageLink} class={className} {...restWithoutClass}>
+  <Link href={\`#\${inPageLink}\`} underline="hover">{children}</Link>
+</h2>`}
+        />
+      </div>
+    ),
+  }, {
     name: "children",
     required: true,
     type: "ComponentChild",

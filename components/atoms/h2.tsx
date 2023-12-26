@@ -1,6 +1,8 @@
+import { Link } from "@/components/atoms/link.tsx";
 import { ComponentChild, JSX } from "preact";
 
 export type H2Type = {
+  inPageLink?: string;
   children: ComponentChild;
 } & JSX.HTMLAttributes<HTMLHeadingElement>;
 
@@ -14,6 +16,7 @@ export type H2Type = {
  */
 export const H2 = (
   {
+    inPageLink,
     children,
     ...rest
   }: H2Type,
@@ -25,10 +28,18 @@ export const H2 = (
     className += ` ${restClass}`;
   }
 
+  if (inPageLink) {
+    return (
+      <h2 id={inPageLink} class={className} {...restWithoutClass}>
+        <Link href={`#${inPageLink}`} underline="hover">{children}</Link>
+      </h2>
+    );
+  }
+
   return (
     <h2
-      {...restWithoutClass}
       class={className}
+      {...restWithoutClass}
     >
       {children}
     </h2>

@@ -44,7 +44,7 @@ const SubmitButton = () => {
         </Card>
       </Text>
 
-      <H2>Philosophy</H2>
+      <H2 inPageLink="philosophy">Philosophy</H2>
       <Text>
         <p>
           In short, the idea is to be pretty minimal and to place a very strong
@@ -70,7 +70,7 @@ const SubmitButton = () => {
         </OL>
       </Text>
 
-      <H2>Target audience</H2>
+      <H2 inPageLink="target-audience">Target audience</H2>
       <Text>
         <p>
           As mentioned on the{" "}
@@ -95,7 +95,7 @@ const SubmitButton = () => {
         </p>
       </Text>
 
-      <H2>Atomic Design</H2>
+      <H2 inPageLink="atomic-design">Atomic Design</H2>
       <Text>
         <p>
           RFUI follows the{" "}
@@ -115,7 +115,7 @@ const SubmitButton = () => {
         </p>
       </Text>
 
-      <H2>UX</H2>
+      <H2 inPageLink="ux">UX</H2>
       <Text>
         <p>
           Not everyone is a UX expert. A lot of times design is done by a
@@ -164,7 +164,7 @@ const SubmitButton = () => {
         </UL>
       </Text>
 
-      <H2>Accessibility</H2>
+      <H2 inPageLink="accessibility">Accessibility</H2>
       <Text>
         <p>
           RFUI aims to meet accessibility standards and follow best practices.
@@ -187,7 +187,7 @@ const SubmitButton = () => {
         </UL>
       </Text>
 
-      <H2>The Documentation System</H2>
+      <H2 inPageLink="the-documentation-system">The Documentation System</H2>
       <Text>
         <p>
           The docs here aim to follow{" "}
@@ -220,7 +220,7 @@ const SubmitButton = () => {
         />
       </Text>
 
-      <H2>Refactoring UI</H2>
+      <H2 inPageLink="refactoring-ui">Refactoring UI</H2>
       <Text>
         <p>
           Last but not least, I want to give a shout out to one of the best

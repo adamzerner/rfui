@@ -40,5 +40,5 @@ export const CodeBlock = (
     className += ` ${restClass}`;
   }
 
-  return <pre {...restWithoutClass} class={className}><code>{code}</code></pre>;
+  return <pre class={className} {...restWithoutClass}><code>{code}</code></pre>;
 };

@@ -1,5 +1,7 @@
 import { Blockquote } from "@/components/atoms/blockquote.tsx";
 import { CodeBlock } from "@/components/atoms/code-block.tsx";
+import { InlineCode } from "@/components/atoms/inline-code.tsx";
+import { Link } from "@/components/atoms/link.tsx";
 import { ComponentDocsPage } from "@/islands/demo/component-docs-page.tsx";
 
 export default () => {
@@ -111,6 +113,32 @@ export default () => {
     type: "ComponentChild",
     default: null,
     notes: null,
+  }, {
+    name: "...rest",
+    required: false,
+    type: "JSX.HTMLAttributes<HTMLQuoteElement>",
+    default: null,
+    notes: (
+      <div>
+        <div class="leading-relaxed">
+          See the docs for{" "}
+          <Link href="/rest-parameters">rest parameters</Link>. For{" "}
+          <InlineCode>Blockquote</InlineCode>, you could pass anything you
+          normally would pass to <InlineCode>{"<blockquote>"}</InlineCode>{" "}
+          because the container{" "}
+          <Link href="https://github.com/adamzerner/rfui/blob/master/components/atoms/blockquote.tsx">
+            looks like
+          </Link>{" "}
+          this:
+        </div>
+        <CodeBlock
+          language="tsx"
+          code={`<blockquote class={className} {...restWithoutClass}>
+  {children}
+</blockquote>`}
+        />
+      </div>
+    ),
   }];
 
   return (

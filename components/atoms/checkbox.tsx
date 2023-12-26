@@ -53,9 +53,9 @@ export const Checkbox = (
 
   return (
     <input
-      {...rest}
       type="checkbox"
       class={className}
+      {...rest}
     />
   );
 };

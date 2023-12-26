@@ -44,6 +44,7 @@ export const Button = (
     ...rest
   }: ButtonType,
 ) => {
+  const { class: restClass, ...restWithoutClass } = rest;
   let className = "";
 
   className += " " + (() => {
@@ -111,12 +112,12 @@ export const Button = (
     }
   })();
 
-  if (rest.class) {
-    className += ` ${rest.class}`;
+  if (restClass) {
+    className += ` ${restClass}`;
   }
 
   return (
-    <button {...rest} class={className}>
+    <button class={className} {...restWithoutClass}>
       {icon && <span class="mr-1">{icon}</span>}
       {isLoading && loadingContent ? loadingContent : children}
       {_rightIcon && <span class="ml-1">{_rightIcon}</span>}

@@ -430,6 +430,32 @@ export default () => {
     type: "ComponentChild",
     default: null,
     notes: null,
+  }, {
+    name: "...rest",
+    required: false,
+    type: 'Omit<JSX.HTMLAttributes<HTMLButtonElement>, "icon" | "size">',
+    default: null,
+    notes: (
+      <div>
+        <div class="leading-relaxed">
+          See the docs for{" "}
+          <Link href="/rest-parameters">rest parameters</Link>. For{" "}
+          <InlineCode>Button</InlineCode>, you could pass anything you normally
+          would pass to <InlineCode>{"<button>"}</InlineCode>{" "}
+          because the container{" "}
+          <Link href="https://github.com/adamzerner/rfui/blob/master/components/atoms/button.tsx">
+            looks like
+          </Link>{" "}
+          this:
+        </div>
+        <CodeBlock
+          language="tsx"
+          code={`<button class={className} {...restWithoutClass}>
+  ...
+</button>`}
+        />
+      </div>
+    ),
   }];
 
   return (

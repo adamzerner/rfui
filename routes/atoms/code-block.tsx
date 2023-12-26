@@ -1,4 +1,5 @@
 import { CodeBlock } from "@/components/atoms/code-block.tsx";
+import { InlineCode } from "@/components/atoms/inline-code.tsx";
 import { Link } from "@/components/atoms/link.tsx";
 import { ComponentDocsPage } from "@/islands/demo/component-docs-page.tsx";
 
@@ -107,6 +108,30 @@ const fullName = firstName + " " + lastName;\`}
         </Link>. And make sure when you download Prism (see{" "}
         <Link href="/getting-started">Getting started</Link>) that you check off
         the languages you need.
+      </div>
+    ),
+  }, {
+    name: "...rest",
+    required: false,
+    type: "JSX.HTMLAttributes<HTMLPreElement>",
+    default: null,
+    notes: (
+      <div>
+        <div class="leading-relaxed">
+          See the docs for{" "}
+          <Link href="/rest-parameters">rest parameters</Link>. For{" "}
+          <InlineCode>CodeBlock</InlineCode>, you could pass anything you
+          normally would pass to <InlineCode>{"<pre>"}</InlineCode>{" "}
+          because the return value{" "}
+          <Link href="https://github.com/adamzerner/rfui/blob/master/components/atoms/code-block.tsx">
+            looks like
+          </Link>{" "}
+          this:
+        </div>
+        <CodeBlock
+          language="tsx"
+          code={`<pre class={className} {...restWithoutClass}><code>{code}</code></pre>`}
+        />
       </div>
     ),
   }];

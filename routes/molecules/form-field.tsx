@@ -437,6 +437,32 @@ export default () => {
         <CodeBlock language="tsx" code={`<Input {...inputRest} />`} />
       </div>
     ),
+  }, {
+    name: "...rest",
+    required: false,
+    type: 'Omit<JSX.HTMLAttributes<HTMLDivElement>, "size">',
+    default: null,
+    notes: (
+      <div>
+        <div class="leading-relaxed">
+          See the docs for{" "}
+          <Link href="/rest-parameters">rest parameters</Link>. For{" "}
+          <InlineCode>FormField</InlineCode>, you could pass anything you
+          normally would pass to <InlineCode>{"<div>"}</InlineCode>{" "}
+          because the return value{" "}
+          <Link href="https://github.com/adamzerner/rfui/blob/master/components/molecules/form-field.tsx">
+            looks something like
+          </Link>{" "}
+          this:
+        </div>
+        <CodeBlock
+          language="tsx"
+          code={`<div {...rest}>
+  ...
+</div>`}
+        />
+      </div>
+    ),
   }];
 
   return (

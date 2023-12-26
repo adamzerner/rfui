@@ -22,6 +22,7 @@ export const Textarea = (
     ...rest
   }: TextareaType,
 ) => {
+  const { class: restClass, ...resstWithoutClass } = rest;
   let className =
     "border border-neutral-500 px-2 py-1 focus:outline-none focus:border-neutral-900 focus:shadow-sm";
 
@@ -49,14 +50,14 @@ export const Textarea = (
       " border-supporting-red-300 bg-supporting-red-50 text-supporting-red-900 focus:border-supporting-red-700";
   }
 
-  if (rest.class) {
-    className += ` ${rest.class}`;
+  if (restClass) {
+    className += ` ${restClass}`;
   }
 
   return (
     <textarea
-      {...rest}
       class={className}
+      {...resstWithoutClass}
     >
       {children}
     </textarea>

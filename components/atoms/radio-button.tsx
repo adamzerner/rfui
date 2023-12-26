@@ -26,6 +26,7 @@ export const RadioButton = (
     ...rest
   }: RadioButtonType,
 ) => {
+  const { class: restClass, ...restWithoutClass } = rest;
   let className = "accent-primary-500 cursor-pointer";
 
   className += " " + (() => {
@@ -47,15 +48,15 @@ export const RadioButton = (
     className += " outline outline-offset-2 outline-supporting-red-500";
   }
 
-  if (rest.class) {
-    className += ` ${rest.class}`;
+  if (restClass) {
+    className += ` ${restClass}`;
   }
 
   return (
     <input
-      {...rest}
       type="radio"
       class={className}
+      {...restWithoutClass}
     />
   );
 };

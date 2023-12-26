@@ -332,6 +332,32 @@ export default () => {
     type: "ComponentChild",
     default: null,
     notes: null,
+  }, {
+    name: "...rest",
+    required: false,
+    type: 'Omit<JSX.HTMLAttributes<HTMLElement>, "size">',
+    default: null,
+    notes: (
+      <div>
+        <div class="leading-relaxed">
+          See the docs for{" "}
+          <Link href="/rest-parameters">rest parameters</Link>. For{" "}
+          <InlineCode>Footer</InlineCode>, you could pass anything you normally
+          would pass to <InlineCode>{"<footer>"}</InlineCode>{" "}
+          because the return value{" "}
+          <Link href="https://github.com/adamzerner/rfui/blob/master/components/molecules/footer.tsx">
+            looks something like
+          </Link>{" "}
+          this:
+        </div>
+        <CodeBlock
+          language="tsx"
+          code={`<footer class={containerClass} {...restWithoutClass}>
+  {children}
+</footer>`}
+        />
+      </div>
+    ),
   }];
 
   return (

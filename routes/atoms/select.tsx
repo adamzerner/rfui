@@ -225,6 +225,35 @@ export default () => {
     type: "boolean",
     default: "false",
     notes: null,
+  }, {
+    name: "...rest",
+    required: false,
+    type: 'Omit<JSX.HTMLAttributes<HTMLSelectElement>, "size">',
+    default: null,
+    notes: (
+      <div>
+        <div class="leading-relaxed">
+          See the docs for{" "}
+          <Link href="/rest-parameters">rest parameters</Link>. For{" "}
+          <InlineCode>Select</InlineCode>, you could pass anything you normally
+          would pass to <InlineCode>{"<select>"}</InlineCode>{" "}
+          because the return value{" "}
+          <Link href="https://github.com/adamzerner/rfui/blob/master/components/atoms/select.tsx">
+            looks something like
+          </Link>{" "}
+          this:
+        </div>
+        <CodeBlock
+          language="tsx"
+          code={`<select
+  class={className}
+  {...restWithoutClass}
+>
+  {children}
+</select>`}
+        />
+      </div>
+    ),
   }];
 
   return (

@@ -578,6 +578,35 @@ export default () => {
     type: "ComponentChild",
     default: null,
     notes: null,
+  }, {
+    name: "...rest",
+    required: false,
+    type: "JSX.HTMLAttributes<HTMLTableElement>",
+    default: null,
+    notes: (
+      <div>
+        <div class="leading-relaxed">
+          See the docs for{" "}
+          <Link href="/rest-parameters">rest parameters</Link>. For{" "}
+          <InlineCode>Table</InlineCode>, you could pass anything you normally
+          would pass to <InlineCode>{"<table>"}</InlineCode>{" "}
+          because the return value{" "}
+          <Link href="https://github.com/adamzerner/rfui/blob/master/components/atoms/table.tsx">
+            looks something like
+          </Link>{" "}
+          this:
+        </div>
+        <CodeBlock
+          language="tsx"
+          code={`<table
+  class={className}
+  {...restWithoutClass}
+>
+  {children}
+</table>`}
+        />
+      </div>
+    ),
   }];
 
   return (

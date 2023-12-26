@@ -60,6 +60,7 @@ export const Table = (
     ...rest
   }: TableType,
 ) => {
+  const { class: restClass, ...restWithoutClass } = rest;
   let className = "rfui-table";
 
   if (bordered) {
@@ -86,8 +87,8 @@ export const Table = (
     className += " sticky-first-column"; // https://css-tricks.com/making-tables-with-sticky-header-and-footers-got-a-bit-easier/
   }
 
-  if (rest.class) {
-    className += ` ${rest.class}`;
+  if (restClass) {
+    className += ` ${restClass}`;
   }
 
   return (
@@ -173,8 +174,8 @@ export const Table = (
         `}
       </style>
       <table
-        {...rest}
         class={className}
+        {...restWithoutClass}
       >
         {children}
       </table>

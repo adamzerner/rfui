@@ -1,6 +1,7 @@
 import { Button } from "@/components/atoms/button.tsx";
 import { CodeBlock } from "@/components/atoms/code-block.tsx";
 import { InlineCode } from "@/components/atoms/inline-code.tsx";
+import { Link } from "@/components/atoms/link.tsx";
 import { Flex } from "@/components/helpers/flex.tsx";
 import { Stack } from "@/components/helpers/stack.tsx";
 import {
@@ -584,6 +585,32 @@ export default () => {
     type: "ComponentChild",
     default: null,
     notes: null,
+  }, {
+    name: "...rest",
+    required: false,
+    type: 'Omit<JSX.HTMLAttributes<HTMLDivElement>, "size">',
+    default: null,
+    notes: (
+      <div>
+        <div class="leading-relaxed">
+          See the docs for{" "}
+          <Link href="/rest-parameters">rest parameters</Link>. For{" "}
+          <InlineCode>Card</InlineCode>, you could pass anything you normally
+          would pass to <InlineCode>{"<div>"}</InlineCode>{" "}
+          because the return value{" "}
+          <Link href="https://github.com/adamzerner/rfui/blob/master/components/molecules/card.tsx">
+            looks something like
+          </Link>{" "}
+          this:
+        </div>
+        <CodeBlock
+          language="tsx"
+          code={`<div class={containerClass} {...restWithoutClass}>
+  {children}
+</div>`}
+        />
+      </div>
+    ),
   }];
 
   return (

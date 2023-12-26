@@ -30,6 +30,7 @@ export const Select = (
     ...rest
   }: SelectType,
 ) => {
+  const { class: restClass, ...restWithoutClass } = rest;
   let className =
     "border border-neutral-500 bg-[#fff] px-2 py-1 cursor-pointer focus:outline-none focus:border-neutral-900 focus:shadow-sm";
 
@@ -66,14 +67,14 @@ export const Select = (
       " border-supporting-red-300 bg-supporting-red-50 text-supporting-red-900 focus:border-supporting-red-700";
   }
 
-  if (rest.class) {
-    className += ` ${rest.class}`;
+  if (restClass) {
+    className += ` ${restClass}`;
   }
 
   return (
     <select
-      {...rest}
       class={className}
+      {...restWithoutClass}
     >
       {children}
     </select>

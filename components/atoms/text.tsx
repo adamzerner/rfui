@@ -40,8 +40,8 @@ export const Text = (
 
   return (
     <Stack
-      {...restWithoutClass}
       class={className}
+      {...restWithoutClass}
     >
       {children}
     </Stack>

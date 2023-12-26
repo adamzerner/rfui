@@ -230,6 +230,35 @@ export default () => {
         <CodeBlock language="tsx" code={`<Flex {...containerProps}>`} />
       </div>
     ),
+  }, {
+    name: "...rest",
+    required: false,
+    type: `{
+  size?: "sm" | "md" | "lg";
+  rounded?: "square" | "sm" | "lg" | "full";
+  invalid?: boolean;
+} & Omit<JSX.HTMLAttributes<HTMLInputElement>, "size">`,
+    default: null,
+    notes: (
+      <div>
+        <div>
+          The structure of <InlineCode>PasswordInput</InlineCode>{" "}
+          is something like this:
+        </div>
+        <CodeBlock
+          language="tsx"
+          code={`<Flex>
+  <Input />
+  <button></button>
+</Flex>`}
+        />
+        <div class="mt-4 mb-3">
+          <InlineCode>...rest</InlineCode> will get passed to{" "}
+          <InlineCode>{"<Input />"}</InlineCode> like this:
+        </div>
+        <CodeBlock language="tsx" code={`<Input {...rest} />`} />
+      </div>
+    ),
   }];
 
   return (

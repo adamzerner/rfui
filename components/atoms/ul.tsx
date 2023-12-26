@@ -73,8 +73,8 @@ export const UL = (
         `}
       </style>
       <ul
-        {...restWithoutClass}
         class={className}
+        {...restWithoutClass}
       >
         {children}
       </ul>

@@ -15,7 +15,7 @@ import { LeftNav } from "@/routes/index.tsx";
 
 export default () => {
   const notes =
-    "A stepper component like this provides users an easy way to select the number they want in a few easy clicks.";
+    "A stepper component like this lets users select the number they want in a few easy clicks.";
   const sections = [{
     title: "Basic",
     example: () => <Stepper />,

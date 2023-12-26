@@ -9,15 +9,13 @@ export default () => {
       <H1>Spread</H1>
       <Text>
         <p>
-          Most components do something like this:
+          Most RFUI components do something like this:
         </p>
         <CodeBlock
           language="tsx"
-          code={`export const MyComponent = ({ explicitProperty, ...rest }) => {
+          code={`export const MyComponent = ({ ...rest }) => {
   const className = "something";
   const { class: restClass, ...restWithoutClass } = rest;
-
-  className += \` \${getClassesFromExplicitProperty(explicitProperty)}\`
   
   if (restClass) {
     className += \` \${restClass}\`;
@@ -40,7 +38,7 @@ export default () => {
         <p>You'll get:</p>
         <CodeBlock
           language="tsx"
-          code={`<div class="text-neutral-700">
+          code={`<div class="something text-neutral-700">
   Example
 </div>`}
         />
@@ -65,7 +63,7 @@ export default () => {
         <p>You'll get:</p>
         <CodeBlock
           language="tsx"
-          code={`<div title="example">
+          code={`<div class="something" title="example">
   Example
 </div>`}
         />

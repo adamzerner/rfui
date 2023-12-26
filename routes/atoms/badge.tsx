@@ -218,6 +218,24 @@ export default () => {
     type: "ComponentChild",
     default: null,
     notes: null,
+  }, {
+    name: "...rest",
+    required: false,
+    type: 'Omit<JSX.HTMLAttributes<HTMLDivElement>, "size">',
+    default: null,
+    notes: (
+      <div>
+        <div>
+          Anything else that you pass to <InlineCode>Badge</InlineCode>{" "}
+          will be passed along to{" "}
+          <InlineCode>Badge</InlineCode>'s container. Something like this:
+        </div>
+        <CodeBlock
+          language="tsx"
+          code={`<div class={className} {...rest}>{children}</div>`}
+        />
+      </div>
+    ),
   }];
 
   return (

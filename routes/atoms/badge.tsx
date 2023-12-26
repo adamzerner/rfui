@@ -1,6 +1,7 @@
 import { Badge } from "@/components/atoms/badge.tsx";
 import { CodeBlock } from "@/components/atoms/code-block.tsx";
 import { InlineCode } from "@/components/atoms/inline-code.tsx";
+import { Link } from "@/components/atoms/link.tsx";
 import { Flex } from "@/components/helpers/flex.tsx";
 import { Stack } from "@/components/helpers/stack.tsx";
 import { ComponentDocsPage } from "@/islands/demo/component-docs-page.tsx";
@@ -225,14 +226,22 @@ export default () => {
     default: null,
     notes: (
       <div>
-        <div>
-          Anything else that you pass to <InlineCode>Badge</InlineCode>{" "}
-          will be passed along to{" "}
-          <InlineCode>Badge</InlineCode>'s container. Something like this:
+        <div class="leading-relaxed">
+          See the docs for{" "}
+          <Link href="/rest-parameters">rest parameters</Link>. For{" "}
+          <InlineCode>Badge</InlineCode>, you could pass anything you normally
+          would pass to <InlineCode>{"<div>"}</InlineCode> because the container
+          {" "}
+          <Link href="https://github.com/adamzerner/rfui/blob/master/components/atoms/badge.tsx">
+            looks like
+          </Link>{" "}
+          this:
         </div>
         <CodeBlock
           language="tsx"
-          code={`<div class={className} {...rest}>{children}</div>`}
+          code={`<div class={className} {...restWithoutClass}>
+  {children}
+</div>`}
         />
       </div>
     ),

@@ -19,12 +19,18 @@ according to the following
 
 # Notes
 
+## Early stage
+
 It is currently in a very early stage. See the
 [project page](https://github.com/users/adamzerner/projects/2/views/1).
+
+## Atomic Design
 
 It follows the
 [Atomic Design Methodlogy](https://atomicdesign.bradfrost.com/chapter-2/) by
 breaking components into "atoms", "molecules" and "organisms".
+
+## Syntax Highlighting
 
 If users want `CodeBlock` to have syntax highlighting, they'll have to use
 [Prism](https://prismjs.com/). Here's what that involves:
@@ -41,6 +47,21 @@ If users want `CodeBlock` to have syntax highlighting, they'll have to use
 4. After your JavaScript has loaded you (might?) need to call
    `Prism.highlightAll();`. One way to do this is to include
    `<script>Prism.highlightAll();</script>` right before `</body>`.
+
+## Islands in docs
+
+Most docs pages use `ComponentDocsPage` from
+`/islands/demo/component-docs-page.tsx`. However, when docs pages need to be
+interactive -- ie. because the component they're documenting is an island --
+using `ComponentDocsPage` won't work because you
+[can't pass functions into an island](https://fresh.deno.dev/docs/concepts/islands#passing-other-props-to-islands)
+(see also [this GitHub issue](https://github.com/denoland/fresh/issues/2194)).
+
+I also tried refactoring `ComponentDocsPage` to accept the current props as
+`children` instead, but that didn't work for reasons I don't understand.
+
+So then, I was forced to be pretty WET (instead of DRY) in the docs pages for
+components that are islands.
 
 # Releasing
 

@@ -120,7 +120,7 @@ const Sections = (
   );
 };
 
-const OnThisPage = ({ sectionTitles }: { sectionTitles: string[] }) => {
+export const OnThisPage = ({ sectionTitles }: { sectionTitles: string[] }) => {
   return (
     <nav class="pb-8 border-b border-b-neutral-100">
       <div class="font-bold text-neutral-700 mb-4">On this page</div>

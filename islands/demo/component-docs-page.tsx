@@ -103,10 +103,8 @@ const Sections = (
     <>
       {sections.map((section) => (
         <section>
-          <H2 id={section.title.toLowerCase()}>
-            <Link href={`#${section.title.toLowerCase()}`} underline="hover">
-              {section.title}
-            </Link>
+          <H2 inPageLink={section.title.toLowerCase().split(/\s+/).join("-")}>
+            {section.title}
           </H2>
           {section.description &&
             (
@@ -153,15 +151,9 @@ const Props = ({ props }: { props: ComponentDocsPageType["props"] }) => {
         {props.map((prop) => (
           <>
             <div class="first-of-type:mt-0 mt-8 sm:mt-0">
-              <Link
-                href={`#${prop.name.toLowerCase()}`}
-                underline="hover"
-                class="text-2xl"
-              >
-                <InlineCode>
-                  {prop.name}
-                </InlineCode>
-              </Link>
+              <InlineCode class="text-2xl">
+                {prop.name}
+              </InlineCode>
               {prop.required &&
                 <sup class="text-supporting-red-500 text-2xl ml-1">*</sup>}
             </div>

@@ -91,9 +91,7 @@ export default () => {
         </div>
       </Text>
 
-      <H2 id="opinionated">
-        <Link underline="hover" href="#opinionated">Opinionated</Link>
-      </H2>
+      <H2 inPageLink="opinionated">Opinionated</H2>
       <Text>
         <p>If you try to please everyone you end up pleasing no one.</p>
         <p>
@@ -103,9 +101,7 @@ export default () => {
         </p>
       </Text>
 
-      <H2 id="scale-down">
-        <Link underline="hover" href="#scale-down">Scale down</Link>
-      </H2>
+      <H2 inPageLink="scale-down">Scale down</H2>
       <Text>
         <p>
           I recall someone from the Deno team writing or speaking about this
@@ -163,9 +159,7 @@ export default () => {
         </p>
       </Text>
 
-      <H2 id="pit-of-success">
-        <Link underline="hover" href="#pit-of-success">Pit of success</Link>
-      </H2>
+      <H2 inPageLink="pit-of-success">Pit of success</H2>
       <Text>
         <p>
           One of my favorite blog posts is{" "}
@@ -224,11 +218,7 @@ export default () => {
         </p>
       </Text>
 
-      <H2 id="pre-built-components">
-        <Link underline="hover" href="#pre-built-components">
-          Pre-built components
-        </Link>
-      </H2>
+      <H2 inPageLink="pre-built-components">Pre-built components</H2>
       <Text>
         <p>
           There are some component libraries that I think I'd be comfortable
@@ -260,9 +250,7 @@ export default () => {
         </p>
       </Text>
 
-      <H2 id="pretty">
-        <Link underline="hover" href="#pretty">Pretty</Link>
-      </H2>
+      <H2 inPageLink="pretty">Pretty</H2>
       <Text>
         <p>
           On the other hand, there are libraries that have all of these
@@ -282,11 +270,7 @@ export default () => {
         </p>
       </Text>
 
-      <H2 id="developer-experience">
-        <Link underline="hover" href="#developer-experience">
-          Developer experience
-        </Link>
-      </H2>
+      <H2 inPageLink="developer-experience">Developer experience</H2>
       <Text>
         <p>
           Perhaps it's tautological, but I want to provide a good developer
@@ -353,9 +337,7 @@ export default () => {
         </p>
       </Text>
 
-      <H2 id="use-the-platform">
-        <Link underline="hover" href="#use-the-platform">Use the platform</Link>
-      </H2>
+      <H2 inPageLink="use-the-platform">Use the platform</H2>
       <Text>
         <p>
           I've been noticing a trend recently of so-called{" "}
@@ -412,11 +394,7 @@ export default () => {
         </p>
       </Text>
 
-      <H2 id="avoid-dependencies">
-        <Link underline="hover" href="#avoid-dependencies">
-          Avoid dependencies
-        </Link>
-      </H2>
+      <H2 inPageLink="avoid-dependencies">Avoid dependencies</H2>
       <Text>
         <p>
           The more time I spend as a software engineer, the more I find

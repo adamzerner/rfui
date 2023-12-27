@@ -1,8 +1,8 @@
-import { CodeBlock } from "@/components/atoms/code-block.tsx";
-import { InlineCode } from "@/components/atoms/inline-code.tsx";
-import { Link } from "@/components/atoms/link.tsx";
-import { Table } from "@/components/atoms/table.tsx";
-import { Stack } from "@/components/helpers/stack.tsx";
+import { CodeBlock } from "@/components/preact/atoms/code-block.tsx";
+import { InlineCode } from "@/components/preact/atoms/inline-code.tsx";
+import { Link } from "@/components/preact/atoms/link.tsx";
+import { Table } from "@/components/preact/atoms/table.tsx";
+import { Stack } from "@/components/preact/helpers/stack.tsx";
 import { ComponentDocsPage } from "@/islands/demo/component-docs-page.tsx";
 
 export default () => {
@@ -591,7 +591,7 @@ export default () => {
           <InlineCode>Table</InlineCode>, you could pass anything you normally
           would pass to <InlineCode>{"<table>"}</InlineCode>{" "}
           because the return value{" "}
-          <Link href="https://github.com/adamzerner/rfui/blob/master/components/atoms/table.tsx">
+          <Link href="https://github.com/adamzerner/rfui/blob/master/components/preact/atoms/table.tsx">
             looks something like
           </Link>{" "}
           this:
@@ -612,7 +612,7 @@ export default () => {
   return (
     <ComponentDocsPage
       componentName="Table"
-      sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/atoms/table.tsx"
+      sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/preact/atoms/table.tsx"
       sections={sections}
       props={props}
     />

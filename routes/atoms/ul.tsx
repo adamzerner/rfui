@@ -1,9 +1,9 @@
-import { CodeBlock } from "@/components/atoms/code-block.tsx";
-import { InlineCode } from "@/components/atoms/inline-code.tsx";
-import { Link } from "@/components/atoms/link.tsx";
-import { UL } from "@/components/atoms/ul.tsx";
-import { Flex } from "@/components/helpers/flex.tsx";
-import { Stack } from "@/components/helpers/stack.tsx";
+import { CodeBlock } from "@/components/preact/atoms/code-block.tsx";
+import { InlineCode } from "@/components/preact/atoms/inline-code.tsx";
+import { Link } from "@/components/preact/atoms/link.tsx";
+import { UL } from "@/components/preact/atoms/ul.tsx";
+import { Flex } from "@/components/preact/helpers/flex.tsx";
+import { Stack } from "@/components/preact/helpers/stack.tsx";
 import { ComponentDocsPage } from "@/islands/demo/component-docs-page.tsx";
 
 export default () => {
@@ -340,7 +340,7 @@ export default () => {
           <InlineCode>UL</InlineCode>, you could pass anything you normally
           would pass to <InlineCode>{"<ul>"}</InlineCode>{" "}
           because the return value{" "}
-          <Link href="https://github.com/adamzerner/rfui/blob/master/components/atoms/ul.tsx">
+          <Link href="https://github.com/adamzerner/rfui/blob/master/components/preact/atoms/ul.tsx">
             looks something like
           </Link>{" "}
           this:
@@ -361,7 +361,7 @@ export default () => {
   return (
     <ComponentDocsPage
       componentName="UL"
-      sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/atoms/ul.tsx"
+      sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/preact/atoms/ul.tsx"
       sections={sections}
       props={props}
     />

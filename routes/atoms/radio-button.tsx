@@ -1,8 +1,8 @@
-import { CodeBlock } from "@/components/atoms/code-block.tsx";
-import { InlineCode } from "@/components/atoms/inline-code.tsx";
-import { Link } from "@/components/atoms/link.tsx";
-import { RadioButton } from "@/components/atoms/radio-button.tsx";
-import { Stack } from "@/components/helpers/stack.tsx";
+import { CodeBlock } from "@/components/preact/atoms/code-block.tsx";
+import { InlineCode } from "@/components/preact/atoms/inline-code.tsx";
+import { Link } from "@/components/preact/atoms/link.tsx";
+import { RadioButton } from "@/components/preact/atoms/radio-button.tsx";
+import { Stack } from "@/components/preact/helpers/stack.tsx";
 import { ComponentDocsPage } from "@/islands/demo/component-docs-page.tsx";
 
 export default () => {
@@ -92,7 +92,7 @@ export default () => {
           normally would pass to{" "}
           <InlineCode>{'<input type="radio">'}</InlineCode>{" "}
           because the return value{" "}
-          <Link href="https://github.com/adamzerner/rfui/blob/master/components/atoms/radio-button.tsx">
+          <Link href="https://github.com/adamzerner/rfui/blob/master/components/preact/atoms/radio-button.tsx">
             looks something like
           </Link>{" "}
           this:
@@ -113,7 +113,7 @@ export default () => {
     <ComponentDocsPage
       notes={notes}
       componentName="RadioButton"
-      sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/atoms/radio-button.tsx"
+      sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/preact/atoms/radio-button.tsx"
       sections={sections}
       props={props}
     />

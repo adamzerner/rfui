@@ -1,12 +1,12 @@
-import { CodeBlock } from "@/components/atoms/code-block.tsx";
-import { H1 } from "@/components/atoms/h1.tsx";
-import { H2 } from "@/components/atoms/h2.tsx";
-import { InlineCode } from "@/components/atoms/inline-code.tsx";
-import { Link } from "@/components/atoms/link.tsx";
-import { Text } from "@/components/atoms/text.tsx";
-import { Flex } from "@/components/helpers/flex.tsx";
-import { Stack } from "@/components/helpers/stack.tsx";
-import { Card } from "@/components/molecules/card.tsx";
+import { CodeBlock } from "@/components/preact/atoms/code-block.tsx";
+import { H1 } from "@/components/preact/atoms/h1.tsx";
+import { H2 } from "@/components/preact/atoms/h2.tsx";
+import { InlineCode } from "@/components/preact/atoms/inline-code.tsx";
+import { Link } from "@/components/preact/atoms/link.tsx";
+import { Text } from "@/components/preact/atoms/text.tsx";
+import { Flex } from "@/components/preact/helpers/flex.tsx";
+import { Stack } from "@/components/preact/helpers/stack.tsx";
+import { Card } from "@/components/preact/molecules/card.tsx";
 import { OnThisPage } from "@/islands/demo/component-docs-page.tsx";
 import { Alert, AlertBody, AlertHeader } from "@/islands/molecules/alert.tsx";
 import { LeftNav } from "@/routes/index.tsx";
@@ -206,7 +206,7 @@ export default () => {
           <InlineCode>Alert</InlineCode>, you could pass anything you normally
           would pass to <InlineCode>{"<div>"}</InlineCode>{" "}
           because the return value{" "}
-          <Link href="https://github.com/adamzerner/rfui/blob/master/components/molecules/alert.tsx">
+          <Link href="https://github.com/adamzerner/rfui/blob/master/components/preact/molecules/alert.tsx">
             looks something like
           </Link>{" "}
           this:

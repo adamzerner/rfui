@@ -1,4 +1,4 @@
-import { Link } from "@/components/atoms/link.tsx";
+import { Link } from "@/components/preact/atoms/link.tsx";
 import { ComponentChild, JSX } from "preact";
 
 export type H2Type = {

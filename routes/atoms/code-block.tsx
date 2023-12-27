@@ -1,6 +1,6 @@
-import { CodeBlock } from "@/components/atoms/code-block.tsx";
-import { InlineCode } from "@/components/atoms/inline-code.tsx";
-import { Link } from "@/components/atoms/link.tsx";
+import { CodeBlock } from "@/components/preact/atoms/code-block.tsx";
+import { InlineCode } from "@/components/preact/atoms/inline-code.tsx";
+import { Link } from "@/components/preact/atoms/link.tsx";
 import { ComponentDocsPage } from "@/islands/demo/component-docs-page.tsx";
 
 export default () => {
@@ -123,7 +123,7 @@ const fullName = firstName + " " + lastName;\`}
           <InlineCode>CodeBlock</InlineCode>, you could pass anything you
           normally would pass to <InlineCode>{"<pre>"}</InlineCode>{" "}
           because the return value{" "}
-          <Link href="https://github.com/adamzerner/rfui/blob/master/components/atoms/code-block.tsx">
+          <Link href="https://github.com/adamzerner/rfui/blob/master/components/preact/atoms/code-block.tsx">
             looks something like
           </Link>{" "}
           this:
@@ -139,7 +139,7 @@ const fullName = firstName + " " + lastName;\`}
   return (
     <ComponentDocsPage
       componentName="CodeBlock"
-      sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/atoms/code-block.tsx"
+      sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/preact/atoms/code-block.tsx"
       sections={sections}
       props={props}
     />

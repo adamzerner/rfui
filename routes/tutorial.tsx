@@ -1,5 +1,5 @@
-import { H1 } from "@/components/atoms/h1.tsx";
-import { Stack } from "@/components/helpers/stack.tsx";
+import { H1 } from "@/components/preact/atoms/h1.tsx";
+import { Stack } from "@/components/preact/helpers/stack.tsx";
 
 export default () => {
   return (

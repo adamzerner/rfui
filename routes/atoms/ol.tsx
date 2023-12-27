@@ -1,7 +1,7 @@
-import { CodeBlock } from "@/components/atoms/code-block.tsx";
-import { InlineCode } from "@/components/atoms/inline-code.tsx";
-import { Link } from "@/components/atoms/link.tsx";
-import { OL } from "@/components/atoms/ol.tsx";
+import { CodeBlock } from "@/components/preact/atoms/code-block.tsx";
+import { InlineCode } from "@/components/preact/atoms/inline-code.tsx";
+import { Link } from "@/components/preact/atoms/link.tsx";
+import { OL } from "@/components/preact/atoms/ol.tsx";
 import { ComponentDocsPage } from "@/islands/demo/component-docs-page.tsx";
 
 export default () => {
@@ -71,7 +71,7 @@ export default () => {
           <InlineCode>OL</InlineCode>, you could pass anything you normally
           would pass to <InlineCode>{"<ol>"}</InlineCode>{" "}
           because the return value{" "}
-          <Link href="https://github.com/adamzerner/rfui/blob/master/components/atoms/ol.tsx">
+          <Link href="https://github.com/adamzerner/rfui/blob/master/components/preact/atoms/ol.tsx">
             looks something like
           </Link>{" "}
           this:
@@ -89,7 +89,7 @@ export default () => {
   return (
     <ComponentDocsPage
       componentName="OL"
-      sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/atoms/ol.tsx"
+      sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/preact/atoms/ol.tsx"
       sections={sections}
       props={props}
     />

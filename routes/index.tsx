@@ -1,7 +1,11 @@
-import { Link } from "@/components/atoms/link.tsx";
-import { Flex } from "@/components/helpers/flex.tsx";
-import { Stack } from "@/components/helpers/stack.tsx";
-import { Card, CardBody, CardFooter } from "@/components/molecules/card.tsx";
+import { Link } from "@/components/preact/atoms/link.tsx";
+import { Flex } from "@/components/preact/helpers/flex.tsx";
+import { Stack } from "@/components/preact/helpers/stack.tsx";
+import {
+  Card,
+  CardBody,
+  CardFooter,
+} from "@/components/preact/molecules/card.tsx";
 import { ComponentChild } from "preact";
 
 export default () => {

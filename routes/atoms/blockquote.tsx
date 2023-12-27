@@ -1,7 +1,7 @@
-import { Blockquote } from "@/components/atoms/blockquote.tsx";
-import { CodeBlock } from "@/components/atoms/code-block.tsx";
-import { InlineCode } from "@/components/atoms/inline-code.tsx";
-import { Link } from "@/components/atoms/link.tsx";
+import { Blockquote } from "@/components/preact/atoms/blockquote.tsx";
+import { CodeBlock } from "@/components/preact/atoms/code-block.tsx";
+import { InlineCode } from "@/components/preact/atoms/inline-code.tsx";
+import { Link } from "@/components/preact/atoms/link.tsx";
 import { ComponentDocsPage } from "@/islands/demo/component-docs-page.tsx";
 
 export default () => {
@@ -126,7 +126,7 @@ export default () => {
           <InlineCode>Blockquote</InlineCode>, you could pass anything you
           normally would pass to <InlineCode>{"<blockquote>"}</InlineCode>{" "}
           because the container{" "}
-          <Link href="https://github.com/adamzerner/rfui/blob/master/components/atoms/blockquote.tsx">
+          <Link href="https://github.com/adamzerner/rfui/blob/master/components/preact/atoms/blockquote.tsx">
             looks something like
           </Link>{" "}
           this:
@@ -144,7 +144,7 @@ export default () => {
   return (
     <ComponentDocsPage
       componentName="Blockquote"
-      sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/atoms/blockquote.tsx"
+      sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/preact/atoms/blockquote.tsx"
       sections={sections}
       props={props}
     />

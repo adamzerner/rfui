@@ -1,4 +1,4 @@
-import { Stack } from "@/components/helpers/stack.tsx";
+import { Stack } from "@/components/preact/helpers/stack.tsx";
 import { ComponentChild, JSX } from "preact";
 
 export type TextType = {

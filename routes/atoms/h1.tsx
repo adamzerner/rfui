@@ -1,9 +1,9 @@
-import { CodeBlock } from "@/components/atoms/code-block.tsx";
-import { H1 } from "@/components/atoms/h1.tsx";
-import { InlineCode } from "@/components/atoms/inline-code.tsx";
-import { Link } from "@/components/atoms/link.tsx";
-import { Text } from "@/components/atoms/text.tsx";
-import { Stack } from "@/components/helpers/stack.tsx";
+import { CodeBlock } from "@/components/preact/atoms/code-block.tsx";
+import { H1 } from "@/components/preact/atoms/h1.tsx";
+import { InlineCode } from "@/components/preact/atoms/inline-code.tsx";
+import { Link } from "@/components/preact/atoms/link.tsx";
+import { Text } from "@/components/preact/atoms/text.tsx";
+import { Stack } from "@/components/preact/helpers/stack.tsx";
 import { ComponentDocsPage } from "@/islands/demo/component-docs-page.tsx";
 
 export default () => {
@@ -103,7 +103,7 @@ export default () => {
           <InlineCode>H1</InlineCode>, you could pass anything you normally
           would pass to <InlineCode>{"<h1>"}</InlineCode>{" "}
           because the return value{" "}
-          <Link href="https://github.com/adamzerner/rfui/blob/master/components/atoms/h1.tsx">
+          <Link href="https://github.com/adamzerner/rfui/blob/master/components/preact/atoms/h1.tsx">
             looks something like
           </Link>{" "}
           this:
@@ -124,7 +124,7 @@ export default () => {
   return (
     <ComponentDocsPage
       componentName="H1"
-      sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/atoms/h1.tsx"
+      sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/preact/atoms/h1.tsx"
       sections={sections}
       props={props}
     />

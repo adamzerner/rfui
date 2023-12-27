@@ -1,5 +1,5 @@
-import { Input, InputType } from "@/components/atoms/input.tsx";
-import { Flex } from "@/components/helpers/flex.tsx";
+import { Input, InputType } from "@/components/preact/atoms/input.tsx";
+import { Flex } from "@/components/preact/helpers/flex.tsx";
 import { JSX } from "preact";
 import { useState } from "preact/hooks";
 

@@ -1,8 +1,8 @@
-import { CodeBlock } from "@/components/atoms/code-block.tsx";
-import { InlineCode } from "@/components/atoms/inline-code.tsx";
-import { Link } from "@/components/atoms/link.tsx";
-import { Stack } from "@/components/helpers/stack.tsx";
-import { FormField } from "@/components/molecules/form-field.tsx";
+import { CodeBlock } from "@/components/preact/atoms/code-block.tsx";
+import { InlineCode } from "@/components/preact/atoms/inline-code.tsx";
+import { Link } from "@/components/preact/atoms/link.tsx";
+import { Stack } from "@/components/preact/helpers/stack.tsx";
+import { FormField } from "@/components/preact/molecules/form-field.tsx";
 import { ComponentDocsPage } from "@/islands/demo/component-docs-page.tsx";
 
 export default () => {
@@ -450,7 +450,7 @@ export default () => {
           <InlineCode>FormField</InlineCode>, you could pass anything you
           normally would pass to <InlineCode>{"<div>"}</InlineCode>{" "}
           because the return value{" "}
-          <Link href="https://github.com/adamzerner/rfui/blob/master/components/molecules/form-field.tsx">
+          <Link href="https://github.com/adamzerner/rfui/blob/master/components/preact/molecules/form-field.tsx">
             looks something like
           </Link>{" "}
           this:
@@ -468,7 +468,7 @@ export default () => {
   return (
     <ComponentDocsPage
       componentName="FormField"
-      sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/molecules/form-field.tsx"
+      sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/preact/molecules/form-field.tsx"
       sections={sections}
       props={props}
     />

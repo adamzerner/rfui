@@ -1,7 +1,7 @@
-import { CodeBlock } from "@/components/atoms/code-block.tsx";
-import { InlineCode } from "@/components/atoms/inline-code.tsx";
-import { Link } from "@/components/atoms/link.tsx";
-import { Stack } from "@/components/helpers/stack.tsx";
+import { CodeBlock } from "@/components/preact/atoms/code-block.tsx";
+import { InlineCode } from "@/components/preact/atoms/inline-code.tsx";
+import { Link } from "@/components/preact/atoms/link.tsx";
+import { Stack } from "@/components/preact/helpers/stack.tsx";
 import { ComponentDocsPage } from "@/islands/demo/component-docs-page.tsx";
 
 export default () => {
@@ -45,7 +45,7 @@ export default () => {
           <InlineCode>Stack</InlineCode>, you could pass anything you normally
           would pass to <InlineCode>{"<div>"}</InlineCode>{" "}
           because the return value{" "}
-          <Link href="https://github.com/adamzerner/rfui/blob/master/components/molecules/stack.tsx">
+          <Link href="https://github.com/adamzerner/rfui/blob/master/components/preact/molecules/stack.tsx">
             looks something like
           </Link>{" "}
           this:
@@ -63,7 +63,7 @@ export default () => {
   return (
     <ComponentDocsPage
       componentName="Stack"
-      sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/helpers/stack.tsx"
+      sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/preact/helpers/stack.tsx"
       sections={sections}
       props={props}
     />

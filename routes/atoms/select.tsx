@@ -1,8 +1,8 @@
-import { CodeBlock } from "@/components/atoms/code-block.tsx";
-import { InlineCode } from "@/components/atoms/inline-code.tsx";
-import { Link } from "@/components/atoms/link.tsx";
-import { Select } from "@/components/atoms/select.tsx";
-import { Stack } from "@/components/helpers/stack.tsx";
+import { CodeBlock } from "@/components/preact/atoms/code-block.tsx";
+import { InlineCode } from "@/components/preact/atoms/inline-code.tsx";
+import { Link } from "@/components/preact/atoms/link.tsx";
+import { Select } from "@/components/preact/atoms/select.tsx";
+import { Stack } from "@/components/preact/helpers/stack.tsx";
 import { ComponentDocsPage } from "@/islands/demo/component-docs-page.tsx";
 
 export default () => {
@@ -238,7 +238,7 @@ export default () => {
           <InlineCode>Select</InlineCode>, you could pass anything you normally
           would pass to <InlineCode>{"<select>"}</InlineCode>{" "}
           because the return value{" "}
-          <Link href="https://github.com/adamzerner/rfui/blob/master/components/atoms/select.tsx">
+          <Link href="https://github.com/adamzerner/rfui/blob/master/components/preact/atoms/select.tsx">
             looks something like
           </Link>{" "}
           this:
@@ -260,7 +260,7 @@ export default () => {
     <ComponentDocsPage
       componentName="Select"
       notes={notes}
-      sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/atoms/select.tsx"
+      sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/preact/atoms/select.tsx"
       sections={sections}
       props={props}
     />

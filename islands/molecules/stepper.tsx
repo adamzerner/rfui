@@ -1,4 +1,4 @@
-import { Flex } from "@/components/helpers/flex.tsx";
+import { Flex } from "@/components/preact/helpers/flex.tsx";
 import { JSX } from "preact";
 import { useState } from "preact/hooks";
 

@@ -1,16 +1,16 @@
-import { Button } from "@/components/atoms/button.tsx";
-import { CodeBlock } from "@/components/atoms/code-block.tsx";
-import { InlineCode } from "@/components/atoms/inline-code.tsx";
-import { Link } from "@/components/atoms/link.tsx";
-import { Flex } from "@/components/helpers/flex.tsx";
-import { Stack } from "@/components/helpers/stack.tsx";
+import { Button } from "@/components/preact/atoms/button.tsx";
+import { CodeBlock } from "@/components/preact/atoms/code-block.tsx";
+import { InlineCode } from "@/components/preact/atoms/inline-code.tsx";
+import { Link } from "@/components/preact/atoms/link.tsx";
+import { Flex } from "@/components/preact/helpers/flex.tsx";
+import { Stack } from "@/components/preact/helpers/stack.tsx";
 import {
   Card,
   CardBody,
   CardFooter,
   CardHeader,
-} from "@/components/molecules/card.tsx";
-import { FormField } from "@/components/molecules/form-field.tsx";
+} from "@/components/preact/molecules/card.tsx";
+import { FormField } from "@/components/preact/molecules/form-field.tsx";
 import { ComponentDocsPage } from "@/islands/demo/component-docs-page.tsx";
 
 export default () => {
@@ -598,7 +598,7 @@ export default () => {
           <InlineCode>Card</InlineCode>, you could pass anything you normally
           would pass to <InlineCode>{"<div>"}</InlineCode>{" "}
           because the return value{" "}
-          <Link href="https://github.com/adamzerner/rfui/blob/master/components/molecules/card.tsx">
+          <Link href="https://github.com/adamzerner/rfui/blob/master/components/preact/molecules/card.tsx">
             looks something like
           </Link>{" "}
           this:
@@ -616,7 +616,7 @@ export default () => {
   return (
     <ComponentDocsPage
       componentName="Card"
-      sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/atoms/card.tsx"
+      sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/preact/atoms/card.tsx"
       sections={sections}
       props={props}
     />

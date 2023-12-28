@@ -1,8 +1,8 @@
-import { Link, LinkType } from "@/components/atoms/link.tsx";
-import type { ContainerType } from "@/components/helpers/container.tsx";
-import { Container } from "@/components/helpers/container.tsx";
-import { Flex } from "@/components/helpers/flex.tsx";
 import type { ComponentChild, JSX } from "preact";
+import { Link, LinkType } from "../atoms/link.tsx";
+import type { ContainerType } from "../helpers/container.tsx";
+import { Container } from "../helpers/container.tsx";
+import { Flex } from "../helpers/flex.tsx";
 
 export type NavbarType = {
   size?: ContainerType["size"];

@@ -1,9 +1,9 @@
 // Something about this being an island is making the types weird.
 // deno-lint-ignore-file no-explicit-any
-import { Flex } from "@/components/helpers/flex.tsx";
-import { CloseIcon } from "@/components/icons/close-icon.tsx";
 import type { ComponentChild, JSX } from "preact";
 import { useState } from "preact/hooks";
+import { Flex } from "../../components/helpers/flex.tsx";
+import { CloseIcon } from "../../components/icons/close-icon.tsx";
 
 export type AlertType = {
   variant?: "success" | "info" | "warning" | "danger" | "neutral";

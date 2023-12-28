@@ -1,8 +1,8 @@
-import { Link } from "@/components/atoms/link.tsx";
-import { Container, ContainerType } from "@/components/helpers/container.tsx";
-import { Flex } from "@/components/helpers/flex.tsx";
-import { Stack } from "@/components/helpers/stack.tsx";
 import type { ComponentChild, JSX } from "preact";
+import { Link } from "../atoms/link.tsx";
+import { Container, ContainerType } from "../helpers/container.tsx";
+import { Flex } from "../helpers/flex.tsx";
+import { Stack } from "../helpers/stack.tsx";
 
 export type FooterType = {
   size?: ContainerType["size"];

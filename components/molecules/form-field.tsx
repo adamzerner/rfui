@@ -1,7 +1,7 @@
-import { Input } from "@/components/atoms/input.tsx";
-import { Flex } from "@/components/helpers/flex.tsx";
-import { XCircleIcon } from "@/components/icons/x-circle-icon.tsx";
 import type { JSX } from "preact";
+import { Input } from "../atoms/input.tsx";
+import { Flex } from "../helpers/flex.tsx";
+import { XCircleIcon } from "../icons/x-circle-icon.tsx";
 
 export type FormFieldType = {
   label: string;

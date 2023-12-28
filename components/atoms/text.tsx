@@ -1,5 +1,5 @@
-import { Stack } from "@/components/helpers/stack.tsx";
 import { ComponentChild, JSX } from "preact";
+import { Stack } from "../helpers/stack.tsx";
 
 export type TextType = {
   size?: "sm" | "md" | "lg";

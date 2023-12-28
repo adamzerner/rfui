@@ -1,5 +1,5 @@
-import { Link } from "@/components/atoms/link.tsx";
 import { ComponentChild, JSX } from "preact";
+import { Link } from "./link.tsx";
 
 export type H2Type = {
   inPageLink?: string;

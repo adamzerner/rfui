@@ -1,5 +1,5 @@
-import TailwindConfig from "@/tailwind.config.ts";
 import { ComponentChild, JSX } from "preact";
+import TailwindConfig from "../../tailwind.config.ts";
 
 export type TableType = {
   bordered?: boolean;

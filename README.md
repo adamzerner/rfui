@@ -85,3 +85,4 @@ So here's the process.
 2. Run `deno task start`.
 3. In Firefox, open the dev tools, click the "Style Editor" tab, and refer to
    `app.css`. That's the file that users of the library will need.
+4. Update `static/rfui.css`.

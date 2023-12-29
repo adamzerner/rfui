@@ -39,7 +39,10 @@ import * as $molecules_password_input from "./routes/molecules/password-input.ts
 import * as $molecules_stepper from "./routes/molecules/stepper.tsx";
 import * as $philosophy from "./routes/philosophy.tsx";
 import * as $rest_parameters from "./routes/rest-parameters.tsx";
-import * as $tutorial from "./routes/tutorial.tsx";
+import * as $tutorials_fresh from "./routes/tutorials/fresh.tsx";
+import * as $tutorials_preact from "./routes/tutorials/preact.tsx";
+import * as $tutorials_react from "./routes/tutorials/react.tsx";
+import * as $tutorials_remix from "./routes/tutorials/remix.tsx";
 import * as $demo_component_docs_page from "./islands/demo/component-docs-page.tsx";
 import * as $molecules_alert_1 from "./islands/molecules/alert.tsx";
 import * as $molecules_password_input_1 from "./islands/molecules/password-input.tsx";
@@ -86,7 +89,10 @@ const manifest = {
     "./routes/molecules/stepper.tsx": $molecules_stepper,
     "./routes/philosophy.tsx": $philosophy,
     "./routes/rest-parameters.tsx": $rest_parameters,
-    "./routes/tutorial.tsx": $tutorial,
+    "./routes/tutorials/fresh.tsx": $tutorials_fresh,
+    "./routes/tutorials/preact.tsx": $tutorials_preact,
+    "./routes/tutorials/react.tsx": $tutorials_react,
+    "./routes/tutorials/remix.tsx": $tutorials_remix,
   },
   islands: {
     "./islands/demo/component-docs-page.tsx": $demo_component_docs_page,

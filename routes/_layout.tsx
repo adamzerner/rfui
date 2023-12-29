@@ -52,7 +52,13 @@ const TheFooter = () => {
         <FooterItem href="/">Components</FooterItem>
         <FooterItem href="/rest-parameters">Rest parameters</FooterItem>
         <FooterItem href="/getting-started">Getting started</FooterItem>
-        <FooterItem href="/tutorial">Tutorial</FooterItem>
+      </FooterColumn>
+      <FooterColumn>
+        <FooterHeading>Tutorials</FooterHeading>
+        <FooterItem href="/tutorials/fresh">Fresh</FooterItem>
+        <FooterItem href="/tutorials/remix">Remix</FooterItem>
+        <FooterItem href="/tutorials/preact">Preact</FooterItem>
+        <FooterItem href="/tutorials/react">React</FooterItem>
       </FooterColumn>
       <FooterColumn>
         <FooterHeading>Code</FooterHeading>

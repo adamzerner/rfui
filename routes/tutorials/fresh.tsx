@@ -117,7 +117,7 @@ export default function Home() {
 `}
         />
         <p>
-          Visit{" "}
+          After running <InlineCode>deno task start</InlineCode>, visit{" "}
           <Link href="http://localhost:8000/">http://localhost:8000/</Link>{" "}
           to see it in action.
         </p>
@@ -144,6 +144,11 @@ export default function Home() {
           <Link href="https://prismjs.com/plugins/copy-to-clipboard/">
             "Copy to Clipboard Button" plugin
           </Link>.
+        </li>
+        <li>
+          Place your <InlineCode>prism.js</InlineCode> and{" "}
+          <InlineCode>prism.css</InlineCode> files in the{" "}
+          <InlineCode>static</InlineCode> directory.
         </li>
         <li>
           If you want stuff in code blocks to wrap (you probably do), change

@@ -10,7 +10,7 @@ import { Alert } from "@/islands/molecules/alert.tsx";
 export default () => {
   return (
     <div class="max-w-prose text-lg">
-      <H1>Fresh Tutorial</H1>
+      <H1>Fresh tutorial</H1>
       <Text>
         <p>
           This is a tutorial for using RFUI in a project that uses the web

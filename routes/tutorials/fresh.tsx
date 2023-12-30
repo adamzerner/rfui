@@ -184,6 +184,59 @@ export default function Home() {
           right before <InlineCode>{`</body>`}</InlineCode>.
         </li>
       </OL>
+
+      <H2 inPageLink="use-open-sans-font">
+        {"6) Use Open Sans font (optional)"}
+      </H2>
+      <Text>
+        <p>
+          RFUI was designed with the{" "}
+          <Link href="https://fonts.google.com/specimen/Open+Sans">
+            Open Sans font
+          </Link>. All of the examples you see in the <Link href="/">docs</Link>
+          {" "}
+          use this font.
+        </p>
+        <p>
+          If you're not using Tailwind, to use this font, refer to{" "}
+          <Link href="https://fonts.google.com/specimen/Open+Sans">
+            their docs
+          </Link>.
+        </p>
+        <p>If you are using Tailwind, to use this font, add</p>
+        <CodeBlock
+          language="html"
+          code={`<link
+  href="https://fonts.googleapis.com/css?family=Open+Sans"
+  rel="stylesheet"
+/>`}
+        />
+        <p>
+          to <InlineCode>_app.tsx</InlineCode> and
+        </p>
+        <CodeBlock
+          language="ts"
+          code={`fontFamily: {
+  sans: "'Open Sans', sans-serif",
+},`}
+        />
+        <p>
+          to{" "}
+          <InlineCode>tailwind.config.ts</InlineCode>. Ie. something like this:
+        </p>
+        <CodeBlock
+          language="ts"
+          code={`export default {
+  theme: {
+    fontFamily: {
+      sans: "'Open Sans', sans-serif",
+    },
+    ...
+  },
+  ...
+} as const;`}
+        />
+      </Text>
     </div>
   );
 };

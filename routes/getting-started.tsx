@@ -96,19 +96,21 @@ export default () => {
             />
           </AlertBody>
         </Alert>
+      </Text>
 
-        <H2 inPageLink="use-the-component">{"3) Use the component"}</H2>
-        <Text>
-          <p>Something like:</p>
-          <CodeBlock
-            language="tsx"
-            code={`<Button>Example</Button>`}
-          />
-        </Text>
+      <H2 inPageLink="use-the-component">{"3) Use the component"}</H2>
+      <Text>
+        <p>Something like:</p>
+        <CodeBlock
+          language="tsx"
+          code={`<Button>Example</Button>`}
+        />
+      </Text>
 
-        <H2 inPageLink="set-up-syntax-highlighting">
-          {"4) Set up syntax highlighting (optional)"}
-        </H2>
+      <H2 inPageLink="set-up-syntax-highlighting">
+        {"4) Set up syntax highlighting (optional)"}
+      </H2>
+      <Text>
         <p>
           If you want{" "}
           <Link href="/atoms/code-block#language">syntax highlighting</Link>
@@ -161,6 +163,26 @@ export default () => {
             right before <InlineCode>{`</body>`}</InlineCode>.
           </li>
         </OL>
+      </Text>
+
+      <H2 inPageLink="use-open-sans-font">
+        {"5) Use Open Sans font (optional)"}
+      </H2>
+      <Text>
+        <p>
+          RFUI was designed with the{" "}
+          <Link href="https://fonts.google.com/specimen/Open+Sans">
+            Open Sans font
+          </Link>. All of the examples you see in the <Link href="/">docs</Link>
+          {" "}
+          use this font.
+        </p>
+        <p>
+          To use this font, refer to{" "}
+          <Link href="https://fonts.google.com/specimen/Open+Sans">
+            their docs
+          </Link>.
+        </p>
       </Text>
     </div>
   );

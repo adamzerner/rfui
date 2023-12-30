@@ -21,32 +21,10 @@ according to the following
 
 ## Early stage
 
-It is currently in a very early stage. See the
-[project page](https://github.com/users/adamzerner/projects/2/views/1).
-
-## Atomic Design
-
-It follows the
-[Atomic Design Methodlogy](https://atomicdesign.bradfrost.com/chapter-2/) by
-breaking components into "atoms", "molecules" and "organisms".
-
-## Syntax Highlighting
-
-If users want `CodeBlock` to have syntax highlighting, they'll have to use
-[Prism](https://prismjs.com/). Here's what that involves:
-
-1. Generate a `prism.js` and `prism.css` file
-   [here](https://prismjs.com/download.html). Make sure you include whatever
-   languages and plugins you need. Ie. if you want to let users copy the code to
-   their clipboard, you'll need to include the
-   ["Copy to Clipboard Button" plugin](https://prismjs.com/plugins/copy-to-clipboard/).
-2. If you want stuff in code blocks to wrap, change `white-space:pre` in
-   `prism.css` to `white-space:pre-wrap`.
-3. Load them with something like `<script src="/prism.js"></script>` and
-   `<link rel="stylesheet" type="text/css" href="/prism.css" />`.
-4. After your JavaScript has loaded you (might?) need to call
-   `Prism.highlightAll();`. One way to do this is to include
-   `<script>Prism.highlightAll();</script>` right before `</body>`.
+It is currently at a pretty early stage. See the
+[project page](https://github.com/users/adamzerner/projects/2/views/1). However,
+for people with a reasonable amount of risk aversion, it should be ready to be
+used on most projects.
 
 ## Islands in docs
 

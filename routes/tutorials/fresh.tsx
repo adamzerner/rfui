@@ -13,19 +13,23 @@ export default () => {
       <H1>Fresh tutorial</H1>
       <Text>
         <p>
-          This is a tutorial for using RFUI in a project that uses the web
-          framework <Link href="https://fresh.deno.dev/">Fresh</Link>.
+          This is a{" "}
+          <Link href="https://documentation.divio.com/tutorials.html">
+            tutorial
+          </Link>{" "}
+          for using RFUI in a project that uses the web framework{" "}
+          <Link href="https://fresh.deno.dev/">Fresh</Link>.
         </p>
       </Text>
 
-      <H2 inPageLink="create-app">{"1) Create app"}</H2>
+      <H2 inPageLink="create-project">{"1) Create project"}</H2>
       <Text>
         <p>
           Refer to the Fresh docs'{" "}
           <Link href="https://fresh.deno.dev/docs/getting-started">
             "Getting Started"
           </Link>{" "}
-          page to create a Fresh app.
+          page to create a new Fresh project.
         </p>
         <p>
           Basically, make sure you have{" "}
@@ -73,7 +77,7 @@ export default () => {
         </p>
         <CodeBlock
           language="ts"
-          code={`"rfui": "https://deno.land/x/rfui@v0.0.15/mod.ts"`}
+          code={`"rfui": "https://deno.land/x/rfui@v0.1.0/mod.ts"`}
         />
         <p>
           to the <InlineCode>"imports"</InlineCode> object.
@@ -159,18 +163,24 @@ export default function Home() {
         </li>
         <li>
           Load them by adding{" "}
-          <InlineCode>{`<script src="/prism.js"></script>`}</InlineCode> and
-          <InlineCode>
-            {`<link rel="stylesheet" type="text/css" href="/prism.css" />`}
-          </InlineCode>{" "}
+          <CodeBlock
+            language="html"
+            code={`<script src="/prism.js"></script>`}
+          />
+          <div>and:</div>
+          <CodeBlock
+            language="html"
+            code={`<link rel="stylesheet" href="/prism.css" />`}
+          />
           to <InlineCode>_app.tsx</InlineCode>.
         </li>
         <li>
           After your JavaScript has loaded you will need to call
-          <InlineCode>Prism.highlightAll();</InlineCode>. To do this, include
-          <InlineCode>
-            {`<script>Prism.highlightAll();</script>`}
-          </InlineCode>{" "}
+          <InlineCode>Prism.highlightAll();</InlineCode>. To do this, include:
+          <CodeBlock
+            language="html"
+            code={`<script>Prism.highlightAll();</script>`}
+          />
           right before <InlineCode>{`</body>`}</InlineCode>.
         </li>
       </OL>

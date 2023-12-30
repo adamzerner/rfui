@@ -124,6 +124,12 @@ const getComponents = (props: any) => {
     (child: any) => child && child.type && child.type.name === AlertBody.name,
   );
 
+  if (!alertBody) {
+    throw new Error(
+      "An `AlertBody` is needed if you pass an array of elements to `Alert` as `children`.",
+    );
+  }
+
   return [alertHeader, alertBody];
 };
 

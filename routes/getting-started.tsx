@@ -184,6 +184,18 @@ export default () => {
           </Link>.
         </p>
       </Text>
+
+      <H2 inPageLink="use-heroicons">
+        {"6) Use heroicons (optional)"}
+      </H2>
+      <Text>
+        <p>
+          Various RFUI components use{" "}
+          <Link href="https://heroicons.com/">heroicons</Link>. To maintain a
+          consistent look and feel, you probably will want to use heroicons in
+          your project as well.
+        </p>
+      </Text>
     </div>
   );
 };

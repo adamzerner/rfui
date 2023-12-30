@@ -156,6 +156,70 @@ export default () => {
 </Text>`}
       />
     ),
+  }, {
+    title: "One paragraph",
+    description: (
+      <div>
+        If you just have one paragraph with no other elements, you can simplify
+        the code as demonstrated below.
+      </div>
+    ),
+    example: () => (
+      <Text>
+        Illo quia quam perferendis ut consectetur rerum dolores dolores.
+        Reiciendis est beatae magnam ut amet quis sequi. Eaque consequatur
+        consectetur non amet nostrum quo animi.
+      </Text>
+    ),
+    exampleCode: () => (
+      <CodeBlock
+        class="mt-4"
+        language="tsx"
+        code={`<Text>
+  Illo quia quam perferendis ut consectetur rerum dolores dolores.
+  Reiciendis est beatae magnam ut amet quis sequi. Eaque consequatur
+  consectetur non amet nostrum quo animi.
+</Text>`}
+      />
+    ),
+  }, {
+    title: "One paragraph with element",
+    description: (
+      <div>
+        If your paragraph has some element, you'll need to wrap it in something
+        like a <InlineCode>{`<p>`}</InlineCode> or{" "}
+        <InlineCode>{`<div>`}</InlineCode> because <InlineCode>Text</InlineCode>
+        {" "}
+        has a container of{" "}
+        <Link href="/helpers/stack">
+          <InlineCode>Stack</InlineCode>
+        </Link>.
+      </div>
+    ),
+    example: () => (
+      <Text>
+        <p>
+          Illo quia quam perferendis ut consectetur{" "}
+          <Link href="https://example.com">rerum dolores</Link>{" "}
+          dolores. Reiciendis est beatae magnam ut amet quis sequi. Eaque
+          consequatur consectetur non amet nostrum quo animi.
+        </p>
+      </Text>
+    ),
+    exampleCode: () => (
+      <CodeBlock
+        class="mt-4"
+        language="tsx"
+        code={`<Text>
+  <p>
+    Illo quia quam perferendis ut consectetur{" "}
+    <Link href="https://example.com">rerum dolores</Link>{" "}
+    dolores. Reiciendis est beatae magnam ut amet quis sequi. Eaque
+    consequatur consectetur non amet nostrum quo animi.
+  </p>
+</Text>`}
+      />
+    ),
   }];
   const props = [{
     name: "size",

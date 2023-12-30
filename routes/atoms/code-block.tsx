@@ -54,8 +54,9 @@ export default () => {
         <Link href="https://prismjs.com/index.html#supported-languages">
           this list
         </Link>. And make sure when you download Prism (see{" "}
-        <Link href="/getting-started">Getting started</Link>) that you check off
-        the languages you need.
+        <Link href="/getting-started#set-up-syntax-highlighting">
+          Getting started
+        </Link>) that you check off the languages you need.
       </div>
     ),
     example: () => (

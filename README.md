@@ -53,14 +53,8 @@ To create a new version of this library:
 
 ## Generating the Tailwind CSS file
 
-I've tried to find a good terminal command or script to run but haven't found
-anything good, and it doesn't seem worth spending more time looking.
-
-So here's the process.
+Here's the process:
 
 1. Go to `tailwind.config.ts` and remove `routes` since that directory is just
    for the documentation, not for code that will be used by library users.
-2. Run `deno task start`.
-3. In Firefox, open the dev tools, click the "Style Editor" tab, and refer to
-   `app.css`. That's the file that users of the library will need.
-4. Update `static/rfui.css`.
+2. Run `./tailwindcss -i static/app.css -o static/rfui.css --minify`.

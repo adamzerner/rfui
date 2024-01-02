@@ -138,7 +138,7 @@ table.rfui-table.condensed td {
 }
 
 table.rfui-table.bordered td {
-  border-bottom: 1px solid 
+  border-bottom: 1px solid rgb(var(--color-neutral-100));
 }
 
 table.rfui-table.hover tr:hover td {

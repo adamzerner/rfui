@@ -266,6 +266,8 @@ export default () => {
     ),
   }, {
     title: "Custom",
+    description:
+      "You'll have to do a little more work yourself for custom bullet types.",
     example: () => (
       <UL bulletType="none">
         <li>

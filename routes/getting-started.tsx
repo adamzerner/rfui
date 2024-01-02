@@ -107,8 +107,55 @@ export default () => {
         />
       </Text>
 
+      <H2 inPageLink="use-heroicons">
+        {"4) Use heroicons (recommended)"}
+      </H2>
+      <Text>
+        <p>
+          Various RFUI components use{" "}
+          <Link href="https://heroicons.com/">heroicons</Link>. If you end up
+          having a need for more icons, to maintain a consistent look and feel,
+          you probably will want to use heroicons in your project as well.
+        </p>
+      </Text>
+
+      <H2 inPageLink="use-open-sans-font">
+        {"5) Use Open Sans font (optional)"}
+      </H2>
+      <Text>
+        <p>
+          RFUI was designed with the{" "}
+          <Link href="https://fonts.google.com/specimen/Open+Sans">
+            Open Sans font
+          </Link>. All of the examples you see in the <Link href="/">docs</Link>
+          {" "}
+          use this font.
+        </p>
+        <p>
+          To use this font, refer to{" "}
+          <Link href="https://fonts.google.com/specimen/Open+Sans">
+            their docs
+          </Link>.
+        </p>
+      </Text>
+
+      <H2 inPageLink="customize-css-variables">
+        {"6) Customize CSS variables (optional)"}
+      </H2>
+      <Text>
+        <p>
+          In the <InlineCode>rfui.css</InlineCode> file you created in{" "}
+          <Link href="#include-rfui-css-file">step one</Link>, you will see{" "}
+          <InlineCode>:root</InlineCode> followed by a bunch of{" "}
+          <Link href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties">
+            CSS variables
+          </Link>. You can change their values if you'd like to customize your
+          app's look and feel.
+        </p>
+      </Text>
+
       <H2 inPageLink="set-up-syntax-highlighting">
-        {"4) Set up syntax highlighting (optional)"}
+        {"7) Set up syntax highlighting (optional)"}
       </H2>
       <Text>
         <p>
@@ -163,38 +210,6 @@ export default () => {
             right before <InlineCode>{`</body>`}</InlineCode>.
           </li>
         </OL>
-      </Text>
-
-      <H2 inPageLink="use-open-sans-font">
-        {"5) Use Open Sans font (optional)"}
-      </H2>
-      <Text>
-        <p>
-          RFUI was designed with the{" "}
-          <Link href="https://fonts.google.com/specimen/Open+Sans">
-            Open Sans font
-          </Link>. All of the examples you see in the <Link href="/">docs</Link>
-          {" "}
-          use this font.
-        </p>
-        <p>
-          To use this font, refer to{" "}
-          <Link href="https://fonts.google.com/specimen/Open+Sans">
-            their docs
-          </Link>.
-        </p>
-      </Text>
-
-      <H2 inPageLink="use-heroicons">
-        {"6) Use heroicons (optional)"}
-      </H2>
-      <Text>
-        <p>
-          Various RFUI components use{" "}
-          <Link href="https://heroicons.com/">heroicons</Link>. To maintain a
-          consistent look and feel, you probably will want to use heroicons in
-          your project as well.
-        </p>
       </Text>
     </div>
   );

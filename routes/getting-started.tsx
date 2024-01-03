@@ -107,8 +107,19 @@ export default () => {
         />
       </Text>
 
+      <H2 inPageLink="decide-on-a-personality">
+        {"4) Decide on a personality (recommended)"}
+      </H2>
+      <Text>
+        <p>
+          It is usually a good idea to decide upfront on how serious or playful
+          you want the tone to be. See{" "}
+          <Link href="/choose-a-personality">Choose a Personality</Link>.
+        </p>
+      </Text>
+
       <H2 inPageLink="use-heroicons">
-        {"4) Use heroicons (recommended)"}
+        {"5) Use heroicons (recommended)"}
       </H2>
       <Text>
         <p>
@@ -116,26 +127,6 @@ export default () => {
           <Link href="https://heroicons.com/">heroicons</Link>. If you end up
           having a need for more icons, to maintain a consistent look and feel,
           you probably will want to use heroicons in your project as well.
-        </p>
-      </Text>
-
-      <H2 inPageLink="use-open-sans-font">
-        {"5) Use Open Sans font (optional)"}
-      </H2>
-      <Text>
-        <p>
-          RFUI was designed with the{" "}
-          <Link href="https://fonts.google.com/specimen/Open+Sans">
-            Open Sans font
-          </Link>. All of the examples you see in the <Link href="/">docs</Link>
-          {" "}
-          use this font.
-        </p>
-        <p>
-          To use this font, refer to{" "}
-          <Link href="https://fonts.google.com/specimen/Open+Sans">
-            their docs
-          </Link>.
         </p>
       </Text>
 

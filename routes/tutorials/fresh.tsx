@@ -127,8 +127,19 @@ export default function Home() {
         </p>
       </Text>
 
+      <H2 inPageLink="decide-on-a-personality">
+        {"5) Decide on a personality (recommended)"}
+      </H2>
+      <Text>
+        <p>
+          It is usually a good idea to decide upfront on how serious or playful
+          you want the tone to be. See{" "}
+          <Link href="/choose-a-personality">Choose a Personality</Link>.
+        </p>
+      </Text>
+
       <H2 inPageLink="use-heroicons">
-        {"5) Use heroicons (recommended)"}
+        {"6) Use heroicons (recommended)"}
       </H2>
       <Text>
         <p>
@@ -137,59 +148,6 @@ export default function Home() {
           having a need for more icons, to maintain a consistent look and feel,
           you probably will want to use heroicons in your project as well.
         </p>
-      </Text>
-
-      <H2 inPageLink="use-open-sans-font">
-        {"6) Use Open Sans font (optional)"}
-      </H2>
-      <Text>
-        <p>
-          RFUI was designed with the{" "}
-          <Link href="https://fonts.google.com/specimen/Open+Sans">
-            Open Sans font
-          </Link>. All of the examples you see in the <Link href="/">docs</Link>
-          {" "}
-          use this font.
-        </p>
-        <p>
-          If you're not using Tailwind, to use this font, refer to{" "}
-          <Link href="https://fonts.google.com/specimen/Open+Sans">
-            their docs
-          </Link>.
-        </p>
-        <p>If you are using Tailwind, to use this font, add</p>
-        <CodeBlock
-          language="html"
-          code={`<link
-  href="https://fonts.googleapis.com/css?family=Open+Sans"
-  rel="stylesheet"
-/>`}
-        />
-        <p>
-          to <InlineCode>_app.tsx</InlineCode> and
-        </p>
-        <CodeBlock
-          language="ts"
-          code={`fontFamily: {
-  sans: "'Open Sans', sans-serif",
-},`}
-        />
-        <p>
-          to{" "}
-          <InlineCode>tailwind.config.ts</InlineCode>. Ie. something like this:
-        </p>
-        <CodeBlock
-          language="ts"
-          code={`export default {
-  theme: {
-    fontFamily: {
-      sans: "'Open Sans', sans-serif",
-    },
-    ...
-  },
-  ...
-} as const;`}
-        />
       </Text>
 
       <H2 inPageLink="customize-css-variables">

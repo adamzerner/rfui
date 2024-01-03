@@ -1,5 +1,4 @@
 import { ComponentChild, JSX } from "preact";
-import TailwindConfig from "../../tailwind.config.ts";
 
 export type TableType = {
   bordered?: boolean;
@@ -92,93 +91,11 @@ export const Table = (
   }
 
   return (
-    <>
-      <style>
-        {`
-          table.rfui-table th {
-            font-weight: normal;
-            text-transform: uppercase;
-            font-size: 0.75em;
-            padding-top: ${TailwindConfig.theme.extend?.spacing[2]};
-            padding-bottom: ${TailwindConfig.theme.extend?.spacing[2]};
-            border-bottom: 1px solid ${
-          TailwindConfig.theme?.colors.neutral[100]
-        };
-          }
-          
-          table.rfui-table.sticky-header thead {
-            position: sticky;
-            inset-block-start: 0;
-            z-index: 2;
-            background: ${TailwindConfig.theme?.colors.neutral[50]}; 
-          }
-
-          table.rfui-table.sticky-first-column tr th:first-child,
-          table.rfui-table.sticky-first-column tr td:first-child {
-            position: sticky;
-            inset-inline-start: 0;
-            z-index: 1;
-            background: ${TailwindConfig.theme?.colors.neutral[50]}; 
-          }
-
-          table.rfui-table.condensed th {
-            padding-bottom: ${TailwindConfig.theme.extend?.spacing[1]};
-          }
-
-          table.rfui-table td,
-          table.rfui-table th {
-            overflow-wrap: anywhere;
-            word-break: break-all;
-          }
-          
-          table.rfui-table td {
-            padding-top: ${TailwindConfig.theme.extend?.spacing[5]};
-            padding-bottom: ${TailwindConfig.theme.extend?.spacing[5]};
-          }
-
-          table.rfui-table.condensed td {
-            padding-top: ${TailwindConfig.theme.extend?.spacing[3]};
-            padding-bottom: ${TailwindConfig.theme.extend?.spacing[3]};
-          }
-
-          table.rfui-table.bordered td {
-            border-bottom: 1px solid ${
-          TailwindConfig.theme?.colors.neutral[100]
-        };
-          }
-
-          table.rfui-table.hover tr:hover td {
-            background: ${TailwindConfig.theme?.colors.neutral[50]}; 
-          }
-
-          table.rfui-table.hover.striped tr:hover td {
-            background: ${TailwindConfig.theme?.colors.neutral[100]}; 
-          }
-
-          table.rfui-table th,
-          table.rfui-table td {
-            padding-left: ${TailwindConfig.theme.extend?.spacing[4]};
-            padding-right: ${TailwindConfig.theme.extend?.spacing[4]};
-            text-align: left;
-          }
-
-          table.rfui-table.condensed th,
-          table.rfui-table.condensed td {
-            padding-left: ${TailwindConfig.theme.extend?.spacing[2]};
-            padding-right: ${TailwindConfig.theme.extend?.spacing[2]};
-          }
-
-          table.rfui-table.striped tr:nth-child(even) {
-            background: ${TailwindConfig.theme?.colors.neutral[50]}; 
-          }
-        `}
-      </style>
-      <table
-        class={className}
-        {...restWithoutClass}
-      >
-        {children}
-      </table>
-    </>
+    <table
+      class={className}
+      {...restWithoutClass}
+    >
+      {children}
+    </table>
   );
 };

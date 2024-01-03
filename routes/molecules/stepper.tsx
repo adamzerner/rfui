@@ -86,6 +86,16 @@ export default () => {
       />
     ),
   }, {
+    title: "Starting value",
+    example: () => <Stepper startingValue={100} />,
+    exampleCode: () => (
+      <CodeBlock
+        class="mt-4"
+        language="tsx"
+        code={`<Stepper startingValue={100} />`}
+      />
+    ),
+  }, {
     title: "Min and max",
     description: "In this example the min is 0 and the max is 5.",
     example: () => <Stepper min={0} max={5} />,

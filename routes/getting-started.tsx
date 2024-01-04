@@ -114,7 +114,7 @@ export default () => {
         <p>
           It is usually a good idea to decide upfront on how serious or playful
           you want the tone to be. See{" "}
-          <Link href="/choose-a-personality">Choose a Personality</Link>.
+          "<Link href="/choose-a-personality">Choose a personality</Link>"".
         </p>
       </Text>
 

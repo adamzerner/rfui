@@ -50,8 +50,10 @@ export default () => {
             fun and light. Gold is sophisticated and serious.
           </li>
         </UL>
+      </Text>
 
-        <H2 inPageLink="color">Color</H2>
+      <H2 inPageLink="color">Color</H2>
+      <Text>
         <p>
           Color is easy enough to set up at the beginning. Just{" "}
           <Link href="http://localhost:8000/getting-started#customize-css-variables">
@@ -59,8 +61,34 @@ export default () => {
           </Link>{" "}
           in <InlineCode>rfui.css</InlineCode>.
         </p>
+      </Text>
 
-        <H2 inPageLink="roundedness">Roundedness</H2>
+      <H2 inPageLink="font">Font</H2>
+      <Text>
+        <p>
+          For fonts, I'd recommend referring to the excellent book{" "}
+          <Link href="https://practicaltypography.com/">
+            Practical Typography
+          </Link>.
+        </p>
+        <p>
+          RFUI was designed with the{" "}
+          <Link href="https://fonts.google.com/specimen/Open+Sans">
+            Open Sans font
+          </Link>. All of the examples you see in the <Link href="/">docs</Link>
+          {" "}
+          use this font.
+        </p>
+        <p>
+          To use this font, refer to{" "}
+          <Link href="https://fonts.google.com/specimen/Open+Sans">
+            their docs
+          </Link>.
+        </p>
+      </Text>
+
+      <H2 inPageLink="roundedness">Roundedness</H2>
+      <Text>
         <p>
           Roundedness is perhaps not quite as straightforward. Various RFUI
           components take <InlineCode>rounded</InlineCode>{" "}
@@ -84,28 +112,6 @@ export default () => {
   Example
 </Button>`}
         />
-
-        <H2 inPageLink="font">Font</H2>
-        <p>
-          For fonts, I'd recommend referring to the excellent book{" "}
-          <Link href="https://practicaltypography.com/">
-            Practical Typography
-          </Link>.
-        </p>
-        <p>
-          RFUI was designed with the{" "}
-          <Link href="https://fonts.google.com/specimen/Open+Sans">
-            Open Sans font
-          </Link>. All of the examples you see in the <Link href="/">docs</Link>
-          {" "}
-          use this font.
-        </p>
-        <p>
-          To use this font, refer to{" "}
-          <Link href="https://fonts.google.com/specimen/Open+Sans">
-            their docs
-          </Link>.
-        </p>
       </Text>
     </div>
   );

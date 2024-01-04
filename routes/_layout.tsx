@@ -55,6 +55,9 @@ const TheFooter = () => {
         <FooterItem href="/choose-a-personality">
           Choose a personality
         </FooterItem>
+        <FooterItem href="/playground">
+          Playground
+        </FooterItem>
       </FooterColumn>
       <FooterColumn>
         <FooterHeading>Tutorials</FooterHeading>

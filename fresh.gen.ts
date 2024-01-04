@@ -40,6 +40,7 @@ import * as $molecules_navbar from "./routes/molecules/navbar.tsx";
 import * as $molecules_password_input from "./routes/molecules/password-input.tsx";
 import * as $molecules_stepper from "./routes/molecules/stepper.tsx";
 import * as $philosophy from "./routes/philosophy.tsx";
+import * as $playground from "./routes/playground.tsx";
 import * as $rest_parameters from "./routes/rest-parameters.tsx";
 import * as $tutorials_fresh from "./routes/tutorials/fresh.tsx";
 import * as $tutorials_preact from "./routes/tutorials/preact.tsx";
@@ -126,6 +127,7 @@ const manifest = {
     "./routes/molecules/password-input.tsx": $molecules_password_input,
     "./routes/molecules/stepper.tsx": $molecules_stepper,
     "./routes/philosophy.tsx": $philosophy,
+    "./routes/playground.tsx": $playground,
     "./routes/rest-parameters.tsx": $rest_parameters,
     "./routes/tutorials/fresh.tsx": $tutorials_fresh,
     "./routes/tutorials/preact.tsx": $tutorials_preact,

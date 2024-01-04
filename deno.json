@@ -21,7 +21,8 @@
     "tailwindcss": "npm:tailwindcss@3.3.5",
     "tailwindcss/": "npm:/tailwindcss@3.3.5/",
     "tailwindcss/plugin": "npm:/tailwindcss@3.3.5/plugin.js",
-    "$std/": "https://deno.land/std@0.193.0/"
+    "$std/": "https://deno.land/std@0.193.0/",
+    "@codesandbox/sandpack-react": "https://esm.sh/@codesandbox/sandpack-react@2.8.0"
   },
   "compilerOptions": { "jsx": "react-jsx", "jsxImportSource": "preact" }
 }

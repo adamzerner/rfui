@@ -35,6 +35,7 @@ export const LeftNav = () => {
             RadioButton
           </Link>
           <Link underline="hover" href="/atoms/select">Select</Link>
+          <Link underline="hover" href="/atoms/switch">Switch</Link>
           <Link underline="hover" href="/atoms/table">Table</Link>
           <Link underline="hover" href="/atoms/text">Text</Link>
           <Link underline="hover" href="/atoms/textarea">Textarea</Link>
@@ -102,6 +103,7 @@ const Main = () => {
           <Item name="OL" href="/atoms/ol" />
           <Item name="RadioButton" href="/atoms/radio-button" />
           <Item name="Select" href="/atoms/select" />
+          <Item name="Switch" href="/atoms/switch" />
           <Item name="Table" href="/atoms/table" />
           <Item name="Text" href="/atoms/text" />
           <Item name="Textarea" href="/atoms/textarea" />

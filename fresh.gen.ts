@@ -20,6 +20,7 @@ import * as $atoms_link from "./routes/atoms/link.tsx";
 import * as $atoms_ol from "./routes/atoms/ol.tsx";
 import * as $atoms_radio_button from "./routes/atoms/radio-button.tsx";
 import * as $atoms_select from "./routes/atoms/select.tsx";
+import * as $atoms_switch from "./routes/atoms/switch.tsx";
 import * as $atoms_table from "./routes/atoms/table.tsx";
 import * as $atoms_text from "./routes/atoms/text.tsx";
 import * as $atoms_textarea from "./routes/atoms/textarea.tsx";
@@ -71,6 +72,7 @@ const manifest = {
     "./routes/atoms/ol.tsx": $atoms_ol,
     "./routes/atoms/radio-button.tsx": $atoms_radio_button,
     "./routes/atoms/select.tsx": $atoms_select,
+    "./routes/atoms/switch.tsx": $atoms_switch,
     "./routes/atoms/table.tsx": $atoms_table,
     "./routes/atoms/text.tsx": $atoms_text,
     "./routes/atoms/textarea.tsx": $atoms_textarea,

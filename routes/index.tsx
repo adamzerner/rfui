@@ -4,6 +4,44 @@ import { Stack } from "@/components/helpers/stack.tsx";
 import { Card, CardBody, CardFooter } from "@/components/molecules/card.tsx";
 import { ComponentChild } from "preact";
 
+const components = {
+  atoms: [
+    { name: "Badge", href: "/atoms/badge" },
+    { name: "Blockquote", href: "/atoms/blockquote" },
+    { name: "Button", href: "/atoms/button" },
+    { name: "Checkbox", href: "/atoms/checkbox" },
+    { name: "CodeBlock", href: "/atoms/code-block" },
+    { name: "Highlight", href: "/atoms/highlight" },
+    { name: "H1", href: "/atoms/h1" },
+    { name: "H2", href: "/atoms/h2" },
+    { name: "InlineCode", href: "/atoms/inline-code" },
+    { name: "Input", href: "/atoms/input" },
+    { name: "Link", href: "/atoms/link" },
+    { name: "OL", href: "/atoms/ol" },
+    { name: "RadioButton", href: "/atoms/radio-button" },
+    { name: "Select", href: "/atoms/select" },
+    { name: "Switch", href: "/atoms/switch" },
+    { name: "Table", href: "/atoms/table" },
+    { name: "Text", href: "/atoms/text" },
+    { name: "Textarea", href: "/atoms/textarea" },
+    { name: "UL", href: "/atoms/ul" },
+  ],
+  molecules: [
+    { name: "Alert", href: "/molecules/alert" },
+    { name: "Card", href: "/molecules/card" },
+    { name: "Footer", href: "/molecules/footer" },
+    { name: "FormField", href: "/molecules/form-field" },
+    { name: "Navbar", href: "/molecules/navbar" },
+    { name: "PasswordInput", href: "/molecules/password-input" },
+    { name: "Stepper", href: "/molecules/stepper" },
+  ],
+  helpers: [
+    { name: "Container", href: "/helpers/container" },
+    { name: "Flex", href: "/helpers/flex" },
+    { name: "Stack", href: "/helpers/stack" },
+  ],
+};
+
 export default () => {
   return (
     <Flex class="mt-9 gap-11">
@@ -19,64 +57,31 @@ export const LeftNav = () => {
       <div>
         <div class="font-bold text-neutral-700 mb-4">Atoms</div>
         <Stack class="gap-2">
-          <Link underline="hover" href="/atoms/badge">Badge</Link>
-          <Link underline="hover" href="/atoms/blockquote">Blockquote</Link>
-          <Link underline="hover" href="/atoms/button">Button</Link>
-          <Link underline="hover" href="/atoms/checkbox">Checkbox</Link>
-          <Link underline="hover" href="/atoms/code-block">CodeBlock</Link>
-          <Link underline="hover" href="/atoms/highlight">Highlight</Link>
-          <Link underline="hover" href="/atoms/h1">H1</Link>
-          <Link underline="hover" href="/atoms/h2">H2</Link>
-          <Link underline="hover" href="/atoms/inline-code">InlineCode</Link>
-          <Link underline="hover" href="/atoms/input">Input</Link>
-          <Link underline="hover" href="/atoms/link">Link</Link>
-          <Link underline="hover" href="/atoms/ol">OL</Link>
-          <Link underline="hover" href="/atoms/radio-button">
-            RadioButton
-          </Link>
-          <Link underline="hover" href="/atoms/select">Select</Link>
-          <Link underline="hover" href="/atoms/switch">Switch</Link>
-          <Link underline="hover" href="/atoms/table">Table</Link>
-          <Link underline="hover" href="/atoms/text">Text</Link>
-          <Link underline="hover" href="/atoms/textarea">Textarea</Link>
-          <Link underline="hover" href="/atoms/ul">
-            UL
-          </Link>
+          {components.atoms.map((component) => (
+            <Link underline="hover" href={component.href}>
+              {component.name}
+            </Link>
+          ))}
         </Stack>
       </div>
       <div>
         <div class="font-bold text-neutral-700 mb-4">Molecules</div>
         <Stack class="gap-2">
-          <Link underline="hover" href="/molecules/alert">Alert</Link>
-          <Link underline="hover" href="/molecules/card">Card</Link>
-          <Link underline="hover" href="/molecules/footer">
-            Footer
-          </Link>
-          <Link underline="hover" href="/molecules/form-field">
-            FormField
-          </Link>
-          <Link underline="hover" href="/molecules/navbar">
-            Navbar
-          </Link>
-          <Link underline="hover" href="/molecules/password-input">
-            PasswordInput
-          </Link>
-          <Link underline="hover" href="/molecules/stepper">Stepper</Link>
+          {components.molecules.map((component) => (
+            <Link underline="hover" href={component.href}>
+              {component.name}
+            </Link>
+          ))}
         </Stack>
       </div>
-      {
-        /* <div>
-        <div class="font-bold text-neutral-700 mb-4">Organisms</div>
-        <Stack class="gap-2">
-        </Stack>
-      </div> */
-      }
       <div>
         <div class="font-bold text-neutral-700 mb-4">Helpers</div>
         <Stack class="gap-2">
-          <Link underline="hover" href="/helpers/container">Container</Link>
-          <Link underline="hover" href="/helpers/flex">Flex</Link>
-          <Link underline="hover" href="/helpers/stack">Stack</Link>
+          {components.helpers.map((component) => (
+            <Link underline="hover" href={component.href}>
+              {component.name}
+            </Link>
+          ))}
         </Stack>
       </div>
     </Stack>
@@ -84,82 +89,61 @@ export const LeftNav = () => {
 };
 
 const Main = () => {
+  const Category = ({ children }: { children: ComponentChild }) => {
+    return (
+      <div class="flex-none w-10 text-5xl lg:text-3xl mr-8 mb-6 lg:mb-auto">
+        {children}
+      </div>
+    );
+  };
+  const Item = (
+    { name, href }: {
+      name: string;
+      href: string;
+    },
+  ) => {
+    return (
+      <Link underline="none" href={href}>
+        <Card
+          padding="sm"
+          style={{ width: 200 }}
+          class="hover:shadow-lg lg:hover:shadow-md"
+        >
+          <CardBody>
+            <img src="https://placehold.co/200" alt="Placeholder image" />
+          </CardBody>
+          <CardFooter>{name}</CardFooter>
+        </Card>
+      </Link>
+    );
+  };
+
   return (
     <Stack class="gap-10 lg:gap-8">
       <div class="lg:flex">
         <Category>Atoms</Category>
         <Flex class="flex-wrap gap-6 lg:gap-5">
-          <Item name="Badge" href="/atoms/badge" />
-          <Item name="Blockquote" href="/atoms/blockquote" />
-          <Item name="Button" href="/atoms/button" />
-          <Item name="Checkbox" href="/atoms/checkbox" />
-          <Item name="CodeBlock" href="/atoms/code-block" />
-          <Item name="Highlight" href="/atoms/highlight" />
-          <Item name="H1" href="/atoms/h1" />
-          <Item name="H2" href="/atoms/h2" />
-          <Item name="InlineCode" href="/atoms/inline-code" />
-          <Item name="Input" href="/atoms/input" />
-          <Item name="Link" href="/atoms/link" />
-          <Item name="OL" href="/atoms/ol" />
-          <Item name="RadioButton" href="/atoms/radio-button" />
-          <Item name="Select" href="/atoms/select" />
-          <Item name="Switch" href="/atoms/switch" />
-          <Item name="Table" href="/atoms/table" />
-          <Item name="Text" href="/atoms/text" />
-          <Item name="Textarea" href="/atoms/textarea" />
-          <Item name="UL" href="/atoms/ul" />
+          {components.atoms.map((component) => (
+            <Item name={component.name} href={component.href} />
+          ))}
         </Flex>
       </div>
       <div class="lg:flex">
         <Category>Molecules</Category>
         <Flex class="flex-wrap gap-6 lg:gap-5">
-          <Item name="Alert" href="/molecules/alert" />
-          <Item name="Card" href="/molecules/card" />
-          <Item name="Footer" href="/molecules/footer" />
-          <Item name="FormField" href="/molecules/form-field" />
-          <Item name="Navbar" href="/molecules/navbar" />
-          <Item name="PasswordInput" href="/molecules/password-input" />
-          <Item name="Stepper" href="/molecules/stepper" />
+          {components.molecules.map((component) => (
+            <Item name={component.name} href={component.href} />
+          ))}
         </Flex>
       </div>
       <div class="lg:flex">
         <Category>Helpers</Category>
         <Flex class="flex-wrap gap-6 lg:gap-5">
-          <Item name="Container" href="/helpers/container" />
-          <Item name="Flex" href="/helpers/flex" />
-          <Item name="Stack" href="/helpers/stack" />
+          {components.helpers.map((component) => (
+            <Item name={component.name} href={component.href} />
+          ))}
         </Flex>
       </div>
     </Stack>
-  );
-};
-
-export const Category = ({ children }: { children: ComponentChild }) => {
-  return (
-    <div class="flex-none w-10 text-5xl lg:text-3xl mr-8 mb-6 lg:mb-auto">
-      {children}
-    </div>
-  );
-};
-
-const Item = (
-  { name, href }: {
-    name: string;
-    href: string;
-  },
-) => {
-  return (
-    <Link underline="none" href={href}>
-      <Card
-        padding="sm"
-        style={{ width: 200 }}
-        class="hover:shadow-lg lg:hover:shadow-md"
-      >
-        <CardBody>
-          <img src="https://placehold.co/200" alt="Placeholder image" />
-        </CardBody>
-        <CardFooter>{name}</CardFooter>
-      </Card>
-    </Link>
   );
 };

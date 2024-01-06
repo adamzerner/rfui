@@ -100,6 +100,19 @@ export default () => {
           <Link href="/atoms/text#one-paragraph-with-element">here</Link>.
         </p>
       </Text>
+
+      <H2 inPageLink="tailwind-css">
+        If I use RFUI, do I also have to use Tailwind CSS?
+      </H2>
+      <Text>
+        <p>
+          No.{" "}
+          <Link href="/getting-started#include-rfui-css-file">Including</Link>
+          {" "}
+          the <InlineCode>rfui.css</InlineCode>{" "}
+          file will provide you with all of the styles you need.
+        </p>
+      </Text>
     </div>
   );
 };

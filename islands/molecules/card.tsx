@@ -108,7 +108,12 @@ export const Card = (
   );
 };
 
-const getComponents = (children: ComponentChild) => {
+// deno-lint-ignore no-explicit-any
+const getComponents = (props: any) => {
+  const children = props?.type?.name === "ServerComponent"
+    ? props.props.children
+    : props;
+
   if (!Array.isArray(children)) {
     return [undefined, children];
   }

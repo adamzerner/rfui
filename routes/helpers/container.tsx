@@ -1,8 +1,8 @@
-import { CodeBlock } from "@/components/atoms/code-block.tsx";
-import { InlineCode } from "@/components/atoms/inline-code.tsx";
-import { Link } from "@/components/atoms/link.tsx";
-import { Container } from "@/components/helpers/container.tsx";
+import { CodeBlock } from "@/islands/atoms/code-block.tsx";
+import { InlineCode } from "@/islands/atoms/inline-code.tsx";
+import { Link } from "@/islands/atoms/link.tsx";
 import { ComponentDocsPage } from "@/islands/demo/component-docs-page.tsx";
+import { Container } from "@/islands/helpers/container.tsx";
 
 export default () => {
   const notes =

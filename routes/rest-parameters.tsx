@@ -1,8 +1,8 @@
-import { CodeBlock } from "@/components/atoms/code-block.tsx";
-import { H1 } from "@/components/atoms/h1.tsx";
-import { InlineCode } from "@/components/atoms/inline-code.tsx";
-import { Link } from "@/components/atoms/link.tsx";
-import { Text } from "@/components/atoms/text.tsx";
+import { CodeBlock } from "@/islands/atoms/code-block.tsx";
+import { H1 } from "@/islands/atoms/h1.tsx";
+import { InlineCode } from "@/islands/atoms/inline-code.tsx";
+import { Link } from "@/islands/atoms/link.tsx";
+import { Text } from "@/islands/atoms/text.tsx";
 
 export default () => {
   return (

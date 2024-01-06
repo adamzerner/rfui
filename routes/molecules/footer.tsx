@@ -1,14 +1,14 @@
-import { CodeBlock } from "@/components/atoms/code-block.tsx";
-import { InlineCode } from "@/components/atoms/inline-code.tsx";
-import { Link } from "@/components/atoms/link.tsx";
-import { Stack } from "@/components/helpers/stack.tsx";
+import { CodeBlock } from "@/islands/atoms/code-block.tsx";
+import { InlineCode } from "@/islands/atoms/inline-code.tsx";
+import { Link } from "@/islands/atoms/link.tsx";
+import { ComponentDocsPage } from "@/islands/demo/component-docs-page.tsx";
+import { Stack } from "@/islands/helpers/stack.tsx";
 import {
   Footer,
   FooterColumn,
   FooterHeading,
   FooterItem,
-} from "@/components/molecules/footer.tsx";
-import { ComponentDocsPage } from "@/islands/demo/component-docs-page.tsx";
+} from "@/islands/molecules/footer.tsx";
 
 export default () => {
   const sections = [{

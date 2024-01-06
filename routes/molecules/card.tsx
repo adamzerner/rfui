@@ -1,17 +1,17 @@
-import { CodeBlock } from "@/components/atoms/code-block.tsx";
-import { InlineCode } from "@/components/atoms/inline-code.tsx";
-import { Link } from "@/components/atoms/link.tsx";
-import { Flex } from "@/components/helpers/flex.tsx";
-import { Stack } from "@/components/helpers/stack.tsx";
+import { Button } from "@/islands/atoms/button.tsx";
+import { CodeBlock } from "@/islands/atoms/code-block.tsx";
+import { InlineCode } from "@/islands/atoms/inline-code.tsx";
+import { Link } from "@/islands/atoms/link.tsx";
+import { ComponentDocsPage } from "@/islands/demo/component-docs-page.tsx";
+import { Flex } from "@/islands/helpers/flex.tsx";
+import { Stack } from "@/islands/helpers/stack.tsx";
 import {
   Card,
   CardBody,
   CardFooter,
   CardHeader,
-} from "@/components/molecules/card.tsx";
-import { FormField } from "@/components/molecules/form-field.tsx";
-import { Button } from "@/islands/atoms/button.tsx";
-import { ComponentDocsPage } from "@/islands/demo/component-docs-page.tsx";
+} from "@/islands/molecules/card.tsx";
+import { FormField } from "@/islands/molecules/form-field.tsx";
 
 export default () => {
   const sections = [{

@@ -1,10 +1,10 @@
-import { CodeBlock } from "@/components/atoms/code-block.tsx";
-import { H1 } from "@/components/atoms/h1.tsx";
-import { InlineCode } from "@/components/atoms/inline-code.tsx";
-import { Link } from "@/components/atoms/link.tsx";
-import { Text } from "@/components/atoms/text.tsx";
-import { Stack } from "@/components/helpers/stack.tsx";
+import { CodeBlock } from "@/islands/atoms/code-block.tsx";
+import { H1 } from "@/islands/atoms/h1.tsx";
+import { InlineCode } from "@/islands/atoms/inline-code.tsx";
+import { Link } from "@/islands/atoms/link.tsx";
+import { Text } from "@/islands/atoms/text.tsx";
 import { ComponentDocsPage } from "@/islands/demo/component-docs-page.tsx";
+import { Stack } from "@/islands/helpers/stack.tsx";
 
 export default () => {
   const sections = [{

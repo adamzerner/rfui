@@ -1,6 +1,6 @@
 import { JSX } from "preact";
 import { useState } from "preact/hooks";
-import { Flex } from "../../components/helpers/flex.tsx";
+import { Flex } from "../helpers/flex.tsx";
 
 export type StepperType = {
   name?: string;

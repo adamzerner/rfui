@@ -1,14 +1,14 @@
-import { CodeBlock } from "@/components/atoms/code-block.tsx";
-import { H1 } from "@/components/atoms/h1.tsx";
-import { H2 } from "@/components/atoms/h2.tsx";
-import { InlineCode } from "@/components/atoms/inline-code.tsx";
-import { Link } from "@/components/atoms/link.tsx";
-import { Text } from "@/components/atoms/text.tsx";
-import { Flex } from "@/components/helpers/flex.tsx";
-import { Stack } from "@/components/helpers/stack.tsx";
-import { Card } from "@/components/molecules/card.tsx";
+import { CodeBlock } from "@/islands/atoms/code-block.tsx";
+import { H1 } from "@/islands/atoms/h1.tsx";
+import { H2 } from "@/islands/atoms/h2.tsx";
+import { InlineCode } from "@/islands/atoms/inline-code.tsx";
+import { Link } from "@/islands/atoms/link.tsx";
+import { Text } from "@/islands/atoms/text.tsx";
 import { OnThisPage } from "@/islands/demo/component-docs-page.tsx";
+import { Flex } from "@/islands/helpers/flex.tsx";
+import { Stack } from "@/islands/helpers/stack.tsx";
 import { Alert, AlertBody, AlertHeader } from "@/islands/molecules/alert.tsx";
+import { Card } from "@/islands/molecules/card.tsx";
 import { LeftNav } from "@/routes/index.tsx";
 
 // See "Islands in docs" in the README for why this file is so WET.

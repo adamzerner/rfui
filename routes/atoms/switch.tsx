@@ -2,7 +2,6 @@ import { CodeBlock } from "@/components/atoms/code-block.tsx";
 import { InlineCode } from "@/components/atoms/inline-code.tsx";
 import { Link } from "@/components/atoms/link.tsx";
 import { Switch } from "@/components/atoms/switch.tsx";
-import { Stack } from "@/components/helpers/stack.tsx";
 import { ComponentDocsPage } from "@/islands/demo/component-docs-page.tsx";
 
 export default () => {
@@ -11,26 +10,6 @@ export default () => {
     example: () => <Switch />,
     exampleCode: () => (
       <CodeBlock class="mt-4" language="tsx" code={`<Switch />`} />
-    ),
-  }, {
-    title: "Size",
-    example: () => (
-      <Stack class="gap-5">
-        <Switch size="sm" />
-        <Switch size="md" />
-        <Switch size="lg" />
-      </Stack>
-    ),
-    exampleCode: () => (
-      <CodeBlock
-        class="mt-4"
-        language="tsx"
-        code={`<Stack class="gap-5">
-  <Switch size="sm" />
-  <Switch size="md" />
-  <Switch size="lg" />
-</Stack>`}
-      />
     ),
   }, {
     title: "Disabled",
@@ -42,33 +21,11 @@ export default () => {
         code={`<Switch disabled />`}
       />
     ),
-  }, {
-    title: "Invalid",
-    example: () => <Switch invalid />,
-    exampleCode: () => (
-      <CodeBlock
-        class="mt-4"
-        language="tsx"
-        code={`<Switch invalid />`}
-      />
-    ),
   }];
   const props = [{
-    name: "size",
-    required: false,
-    type: '"sm" | "md" | "lg"',
-    default: '"md"',
-    notes: null,
-  }, {
-    name: "invalid",
-    required: false,
-    type: '"sm" | "md" | "lg"',
-    default: '"md"',
-    notes: null,
-  }, {
     name: "...rest",
     required: false,
-    type: 'Omit<JSX.HTMLAttributes<HTMLInputElement>, "size">',
+    type: "JSX.HTMLAttributes<HTMLInputElement>",
     default: null,
     notes: (
       <div>

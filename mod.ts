@@ -26,6 +26,8 @@ export { RadioButton } from "./components/atoms/radio-button.tsx";
 export type { RadioButtonType } from "./components/atoms/radio-button.tsx";
 export { Select } from "./components/atoms/select.tsx";
 export type { SelectType } from "./components/atoms/select.tsx";
+export { Switch } from "./components/atoms/switch.tsx";
+export type { SwitchType } from "./components/atoms/switch.tsx";
 export { Table } from "./components/atoms/table.tsx";
 export type { TableType } from "./components/atoms/table.tsx";
 export { Text } from "./components/atoms/text.tsx";

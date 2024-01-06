@@ -1,4 +1,3 @@
-import { Button } from "@/components/atoms/button.tsx";
 import { CodeBlock } from "@/components/atoms/code-block.tsx";
 import { InlineCode } from "@/components/atoms/inline-code.tsx";
 import { Link } from "@/components/atoms/link.tsx";
@@ -11,6 +10,7 @@ import {
   CardHeader,
 } from "@/components/molecules/card.tsx";
 import { FormField } from "@/components/molecules/form-field.tsx";
+import { Button } from "@/islands/atoms/button.tsx";
 import { ComponentDocsPage } from "@/islands/demo/component-docs-page.tsx";
 
 export default () => {

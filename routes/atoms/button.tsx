@@ -1,9 +1,9 @@
-import { Button } from "@/components/atoms/button.tsx";
 import { CodeBlock } from "@/components/atoms/code-block.tsx";
 import { InlineCode } from "@/components/atoms/inline-code.tsx";
 import { Link } from "@/components/atoms/link.tsx";
 import { Flex } from "@/components/helpers/flex.tsx";
 import { Stack } from "@/components/helpers/stack.tsx";
+import { Button } from "@/islands/atoms/button.tsx";
 import { ComponentDocsPage } from "@/islands/demo/component-docs-page.tsx";
 
 export default () => {
@@ -443,7 +443,7 @@ export default () => {
           <InlineCode>Button</InlineCode>, you could pass anything you normally
           would pass to <InlineCode>{"<button>"}</InlineCode>{" "}
           because the container{" "}
-          <Link href="https://github.com/adamzerner/rfui/blob/master/components/atoms/button.tsx">
+          <Link href="https://github.com/adamzerner/rfui/blob/master/islands/atoms/button.tsx">
             looks something like
           </Link>{" "}
           this:
@@ -461,7 +461,7 @@ export default () => {
   return (
     <ComponentDocsPage
       componentName="Button"
-      sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/atoms/button.tsx"
+      sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/islands/atoms/button.tsx"
       sections={sections}
       props={props}
     />

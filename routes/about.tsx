@@ -1,5 +1,4 @@
 import { Blockquote } from "@/components/atoms/blockquote.tsx";
-import { Button } from "@/components/atoms/button.tsx";
 import { CodeBlock } from "@/components/atoms/code-block.tsx";
 import { H1 } from "@/components/atoms/h1.tsx";
 import { H2 } from "@/components/atoms/h2.tsx";
@@ -9,6 +8,7 @@ import { OL } from "@/components/atoms/ol.tsx";
 import { Text } from "@/components/atoms/text.tsx";
 import { UL } from "@/components/atoms/ul.tsx";
 import { Card } from "@/components/molecules/card.tsx";
+import { Button } from "@/islands/atoms/button.tsx";
 
 export default () => {
   return (

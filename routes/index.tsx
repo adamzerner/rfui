@@ -2,6 +2,7 @@ import { Link } from "@/components/atoms/link.tsx";
 import { Flex } from "@/components/helpers/flex.tsx";
 import { Stack } from "@/components/helpers/stack.tsx";
 import { Card, CardBody, CardFooter } from "@/components/molecules/card.tsx";
+import { Button } from "@/islands/atoms/button.tsx";
 import { ComponentChild } from "preact";
 
 const components = {
@@ -120,6 +121,9 @@ const Main = () => {
 
   return (
     <Stack class="gap-10 lg:gap-8">
+      <div>
+        <Button>Example</Button>
+      </div>
       <div class="lg:flex">
         <Category>Atoms</Category>
         <Flex class="flex-wrap gap-6 lg:gap-5">

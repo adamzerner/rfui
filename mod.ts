@@ -2,8 +2,6 @@ export { Badge } from "./components/atoms/badge.tsx";
 export type { BadgeType } from "./components/atoms/badge.tsx";
 export { Blockquote } from "./components/atoms/blockquote.tsx";
 export type { BlockquoteType } from "./components/atoms/blockquote.tsx";
-export { Button } from "./components/atoms/button.tsx";
-export type { ButtonType } from "./components/atoms/button.tsx";
 export { Checkbox } from "./components/atoms/checkbox.tsx";
 export type { CheckboxType } from "./components/atoms/checkbox.tsx";
 export { CodeBlock } from "./components/atoms/code-block.tsx";
@@ -36,6 +34,8 @@ export { Textarea } from "./components/atoms/textarea.tsx";
 export type { TextareaType } from "./components/atoms/textarea.tsx";
 export { UL } from "./components/atoms/ul.tsx";
 export type { ULType } from "./components/atoms/ul.tsx";
+export { Button } from "./islands/atoms/button.tsx";
+export type { ButtonType } from "./islands/atoms/button.tsx";
 
 export {
   Card,

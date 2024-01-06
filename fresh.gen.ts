@@ -45,6 +45,7 @@ import * as $tutorials_fresh from "./routes/tutorials/fresh.tsx";
 import * as $tutorials_preact from "./routes/tutorials/preact.tsx";
 import * as $tutorials_react from "./routes/tutorials/react.tsx";
 import * as $tutorials_remix from "./routes/tutorials/remix.tsx";
+import * as $atoms_button_1 from "./islands/atoms/button.tsx";
 import * as $demo_component_docs_page from "./islands/demo/component-docs-page.tsx";
 import * as $molecules_alert_1 from "./islands/molecules/alert.tsx";
 import * as $molecules_password_input_1 from "./islands/molecules/password-input.tsx";
@@ -99,6 +100,7 @@ const manifest = {
     "./routes/tutorials/remix.tsx": $tutorials_remix,
   },
   islands: {
+    "./islands/atoms/button.tsx": $atoms_button_1,
     "./islands/demo/component-docs-page.tsx": $demo_component_docs_page,
     "./islands/molecules/alert.tsx": $molecules_alert_1,
     "./islands/molecules/password-input.tsx": $molecules_password_input_1,

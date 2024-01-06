@@ -117,7 +117,13 @@ export const Button = (
   }
 
   return (
-    <button class={className} {...restWithoutClass}>
+    <button
+      class={className}
+      {...restWithoutClass}
+      onClick={() => {
+        console.log("clicked");
+      }}
+    >
       {icon && <span class="mr-1">{icon}</span>}
       {isLoading && loadingContent ? loadingContent : children}
       {_rightIcon && <span class="ml-1">{_rightIcon}</span>}

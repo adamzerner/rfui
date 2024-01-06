@@ -13,6 +13,7 @@ export type SwitchType = JSX.HTMLAttributes<HTMLInputElement>;
 export const Switch = (
   { ...rest }: SwitchType,
 ) => {
+  // See `app.css`. Source: https://www.htmhell.dev/adventcalendar/2023/2/
   let className = "rfui-switch cursor-pointer";
 
   if (rest.disabled) {

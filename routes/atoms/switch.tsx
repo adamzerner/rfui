@@ -5,6 +5,16 @@ import { Switch } from "@/components/atoms/switch.tsx";
 import { ComponentDocsPage } from "@/islands/demo/component-docs-page.tsx";
 
 export default () => {
+  const notes = (
+    <div>
+      Unlike checkboxes, switches should deliver immediate results instead of
+      requiring the user to click "Save" to see the results. See{" "}
+      <Link href="https://www.nngroup.com/articles/toggle-switch-guidelines/">
+        Toggle-Switch Guidelines
+      </Link>{" "}
+      for more information.
+    </div>
+  );
   const sections = [{
     title: "Basic",
     example: () => <Switch />,
@@ -56,6 +66,7 @@ export default () => {
   return (
     <ComponentDocsPage
       componentName="Switch"
+      notes={notes}
       sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/atoms/switch.tsx"
       sections={sections}
       props={props}

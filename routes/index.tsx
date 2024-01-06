@@ -25,6 +25,7 @@ import { FormField } from "@/islands/molecules/form-field.tsx";
 import { PasswordInput } from "@/islands/molecules/password-input.tsx";
 import { Stepper } from "@/islands/molecules/stepper.tsx";
 import { ComponentChild, JSX } from "preact";
+import { Button as RBButton } from "react-bootstrap";
 
 const components = {
   atoms: [
@@ -292,6 +293,7 @@ const Main = () => {
 
   return (
     <Stack class="gap-10 lg:gap-8">
+      <RBButton>Example</RBButton>
       <div class="lg:flex">
         <Category>Atoms</Category>
         <Flex class="flex-wrap gap-6 lg:gap-5">

@@ -1,7 +1,7 @@
 import { CodeBlock } from "@/islands/atoms/code-block.tsx";
 import { InlineCode } from "@/islands/atoms/inline-code.tsx";
 import { Link } from "@/islands/atoms/link.tsx";
-import { ComponentDocsPage } from "@/islands/demo/component-docs-page.tsx";
+import { ComponentDocsPage } from "@/islands/demo/component-docs-page/index.tsx";
 import { Stack } from "@/islands/helpers/stack.tsx";
 import { FormField } from "@/islands/molecules/form-field.tsx";
 

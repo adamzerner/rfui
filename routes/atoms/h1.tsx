@@ -3,7 +3,7 @@ import { H1 } from "@/islands/atoms/h1.tsx";
 import { InlineCode } from "@/islands/atoms/inline-code.tsx";
 import { Link } from "@/islands/atoms/link.tsx";
 import { Text } from "@/islands/atoms/text.tsx";
-import { ComponentDocsPage } from "@/islands/demo/component-docs-page.tsx";
+import { ComponentDocsPage } from "@/islands/demo/component-docs-page/index.tsx";
 import { Stack } from "@/islands/helpers/stack.tsx";
 
 export default () => {

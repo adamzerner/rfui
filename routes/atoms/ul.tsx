@@ -2,7 +2,7 @@ import { CodeBlock } from "@/islands/atoms/code-block.tsx";
 import { InlineCode } from "@/islands/atoms/inline-code.tsx";
 import { Link } from "@/islands/atoms/link.tsx";
 import { UL } from "@/islands/atoms/ul.tsx";
-import { ComponentDocsPage } from "@/islands/demo/component-docs-page.tsx";
+import { ComponentDocsPage } from "@/islands/demo/component-docs-page/index.tsx";
 import { Flex } from "@/islands/helpers/flex.tsx";
 import { Stack } from "@/islands/helpers/stack.tsx";
 

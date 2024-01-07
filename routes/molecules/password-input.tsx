@@ -6,7 +6,7 @@ import { Link } from "@/islands/atoms/link.tsx";
 import { OL } from "@/islands/atoms/ol.tsx";
 import { Text } from "@/islands/atoms/text.tsx";
 import { UL } from "@/islands/atoms/ul.tsx";
-import { OnThisPage } from "@/islands/demo/component-docs-page.tsx";
+import { OnThisPage } from "@/islands/demo/component-docs-page/index.tsx";
 import { Flex } from "@/islands/helpers/flex.tsx";
 import { Stack } from "@/islands/helpers/stack.tsx";
 import { Card } from "@/islands/molecules/card.tsx";

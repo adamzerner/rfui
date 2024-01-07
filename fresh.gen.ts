@@ -64,7 +64,7 @@ import * as $atoms_table_1 from "./islands/atoms/table.tsx";
 import * as $atoms_text_1 from "./islands/atoms/text.tsx";
 import * as $atoms_textarea_1 from "./islands/atoms/textarea.tsx";
 import * as $atoms_ul_1 from "./islands/atoms/ul.tsx";
-import * as $demo_component_docs_page from "./islands/demo/component-docs-page.tsx";
+import * as $demo_component_docs_page_index from "./islands/demo/component-docs-page/index.tsx";
 import * as $helpers_container_1 from "./islands/helpers/container.tsx";
 import * as $helpers_flex_1 from "./islands/helpers/flex.tsx";
 import * as $helpers_stack_1 from "./islands/helpers/stack.tsx";
@@ -147,7 +147,8 @@ const manifest = {
     "./islands/atoms/text.tsx": $atoms_text_1,
     "./islands/atoms/textarea.tsx": $atoms_textarea_1,
     "./islands/atoms/ul.tsx": $atoms_ul_1,
-    "./islands/demo/component-docs-page.tsx": $demo_component_docs_page,
+    "./islands/demo/component-docs-page/index.tsx":
+      $demo_component_docs_page_index,
     "./islands/helpers/container.tsx": $helpers_container_1,
     "./islands/helpers/flex.tsx": $helpers_flex_1,
     "./islands/helpers/stack.tsx": $helpers_stack_1,

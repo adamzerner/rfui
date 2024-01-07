@@ -2,7 +2,7 @@ import { CodeBlock } from "@/islands/atoms/code-block.tsx";
 import { Highlight } from "@/islands/atoms/highlight.tsx";
 import { InlineCode } from "@/islands/atoms/inline-code.tsx";
 import { Link } from "@/islands/atoms/link.tsx";
-import { ComponentDocsPage } from "@/islands/demo/component-docs-page.tsx";
+import { ComponentDocsPage } from "@/islands/demo/component-docs-page/index.tsx";
 
 export default () => {
   const sections = [{

@@ -1,18 +1,19 @@
+// deno-lint-ignore-file no-explicit-any
 import { CodeBlock } from "@/islands/atoms/code-block.tsx";
 import { H1 } from "@/islands/atoms/h1.tsx";
 import { Link } from "@/islands/atoms/link.tsx";
 import { Text } from "@/islands/atoms/text.tsx";
-import { ComponentDocsPageType } from "@/islands/demo/component-docs-page/index.tsx";
 import { Stack } from "@/islands/helpers/stack.tsx";
 import { Card } from "@/islands/molecules/card.tsx";
-import { JSX } from "preact";
+import { ComponentChild } from "preact";
 
-export const Header = ({ componentName, notes, sourceCodeUrl, example }: {
-  componentName: ComponentDocsPageType["componentName"];
-  notes: ComponentDocsPageType["notes"];
-  sourceCodeUrl: ComponentDocsPageType["sourceCodeUrl"];
-  example: () => JSX.Element;
+export const Header = ({ componentName, sourceCodeUrl, children }: {
+  componentName: string;
+  sourceCodeUrl: string;
+  children: ComponentChild;
 }) => {
+  const { notes, example } = getComponents(children);
+
   return (
     <nav class="mb-10">
       <H1 class="!mt-0">{componentName}</H1>
@@ -33,7 +34,7 @@ export const Header = ({ componentName, notes, sourceCodeUrl, example }: {
           </Link>
         </Text>
         <Card width="full" padding="lg">
-          {example()}
+          {example}
         </Card>
         <CodeBlock
           language="ts"
@@ -42,4 +43,38 @@ export const Header = ({ componentName, notes, sourceCodeUrl, example }: {
       </Stack>
     </nav>
   );
+};
+
+const Notes = ({ children }: { children: ComponentChild }) => {
+  return <>{children}</>;
+};
+
+const Example = ({ children }: { children: ComponentChild }) => {
+  return <>{children}</>;
+};
+
+const getComponents = (props: any) => {
+  const children = props?.type?.name === "ServerComponent"
+    ? props.props.children
+    : props;
+
+  if (!Array.isArray(children)) {
+    return { example: children };
+  }
+
+  const notes = children.find(
+    (child: any) => child && child.type && child.type.name === Notes.name,
+  );
+
+  const example = children.find(
+    (child: any) => child && child.type && child.type.name === Example.name,
+  );
+
+  if (!example) {
+    throw new Error(
+      "An `Example` is needed.",
+    );
+  }
+
+  return { notes, example };
 };

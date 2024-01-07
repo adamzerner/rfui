@@ -2,11 +2,15 @@ import { Badge } from "@/islands/atoms/badge.tsx";
 import { CodeBlock } from "@/islands/atoms/code-block.tsx";
 import { InlineCode } from "@/islands/atoms/inline-code.tsx";
 import { Link } from "@/islands/atoms/link.tsx";
+import { Header } from "@/islands/demo/component-docs-page/header.tsx";
 import { ComponentDocsPage } from "@/islands/demo/component-docs-page/index.tsx";
+import { Prop } from "@/islands/demo/component-docs-page/prop.tsx";
+import { Props } from "@/islands/demo/component-docs-page/props.tsx";
 import { Flex } from "@/islands/helpers/flex.tsx";
 import { Stack } from "@/islands/helpers/stack.tsx";
 
 export default () => {
+  const sectionTitles = ["Basic", "Type", "Size", "Rounded"];
   const sections = [{
     title: "Basic",
     example: () => <Badge>Basic</Badge>,
@@ -249,10 +253,21 @@ export default () => {
 
   return (
     <ComponentDocsPage
-      componentName="Badge"
-      sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/atoms/badge.tsx"
-      sections={sections}
-      props={props}
-    />
+      sectionTitles={sectionTitles}
+    >
+      <Header
+        componentName="Badge"
+        sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/atoms/badge.tsx"
+      >
+        {sections[0].example()}
+      </Header>
+      <Props>
+        {props.map((prop) => (
+          <Prop prop={prop}>
+            {prop.notes}
+          </Prop>
+        ))}
+      </Props>
+    </ComponentDocsPage>
   );
 };

@@ -4,7 +4,7 @@ import { H2 } from "@/islands/atoms/h2.tsx";
 import { InlineCode } from "@/islands/atoms/inline-code.tsx";
 import { Link } from "@/islands/atoms/link.tsx";
 import { Text } from "@/islands/atoms/text.tsx";
-import { OnThisPage } from "@/islands/demo/component-docs-page/index.tsx";
+import { OnThisPage } from "@/islands/demo/component-docs-page/on-this-page.tsx";
 import { Flex } from "@/islands/helpers/flex.tsx";
 import { Stack } from "@/islands/helpers/stack.tsx";
 import { Card } from "@/islands/molecules/card.tsx";

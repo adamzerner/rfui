@@ -30,7 +30,7 @@ export const Card = (
     ...rest
   }: CardType,
 ) => {
-  const [cardHeader, cardBody, cardFooter] = getComponents(children);
+  const { cardHeader, cardBody, cardFooter } = getComponents(children);
   let sharedClass = "border-neutral-100";
 
   sharedClass += " " + (() => {
@@ -115,7 +115,7 @@ const getComponents = (props: any) => {
     : props;
 
   if (!Array.isArray(children)) {
-    return [undefined, children];
+    return { cardBody: children };
   }
 
   const cardHeader = children.find(
@@ -136,7 +136,7 @@ const getComponents = (props: any) => {
     );
   }
 
-  return [cardHeader, cardBody, cardFooter];
+  return { cardHeader, cardBody, cardFooter };
 };
 
 export const CardHeader = (

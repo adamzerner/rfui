@@ -1,25 +1,37 @@
 import { CodeBlock } from "@/islands/atoms/code-block.tsx";
+import { H2 } from "@/islands/atoms/h2.tsx";
 import { InlineCode } from "@/islands/atoms/inline-code.tsx";
 import { Link } from "@/islands/atoms/link.tsx";
+import { Text } from "@/islands/atoms/text.tsx";
+import {
+  Example,
+  Header,
+  Notes,
+} from "@/islands/demo/component-docs-page/header.tsx";
 import { ComponentDocsPage } from "@/islands/demo/component-docs-page/index.tsx";
+import { Prop } from "@/islands/demo/component-docs-page/prop.tsx";
+import { Props } from "@/islands/demo/component-docs-page/props.tsx";
+import { SectionType } from "@/islands/demo/component-docs-page/section-type.ts";
+import { Stack } from "@/islands/helpers/stack.tsx";
+import { Card } from "@/islands/molecules/card.tsx";
 import {
   Navbar,
   NavbarItem,
   NavbarLeft,
   NavbarRight,
 } from "@/islands/molecules/navbar.tsx";
-import { Stack } from "../../islands/helpers/stack.tsx";
 
 export default () => {
-  const sections = [{
+  const notes = null;
+  const sections: SectionType[] = [{
     title: "Basic",
-    example: () => (
+    example: (
       <Navbar size="xl">
         <NavbarItem href="https://one.com">One</NavbarItem>
         <NavbarItem href="https://two.com">Two</NavbarItem>
       </Navbar>
     ),
-    exampleCode: () => (
+    exampleCode: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -31,7 +43,7 @@ export default () => {
     ),
   }, {
     title: "NavbarLeft",
-    example: () => (
+    example: (
       <Navbar size="xl">
         <NavbarLeft>
           <NavbarItem href="https://one.com">One</NavbarItem>
@@ -39,7 +51,7 @@ export default () => {
         </NavbarLeft>
       </Navbar>
     ),
-    exampleCode: () => (
+    exampleCode: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -53,7 +65,7 @@ export default () => {
     ),
   }, {
     title: "NavbarLeft and NavbarRight",
-    example: () => (
+    example: (
       <Navbar size="xl">
         <NavbarLeft>
           <NavbarItem href="https://one.com">One</NavbarItem>
@@ -65,7 +77,7 @@ export default () => {
         </NavbarRight>
       </Navbar>
     ),
-    exampleCode: () => (
+    exampleCode: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -91,7 +103,7 @@ export default () => {
         <InlineCode>"neutral"</InlineCode>.
       </div>
     ),
-    example: () => (
+    example: (
       <Stack class="gap-5 w-full">
         <Navbar size="xl" background="neutral">
           <NavbarLeft>
@@ -115,7 +127,7 @@ export default () => {
         </Navbar>
       </Stack>
     ),
-    exampleCode: () => (
+    exampleCode: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -202,10 +214,37 @@ export default () => {
 
   return (
     <ComponentDocsPage
-      componentName="Navbar"
-      sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/molecules/navbar.tsx"
-      sections={sections}
-      props={props}
-    />
+      sectionTitles={sections.map((s) => s.title)}
+    >
+      <Header
+        componentName="Navbar"
+        sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/molecules/navbar.tsx"
+      >
+        <Example>{sections[0].example}</Example>
+        <Notes>{notes}</Notes>
+      </Header>
+      {sections.map((section) => (
+        <section>
+          <H2 inPageLink={section.title.toLowerCase().split(/\s+/).join("-")}>
+            {section.title}
+          </H2>
+          {section.description &&
+            (
+              <Text size="sm" class="mb-6">
+                {section.description}
+              </Text>
+            )}
+          <Card width="full" class="mb-4">{section.example}</Card>
+          {section.exampleCode}
+        </section>
+      ))}
+      <Props>
+        {props.map((prop) => (
+          <Prop prop={prop}>
+            {prop.notes}
+          </Prop>
+        ))}
+      </Props>
+    </ComponentDocsPage>
   );
 };

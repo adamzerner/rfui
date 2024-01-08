@@ -45,11 +45,11 @@ export const Header = ({ componentName, sourceCodeUrl, children }: {
   );
 };
 
-const Notes = ({ children }: { children: ComponentChild }) => {
+export const Notes = ({ children }: { children: ComponentChild }) => {
   return <>{children}</>;
 };
 
-const Example = ({ children }: { children: ComponentChild }) => {
+export const Example = ({ children }: { children: ComponentChild }) => {
   return <>{children}</>;
 };
 

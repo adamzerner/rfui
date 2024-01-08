@@ -1,15 +1,27 @@
 import { CodeBlock } from "@/islands/atoms/code-block.tsx";
+import { H2 } from "@/islands/atoms/h2.tsx";
 import { InlineCode } from "@/islands/atoms/inline-code.tsx";
 import { Link } from "@/islands/atoms/link.tsx";
+import { Text } from "@/islands/atoms/text.tsx";
+import {
+  Example,
+  Header,
+  Notes,
+} from "@/islands/demo/component-docs-page/header.tsx";
 import { ComponentDocsPage } from "@/islands/demo/component-docs-page/index.tsx";
+import { Prop } from "@/islands/demo/component-docs-page/prop.tsx";
+import { Props } from "@/islands/demo/component-docs-page/props.tsx";
+import { SectionType } from "@/islands/demo/component-docs-page/section-type.ts";
 import { Stack } from "@/islands/helpers/stack.tsx";
+import { Card } from "@/islands/molecules/card.tsx";
 import { FormField } from "@/islands/molecules/form-field.tsx";
 
 export default () => {
-  const sections = [{
+  const notes = null;
+  const sections: SectionType[] = [{
     title: "Basic",
-    example: () => <FormField label="Name" />,
-    exampleCode: () => (
+    example: <FormField label="Name" />,
+    exampleCode: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -18,10 +30,8 @@ export default () => {
     ),
   }, {
     title: "Helper text",
-    example: () => (
-      <FormField label="Name" helperText="Your first and last name" />
-    ),
-    exampleCode: () => (
+    example: <FormField label="Name" helperText="Your first and last name" />,
+    exampleCode: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -30,8 +40,8 @@ export default () => {
     ),
   }, {
     title: "Invalid",
-    example: () => <FormField label="Name" invalid />,
-    exampleCode: () => (
+    example: <FormField label="Name" invalid />,
+    exampleCode: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -40,8 +50,8 @@ export default () => {
     ),
   }, {
     title: "Error text",
-    example: () => <FormField label="Name" invalid errorText="Invalid name" />,
-    exampleCode: () => (
+    example: <FormField label="Name" invalid errorText="Invalid name" />,
+    exampleCode: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -50,7 +60,7 @@ export default () => {
     ),
   }, {
     title: "Helper and error text",
-    example: () => (
+    example: (
       <FormField
         label="Name"
         helperText="Your first and last name"
@@ -58,7 +68,7 @@ export default () => {
         errorText="Invalid name"
       />
     ),
-    exampleCode: () => (
+    exampleCode: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -91,7 +101,7 @@ export default () => {
         </div>
       </Stack>
     ),
-    example: () => (
+    example: (
       <Stack class="gap-5">
         <FormField
           label="Name"
@@ -105,7 +115,7 @@ export default () => {
         />
       </Stack>
     ),
-    exampleCode: () => (
+    exampleCode: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -144,7 +154,7 @@ export default () => {
         </div>
       </Stack>
     ),
-    example: () => (
+    example: (
       <Stack class="gap-5">
         <FormField
           label="Name"
@@ -156,7 +166,7 @@ export default () => {
         />
       </Stack>
     ),
-    exampleCode: () => (
+    exampleCode: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -182,7 +192,7 @@ export default () => {
         <InlineCode>"md"</InlineCode>.
       </div>
     ),
-    example: () => (
+    example: (
       <Stack class="gap-5">
         <FormField
           label="Name"
@@ -207,7 +217,7 @@ export default () => {
         />
       </Stack>
     ),
-    exampleCode: () => (
+    exampleCode: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -238,7 +248,7 @@ export default () => {
     ),
   }, {
     title: "Width",
-    example: () => (
+    example: (
       <Stack class="gap-5">
         <FormField
           label="Name on card"
@@ -262,7 +272,7 @@ export default () => {
         />
       </Stack>
     ),
-    exampleCode: () => (
+    exampleCode: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -292,7 +302,7 @@ export default () => {
     ),
   }, {
     title: "Type",
-    example: () => (
+    example: (
       <Stack class="gap-5">
         <FormField label="Name" type="text" />
         <FormField label="Email" type="email" />
@@ -306,7 +316,7 @@ export default () => {
         <FormField label="Favorite color" type="color" />
       </Stack>
     ),
-    exampleCode: () => (
+    exampleCode: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -467,10 +477,37 @@ export default () => {
 
   return (
     <ComponentDocsPage
-      componentName="FormField"
-      sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/molecules/form-field.tsx"
-      sections={sections}
-      props={props}
-    />
+      sectionTitles={sections.map((s) => s.title)}
+    >
+      <Header
+        componentName="FormField"
+        sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/molecules/form-field.tsx"
+      >
+        <Example>{sections[0].example}</Example>
+        <Notes>{notes}</Notes>
+      </Header>
+      {sections.map((section) => (
+        <section>
+          <H2 inPageLink={section.title.toLowerCase().split(/\s+/).join("-")}>
+            {section.title}
+          </H2>
+          {section.description &&
+            (
+              <Text size="sm" class="mb-6">
+                {section.description}
+              </Text>
+            )}
+          <Card width="full" class="mb-4">{section.example}</Card>
+          {section.exampleCode}
+        </section>
+      ))}
+      <Props>
+        {props.map((prop) => (
+          <Prop prop={prop}>
+            {prop.notes}
+          </Prop>
+        ))}
+      </Props>
+    </ComponentDocsPage>
   );
 };

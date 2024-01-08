@@ -1,8 +1,18 @@
 import { CodeBlock } from "@/islands/atoms/code-block.tsx";
+import { H2 } from "@/islands/atoms/h2.tsx";
 import { InlineCode } from "@/islands/atoms/inline-code.tsx";
 import { Link } from "@/islands/atoms/link.tsx";
 import { Text } from "@/islands/atoms/text.tsx";
+import {
+  Example,
+  Header,
+  Notes,
+} from "@/islands/demo/component-docs-page/header.tsx";
 import { ComponentDocsPage } from "@/islands/demo/component-docs-page/index.tsx";
+import { Prop } from "@/islands/demo/component-docs-page/prop.tsx";
+import { Props } from "@/islands/demo/component-docs-page/props.tsx";
+import { SectionType } from "@/islands/demo/component-docs-page/section-type.ts";
+import { Card } from "@/islands/molecules/card.tsx";
 
 export default () => {
   const notes = (
@@ -19,9 +29,9 @@ export default () => {
       class.
     </div>
   );
-  const sections = [{
+  const sections: SectionType[] = [{
     title: "Basic",
-    example: () => (
+    example: (
       <Text>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -35,7 +45,7 @@ export default () => {
         </p>
       </Text>
     ),
-    exampleCode: () => (
+    exampleCode: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -52,7 +62,7 @@ export default () => {
         Set <InlineCode>size</InlineCode> to <InlineCode>"sm"</InlineCode>.
       </div>
     ),
-    example: () => (
+    example: (
       <Text size="sm">
         <p>
           Illo quia quam perferendis ut consectetur rerum dolores dolores.
@@ -65,7 +75,7 @@ export default () => {
         </p>
       </Text>
     ),
-    exampleCode: () => (
+    exampleCode: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -89,7 +99,7 @@ export default () => {
         Set <InlineCode>size</InlineCode> to <InlineCode>"md"</InlineCode>.
       </div>
     ),
-    example: () => (
+    example: (
       <Text size="md">
         <p>
           Illo quia quam perferendis ut consectetur rerum dolores dolores.
@@ -102,7 +112,7 @@ export default () => {
         </p>
       </Text>
     ),
-    exampleCode: () => (
+    exampleCode: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -126,7 +136,7 @@ export default () => {
         Set <InlineCode>size</InlineCode> to <InlineCode>"lg"</InlineCode>.
       </div>
     ),
-    example: () => (
+    example: (
       <Text size="lg">
         <p>
           Illo quia quam perferendis ut consectetur rerum dolores dolores.
@@ -139,7 +149,7 @@ export default () => {
         </p>
       </Text>
     ),
-    exampleCode: () => (
+    exampleCode: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -164,14 +174,14 @@ export default () => {
         the code as demonstrated below.
       </div>
     ),
-    example: () => (
+    example: (
       <Text>
         Illo quia quam perferendis ut consectetur rerum dolores dolores.
         Reiciendis est beatae magnam ut amet quis sequi. Eaque consequatur
         consectetur non amet nostrum quo animi.
       </Text>
     ),
-    exampleCode: () => (
+    exampleCode: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -196,7 +206,7 @@ export default () => {
         </Link>.
       </div>
     ),
-    example: () => (
+    example: (
       <Text>
         <p>
           Illo quia quam perferendis ut consectetur{" "}
@@ -206,7 +216,7 @@ export default () => {
         </p>
       </Text>
     ),
-    exampleCode: () => (
+    exampleCode: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -263,11 +273,37 @@ export default () => {
 
   return (
     <ComponentDocsPage
-      componentName="Text"
-      notes={notes}
-      sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/atoms/text.tsx"
-      sections={sections}
-      props={props}
-    />
+      sectionTitles={sections.map((s) => s.title)}
+    >
+      <Header
+        componentName="Text"
+        sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/atoms/text.tsx"
+      >
+        <Example>{sections[0].example}</Example>
+        <Notes>{notes}</Notes>
+      </Header>
+      {sections.map((section) => (
+        <section>
+          <H2 inPageLink={section.title.toLowerCase().split(/\s+/).join("-")}>
+            {section.title}
+          </H2>
+          {section.description &&
+            (
+              <Text size="sm" class="mb-6">
+                {section.description}
+              </Text>
+            )}
+          <Card width="full" class="mb-4">{section.example}</Card>
+          {section.exampleCode}
+        </section>
+      ))}
+      <Props>
+        {props.map((prop) => (
+          <Prop prop={prop}>
+            {prop.notes}
+          </Prop>
+        ))}
+      </Props>
+    </ComponentDocsPage>
   );
 };

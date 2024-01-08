@@ -4,16 +4,22 @@ import { H2 } from "@/islands/atoms/h2.tsx";
 import { InlineCode } from "@/islands/atoms/inline-code.tsx";
 import { Link } from "@/islands/atoms/link.tsx";
 import { Text } from "@/islands/atoms/text.tsx";
-import { Header } from "@/islands/demo/component-docs-page/header.tsx";
+import {
+  Example,
+  Header,
+  Notes,
+} from "@/islands/demo/component-docs-page/header.tsx";
 import { ComponentDocsPage } from "@/islands/demo/component-docs-page/index.tsx";
 import { Prop } from "@/islands/demo/component-docs-page/prop.tsx";
 import { Props } from "@/islands/demo/component-docs-page/props.tsx";
+import { SectionType } from "@/islands/demo/component-docs-page/section-type.ts";
 import { Flex } from "@/islands/helpers/flex.tsx";
 import { Stack } from "@/islands/helpers/stack.tsx";
 import { Card } from "@/islands/molecules/card.tsx";
 
 export default () => {
-  const sections = [{
+  const notes = null;
+  const sections: SectionType[] = [{
     title: "Basic",
     example: <Badge>Basic</Badge>,
     exampleCode: (
@@ -261,7 +267,8 @@ export default () => {
         componentName="Badge"
         sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/atoms/badge.tsx"
       >
-        {sections[0].example}
+        <Example>{sections[0].example}</Example>
+        <Notes>{notes}</Notes>
       </Header>
       {sections.map((section) => (
         <section>

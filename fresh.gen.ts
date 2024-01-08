@@ -69,7 +69,7 @@ import * as $demo_component_docs_page_index from "./islands/demo/component-docs-
 import * as $demo_component_docs_page_on_this_page from "./islands/demo/component-docs-page/on-this-page.tsx";
 import * as $demo_component_docs_page_prop from "./islands/demo/component-docs-page/prop.tsx";
 import * as $demo_component_docs_page_props from "./islands/demo/component-docs-page/props.tsx";
-import * as $demo_component_docs_page_section from "./islands/demo/component-docs-page/section.tsx";
+import * as $demo_component_docs_page_section_type from "./islands/demo/component-docs-page/section-type.ts";
 import * as $helpers_container_1 from "./islands/helpers/container.tsx";
 import * as $helpers_flex_1 from "./islands/helpers/flex.tsx";
 import * as $helpers_stack_1 from "./islands/helpers/stack.tsx";
@@ -162,8 +162,8 @@ const manifest = {
       $demo_component_docs_page_prop,
     "./islands/demo/component-docs-page/props.tsx":
       $demo_component_docs_page_props,
-    "./islands/demo/component-docs-page/section.tsx":
-      $demo_component_docs_page_section,
+    "./islands/demo/component-docs-page/section-type.ts":
+      $demo_component_docs_page_section_type,
     "./islands/helpers/container.tsx": $helpers_container_1,
     "./islands/helpers/flex.tsx": $helpers_flex_1,
     "./islands/helpers/stack.tsx": $helpers_stack_1,

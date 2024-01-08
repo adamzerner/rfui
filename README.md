@@ -17,30 +17,6 @@ according to the following
 7. Use the platform
 8. Pareto solutions > high customizability
 
-# Notes
-
-## Early stage
-
-It is currently at a pretty early stage. See the
-[project page](https://github.com/users/adamzerner/projects/2/views/1). However,
-for people with a reasonable amount of risk aversion, it should be ready to be
-used on most projects.
-
-## Islands in docs
-
-Most docs pages use `ComponentDocsPage` from
-`/islands/demo/component-docs-page.tsx`. However, when docs pages need to be
-interactive -- ie. because the component they're documenting is an island --
-using `ComponentDocsPage` won't work because you
-[can't pass functions into an island](https://fresh.deno.dev/docs/concepts/islands#passing-other-props-to-islands)
-(see also [this GitHub issue](https://github.com/denoland/fresh/issues/2194)).
-
-I also tried refactoring `ComponentDocsPage` to accept the current props as
-`children` instead, but that didn't work for reasons I don't understand.
-
-So then, I was forced to be pretty WET (instead of DRY) in the docs pages for
-components that are islands.
-
 # Releasing
 
 ## Versioning

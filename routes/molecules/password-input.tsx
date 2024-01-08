@@ -1,19 +1,22 @@
 import { CodeBlock } from "@/islands/atoms/code-block.tsx";
-import { H1 } from "@/islands/atoms/h1.tsx";
 import { H2 } from "@/islands/atoms/h2.tsx";
 import { InlineCode } from "@/islands/atoms/inline-code.tsx";
 import { Link } from "@/islands/atoms/link.tsx";
 import { OL } from "@/islands/atoms/ol.tsx";
 import { Text } from "@/islands/atoms/text.tsx";
 import { UL } from "@/islands/atoms/ul.tsx";
-import { OnThisPage } from "@/islands/demo/component-docs-page/on-this-page.tsx";
-import { Flex } from "@/islands/helpers/flex.tsx";
+import {
+  Example,
+  Header,
+  Notes,
+} from "@/islands/demo/component-docs-page/header.tsx";
+import { ComponentDocsPage } from "@/islands/demo/component-docs-page/index.tsx";
+import { Prop } from "@/islands/demo/component-docs-page/prop.tsx";
+import { Props } from "@/islands/demo/component-docs-page/props.tsx";
+import { SectionType } from "@/islands/demo/component-docs-page/section-type.ts";
 import { Stack } from "@/islands/helpers/stack.tsx";
 import { Card } from "@/islands/molecules/card.tsx";
 import { PasswordInput } from "@/islands/molecules/password-input.tsx";
-import { LeftNav } from "@/routes/index.tsx";
-
-// See "Islands in docs" in the README for why this file is so WET.
 
 export default () => {
   const notes = (
@@ -26,10 +29,10 @@ export default () => {
       <Link href="https://ux.stackexchange.com/q/144503/39046">usability</Link>.
     </div>
   );
-  const sections = [{
+  const sections: SectionType[] = [{
     title: "Basic",
-    example: () => <PasswordInput />,
-    exampleCode: () => (
+    example: <PasswordInput />,
+    exampleCode: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -78,8 +81,8 @@ export default () => {
         </UL>
       </div>
     ),
-    example: () => <PasswordInput defaultVisibility="shown" />,
-    exampleCode: () => (
+    example: <PasswordInput defaultVisibility="shown" />,
+    exampleCode: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -96,14 +99,14 @@ export default () => {
         <InlineCode>"md"</InlineCode>.
       </div>
     ),
-    example: () => (
+    example: (
       <Stack class="gap-5">
         <PasswordInput size="sm" />
         <PasswordInput size="md" />
         <PasswordInput size="lg" />
       </Stack>
     ),
-    exampleCode: () => (
+    exampleCode: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -125,7 +128,7 @@ export default () => {
         <InlineCode>"sm"</InlineCode>.
       </div>
     ),
-    example: () => (
+    example: (
       <Stack class="gap-5">
         <PasswordInput rounded="square" />
         <PasswordInput rounded="sm" />
@@ -133,7 +136,7 @@ export default () => {
         <PasswordInput rounded="full" />
       </Stack>
     ),
-    exampleCode: () => (
+    exampleCode: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -155,8 +158,8 @@ export default () => {
         <InlineCode>false</InlineCode>.
       </div>
     ),
-    example: () => <PasswordInput invalid />,
-    exampleCode: () => (
+    example: <PasswordInput invalid />,
+    exampleCode: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -268,107 +271,40 @@ export default () => {
       </div>
     ),
   }];
-  const componentName = "PasswordInput";
-  const sourceCodeUrl =
-    "https://github.com/adamzerner/rfui/blob/master/islands/molecules/password-input.tsx";
-  const basicExample = sections[0].example;
 
   return (
-    <Flex class="mt-9 gap-11 max-w-full">
-      <Stack class="gap-8 hidden lg:flex">
-        <OnThisPage sectionTitles={sections.map((s) => s.title)} />
-        <LeftNav />
-      </Stack>
-      <main class="flex-1 max-w-full">
-        <nav class="mb-10">
-          <H1 class="!mt-0">{componentName}</H1>
-          <Stack class="gap-5">
-            <Text>
-              {notes && (
-                <div class="text-base leading-relaxed text-neutral-700">
-                  {notes}
-                </div>
-              )}
-              <Link
-                href={sourceCodeUrl}
-                _includeNewTabIcon
-                _newTab
-                class="inline w-fit"
-              >
-                Source code
-              </Link>
-            </Text>
-            <Card width="full" padding="lg">
-              {basicExample()}
-            </Card>
-            <CodeBlock
-              language="ts"
-              code={`import { ${componentName} } from "rfui";`}
-            />
-          </Stack>
-        </nav>
-        {sections.map((section) => (
-          <section>
-            <H2 inPageLink={section.title.toLowerCase().split(/\s+/).join("-")}>
-              {section.title}
-            </H2>
-            {section.description &&
-              (
-                <Text size="sm" class="mb-6">
-                  {section.description}
-                </Text>
-              )}
-            <Card width="full" class="mb-4">{section.example()}</Card>
-            {section.exampleCode()}
-          </section>
-        ))}
-        <section class="mt-10">
-          <H1 id="props">
-            <Link href="#props" underline="hover">Props</Link>
-          </H1>
-          <div class="grid grid-cols-1 sm:grid-cols-3 gap-y-5 sm:gap-y-10 justify-items-start place-items-start">
-            {props.map((prop) => (
-              <>
-                <div class="first-of-type:mt-0 mt-8 sm:mt-0">
-                  <InlineCode class="text-2xl">
-                    {prop.name}
-                  </InlineCode>
-                  {prop.required &&
-                    <sup class="text-supporting-red-500 text-2xl ml-1">*</sup>}
-                </div>
-                <Stack class="gap-5 col-span-2 text-sm">
-                  <div class="self-start">
-                    <div class="mb-3">Required</div>
-                    <CodeBlock language="ts" code={prop.required.toString()} />
-                  </div>
-                  <div class="self-start">
-                    <div class="mb-3">Type</div>
-                    <CodeBlock language="ts" code={prop.type} />
-                  </div>
-                  <div class="self-start">
-                    <div class="mb-3">Default</div>
-                    {prop.default
-                      ? (
-                        <CodeBlock
-                          language="ts"
-                          code={prop.default}
-                        />
-                      )
-                      : <div class="text-xs">none</div>}
-                  </div>
-                  {prop.notes &&
-                    (
-                      <div>
-                        <div class="mb-3">Notes</div>
-                        <div>{prop.notes}</div>
-                      </div>
-                    )}
-                </Stack>
-              </>
-            ))}
-          </div>
+    <ComponentDocsPage
+      sectionTitles={sections.map((s) => s.title)}
+    >
+      <Header
+        componentName="PasswordInput"
+        sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/molecules/password-input.tsx"
+      >
+        <Example>{sections[0].example}</Example>
+        <Notes>{notes}</Notes>
+      </Header>
+      {sections.map((section) => (
+        <section>
+          <H2 inPageLink={section.title.toLowerCase().split(/\s+/).join("-")}>
+            {section.title}
+          </H2>
+          {section.description &&
+            (
+              <Text size="sm" class="mb-6">
+                {section.description}
+              </Text>
+            )}
+          <Card width="full" class="mb-4">{section.example}</Card>
+          {section.exampleCode}
         </section>
-      </main>
-    </Flex>
+      ))}
+      <Props>
+        {props.map((prop) => (
+          <Prop prop={prop}>
+            {prop.notes}
+          </Prop>
+        ))}
+      </Props>
+    </ComponentDocsPage>
   );
 };

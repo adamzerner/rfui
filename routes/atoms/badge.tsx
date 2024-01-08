@@ -13,7 +13,6 @@ import { Stack } from "@/islands/helpers/stack.tsx";
 import { Card } from "@/islands/molecules/card.tsx";
 
 export default () => {
-  const sectionTitles = ["Basic", "Type", "Size", "Rounded"];
   const sections = [{
     title: "Basic",
     example: <Badge>Basic</Badge>,
@@ -256,7 +255,7 @@ export default () => {
 
   return (
     <ComponentDocsPage
-      sectionTitles={sectionTitles}
+      sectionTitles={sections.map((s) => s.title)}
     >
       <Header
         componentName="Badge"

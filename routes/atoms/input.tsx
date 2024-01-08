@@ -1,17 +1,27 @@
-import { CodeBlock } from "@/components/atoms/code-block.tsx";
-import { InlineCode } from "@/components/atoms/inline-code.tsx";
-import { Input } from "@/components/atoms/input.tsx";
-import { Link } from "@/components/atoms/link.tsx";
-import { Stack } from "@/components/helpers/stack.tsx";
-import { ComponentDocsPage } from "@/islands/demo/component-docs-page.tsx";
+import { CodeBlock } from "@/islands/atoms/code-block.tsx";
+import { H2 } from "@/islands/atoms/h2.tsx";
+import { InlineCode } from "@/islands/atoms/inline-code.tsx";
+import { Input } from "@/islands/atoms/input.tsx";
+import { Link } from "@/islands/atoms/link.tsx";
+import { Text } from "@/islands/atoms/text.tsx";
+import {
+  Example,
+  Header,
+  Notes,
+} from "@/islands/demo/component-docs-page/header.tsx";
+import { ComponentDocsPage } from "@/islands/demo/component-docs-page/index.tsx";
+import { Prop } from "@/islands/demo/component-docs-page/prop.tsx";
+import { Props } from "@/islands/demo/component-docs-page/props.tsx";
+import { SectionType } from "@/islands/demo/component-docs-page/section-type.ts";
+import { Stack } from "@/islands/helpers/stack.tsx";
+import { Card } from "@/islands/molecules/card.tsx";
 
 export default () => {
-  const sections = [{
+  const notes = null;
+  const sections: SectionType[] = [{
     title: "Basic",
-    example: () => <Input />,
-    exampleCode: () => (
-      <CodeBlock class="mt-4" language="tsx" code={`<Input />`} />
-    ),
+    example: <Input />,
+    exampleCode: <CodeBlock class="mt-4" language="tsx" code={`<Input />`} />,
   }, {
     title: "Size",
     description: (
@@ -22,14 +32,14 @@ export default () => {
         <InlineCode>"md"</InlineCode>.
       </div>
     ),
-    example: () => (
+    example: (
       <Stack class="gap-5 w-fit">
         <Input size="sm" />
         <Input size="md" />
         <Input size="lg" />
       </Stack>
     ),
-    exampleCode: () => (
+    exampleCode: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -51,7 +61,7 @@ export default () => {
         <InlineCode>"sm"</InlineCode>.
       </div>
     ),
-    example: () => (
+    example: (
       <Stack class="gap-5 w-fit">
         <Input rounded="square" />
         <Input rounded="sm" />
@@ -59,7 +69,7 @@ export default () => {
         <Input rounded="full" />
       </Stack>
     ),
-    exampleCode: () => (
+    exampleCode: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -81,8 +91,8 @@ export default () => {
         <InlineCode>false</InlineCode>.
       </div>
     ),
-    example: () => <Input disabled />,
-    exampleCode: () => (
+    example: <Input disabled />,
+    exampleCode: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -99,8 +109,8 @@ export default () => {
         <InlineCode>false</InlineCode>.
       </div>
     ),
-    example: () => <Input readonly value="example" />,
-    exampleCode: () => (
+    example: <Input readonly value="example" />,
+    exampleCode: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -117,8 +127,8 @@ export default () => {
         <InlineCode>false</InlineCode>.
       </div>
     ),
-    example: () => <Input invalid value="example" />,
-    exampleCode: () => (
+    example: <Input invalid value="example" />,
+    exampleCode: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -141,7 +151,7 @@ export default () => {
         </Link>.
       </div>
     ),
-    example: () => (
+    example: (
       <Stack class="gap-5">
         <Input type="text" placeholder="text" />
         <Input type="email" placeholder="email" />
@@ -155,7 +165,7 @@ export default () => {
         <Input type="color" />
       </Stack>
     ),
-    exampleCode: () => (
+    exampleCode: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -223,10 +233,37 @@ export default () => {
 
   return (
     <ComponentDocsPage
-      componentName="Input"
-      sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/atoms/input.tsx"
-      sections={sections}
-      props={props}
-    />
+      sectionTitles={sections.map((s) => s.title)}
+    >
+      <Header
+        componentName="Input"
+        sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/atoms/input.tsx"
+      >
+        <Example>{sections[0].example}</Example>
+        <Notes>{notes}</Notes>
+      </Header>
+      {sections.map((section) => (
+        <section>
+          <H2 inPageLink={section.title.toLowerCase().split(/\s+/).join("-")}>
+            {section.title}
+          </H2>
+          {section.description &&
+            (
+              <Text size="sm" class="mb-6">
+                {section.description}
+              </Text>
+            )}
+          <Card width="full" class="mb-4">{section.example}</Card>
+          {section.exampleCode}
+        </section>
+      ))}
+      <Props>
+        {props.map((prop) => (
+          <Prop prop={prop}>
+            {prop.notes}
+          </Prop>
+        ))}
+      </Props>
+    </ComponentDocsPage>
   );
 };

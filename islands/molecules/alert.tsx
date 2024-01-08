@@ -2,8 +2,8 @@
 // deno-lint-ignore-file no-explicit-any
 import type { ComponentChild, JSX } from "preact";
 import { useState } from "preact/hooks";
-import { Flex } from "../../components/helpers/flex.tsx";
-import { CloseIcon } from "../../components/icons/close-icon.tsx";
+import { Flex } from "../helpers/flex.tsx";
+import { CloseIcon } from "../icons/close-icon.tsx";
 
 export type AlertType = {
   variant?: "success" | "info" | "warning" | "danger" | "neutral";
@@ -62,7 +62,7 @@ export const Alert = (
   };
   const [isShown, setIsShown] = useState(true);
   const { class: restClass, ...restWithoutClass } = rest;
-  const [alertHeader, alertBody] = getComponents(children);
+  const { alertHeader, alertBody } = getComponents(children);
   let alertHeaderClass = "text-lg font-bold mb-2";
   let alertBodyClass = "";
   let containerClass = "w-full p-5 border-l-4";
@@ -113,7 +113,7 @@ const getComponents = (props: any) => {
     : props;
 
   if (!Array.isArray(children)) {
-    return [undefined, children];
+    return { alertBody: children };
   }
 
   const alertHeader = children.find(
@@ -130,7 +130,7 @@ const getComponents = (props: any) => {
     );
   }
 
-  return [alertHeader, alertBody];
+  return { alertHeader, alertBody };
 };
 
 export const AlertHeader = (

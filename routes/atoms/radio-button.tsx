@@ -1,9 +1,20 @@
-import { CodeBlock } from "@/components/atoms/code-block.tsx";
-import { InlineCode } from "@/components/atoms/inline-code.tsx";
-import { Link } from "@/components/atoms/link.tsx";
-import { RadioButton } from "@/components/atoms/radio-button.tsx";
-import { Stack } from "@/components/helpers/stack.tsx";
-import { ComponentDocsPage } from "@/islands/demo/component-docs-page.tsx";
+import { CodeBlock } from "@/islands/atoms/code-block.tsx";
+import { H2 } from "@/islands/atoms/h2.tsx";
+import { InlineCode } from "@/islands/atoms/inline-code.tsx";
+import { Link } from "@/islands/atoms/link.tsx";
+import { RadioButton } from "@/islands/atoms/radio-button.tsx";
+import { Text } from "@/islands/atoms/text.tsx";
+import {
+  Example,
+  Header,
+  Notes,
+} from "@/islands/demo/component-docs-page/header.tsx";
+import { ComponentDocsPage } from "@/islands/demo/component-docs-page/index.tsx";
+import { Prop } from "@/islands/demo/component-docs-page/prop.tsx";
+import { Props } from "@/islands/demo/component-docs-page/props.tsx";
+import { SectionType } from "@/islands/demo/component-docs-page/section-type.ts";
+import { Stack } from "@/islands/helpers/stack.tsx";
+import { Card } from "@/islands/molecules/card.tsx";
 
 export default () => {
   const notes = (
@@ -19,22 +30,22 @@ export default () => {
       component.
     </div>
   );
-  const sections = [{
+  const sections: SectionType[] = [{
     title: "Basic",
-    example: () => <RadioButton />,
-    exampleCode: () => (
+    example: <RadioButton />,
+    exampleCode: (
       <CodeBlock class="mt-4" language="tsx" code={`<RadioButton />`} />
     ),
   }, {
     title: "Size",
-    example: () => (
+    example: (
       <Stack class="gap-5">
         <RadioButton size="sm" />
         <RadioButton size="md" />
         <RadioButton size="lg" />
       </Stack>
     ),
-    exampleCode: () => (
+    exampleCode: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -47,8 +58,8 @@ export default () => {
     ),
   }, {
     title: "Disabled",
-    example: () => <RadioButton disabled />,
-    exampleCode: () => (
+    example: <RadioButton disabled />,
+    exampleCode: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -57,8 +68,8 @@ export default () => {
     ),
   }, {
     title: "Invalid",
-    example: () => <RadioButton invalid />,
-    exampleCode: () => (
+    example: <RadioButton invalid />,
+    exampleCode: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -111,11 +122,37 @@ export default () => {
 
   return (
     <ComponentDocsPage
-      notes={notes}
-      componentName="RadioButton"
-      sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/atoms/radio-button.tsx"
-      sections={sections}
-      props={props}
-    />
+      sectionTitles={sections.map((s) => s.title)}
+    >
+      <Header
+        componentName="RadioButton"
+        sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/atoms/radio-button.tsx"
+      >
+        <Example>{sections[0].example}</Example>
+        <Notes>{notes}</Notes>
+      </Header>
+      {sections.map((section) => (
+        <section>
+          <H2 inPageLink={section.title.toLowerCase().split(/\s+/).join("-")}>
+            {section.title}
+          </H2>
+          {section.description &&
+            (
+              <Text size="sm" class="mb-6">
+                {section.description}
+              </Text>
+            )}
+          <Card width="full" class="mb-4">{section.example}</Card>
+          {section.exampleCode}
+        </section>
+      ))}
+      <Props>
+        {props.map((prop) => (
+          <Prop prop={prop}>
+            {prop.notes}
+          </Prop>
+        ))}
+      </Props>
+    </ComponentDocsPage>
   );
 };

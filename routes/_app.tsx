@@ -17,7 +17,7 @@ export default ({ Component }: PageProps) => {
       <body>
         <Component />
         <script src="/prism.js"></script>
-        <script>Prism.highlightAll();</script>
+        <script src="/run-prism.js"></script>
       </body>
     </html>
   );

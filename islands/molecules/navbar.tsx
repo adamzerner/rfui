@@ -28,7 +28,7 @@ export const Navbar = (
     ...rest
   }: NavbarType,
 ) => {
-  const [navbarLeft, navbarRight] = getComponents(children);
+  const { navbarLeft, navbarRight } = getComponents(children);
   const { class: restClass, ...restWithoutClass } = rest;
   let containerClass = "w-full px-auto";
 
@@ -61,9 +61,14 @@ export const Navbar = (
   );
 };
 
-const getComponents = (children: ComponentChild) => {
+// deno-lint-ignore no-explicit-any
+const getComponents = (props: any) => {
+  const children = props?.type?.name === "ServerComponent"
+    ? props.props.children
+    : props;
+
   if (!Array.isArray(children)) {
-    return [children];
+    return { navbarLeft: children };
   }
 
   const navbarLeft = children.find(
@@ -75,7 +80,7 @@ const getComponents = (children: ComponentChild) => {
   );
 
   if (!navbarLeft && !navbarRight) {
-    return [<Flex class="gap-6">{children}</Flex>];
+    return { navbarLeft: <Flex class="gap-6">{children}</Flex> };
   }
 
   if (!navbarLeft && !navbarRight) {
@@ -84,7 +89,7 @@ const getComponents = (children: ComponentChild) => {
     );
   }
 
-  return [navbarLeft, navbarRight];
+  return { navbarLeft, navbarRight };
 };
 
 export const NavbarLeft = (

@@ -1,22 +1,34 @@
-import { CodeBlock } from "@/components/atoms/code-block.tsx";
-import { InlineCode } from "@/components/atoms/inline-code.tsx";
-import { Link } from "@/components/atoms/link.tsx";
-import { UL } from "@/components/atoms/ul.tsx";
-import { Flex } from "@/components/helpers/flex.tsx";
-import { Stack } from "@/components/helpers/stack.tsx";
-import { ComponentDocsPage } from "@/islands/demo/component-docs-page.tsx";
+import { CodeBlock } from "@/islands/atoms/code-block.tsx";
+import { H2 } from "@/islands/atoms/h2.tsx";
+import { InlineCode } from "@/islands/atoms/inline-code.tsx";
+import { Link } from "@/islands/atoms/link.tsx";
+import { Text } from "@/islands/atoms/text.tsx";
+import { UL } from "@/islands/atoms/ul.tsx";
+import {
+  Example,
+  Header,
+  Notes,
+} from "@/islands/demo/component-docs-page/header.tsx";
+import { ComponentDocsPage } from "@/islands/demo/component-docs-page/index.tsx";
+import { Prop } from "@/islands/demo/component-docs-page/prop.tsx";
+import { Props } from "@/islands/demo/component-docs-page/props.tsx";
+import { SectionType } from "@/islands/demo/component-docs-page/section-type.ts";
+import { Flex } from "@/islands/helpers/flex.tsx";
+import { Stack } from "@/islands/helpers/stack.tsx";
+import { Card } from "@/islands/molecules/card.tsx";
 
 export default () => {
-  const sections = [{
+  const notes = null;
+  const sections: SectionType[] = [{
     title: "Basic",
-    example: () => (
+    example: (
       <UL>
         <li>First</li>
         <li>Second</li>
         <li>Third</li>
       </UL>
     ),
-    exampleCode: () => (
+    exampleCode: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -40,7 +52,7 @@ export default () => {
         <InlineCode>"bullet"</InlineCode>.
       </div>
     ),
-    example: () => (
+    example: (
       <Stack class="gap-5">
         <UL bulletType="bullet">
           <li>One</li>
@@ -69,7 +81,7 @@ export default () => {
         </UL>
       </Stack>
     ),
-    exampleCode: () => (
+    exampleCode: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -104,7 +116,7 @@ export default () => {
     ),
   }, {
     title: "Outside",
-    example: () => (
+    example: (
       <Stack class="gap-5">
         <UL bulletLocation="outside" bulletType="bullet">
           <li>One</li>
@@ -128,7 +140,7 @@ export default () => {
         </UL>
       </Stack>
     ),
-    exampleCode: () => (
+    exampleCode: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -158,7 +170,7 @@ export default () => {
     ),
   }, {
     title: "Bigger",
-    example: () => (
+    example: (
       <Stack class="gap-5">
         <UL bulletType="bullet" class="text-xl">
           <li>One</li>
@@ -182,7 +194,7 @@ export default () => {
         </UL>
       </Stack>
     ),
-    exampleCode: () => (
+    exampleCode: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -212,7 +224,7 @@ export default () => {
     ),
   }, {
     title: "Color",
-    example: () => (
+    example: (
       <Stack class="gap-5">
         <UL bulletType="bullet" class="text-neutral-500">
           <li>One</li>
@@ -236,7 +248,7 @@ export default () => {
         </UL>
       </Stack>
     ),
-    exampleCode: () => (
+    exampleCode: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -268,7 +280,7 @@ export default () => {
     title: "Custom",
     description:
       "You'll have to do a little more work yourself for custom bullet types.",
-    example: () => (
+    example: (
       <UL bulletType="none">
         <li>
           <Flex class="gap-2">
@@ -290,7 +302,7 @@ export default () => {
         </li>
       </UL>
     ),
-    exampleCode: () => (
+    exampleCode: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -362,10 +374,37 @@ export default () => {
 
   return (
     <ComponentDocsPage
-      componentName="UL"
-      sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/atoms/ul.tsx"
-      sections={sections}
-      props={props}
-    />
+      sectionTitles={sections.map((s) => s.title)}
+    >
+      <Header
+        componentName="UL"
+        sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/atoms/ul.tsx"
+      >
+        <Example>{sections[0].example}</Example>
+        <Notes>{notes}</Notes>
+      </Header>
+      {sections.map((section) => (
+        <section>
+          <H2 inPageLink={section.title.toLowerCase().split(/\s+/).join("-")}>
+            {section.title}
+          </H2>
+          {section.description &&
+            (
+              <Text size="sm" class="mb-6">
+                {section.description}
+              </Text>
+            )}
+          <Card width="full" class="mb-4">{section.example}</Card>
+          {section.exampleCode}
+        </section>
+      ))}
+      <Props>
+        {props.map((prop) => (
+          <Prop prop={prop}>
+            {prop.notes}
+          </Prop>
+        ))}
+      </Props>
+    </ComponentDocsPage>
   );
 };

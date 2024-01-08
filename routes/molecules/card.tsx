@@ -1,23 +1,34 @@
-import { CodeBlock } from "@/components/atoms/code-block.tsx";
-import { InlineCode } from "@/components/atoms/inline-code.tsx";
-import { Link } from "@/components/atoms/link.tsx";
-import { Flex } from "@/components/helpers/flex.tsx";
-import { Stack } from "@/components/helpers/stack.tsx";
+import { Button } from "@/islands/atoms/button.tsx";
+import { CodeBlock } from "@/islands/atoms/code-block.tsx";
+import { H2 } from "@/islands/atoms/h2.tsx";
+import { InlineCode } from "@/islands/atoms/inline-code.tsx";
+import { Link } from "@/islands/atoms/link.tsx";
+import { Text } from "@/islands/atoms/text.tsx";
+import {
+  Example,
+  Header,
+  Notes,
+} from "@/islands/demo/component-docs-page/header.tsx";
+import { ComponentDocsPage } from "@/islands/demo/component-docs-page/index.tsx";
+import { Prop } from "@/islands/demo/component-docs-page/prop.tsx";
+import { Props } from "@/islands/demo/component-docs-page/props.tsx";
+import { SectionType } from "@/islands/demo/component-docs-page/section-type.ts";
+import { Flex } from "@/islands/helpers/flex.tsx";
+import { Stack } from "@/islands/helpers/stack.tsx";
 import {
   Card,
   CardBody,
   CardFooter,
   CardHeader,
-} from "@/components/molecules/card.tsx";
-import { FormField } from "@/components/molecules/form-field.tsx";
-import { Button } from "@/islands/atoms/button.tsx";
-import { ComponentDocsPage } from "@/islands/demo/component-docs-page.tsx";
+} from "@/islands/molecules/card.tsx";
+import { FormField } from "@/islands/molecules/form-field.tsx";
 
 export default () => {
-  const sections = [{
+  const notes = null;
+  const sections: SectionType[] = [{
     title: "Basic",
-    example: () => <Card>A summary of your account.</Card>,
-    exampleCode: () => (
+    example: <Card>A summary of your account.</Card>,
+    exampleCode: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -26,12 +37,12 @@ export default () => {
     ),
   }, {
     title: "CardBody",
-    example: () => (
+    example: (
       <Card>
         <CardBody>A summary of your account.</CardBody>
       </Card>
     ),
-    exampleCode: () => (
+    exampleCode: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -42,13 +53,13 @@ export default () => {
     ),
   }, {
     title: "CardHeader and CardBody",
-    example: () => (
+    example: (
       <Card>
         <CardHeader>Summary</CardHeader>
         <CardBody>A summary of your account.</CardBody>
       </Card>
     ),
-    exampleCode: () => (
+    exampleCode: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -60,7 +71,7 @@ export default () => {
     ),
   }, {
     title: "CardBody and CardFooter",
-    example: () => (
+    example: (
       <Card>
         <CardBody>A summary of your account.</CardBody>
         <CardFooter>
@@ -68,7 +79,7 @@ export default () => {
         </CardFooter>
       </Card>
     ),
-    exampleCode: () => (
+    exampleCode: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -82,7 +93,7 @@ export default () => {
     ),
   }, {
     title: "CardHeader, CardBody and CardFooter",
-    example: () => (
+    example: (
       <Card>
         <CardHeader>Summary</CardHeader>
         <CardBody>A summary of your account.</CardBody>
@@ -91,7 +102,7 @@ export default () => {
         </CardFooter>
       </Card>
     ),
-    exampleCode: () => (
+    exampleCode: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -114,7 +125,7 @@ export default () => {
         <InlineCode>"lg"</InlineCode>.
       </div>
     ),
-    example: () => (
+    example: (
       <Stack class="gap-5">
         <Card rounded="square">
           <CardHeader>Summary</CardHeader>
@@ -139,7 +150,7 @@ export default () => {
         </Card>
       </Stack>
     ),
-    exampleCode: () => (
+    exampleCode: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -178,7 +189,7 @@ export default () => {
         <InlineCode>"full"</InlineCode>.
       </div>
     ),
-    example: () => (
+    example: (
       <Stack class="gap-5">
         <Card width="sm">
           <CardHeader>Summary</CardHeader>
@@ -210,7 +221,7 @@ export default () => {
         </Card>
       </Stack>
     ),
-    exampleCode: () => (
+    exampleCode: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -255,7 +266,7 @@ export default () => {
         <InlineCode>"md"</InlineCode>, or <InlineCode>"lg"</InlineCode>.
       </div>
     ),
-    example: () => (
+    example: (
       <Stack class="gap-5">
         <Card shadow="sm">
           <CardHeader>Summary</CardHeader>
@@ -280,7 +291,7 @@ export default () => {
         </Card>
       </Stack>
     ),
-    exampleCode: () => (
+    exampleCode: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -318,7 +329,7 @@ export default () => {
         <InlineCode>"md"</InlineCode>, or <InlineCode>"lg"</InlineCode>.
       </div>
     ),
-    example: () => (
+    example: (
       <Stack class="gap-5">
         <Card padding="sm">
           <CardHeader>Summary</CardHeader>
@@ -343,7 +354,7 @@ export default () => {
         </Card>
       </Stack>
     ),
-    exampleCode: () => (
+    exampleCode: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -374,7 +385,7 @@ export default () => {
     ),
   }, {
     title: "Realistic",
-    example: () => (
+    example: (
       <Card>
         <CardHeader>
           <h1 class="font-bold tracking-wide text-neutral-700">Profile</h1>
@@ -397,7 +408,7 @@ export default () => {
         </CardFooter>
       </Card>
     ),
-    exampleCode: () => (
+    exampleCode: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -433,7 +444,7 @@ export default () => {
         <InlineCode>rounded</InlineCode> to <InlineCode>"square"</InlineCode>.
       </div>
     ),
-    example: () => (
+    example: (
       <Card topAccent rounded="square">
         <CardHeader>
           <h1 class="font-bold tracking-wide text-neutral-700">Profile</h1>
@@ -456,7 +467,7 @@ export default () => {
         </CardFooter>
       </Card>
     ),
-    exampleCode: () => (
+    exampleCode: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -492,7 +503,7 @@ export default () => {
         <InlineCode>rounded</InlineCode> to <InlineCode>"square"</InlineCode>.
       </div>
     ),
-    example: () => (
+    example: (
       <Card leftAccent rounded="square">
         <CardHeader>
           <h1 class="font-bold tracking-wide text-neutral-700">Profile</h1>
@@ -515,7 +526,7 @@ export default () => {
         </CardFooter>
       </Card>
     ),
-    exampleCode: () => (
+    exampleCode: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -615,10 +626,37 @@ export default () => {
 
   return (
     <ComponentDocsPage
-      componentName="Card"
-      sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/atoms/card.tsx"
-      sections={sections}
-      props={props}
-    />
+      sectionTitles={sections.map((s) => s.title)}
+    >
+      <Header
+        componentName="Card"
+        sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/molecules/card.tsx"
+      >
+        <Example>{sections[0].example}</Example>
+        <Notes>{notes}</Notes>
+      </Header>
+      {sections.map((section) => (
+        <section>
+          <H2 inPageLink={section.title.toLowerCase().split(/\s+/).join("-")}>
+            {section.title}
+          </H2>
+          {section.description &&
+            (
+              <Text size="sm" class="mb-6">
+                {section.description}
+              </Text>
+            )}
+          <Card width="full" class="mb-4">{section.example}</Card>
+          {section.exampleCode}
+        </section>
+      ))}
+      <Props>
+        {props.map((prop) => (
+          <Prop prop={prop}>
+            {prop.notes}
+          </Prop>
+        ))}
+      </Props>
+    </ComponentDocsPage>
   );
 };

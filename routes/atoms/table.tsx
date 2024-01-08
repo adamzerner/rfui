@@ -1,14 +1,26 @@
-import { CodeBlock } from "@/components/atoms/code-block.tsx";
-import { InlineCode } from "@/components/atoms/inline-code.tsx";
-import { Link } from "@/components/atoms/link.tsx";
-import { Table } from "@/components/atoms/table.tsx";
-import { Stack } from "@/components/helpers/stack.tsx";
-import { ComponentDocsPage } from "@/islands/demo/component-docs-page.tsx";
+import { CodeBlock } from "@/islands/atoms/code-block.tsx";
+import { H2 } from "@/islands/atoms/h2.tsx";
+import { InlineCode } from "@/islands/atoms/inline-code.tsx";
+import { Link } from "@/islands/atoms/link.tsx";
+import { Table } from "@/islands/atoms/table.tsx";
+import { Text } from "@/islands/atoms/text.tsx";
+import {
+  Example,
+  Header,
+  Notes,
+} from "@/islands/demo/component-docs-page/header.tsx";
+import { ComponentDocsPage } from "@/islands/demo/component-docs-page/index.tsx";
+import { Prop } from "@/islands/demo/component-docs-page/prop.tsx";
+import { Props } from "@/islands/demo/component-docs-page/props.tsx";
+import { SectionType } from "@/islands/demo/component-docs-page/section-type.ts";
+import { Stack } from "@/islands/helpers/stack.tsx";
+import { Card } from "@/islands/molecules/card.tsx";
 
 export default () => {
-  const sections = [{
+  const notes = null;
+  const sections: SectionType[] = [{
     title: "Basic",
-    example: () => (
+    example: (
       <Table>
         <thead>
           <tr>
@@ -28,7 +40,7 @@ export default () => {
         </tbody>
       </Table>
     ),
-    exampleCode: () => (
+    exampleCode: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -59,7 +71,7 @@ export default () => {
         Set <InlineCode>bordered</InlineCode> to <InlineCode>false</InlineCode>.
       </div>
     ),
-    example: () => (
+    example: (
       <Table bordered={false}>
         <thead>
           <tr>
@@ -79,7 +91,7 @@ export default () => {
         </tbody>
       </Table>
     ),
-    exampleCode: () => (
+    exampleCode: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -110,7 +122,7 @@ export default () => {
         Set <InlineCode>hover</InlineCode> to <InlineCode>false</InlineCode>.
       </div>
     ),
-    example: () => (
+    example: (
       <Table hover={false}>
         <thead>
           <tr>
@@ -130,7 +142,7 @@ export default () => {
         </tbody>
       </Table>
     ),
-    exampleCode: () => (
+    exampleCode: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -175,7 +187,7 @@ export default () => {
         </div>
       </Stack>
     ),
-    example: () => (
+    example: (
       <Table striped bordered={false}>
         <thead>
           <tr>
@@ -203,7 +215,7 @@ export default () => {
         </tbody>
       </Table>
     ),
-    exampleCode: () => (
+    exampleCode: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -242,7 +254,7 @@ export default () => {
         Set <InlineCode>striped</InlineCode> to <InlineCode>true</InlineCode>.
       </div>
     ),
-    example: () => (
+    example: (
       <Table striped>
         <thead>
           <tr>
@@ -270,7 +282,7 @@ export default () => {
         </tbody>
       </Table>
     ),
-    exampleCode: () => (
+    exampleCode: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -316,7 +328,7 @@ export default () => {
         </div>
       </Stack>
     ),
-    example: () => (
+    example: (
       <Table stickyHeader>
         <thead>
           <tr>
@@ -336,7 +348,7 @@ export default () => {
         </tbody>
       </Table>
     ),
-    exampleCode: () => (
+    exampleCode: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -374,7 +386,7 @@ export default () => {
         </div>
       </Stack>
     ),
-    example: () => (
+    example: (
       <Table stickyFirstColumn>
         <thead>
           <tr>
@@ -394,7 +406,7 @@ export default () => {
         </tbody>
       </Table>
     ),
-    exampleCode: () => (
+    exampleCode: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -428,7 +440,7 @@ export default () => {
         <InlineCode>true</InlineCode>.
       </div>
     ),
-    example: () => (
+    example: (
       <Table stickyHeader stickyFirstColumn>
         <thead>
           <tr>
@@ -448,7 +460,7 @@ export default () => {
         </tbody>
       </Table>
     ),
-    exampleCode: () => (
+    exampleCode: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -479,7 +491,7 @@ export default () => {
         Set <InlineCode>condensed</InlineCode> to <InlineCode>true</InlineCode>.
       </div>
     ),
-    example: () => (
+    example: (
       <Table condensed>
         <thead>
           <tr>
@@ -499,7 +511,7 @@ export default () => {
         </tbody>
       </Table>
     ),
-    exampleCode: () => (
+    exampleCode: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -611,10 +623,37 @@ export default () => {
 
   return (
     <ComponentDocsPage
-      componentName="Table"
-      sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/atoms/table.tsx"
-      sections={sections}
-      props={props}
-    />
+      sectionTitles={sections.map((s) => s.title)}
+    >
+      <Header
+        componentName="Table"
+        sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/atoms/table.tsx"
+      >
+        <Example>{sections[0].example}</Example>
+        <Notes>{notes}</Notes>
+      </Header>
+      {sections.map((section) => (
+        <section>
+          <H2 inPageLink={section.title.toLowerCase().split(/\s+/).join("-")}>
+            {section.title}
+          </H2>
+          {section.description &&
+            (
+              <Text size="sm" class="mb-6">
+                {section.description}
+              </Text>
+            )}
+          <Card width="full" class="mb-4">{section.example}</Card>
+          {section.exampleCode}
+        </section>
+      ))}
+      <Props>
+        {props.map((prop) => (
+          <Prop prop={prop}>
+            {prop.notes}
+          </Prop>
+        ))}
+      </Props>
+    </ComponentDocsPage>
   );
 };

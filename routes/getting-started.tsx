@@ -1,10 +1,10 @@
-import { CodeBlock } from "@/components/atoms/code-block.tsx";
-import { H1 } from "@/components/atoms/h1.tsx";
-import { H2 } from "@/components/atoms/h2.tsx";
-import { InlineCode } from "@/components/atoms/inline-code.tsx";
-import { Link } from "@/components/atoms/link.tsx";
-import { OL } from "@/components/atoms/ol.tsx";
-import { Text } from "@/components/atoms/text.tsx";
+import { CodeBlock } from "@/islands/atoms/code-block.tsx";
+import { H1 } from "@/islands/atoms/h1.tsx";
+import { H2 } from "@/islands/atoms/h2.tsx";
+import { InlineCode } from "@/islands/atoms/inline-code.tsx";
+import { Link } from "@/islands/atoms/link.tsx";
+import { OL } from "@/islands/atoms/ol.tsx";
+import { Text } from "@/islands/atoms/text.tsx";
 import { Alert, AlertBody } from "@/islands/molecules/alert.tsx";
 
 export default () => {

@@ -1,7 +1,7 @@
-import { Link } from "@/components/atoms/link.tsx";
-import { Flex } from "@/components/helpers/flex.tsx";
-import { Stack } from "@/components/helpers/stack.tsx";
-import { Card, CardBody, CardFooter } from "@/components/molecules/card.tsx";
+import { Link } from "@/islands/atoms/link.tsx";
+import { Flex } from "@/islands/helpers/flex.tsx";
+import { Stack } from "@/islands/helpers/stack.tsx";
+import { Card, CardBody, CardFooter } from "@/islands/molecules/card.tsx";
 import { ComponentChild } from "preact";
 
 const components = {

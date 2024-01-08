@@ -1,5 +1,5 @@
-import { Link } from "@/components/atoms/link.tsx";
-import { UL } from "@/components/atoms/ul.tsx";
+import { Link } from "@/islands/atoms/link.tsx";
+import { UL } from "@/islands/atoms/ul.tsx";
 import { Alert, AlertBody, AlertHeader } from "@/islands/molecules/alert.tsx";
 import { useEffect, useState } from "preact/hooks";
 

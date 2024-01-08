@@ -1,20 +1,23 @@
 import { Badge } from "@/islands/atoms/badge.tsx";
 import { CodeBlock } from "@/islands/atoms/code-block.tsx";
+import { H2 } from "@/islands/atoms/h2.tsx";
 import { InlineCode } from "@/islands/atoms/inline-code.tsx";
 import { Link } from "@/islands/atoms/link.tsx";
+import { Text } from "@/islands/atoms/text.tsx";
 import { Header } from "@/islands/demo/component-docs-page/header.tsx";
 import { ComponentDocsPage } from "@/islands/demo/component-docs-page/index.tsx";
 import { Prop } from "@/islands/demo/component-docs-page/prop.tsx";
 import { Props } from "@/islands/demo/component-docs-page/props.tsx";
 import { Flex } from "@/islands/helpers/flex.tsx";
 import { Stack } from "@/islands/helpers/stack.tsx";
+import { Card } from "@/islands/molecules/card.tsx";
 
 export default () => {
   const sectionTitles = ["Basic", "Type", "Size", "Rounded"];
   const sections = [{
     title: "Basic",
-    example: () => <Badge>Basic</Badge>,
-    exampleCode: () => (
+    example: <Badge>Basic</Badge>,
+    exampleCode: (
       <CodeBlock class="mt-4" language="tsx" code={`<Badge>Basic</Badge>`} />
     ),
   }, {
@@ -30,7 +33,7 @@ export default () => {
         <InlineCode>"neutral"</InlineCode>.
       </p>
     ),
-    example: () => (
+    example: (
       <Flex class="gap-3 flex-wrap">
         <Badge type="neutral">neutral</Badge>
         <Badge type="info">info</Badge>
@@ -39,7 +42,7 @@ export default () => {
         <Badge type="danger">danger</Badge>
       </Flex>
     ),
-    exampleCode: () => (
+    exampleCode: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -63,7 +66,7 @@ export default () => {
         <InlineCode>"md"</InlineCode>.
       </p>
     ),
-    example: () => (
+    example: (
       <Stack class="gap-5">
         <Flex class="gap-3 flex-wrap">
           <Badge type="neutral" size="sm">neutral</Badge>
@@ -88,7 +91,7 @@ export default () => {
         </Flex>
       </Stack>
     ),
-    exampleCode: () => (
+    exampleCode: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -129,7 +132,7 @@ export default () => {
         <InlineCode>"sm"</InlineCode>.
       </p>
     ),
-    example: () => (
+    example: (
       <Stack class="gap-5">
         <Flex class="gap-3 flex-wrap">
           <Badge type="neutral" rounded="square">neutral</Badge>
@@ -161,7 +164,7 @@ export default () => {
         </Flex>
       </Stack>
     ),
-    exampleCode: () => (
+    exampleCode: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -259,8 +262,23 @@ export default () => {
         componentName="Badge"
         sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/atoms/badge.tsx"
       >
-        {sections[0].example()}
+        {sections[0].example}
       </Header>
+      {sections.map((section) => (
+        <section>
+          <H2 inPageLink={section.title.toLowerCase().split(/\s+/).join("-")}>
+            {section.title}
+          </H2>
+          {section.description &&
+            (
+              <Text size="sm" class="mb-6">
+                {section.description}
+              </Text>
+            )}
+          <Card width="full" class="mb-4">{section.example}</Card>
+          {section.exampleCode}
+        </section>
+      ))}
       <Props>
         {props.map((prop) => (
           <Prop prop={prop}>

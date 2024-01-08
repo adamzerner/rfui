@@ -47,7 +47,9 @@ export default () => {
       <CodeBlock
         class="mt-4"
         language="tsx"
-        code={`<Alert>
+        code={`import { Alert, AlertHeader, AlertBody } from "rfui";
+        
+<Alert>
   <AlertHeader>Success</AlertHeader>
   <AlertBody>Your profile has been saved.</AlertBody>
 </Alert>`}

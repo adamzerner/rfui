@@ -55,7 +55,9 @@ export default () => {
       <CodeBlock
         class="mt-4"
         language="tsx"
-        code={`<Navbar size="xl">
+        code={`import { Navbar, NavbarLeft, NavbarItem } from "rfui";
+
+<Navbar size="xl">
   <NavbarLeft>
     <NavbarItem href="https://one.com">One</NavbarItem>
     <NavbarItem href="https://two.com">Two</NavbarItem>
@@ -81,7 +83,9 @@ export default () => {
       <CodeBlock
         class="mt-4"
         language="tsx"
-        code={`<Navbar size="xl">
+        code={`import { Navbar, NavbarLeft, NavbarRight, NavbarItem } from "rfui";
+        
+        <Navbar size="xl">
   <NavbarLeft>
     <NavbarItem href="https://one.com">One</NavbarItem>
     <NavbarItem href="https://two.com">Two</NavbarItem>

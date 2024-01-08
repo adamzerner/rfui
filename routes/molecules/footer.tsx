@@ -69,7 +69,9 @@ export default () => {
       <CodeBlock
         class="mt-4"
         language="tsx"
-        code={`<Footer>
+        code={`import { Footer, FooterColumn, FooterHeading, FooterItem } from "rfui";
+
+<Footer>
   <FooterColumn>
     <FooterHeading>About</FooterHeading>
     <FooterItem href="/about">About</FooterItem>

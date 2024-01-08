@@ -6,7 +6,7 @@ import {
   FooterHeading,
   FooterItem,
 } from "@/islands/molecules/footer.tsx";
-import { Navbar, NavbarItem } from "@/islands/molecules/navbar.tsx";
+import { Navbar, NavbarItem, NavbarLeft } from "@/islands/molecules/navbar.tsx";
 import { WelcomeMessage } from "@/islands/welcome-message.tsx";
 
 export default ({ Component, route }: PageProps) => {
@@ -25,13 +25,15 @@ export default ({ Component, route }: PageProps) => {
 const TheNavbar = ({ route }: { route: string }) => {
   return (
     <Navbar size="xl">
-      <NavbarItem href="/" isActive={route === "/"}>Components</NavbarItem>
-      <NavbarItem
-        href="/getting-started"
-        isActive={route === "/getting-started"}
-      >
-        Getting started
-      </NavbarItem>
+      <NavbarLeft>
+        <NavbarItem href="/" isActive={route === "/"}>Components</NavbarItem>
+        <NavbarItem
+          href="/getting-started"
+          isActive={route === "/getting-started"}
+        >
+          Getting started
+        </NavbarItem>
+      </NavbarLeft>
     </Navbar>
   );
 };

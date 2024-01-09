@@ -136,7 +136,7 @@ const fullName = firstName + " " + lastName;\`}
           <InlineCode>CodeBlock</InlineCode>, you could pass anything you
           normally would pass to <InlineCode>{"<pre>"}</InlineCode>{" "}
           because the return value{" "}
-          <Link href="https://github.com/adamzerner/rfui/blob/master/components/atoms/code-block.tsx">
+          <Link href="https://github.com/adamzerner/rfui/blob/master/islands/atoms/code-block.tsx">
             looks something like
           </Link>{" "}
           this:
@@ -155,7 +155,7 @@ const fullName = firstName + " " + lastName;\`}
     >
       <Header
         componentName="CodeBlock"
-        sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/atoms/code-block.tsx"
+        sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/islands/atoms/code-block.tsx"
       >
         <Example>{sections[0].example}</Example>
         <Notes>{notes}</Notes>

@@ -91,7 +91,7 @@ export default () => {
           normally would pass to{" "}
           <InlineCode>{'<input type="checkbox" />'}</InlineCode>{" "}
           because the return value{" "}
-          <Link href="https://github.com/adamzerner/rfui/blob/master/components/atoms/checkbox.tsx">
+          <Link href="https://github.com/adamzerner/rfui/blob/master/islands/atoms/checkbox.tsx">
             looks something like
           </Link>{" "}
           this:
@@ -114,7 +114,7 @@ export default () => {
     >
       <Header
         componentName="Checkbox"
-        sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/atoms/checkbox.tsx"
+        sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/islands/atoms/checkbox.tsx"
       >
         <Example>{sections[0].example}</Example>
         <Notes>{notes}</Notes>

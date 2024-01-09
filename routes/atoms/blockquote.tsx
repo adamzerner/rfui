@@ -136,7 +136,7 @@ export default () => {
           <InlineCode>Blockquote</InlineCode>, you could pass anything you
           normally would pass to <InlineCode>{"<blockquote>"}</InlineCode>{" "}
           because the container{" "}
-          <Link href="https://github.com/adamzerner/rfui/blob/master/components/atoms/blockquote.tsx">
+          <Link href="https://github.com/adamzerner/rfui/blob/master/islands/atoms/blockquote.tsx">
             looks something like
           </Link>{" "}
           this:
@@ -157,7 +157,7 @@ export default () => {
     >
       <Header
         componentName="Blockquote"
-        sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/atoms/blockquote.tsx"
+        sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/islands/atoms/blockquote.tsx"
       >
         <Example>{sections[0].example}</Example>
         <Notes>{notes}</Notes>

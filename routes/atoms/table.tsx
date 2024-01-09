@@ -603,7 +603,7 @@ export default () => {
           <InlineCode>Table</InlineCode>, you could pass anything you normally
           would pass to <InlineCode>{"<table>"}</InlineCode>{" "}
           because the return value{" "}
-          <Link href="https://github.com/adamzerner/rfui/blob/master/components/atoms/table.tsx">
+          <Link href="https://github.com/adamzerner/rfui/blob/master/islands/atoms/table.tsx">
             looks something like
           </Link>{" "}
           this:
@@ -627,7 +627,7 @@ export default () => {
     >
       <Header
         componentName="Table"
-        sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/atoms/table.tsx"
+        sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/islands/atoms/table.tsx"
       >
         <Example>{sections[0].example}</Example>
         <Notes>{notes}</Notes>

@@ -103,7 +103,7 @@ export default () => {
           normally would pass to{" "}
           <InlineCode>{'<input type="radio">'}</InlineCode>{" "}
           because the return value{" "}
-          <Link href="https://github.com/adamzerner/rfui/blob/master/components/atoms/radio-button.tsx">
+          <Link href="https://github.com/adamzerner/rfui/blob/master/islands/atoms/radio-button.tsx">
             looks something like
           </Link>{" "}
           this:
@@ -126,7 +126,7 @@ export default () => {
     >
       <Header
         componentName="RadioButton"
-        sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/atoms/radio-button.tsx"
+        sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/islands/atoms/radio-button.tsx"
       >
         <Example>{sections[0].example}</Example>
         <Notes>{notes}</Notes>

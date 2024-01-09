@@ -150,7 +150,7 @@ export default () => {
           <InlineCode>H2</InlineCode>, you could pass anything you normally
           would pass to <InlineCode>{"<h2>"}</InlineCode>{" "}
           because the return value{" "}
-          <Link href="https://github.com/adamzerner/rfui/blob/master/components/atoms/h2.tsx">
+          <Link href="https://github.com/adamzerner/rfui/blob/master/islands/atoms/h2.tsx">
             looks something like
           </Link>{" "}
           this:
@@ -174,7 +174,7 @@ export default () => {
     >
       <Header
         componentName="H2"
-        sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/atoms/h2.tsx"
+        sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/islands/atoms/h2.tsx"
       >
         <Example>{sections[0].example}</Example>
         <Notes>{notes}</Notes>

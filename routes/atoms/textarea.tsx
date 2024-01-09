@@ -133,7 +133,7 @@ export default () => {
           <InlineCode>Textarea</InlineCode>, you could pass anything you
           normally would pass to <InlineCode>{"<textarea>"}</InlineCode>{" "}
           because the return value{" "}
-          <Link href="https://github.com/adamzerner/rfui/blob/master/components/atoms/textarea.tsx">
+          <Link href="https://github.com/adamzerner/rfui/blob/master/islands/atoms/textarea.tsx">
             looks something like
           </Link>{" "}
           this:
@@ -157,7 +157,7 @@ export default () => {
     >
       <Header
         componentName="Textarea"
-        sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/atoms/textarea.tsx"
+        sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/islands/atoms/textarea.tsx"
       >
         <Example>{sections[0].example}</Example>
         <Notes>{notes}</Notes>

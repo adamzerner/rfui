@@ -55,7 +55,7 @@ export default () => {
           would pass to <InlineCode>{'<input type="checkbox" />'}</InlineCode>
           {" "}
           because the return value{" "}
-          <Link href="https://github.com/adamzerner/rfui/blob/master/components/atoms/switch.tsx">
+          <Link href="https://github.com/adamzerner/rfui/blob/master/islands/atoms/switch.tsx">
             looks something like
           </Link>{" "}
           this:
@@ -78,7 +78,7 @@ export default () => {
     >
       <Header
         componentName="Switch"
-        sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/atoms/switch.tsx"
+        sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/islands/atoms/switch.tsx"
       >
         <Example>{sections[0].example}</Example>
         <Notes>{notes}</Notes>

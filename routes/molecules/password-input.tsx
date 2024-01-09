@@ -278,7 +278,7 @@ export default () => {
     >
       <Header
         componentName="PasswordInput"
-        sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/molecules/password-input.tsx"
+        sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/islands/molecules/password-input.tsx"
       >
         <Example>{sections[0].example}</Example>
         <Notes>{notes}</Notes>

@@ -4,7 +4,7 @@ import { H1 } from "@/islands/atoms/h1.tsx";
 import { Link } from "@/islands/atoms/link.tsx";
 import { Text } from "@/islands/atoms/text.tsx";
 import { Stack } from "@/islands/helpers/stack.tsx";
-import { Card } from "@/islands/molecules/card.tsx";
+import { Card, CardBody } from "@/islands/molecules/card.tsx";
 import { ComponentChild } from "preact";
 
 export const Header = ({ componentName, sourceCodeUrl, children }: {
@@ -34,7 +34,9 @@ export const Header = ({ componentName, sourceCodeUrl, children }: {
           </Link>
         </Text>
         <Card width="full" padding="lg">
-          {example}
+          <CardBody>
+            {example}
+          </CardBody>
         </Card>
         <CodeBlock
           language="ts"
@@ -46,11 +48,11 @@ export const Header = ({ componentName, sourceCodeUrl, children }: {
 };
 
 export const Notes = ({ children }: { children: ComponentChild }) => {
-  return <>{children}</>;
+  return <div>{children}</div>;
 };
 
 export const Example = ({ children }: { children: ComponentChild }) => {
-  return <>{children}</>;
+  return <div>{children}</div>;
 };
 
 const getComponents = (props: any) => {

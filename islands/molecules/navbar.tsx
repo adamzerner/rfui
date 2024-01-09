@@ -72,11 +72,11 @@ const getComponents = (props: any) => {
   }
 
   const navbarLeft = children.find(
-    (child) => child && child.type && child.type.name === "NavbarLeft",
+    (child) => child && child.type && child.type.name === NavbarLeft.name,
   );
 
   const navbarRight = children.find(
-    (child) => child && child.type && child.type.name === "NavbarRight",
+    (child) => child && child.type && child.type.name === NavbarRight.name,
   );
 
   if (!navbarLeft && !navbarRight) {

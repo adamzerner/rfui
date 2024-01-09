@@ -119,15 +119,15 @@ const getComponents = (props: any) => {
   }
 
   const cardHeader = children.find(
-    (child) => child && child.type && child.type.name === "CardHeader",
+    (child) => child && child.type && child.type.name === CardHeader.name,
   );
 
   const cardBody = children.find(
-    (child) => child && child.type && child.type.name === "CardBody",
+    (child) => child && child.type && child.type.name === CardBody.name,
   );
 
   const cardFooter = children.find(
-    (child) => child && child.type && child.type.name === "CardFooter",
+    (child) => child && child.type && child.type.name === CardFooter.name,
   );
 
   if (!cardBody) {

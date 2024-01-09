@@ -114,7 +114,7 @@ export default () => {
         <p>
           It is usually a good idea to decide upfront on how serious or playful
           you want the tone to be. See{" "}
-          "<Link href="/choose-a-personality">Choose a personality</Link>"".
+          "<Link href="/choose-a-personality">Choose a personality</Link>".
         </p>
       </Text>
 
@@ -189,16 +189,6 @@ export default () => {
               language="html"
               code={`<link rel="stylesheet" href="/prism.css" />`}
             />
-          </li>
-          <li>
-            After your JavaScript has loaded you will need to call
-            <InlineCode>Prism.highlightAll();</InlineCode>. One way to do this
-            would be to include:
-            <CodeBlock
-              language="html"
-              code={`<script>Prism.highlightAll();</script>`}
-            />
-            right before <InlineCode>{`</body>`}</InlineCode>.
           </li>
         </OL>
       </Text>

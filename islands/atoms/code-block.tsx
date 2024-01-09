@@ -1,4 +1,5 @@
 import type { JSX } from "preact";
+import { useEffect } from "preact/hooks";
 
 export type CodeBlockType = {
   code: string;
@@ -39,6 +40,13 @@ export const CodeBlock = (
   if (restClass) {
     className += ` ${restClass}`;
   }
+
+  useEffect(() => {
+    if (language) {
+      // @ts-expect-error it exists
+      Prism.highlightAll();
+    }
+  });
 
   return <pre class={className} {...restWithoutClass}><code>{code}</code></pre>;
 };

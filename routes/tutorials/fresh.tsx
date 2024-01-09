@@ -212,15 +212,6 @@ export default function Home() {
           />
           to <InlineCode>_app.tsx</InlineCode>.
         </li>
-        <li>
-          After your JavaScript has loaded you will need to call
-          <InlineCode>Prism.highlightAll();</InlineCode>. To do this, include:
-          <CodeBlock
-            language="html"
-            code={`<script>Prism.highlightAll();</script>`}
-          />
-          right before <InlineCode>{`</body>`}</InlineCode>.
-        </li>
       </OL>
     </div>
   );

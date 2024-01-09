@@ -17,7 +17,6 @@ export default ({ Component }: PageProps) => {
       <body>
         <Component />
         <script src="/prism.js"></script>
-        <script src="/run-prism.js"></script>
       </body>
     </html>
   );

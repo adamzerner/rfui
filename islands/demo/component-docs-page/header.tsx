@@ -54,9 +54,7 @@ export const Example = ({ children }: { children: ComponentChild }) => {
 };
 
 const getComponents = (props: any) => {
-  const children = props?.type?.name === "ServerComponent"
-    ? props.props.children
-    : props;
+  const children = props.props.children;
 
   if (!Array.isArray(children)) {
     return { example: children };

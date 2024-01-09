@@ -63,9 +63,7 @@ export const Navbar = (
 
 // deno-lint-ignore no-explicit-any
 const getComponents = (props: any) => {
-  const children = props?.type?.name === "ServerComponent"
-    ? props.props.children
-    : props;
+  const children = props.props.children;
 
   if (!Array.isArray(children)) {
     return { navbarLeft: children };

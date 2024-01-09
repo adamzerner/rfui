@@ -110,14 +110,7 @@ export const Card = (
 
 // deno-lint-ignore no-explicit-any
 const getComponents = (props: any) => {
-  console.log("props: ");
-  console.log(props);
-  const children = props?.type?.name === "ServerComponent"
-    ? props.props.children
-    : props;
-
-  console.log("children: ");
-  console.log(children);
+  const children = props.props.children;
 
   if (!Array.isArray(children)) {
     return { cardBody: children };

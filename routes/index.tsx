@@ -21,6 +21,7 @@ import { Flex } from "@/islands/helpers/flex.tsx";
 import { Stack } from "@/islands/helpers/stack.tsx";
 import { Alert } from "@/islands/molecules/alert.tsx";
 import { Card, CardBody, CardFooter } from "@/islands/molecules/card.tsx";
+import { CheckboxCardGroup } from "@/islands/molecules/checkbox-card-group.tsx";
 import { FormField } from "@/islands/molecules/form-field.tsx";
 import { PasswordInput } from "@/islands/molecules/password-input.tsx";
 import { Stepper } from "@/islands/molecules/stepper.tsx";
@@ -157,6 +158,11 @@ const components = {
       ),
     },
     { name: "Card", href: "/molecules/card", example: <Card>Example</Card> },
+    {
+      name: "CheckboxCardGroup",
+      href: "/molecules/checkbox-card-group",
+      example: <CheckboxCardGroup></CheckboxCardGroup>,
+    },
     {
       name: "Footer",
       href: "/molecules/footer",

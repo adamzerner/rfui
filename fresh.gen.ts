@@ -34,6 +34,7 @@ import * as $helpers_stack from "./routes/helpers/stack.tsx";
 import * as $index from "./routes/index.tsx";
 import * as $molecules_alert from "./routes/molecules/alert.tsx";
 import * as $molecules_card from "./routes/molecules/card.tsx";
+import * as $molecules_checkbox_card_group from "./routes/molecules/checkbox-card-group.tsx";
 import * as $molecules_footer from "./routes/molecules/footer.tsx";
 import * as $molecules_form_field from "./routes/molecules/form-field.tsx";
 import * as $molecules_navbar from "./routes/molecules/navbar.tsx";
@@ -78,6 +79,7 @@ import * as $icons_new_tab_icon from "./islands/icons/new-tab-icon.tsx";
 import * as $icons_x_circle_icon from "./islands/icons/x-circle-icon.tsx";
 import * as $molecules_alert_1 from "./islands/molecules/alert.tsx";
 import * as $molecules_card_1 from "./islands/molecules/card.tsx";
+import * as $molecules_checkbox_card_group_1 from "./islands/molecules/checkbox-card-group.tsx";
 import * as $molecules_footer_1 from "./islands/molecules/footer.tsx";
 import * as $molecules_form_field_1 from "./islands/molecules/form-field.tsx";
 import * as $molecules_navbar_1 from "./islands/molecules/navbar.tsx";
@@ -120,6 +122,8 @@ const manifest = {
     "./routes/index.tsx": $index,
     "./routes/molecules/alert.tsx": $molecules_alert,
     "./routes/molecules/card.tsx": $molecules_card,
+    "./routes/molecules/checkbox-card-group.tsx":
+      $molecules_checkbox_card_group,
     "./routes/molecules/footer.tsx": $molecules_footer,
     "./routes/molecules/form-field.tsx": $molecules_form_field,
     "./routes/molecules/navbar.tsx": $molecules_navbar,
@@ -172,6 +176,8 @@ const manifest = {
     "./islands/icons/x-circle-icon.tsx": $icons_x_circle_icon,
     "./islands/molecules/alert.tsx": $molecules_alert_1,
     "./islands/molecules/card.tsx": $molecules_card_1,
+    "./islands/molecules/checkbox-card-group.tsx":
+      $molecules_checkbox_card_group_1,
     "./islands/molecules/footer.tsx": $molecules_footer_1,
     "./islands/molecules/form-field.tsx": $molecules_form_field_1,
     "./islands/molecules/navbar.tsx": $molecules_navbar_1,

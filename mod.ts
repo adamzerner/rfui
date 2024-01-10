@@ -46,6 +46,8 @@ export {
   CardHeader,
 } from "./islands/molecules/card.tsx";
 export type { CardType } from "./islands/molecules/card.tsx";
+export { CheckboxCardGroup } from "./islands/molecules/checkbox-card-group.tsx";
+export type { CheckboxCardGroupType } from "./islands/molecules/checkbox-card-group.tsx";
 export {
   Footer,
   FooterColumn,

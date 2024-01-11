@@ -12,6 +12,7 @@ import { ComponentDocsPage } from "@/islands/demo/component-docs-page/index.tsx"
 import { Prop } from "@/islands/demo/component-docs-page/prop.tsx";
 import { Props } from "@/islands/demo/component-docs-page/props.tsx";
 import { SectionType } from "@/islands/demo/component-docs-page/section-type.ts";
+import { Stack } from "@/islands/helpers/stack.tsx";
 import { Card } from "@/islands/molecules/card.tsx";
 import {
   CheckboxCardGroup,
@@ -19,7 +20,8 @@ import {
 } from "@/islands/molecules/checkbox-card-group.tsx";
 
 export default () => {
-  const notes = null;
+  const notes =
+    "Add some flair and professionalism to your checkboxes and associated content.";
   const sections: SectionType[] = [{
     title: "Basic",
     example: (
@@ -33,11 +35,69 @@ export default () => {
       <CodeBlock
         class="mt-4"
         language="tsx"
-        code={`<CheckboxCardGroup></CheckboxCardGroup>,`}
+        code={`import { CheckboxCardGroup, CheckboxCardGroupItem } from "rfui";
+
+<CheckboxCardGroup>
+  <CheckboxCardGroupItem>One</CheckboxCardGroupItem>
+  <CheckboxCardGroupItem>Two</CheckboxCardGroupItem>
+  <CheckboxCardGroupItem>Three</CheckboxCardGroupItem>
+</CheckboxCardGroup>`}
+      />
+    ),
+  }, {
+    title: "Padding",
+    example: (
+      <Stack class="gap-5">
+        <CheckboxCardGroup padding="sm">
+          <CheckboxCardGroupItem>One</CheckboxCardGroupItem>
+          <CheckboxCardGroupItem>Two</CheckboxCardGroupItem>
+          <CheckboxCardGroupItem>Three</CheckboxCardGroupItem>
+        </CheckboxCardGroup>
+        <CheckboxCardGroup padding="md">
+          <CheckboxCardGroupItem>One</CheckboxCardGroupItem>
+          <CheckboxCardGroupItem>Two</CheckboxCardGroupItem>
+          <CheckboxCardGroupItem>Three</CheckboxCardGroupItem>
+        </CheckboxCardGroup>
+        <CheckboxCardGroup padding="lg">
+          <CheckboxCardGroupItem>One</CheckboxCardGroupItem>
+          <CheckboxCardGroupItem>Two</CheckboxCardGroupItem>
+          <CheckboxCardGroupItem>Three</CheckboxCardGroupItem>
+        </CheckboxCardGroup>
+      </Stack>
+    ),
+    exampleCode: (
+      <CodeBlock
+        class="mt-4"
+        language="tsx"
+        code={`import { CheckboxCardGroup, CheckboxCardGroupItem } from "rfui";
+
+<Stack class="gap-5">
+  <CheckboxCardGroup padding="sm">
+    <CheckboxCardGroupItem>One</CheckboxCardGroupItem>
+    <CheckboxCardGroupItem>Two</CheckboxCardGroupItem>
+    <CheckboxCardGroupItem>Three</CheckboxCardGroupItem>
+  </CheckboxCardGroup>
+  <CheckboxCardGroup padding="md">
+    <CheckboxCardGroupItem>One</CheckboxCardGroupItem>
+    <CheckboxCardGroupItem>Two</CheckboxCardGroupItem>
+    <CheckboxCardGroupItem>Three</CheckboxCardGroupItem>
+  </CheckboxCardGroup>
+  <CheckboxCardGroup padding="lg">
+    <CheckboxCardGroupItem>One</CheckboxCardGroupItem>
+    <CheckboxCardGroupItem>Two</CheckboxCardGroupItem>
+    <CheckboxCardGroupItem>Three</CheckboxCardGroupItem>
+  </CheckboxCardGroup>
+</Stack>`}
       />
     ),
   }];
   const props = [{
+    name: "padding",
+    required: false,
+    type: '"sm" | "md" | "lg"',
+    default: '"md"',
+    notes: null,
+  }, {
     name: "...rest",
     required: false,
     type: 'Omit<JSX.HTMLAttributes<HTMLDivElement>, "size">',

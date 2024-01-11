@@ -1,6 +1,5 @@
 import { Signal } from "@preact/signals";
 import { ComponentChild } from "preact";
-import { useState } from "preact/hooks";
 import { RadioButton, RadioButtonType } from "../atoms/radio-button.tsx";
 import { Flex } from "../helpers/flex.tsx";
 import { Stack } from "../helpers/stack.tsx";
@@ -12,17 +11,12 @@ export type RadioButtonCardGroupType = {
 };
 
 export type RadioButtonCardGroupItemType = {
-  isSelected?: Signal<boolean>;
-  radioButtonRest?: Omit<RadioButtonType, "size">;
+  name: string;
+  value?: RadioButtonType["value"];
+  selectedItemName: Signal<string | null>;
+  radioButtonRest?: Omit<RadioButtonType, "size" | "name" | "value">;
   children: ComponentChild;
 };
-
-/*
-
-TODO:
-- Selection
-
-*/
 
 /** *
  * @function RadioButtonCardGroup
@@ -77,27 +71,31 @@ export const RadioButtonCardGroup = (
 };
 
 export const RadioButtonCardGroupItem = (
-  { isSelected, radioButtonRest, children }: RadioButtonCardGroupItemType,
+  { name, value, selectedItemName, radioButtonRest, children }:
+    RadioButtonCardGroupItemType,
 ) => {
-  const [_isSelected, _setIsChecked] = useState<boolean>(
-    isSelected ? isSelected.value : false,
-  );
-  const toggleIsChecked = () => {
-    _setIsChecked((v) => !v);
+  const isSelected = name === selectedItemName.value;
+  const handleClick = () => {
+    selectedItemName.value = name;
   };
   let containerClass =
     "radio-button-card-group-item border items-center cursor-pointer";
 
-  containerClass += _isSelected
+  containerClass += isSelected
     ? " border-2 border-neutral-500"
     : " border-2 border-neutral-100";
 
   return (
     <Flex
       class={containerClass}
-      onClick={toggleIsChecked}
+      onClick={handleClick}
     >
-      <RadioButton checked={_isSelected} {...radioButtonRest} />
+      <RadioButton
+        name={name}
+        checked={isSelected}
+        value={value}
+        {...radioButtonRest}
+      />
       <div>
         {children}
       </div>

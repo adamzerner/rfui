@@ -229,11 +229,17 @@ export default () => {
         })}
       </Props>
       <Props subComponentTitle="CheckboxCardGroupItem">
-        {checkboxCardGroupItemProps.map((prop) => (
-          <Prop prop={prop}>
-            {prop.notes}
-          </Prop>
-        ))}
+        {checkboxCardGroupItemProps.map((prop) => {
+          const { notes, ...propWithoutNotes } = prop;
+
+          return notes
+            ? (
+              <Prop prop={prop}>
+                {notes}
+              </Prop>
+            )
+            : <Prop prop={propWithoutNotes}></Prop>;
+        })}
       </Props>
     </ComponentDocsPage>
   );

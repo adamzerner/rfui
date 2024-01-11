@@ -90,12 +90,64 @@ export default () => {
 </Stack>`}
       />
     ),
+  }, {
+    title: "Rounded",
+    example: (
+      <Stack class="gap-5">
+        <CheckboxCardGroup rounded="square">
+          <CheckboxCardGroupItem>One</CheckboxCardGroupItem>
+          <CheckboxCardGroupItem>Two</CheckboxCardGroupItem>
+          <CheckboxCardGroupItem>Three</CheckboxCardGroupItem>
+        </CheckboxCardGroup>
+        <CheckboxCardGroup rounded="sm">
+          <CheckboxCardGroupItem>One</CheckboxCardGroupItem>
+          <CheckboxCardGroupItem>Two</CheckboxCardGroupItem>
+          <CheckboxCardGroupItem>Three</CheckboxCardGroupItem>
+        </CheckboxCardGroup>
+        <CheckboxCardGroup rounded="lg">
+          <CheckboxCardGroupItem>One</CheckboxCardGroupItem>
+          <CheckboxCardGroupItem>Two</CheckboxCardGroupItem>
+          <CheckboxCardGroupItem>Three</CheckboxCardGroupItem>
+        </CheckboxCardGroup>
+      </Stack>
+    ),
+    exampleCode: (
+      <CodeBlock
+        class="mt-4"
+        language="tsx"
+        code={`import { CheckboxCardGroup, CheckboxCardGroupItem } from "rfui";
+
+<Stack class="gap-5">
+  <CheckboxCardGroup rounded="square">
+    <CheckboxCardGroupItem>One</CheckboxCardGroupItem>
+    <CheckboxCardGroupItem>Two</CheckboxCardGroupItem>
+    <CheckboxCardGroupItem>Three</CheckboxCardGroupItem>
+  </CheckboxCardGroup>
+  <CheckboxCardGroup rounded="sm">
+    <CheckboxCardGroupItem>One</CheckboxCardGroupItem>
+    <CheckboxCardGroupItem>Two</CheckboxCardGroupItem>
+    <CheckboxCardGroupItem>Three</CheckboxCardGroupItem>
+  </CheckboxCardGroup>
+  <CheckboxCardGroup rounded="lg">
+    <CheckboxCardGroupItem>One</CheckboxCardGroupItem>
+    <CheckboxCardGroupItem>Two</CheckboxCardGroupItem>
+    <CheckboxCardGroupItem>Three</CheckboxCardGroupItem>
+  </CheckboxCardGroup>
+</Stack>`}
+      />
+    ),
   }];
   const props = [{
     name: "padding",
     required: false,
     type: '"sm" | "md" | "lg"',
     default: '"md"',
+    notes: null,
+  }, {
+    name: "rounded",
+    required: false,
+    type: '"square" | "sm" | "lg"',
+    default: '"sm"',
     notes: null,
   }, {
     name: "...rest",

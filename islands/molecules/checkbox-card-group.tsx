@@ -6,6 +6,7 @@ import { Stack } from "../helpers/stack.tsx";
 
 export type CheckboxCardGroupType = {
   padding?: "sm" | "md" | "lg";
+  rounded?: "square" | "sm" | "lg";
   children: ComponentChild;
 };
 
@@ -22,7 +23,7 @@ export type CheckboxCardGroupItemType = {
  * <CheckboxCardGroup />
  */
 export const CheckboxCardGroup = (
-  { padding = "md", children }: CheckboxCardGroupType,
+  { padding = "md", rounded = "sm", children }: CheckboxCardGroupType,
 ) => {
   const id = crypto.randomUUID();
   let containerClass = `checkbox-card-group-${id}`;
@@ -36,7 +37,10 @@ export const CheckboxCardGroup = (
         .checkbox-card-group-${id} .checkbox-card-group-item {
           padding: var(--spacing-${
           padding === "sm" ? 3 : padding === "md" ? 5 : 7
-        })
+        });
+          border-radius: var(--spacing-${
+          rounded === "square" ? 0 : rounded === "sm" ? 1 : 2
+        });
         }
 
         .checkbox-card-group-${id} .rfui-checkbox {

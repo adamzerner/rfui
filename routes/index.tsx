@@ -272,8 +272,7 @@ const Main = () => {
       <Link underline="none" href={href}>
         <Card
           padding="sm"
-          style={{ width: 200 }}
-          class="hover:shadow-lg lg:hover:shadow-md"
+          class="hover:shadow-lg lg:hover:shadow-md lg:w-48"
         >
           <CardBody>
             <Flex

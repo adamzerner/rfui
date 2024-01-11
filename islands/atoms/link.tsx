@@ -31,12 +31,14 @@ export const Link = (
   const { class: restClass, ...restWithoutClass } = rest;
   let className = "cursor-pointer";
 
-  className += " " + (() => {
+  className += (() => {
     switch (underline) {
       case "always":
-        return "underline";
+        return " underline";
       case "hover":
-        return "hover:underline";
+        return " hover:underline";
+      default:
+        return "";
     }
   })();
 

@@ -195,11 +195,17 @@ export default () => {
         </section>
       ))}
       <Props>
-        {props.map((prop) => (
-          <Prop prop={prop}>
-            {prop.notes}
-          </Prop>
-        ))}
+        {props.map((prop) => {
+          const { notes, ...propWithoutNotes } = prop;
+
+          return notes
+            ? (
+              <Prop prop={prop}>
+                {notes}
+              </Prop>
+            )
+            : <Prop prop={propWithoutNotes}></Prop>;
+        })}
       </Props>
     </ComponentDocsPage>
   );

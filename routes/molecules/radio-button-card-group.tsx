@@ -35,9 +35,7 @@ export default () => {
       <CodeBlock
         class="mt-4"
         language="tsx"
-        code={`import { RadioButtonCardGroup, RadioButtonCardGroupItem } from "rfui";
-
-<RadioButtonCardGroup>
+        code={`<RadioButtonCardGroup>
   <RadioButtonCardGroupItem>One</RadioButtonCardGroupItem>
   <RadioButtonCardGroupItem>Two</RadioButtonCardGroupItem>
   <RadioButtonCardGroupItem>Three</RadioButtonCardGroupItem>
@@ -69,9 +67,7 @@ export default () => {
       <CodeBlock
         class="mt-4"
         language="tsx"
-        code={`import { RadioButtonCardGroup, RadioButtonCardGroupItem } from "rfui";
-
-<Stack class="gap-5">
+        code={`<Stack class="gap-5">
   <RadioButtonCardGroup padding="sm">
     <RadioButtonCardGroupItem>One</RadioButtonCardGroupItem>
     <RadioButtonCardGroupItem>Two</RadioButtonCardGroupItem>
@@ -115,9 +111,7 @@ export default () => {
       <CodeBlock
         class="mt-4"
         language="tsx"
-        code={`import { RadioButtonCardGroup, RadioButtonCardGroupItem } from "rfui";
-
-<Stack class="gap-5">
+        code={`<Stack class="gap-5">
   <RadioButtonCardGroup rounded="square">
     <RadioButtonCardGroupItem>One</RadioButtonCardGroupItem>
     <RadioButtonCardGroupItem>Two</RadioButtonCardGroupItem>
@@ -201,6 +195,7 @@ export default () => {
       <Header
         componentName="RadioButtonCardGroup"
         sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/islands/molecules/radio-button-card-group.tsx"
+        importStatement='import { RadioButtonCardGroup, RadioButtonCardGroupItem } from "rfui";'
       >
         <Example>{sections[0].example}</Example>
         <Notes>{notes}</Notes>

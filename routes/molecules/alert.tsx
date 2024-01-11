@@ -47,9 +47,7 @@ export default () => {
       <CodeBlock
         class="mt-4"
         language="tsx"
-        code={`import { Alert, AlertHeader, AlertBody } from "rfui";
-        
-<Alert>
+        code={`<Alert>
   <AlertHeader>Success</AlertHeader>
   <AlertBody>Your profile has been saved.</AlertBody>
 </Alert>`}
@@ -233,6 +231,7 @@ export default () => {
       <Header
         componentName="Alert"
         sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/islands/molecules/alert.tsx"
+        importStatement='import { Alert, AlertHeader, AlertBody } from "rfui";'
       >
         <Example>{sections[0].example}</Example>
         <Notes>{notes}</Notes>

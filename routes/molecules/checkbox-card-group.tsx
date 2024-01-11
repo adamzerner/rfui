@@ -18,15 +18,17 @@ import {
   CheckboxCardGroup,
   CheckboxCardGroupItem,
 } from "@/islands/molecules/checkbox-card-group.tsx";
+import { useSignal } from "@preact/signals";
 
 export default () => {
+  const isChecked = useSignal(true);
   const notes =
     "Add some flair and professionalism to your checkboxes and associated content.";
   const sections: SectionType[] = [{
     title: "Basic",
     example: (
       <CheckboxCardGroup>
-        <CheckboxCardGroupItem>One</CheckboxCardGroupItem>
+        <CheckboxCardGroupItem isChecked={isChecked}>One</CheckboxCardGroupItem>
         <CheckboxCardGroupItem>Two</CheckboxCardGroupItem>
         <CheckboxCardGroupItem>Three</CheckboxCardGroupItem>
       </CheckboxCardGroup>
@@ -148,7 +150,23 @@ export default () => {
     required: false,
     type: '"square" | "sm" | "lg"',
     default: '"sm"',
-    notes: null,
+  }, {
+    name: "children",
+    required: true,
+    type: "ComponentChild",
+    default: null,
+  }];
+  const checkboxCardGroupItemProps = [{
+    name: "isChecked",
+    required: false,
+    type: "Signal<boolean>",
+    default: null,
+    notes: (
+      <div>
+        See the Preact docs for{" "}
+        <Link href="https://preactjs.com/guide/v10/signals">signals</Link>.
+      </div>
+    ),
   }, {
     name: "checkboxRest",
     required: false,
@@ -169,31 +187,11 @@ export default () => {
       </div>
     ),
   }, {
-    name: "...rest",
-    required: false,
-    type: 'Omit<JSX.HTMLAttributes<HTMLDivElement>, "size">',
+    name: "children",
+    required: true,
+    type: "ComponentChild",
     default: null,
-    notes: (
-      <div>
-        <div class="leading-relaxed">
-          See the docs for{" "}
-          <Link href="/rest-parameters">rest parameters</Link>. For{" "}
-          <InlineCode>Card</InlineCode>, you could pass anything you normally
-          would pass to <InlineCode>{"<div>"}</InlineCode>{" "}
-          because the return value{" "}
-          <Link href="https://github.com/adamzerner/rfui/blob/master/islands/molecules/checkbox-card-group.tsx">
-            looks something like
-          </Link>{" "}
-          this:
-        </div>
-        <CodeBlock
-          language="tsx"
-          code={`<div class={containerClass} {...restWithoutClass}>
-  {children}
-</div>`}
-        />
-      </div>
-    ),
+    notes: null,
   }];
 
   return (
@@ -224,6 +222,13 @@ export default () => {
       ))}
       <Props>
         {props.map((prop) => (
+          <Prop prop={prop}>
+            {prop.notes}
+          </Prop>
+        ))}
+      </Props>
+      <Props subComponentTitle="CheckboxCardGroupItem">
+        {checkboxCardGroupItemProps.map((prop) => (
           <Prop prop={prop}>
             {prop.notes}
           </Prop>

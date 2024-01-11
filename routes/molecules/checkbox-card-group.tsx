@@ -13,13 +13,22 @@ import { Prop } from "@/islands/demo/component-docs-page/prop.tsx";
 import { Props } from "@/islands/demo/component-docs-page/props.tsx";
 import { SectionType } from "@/islands/demo/component-docs-page/section-type.ts";
 import { Card } from "@/islands/molecules/card.tsx";
-import { CheckboxCardGroup } from "@/islands/molecules/checkbox-card-group.tsx";
+import {
+  CheckboxCardGroup,
+  CheckboxCardGroupItem,
+} from "@/islands/molecules/checkbox-card-group.tsx";
 
 export default () => {
   const notes = null;
   const sections: SectionType[] = [{
     title: "Basic",
-    example: <CheckboxCardGroup></CheckboxCardGroup>,
+    example: (
+      <CheckboxCardGroup>
+        <CheckboxCardGroupItem>One</CheckboxCardGroupItem>
+        <CheckboxCardGroupItem>Two</CheckboxCardGroupItem>
+        <CheckboxCardGroupItem>Three</CheckboxCardGroupItem>
+      </CheckboxCardGroup>
+    ),
     exampleCode: (
       <CodeBlock
         class="mt-4"

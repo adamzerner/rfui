@@ -46,9 +46,10 @@ export const Card = (
 
   const cardHeaderClass = sharedClass + " border-b";
   const cardBodyClass = sharedClass;
-  const cardFooterClass = sharedClass + " border-t";
   const { class: restClass, ...restWithoutClass } = rest;
-  let containerClass = "max-w-full border border-neutral-100";
+  let containerClass = "rfui-card max-w-full border border-neutral-100";
+
+  containerClass += ` padding-${padding}`;
 
   if (topAccent) {
     containerClass += " border-t-primary-500 border-t-2";
@@ -102,8 +103,7 @@ export const Card = (
       {cardHeader &&
         <div class={cardHeaderClass}>{cardHeader}</div>}
       <div class={cardBodyClass}>{cardBody}</div>
-      {cardFooter &&
-        <div class={cardFooterClass}>{cardFooter}</div>}
+      {cardFooter && cardFooter}
     </div>
   );
 };
@@ -158,5 +158,12 @@ export const CardFooter = (
     & { children: ComponentChild }
     & JSX.HTMLAttributes<HTMLDivElement>,
 ) => {
-  return <div {...rest}>{children}</div>;
+  const { class: restClass, ...restWithoutClass } = rest;
+  let className = "rfui-card-footer";
+
+  if (restClass) {
+    className += ` ${restClass}`;
+  }
+
+  return <div class={className} {...restWithoutClass}>{children}</div>;
 };

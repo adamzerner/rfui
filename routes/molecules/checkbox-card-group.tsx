@@ -18,17 +18,15 @@ import {
   CheckboxCardGroup,
   CheckboxCardGroupItem,
 } from "@/islands/molecules/checkbox-card-group.tsx";
-import { useSignal } from "@preact/signals";
 
 export default () => {
-  const isChecked = useSignal(true);
   const notes =
     "Add some flair and professionalism to your checkboxes and associated content.";
   const sections: SectionType[] = [{
     title: "Basic",
     example: (
       <CheckboxCardGroup>
-        <CheckboxCardGroupItem isChecked={isChecked}>One</CheckboxCardGroupItem>
+        <CheckboxCardGroupItem>One</CheckboxCardGroupItem>
         <CheckboxCardGroupItem>Two</CheckboxCardGroupItem>
         <CheckboxCardGroupItem>Three</CheckboxCardGroupItem>
       </CheckboxCardGroup>
@@ -150,11 +148,13 @@ export default () => {
     required: false,
     type: '"square" | "sm" | "lg"',
     default: '"sm"',
+    notes: null,
   }, {
     name: "children",
     required: true,
     type: "ComponentChild",
     default: null,
+    notes: null,
   }];
   const checkboxCardGroupItemProps = [{
     name: "isChecked",
@@ -221,11 +221,17 @@ export default () => {
         </section>
       ))}
       <Props>
-        {props.map((prop) => (
-          <Prop prop={prop}>
-            {prop.notes}
-          </Prop>
-        ))}
+        {props.map((prop) => {
+          const { notes, ...propWithoutNotes } = prop;
+
+          return notes
+            ? (
+              <Prop prop={prop}>
+                {notes}
+              </Prop>
+            )
+            : <Prop prop={propWithoutNotes}></Prop>;
+        })}
       </Props>
       <Props subComponentTitle="CheckboxCardGroupItem">
         {checkboxCardGroupItemProps.map((prop) => (

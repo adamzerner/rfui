@@ -7,11 +7,19 @@ import { Stack } from "@/islands/helpers/stack.tsx";
 import { Card, CardBody } from "@/islands/molecules/card.tsx";
 import { ComponentChild } from "preact";
 
-export const Header = ({ componentName, sourceCodeUrl, children }: {
-  componentName: string;
-  sourceCodeUrl: string;
-  children: ComponentChild;
-}) => {
+export const Header = (
+  {
+    componentName,
+    sourceCodeUrl,
+    importStatement = `import { ${componentName} } from "rfui";`,
+    children,
+  }: {
+    componentName: string;
+    sourceCodeUrl: string;
+    importStatement?: string;
+    children: ComponentChild;
+  },
+) => {
   const { notes, example } = getComponents(children);
 
   return (
@@ -40,7 +48,7 @@ export const Header = ({ componentName, sourceCodeUrl, children }: {
         </Card>
         <CodeBlock
           language="ts"
-          code={`import { ${componentName} } from "rfui";`}
+          code={importStatement}
         />
       </Stack>
     </nav>

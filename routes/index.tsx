@@ -183,6 +183,13 @@ const components = {
       example: <PasswordInput />,
     },
     {
+      name: "RadioButtonCardGroup",
+      href: "/molecules/radio-button-card-group",
+      example: (
+        <InlineCode class="text-xs">{`<RadioButtonCardGroup>`}</InlineCode>
+      ),
+    },
+    {
       name: "Stepper",
       href: "/molecules/stepper",
       example: <Stepper size="sm" />,
@@ -289,7 +296,7 @@ const Main = () => {
             </Flex>
           </CardBody>
           <CardFooter class="text-center">
-            <code>{name}</code>
+            <code class={name.length > 15 ? "text-xs" : undefined}>{name}</code>
           </CardFooter>
         </Card>
       </Link>

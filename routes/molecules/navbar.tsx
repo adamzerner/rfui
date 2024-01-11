@@ -55,9 +55,7 @@ export default () => {
       <CodeBlock
         class="mt-4"
         language="tsx"
-        code={`import { Navbar, NavbarLeft, NavbarItem } from "rfui";
-
-<Navbar size="xl">
+        code={`<Navbar size="xl">
   <NavbarLeft>
     <NavbarItem href="https://one.com">One</NavbarItem>
     <NavbarItem href="https://two.com">Two</NavbarItem>
@@ -83,9 +81,7 @@ export default () => {
       <CodeBlock
         class="mt-4"
         language="tsx"
-        code={`import { Navbar, NavbarLeft, NavbarRight, NavbarItem } from "rfui";
-        
-        <Navbar size="xl">
+        code={`<Navbar size="xl">
   <NavbarLeft>
     <NavbarItem href="https://one.com">One</NavbarItem>
     <NavbarItem href="https://two.com">Two</NavbarItem>
@@ -223,6 +219,12 @@ export default () => {
       <Header
         componentName="Navbar"
         sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/islands/molecules/navbar.tsx"
+        importStatement={`import {
+  Navbar,
+  NavbarItem,
+  NavbarLeft,
+  NavbarRight,
+} from "rfui";`}
       >
         <Example>{sections[0].example}</Example>
         <Notes>{notes}</Notes>

@@ -69,9 +69,7 @@ export default () => {
       <CodeBlock
         class="mt-4"
         language="tsx"
-        code={`import { Footer, FooterColumn, FooterHeading, FooterItem } from "rfui";
-
-<Footer>
+        code={`<Footer>
   <FooterColumn>
     <FooterHeading>About</FooterHeading>
     <FooterItem href="/about">About</FooterItem>
@@ -381,6 +379,12 @@ export default () => {
       <Header
         componentName="Footer"
         sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/islands/molecules/footer.tsx"
+        importStatement={`import { 
+  Footer,
+  FooterColumn,
+  FooterHeading,
+  FooterItem
+} from "rfui";`}
       >
         <Example>{sections[0].example}</Example>
         <Notes>{notes}</Notes>

@@ -35,9 +35,7 @@ export default () => {
       <CodeBlock
         class="mt-4"
         language="tsx"
-        code={`import { CheckboxCardGroup, CheckboxCardGroupItem } from "rfui";
-
-<CheckboxCardGroup>
+        code={`<CheckboxCardGroup>
   <CheckboxCardGroupItem>One</CheckboxCardGroupItem>
   <CheckboxCardGroupItem>Two</CheckboxCardGroupItem>
   <CheckboxCardGroupItem>Three</CheckboxCardGroupItem>
@@ -69,9 +67,7 @@ export default () => {
       <CodeBlock
         class="mt-4"
         language="tsx"
-        code={`import { CheckboxCardGroup, CheckboxCardGroupItem } from "rfui";
-
-<Stack class="gap-5">
+        code={`<Stack class="gap-5">
   <CheckboxCardGroup padding="sm">
     <CheckboxCardGroupItem>One</CheckboxCardGroupItem>
     <CheckboxCardGroupItem>Two</CheckboxCardGroupItem>
@@ -115,9 +111,7 @@ export default () => {
       <CodeBlock
         class="mt-4"
         language="tsx"
-        code={`import { CheckboxCardGroup, CheckboxCardGroupItem } from "rfui";
-
-<Stack class="gap-5">
+        code={`<Stack class="gap-5">
   <CheckboxCardGroup rounded="square">
     <CheckboxCardGroupItem>One</CheckboxCardGroupItem>
     <CheckboxCardGroupItem>Two</CheckboxCardGroupItem>
@@ -201,6 +195,7 @@ export default () => {
       <Header
         componentName="CheckboxCardGroup"
         sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/islands/molecules/checkbox-card-group.tsx"
+        importStatement='import { CheckboxCardGroup, CheckboxCardGroupItem } from "rfui";'
       >
         <Example>{sections[0].example}</Example>
         <Notes>{notes}</Notes>
@@ -234,11 +229,17 @@ export default () => {
         })}
       </Props>
       <Props subComponentTitle="CheckboxCardGroupItem">
-        {checkboxCardGroupItemProps.map((prop) => (
-          <Prop prop={prop}>
-            {prop.notes}
-          </Prop>
-        ))}
+        {checkboxCardGroupItemProps.map((prop) => {
+          const { notes, ...propWithoutNotes } = prop;
+
+          return notes
+            ? (
+              <Prop prop={prop}>
+                {notes}
+              </Prop>
+            )
+            : <Prop prop={propWithoutNotes}></Prop>;
+        })}
       </Props>
     </ComponentDocsPage>
   );

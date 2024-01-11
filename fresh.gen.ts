@@ -39,6 +39,7 @@ import * as $molecules_footer from "./routes/molecules/footer.tsx";
 import * as $molecules_form_field from "./routes/molecules/form-field.tsx";
 import * as $molecules_navbar from "./routes/molecules/navbar.tsx";
 import * as $molecules_password_input from "./routes/molecules/password-input.tsx";
+import * as $molecules_radio_button_card_group from "./routes/molecules/radio-button-card-group.tsx";
 import * as $molecules_stepper from "./routes/molecules/stepper.tsx";
 import * as $philosophy from "./routes/philosophy.tsx";
 import * as $rest_parameters from "./routes/rest-parameters.tsx";
@@ -84,6 +85,7 @@ import * as $molecules_footer_1 from "./islands/molecules/footer.tsx";
 import * as $molecules_form_field_1 from "./islands/molecules/form-field.tsx";
 import * as $molecules_navbar_1 from "./islands/molecules/navbar.tsx";
 import * as $molecules_password_input_1 from "./islands/molecules/password-input.tsx";
+import * as $molecules_radio_button_card_group_1 from "./islands/molecules/radio-button-card-group.tsx";
 import * as $molecules_stepper_1 from "./islands/molecules/stepper.tsx";
 import * as $welcome_message from "./islands/welcome-message.tsx";
 import { type Manifest } from "$fresh/server.ts";
@@ -128,6 +130,8 @@ const manifest = {
     "./routes/molecules/form-field.tsx": $molecules_form_field,
     "./routes/molecules/navbar.tsx": $molecules_navbar,
     "./routes/molecules/password-input.tsx": $molecules_password_input,
+    "./routes/molecules/radio-button-card-group.tsx":
+      $molecules_radio_button_card_group,
     "./routes/molecules/stepper.tsx": $molecules_stepper,
     "./routes/philosophy.tsx": $philosophy,
     "./routes/rest-parameters.tsx": $rest_parameters,
@@ -182,6 +186,8 @@ const manifest = {
     "./islands/molecules/form-field.tsx": $molecules_form_field_1,
     "./islands/molecules/navbar.tsx": $molecules_navbar_1,
     "./islands/molecules/password-input.tsx": $molecules_password_input_1,
+    "./islands/molecules/radio-button-card-group.tsx":
+      $molecules_radio_button_card_group_1,
     "./islands/molecules/stepper.tsx": $molecules_stepper_1,
     "./islands/welcome-message.tsx": $welcome_message,
   },

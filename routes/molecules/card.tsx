@@ -46,9 +46,7 @@ export default () => {
       <CodeBlock
         class="mt-4"
         language="tsx"
-        code={`import { Card, CardBody } from "rfui";
-
-<Card>
+        code={`<Card>
   <CardBody>A summary of your account.</CardBody>
 </Card>`}
       />
@@ -65,9 +63,7 @@ export default () => {
       <CodeBlock
         class="mt-4"
         language="tsx"
-        code={`import { Card, CardHeader, CardBody } from "rfui";
-
-<Card>
+        code={`<Card>
   <CardHeader>Summary</CardHeader>
   <CardBody>A summary of your account.</CardBody>
 </Card>`}
@@ -87,9 +83,7 @@ export default () => {
       <CodeBlock
         class="mt-4"
         language="tsx"
-        code={`import { Card, CardBody, CardFooter } from "rfui";
-
-<Card>
+        code={`<Card>
   <CardBody>A summary of your account.</CardBody>
   <CardFooter>
     <Button>Close</Button>
@@ -112,9 +106,7 @@ export default () => {
       <CodeBlock
         class="mt-4"
         language="tsx"
-        code={`import { Card, CardHeader, CardBody, CardFooter } from "rfui";
-
-<Card>
+        code={`<Card>
   <CardHeader>Summary</CardHeader>
   <CardBody>A summary of your account.</CardBody>
   <CardFooter>
@@ -639,6 +631,7 @@ export default () => {
       <Header
         componentName="Card"
         sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/islands/molecules/card.tsx"
+        importStatement='import { Card, CardHeader, CardBody, CardFooter } from "rfui";'
       >
         <Example>{sections[0].example}</Example>
         <Notes>{notes}</Notes>

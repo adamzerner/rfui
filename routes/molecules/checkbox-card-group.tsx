@@ -150,11 +150,13 @@ export default () => {
     required: false,
     type: '"square" | "sm" | "lg"',
     default: '"sm"',
+    notes: null,
   }, {
     name: "children",
     required: true,
     type: "ComponentChild",
     default: null,
+    notes: null,
   }];
   const checkboxCardGroupItemProps = [{
     name: "isChecked",

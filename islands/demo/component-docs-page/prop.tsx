@@ -9,6 +9,7 @@ export const Prop = ({ prop, children }: {
     required: boolean;
     type: string;
     default: string | null;
+    notes: ComponentChild | null;
   };
   children?: ComponentChild;
 }) => {
@@ -41,7 +42,7 @@ export const Prop = ({ prop, children }: {
             )
             : <div class="text-xs">none</div>}
         </div>
-        {children &&
+        {prop.notes &&
           (
             <div>
               <div class="mb-3">Notes</div>

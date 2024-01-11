@@ -216,3 +216,31 @@ table.rfui-table.striped tr:nth-child(even) {
   outline: 2px solid rgb(var(--color-primary-300));
   outline-offset: 2px;
 }
+
+.rfui-card-header {
+  border-bottom-width: 1px;
+  border-color: rgb(var(--color-neutral-100));
+}
+
+.rfui-card-footer {
+  border-top-width: 1px;
+  border-color: rgb(var(--color-neutral-100));
+}
+
+.rfui-card.padding-sm > .rfui-card-header,
+.rfui-card.padding-sm > .rfui-card-body,
+.rfui-card.padding-sm > .rfui-card-footer {
+  padding: var(--spacing-3);
+}
+
+.rfui-card.padding-md > .rfui-card-header,
+.rfui-card.padding-md > .rfui-card-body,
+.rfui-card.padding-md > .rfui-card-footer {
+  padding: var(--spacing-5);
+}
+
+.rfui-card.padding-lg > .rfui-card-header,
+.rfui-card.padding-lg > .rfui-card-body,
+.rfui-card.padding-lg > .rfui-card-footer {
+  padding: var(--spacing-7);
+}

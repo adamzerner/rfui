@@ -30,25 +30,11 @@ export const Card = (
     ...rest
   }: CardType,
 ) => {
-  const { cardHeader, cardBody, cardFooter } = getComponents(children);
-  let sharedClass = "border-neutral-100";
-
-  sharedClass += " " + (() => {
-    switch (padding) {
-      case "sm":
-        return "p-3";
-      case "md":
-        return "p-5";
-      case "lg":
-        return "p-7";
-    }
-  })();
-
-  const cardHeaderClass = sharedClass + " border-b";
-  const cardBodyClass = sharedClass;
-  const cardFooterClass = sharedClass + " border-t";
+  const { cardHeader, cardBody, cardFooter, isArray } = getComponents(children);
   const { class: restClass, ...restWithoutClass } = rest;
-  let containerClass = "max-w-full border border-neutral-100";
+  let containerClass = "rfui-card max-w-full border border-neutral-100";
+
+  containerClass += ` padding-${padding}`;
 
   if (topAccent) {
     containerClass += " border-t-primary-500 border-t-2";
@@ -99,11 +85,12 @@ export const Card = (
 
   return (
     <div class={containerClass} {...restWithoutClass}>
-      {cardHeader &&
-        <div class={cardHeaderClass}>{cardHeader}</div>}
-      <div class={cardBodyClass}>{cardBody}</div>
-      {cardFooter &&
-        <div class={cardFooterClass}>{cardFooter}</div>}
+      {cardHeader && cardHeader}
+      {(cardBody && isArray) ? cardBody : null}
+      {(cardBody && !isArray)
+        ? <div class="rfui-card-body">{cardBody}</div>
+        : null}
+      {cardFooter && cardFooter}
     </div>
   );
 };
@@ -113,7 +100,7 @@ const getComponents = (props: any) => {
   const children = props.props.children;
 
   if (!Array.isArray(children)) {
-    return { cardBody: children };
+    return { cardBody: children, isArray: false };
   }
 
   const cardHeader = children.find(
@@ -134,7 +121,7 @@ const getComponents = (props: any) => {
     );
   }
 
-  return { cardHeader, cardBody, cardFooter };
+  return { cardHeader, cardBody, cardFooter, isArray: true };
 };
 
 export const CardHeader = (
@@ -142,7 +129,14 @@ export const CardHeader = (
     & { children: ComponentChild }
     & JSX.HTMLAttributes<HTMLDivElement>,
 ) => {
-  return <div {...rest}>{children}</div>;
+  const { class: restClass, ...restWithoutClass } = rest;
+  let className = "rfui-card-header";
+
+  if (restClass) {
+    className += ` ${restClass}`;
+  }
+
+  return <div class={className} {...restWithoutClass}>{children}</div>;
 };
 
 export const CardBody = (
@@ -150,7 +144,14 @@ export const CardBody = (
     & { children: ComponentChild }
     & JSX.HTMLAttributes<HTMLDivElement>,
 ) => {
-  return <div {...rest}>{children}</div>;
+  const { class: restClass, ...restWithoutClass } = rest;
+  let className = "rfui-card-body";
+
+  if (restClass) {
+    className += ` ${restClass}`;
+  }
+
+  return <div class={className} {...restWithoutClass}>{children}</div>;
 };
 
 export const CardFooter = (
@@ -158,5 +159,12 @@ export const CardFooter = (
     & { children: ComponentChild }
     & JSX.HTMLAttributes<HTMLDivElement>,
 ) => {
-  return <div {...rest}>{children}</div>;
+  const { class: restClass, ...restWithoutClass } = rest;
+  let className = "rfui-card-footer";
+
+  if (restClass) {
+    className += ` ${restClass}`;
+  }
+
+  return <div class={className} {...restWithoutClass}>{children}</div>;
 };

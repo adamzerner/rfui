@@ -1,6 +1,6 @@
 import { ComponentChild } from "preact";
 import { useState } from "preact/hooks";
-import { Checkbox } from "../atoms/checkbox.tsx";
+import { Checkbox, CheckboxType } from "../atoms/checkbox.tsx";
 import { Flex } from "../helpers/flex.tsx";
 import { Stack } from "../helpers/stack.tsx";
 
@@ -11,6 +11,7 @@ export type CheckboxCardGroupType = {
 };
 
 export type CheckboxCardGroupItemType = {
+  checkboxRest?: Omit<CheckboxType, "size">;
   children: ComponentChild;
 };
 
@@ -67,7 +68,7 @@ export const CheckboxCardGroup = (
 };
 
 export const CheckboxCardGroupItem = (
-  { children }: CheckboxCardGroupItemType,
+  { checkboxRest, children }: CheckboxCardGroupItemType,
 ) => {
   const [isChecked, setIsChecked] = useState<boolean>(false);
   const toggleIsChecked = () => {
@@ -85,7 +86,7 @@ export const CheckboxCardGroupItem = (
       class={containerClass}
       onClick={toggleIsChecked}
     >
-      <Checkbox checked={isChecked} />
+      <Checkbox checked={isChecked} {...checkboxRest} />
       <div>
         {children}
       </div>

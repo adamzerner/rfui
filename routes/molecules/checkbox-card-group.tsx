@@ -150,6 +150,25 @@ export default () => {
     default: '"sm"',
     notes: null,
   }, {
+    name: "checkboxRest",
+    required: false,
+    type: 'Omit<CheckboxType, "size">',
+    default: null,
+    notes: (
+      <div>
+        <div class="leading-relaxed">
+          This gets spread to the <InlineCode>Checkbox</InlineCode> like so:
+        </div>
+        <CodeBlock
+          language="tsx"
+          code={`<div>
+  ...
+  <Checkbox {...checkboxRest} />
+</div>`}
+        />
+      </div>
+    ),
+  }, {
     name: "...rest",
     required: false,
     type: 'Omit<JSX.HTMLAttributes<HTMLDivElement>, "size">',

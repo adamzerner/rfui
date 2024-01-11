@@ -269,10 +269,10 @@ const Main = () => {
     },
   ) => {
     return (
-      <Link underline="none" href={href}>
+      <Link underline="none" href={href} class="w-full lg:w-auto">
         <Card
           padding="sm"
-          class="hover:shadow-lg lg:hover:shadow-md lg:w-48"
+          class="hover:shadow-lg lg:hover:shadow-md w-full lg:w-48"
         >
           <CardBody>
             <Flex
@@ -288,14 +288,16 @@ const Main = () => {
               {example}
             </Flex>
           </CardBody>
-          <CardFooter>{name}</CardFooter>
+          <CardFooter class="text-center">
+            <code>{name}</code>
+          </CardFooter>
         </Card>
       </Link>
     );
   };
 
   return (
-    <Stack class="gap-10 lg:gap-8">
+    <Stack class="w-full gap-10 lg:gap-8">
       <div class="lg:flex">
         <Category>Atoms</Category>
         <Flex class="flex-wrap gap-6 lg:gap-5">

@@ -572,7 +572,7 @@ export default () => {
     name: "width",
     required: false,
     type: '"sm" | "md" | "lg" | "full"',
-    default: "md",
+    default: '"md"',
     notes: null,
   }, {
     name: "shadow",

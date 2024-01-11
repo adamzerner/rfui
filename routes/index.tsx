@@ -158,6 +158,11 @@ const components = {
     },
     { name: "Card", href: "/molecules/card", example: <Card>Example</Card> },
     {
+      name: "CheckboxCardGroup",
+      href: "/molecules/checkbox-card-group",
+      example: <InlineCode class="text-xs">{`<CheckboxCardGroup>`}</InlineCode>,
+    },
+    {
       name: "Footer",
       href: "/molecules/footer",
       example: <InlineCode>{"<Footer>"}</InlineCode>,

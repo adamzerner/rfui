@@ -17,7 +17,7 @@ export default () => {
   const notes = null;
   const sections: SectionType[] = [{
     title: "Basic",
-    example: <Tabs></Tabs>,
+    example: <Tabs tabNames={["First", "Second", "Third"]}>Example</Tabs>,
     exampleCode: (
       <CodeBlock
         class="mt-4"
@@ -26,7 +26,13 @@ export default () => {
       />
     ),
   }];
-  const props = [];
+  const props = [{
+    name: "children",
+    required: true,
+    type: "ComponentChild",
+    default: null,
+    notes: null,
+  }];
 
   return (
     <ComponentDocsPage

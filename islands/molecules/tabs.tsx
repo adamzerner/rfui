@@ -8,13 +8,6 @@ export type TabsType = {
   children: ComponentChild;
 } & JSX.HTMLAttributes<HTMLDivElement>;
 
-/*
-
-TODO:
-- Enforce that children are TabSections + document
-
-*/
-
 /** *
  * @function Tabs
  *

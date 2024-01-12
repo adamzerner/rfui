@@ -35,12 +35,38 @@ export default () => {
 </Tabs>`}
       />
     ),
+  }, {
+    title: "Full width",
+    example: (
+      <Tabs fullWidth tabNames={["First", "Second", "Third"]}>
+        <TabSection tabName="First">One</TabSection>
+        <TabSection tabName="Second">Two</TabSection>
+        <TabSection tabName="Third">Three</TabSection>
+      </Tabs>
+    ),
+    exampleCode: (
+      <CodeBlock
+        class="mt-4"
+        language="tsx"
+        code={`<Tabs fullWidth tabNames={["First", "Second", "Third"]}>
+  <TabSection tabName="First">One</TabSection>
+  <TabSection tabName="Second">Two</TabSection>
+  <TabSection tabName="Third">Three</TabSection>
+</Tabs>`}
+      />
+    ),
   }];
   const props = [{
     name: "tabNames",
     required: true,
     type: "string[]",
     default: null,
+    notes: null,
+  }, {
+    name: "fullWidth",
+    required: false,
+    type: "boolean",
+    default: "false",
     notes: null,
   }, {
     name: "children",

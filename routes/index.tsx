@@ -47,7 +47,7 @@ const components = {
     {
       name: "CodeBlock",
       href: "/atoms/code-block",
-      example: <CodeBlock class="text-sm" code={`const n = 1;`} />,
+      example: <CodeBlock class="text-xs" code={`const n = 1;`} />,
     },
     {
       name: "Highlight",

@@ -1,11 +1,12 @@
+// deno-lint-ignore-file no-explicit-any
 import { Signal, useSignal } from "@preact/signals";
-import type { ComponentChild } from "preact";
+import type { ComponentChild, JSX } from "preact";
 import { Flex } from "../helpers/flex.tsx";
 
 export type TabsType = {
   tabNames: string[];
   children: ComponentChild;
-};
+} & JSX.HTMLAttributes<HTMLDivElement>;
 
 /*
 
@@ -25,20 +26,31 @@ TODO:
  * <Tabs />
  */
 export const Tabs = (
-  { tabNames, children }: TabsType,
+  { tabNames, children, ...rest }: TabsType,
 ) => {
   const activeTab = useSignal<string>(tabNames[0]);
+  const activeTabSection = getActiveTabSection(children, activeTab.value);
 
   return (
-    <div>
+    <div {...rest}>
       <Flex>
         {tabNames.map((tabName) => (
           <Tab tabName={tabName} activeTab={activeTab} />
         ))}
       </Flex>
-      <div class="mt-6">{children}</div>
+      <div class="mt-6">{activeTabSection}</div>
     </div>
   );
+};
+
+const getActiveTabSection = (props: any, tabName: string) => {
+  const children = props.props.children;
+
+  if (!Array.isArray(children)) {
+    return children;
+  }
+
+  return children.find((child) => child.props.tabName === tabName);
 };
 
 const Tab = (
@@ -60,5 +72,8 @@ const Tab = (
   return <div class={containerClass} onClick={handleClick}>{tabName}</div>;
 };
 
-export const TabSection = () => {
+export const TabSection = (
+  { tabName, children }: { tabName: string; children: ComponentChild },
+) => {
+  return <>{children}</>;
 };

@@ -11,18 +11,28 @@ import { Prop } from "@/islands/demo/component-docs-page/prop.tsx";
 import { Props } from "@/islands/demo/component-docs-page/props.tsx";
 import { SectionType } from "@/islands/demo/component-docs-page/section-type.ts";
 import { Card } from "@/islands/molecules/card.tsx";
-import { Tabs } from "@/islands/molecules/tabs.tsx";
+import { Tabs, TabSection } from "@/islands/molecules/tabs.tsx";
 
 export default () => {
   const notes = null;
   const sections: SectionType[] = [{
     title: "Basic",
-    example: <Tabs tabNames={["First", "Second", "Third"]}>Example</Tabs>,
+    example: (
+      <Tabs tabNames={["First", "Second", "Third"]}>
+        <TabSection tabName="First">One</TabSection>
+        <TabSection tabName="Second">Two</TabSection>
+        <TabSection tabName="Third">Three</TabSection>
+      </Tabs>
+    ),
     exampleCode: (
       <CodeBlock
         class="mt-4"
         language="tsx"
-        code={`<Tabs></Tabs>`}
+        code={`<Tabs tabNames={["First", "Second", "Third"]}>
+  <TabSection tabName="First">One</TabSection>
+  <TabSection tabName="Second">Two</TabSection>
+  <TabSection tabName="Third">Three</TabSection>
+</Tabs>`}
       />
     ),
   }];

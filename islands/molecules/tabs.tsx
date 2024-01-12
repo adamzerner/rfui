@@ -14,7 +14,11 @@ export type TabsType = {
  * @see {@link https://rfui.deno.dev/molecules/tabs}
  *
  * @example
- * <Tabs />
+ * <Tabs>
+ *   <TabSection tabName="First">One</TabSection>
+ *   <TabSection tabName="Second">Two</TabSection>
+ *   <TabSection tabName="Third">Three</TabSection>
+ * </Tabs>
  */
 export const Tabs = (
   { fullWidth = false, children, ...rest }: TabsType,

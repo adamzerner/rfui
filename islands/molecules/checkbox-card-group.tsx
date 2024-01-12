@@ -23,7 +23,11 @@ export type CheckboxCardGroupItemType = {
  * @see {@link https://rfui.deno.dev/molecules/checkbox-card-group}
  *
  * @example
- * <CheckboxCardGroup />
+ * <CheckboxCardGroup>
+ *   <CheckboxCardGroupItem>One</CheckboxCardGroupItem>
+ *   <CheckboxCardGroupItem>Two</CheckboxCardGroupItem>
+ *   <CheckboxCardGroupItem>Three</CheckboxCardGroupItem>
+ * </CheckboxCardGroup>
  */
 export const CheckboxCardGroup = (
   { padding = "md", rounded = "sm", children }: CheckboxCardGroupType,

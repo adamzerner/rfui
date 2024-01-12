@@ -11,9 +11,7 @@ export type TabsType = {
 /*
 
 TODO:
-- Explore simplifying interface for users
 - Enforce that children are TabSections + document
-- Fix issue with basic example
 
 */
 

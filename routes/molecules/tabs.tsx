@@ -15,6 +15,13 @@ import { Tabs, TabSection } from "@/islands/molecules/tabs.tsx";
 
 export default () => {
   const notes = null;
+  const headerExample = (
+    <Tabs>
+      <TabSection tabName="First">One</TabSection>
+      <TabSection tabName="Second">Two</TabSection>
+      <TabSection tabName="Third">Three</TabSection>
+    </Tabs>
+  );
   const sections: SectionType[] = [{
     title: "Basic",
     example: (
@@ -92,7 +99,7 @@ export default () => {
         sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/islands/molecules/tabs.tsx"
         importStatement='import { Tabs, TabSection } from "rfui";'
       >
-        <Example>{sections[0].example}</Example>
+        <Example>{headerExample}</Example>
         <Notes>{notes}</Notes>
       </Header>
       {sections.map((section) => (

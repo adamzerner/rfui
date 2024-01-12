@@ -12,7 +12,7 @@ export type H2Type = {
  * @see {@link https://rfui.deno.dev/atoms/h2}
  *
  * @example
- * <H2>Heading</H2>
+ * <H2>Subheading</H2>
  */
 export const H2 = (
   {

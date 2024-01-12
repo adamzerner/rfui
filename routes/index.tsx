@@ -47,7 +47,7 @@ const components = {
     {
       name: "CodeBlock",
       href: "/atoms/code-block",
-      example: <CodeBlock class="text-sm" code={`const n = 1;`} />,
+      example: <CodeBlock class="text-xs" code={`const n = 1;`} />,
     },
     {
       name: "Highlight",
@@ -193,6 +193,11 @@ const components = {
       name: "Stepper",
       href: "/molecules/stepper",
       example: <Stepper size="sm" />,
+    },
+    {
+      name: "Tabs",
+      href: "/molecules/tabs",
+      example: <InlineCode class="text-xs">{`<Tabs>`}</InlineCode>,
     },
   ],
   helpers: [

@@ -24,7 +24,17 @@ export type RadioButtonCardGroupItemType = {
  * @see {@link https://rfui.deno.dev/molecules/radio-button-card-group}
  *
  * @example
- * <RadioButtonCardGroup />
+ * <RadioButtonCardGroup>
+ *   <RadioButtonCardGroupItem name="one" selectedItemName={selectedItemName}>
+ *     One
+ *   </RadioButtonCardGroupItem>
+ *    <RadioButtonCardGroupItem name="two" selectedItemName={selectedItemName}>
+ *     Two
+ *   </RadioButtonCardGroupItem>
+ *    <RadioButtonCardGroupItem name="three" selectedItemName={selectedItemName}>
+ *     Three
+ *   </RadioButtonCardGroupItem>
+ * </RadioButtonCardGroup>
  */
 export const RadioButtonCardGroup = (
   { padding = "md", rounded = "sm", children }: RadioButtonCardGroupType,

@@ -17,7 +17,12 @@ export type NavbarType = {
  * @see {@link https://rfui.deno.dev/molecules/navbar}
  *
  * @example
- * <Navbar></Navbar>
+ * <Navbar size="xl">
+ *  <NavbarLeft>
+ *    <NavbarItem href="https://one.com">One</NavbarItem>
+ *    <NavbarItem href="https://two.com">Two</NavbarItem>
+ *   </NavbarLeft>
+ * </Navbar>
  */
 export const Navbar = (
   {

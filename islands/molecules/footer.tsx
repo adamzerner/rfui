@@ -18,7 +18,13 @@ export type FooterType = {
  * @see {@link https://rfui.deno.dev/molecules/footer}
  *
  * @example
- * <Footer></Footer>
+ * <Footer>
+ *  <FooterColumn>
+ *    <FooterHeading>Contact</FooterHeading>
+ *    <FooterItem href="/email">Email</FooterItem>
+ *    <FooterItem href="/phone">Phone</FooterItem>
+ *  </FooterColumn>
+ * </Footer>
  */
 export const Footer = (
   {

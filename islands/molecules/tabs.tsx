@@ -11,7 +11,10 @@ export type TabsType = {
 /*
 
 TODO:
+- Add option for width
 - Fix issue with basic example
+- Add example for width
+- Enforce that children are TabSections + document
 
 */
 

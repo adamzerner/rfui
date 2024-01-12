@@ -223,6 +223,32 @@ export default () => {
       </div>
     ),
   }];
+  const alertHeaderProps = [{
+    name: "children",
+    required: true,
+    type: "ComponentChild",
+    default: null,
+    notes: null,
+  }, {
+    name: "...rest",
+    required: false,
+    type: "JSX.HTMLAttributes<HTMLDivElement>",
+    default: null,
+    notes: null,
+  }];
+  const alertBodyProps = [{
+    name: "children",
+    required: true,
+    type: "ComponentChild",
+    default: null,
+    notes: null,
+  }, {
+    name: "...rest",
+    required: false,
+    type: "JSX.HTMLAttributes<HTMLDivElement>",
+    default: null,
+    notes: null,
+  }];
 
   return (
     <ComponentDocsPage
@@ -253,6 +279,32 @@ export default () => {
       ))}
       <Props>
         {props.map((prop) => {
+          const { notes, ...propWithoutNotes } = prop;
+
+          return notes
+            ? (
+              <Prop prop={prop}>
+                {notes}
+              </Prop>
+            )
+            : <Prop prop={propWithoutNotes}></Prop>;
+        })}
+      </Props>
+      <Props subComponentTitle="AlertHeader">
+        {alertHeaderProps.map((prop) => {
+          const { notes, ...propWithoutNotes } = prop;
+
+          return notes
+            ? (
+              <Prop prop={prop}>
+                {notes}
+              </Prop>
+            )
+            : <Prop prop={propWithoutNotes}></Prop>;
+        })}
+      </Props>
+      <Props subComponentTitle="AlertBody">
+        {alertBodyProps.map((prop) => {
           const { notes, ...propWithoutNotes } = prop;
 
           return notes

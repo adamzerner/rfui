@@ -11,9 +11,7 @@ export type TabsType = {
 /*
 
 TODO:
-- UI of tabs
-- UI of tab section
-- Switching between tabs
+- Fix issue with basic example
 
 */
 

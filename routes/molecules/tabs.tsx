@@ -37,6 +37,25 @@ export default () => {
     ),
   }];
   const props = [{
+    name: "tabNames",
+    required: true,
+    type: "string[]",
+    default: null,
+    notes: null,
+  }, {
+    name: "children",
+    required: true,
+    type: "ComponentChild",
+    default: null,
+    notes: null,
+  }];
+  const tabSectionProps = [{
+    name: "tabName",
+    required: true,
+    type: "string",
+    default: null,
+    notes: null,
+  }, {
     name: "children",
     required: true,
     type: "ComponentChild",
@@ -72,6 +91,19 @@ export default () => {
       ))}
       <Props>
         {props.map((prop) => {
+          const { notes, ...propWithoutNotes } = prop;
+
+          return notes
+            ? (
+              <Prop prop={prop}>
+                {notes}
+              </Prop>
+            )
+            : <Prop prop={propWithoutNotes}></Prop>;
+        })}
+      </Props>
+      <Props subComponentTitle="TabSection">
+        {tabSectionProps.map((prop) => {
           const { notes, ...propWithoutNotes } = prop;
 
           return notes

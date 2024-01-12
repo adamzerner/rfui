@@ -172,7 +172,7 @@ export default () => {
         language="tsx"
         code={`<Footer background="none">
   <FooterColumn>
-    <FooterHeading>About</FooterHeading>
+    <FooterHeading background="none">About</FooterHeading>
     <FooterItem href="/about">About</FooterItem>
     <FooterItem href="/philosophy">Philosophy</FooterItem>
     <FooterItem href="https://github.com/users/adamzerner/projects/2">
@@ -180,13 +180,13 @@ export default () => {
     </FooterItem>
   </FooterColumn>
   <FooterColumn>
-    <FooterHeading>Docs</FooterHeading>
+    <FooterHeading background="none">Docs</FooterHeading>
     <FooterItem href="/">Components</FooterItem>
     <FooterItem href="/getting-started">Getting started</FooterItem>
     <FooterItem href="/tutorial">Tutorial</FooterItem>
   </FooterColumn>
   <FooterColumn>
-    <FooterHeading>Code</FooterHeading>
+    <FooterHeading background="none">Code</FooterHeading>
     <FooterItem href="https://github.com/adamzerner/rfui">
       GitHub
     </FooterItem>
@@ -201,7 +201,7 @@ export default () => {
     </FooterItem>
   </FooterColumn>
   <FooterColumn>
-    <FooterHeading>Help</FooterHeading>
+    <FooterHeading background="none">Help</FooterHeading>
     <FooterItem href="mailto:adamzerner@protonmail.com">
       Contact
     </FooterItem>
@@ -371,6 +371,39 @@ export default () => {
       </div>
     ),
   }];
+  const footerColumnProps = [{
+    name: "children",
+    required: true,
+    type: "ComponentChild",
+    default: null,
+    notes: null,
+  }];
+  const footerHeadingProps = [{
+    name: "background",
+    required: false,
+    type: '"neutral" | "none"',
+    default: '"neutral"',
+    notes: null,
+  }, {
+    name: "children",
+    required: true,
+    type: "ComponentChild",
+    default: null,
+    notes: null,
+  }];
+  const footerItemProps = [{
+    name: "href",
+    required: true,
+    type: "string",
+    default: null,
+    notes: null,
+  }, {
+    name: "children",
+    required: true,
+    type: "ComponentChild",
+    default: null,
+    notes: null,
+  }];
 
   return (
     <ComponentDocsPage
@@ -406,6 +439,45 @@ export default () => {
       ))}
       <Props>
         {props.map((prop) => {
+          const { notes, ...propWithoutNotes } = prop;
+
+          return notes
+            ? (
+              <Prop prop={prop}>
+                {notes}
+              </Prop>
+            )
+            : <Prop prop={propWithoutNotes}></Prop>;
+        })}
+      </Props>
+      <Props subComponentTitle="FooterColumn">
+        {footerColumnProps.map((prop) => {
+          const { notes, ...propWithoutNotes } = prop;
+
+          return notes
+            ? (
+              <Prop prop={prop}>
+                {notes}
+              </Prop>
+            )
+            : <Prop prop={propWithoutNotes}></Prop>;
+        })}
+      </Props>
+      <Props subComponentTitle="FooterHeading">
+        {footerHeadingProps.map((prop) => {
+          const { notes, ...propWithoutNotes } = prop;
+
+          return notes
+            ? (
+              <Prop prop={prop}>
+                {notes}
+              </Prop>
+            )
+            : <Prop prop={propWithoutNotes}></Prop>;
+        })}
+      </Props>
+      <Props subComponentTitle="FooterItem">
+        {footerItemProps.map((prop) => {
           const { notes, ...propWithoutNotes } = prop;
 
           return notes

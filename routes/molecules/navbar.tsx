@@ -211,6 +211,39 @@ export default () => {
       </div>
     ),
   }];
+  const navbarItemProps = [{
+    name: "isActive",
+    required: false,
+    type: "boolean",
+    default: "false",
+    notes: null,
+  }, {
+    name: "children",
+    required: true,
+    type: "ComponentChild",
+    default: null,
+    notes: null,
+  }, {
+    name: "...rest",
+    required: false,
+    type: "LinkType",
+    default: null,
+    notes: null,
+  }];
+  const navbarLeftProps = [{
+    name: "children",
+    required: true,
+    type: "ComponentChild",
+    default: null,
+    notes: null,
+  }];
+  const navbarRightProps = [{
+    name: "children",
+    required: true,
+    type: "ComponentChild",
+    default: null,
+    notes: null,
+  }];
 
   return (
     <ComponentDocsPage
@@ -246,6 +279,45 @@ export default () => {
       ))}
       <Props>
         {props.map((prop) => {
+          const { notes, ...propWithoutNotes } = prop;
+
+          return notes
+            ? (
+              <Prop prop={prop}>
+                {notes}
+              </Prop>
+            )
+            : <Prop prop={propWithoutNotes}></Prop>;
+        })}
+      </Props>
+      <Props subComponentTitle="NavbarItem">
+        {navbarItemProps.map((prop) => {
+          const { notes, ...propWithoutNotes } = prop;
+
+          return notes
+            ? (
+              <Prop prop={prop}>
+                {notes}
+              </Prop>
+            )
+            : <Prop prop={propWithoutNotes}></Prop>;
+        })}
+      </Props>
+      <Props subComponentTitle="NavbarLeft">
+        {navbarLeftProps.map((prop) => {
+          const { notes, ...propWithoutNotes } = prop;
+
+          return notes
+            ? (
+              <Prop prop={prop}>
+                {notes}
+              </Prop>
+            )
+            : <Prop prop={propWithoutNotes}></Prop>;
+        })}
+      </Props>
+      <Props subComponentTitle="NavbarRight">
+        {navbarRightProps.map((prop) => {
           const { notes, ...propWithoutNotes } = prop;
 
           return notes

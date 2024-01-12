@@ -4,7 +4,6 @@ import type { ComponentChild, JSX } from "preact";
 import { Flex } from "../helpers/flex.tsx";
 
 export type TabsType = {
-  tabNames: string[];
   fullWidth?: boolean;
   children: ComponentChild;
 } & JSX.HTMLAttributes<HTMLDivElement>;
@@ -12,6 +11,7 @@ export type TabsType = {
 /*
 
 TODO:
+- Explore simplifying interface for users
 - Enforce that children are TabSections + document
 - Fix issue with basic example
 
@@ -26,8 +26,9 @@ TODO:
  * <Tabs />
  */
 export const Tabs = (
-  { tabNames, fullWidth = false, children, ...rest }: TabsType,
+  { fullWidth = false, children, ...rest }: TabsType,
 ) => {
+  const tabNames = getTabNames(children);
   const activeTab = useSignal<string>(tabNames[0]);
   const activeTabSection = getActiveTabSection(children, activeTab.value);
 
@@ -41,6 +42,16 @@ export const Tabs = (
       <div class="mt-6">{activeTabSection}</div>
     </div>
   );
+};
+
+const getTabNames = (props: any) => {
+  const children = props.props.children;
+
+  if (!Array.isArray(children)) {
+    return [children.props.tabName];
+  }
+
+  return children.map((child) => child.props.tabName);
 };
 
 const getActiveTabSection = (props: any, tabName: string) => {

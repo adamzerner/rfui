@@ -18,7 +18,7 @@ export default () => {
   const sections: SectionType[] = [{
     title: "Basic",
     example: (
-      <Tabs tabNames={["First", "Second", "Third"]}>
+      <Tabs>
         <TabSection tabName="First">One</TabSection>
         <TabSection tabName="Second">Two</TabSection>
         <TabSection tabName="Third">Three</TabSection>
@@ -28,7 +28,7 @@ export default () => {
       <CodeBlock
         class="mt-4"
         language="tsx"
-        code={`<Tabs tabNames={["First", "Second", "Third"]}>
+        code={`<Tabs>
   <TabSection tabName="First">One</TabSection>
   <TabSection tabName="Second">Two</TabSection>
   <TabSection tabName="Third">Three</TabSection>
@@ -38,7 +38,7 @@ export default () => {
   }, {
     title: "Full width",
     example: (
-      <Tabs fullWidth tabNames={["First", "Second", "Third"]}>
+      <Tabs fullWidth>
         <TabSection tabName="First">One</TabSection>
         <TabSection tabName="Second">Two</TabSection>
         <TabSection tabName="Third">Three</TabSection>
@@ -48,7 +48,7 @@ export default () => {
       <CodeBlock
         class="mt-4"
         language="tsx"
-        code={`<Tabs fullWidth tabNames={["First", "Second", "Third"]}>
+        code={`<Tabs fullWidth>
   <TabSection tabName="First">One</TabSection>
   <TabSection tabName="Second">Two</TabSection>
   <TabSection tabName="Third">Three</TabSection>
@@ -57,12 +57,6 @@ export default () => {
     ),
   }];
   const props = [{
-    name: "tabNames",
-    required: true,
-    type: "string[]",
-    default: null,
-    notes: null,
-  }, {
     name: "fullWidth",
     required: false,
     type: "boolean",

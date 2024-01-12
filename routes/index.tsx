@@ -194,6 +194,11 @@ const components = {
       href: "/molecules/stepper",
       example: <Stepper size="sm" />,
     },
+    {
+      name: "Tabs",
+      href: "/molecules/tabs",
+      example: <InlineCode class="text-xs">{`<Tabs>`}</InlineCode>,
+    },
   ],
   helpers: [
     {

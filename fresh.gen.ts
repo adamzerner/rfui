@@ -41,6 +41,7 @@ import * as $molecules_navbar from "./routes/molecules/navbar.tsx";
 import * as $molecules_password_input from "./routes/molecules/password-input.tsx";
 import * as $molecules_radio_button_card_group from "./routes/molecules/radio-button-card-group.tsx";
 import * as $molecules_stepper from "./routes/molecules/stepper.tsx";
+import * as $molecules_tabs from "./routes/molecules/tabs.tsx";
 import * as $philosophy from "./routes/philosophy.tsx";
 import * as $rest_parameters from "./routes/rest-parameters.tsx";
 import * as $tutorials_fresh from "./routes/tutorials/fresh.tsx";
@@ -87,6 +88,7 @@ import * as $molecules_navbar_1 from "./islands/molecules/navbar.tsx";
 import * as $molecules_password_input_1 from "./islands/molecules/password-input.tsx";
 import * as $molecules_radio_button_card_group_1 from "./islands/molecules/radio-button-card-group.tsx";
 import * as $molecules_stepper_1 from "./islands/molecules/stepper.tsx";
+import * as $molecules_tabs_1 from "./islands/molecules/tabs.tsx";
 import * as $welcome_message from "./islands/welcome-message.tsx";
 import { type Manifest } from "$fresh/server.ts";
 
@@ -133,6 +135,7 @@ const manifest = {
     "./routes/molecules/radio-button-card-group.tsx":
       $molecules_radio_button_card_group,
     "./routes/molecules/stepper.tsx": $molecules_stepper,
+    "./routes/molecules/tabs.tsx": $molecules_tabs,
     "./routes/philosophy.tsx": $philosophy,
     "./routes/rest-parameters.tsx": $rest_parameters,
     "./routes/tutorials/fresh.tsx": $tutorials_fresh,
@@ -189,6 +192,7 @@ const manifest = {
     "./islands/molecules/radio-button-card-group.tsx":
       $molecules_radio_button_card_group_1,
     "./islands/molecules/stepper.tsx": $molecules_stepper_1,
+    "./islands/molecules/tabs.tsx": $molecules_tabs_1,
     "./islands/welcome-message.tsx": $welcome_message,
   },
   baseUrl: import.meta.url,

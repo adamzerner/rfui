@@ -54,7 +54,7 @@ export const Button = (
       case "secondary":
         return "border";
       case "tertiary":
-        return "underline"; // https://ux.stackexchange.com/a/5494/39046
+        return "text-neutral-900 underline"; // https://ux.stackexchange.com/a/5494/39046
       case "danger-primary":
         return "bg-supporting-red-700 text-[#fff] hover:bg-supporting-red-500";
       case "danger-secondary":

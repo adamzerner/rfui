@@ -1,8 +1,11 @@
+import { Signal } from "@preact/signals";
 import { ComponentChild, JSX } from "preact";
+import { useEffect, useRef } from "preact/hooks";
 
 export type ModalType = {
+  isOpen: Signal<boolean>;
   children: ComponentChild;
-} & JSX.HTMLAttributes<HTMLDivElement>;
+} & JSX.HTMLAttributes<HTMLDialogElement>;
 
 /** *
  * @function Modal
@@ -14,13 +17,22 @@ export type ModalType = {
  */
 export const Modal = (
   {
+    isOpen,
     children,
     ...rest
   }: ModalType,
 ) => {
+  const dialogRef = useRef<HTMLDialogElement | null>(null);
+
+  useEffect(() => {
+    if (isOpen.value === true && dialogRef.current) {
+      dialogRef.current.showModal();
+    }
+  }, [isOpen.value]);
+
   return (
-    <div {...rest}>
+    <dialog ref={dialogRef} {...rest}>
       {children}
-    </div>
+    </dialog>
   );
 };

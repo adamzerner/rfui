@@ -9,17 +9,17 @@ import {
   Notes,
 } from "@/islands/demo/component-docs-page/header.tsx";
 import { ComponentDocsPage } from "@/islands/demo/component-docs-page/index.tsx";
+import { ModalExample } from "@/islands/demo/component-docs-page/modal-example.tsx";
 import { Prop } from "@/islands/demo/component-docs-page/prop.tsx";
 import { Props } from "@/islands/demo/component-docs-page/props.tsx";
 import { SectionType } from "@/islands/demo/component-docs-page/section-type.ts";
 import { Card } from "@/islands/molecules/card.tsx";
-import { Modal } from "@/islands/molecules/modal.tsx";
 
 export default () => {
   const notes = null;
   const sections: SectionType[] = [{
     title: "Basic",
-    example: <Modal>Example</Modal>,
+    example: <ModalExample>Example</ModalExample>,
     exampleCode: (
       <CodeBlock
         class="mt-4"
@@ -45,7 +45,7 @@ export default () => {
           See the docs for{" "}
           <Link href="/rest-parameters">rest parameters</Link>. For{" "}
           <InlineCode>Modal</InlineCode>, you could pass anything you normally
-          would pass to <InlineCode>{"<div>"}</InlineCode>{" "}
+          would pass to <InlineCode>{"<dialog>"}</InlineCode>{" "}
           because the return value{" "}
           <Link href="https://github.com/adamzerner/rfui/blob/master/islands/molecules/modal.tsx">
             looks something like
@@ -54,9 +54,9 @@ export default () => {
         </div>
         <CodeBlock
           language="tsx"
-          code={`<div class={containerClass} {...restWithoutClass}>
+          code={`<dialog class={containerClass} {...restWithoutClass}>
   {children}
-</div>`}
+</dialog>`}
         />
       </div>
     ),

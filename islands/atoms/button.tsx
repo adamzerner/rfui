@@ -120,9 +120,6 @@ export const Button = (
     <button
       class={className}
       {...restWithoutClass}
-      onClick={() => {
-        console.log("clicked");
-      }}
     >
       {icon && <span class="mr-1">{icon}</span>}
       {isLoading && loadingContent ? loadingContent : children}

@@ -70,6 +70,7 @@ import * as $atoms_textarea_1 from "./islands/atoms/textarea.tsx";
 import * as $atoms_ul_1 from "./islands/atoms/ul.tsx";
 import * as $demo_component_docs_page_header from "./islands/demo/component-docs-page/header.tsx";
 import * as $demo_component_docs_page_index from "./islands/demo/component-docs-page/index.tsx";
+import * as $demo_component_docs_page_modal_example from "./islands/demo/component-docs-page/modal-example.tsx";
 import * as $demo_component_docs_page_on_this_page from "./islands/demo/component-docs-page/on-this-page.tsx";
 import * as $demo_component_docs_page_prop from "./islands/demo/component-docs-page/prop.tsx";
 import * as $demo_component_docs_page_props from "./islands/demo/component-docs-page/props.tsx";
@@ -170,6 +171,8 @@ const manifest = {
       $demo_component_docs_page_header,
     "./islands/demo/component-docs-page/index.tsx":
       $demo_component_docs_page_index,
+    "./islands/demo/component-docs-page/modal-example.tsx":
+      $demo_component_docs_page_modal_example,
     "./islands/demo/component-docs-page/on-this-page.tsx":
       $demo_component_docs_page_on_this_page,
     "./islands/demo/component-docs-page/prop.tsx":

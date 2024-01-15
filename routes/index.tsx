@@ -173,6 +173,11 @@ const components = {
       example: <FormField label="Email" />,
     },
     {
+      name: "Modal",
+      href: "/molecules/modal",
+      example: <InlineCode>{"<Modal>"}</InlineCode>,
+    },
+    {
       name: "Navbar",
       href: "/molecules/navbar",
       example: <InlineCode>{"<Navbar>"}</InlineCode>,

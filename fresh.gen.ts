@@ -37,6 +37,7 @@ import * as $molecules_card from "./routes/molecules/card.tsx";
 import * as $molecules_checkbox_card_group from "./routes/molecules/checkbox-card-group.tsx";
 import * as $molecules_footer from "./routes/molecules/footer.tsx";
 import * as $molecules_form_field from "./routes/molecules/form-field.tsx";
+import * as $molecules_modal from "./routes/molecules/modal.tsx";
 import * as $molecules_navbar from "./routes/molecules/navbar.tsx";
 import * as $molecules_password_input from "./routes/molecules/password-input.tsx";
 import * as $molecules_radio_button_card_group from "./routes/molecules/radio-button-card-group.tsx";
@@ -84,6 +85,7 @@ import * as $molecules_card_1 from "./islands/molecules/card.tsx";
 import * as $molecules_checkbox_card_group_1 from "./islands/molecules/checkbox-card-group.tsx";
 import * as $molecules_footer_1 from "./islands/molecules/footer.tsx";
 import * as $molecules_form_field_1 from "./islands/molecules/form-field.tsx";
+import * as $molecules_modal_1 from "./islands/molecules/modal.tsx";
 import * as $molecules_navbar_1 from "./islands/molecules/navbar.tsx";
 import * as $molecules_password_input_1 from "./islands/molecules/password-input.tsx";
 import * as $molecules_radio_button_card_group_1 from "./islands/molecules/radio-button-card-group.tsx";
@@ -130,6 +132,7 @@ const manifest = {
       $molecules_checkbox_card_group,
     "./routes/molecules/footer.tsx": $molecules_footer,
     "./routes/molecules/form-field.tsx": $molecules_form_field,
+    "./routes/molecules/modal.tsx": $molecules_modal,
     "./routes/molecules/navbar.tsx": $molecules_navbar,
     "./routes/molecules/password-input.tsx": $molecules_password_input,
     "./routes/molecules/radio-button-card-group.tsx":
@@ -187,6 +190,7 @@ const manifest = {
       $molecules_checkbox_card_group_1,
     "./islands/molecules/footer.tsx": $molecules_footer_1,
     "./islands/molecules/form-field.tsx": $molecules_form_field_1,
+    "./islands/molecules/modal.tsx": $molecules_modal_1,
     "./islands/molecules/navbar.tsx": $molecules_navbar_1,
     "./islands/molecules/password-input.tsx": $molecules_password_input_1,
     "./islands/molecules/radio-button-card-group.tsx":

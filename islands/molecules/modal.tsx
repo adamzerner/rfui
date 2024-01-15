@@ -7,6 +7,15 @@ export type ModalType = {
   children: ComponentChild;
 } & JSX.HTMLAttributes<HTMLDialogElement>;
 
+/*
+
+TODO:
+- Styling
+- Backdrop
+- Docs
+
+*/
+
 /** *
  * @function Modal
  *
@@ -23,15 +32,23 @@ export const Modal = (
   }: ModalType,
 ) => {
   const dialogRef = useRef<HTMLDialogElement | null>(null);
+  const close = () => {
+    isOpen.value = false;
+  };
 
   useEffect(() => {
-    if (isOpen.value === true && dialogRef.current) {
-      dialogRef.current.showModal();
+    if (dialogRef.current) {
+      if (isOpen.value === true) {
+        dialogRef.current.showModal();
+      } else {
+        dialogRef.current.close();
+      }
     }
   }, [isOpen.value]);
 
   return (
     <dialog ref={dialogRef} {...rest}>
+      <button onClick={close}>close</button>
       {children}
     </dialog>
   );

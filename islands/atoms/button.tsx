@@ -12,9 +12,7 @@ export type ButtonType = {
   size?: "sm" | "md" | "lg" | "block";
   rounded?: "square" | "sm" | "lg" | "full";
   isLoading?: boolean;
-  loadingContent?: string | JSX.Element;
-  icon?: JSX.Element;
-  _rightIcon?: JSX.Element; // better to align left https://ux.stackexchange.com/q/56023/39046
+  loadingContent?: string;
   children: ComponentChild;
 } & Omit<JSX.HTMLAttributes<HTMLButtonElement>, "icon" | "size">;
 
@@ -29,7 +27,6 @@ export type ButtonType = {
  * @example
  * <Button type="primary">Submit</Button>
  * <Button isLoading loadingContent="Submitting...">Submit</Button>
- * <Button isLoading loadingContent={<em>Submitting...</em>}>Submit</Button>
  */
 export const Button = (
   {
@@ -38,8 +35,6 @@ export const Button = (
     rounded = "sm",
     isLoading = false,
     loadingContent,
-    icon,
-    _rightIcon,
     children,
     ...rest
   }: ButtonType,
@@ -103,9 +98,7 @@ export const Button = (
       class={className}
       {...restWithoutClass}
     >
-      {icon && <span class="mr-1">{icon}</span>}
       {isLoading && loadingContent ? loadingContent : children}
-      {_rightIcon && <span class="ml-1">{_rightIcon}</span>}
     </button>
   );
 };

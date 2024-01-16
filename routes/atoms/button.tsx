@@ -211,84 +211,6 @@ export default () => {
       />
     ),
   }, {
-    title: "Icon",
-    description: (
-      <Stack class="gap-3">
-        <p>
-          An icon that will be placed to the left of the button's text. Placing
-          it to the left as opposed to the right is a{" "}
-          <Link href="https://ux.stackexchange.com/q/56023/39046">
-            best practice
-          </Link>.
-        </p>
-        <p>
-          Consider{" "}
-          <Link href="https://uxmyths.com/post/715009009/myth-icons-enhance-usability">
-            Myth #13: Icons enhance usability
-          </Link>{" "}
-          before using a standalone icon, or even before using an icon at all.
-        </p>
-      </Stack>
-    ),
-    example: (
-      <Flex class="gap-3">
-        <Button variant="primary" icon={<span>←</span>}>
-          Previous
-        </Button>
-        <Button variant="secondary" icon={<span>←</span>}>
-          Previous
-        </Button>
-      </Flex>
-    ),
-    exampleCode: (
-      <CodeBlock
-        class="mt-4"
-        language="tsx"
-        code={`<Flex class="gap-3">
-  <Button variant="primary" icon={<span>←</span>}>
-    Previous
-  </Button>
-  <Button variant="secondary" icon={<span>←</span>}>
-    Previous
-  </Button>
-</Flex>`}
-      />
-    ),
-  }, {
-    title: "Right icon",
-    description: (
-      <div>
-        An icon that will be placed to the right of the button's text.{" "}
-        <Link href="https://ux.stackexchange.com/q/56023/39046">
-          Typically not a good idea
-        </Link>, but useful for something like "Next →".
-      </div>
-    ),
-    example: (
-      <Flex class="gap-3">
-        <Button variant="primary" _rightIcon={<span>→</span>}>
-          Next
-        </Button>
-        <Button variant="secondary" _rightIcon={<span>→</span>}>
-          Next
-        </Button>
-      </Flex>
-    ),
-    exampleCode: (
-      <CodeBlock
-        class="mt-4"
-        language="tsx"
-        code={`<Flex class="gap-3">
-  <Button variant="primary" _rightIcon={<span>→</span>}>
-    Next
-  </Button>
-  <Button variant="secondary" _rightIcon={<span>→</span>}>
-    Next
-  </Button>
-</Flex>`}
-      />
-    ),
-  }, {
     title: "Disabled",
     description: (
       <div>
@@ -392,48 +314,12 @@ export default () => {
   }, {
     name: "loadingContent",
     required: false,
-    type: "string | JSX.Element",
+    type: "string",
     default: null,
     notes: (
       <div>
         The text to change the button's content to when loading. Ie. when{" "}
         <InlineCode>isLoading</InlineCode> is <InlineCode>true</InlineCode>.
-      </div>
-    ),
-  }, {
-    name: "icon",
-    required: false,
-    type: "JSX.Element",
-    default: null,
-    notes: (
-      <Stack class="gap-3">
-        <p>
-          An icon that will be placed to the left of the button's text. Placing
-          it to the left as opposed to the right is a{" "}
-          <Link href="https://ux.stackexchange.com/q/56023/39046">
-            best practice
-          </Link>.
-        </p>
-        <p>
-          Consider{" "}
-          <Link href="https://uxmyths.com/post/715009009/myth-icons-enhance-usability">
-            Myth #13: Icons enhance usability
-          </Link>{" "}
-          before using a standalone icon, or even before using an icon at all.
-        </p>
-      </Stack>
-    ),
-  }, {
-    name: "_rightIcon",
-    required: false,
-    type: "JSX.Element",
-    default: null,
-    notes: (
-      <div>
-        An icon that will be placed to the right of the button's text.{" "}
-        <Link href="https://ux.stackexchange.com/q/56023/39046">
-          Typically not a good idea
-        </Link>, but useful for something like "Next →".
       </div>
     ),
   }, {

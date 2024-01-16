@@ -11,8 +11,6 @@ export type ModalType = {
 /*
 
 TODO:
-- Styling
-- Backdrop
 - Docs
 
 */
@@ -34,7 +32,8 @@ export const Modal = (
 ) => {
   const dialogRef = useRef<HTMLDialogElement | null>(null);
   const { class: restClass, ...restWithoutClass } = rest;
-  const containerClass = ` w-[600px] p-4 rounded ${restClass}`;
+  const containerClass =
+    ` w-[600px] p-4 rounded backdrop:backdrop-blur-sm ${restClass}`;
   const close = () => {
     isOpen.value = false;
   };

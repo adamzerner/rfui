@@ -148,13 +148,19 @@ export default () => {
         values documented{" "}
         <Link href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Input#input_types">
           here on MDN
-        </Link>.
+        </Link>. If you are thinking of using{" "}
+        <InlineCode>number</InlineCode>, consider taking{" "}
+        <Link href="https://technology.blog.gov.uk/2020/02/24/why-the-gov-uk-design-system-team-changed-the-input-type-for-numbers/">
+          this approach
+        </Link>{" "}
+        instead.
       </div>
     ),
     example: (
       <Stack class="gap-5">
         <Input type="text" placeholder="text" />
         <Input type="email" placeholder="email" />
+        <Input type="text" inputmode="numeric" pattern="[0-9]*" />
         <Input type="number" />
         <Input type="password" value="foobar" />
         <Input type="date" />
@@ -172,6 +178,7 @@ export default () => {
         code={`<Stack class="gap-5">
   <Input type="text" placeholder="text" />
   <Input type="email" placeholder="email" />
+  <Input type="text" inputmode="numeric" pattern="[0-9]*" />
   <Input type="number" />
   <Input type="password" value="foobar" />
   <Input type="date" />

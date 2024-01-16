@@ -3,7 +3,9 @@ import { Modal } from "@/islands/molecules/modal.tsx";
 import { useSignal } from "@preact/signals";
 import { ComponentChild } from "preact";
 
-export const ModalExample = ({ children }: { children: ComponentChild }) => {
+export const ModalExample = (
+  { heading, children }: { heading?: string; children: ComponentChild },
+) => {
   const isOpen = useSignal(false);
   const open = () => {
     isOpen.value = true;
@@ -14,7 +16,7 @@ export const ModalExample = ({ children }: { children: ComponentChild }) => {
       <Button onClick={open}>
         Open Modal
       </Button>
-      <Modal isOpen={isOpen}>{children}</Modal>
+      <Modal isOpen={isOpen} heading={heading}>{children}</Modal>
     </div>
   );
 };

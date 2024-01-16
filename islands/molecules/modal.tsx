@@ -5,15 +5,9 @@ import { CloseIcon } from "../icons/close-icon.tsx";
 
 export type ModalType = {
   isOpen: Signal<boolean>;
+  heading?: string;
   children: ComponentChild;
 } & JSX.HTMLAttributes<HTMLDialogElement>;
-
-/*
-
-TODO:
-- Docs
-
-*/
 
 /** *
  * @function Modal
@@ -21,11 +15,14 @@ TODO:
  * @see {@link https://rfui.deno.dev/molecules/modal}
  *
  * @example
- * <Modal>Example</Modal>
+ * <Modal isOpen={isOpen}>
+ *   Example
+ * </Modal>
  */
 export const Modal = (
   {
     isOpen,
+    heading,
     children,
     ...rest
   }: ModalType,
@@ -55,7 +52,10 @@ export const Modal = (
           <CloseIcon />
         </button>
       </div>
-      {children}
+      <div class="mx-4 mb-4">
+        {heading && <h3 class="text-xl mb-4 text-neutral-700">{heading}</h3>}
+        {children}
+      </div>
     </dialog>
   );
 };

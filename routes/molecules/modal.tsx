@@ -24,11 +24,37 @@ export default () => {
       <CodeBlock
         class="mt-4"
         language="tsx"
-        code={`<Modal>Example</Modal>`}
+        code={`<Modal isOpen={isOpen}>
+  Example
+</Modal>`}
+      />
+    ),
+  }, {
+    title: "With heading",
+    example: <ModalExample heading="Modal heading">Example</ModalExample>,
+    exampleCode: (
+      <CodeBlock
+        class="mt-4"
+        language="tsx"
+        code={`<Modal isOpen={isOpen} heading="Modal heading">
+  Example
+</Modal>`}
       />
     ),
   }];
   const props = [{
+    name: "isOpen",
+    required: true,
+    type: "Signal<boolean>",
+    default: null,
+    notes: null,
+  }, {
+    name: "heading",
+    required: false,
+    type: "string",
+    default: null,
+    notes: null,
+  }, {
     name: "children",
     required: true,
     type: "ComponentChild",
@@ -37,7 +63,7 @@ export default () => {
   }, {
     name: "...rest",
     required: false,
-    type: "JSX.HTMLAttributes<HTMLDivElement>",
+    type: "JSX.HTMLAttributes<HTMLDialogElement>",
     default: null,
     notes: (
       <div>

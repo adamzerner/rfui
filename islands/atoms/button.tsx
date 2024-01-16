@@ -48,23 +48,6 @@ export const Button = (
   let className = "";
 
   className += " " + (() => {
-    switch (variant) {
-      case "primary":
-        return "text-[#fff]";
-      case "secondary":
-        return "border";
-      case "tertiary":
-        return "text-neutral-900 underline"; // https://ux.stackexchange.com/a/5494/39046
-      case "danger-primary":
-        return "bg-supporting-red-700 text-[#fff] hover:bg-supporting-red-500";
-      case "danger-secondary":
-        return "border border-supporting-red-500 text-supporting-red-900 hover:bg-supporting-red-50";
-      case "danger-tertiary":
-        return "underline text-supporting-red-900";
-    }
-  })();
-
-  className += " " + (() => {
     switch (size) {
       case "sm":
         return "px-2 py-1";
@@ -92,22 +75,21 @@ export const Button = (
 
   className += " " + (() => {
     if (rest.disabled || isLoading) {
-      switch (variant) {
-        case "primary":
-          return "cursor-not-allowed bg-primary-300";
-        case "secondary":
-          return "cursor-not-allowed text-neutral-500 border-neutral-300 hover:bg-[#fff]";
-        case "tertiary":
-          return "cursor-not-allowed text-neutral-600";
-      }
+      return "cursor-not-allowed bg-neutral-50 text-neutral-300 border-none";
     } else {
       switch (variant) {
         case "primary":
-          return "bg-primary-700 hover:bg-primary-500";
+          return "bg-primary-700 text-[#fff] hover:bg-primary-500 active:bg-primary-400";
         case "secondary":
-          return "border-primary-500 text-primary-900 hover:bg-primary-50";
+          return "border border-primary-700 text-primary-900 hover:bg-primary-50 active:bg-primary-50/50";
         case "tertiary":
-          return "";
+          return "underline text-neutral-900 active:bg-neutral-50";
+        case "danger-primary":
+          return "text-[#fff] bg-supporting-red-700 hover:bg-supporting-red-500 active:bg-supporting-red-400";
+        case "danger-secondary":
+          return "border border-supporting-red-700 text-supporting-red-900 hover:bg-supporting-red-50 active:bg-supporting-red-50/50";
+        case "danger-tertiary":
+          return "underline text-supporting-red-900 active:bg-supporting-red-50";
       }
     }
   })();

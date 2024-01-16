@@ -60,6 +60,27 @@ export default () => {
       />
     ),
   }, {
+    title: "In-page link",
+    description: (
+      <div>
+        See{" "}
+        <Link href="https://www.nngroup.com/articles/in-page-links/">
+          Anchors OK? Re-Assessing In-Page Links
+        </Link>{" "}
+        from NNGroup.
+      </div>
+    ),
+    example: <Link inPageLink underline="hover" href="#section">Example</Link>,
+    exampleCode: (
+      <CodeBlock
+        class="mt-4"
+        language="tsx"
+        code={`<Link inPageLink underline="hover" href="#section">
+  Example
+</Link>`}
+      />
+    ),
+  }, {
     title: "New tab",
     description: (
       <Stack class="gap-3">
@@ -192,6 +213,20 @@ export default () => {
           Beyond Blue Links: Making Clickable Elements Recognizable
         </Link>{" "}
         for more information.
+      </div>
+    ),
+  }, {
+    name: "inPageLink",
+    required: false,
+    type: "boolean",
+    default: "false",
+    notes: (
+      <div>
+        See{" "}
+        <Link href="https://www.nngroup.com/articles/in-page-links/">
+          Anchors OK? Re-Assessing In-Page Links
+        </Link>{" "}
+        from NNGroup.
       </div>
     ),
   }, {

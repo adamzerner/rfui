@@ -31,7 +31,9 @@ export const H2 = (
   if (inPageLink) {
     return (
       <h2 id={inPageLink} class={className} {...restWithoutClass}>
-        <Link href={`#${inPageLink}`} underline="hover">{children}</Link>
+        <Link inPageLink href={`#${inPageLink}`} underline="hover">
+          {children}
+        </Link>
       </h2>
     );
   }

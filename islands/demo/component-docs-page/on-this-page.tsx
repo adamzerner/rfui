@@ -8,13 +8,14 @@ export const OnThisPage = ({ sectionTitles }: { sectionTitles: string[] }) => {
       <Stack class="gap-2">
         {sectionTitles.map((sectionTitle) => (
           <Link
+            inPageLink
             underline="hover"
             href={`#${sectionTitle.toLowerCase().split(/\s+/).join("-")}`}
           >
             {sectionTitle}
           </Link>
         ))}
-        <Link underline="hover" href="#props">
+        <Link inPageLink underline="hover" href="#props">
           Props
         </Link>
       </Stack>

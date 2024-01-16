@@ -246,3 +246,11 @@ table.rfui-table.striped tr:nth-child(even) {
 .rfui-card.padding-lg > .rfui-card-footer {
   padding: var(--spacing-7);
 }
+
+.rfui-in-page-link .rfui-in-page-link-icon {
+  display: none;
+}
+
+.rfui-in-page-link:hover .rfui-in-page-link-icon {
+  display: inline;
+}

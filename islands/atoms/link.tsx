@@ -1,10 +1,12 @@
 import type { JSX } from "preact";
 import { ComponentChild } from "preact";
+import { LinkIcon } from "../icons/link-icon.tsx";
 import { NewTabIcon } from "../icons/new-tab-icon.tsx";
 
 export type LinkType = {
   href: string;
   underline?: "always" | "hover" | "none";
+  inPageLink?: boolean;
   _newTab?: boolean;
   _includeNewTabIcon?: boolean;
   children: ComponentChild;
@@ -22,6 +24,7 @@ export const Link = (
   {
     href,
     underline = "always",
+    inPageLink = false,
     _newTab = false,
     _includeNewTabIcon = false,
     children,
@@ -29,7 +32,7 @@ export const Link = (
   }: LinkType,
 ) => {
   const { class: restClass, ...restWithoutClass } = rest;
-  let className = "cursor-pointer";
+  let className = "cursor-pointer relative";
 
   className += (() => {
     switch (underline) {
@@ -41,6 +44,10 @@ export const Link = (
         return "";
     }
   })();
+
+  if (inPageLink) {
+    className += " rfui-in-page-link";
+  }
 
   if (restClass) {
     className += ` ${restClass}`;
@@ -54,6 +61,12 @@ export const Link = (
       rel={_newTab ? "noopener noreferrer" : undefined}
       {...restWithoutClass}
     >
+      {inPageLink &&
+        (
+          <span class="rfui-in-page-link-icon absolute top-[0.25em] -left-[1.25em]">
+            <LinkIcon />
+          </span>
+        )}
       {children}
       {_newTab && _includeNewTabIcon && <NewTabIcon />}
     </a>

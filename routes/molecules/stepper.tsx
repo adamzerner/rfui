@@ -17,8 +17,16 @@ import { Card } from "@/islands/molecules/card.tsx";
 import { Stepper } from "@/islands/molecules/stepper.tsx";
 
 export default () => {
-  const notes =
-    "A stepper component like this lets users select the number they want in a few easy clicks.";
+  const notes = (
+    <div>
+      A stepper component like this lets users select the number they want in a
+      few easy clicks. See{" "}
+      <Link href="https://www.nngroup.com/articles/input-steppers/">
+        Design Guidelines for Input Steppers
+      </Link>{" "}
+      from NNGroup.
+    </div>
+  );
   const sections: SectionType[] = [{
     title: "Basic",
     example: <Stepper />,

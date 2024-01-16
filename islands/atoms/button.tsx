@@ -83,7 +83,7 @@ export const Button = (
         case "secondary":
           return "border border-primary-700 text-primary-900 hover:bg-primary-50 active:bg-primary-50/50";
         case "tertiary":
-          return "underline text-neutral-900 active:bg-neutral-50";
+          return "underline text-neutral-900 hover:bg-neutral-50 active:bg-neutral-50/50";
         case "danger-primary":
           return "text-[#fff] bg-supporting-red-700 hover:bg-supporting-red-500 active:bg-supporting-red-400";
         case "danger-secondary":

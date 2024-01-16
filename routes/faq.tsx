@@ -81,11 +81,12 @@ export default () => {
       </H2>
       <Text>
         <p>
-          Not yet, but I{" "}
-          <Link href="https://github.com/adamzerner/rfui/issues/111">
-            plan to
+          Yes. In <InlineCode>rfui.css</InlineCode>{" "}
+          there are a bunch of CSS variables that you can set. See the{" "}
+          <Link href="/getting-started#customize-css-variables">
+            Getting Started page
           </Link>{" "}
-          support that in the future.
+          for more information.
         </p>
       </Text>
 

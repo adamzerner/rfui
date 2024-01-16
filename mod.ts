@@ -57,6 +57,8 @@ export {
 export type { FooterType } from "./islands/molecules/footer.tsx";
 export { FormField } from "./islands/molecules/form-field.tsx";
 export type { FormFieldType } from "./islands/molecules/form-field.tsx";
+export { Modal } from "./islands/molecules/modal.tsx";
+export type { ModalType } from "./islands/molecules/modal.tsx";
 export {
   Navbar,
   NavbarItem,

@@ -273,7 +273,7 @@ export const LeftNav = () => {
 const Main = () => {
   const Category = ({ children }: { children: ComponentChild }) => {
     return (
-      <div class="flex-none w-10 text-5xl lg:text-3xl mr-8 mb-6 lg:mb-auto">
+      <div class="flex-none w-10 text-5xl mr-8 mb-6 lg:mb-auto text-neutral-900">
         {children}
       </div>
     );
@@ -314,8 +314,8 @@ const Main = () => {
   };
 
   return (
-    <Stack class="w-full gap-10 lg:gap-8">
-      <div class="lg:flex">
+    <Stack class="w-full gap-10">
+      <Stack class="gap-8">
         <Category>Atoms</Category>
         <Flex class="flex-wrap gap-6 lg:gap-5">
           {components.atoms.map((component) => (
@@ -326,8 +326,8 @@ const Main = () => {
             />
           ))}
         </Flex>
-      </div>
-      <div class="lg:flex">
+      </Stack>
+      <Stack class="gap-8">
         <Category>Molecules</Category>
         <Flex class="flex-wrap gap-6 lg:gap-5">
           {components.molecules.map((component) => (
@@ -338,8 +338,8 @@ const Main = () => {
             />
           ))}
         </Flex>
-      </div>
-      <div class="lg:flex">
+      </Stack>
+      <Stack class="gap-8">
         <Category>Helpers</Category>
         <Flex class="flex-wrap gap-6 lg:gap-5">
           {components.helpers.map((component) => (
@@ -350,7 +350,7 @@ const Main = () => {
             />
           ))}
         </Flex>
-      </div>
+      </Stack>
     </Stack>
   );
 };

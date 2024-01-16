@@ -75,7 +75,7 @@ const Tab = (
   if (isActive) {
     containerClass += " border-b text-neutral-900";
   } else {
-    containerClass += " text-neutral-500";
+    containerClass += " text-neutral-700";
   }
 
   if (fullWidth) {

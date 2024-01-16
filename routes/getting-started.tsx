@@ -59,7 +59,7 @@ export default () => {
         />
       </Text>
 
-      <H2 inPageLink="include-rfui-css-file">{"2) Import RFUI component"}</H2>
+      <H2 inPageLink="import-rfui-component">{"2) Import RFUI component"}</H2>
       <Text>
         <p>
           The RFUI library is hosted as a{" "}

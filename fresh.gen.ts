@@ -79,7 +79,6 @@ import * as $helpers_container_1 from "./islands/helpers/container.tsx";
 import * as $helpers_flex_1 from "./islands/helpers/flex.tsx";
 import * as $helpers_stack_1 from "./islands/helpers/stack.tsx";
 import * as $icons_close_icon from "./islands/icons/close-icon.tsx";
-import * as $icons_link_icon from "./islands/icons/link-icon.tsx";
 import * as $icons_new_tab_icon from "./islands/icons/new-tab-icon.tsx";
 import * as $icons_x_circle_icon from "./islands/icons/x-circle-icon.tsx";
 import * as $molecules_alert_1 from "./islands/molecules/alert.tsx";
@@ -186,7 +185,6 @@ const manifest = {
     "./islands/helpers/flex.tsx": $helpers_flex_1,
     "./islands/helpers/stack.tsx": $helpers_stack_1,
     "./islands/icons/close-icon.tsx": $icons_close_icon,
-    "./islands/icons/link-icon.tsx": $icons_link_icon,
     "./islands/icons/new-tab-icon.tsx": $icons_new_tab_icon,
     "./islands/icons/x-circle-icon.tsx": $icons_x_circle_icon,
     "./islands/molecules/alert.tsx": $molecules_alert_1,

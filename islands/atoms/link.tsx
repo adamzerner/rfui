@@ -1,6 +1,5 @@
 import type { JSX } from "preact";
 import { ComponentChild } from "preact";
-import { LinkIcon } from "../icons/link-icon.tsx";
 import { NewTabIcon } from "../icons/new-tab-icon.tsx";
 
 export type LinkType = {
@@ -63,8 +62,8 @@ export const Link = (
     >
       {inPageLink &&
         (
-          <span class="rfui-in-page-link-icon absolute top-[0.25em] -left-[1.25em]">
-            <LinkIcon />
+          <span class="rfui-in-page-link-icon absolute top-0 -left-[1em]">
+            #
           </span>
         )}
       {children}

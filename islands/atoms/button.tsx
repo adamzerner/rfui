@@ -89,7 +89,7 @@ export const Button = (
         case "danger-secondary":
           return "border border-supporting-red-700 text-supporting-red-900 hover:bg-supporting-red-50 active:bg-supporting-red-50/50";
         case "danger-tertiary":
-          return "underline text-supporting-red-900 active:bg-supporting-red-50";
+          return "underline text-supporting-red-900 hover:bg-supporting-red-50 active:bg-supporting-red-50/50";
       }
     }
   })();

@@ -36,7 +36,7 @@ export const Header = (
             href={sourceCodeUrl}
             _includeNewTabIcon
             _newTab
-            class="inline w-fit"
+            class="inline w-fit !text-neutral-900"
           >
             Source code
           </Link>

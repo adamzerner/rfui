@@ -57,7 +57,9 @@ export default () => {
       {
         name: "Button",
         href: "/atoms/button",
-        example: <Button>Submit</Button>,
+        example: (
+          <Button class="!text-neutral-900 !border-neutral-900">Submit</Button>
+        ),
       },
       {
         name: "Checkbox",

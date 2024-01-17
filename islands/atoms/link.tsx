@@ -36,7 +36,7 @@ export const Link = (
   className += (() => {
     switch (underline) {
       case "always":
-        return " underline underline-offset-2 text-primary-700 visited:text-primary-800";
+        return " underline underline-offset-2 text-primary-700 visited:text-primary-800 [aria-current]:text-primary-800";
       case "hover":
         return " hover:underline hover:underline-offset-2";
       default:

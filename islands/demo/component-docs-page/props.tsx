@@ -20,7 +20,7 @@ export const Props = (
         )
         : (
           <H1 id="props">
-            <Link href="#props" underline="hover">Props</Link>
+            <Link inPageLink href="#props" underline="hover">Props</Link>
           </H1>
         )}
 

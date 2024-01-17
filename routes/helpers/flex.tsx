@@ -22,7 +22,7 @@ export default () => {
     example: (
       <Flex class="gap-8">
         <div>left</div>
-        <div>middle</div>
+        <div>center</div>
         <div>right</div>
       </Flex>
     ),
@@ -32,7 +32,7 @@ export default () => {
         language="tsx"
         code={`<Flex class="gap-8">
   <div>left</div>
-  <div>middle</div>
+  <div>center</div>
   <div>right</div>
 </Flex>`}
       />

@@ -40,7 +40,11 @@ export default () => {
   const signal = useSignal(null);
   const components = {
     atoms: [
-      { name: "Badge", href: "/atoms/badge", example: <Badge>new</Badge> },
+      {
+        name: "Badge",
+        href: "/atoms/badge",
+        example: <Badge size="lg">new</Badge>,
+      },
       {
         name: "Blockquote",
         href: "/atoms/blockquote",
@@ -55,7 +59,11 @@ export default () => {
         href: "/atoms/button",
         example: <Button>Submit</Button>,
       },
-      { name: "Checkbox", href: "/atoms/checkbox", example: <Checkbox /> },
+      {
+        name: "Checkbox",
+        href: "/atoms/checkbox",
+        example: <Checkbox />,
+      },
       {
         name: "CodeBlock",
         href: "/atoms/code-block",
@@ -66,7 +74,8 @@ export default () => {
         href: "/atoms/highlight",
         example: (
           <div>
-            The <Highlight>map</Highlight> is not the territory.
+            The <Highlight class="!bg-neutral-100">map</Highlight>{" "}
+            is not the territory.
           </div>
         ),
       },
@@ -82,12 +91,16 @@ export default () => {
           </div>
         ),
       },
-      { name: "Input", href: "/atoms/input", example: <Input /> },
+      {
+        name: "Input",
+        href: "/atoms/input",
+        example: <Input class="bg-neutral-50/20" />,
+      },
       {
         name: "Link",
         href: "/atoms/link",
         example: (
-          <div class="underline underline-offset-2 text-primary-700 cursor-pointer">
+          <div class="underline underline-offset-2 text-neutral-700 cursor-pointer text-lg">
             GitHub
           </div>
         ),
@@ -112,7 +125,7 @@ export default () => {
         name: "Select",
         href: "/atoms/select",
         example: (
-          <Select>
+          <Select class="bg-neutral-50/20">
             <option value="united-states">United States</option>
           </Select>
         ),
@@ -148,7 +161,7 @@ export default () => {
       {
         name: "Textarea",
         href: "/atoms/textarea",
-        example: <Textarea class="w-5/6"></Textarea>,
+        example: <Textarea class="w-5/6 bg-neutral-50/20"></Textarea>,
       },
       {
         name: "UL",
@@ -191,7 +204,9 @@ export default () => {
       {
         name: "FormField",
         href: "/molecules/form-field",
-        example: <FormField label="Email" />,
+        example: (
+          <FormField label="Email" inputRest={{ class: "bg-neutral-50/20" }} />
+        ),
       },
       {
         name: "Modal",
@@ -206,7 +221,7 @@ export default () => {
       {
         name: "PasswordInput",
         href: "/molecules/password-input",
-        example: <PasswordInput />,
+        example: <PasswordInput class="bg-neutral-50/20" />,
       },
       {
         name: "RadioButtonCardGroup",
@@ -242,16 +257,16 @@ export default () => {
       {
         name: "Container",
         href: "/helpers/container",
-        example: <div class="bg-neutral-50 rounded w-full h-2/3"></div>,
+        example: <div class="bg-neutral-100/50 rounded w-full h-2/3"></div>,
       },
       {
         name: "Flex",
         href: "/helpers/flex",
         example: (
           <Flex class="gap-3 justify-between items-stretch w-full h-2/3">
-            <div class="bg-neutral-50 p-2 rounded w-10"></div>
-            <div class="bg-neutral-50 p-2 rounded w-10"></div>
-            <div class="bg-neutral-50 p-2 rounded w-10"></div>
+            <div class="bg-neutral-100/50 p-2 rounded w-10"></div>
+            <div class="bg-neutral-100/50 p-2 rounded w-10"></div>
+            <div class="bg-neutral-100/50 p-2 rounded w-10"></div>
           </Flex>
         ),
       },
@@ -260,9 +275,9 @@ export default () => {
         href: "/helpers/stack",
         example: (
           <Stack class="gap-3 items-stretch w-full">
-            <div class="bg-neutral-50 p-2 rounded h-6"></div>
-            <div class="bg-neutral-50 p-2 rounded h-6"></div>
-            <div class="bg-neutral-50 p-2 rounded h-6"></div>
+            <div class="bg-neutral-100/50 p-2 rounded h-6"></div>
+            <div class="bg-neutral-100/50 p-2 rounded h-6"></div>
+            <div class="bg-neutral-100/50 p-2 rounded h-6"></div>
           </Stack>
         ),
       },
@@ -328,7 +343,7 @@ const Item = (
 ) => {
   return (
     <Link underline="none" href={href} class="w-full sm:w-auto">
-      <Card class="hover:shadow-lg sm:hover:shadow-md w-full sm:w-60">
+      <Card class="hover:shadow-lg sm:hover:shadow-md w-full sm:w-60 bg-neutral-50/20">
         <CardBody>
           <Flex
             style={{

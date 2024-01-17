@@ -26,6 +26,7 @@ export const Checkbox = (
     ...rest
   }: CheckboxType,
 ) => {
+  const { class: restClass, ...restWithoutClass } = rest;
   let className = "rfui-checkbox accent-primary-500 cursor-pointer";
 
   className += " " + (() => {
@@ -47,15 +48,15 @@ export const Checkbox = (
     className += " outline outline-offset-2 outline-supporting-red-500";
   }
 
-  if (rest.class) {
-    className += ` ${rest.class}`;
+  if (restClass) {
+    className += ` ${restClass}`;
   }
 
   return (
     <input
       type="checkbox"
       class={className}
-      {...rest}
+      {...restWithoutClass}
     />
   );
 };

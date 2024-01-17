@@ -33,7 +33,7 @@ const components = {
       name: "Blockquote",
       href: "/atoms/blockquote",
       example: (
-        <Blockquote class="text-sm">
+        <Blockquote>
           All models are wrong. Some are useful.
         </Blockquote>
       ),
@@ -47,14 +47,14 @@ const components = {
     {
       name: "CodeBlock",
       href: "/atoms/code-block",
-      example: <CodeBlock class="text-xs" code={`const n = 1;`} />,
+      example: <CodeBlock code={`const n = 1;`} />,
     },
     {
       name: "Highlight",
       href: "/atoms/highlight",
       example: (
         <div>
-          This is <Highlight>great</Highlight>
+          The <Highlight>map</Highlight> is not the territory.
         </div>
       ),
     },
@@ -74,7 +74,11 @@ const components = {
     {
       name: "Link",
       href: "/atoms/link",
-      example: <div class="cursor-pointer underline">GitHub</div>,
+      example: (
+        <div class="underline underline-offset-2 text-primary-700 cursor-pointer">
+          GitHub
+        </div>
+      ),
     },
     {
       name: "OL",
@@ -226,98 +230,10 @@ const components = {
 
 export default () => {
   return (
-    <Flex class="mt-9 gap-11">
-      <LeftNav />
-      <Main />
-    </Flex>
-  );
-};
-
-export const LeftNav = () => {
-  return (
-    <Stack class="gap-8 hidden lg:flex">
-      <div>
-        <div class="font-bold text-neutral-700 mb-4">Atoms</div>
-        <Stack class="gap-2">
-          {components.atoms.map((component) => (
-            <Link underline="hover" href={component.href}>
-              {component.name}
-            </Link>
-          ))}
-        </Stack>
-      </div>
-      <div>
-        <div class="font-bold text-neutral-700 mb-4">Molecules</div>
-        <Stack class="gap-2">
-          {components.molecules.map((component) => (
-            <Link underline="hover" href={component.href}>
-              {component.name}
-            </Link>
-          ))}
-        </Stack>
-      </div>
-      <div>
-        <div class="font-bold text-neutral-700 mb-4">Helpers</div>
-        <Stack class="gap-2">
-          {components.helpers.map((component) => (
-            <Link underline="hover" href={component.href}>
-              {component.name}
-            </Link>
-          ))}
-        </Stack>
-      </div>
-    </Stack>
-  );
-};
-
-const Main = () => {
-  const Category = ({ children }: { children: ComponentChild }) => {
-    return (
-      <div class="flex-none w-10 text-5xl mr-8 mb-6 lg:mb-auto text-neutral-900">
-        {children}
-      </div>
-    );
-  };
-  const Item = (
-    { name, href, example }: {
-      name: string;
-      href: string;
-      example: JSX.Element;
-    },
-  ) => {
-    return (
-      <Link underline="none" href={href} class="w-full lg:w-auto">
-        <Card
-          padding="sm"
-          class="hover:shadow-lg lg:hover:shadow-md w-full lg:w-48"
-        >
-          <CardBody>
-            <Flex
-              style={{
-                height: 174,
-                justifyContent: "center",
-                alignItems: "center",
-                pointerEvents: "none",
-                paddingLeft: 10,
-                paddingRight: 10,
-              }}
-            >
-              {example}
-            </Flex>
-          </CardBody>
-          <CardFooter class="text-center">
-            <code class={name.length > 15 ? "text-xs" : undefined}>{name}</code>
-          </CardFooter>
-        </Card>
-      </Link>
-    );
-  };
-
-  return (
-    <Stack class="w-full gap-10">
-      <Stack class="gap-8">
+    <Stack class="gap-10 mt-9">
+      <Stack class="gap-7">
         <Category>Atoms</Category>
-        <Flex class="flex-wrap gap-6 lg:gap-5">
+        <Flex class="flex-wrap gap-6">
           {components.atoms.map((component) => (
             <Item
               name={component.name}
@@ -327,9 +243,9 @@ const Main = () => {
           ))}
         </Flex>
       </Stack>
-      <Stack class="gap-8">
+      <Stack class="gap-7">
         <Category>Molecules</Category>
-        <Flex class="flex-wrap gap-6 lg:gap-5">
+        <Flex class="flex-wrap gap-6">
           {components.molecules.map((component) => (
             <Item
               name={component.name}
@@ -339,9 +255,9 @@ const Main = () => {
           ))}
         </Flex>
       </Stack>
-      <Stack class="gap-8">
+      <Stack class="gap-7">
         <Category>Helpers</Category>
-        <Flex class="flex-wrap gap-6 lg:gap-5">
+        <Flex class="flex-wrap gap-6">
           {components.helpers.map((component) => (
             <Item
               name={component.name}
@@ -352,5 +268,48 @@ const Main = () => {
         </Flex>
       </Stack>
     </Stack>
+  );
+};
+
+const Category = ({ children }: { children: ComponentChild }) => {
+  return (
+    <div class="flex-none text-4xl text-neutral-900">
+      {children}
+    </div>
+  );
+};
+
+const Item = (
+  { name, href, example }: {
+    name: string;
+    href: string;
+    example: JSX.Element;
+  },
+) => {
+  return (
+    <Link underline="none" href={href} class="w-full sm:w-auto">
+      <Card
+        padding="sm"
+        class="hover:shadow-lg sm:hover:shadow-md w-full sm:w-60"
+      >
+        <CardBody>
+          <Flex
+            style={{
+              height: 174,
+              justifyContent: "center",
+              alignItems: "center",
+              pointerEvents: "none",
+              paddingLeft: 10,
+              paddingRight: 10,
+            }}
+          >
+            {example}
+          </Flex>
+        </CardBody>
+        <CardFooter class="text-center">
+          <code class={name.length > 15 ? "text-xs" : undefined}>{name}</code>
+        </CardFooter>
+      </Card>
+    </Link>
   );
 };

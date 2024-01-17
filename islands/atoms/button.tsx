@@ -40,7 +40,7 @@ export const Button = (
   }: ButtonType,
 ) => {
   const { class: restClass, ...restWithoutClass } = rest;
-  let className = "";
+  let className = "font-semibold";
 
   className += " " + (() => {
     switch (size) {
@@ -74,17 +74,17 @@ export const Button = (
     } else {
       switch (variant) {
         case "primary":
-          return "bg-primary-700 text-[#fff] hover:bg-primary-500 active:bg-primary-400";
+          return "bg-primary-700 text-[#fff] hover:bg-primary-800 active:bg-primary-900";
         case "secondary":
-          return "border border-primary-700 text-primary-900 hover:bg-primary-50 active:bg-primary-50/50";
+          return "border border-primary-900/50 text-primary-900 hover:bg-primary-50/50 active:bg-primary-50";
         case "tertiary":
-          return "underline text-neutral-900 hover:bg-neutral-50 active:bg-neutral-50/50";
+          return "text-neutral-900 hover:bg-neutral-50/75 active:bg-neutral-50";
         case "danger-primary":
-          return "text-[#fff] bg-supporting-red-700 hover:bg-supporting-red-500 active:bg-supporting-red-400";
+          return "text-[#fff] bg-supporting-red-700 hover:bg-supporting-red-800 active:bg-supporting-red-900";
         case "danger-secondary":
-          return "border border-supporting-red-700 text-supporting-red-900 hover:bg-supporting-red-50 active:bg-supporting-red-50/50";
+          return "border border-supporting-red-900/50 text-supporting-red-900 hover:bg-supporting-red-50/50 active:bg-supporting-red-50";
         case "danger-tertiary":
-          return "underline text-supporting-red-900 hover:bg-supporting-red-50 active:bg-supporting-red-50/50";
+          return "text-supporting-red-900 hover:bg-supporting-red-50/75 active:bg-supporting-red-50";
       }
     }
   })();

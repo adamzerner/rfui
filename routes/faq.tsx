@@ -114,6 +114,26 @@ export default () => {
           file will provide you with all of the styles you need.
         </p>
       </Text>
+
+      <H2 inPageLink="more-customizing">
+        You're not providing me with the flexibility I need to customize one of
+        your components the way I'd like it. What should I do?
+      </H2>
+      <Text>
+        <p>
+          First, some context: the limited flexibility is likely a conscious
+          decision on my part as opposed to an oversight. Less flexibility
+          usually means less complexity. With my{" "}
+          <Link href="/about#target-audience">target audience</Link>{" "}
+          in mind, I try to weigh these (as well as other) considerations
+          against each other and make a decision.
+        </p>
+        <p>
+          If RFUI isn't giving you the flexibility you need for a given
+          component, I would recommend building your own version of the
+          component using RFUI's code as a starting point.
+        </p>
+      </Text>
     </div>
   );
 };

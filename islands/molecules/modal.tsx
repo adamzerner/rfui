@@ -1,10 +1,10 @@
-import { Signal } from "@preact/signals";
 import { ComponentChild, JSX } from "preact";
 import { useEffect, useRef } from "preact/hooks";
 import { CloseIcon } from "../icons/close-icon.tsx";
 
 export type ModalType = {
-  isOpen: Signal<boolean>;
+  isOpen: boolean;
+  close: () => void;
   heading?: string;
   children: ComponentChild;
 } & JSX.HTMLAttributes<HTMLDialogElement>;
@@ -22,6 +22,7 @@ export type ModalType = {
 export const Modal = (
   {
     isOpen,
+    close,
     heading,
     children,
     ...rest
@@ -31,19 +32,16 @@ export const Modal = (
   const { class: restClass, ...restWithoutClass } = rest;
   const containerClass =
     ` w-[600px] p-4 rounded backdrop:backdrop-blur-sm ${restClass}`;
-  const close = () => {
-    isOpen.value = false;
-  };
 
   useEffect(() => {
     if (dialogRef.current) {
-      if (isOpen.value === true) {
+      if (isOpen === true) {
         dialogRef.current.showModal();
       } else {
         dialogRef.current.close();
       }
     }
-  }, [isOpen.value]);
+  }, [isOpen]);
 
   return (
     <dialog ref={dialogRef} class={containerClass} {...restWithoutClass}>

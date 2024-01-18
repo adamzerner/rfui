@@ -1,14 +1,17 @@
 import { Button } from "@/islands/atoms/button.tsx";
 import { Modal } from "@/islands/molecules/modal.tsx";
-import { useSignal } from "@preact/signals";
 import { ComponentChild } from "preact";
+import { useState } from "preact/hooks";
 
 export const ModalExample = (
   { heading, children }: { heading?: string; children: ComponentChild },
 ) => {
-  const isOpen = useSignal(false);
+  const [isOpen, setIsOpen] = useState(false);
   const open = () => {
-    isOpen.value = true;
+    setIsOpen(true);
+  };
+  const close = () => {
+    setIsOpen(false);
   };
 
   return (
@@ -16,7 +19,7 @@ export const ModalExample = (
       <Button onClick={open}>
         Open Modal
       </Button>
-      <Modal isOpen={isOpen} heading={heading}>{children}</Modal>
+      <Modal isOpen={isOpen} close={close} heading={heading}>{children}</Modal>
     </div>
   );
 };

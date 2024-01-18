@@ -1,4 +1,3 @@
-import { Signal } from "@preact/signals";
 import { ComponentChild } from "preact";
 import { useState } from "preact/hooks";
 import { Checkbox, CheckboxType } from "../atoms/checkbox.tsx";
@@ -12,7 +11,8 @@ export type CheckboxCardGroupType = {
 };
 
 export type CheckboxCardGroupItemType = {
-  isChecked?: Signal<boolean>;
+  defaultIsChecked?: boolean;
+  onChange?: (isChecked: boolean) => void;
   checkboxRest?: Omit<CheckboxType, "size">;
   children: ComponentChild;
 };
@@ -74,27 +74,30 @@ export const CheckboxCardGroup = (
 };
 
 export const CheckboxCardGroupItem = (
-  { isChecked, checkboxRest, children }: CheckboxCardGroupItemType,
+  { defaultIsChecked = false, onChange, checkboxRest, children }:
+    CheckboxCardGroupItemType,
 ) => {
-  const [_isChecked, _setIsChecked] = useState<boolean>(
-    isChecked ? isChecked.value : false,
-  );
-  const toggleIsChecked = () => {
-    _setIsChecked((v) => !v);
+  const [isChecked, setIsChecked] = useState<boolean>(defaultIsChecked);
+  const handleClick = () => {
+    if (onChange) {
+      onChange(!isChecked);
+    }
+
+    setIsChecked(!isChecked);
   };
   let containerClass =
     "checkbox-card-group-item border p-5 rounded items-center cursor-pointer";
 
-  containerClass += _isChecked
+  containerClass += isChecked
     ? " border-2 border-neutral-500"
     : " border-2 border-neutral-100";
 
   return (
     <Flex
       class={containerClass}
-      onClick={toggleIsChecked}
+      onClick={handleClick}
     >
-      <Checkbox checked={_isChecked} {...checkboxRest} />
+      <Checkbox checked={isChecked} {...checkboxRest} />
       <div>
         {children}
       </div>

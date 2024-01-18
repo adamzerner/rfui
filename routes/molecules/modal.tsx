@@ -24,7 +24,7 @@ export default () => {
       <CodeBlock
         class="mt-4"
         language="tsx"
-        code={`<Modal isOpen={isOpen}>
+        code={`<Modal isOpen={isOpen} close={close}>
   Example
 </Modal>`}
       />
@@ -36,7 +36,7 @@ export default () => {
       <CodeBlock
         class="mt-4"
         language="tsx"
-        code={`<Modal isOpen={isOpen} heading="Modal heading">
+        code={`<Modal heading="Modal heading" isOpen={isOpen} close={close}>
   Example
 </Modal>`}
       />
@@ -45,9 +45,20 @@ export default () => {
   const props = [{
     name: "isOpen",
     required: true,
-    type: "Signal<boolean>",
+    type: "boolean",
     default: null,
     notes: null,
+  }, {
+    name: "close",
+    required: true,
+    type: "() => void",
+    default: null,
+    notes: (
+      <div>
+        Use this to set <InlineCode>isOpen</InlineCode> to{" "}
+        <InlineCode>false</InlineCode>.
+      </div>
+    ),
   }, {
     name: "heading",
     required: false,

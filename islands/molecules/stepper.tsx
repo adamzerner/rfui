@@ -7,6 +7,7 @@ export type StepperType = {
   size?: "sm" | "md" | "lg";
   rounded?: "square" | "sm" | "lg" | "full";
   startingValue?: number;
+  onChange?: (newValue: number) => void;
   min?: number;
   max?: number;
 } & Omit<JSX.HTMLAttributes<HTMLDivElement>, "size" | "min" | "max">;
@@ -25,6 +26,7 @@ export const Stepper = (
     size = "md",
     rounded = "sm",
     startingValue = 0,
+    onChange,
     min,
     max,
     ...rest
@@ -32,10 +34,18 @@ export const Stepper = (
 ) => {
   const [value, setValue] = useState(startingValue);
   const increment = () => {
-    setValue((v) => v + 1);
+    setValue(value + 1);
+
+    if (onChange) {
+      onChange(value + 1);
+    }
   };
   const decrement = () => {
-    setValue((v) => v - 1);
+    setValue(value - 1);
+
+    if (onChange) {
+      onChange(value - 1);
+    }
   };
   const isMinDisabled = min !== undefined && value <= min;
   const isMaxDisabled = max !== undefined && value >= max;

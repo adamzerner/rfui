@@ -1,6 +1,6 @@
 // deno-lint-ignore-file no-explicit-any
-import { Signal, useSignal } from "@preact/signals";
 import type { ComponentChild, JSX } from "preact";
+import { useState } from "preact/hooks";
 import { Flex } from "../helpers/flex.tsx";
 
 export type TabsType = {
@@ -24,14 +24,21 @@ export const Tabs = (
   { fullWidth = false, children, ...rest }: TabsType,
 ) => {
   const tabNames = getTabNames(children);
-  const activeTab = useSignal<string>(tabNames[0]);
-  const activeTabSection = getActiveTabSection(children, activeTab.value);
+  const [activeTab, setActiveTab] = useState<string>(tabNames[0]);
+  const activeTabSection = getActiveTabSection(children, activeTab);
 
   return (
     <div {...rest}>
       <Flex class="border-b border-b-neutral-500">
         {tabNames.map((tabName) => (
-          <Tab tabName={tabName} activeTab={activeTab} fullWidth={fullWidth} />
+          <Tab
+            tabName={tabName}
+            activeTab={activeTab}
+            onClick={() => {
+              setActiveTab(tabName);
+            }}
+            fullWidth={fullWidth}
+          />
         ))}
       </Flex>
       <div class="mt-6">{activeTabSection}</div>
@@ -60,16 +67,14 @@ const getActiveTabSection = (props: any, tabName: string) => {
 };
 
 const Tab = (
-  { tabName, activeTab, fullWidth }: {
+  { tabName, activeTab, onClick, fullWidth }: {
     tabName: string;
-    activeTab: Signal<string>;
+    activeTab: string;
+    onClick: () => void;
     fullWidth: boolean;
   },
 ) => {
-  const handleClick = () => {
-    activeTab.value = tabName;
-  };
-  const isActive = tabName === activeTab.value;
+  const isActive = tabName === activeTab;
   let containerClass = "rfui-tab px-5 text-center py-4 cursor-pointer";
 
   if (isActive) {
@@ -82,7 +87,7 @@ const Tab = (
     containerClass += " w-full";
   }
 
-  return <div class={containerClass} onClick={handleClick}>{tabName}</div>;
+  return <div class={containerClass} onClick={onClick}>{tabName}</div>;
 };
 
 export const TabSection = (

@@ -1,7 +1,6 @@
 import { CodeBlock } from "@/islands/atoms/code-block.tsx";
 import { H2 } from "@/islands/atoms/h2.tsx";
 import { InlineCode } from "@/islands/atoms/inline-code.tsx";
-import { Link } from "@/islands/atoms/link.tsx";
 import { Text } from "@/islands/atoms/text.tsx";
 import {
   Example,
@@ -151,16 +150,17 @@ export default () => {
     notes: null,
   }];
   const checkboxCardGroupItemProps = [{
-    name: "isChecked",
+    name: "defaultIsChecked",
     required: false,
-    type: "Signal<boolean>",
+    type: "boolean",
+    default: "false",
+    notes: null,
+  }, {
+    name: "onChange",
+    required: false,
+    type: "(newValue: boolean) => void",
     default: null,
-    notes: (
-      <div>
-        See the Preact docs for{" "}
-        <Link href="https://preactjs.com/guide/v10/signals">signals</Link>.
-      </div>
-    ),
+    notes: null,
   }, {
     name: "checkboxRest",
     required: false,

@@ -128,7 +128,8 @@ export default () => {
         To be used for{" "}
         <InlineCode>
           {`<input type="hidden" name={name} value={value} />`}
-        </InlineCode>.
+        </InlineCode>. Without <InlineCode>name</InlineCode>, the{" "}
+        <InlineCode>{`<input type="hidden" />`}</InlineCode> won't be present.
       </div>
     ),
   }, {
@@ -148,6 +149,12 @@ export default () => {
     required: false,
     type: "number",
     default: "0",
+    notes: null,
+  }, {
+    name: "onChange",
+    required: false,
+    type: "(newValue: number) => void",
+    default: null,
     notes: null,
   }, {
     name: "min",

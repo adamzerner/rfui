@@ -158,7 +158,7 @@ export default () => {
   }, {
     name: "onChange",
     required: false,
-    type: "(newVal: boolean) => void",
+    type: "(newValue: boolean) => void",
     default: null,
     notes: null,
   }, {

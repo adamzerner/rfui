@@ -22,7 +22,7 @@ export const InlineCode = (
   }: InlineCodeType,
 ) => {
   const { class: restClass, ...restWithoutClass } = rest;
-  let className = "p-1 bg-neutral-50";
+  let className = "p-0.5 bg-neutral-50";
 
   if (restClass) {
     className += ` ${restClass}`;

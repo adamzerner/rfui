@@ -107,9 +107,7 @@ export const Alert = (
   );
 };
 
-const getComponents = (props: any) => {
-  const children = props.props.children;
-
+const getComponents = (children: any) => {
   if (!Array.isArray(children)) {
     return { alertBody: children };
   }

@@ -63,9 +63,7 @@ export const Example = ({ children }: { children: ComponentChild }) => {
   return <div>{children}</div>;
 };
 
-const getComponents = (props: any) => {
-  const children = props.props.children;
-
+const getComponents = (children: any) => {
   if (!Array.isArray(children)) {
     return { example: children };
   }

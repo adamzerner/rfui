@@ -14,16 +14,16 @@ export default () => {
         </p>
         <CodeBlock
           language="tsx"
-          code={`export const MyComponent = ({ @.rest }) => {
+          code={`export const MyComponent = ({ ...rest }) => {
   const className = "something";
-  const { class: restClass, @.restWithoutClass } = rest;
+  const { class: restClass, ...restWithoutClass } = rest;
   
   if (restClass) {
     className += \` \${restClass}\`;
   }
   
   return (
-    <div class={className} {@.restWithoutClass}>
+    <div class={className} {...restWithoutClass}>
       {children}
     </div>
   );
@@ -84,7 +84,7 @@ export default () => {
         />
         <p>
           This is because of the{" "}
-          <InlineCode>{`{@.restWithoutClass}`}</InlineCode> in{" "}
+          <InlineCode>{`{...restWithoutClass}`}</InlineCode> in{" "}
           <InlineCode>MyComponent</InlineCode>. See MDN's docs for{" "}
           <Link href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters">
             rest parameters

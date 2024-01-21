@@ -49,6 +49,7 @@ const TheFooter = () => {
         <FooterHeading>About</FooterHeading>
         <FooterItem href="/about">About</FooterItem>
         <FooterItem href="/philosophy">Philosophy</FooterItem>
+        <FooterItem href="/target-audience">Target audience</FooterItem>
         <FooterItem href="https://github.com/users/adamzerner/projects/2">
           Roadmap
         </FooterItem>

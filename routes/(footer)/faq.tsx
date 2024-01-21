@@ -154,7 +154,7 @@ export default () => {
           First, some context: the limited flexibility is likely a conscious
           decision on my part as opposed to an oversight. Less flexibility
           usually means less complexity. With my{" "}
-          <Link href="/about#target-audience">target audience</Link>{" "}
+          <Link href="/target-audience">target audience</Link>{" "}
           in mind, I try to weigh these (as well as other) considerations
           against each other and make a decision on how much flexibility to
           provide.

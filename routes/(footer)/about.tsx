@@ -92,6 +92,10 @@ const SubmitButton = () => {
           small-to-medium need for customization, RFUI should be totally fine.
           Most apps probably fall under the latter umbrella.
         </p>
+        <p>
+          See the <Link href="/target-audience">"Target audience"</Link>{" "}
+          page for more information.
+        </p>
       </Text>
 
       <H2 inPageLink="first-second-and-third-users">

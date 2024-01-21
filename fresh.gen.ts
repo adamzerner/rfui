@@ -2,10 +2,15 @@
 // This file SHOULD be checked into source version control.
 // This file is automatically updated during development when running `dev.ts`.
 
+import * as $_footer_about from "./routes/(footer)/about.tsx";
+import * as $_footer_choose_a_personality from "./routes/(footer)/choose-a-personality.tsx";
+import * as $_footer_faq from "./routes/(footer)/faq.tsx";
+import * as $_footer_getting_started from "./routes/(footer)/getting-started.tsx";
+import * as $_footer_philosophy from "./routes/(footer)/philosophy.tsx";
+import * as $_footer_rest_parameters from "./routes/(footer)/rest-parameters.tsx";
 import * as $_404 from "./routes/_404.tsx";
 import * as $_app from "./routes/_app.tsx";
 import * as $_layout from "./routes/_layout.tsx";
-import * as $about from "./routes/about.tsx";
 import * as $atoms_badge from "./routes/atoms/badge.tsx";
 import * as $atoms_blockquote from "./routes/atoms/blockquote.tsx";
 import * as $atoms_button from "./routes/atoms/button.tsx";
@@ -25,9 +30,6 @@ import * as $atoms_table from "./routes/atoms/table.tsx";
 import * as $atoms_text from "./routes/atoms/text.tsx";
 import * as $atoms_textarea from "./routes/atoms/textarea.tsx";
 import * as $atoms_ul from "./routes/atoms/ul.tsx";
-import * as $choose_a_personality from "./routes/choose-a-personality.tsx";
-import * as $faq from "./routes/faq.tsx";
-import * as $getting_started from "./routes/getting-started.tsx";
 import * as $helpers_container from "./routes/helpers/container.tsx";
 import * as $helpers_flex from "./routes/helpers/flex.tsx";
 import * as $helpers_stack from "./routes/helpers/stack.tsx";
@@ -43,8 +45,6 @@ import * as $molecules_password_input from "./routes/molecules/password-input.ts
 import * as $molecules_radio_button_card_group from "./routes/molecules/radio-button-card-group.tsx";
 import * as $molecules_stepper from "./routes/molecules/stepper.tsx";
 import * as $molecules_tabs from "./routes/molecules/tabs.tsx";
-import * as $philosophy from "./routes/philosophy.tsx";
-import * as $rest_parameters from "./routes/rest-parameters.tsx";
 import * as $tutorials_fresh from "./routes/tutorials/fresh.tsx";
 import * as $tutorials_preact from "./routes/tutorials/preact.tsx";
 import * as $tutorials_react from "./routes/tutorials/react.tsx";
@@ -61,10 +61,15 @@ import { type Manifest } from "$fresh/server.ts";
 
 const manifest = {
   routes: {
+    "./routes/(footer)/about.tsx": $_footer_about,
+    "./routes/(footer)/choose-a-personality.tsx": $_footer_choose_a_personality,
+    "./routes/(footer)/faq.tsx": $_footer_faq,
+    "./routes/(footer)/getting-started.tsx": $_footer_getting_started,
+    "./routes/(footer)/philosophy.tsx": $_footer_philosophy,
+    "./routes/(footer)/rest-parameters.tsx": $_footer_rest_parameters,
     "./routes/_404.tsx": $_404,
     "./routes/_app.tsx": $_app,
     "./routes/_layout.tsx": $_layout,
-    "./routes/about.tsx": $about,
     "./routes/atoms/badge.tsx": $atoms_badge,
     "./routes/atoms/blockquote.tsx": $atoms_blockquote,
     "./routes/atoms/button.tsx": $atoms_button,
@@ -84,9 +89,6 @@ const manifest = {
     "./routes/atoms/text.tsx": $atoms_text,
     "./routes/atoms/textarea.tsx": $atoms_textarea,
     "./routes/atoms/ul.tsx": $atoms_ul,
-    "./routes/choose-a-personality.tsx": $choose_a_personality,
-    "./routes/faq.tsx": $faq,
-    "./routes/getting-started.tsx": $getting_started,
     "./routes/helpers/container.tsx": $helpers_container,
     "./routes/helpers/flex.tsx": $helpers_flex,
     "./routes/helpers/stack.tsx": $helpers_stack,
@@ -104,8 +106,6 @@ const manifest = {
       $molecules_radio_button_card_group,
     "./routes/molecules/stepper.tsx": $molecules_stepper,
     "./routes/molecules/tabs.tsx": $molecules_tabs,
-    "./routes/philosophy.tsx": $philosophy,
-    "./routes/rest-parameters.tsx": $rest_parameters,
     "./routes/tutorials/fresh.tsx": $tutorials_fresh,
     "./routes/tutorials/preact.tsx": $tutorials_preact,
     "./routes/tutorials/react.tsx": $tutorials_react,

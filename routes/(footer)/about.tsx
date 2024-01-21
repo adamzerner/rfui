@@ -93,7 +93,7 @@ const SubmitButton = () => {
           Most apps probably fall under the latter umbrella.
         </p>
         <p>
-          See the <Link href="/target-audience">Target audience</Link>{" "}
+          See the <Link href="/target-audience">"Target audience"</Link>{" "}
           page for more information.
         </p>
       </Text>

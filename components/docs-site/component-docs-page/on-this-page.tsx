@@ -1,5 +1,5 @@
-import { Link } from "@/islands/atoms/link.tsx";
-import { Stack } from "@/islands/helpers/stack.tsx";
+import { Link } from "@/components/atoms/link.tsx";
+import { Stack } from "@/components/helpers/stack.tsx";
 
 export const OnThisPage = ({ sectionTitles }: { sectionTitles: string[] }) => {
   return (

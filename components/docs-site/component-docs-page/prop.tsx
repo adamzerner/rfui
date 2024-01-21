@@ -1,6 +1,6 @@
-import { CodeBlock } from "@/islands/atoms/code-block.tsx";
-import { InlineCode } from "@/islands/atoms/inline-code.tsx";
-import { Stack } from "@/islands/helpers/stack.tsx";
+import { CodeBlock } from "@/components/atoms/code-block.tsx";
+import { InlineCode } from "@/components/atoms/inline-code.tsx";
+import { Stack } from "@/components/helpers/stack.tsx";
 import { ComponentChild } from "preact";
 
 export const Prop = ({ prop, children }: {

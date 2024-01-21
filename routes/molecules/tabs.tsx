@@ -1,16 +1,16 @@
-import { CodeBlock } from "@/islands/atoms/code-block.tsx";
-import { H2 } from "@/islands/atoms/h2.tsx";
-import { Text } from "@/islands/atoms/text.tsx";
+import { CodeBlock } from "@/components/atoms/code-block.tsx";
+import { H2 } from "@/components/atoms/h2.tsx";
+import { Text } from "@/components/atoms/text.tsx";
 import {
   Example,
   Header,
   Notes,
-} from "@/islands/demo/component-docs-page/header.tsx";
-import { ComponentDocsPage } from "@/islands/demo/component-docs-page/index.tsx";
-import { Prop } from "@/islands/demo/component-docs-page/prop.tsx";
-import { Props } from "@/islands/demo/component-docs-page/props.tsx";
-import { SectionType } from "@/islands/demo/component-docs-page/section-type.ts";
-import { Card } from "@/islands/molecules/card.tsx";
+} from "@/components/docs-site/component-docs-page/header.tsx";
+import { ComponentDocsPage } from "@/components/docs-site/component-docs-page/index.tsx";
+import { Prop } from "@/components/docs-site/component-docs-page/prop.tsx";
+import { Props } from "@/components/docs-site/component-docs-page/props.tsx";
+import { SectionType } from "@/components/docs-site/component-docs-page/section-type.ts";
+import { Card } from "@/components/molecules/card.tsx";
 import { Tabs, TabSection } from "@/islands/molecules/tabs.tsx";
 
 export default () => {

@@ -67,9 +67,7 @@ export const Navbar = (
 };
 
 // deno-lint-ignore no-explicit-any
-const getComponents = (props: any) => {
-  const children = props.props.children;
-
+const getComponents = (children: any) => {
   if (!Array.isArray(children)) {
     return { navbarLeft: children };
   }

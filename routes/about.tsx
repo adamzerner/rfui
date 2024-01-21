@@ -1,14 +1,14 @@
-import { Blockquote } from "@/islands/atoms/blockquote.tsx";
-import { Button } from "@/islands/atoms/button.tsx";
-import { CodeBlock } from "@/islands/atoms/code-block.tsx";
-import { H1 } from "@/islands/atoms/h1.tsx";
-import { H2 } from "@/islands/atoms/h2.tsx";
-import { InlineCode } from "@/islands/atoms/inline-code.tsx";
-import { Link } from "@/islands/atoms/link.tsx";
-import { OL } from "@/islands/atoms/ol.tsx";
-import { Text } from "@/islands/atoms/text.tsx";
-import { UL } from "@/islands/atoms/ul.tsx";
-import { Card } from "@/islands/molecules/card.tsx";
+import { Blockquote } from "@/components/atoms/blockquote.tsx";
+import { Button } from "@/components/atoms/button.tsx";
+import { CodeBlock } from "@/components/atoms/code-block.tsx";
+import { H1 } from "@/components/atoms/h1.tsx";
+import { H2 } from "@/components/atoms/h2.tsx";
+import { InlineCode } from "@/components/atoms/inline-code.tsx";
+import { Link } from "@/components/atoms/link.tsx";
+import { OL } from "@/components/atoms/ol.tsx";
+import { Text } from "@/components/atoms/text.tsx";
+import { UL } from "@/components/atoms/ul.tsx";
+import { Card } from "@/components/molecules/card.tsx";
 
 export default () => {
   return (

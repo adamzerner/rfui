@@ -1,31 +1,31 @@
-import { Badge } from "@/islands/atoms/badge.tsx";
-import { Blockquote } from "@/islands/atoms/blockquote.tsx";
-import { Button } from "@/islands/atoms/button.tsx";
-import { Checkbox } from "@/islands/atoms/checkbox.tsx";
-import { CodeBlock } from "@/islands/atoms/code-block.tsx";
-import { H1 } from "@/islands/atoms/h1.tsx";
-import { H2 } from "@/islands/atoms/h2.tsx";
-import { Highlight } from "@/islands/atoms/highlight.tsx";
-import { InlineCode } from "@/islands/atoms/inline-code.tsx";
-import { Input } from "@/islands/atoms/input.tsx";
-import { Link } from "@/islands/atoms/link.tsx";
-import { OL } from "@/islands/atoms/ol.tsx";
-import { RadioButton } from "@/islands/atoms/radio-button.tsx";
-import { Select } from "@/islands/atoms/select.tsx";
-import { Switch } from "@/islands/atoms/switch.tsx";
-import { Table } from "@/islands/atoms/table.tsx";
-import { Text } from "@/islands/atoms/text.tsx";
-import { Textarea } from "@/islands/atoms/textarea.tsx";
-import { UL } from "@/islands/atoms/ul.tsx";
-import { Flex } from "@/islands/helpers/flex.tsx";
-import { Stack } from "@/islands/helpers/stack.tsx";
+import { Badge } from "@/components/atoms/badge.tsx";
+import { Blockquote } from "@/components/atoms/blockquote.tsx";
+import { Button } from "@/components/atoms/button.tsx";
+import { Checkbox } from "@/components/atoms/checkbox.tsx";
+import { CodeBlock } from "@/components/atoms/code-block.tsx";
+import { H1 } from "@/components/atoms/h1.tsx";
+import { H2 } from "@/components/atoms/h2.tsx";
+import { Highlight } from "@/components/atoms/highlight.tsx";
+import { InlineCode } from "@/components/atoms/inline-code.tsx";
+import { Input } from "@/components/atoms/input.tsx";
+import { Link } from "@/components/atoms/link.tsx";
+import { OL } from "@/components/atoms/ol.tsx";
+import { RadioButton } from "@/components/atoms/radio-button.tsx";
+import { Select } from "@/components/atoms/select.tsx";
+import { Switch } from "@/components/atoms/switch.tsx";
+import { Table } from "@/components/atoms/table.tsx";
+import { Text } from "@/components/atoms/text.tsx";
+import { Textarea } from "@/components/atoms/textarea.tsx";
+import { UL } from "@/components/atoms/ul.tsx";
+import { Flex } from "@/components/helpers/flex.tsx";
+import { Stack } from "@/components/helpers/stack.tsx";
+import { Card, CardBody, CardFooter } from "@/components/molecules/card.tsx";
+import { FormField } from "@/components/molecules/form-field.tsx";
 import { Alert } from "@/islands/molecules/alert.tsx";
-import { Card, CardBody, CardFooter } from "@/islands/molecules/card.tsx";
 import {
   CheckboxCardGroup,
   CheckboxCardGroupItem,
 } from "@/islands/molecules/checkbox-card-group.tsx";
-import { FormField } from "@/islands/molecules/form-field.tsx";
 import { PasswordInput } from "@/islands/molecules/password-input.tsx";
 import {
   RadioButtonCardGroup,

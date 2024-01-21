@@ -1,6 +1,6 @@
-import { OnThisPage } from "@/islands/demo/component-docs-page/on-this-page.tsx";
-import { Flex } from "@/islands/helpers/flex.tsx";
+import { Flex } from "@/components/helpers/flex.tsx";
 import { ComponentChild } from "preact";
+import { OnThisPage } from "./on-this-page.tsx";
 
 export type ComponentDocsPageType = {
   sectionTitles: string[];

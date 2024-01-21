@@ -2,8 +2,8 @@
 // deno-lint-ignore-file no-explicit-any
 import type { ComponentChild, JSX } from "preact";
 import { useState } from "preact/hooks";
-import { Flex } from "../helpers/flex.tsx";
-import { CloseIcon } from "../icons/close-icon.tsx";
+import { Flex } from "../../components/helpers/flex.tsx";
+import { CloseIcon } from "../../components/icons/close-icon.tsx";
 
 export type AlertType = {
   variant?: "success" | "info" | "warning" | "danger" | "neutral";
@@ -107,9 +107,7 @@ export const Alert = (
   );
 };
 
-const getComponents = (props: any) => {
-  const children = props.props.children;
-
+const getComponents = (children: any) => {
   if (!Array.isArray(children)) {
     return { alertBody: children };
   }

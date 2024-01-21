@@ -1,8 +1,8 @@
 import { ComponentChild } from "preact";
 import { useState } from "preact/hooks";
-import { Checkbox, CheckboxType } from "../atoms/checkbox.tsx";
-import { Flex } from "../helpers/flex.tsx";
-import { Stack } from "../helpers/stack.tsx";
+import { Checkbox, CheckboxType } from "../../components/atoms/checkbox.tsx";
+import { Flex } from "../../components/helpers/flex.tsx";
+import { Stack } from "../../components/helpers/stack.tsx";
 
 export type CheckboxCardGroupType = {
   padding?: "sm" | "md" | "lg";

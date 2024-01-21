@@ -1,4 +1,4 @@
-import { Button } from "@/islands/atoms/button.tsx";
+import { Button } from "@/components/atoms/button.tsx";
 import { Modal } from "@/islands/molecules/modal.tsx";
 import { ComponentChild } from "preact";
 import { useState } from "preact/hooks";

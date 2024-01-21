@@ -1,10 +1,10 @@
 // deno-lint-ignore-file no-explicit-any
-import { CodeBlock } from "@/islands/atoms/code-block.tsx";
-import { H1 } from "@/islands/atoms/h1.tsx";
-import { Link } from "@/islands/atoms/link.tsx";
-import { Text } from "@/islands/atoms/text.tsx";
-import { Stack } from "@/islands/helpers/stack.tsx";
-import { Card, CardBody } from "@/islands/molecules/card.tsx";
+import { CodeBlock } from "@/components/atoms/code-block.tsx";
+import { H1 } from "@/components/atoms/h1.tsx";
+import { Link } from "@/components/atoms/link.tsx";
+import { Text } from "@/components/atoms/text.tsx";
+import { Stack } from "@/components/helpers/stack.tsx";
+import { Card, CardBody } from "@/components/molecules/card.tsx";
 import { ComponentChild } from "preact";
 
 export const Header = (

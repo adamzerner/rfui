@@ -1,7 +1,7 @@
 import { JSX } from "preact";
 import { useState } from "preact/hooks";
-import { Input, InputType } from "../atoms/input.tsx";
-import { Flex } from "../helpers/flex.tsx";
+import { Input, InputType } from "../../components/atoms/input.tsx";
+import { Flex } from "../../components/helpers/flex.tsx";
 
 export type PasswordInputType = {
   defaultVisibility?: "hidden" | "shown";

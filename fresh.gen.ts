@@ -45,54 +45,21 @@ import * as $molecules_stepper from "./routes/molecules/stepper.tsx";
 import * as $molecules_tabs from "./routes/molecules/tabs.tsx";
 import * as $philosophy from "./routes/philosophy.tsx";
 import * as $rest_parameters from "./routes/rest-parameters.tsx";
+import * as $test from "./routes/test.tsx";
 import * as $tutorials_fresh from "./routes/tutorials/fresh.tsx";
 import * as $tutorials_preact from "./routes/tutorials/preact.tsx";
 import * as $tutorials_react from "./routes/tutorials/react.tsx";
 import * as $tutorials_remix from "./routes/tutorials/remix.tsx";
-import * as $atoms_badge_1 from "./islands/atoms/badge.tsx";
-import * as $atoms_blockquote_1 from "./islands/atoms/blockquote.tsx";
-import * as $atoms_button_1 from "./islands/atoms/button.tsx";
-import * as $atoms_checkbox_1 from "./islands/atoms/checkbox.tsx";
-import * as $atoms_code_block_1 from "./islands/atoms/code-block.tsx";
-import * as $atoms_h1_1 from "./islands/atoms/h1.tsx";
-import * as $atoms_h2_1 from "./islands/atoms/h2.tsx";
-import * as $atoms_highlight_1 from "./islands/atoms/highlight.tsx";
-import * as $atoms_inline_code_1 from "./islands/atoms/inline-code.tsx";
-import * as $atoms_input_1 from "./islands/atoms/input.tsx";
-import * as $atoms_link_1 from "./islands/atoms/link.tsx";
-import * as $atoms_ol_1 from "./islands/atoms/ol.tsx";
-import * as $atoms_radio_button_1 from "./islands/atoms/radio-button.tsx";
-import * as $atoms_select_1 from "./islands/atoms/select.tsx";
-import * as $atoms_switch_1 from "./islands/atoms/switch.tsx";
-import * as $atoms_table_1 from "./islands/atoms/table.tsx";
-import * as $atoms_text_1 from "./islands/atoms/text.tsx";
-import * as $atoms_textarea_1 from "./islands/atoms/textarea.tsx";
-import * as $atoms_ul_1 from "./islands/atoms/ul.tsx";
-import * as $demo_component_docs_page_header from "./islands/demo/component-docs-page/header.tsx";
-import * as $demo_component_docs_page_index from "./islands/demo/component-docs-page/index.tsx";
-import * as $demo_component_docs_page_modal_example from "./islands/demo/component-docs-page/modal-example.tsx";
-import * as $demo_component_docs_page_on_this_page from "./islands/demo/component-docs-page/on-this-page.tsx";
-import * as $demo_component_docs_page_prop from "./islands/demo/component-docs-page/prop.tsx";
-import * as $demo_component_docs_page_props from "./islands/demo/component-docs-page/props.tsx";
-import * as $demo_component_docs_page_section_type from "./islands/demo/component-docs-page/section-type.ts";
-import * as $helpers_container_1 from "./islands/helpers/container.tsx";
-import * as $helpers_flex_1 from "./islands/helpers/flex.tsx";
-import * as $helpers_stack_1 from "./islands/helpers/stack.tsx";
-import * as $icons_close_icon from "./islands/icons/close-icon.tsx";
-import * as $icons_new_tab_icon from "./islands/icons/new-tab-icon.tsx";
-import * as $icons_x_circle_icon from "./islands/icons/x-circle-icon.tsx";
+import * as $docs_site_component_docs_page_modal_example from "./islands/docs-site/component-docs-page/modal-example.tsx";
+import * as $docs_site_welcome_message from "./islands/docs-site/welcome-message.tsx";
 import * as $molecules_alert_1 from "./islands/molecules/alert.tsx";
-import * as $molecules_card_1 from "./islands/molecules/card.tsx";
 import * as $molecules_checkbox_card_group_1 from "./islands/molecules/checkbox-card-group.tsx";
-import * as $molecules_footer_1 from "./islands/molecules/footer.tsx";
-import * as $molecules_form_field_1 from "./islands/molecules/form-field.tsx";
 import * as $molecules_modal_1 from "./islands/molecules/modal.tsx";
-import * as $molecules_navbar_1 from "./islands/molecules/navbar.tsx";
 import * as $molecules_password_input_1 from "./islands/molecules/password-input.tsx";
 import * as $molecules_radio_button_card_group_1 from "./islands/molecules/radio-button-card-group.tsx";
 import * as $molecules_stepper_1 from "./islands/molecules/stepper.tsx";
 import * as $molecules_tabs_1 from "./islands/molecules/tabs.tsx";
-import * as $welcome_message from "./islands/welcome-message.tsx";
+import * as $test_1 from "./islands/test.tsx";
 import { type Manifest } from "$fresh/server.ts";
 
 const manifest = {
@@ -142,65 +109,26 @@ const manifest = {
     "./routes/molecules/tabs.tsx": $molecules_tabs,
     "./routes/philosophy.tsx": $philosophy,
     "./routes/rest-parameters.tsx": $rest_parameters,
+    "./routes/test.tsx": $test,
     "./routes/tutorials/fresh.tsx": $tutorials_fresh,
     "./routes/tutorials/preact.tsx": $tutorials_preact,
     "./routes/tutorials/react.tsx": $tutorials_react,
     "./routes/tutorials/remix.tsx": $tutorials_remix,
   },
   islands: {
-    "./islands/atoms/badge.tsx": $atoms_badge_1,
-    "./islands/atoms/blockquote.tsx": $atoms_blockquote_1,
-    "./islands/atoms/button.tsx": $atoms_button_1,
-    "./islands/atoms/checkbox.tsx": $atoms_checkbox_1,
-    "./islands/atoms/code-block.tsx": $atoms_code_block_1,
-    "./islands/atoms/h1.tsx": $atoms_h1_1,
-    "./islands/atoms/h2.tsx": $atoms_h2_1,
-    "./islands/atoms/highlight.tsx": $atoms_highlight_1,
-    "./islands/atoms/inline-code.tsx": $atoms_inline_code_1,
-    "./islands/atoms/input.tsx": $atoms_input_1,
-    "./islands/atoms/link.tsx": $atoms_link_1,
-    "./islands/atoms/ol.tsx": $atoms_ol_1,
-    "./islands/atoms/radio-button.tsx": $atoms_radio_button_1,
-    "./islands/atoms/select.tsx": $atoms_select_1,
-    "./islands/atoms/switch.tsx": $atoms_switch_1,
-    "./islands/atoms/table.tsx": $atoms_table_1,
-    "./islands/atoms/text.tsx": $atoms_text_1,
-    "./islands/atoms/textarea.tsx": $atoms_textarea_1,
-    "./islands/atoms/ul.tsx": $atoms_ul_1,
-    "./islands/demo/component-docs-page/header.tsx":
-      $demo_component_docs_page_header,
-    "./islands/demo/component-docs-page/index.tsx":
-      $demo_component_docs_page_index,
-    "./islands/demo/component-docs-page/modal-example.tsx":
-      $demo_component_docs_page_modal_example,
-    "./islands/demo/component-docs-page/on-this-page.tsx":
-      $demo_component_docs_page_on_this_page,
-    "./islands/demo/component-docs-page/prop.tsx":
-      $demo_component_docs_page_prop,
-    "./islands/demo/component-docs-page/props.tsx":
-      $demo_component_docs_page_props,
-    "./islands/demo/component-docs-page/section-type.ts":
-      $demo_component_docs_page_section_type,
-    "./islands/helpers/container.tsx": $helpers_container_1,
-    "./islands/helpers/flex.tsx": $helpers_flex_1,
-    "./islands/helpers/stack.tsx": $helpers_stack_1,
-    "./islands/icons/close-icon.tsx": $icons_close_icon,
-    "./islands/icons/new-tab-icon.tsx": $icons_new_tab_icon,
-    "./islands/icons/x-circle-icon.tsx": $icons_x_circle_icon,
+    "./islands/docs-site/component-docs-page/modal-example.tsx":
+      $docs_site_component_docs_page_modal_example,
+    "./islands/docs-site/welcome-message.tsx": $docs_site_welcome_message,
     "./islands/molecules/alert.tsx": $molecules_alert_1,
-    "./islands/molecules/card.tsx": $molecules_card_1,
     "./islands/molecules/checkbox-card-group.tsx":
       $molecules_checkbox_card_group_1,
-    "./islands/molecules/footer.tsx": $molecules_footer_1,
-    "./islands/molecules/form-field.tsx": $molecules_form_field_1,
     "./islands/molecules/modal.tsx": $molecules_modal_1,
-    "./islands/molecules/navbar.tsx": $molecules_navbar_1,
     "./islands/molecules/password-input.tsx": $molecules_password_input_1,
     "./islands/molecules/radio-button-card-group.tsx":
       $molecules_radio_button_card_group_1,
     "./islands/molecules/stepper.tsx": $molecules_stepper_1,
     "./islands/molecules/tabs.tsx": $molecules_tabs_1,
-    "./islands/welcome-message.tsx": $welcome_message,
+    "./islands/test.tsx": $test_1,
   },
   baseUrl: import.meta.url,
 } satisfies Manifest;

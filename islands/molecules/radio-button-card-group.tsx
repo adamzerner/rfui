@@ -1,8 +1,11 @@
 import { Signal } from "@preact/signals";
 import { ComponentChild } from "preact";
-import { RadioButton, RadioButtonType } from "../atoms/radio-button.tsx";
-import { Flex } from "../helpers/flex.tsx";
-import { Stack } from "../helpers/stack.tsx";
+import {
+  RadioButton,
+  RadioButtonType,
+} from "../../components/atoms/radio-button.tsx";
+import { Flex } from "../../components/helpers/flex.tsx";
+import { Stack } from "../../components/helpers/stack.tsx";
 
 export type RadioButtonCardGroupType = {
   padding?: "sm" | "md" | "lg";

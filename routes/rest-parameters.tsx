@@ -1,8 +1,8 @@
-import { CodeBlock } from "@/islands/atoms/code-block.tsx";
-import { H1 } from "@/islands/atoms/h1.tsx";
-import { InlineCode } from "@/islands/atoms/inline-code.tsx";
-import { Link } from "@/islands/atoms/link.tsx";
-import { Text } from "@/islands/atoms/text.tsx";
+import { CodeBlock } from "@/components/atoms/code-block.tsx";
+import { H1 } from "@/components/atoms/h1.tsx";
+import { InlineCode } from "@/components/atoms/inline-code.tsx";
+import { Link } from "@/components/atoms/link.tsx";
+import { Text } from "@/components/atoms/text.tsx";
 
 export default () => {
   return (
@@ -14,16 +14,16 @@ export default () => {
         </p>
         <CodeBlock
           language="tsx"
-          code={`export const MyComponent = ({ ...rest }) => {
+          code={`export const MyComponent = ({ @.rest }) => {
   const className = "something";
-  const { class: restClass, ...restWithoutClass } = rest;
+  const { class: restClass, @.restWithoutClass } = rest;
   
   if (restClass) {
     className += \` \${restClass}\`;
   }
   
   return (
-    <div class={className} {...restWithoutClass}>
+    <div class={className} {@.restWithoutClass}>
       {children}
     </div>
   );
@@ -84,7 +84,7 @@ export default () => {
         />
         <p>
           This is because of the{" "}
-          <InlineCode>{`{...restWithoutClass}`}</InlineCode> in{" "}
+          <InlineCode>{`{@.restWithoutClass}`}</InlineCode> in{" "}
           <InlineCode>MyComponent</InlineCode>. See MDN's docs for{" "}
           <Link href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters">
             rest parameters

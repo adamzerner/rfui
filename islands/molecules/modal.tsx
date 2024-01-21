@@ -1,6 +1,6 @@
 import { ComponentChild, JSX } from "preact";
 import { useEffect, useRef } from "preact/hooks";
-import { CloseIcon } from "../icons/close-icon.tsx";
+import { CloseIcon } from "../../components/icons/close-icon.tsx";
 
 export type ModalType = {
   isOpen: boolean;

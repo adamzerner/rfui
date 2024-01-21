@@ -1,21 +1,21 @@
-import { CodeBlock } from "@/islands/atoms/code-block.tsx";
-import { H2 } from "@/islands/atoms/h2.tsx";
-import { InlineCode } from "@/islands/atoms/inline-code.tsx";
-import { Link } from "@/islands/atoms/link.tsx";
-import { OL } from "@/islands/atoms/ol.tsx";
-import { Text } from "@/islands/atoms/text.tsx";
-import { UL } from "@/islands/atoms/ul.tsx";
+import { CodeBlock } from "@/components/atoms/code-block.tsx";
+import { H2 } from "@/components/atoms/h2.tsx";
+import { InlineCode } from "@/components/atoms/inline-code.tsx";
+import { Link } from "@/components/atoms/link.tsx";
+import { OL } from "@/components/atoms/ol.tsx";
+import { Text } from "@/components/atoms/text.tsx";
+import { UL } from "@/components/atoms/ul.tsx";
 import {
   Example,
   Header,
   Notes,
-} from "@/islands/demo/component-docs-page/header.tsx";
-import { ComponentDocsPage } from "@/islands/demo/component-docs-page/index.tsx";
-import { Prop } from "@/islands/demo/component-docs-page/prop.tsx";
-import { Props } from "@/islands/demo/component-docs-page/props.tsx";
-import { SectionType } from "@/islands/demo/component-docs-page/section-type.ts";
-import { Stack } from "@/islands/helpers/stack.tsx";
-import { Card } from "@/islands/molecules/card.tsx";
+} from "@/components/docs-site/component-docs-page/header.tsx";
+import { ComponentDocsPage } from "@/components/docs-site/component-docs-page/index.tsx";
+import { Prop } from "@/components/docs-site/component-docs-page/prop.tsx";
+import { Props } from "@/components/docs-site/component-docs-page/props.tsx";
+import { SectionType } from "@/components/docs-site/component-docs-page/section-type.ts";
+import { Stack } from "@/components/helpers/stack.tsx";
+import { Card } from "@/components/molecules/card.tsx";
 import { PasswordInput } from "@/islands/molecules/password-input.tsx";
 
 export default () => {

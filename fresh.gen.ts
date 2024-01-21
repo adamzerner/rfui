@@ -45,7 +45,6 @@ import * as $molecules_stepper from "./routes/molecules/stepper.tsx";
 import * as $molecules_tabs from "./routes/molecules/tabs.tsx";
 import * as $philosophy from "./routes/philosophy.tsx";
 import * as $rest_parameters from "./routes/rest-parameters.tsx";
-import * as $test from "./routes/test.tsx";
 import * as $tutorials_fresh from "./routes/tutorials/fresh.tsx";
 import * as $tutorials_preact from "./routes/tutorials/preact.tsx";
 import * as $tutorials_react from "./routes/tutorials/react.tsx";
@@ -58,7 +57,6 @@ import * as $molecules_password_input_1 from "./islands/molecules/password-input
 import * as $molecules_radio_button_card_group_1 from "./islands/molecules/radio-button-card-group.tsx";
 import * as $molecules_stepper_1 from "./islands/molecules/stepper.tsx";
 import * as $molecules_tabs_1 from "./islands/molecules/tabs.tsx";
-import * as $test_1 from "./islands/test.tsx";
 import { type Manifest } from "$fresh/server.ts";
 
 const manifest = {
@@ -108,7 +106,6 @@ const manifest = {
     "./routes/molecules/tabs.tsx": $molecules_tabs,
     "./routes/philosophy.tsx": $philosophy,
     "./routes/rest-parameters.tsx": $rest_parameters,
-    "./routes/test.tsx": $test,
     "./routes/tutorials/fresh.tsx": $tutorials_fresh,
     "./routes/tutorials/preact.tsx": $tutorials_preact,
     "./routes/tutorials/react.tsx": $tutorials_react,
@@ -126,7 +123,6 @@ const manifest = {
       $molecules_radio_button_card_group_1,
     "./islands/molecules/stepper.tsx": $molecules_stepper_1,
     "./islands/molecules/tabs.tsx": $molecules_tabs_1,
-    "./islands/test.tsx": $test_1,
   },
   baseUrl: import.meta.url,
 } satisfies Manifest;

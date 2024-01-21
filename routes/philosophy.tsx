@@ -228,7 +228,8 @@ export default () => {
         </p>
         <p>
           But I still don't want to use them. Why? Because they don't actually
-          give me code. Like, as a developer, I want to just be able to do:
+          give me code. Like, as a developer, I don't want to be handed a Figma
+          file. I'm lazy. I just want to be able to do:
         </p>
         <CodeBlock
           language="tsx"
@@ -246,7 +247,7 @@ export default () => {
           <em>code examples</em>. But they don't actually provide you with{" "}
           <em>components</em>. You'd have to write the components based off of
           the code examples they provide you with. Doing that is just very time
-          consuming and not something I want to deal with.
+          consuming and not something that I want to deal with.
         </p>
       </Text>
 

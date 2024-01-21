@@ -207,19 +207,6 @@ const SubmitButton = () => {
             <InlineCode>_newTab</InlineCode>. It also elaborates and provides a
             reference in the JSDoc documentation.
           </li>
-          <li>
-            It is{" "}
-            <Link href="https://ux.stackexchange.com/q/56023/39046">
-              recommended
-            </Link>{" "}
-            to place icons to the left of button content rather than the right.
-            To nudge you in this direction, the <InlineCode>Button</InlineCode>
-            {" "}
-            component accepts parameters of <InlineCode>icon</InlineCode> and
-            {" "}
-            <InlineCode>_rightIcon</InlineCode>. It also explains the
-            recommendation and links to a source via JSDoc.
-          </li>
         </UL>
       </Text>
 

@@ -53,6 +53,21 @@ export default () => {
         </p>
       </Text>
 
+      <H2 inPageLink="fresh">
+        So basically, my options are to use RFUI for Fresh projects?
+      </H2>
+      <Text>
+        <p>
+          Sorta. There are{" "}
+          <Link href="https://deno.com/blog/web-frameworks-on-deno">
+            other options
+          </Link>{" "}
+          for building Preact + Deno apps, but I think that{" "}
+          <Link href="https://fresh.deno.dev/">Fresh</Link>{" "}
+          is the most mature and popular one.
+        </p>
+      </Text>
+
       <H2 inPageLink="tailwind">
         What's with this <InlineCode>class="gap-5"</InlineCode> stuff?
       </H2>

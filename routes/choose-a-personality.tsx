@@ -3,6 +3,7 @@ import { H1 } from "@/components/atoms/h1.tsx";
 import { H2 } from "@/components/atoms/h2.tsx";
 import { InlineCode } from "@/components/atoms/inline-code.tsx";
 import { Link } from "@/components/atoms/link.tsx";
+import { OL } from "@/components/atoms/ol.tsx";
 import { Text } from "@/components/atoms/text.tsx";
 import { UL } from "@/components/atoms/ul.tsx";
 
@@ -16,9 +17,20 @@ export default () => {
           project is to decide on the personality.
         </p>
         <p>
-          This is a complicated topic that is beyond the scope of this docs
-          page. However, to get you started, it can be helpful to think of
-          personalities as varying on a spectrum of how serious they are.
+          This is a complicated topic. A thorough treatment is beyond the scope
+          of this docs page. The goals of this docs page are to:
+        </p>
+        <OL>
+          <li>
+            Provide you with a very brief overview.
+          </li>
+          <li>
+            Propose a few concrete decisions that you should make.
+          </li>
+        </OL>
+        <p>
+          It can be helpful to think of personalities as varying on a spectrum
+          of how serious they are.
         </p>
         <img
           src="/personality-spectrum.png"
@@ -26,9 +38,8 @@ export default () => {
           class="my-8"
         />
         <p>
-          On one end of the spectrum are banking apps that are very serious. On
-          the other end of the spectrum are social media apps that try to be
-          less serious and more fun.
+          Banking apps tend to go with a pretty serious personality. On the
+          other hand, social media apps tend to be pretty lighthearted.
         </p>
         <p>
           How do you convey the intended level of seriousness? Here are some
@@ -48,6 +59,24 @@ export default () => {
           <li>
             <strong>Color</strong>. Blue is known to be pretty neutral. Pink is
             fun and light. Gold is sophisticated and serious.
+          </li>
+        </UL>
+        <p>So then, decide what you want to do for each of the three.</p>
+        <UL>
+          <li>
+            To convey a serious personality, you'll probably choose square
+            corners instead of rounded ones, a serif font, and a dark primary
+            color.
+          </li>
+          <li>
+            To convey a very lighthearted and fun personality, you might want to
+            utilize large rounded corners, a fun primary color like pink or
+            orange, and a sans serif font that feels playful.
+          </li>
+          <li>
+            To convey a pretty "standard" or "normal" feeling personality, use
+            slightly rounded corners, a popular sans serif font, and perhaps a
+            dark blue as your primary color.
           </li>
         </UL>
       </Text>

@@ -38,8 +38,8 @@ export default () => {
         <CodeBlock code={`deno run -A -r https://fresh.deno.dev`} />
         <Alert isDismissable={false}>
           When creating the project you'll get a prompt asking whether or not
-          you want to use Tailwind CSS. You can choose "yes" or "no". RFUI
-          doesn't care.
+          you want to use Tailwind CSS. You can choose "yes" or "no". RFUI{" "}
+          <Link href="/faq#tailwind-css">doesn't care</Link>.
         </Alert>
       </Text>
 
@@ -162,6 +162,10 @@ export default function Home() {
             CSS variables
           </Link>. You can change their values if you'd like to customize your
           app's look and feel.
+        </p>
+        <p>
+          Here's a CSS formater you can use:{" "}
+          <Link href="https://webformatter.com/css">Web Formatter</Link>.
         </p>
       </Text>
 

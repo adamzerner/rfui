@@ -15,11 +15,26 @@ export default () => {
       </H2>
       <Text>
         <p>
-          I don't have it on NPM yet, sorry. I do have plans to add it though.
-          See{" "}
+          I don't have it on NPM yet, sorry.
+        </p>
+        <p>
+          I do have plans to add it though. See{" "}
           <Link href="https://github.com/adamzerner/rfui/issues/1">
             this GitHub issue
           </Link>.
+        </p>
+      </Text>
+
+      <H2 inPageLink="deno">
+        Well then how do I use RFUI in a non-Deno project?
+      </H2>
+      <Text>
+        <p>
+          Right now you can't. Sorry. But once I{" "}
+          <Link href="https://github.com/adamzerner/rfui/issues/1">
+            figure out
+          </Link>{" "}
+          how to publish to NPM you will be able to.
         </p>
       </Text>
 
@@ -126,7 +141,8 @@ export default () => {
           usually means less complexity. With my{" "}
           <Link href="/about#target-audience">target audience</Link>{" "}
           in mind, I try to weigh these (as well as other) considerations
-          against each other and make a decision.
+          against each other and make a decision on how much flexibility to
+          provide.
         </p>
         <p>
           If RFUI isn't giving you the flexibility you need for a given

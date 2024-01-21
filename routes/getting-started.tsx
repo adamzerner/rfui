@@ -17,23 +17,23 @@ export default () => {
           <AlertBody>
             <Text>
               <p>
-                There are some tutorials for getting set up with RFUI for
-                various web frameworks (see the footer). Along the lines of how
-                The Documentation System{" "}
+                This is a{" "}
+                <Link href="https://documentation.divio.com/how-to-guides.html">
+                  how-to guide
+                </Link>, not a{" "}
                 <Link href="https://documentation.divio.com/tutorials.html">
-                  describes it
-                </Link>, those tutorials hold your hand through a step-by-step
-                process of getting set up.
+                  tutorial
+                </Link>.
               </p>
               <p>
-                On the other hand, this "Getting started" page is more of a{" "}
-                <Link href="https://documentation.divio.com/how-to-guides.html">
-                  "How-to guide"
-                </Link>. It describes the steps for getting started in a more
-                general sense, as opposed to being specfic to a certain
-                framework or platform. And it is written with a target audience
-                in mind who is more familiar with various web development
-                things.
+                Tutorials walk you through the process of getting set up in a
+                specific web framework like Fresh, Remix or NextJS.
+              </p>
+              <p>
+                How-to guides on the other hand are more general. They aren't
+                specific to a given web framework. They are an outline of the
+                high-level steps one needs to take. The target audience is
+                expected to need less hand-holding.
               </p>
             </Text>
           </AlertBody>
@@ -113,7 +113,7 @@ export default () => {
       <Text>
         <p>
           It is usually a good idea to decide upfront on how serious or playful
-          you want the tone to be. See{" "}
+          you want the tone of your website to be. See{" "}
           "<Link href="/choose-a-personality">Choose a personality</Link>".
         </p>
       </Text>
@@ -142,6 +142,10 @@ export default () => {
             CSS variables
           </Link>. You can change their values if you'd like to customize your
           app's look and feel.
+        </p>
+        <p>
+          Here's a CSS formater you can use:{" "}
+          <Link href="https://webformatter.com/css">Web Formatter</Link>.
         </p>
       </Text>
 

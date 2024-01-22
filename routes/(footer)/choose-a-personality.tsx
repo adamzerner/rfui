@@ -7,6 +7,7 @@ import { OL } from "@/components/atoms/ol.tsx";
 import { Text } from "@/components/atoms/text.tsx";
 import { UL } from "@/components/atoms/ul.tsx";
 import { Stack } from "@/components/helpers/stack.tsx";
+import { Alert } from "@/islands/molecules/alert.tsx";
 
 export default () => {
   return (
@@ -50,13 +51,12 @@ export default () => {
         </p>
         <p>
           There is a lot to say about how to convey a given personality, most of
-          which is beyond the scope of this page. Here, I just want to {"1)"}
-          {" "}
-          give you the{" "}
+          which is beyond the scope of this page. Here, I just want to give you
+          the{" "}
           <Link href="https://betterexplained.com/articles/understanding-the-pareto-principle-the-8020-rule/">
             80/20
           </Link>{" "}
-          version and {"2)"} provide some resources for those who are curious.
+          version.
         </p>
       </Text>
 
@@ -171,7 +171,7 @@ export default () => {
           For font recommendations, check out{" "}
           <Link href="https://practicaltypography.com/font-recommendations.html">
             Butterick’s Practical Typography
-          </Link>
+          </Link>.
         </p>
         <p>
           In fact, make sure you check out{" "}
@@ -192,6 +192,55 @@ export default () => {
             their docs
           </Link>.
         </p>
+      </Text>
+
+      <H2 inPageLink="color">Color</H2>
+      <Text>
+        <p>
+          In general, certain colors do have certain "vibes".
+        </p>
+        <UL>
+          <li>Blue is known to be pretty neutral.</li>
+          <li>Pink is a good example of a color that is playful and fun.</li>
+          <li>Brown feels serious.</li>
+          <li>Gold feels elegant.</li>
+        </UL>
+        <p>
+          So in choosing your color palette, you'll probably want to choose a
+          primary color based on the "vibe" you want your app to have.
+        </p>
+        <Alert isDismissable={false}>
+          To set your color palette you can edit the CSS variables in{" "}
+          <InlineCode>rfui.css</InlineCode>. For example,{" "}
+          <InlineCode>--color-primary-50</InlineCode>,{" "}
+          <InlineCode>--color-primary-100</InlineCode>, etc. See{" "}
+          <Link href="/getting-started#customize-css-variables">here</Link>{" "}
+          for more information.
+        </Alert>
+        <p>
+          But wait! You're not a professional designer. Or maybe you are, but
+          you're more focused on UX and haven't really training in visual design
+          or color theory. So how do you create a whole color palette?
+        </p>
+        <p>
+          You don't. Doing so takes skill, training, and experience. Instead,
+          you can cheat by finding a color palette online that has been designed
+          by a professional.
+        </p>
+        <UL>
+          <li>
+            <Link href="https://colorhunt.co/">Color Hunt</Link>{" "}
+            is a pretty good resource.
+          </li>
+          <li>
+            You can pay someone to design a custom color palette for you.
+          </li>
+          <li>
+            You can also just use the colors that RFUI comes with. I got them
+            from the book{" "}
+            <Link href="https://www.refactoringui.com/">Refactoring UI</Link>.
+          </li>
+        </UL>
       </Text>
     </div>
   );

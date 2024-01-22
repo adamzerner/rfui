@@ -6,6 +6,8 @@ import { Link } from "@/components/atoms/link.tsx";
 import { OL } from "@/components/atoms/ol.tsx";
 import { Text } from "@/components/atoms/text.tsx";
 import { UL } from "@/components/atoms/ul.tsx";
+import { Stack } from "@/components/helpers/stack.tsx";
+import { Alert } from "@/islands/molecules/alert.tsx";
 
 export default () => {
   return (
@@ -13,120 +15,119 @@ export default () => {
       <H1>Choose a personality</H1>
       <Text>
         <p>
-          One of the first things you typically want to do when starting a new
-          project is to decide on the personality.
+          When starting a new project, you should decide on what personality you
+          want it to have. Check out these examples from{" "}
+          <Link href="https://tailwindcss.com/#build-anything">
+            Tailwind CSS
+          </Link>:
+        </p>
+        <Stack class="gap-8 my-5 w-14 max-w-full">
+          <img
+            src="/images/simple.png"
+            alt="Example of simple personality"
+            class="block"
+          />
+          <img
+            src="/images/playful.png"
+            alt="Example of playful personality"
+            class="block"
+          />
+          <img
+            src="/images/elegant.png"
+            alt="Example of elegant personality"
+            class="block"
+          />
+          <img
+            src="/images/brutalist.png"
+            alt="Example of brutalist personality"
+            class="block"
+          />
+        </Stack>
+        <p>
+          A financial services company might want to aim for an elegant
+          personality, whereas an educational game for kids would probably
+          prefer a playful one. Deciding in advance what you are aiming for is
+          helpful.
         </p>
         <p>
-          This is a complicated topic. A thorough treatment is beyond the scope
-          of this docs page. The goals of this docs page are to:
+          There is a lot to say about how to convey a given personality, most of
+          which is beyond the scope of this page. Here, I just want to give you
+          the{" "}
+          <Link href="https://betterexplained.com/articles/understanding-the-pareto-principle-the-8020-rule/">
+            80/20
+          </Link>{" "}
+          version.
         </p>
-        <OL>
-          <li>
-            Provide you with a very brief overview.
-          </li>
-          <li>
-            Propose a few concrete decisions that you should make.
-          </li>
-        </OL>
+      </Text>
+
+      <H2 inPageLink="spectrum">Spectrum</H2>
+      <Text>
         <p>
-          It can be helpful to think of personalities as varying on a spectrum
-          of how serious they are.
+          It is helpful to think of personalities as falling along a spectrum of
+          how "serious" they are.
         </p>
         <img
-          src="/personality-spectrum.png"
-          alt="Spectrum of personality seriousness"
-          class="my-8"
+          class="my-5"
+          src="/images/personality-spectrum.png"
+          alt="Personality spectrum"
         />
         <p>
-          Banking apps tend to go with a pretty serious personality. On the
-          other hand, social media apps tend to be pretty lighthearted.
+          From there, you can control how "serious" your app feels by tweaking
+          the following three variables:
         </p>
-        <p>
-          How do you convey the intended level of seriousness? Here are some
-          popular options.
-        </p>
-        <UL>
-          <li>
-            <strong>Roundedness</strong>. When components like buttons, cards
-            and input fields are more round, it conveys a more playful and less
-            serious tone.
-          </li>
-          <li>
-            <strong>Font choice</strong>. Serifs are more serious. Rounded sans
-            serifs are playful. Then there are less rounded, more neutral sans
-            serifs that are in the middle.
-          </li>
-          <li>
-            <strong>Color</strong>. Blue is known to be pretty neutral. Pink is
-            fun and light. Gold is sophisticated and serious.
-          </li>
-        </UL>
-        <p>So then, decide what you want to do for each of the three.</p>
-        <UL>
-          <li>
-            To convey a serious personality, you'll probably choose square
-            corners instead of rounded ones, a serif font, and a dark primary
-            color.
-          </li>
-          <li>
-            To convey a very lighthearted and fun personality, you might want to
-            utilize large rounded corners, a fun primary color like pink or
-            orange, and a sans serif font that feels playful.
-          </li>
-          <li>
-            To convey a pretty "standard" or "normal" feeling personality, use
-            slightly rounded corners, a popular sans serif font, and perhaps a
-            dark blue as your primary color.
-          </li>
-        </UL>
-      </Text>
-
-      <H2 inPageLink="color">Color</H2>
-      <Text>
-        <p>
-          Color is easy enough to set up at the beginning. Just{" "}
-          <Link href="http://localhost:8000/getting-started#customize-css-variables">
-            customize the CSS variables
-          </Link>{" "}
-          in <InlineCode>rfui.css</InlineCode>.
-        </p>
-      </Text>
-
-      <H2 inPageLink="font">Font</H2>
-      <Text>
-        <p>
-          For fonts, I'd recommend referring to the excellent book{" "}
-          <Link href="https://practicaltypography.com/">
-            Practical Typography
-          </Link>.
-        </p>
-        <p>
-          RFUI was designed with the{" "}
-          <Link href="https://fonts.google.com/specimen/Open+Sans">
-            Open Sans font
-          </Link>. All of the examples you see in the <Link href="/">docs</Link>
-          {" "}
-          use this font.
-        </p>
-        <p>
-          To use this font, refer to{" "}
-          <Link href="https://fonts.google.com/specimen/Open+Sans">
-            their docs
-          </Link>.
-        </p>
+        <OL>
+          <li>Roundedness</li>
+          <li>Font</li>
+          <li>Color</li>
+        </OL>
       </Text>
 
       <H2 inPageLink="roundedness">Roundedness</H2>
       <Text>
         <p>
-          Roundedness is perhaps not quite as straightforward. Various RFUI
-          components take <InlineCode>rounded</InlineCode>{" "}
-          as a property with possible values of{" "}
-          <InlineCode>"square"</InlineCode>, <InlineCode>"sm"</InlineCode>,{" "}
-          <InlineCode>"lg"</InlineCode> and{" "}
-          <InlineCode>"full"</InlineCode>. You'll probably want to pick one of
-          these values and use it throughout your app.
+          Various UI components have corners. Buttons, cards, inputs, badges,
+          etc.
         </p>
+        <UL>
+          <li>
+            If those corners are very rounded, the app will feel very playful
+            and not very serious.
+          </li>
+          <li>
+            If those corners are square, or perhaps only slightly rounded, the
+            app will feel serious.
+          </li>
+        </UL>
+        <p>
+          With RFUI, the components will accepted a{" "}
+          <InlineCode>rounded</InlineCode> property. The possible values will be
+          {" "}
+          <InlineCode>"square"</InlineCode>, <InlineCode>"sm"</InlineCode>,{" "}
+          <InlineCode>"lg"</InlineCode>, and sometimes{" "}
+          <InlineCode>"full"</InlineCode>. Check out the{" "}
+          <Link href="/atoms/button#rounded">
+            <InlineCode>Button</InlineCode>
+          </Link>{" "}
+          as an example.
+        </p>
+        <p>
+          So basically, I'd recommend choosing a value and sticking with it
+          throughout your app. For example:
+        </p>
+        <UL>
+          <li>
+            If you are going for a serious personality, choose{" "}
+            <InlineCode>"square"</InlineCode> or <InlineCode>"sm"</InlineCode>.
+          </li>
+          <li>
+            If you are going for a playful personality, choose{" "}
+            <InlineCode>"lg"</InlineCode> or <InlineCode>"full"</InlineCode>.
+          </li>
+          <li>
+            If you are going for a more neutral personality, choose{" "}
+            <InlineCode>"sm"</InlineCode> or <InlineCode>"lg"</InlineCode>.
+          </li>
+        </UL>
         <p>
           Here's one approach you can take to achieve this. Have some sort of
           global <InlineCode>constants.ts</InlineCode>{" "}
@@ -141,6 +142,105 @@ export default () => {
   Example
 </Button>`}
         />
+      </Text>
+
+      <H2 inPageLink="font">Font</H2>
+      <Text>
+        <p>
+          For fonts, there are two broad categories: serifs and sans serifs.
+        </p>
+        <img
+          src="https://ryanrhoten.com/wp-content/uploads/2016/01/serif-vs-sans-serif.png"
+          alt="Serif vs sans-serif fonts"
+        />
+        <p>
+          As you can see in the image above, serifs have those "little thingies"
+          on the letters, whereas sans serifs do not.
+        </p>
+        <UL>
+          <li>Serif fonts convey a serious personality.</li>
+          <li>
+            Sans serifs convey a more straightforward, neutral personality.
+          </li>
+          <li>
+            Sans serifs that are particularly rounded and "bubble-y" convey a
+            playful, light personality.
+          </li>
+        </UL>
+        <p>
+          For font recommendations, check out{" "}
+          <Link href="https://practicaltypography.com/font-recommendations.html">
+            Butterick’s Practical Typography
+          </Link>.
+        </p>
+        <p>
+          In fact, make sure you check out{" "}
+          <Link href="https://practicaltypography.com/summary-of-key-rules.html">
+            "Summary of key rules"
+          </Link>{" "}
+          from Butterick's Practical Typography as well, and make sure that you
+          follow them.
+        </p>
+        <p>
+          RFUI was designed with the{" "}
+          <Link href="https://fonts.google.com/specimen/Open+Sans">
+            Open Sans font
+          </Link>. All of the examples you see in the <Link href="/">docs</Link>
+          {" "}
+          use this font. To use this font, refer to{" "}
+          <Link href="https://fonts.google.com/specimen/Open+Sans">
+            their docs
+          </Link>.
+        </p>
+      </Text>
+
+      <H2 inPageLink="color">Color</H2>
+      <Text>
+        <p>
+          In general, certain colors do have certain "vibes".
+        </p>
+        <UL>
+          <li>Blue is known to be pretty neutral.</li>
+          <li>Pink is a good example of a color that is playful and fun.</li>
+          <li>Brown feels serious.</li>
+          <li>Gold feels elegant.</li>
+        </UL>
+        <p>
+          So in choosing your color palette, you'll probably want to choose a
+          primary color based on the "vibe" you want your app to have.
+        </p>
+        <Alert isDismissable={false}>
+          To set your color palette you can edit the CSS variables in{" "}
+          <InlineCode>rfui.css</InlineCode>. For example,{" "}
+          <InlineCode>--color-primary-50</InlineCode>,{" "}
+          <InlineCode>--color-primary-100</InlineCode>, etc. See{" "}
+          <Link href="/getting-started#customize-css-variables">here</Link>{" "}
+          for more information.
+        </Alert>
+        <p>
+          But wait! You're not a professional designer. Or maybe you are, but
+          you're more focused on UX and haven't really training in visual design
+          or color theory. So how do you create a whole color palette?
+        </p>
+        <p>
+          You don't. Doing so takes skill, training, and experience. Instead,
+          you can cheat by finding a color palette online that has been designed
+          by a professional.
+        </p>
+        <UL>
+          <li>
+            <Link href="https://colorhunt.co/">Color Hunt</Link>{" "}
+            is a pretty good resource.
+          </li>
+          <li>
+            You can pay someone to design a custom color palette for you.
+          </li>
+          <li>
+            You can also just use the colors that RFUI comes with. I got them
+            from the book{" "}
+            <Link href="https://www.refactoringui.com/">Refactoring UI</Link>.
+          </li>
+        </UL>
       </Text>
     </div>
   );

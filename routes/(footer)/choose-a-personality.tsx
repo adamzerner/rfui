@@ -90,8 +90,7 @@ export default () => {
         </p>
         <UL>
           <li>
-            If those corners are very rounded, the app will feel very playful
-            and not very serious.
+            If those corners are very rounded, the app will feel playful.
           </li>
           <li>
             If those corners are square, or perhaps only slightly rounded, the
@@ -104,7 +103,7 @@ export default () => {
           {" "}
           <InlineCode>"square"</InlineCode>, <InlineCode>"sm"</InlineCode>,{" "}
           <InlineCode>"lg"</InlineCode>, and sometimes{" "}
-          <InlineCode>"full"</InlineCode>. Check out the{" "}
+          <InlineCode>"full"</InlineCode>. Check out{" "}
           <Link href="/atoms/button#rounded">
             <InlineCode>Button</InlineCode>
           </Link>{" "}
@@ -174,7 +173,7 @@ export default () => {
           </Link>.
         </p>
         <p>
-          In fact, make sure you check out{" "}
+          In fact, check out{" "}
           <Link href="https://practicaltypography.com/summary-of-key-rules.html">
             "Summary of key rules"
           </Link>{" "}

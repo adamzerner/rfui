@@ -12,8 +12,8 @@ export default () => {
         <p>
           The first thing I mentioned on the{" "}
           <Link href="/philosophy">philosophy page</Link>{" "}
-          is that I am for RFUI to be opinionated. If you aim to please everyone
-          you end up pleasing no one.
+          is that I aim for RFUI to be opinionated. If you try to please
+          everyone you end up pleasing no one.
         </p>
         <p>
           Ok. So who is it that I am trying to please with RFUI?
@@ -28,12 +28,14 @@ export default () => {
           Nothing too unique.
         </p>
         <p>
-          By tweaking things like the color scheme and roundedness, you can push
-          things perhaps moderately far away from the default straightforward
-          style. For example, by going with pink as your primary color and
-          making all of the corners highly rounded, you can achieve a decently
-          playful look and feel. However, there are limits to how far this can
-          take you.
+          By tweaking things like the color scheme and roundedness, you{" "}
+          <Link href="/choose-a-personality">
+            can push things
+          </Link>{" "}
+          perhaps moderately far away from the default straightforward style.
+          For example, by going with pink as your primary color and making all
+          of the corners highly rounded, you can achieve a decently playful look
+          and feel. However, there are limits to how far this can take you.
         </p>
         <p>
           If these limits are too restrictive, than RFUI is not for you. You'll
@@ -47,8 +49,8 @@ export default () => {
       </H2>
       <Text>
         <p>
-          RFUI I am a single person who is working on this as a passion project.
-          So then, I'll never end up having as many components as a library like
+          I am a single person who is working on RFUI as a passion project. So
+          then, I'll never end up having as many components as a library like
           Chakra or Material UI. I{" "}
           <Link href="https://github.com/users/adamzerner/projects/2">
             plan on
@@ -144,11 +146,11 @@ export default () => {
           Think about how recipes for food can sometimes be forgiving, and
           sometimes be very finicky. For example, sauteeing a few chicken
           breasts and making a pan sauce is very finicky. You really have to hit
-          the right internal temperature, otherwise your chicken will be dry.
-          Which you kinda need a meat thermometer for, but those are tough to
-          use for thin cuts of meat. And it's difficult to time the cooking of
-          the chicken such that the brown bits on the pan don't burn and screw
-          up your pan sauce.
+          the right internal temperature, otherwise your chicken will be dry (or
+          unsafe). Which you kinda need a meat thermometer for, but those are
+          tough to use for thin cuts of meat. And it's difficult to time the
+          cooking of the chicken such that the brown bits on the pan don't burn
+          and screw up your pan sauce.
         </p>
         <p>
           On the other hand, making a rice bowl with some ground beef is very
@@ -164,9 +166,10 @@ export default () => {
         </p>
         <p>
           Similarly, if you are a non-expert designer who is building an app
-          where aesthetics aren't your primary selling point, I would argue that
-          a component library like RFUI that has sensible defaults and few ways
-          to shoot yourself in the foot is the right choice.
+          where aesthetics aren't your <em>primary</em>{" "}
+          selling point, I would argue that a component library like RFUI that
+          has sensible defaults and few ways to shoot yourself in the foot is
+          the right choice.
         </p>
       </Text>
     </div>

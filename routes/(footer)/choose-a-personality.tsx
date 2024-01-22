@@ -46,8 +46,7 @@ export default () => {
         <p>
           A financial services company might want to aim for an elegant
           personality, whereas an educational game for kids would probably
-          prefer a playful one. Deciding in advance what you are aiming for is
-          helpful.
+          prefer a playful one.
         </p>
         <p>
           There is a lot to say about how to convey a given personality, most of
@@ -98,7 +97,7 @@ export default () => {
           </li>
         </UL>
         <p>
-          With RFUI, the components will accepted a{" "}
+          With RFUI, the components will accept a{" "}
           <InlineCode>rounded</InlineCode> property. The possible values will be
           {" "}
           <InlineCode>"square"</InlineCode>, <InlineCode>"sm"</InlineCode>,{" "}
@@ -151,6 +150,7 @@ export default () => {
         <img
           src="https://ryanrhoten.com/wp-content/uploads/2016/01/serif-vs-sans-serif.png"
           alt="Serif vs sans-serif fonts"
+          class="w-14 max-w-full"
         />
         <p>
           As you can see in the image above, serifs have those "little thingies"
@@ -177,7 +177,7 @@ export default () => {
           <Link href="https://practicaltypography.com/summary-of-key-rules.html">
             "Summary of key rules"
           </Link>{" "}
-          from Butterick's Practical Typography as well, and make sure that you
+          from Butterick's Practical Typography as well and make sure that you
           follow them.
         </p>
         <p>
@@ -196,7 +196,7 @@ export default () => {
       <H2 inPageLink="color">Color</H2>
       <Text>
         <p>
-          In general, certain colors do have certain "vibes".
+          In general, certain colors have certain "vibes".
         </p>
         <UL>
           <li>Blue is known to be pretty neutral.</li>
@@ -218,7 +218,7 @@ export default () => {
         </Alert>
         <p>
           But wait! You're not a professional designer. Or maybe you are, but
-          you're more focused on UX and haven't really training in visual design
+          you're more focused on UX and haven't really trained in visual design
           or color theory. So how do you create a whole color palette?
         </p>
         <p>

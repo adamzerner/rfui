@@ -109,8 +109,7 @@ export default () => {
         Set <InlineCode>rounded</InlineCode> to either{" "}
         <InlineCode>"square"</InlineCode>, <InlineCode>"sm"</InlineCode>, or
         {" "}
-        <InlineCode>"lg"</InlineCode>. Defaults to{" "}
-        <InlineCode>"sm"</InlineCode>.
+        <InlineCode>"lg"</InlineCode>.
       </div>
     ),
     example: (
@@ -222,7 +221,7 @@ export default () => {
     name: "rounded",
     required: false,
     type: '"square" | "sm" | "lg" | "full"',
-    default: '"sm"',
+    default: null,
     notes: null,
   }, {
     name: "disabled",

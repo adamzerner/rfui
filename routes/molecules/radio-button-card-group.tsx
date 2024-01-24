@@ -106,6 +106,15 @@ export default () => {
     ),
   }, {
     title: "Padding",
+    description: (
+      <div>
+        Set <InlineCode>padding</InlineCode> to <InlineCode>"sm"</InlineCode>,
+        {" "}
+        <InlineCode>"md"</InlineCode>, or{" "}
+        <InlineCode>"lg"</InlineCode>. Defaults to{" "}
+        <InlineCode>"md"</InlineCode>.
+      </div>
+    ),
     example: (
       <Stack class="gap-5">
         <RadioButtonCardGroup padding="sm">
@@ -240,6 +249,14 @@ export default () => {
     ),
   }, {
     title: "Rounded",
+    description: (
+      <div>
+        Set <InlineCode>rounded</InlineCode> to{" "}
+        <InlineCode>"square"</InlineCode>, <InlineCode>"sm"</InlineCode>, or
+        {" "}
+        <InlineCode>"lg"</InlineCode>.
+      </div>
+    ),
     example: (
       <Stack class="gap-5">
         <RadioButtonCardGroup rounded="square">
@@ -383,7 +400,7 @@ export default () => {
     name: "rounded",
     required: false,
     type: '"square" | "sm" | "lg"',
-    default: '"sm"',
+    default: null,
     notes: null,
   }, {
     name: "children",

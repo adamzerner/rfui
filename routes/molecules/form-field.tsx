@@ -409,7 +409,7 @@ export default () => {
     name: "rounded",
     required: false,
     type: '"square" | "sm" | "lg" | "full"',
-    default: '"sm"',
+    default: null,
     notes: null,
   }, {
     name: "invalid",

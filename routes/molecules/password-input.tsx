@@ -123,9 +123,7 @@ export default () => {
       <div>
         Set <InlineCode>rounded</InlineCode> to{" "}
         <InlineCode>"square"</InlineCode>, <InlineCode>"sm"</InlineCode>,{" "}
-        <InlineCode>"lg"</InlineCode>, or{" "}
-        <InlineCode>"full"</InlineCode>. Defaults to{" "}
-        <InlineCode>"sm"</InlineCode>.
+        <InlineCode>"lg"</InlineCode>, or <InlineCode>"full"</InlineCode>.
       </div>
     ),
     example: (

@@ -558,7 +558,7 @@ export default () => {
     name: "rounded",
     required: false,
     type: '"square" | "sm" | "lg"',
-    default: '"sm"',
+    default: null,
     notes: null,
   }, {
     name: "width",

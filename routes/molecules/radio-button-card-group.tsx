@@ -21,6 +21,7 @@ import {
 import { useSignal } from "@preact/signals";
 
 export default () => {
+  const topExampleSelectedItemName = useSignal<string | null>(null);
   const basicExampleSelectedItemName = useSignal<string | null>(null);
   const paddingSmExampleSelectedItemName = useSignal<string | null>(null);
   const paddingMdExampleSelectedItemName = useSignal<string | null>(null);
@@ -31,6 +32,28 @@ export default () => {
 
   const notes =
     "Add some flair and professionalism to your radio buttons and associated content.";
+  const topExample = (
+    <RadioButtonCardGroup>
+      <RadioButtonCardGroupItem
+        name="top-one"
+        selectedItemName={topExampleSelectedItemName}
+      >
+        One
+      </RadioButtonCardGroupItem>
+      <RadioButtonCardGroupItem
+        name="top-two"
+        selectedItemName={topExampleSelectedItemName}
+      >
+        Two
+      </RadioButtonCardGroupItem>
+      <RadioButtonCardGroupItem
+        name="top-three"
+        selectedItemName={topExampleSelectedItemName}
+      >
+        Three
+      </RadioButtonCardGroupItem>
+    </RadioButtonCardGroup>
+  );
   const sections: SectionType[] = [{
     title: "Basic",
     example: (
@@ -428,7 +451,7 @@ export default () => {
         sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/islands/molecules/radio-button-card-group.tsx"
         importStatement='import { RadioButtonCardGroup, RadioButtonCardGroupItem } from "rfui";'
       >
-        <Example>{sections[0].example}</Example>
+        <Example>{topExample}</Example>
         <Notes>{notes}</Notes>
       </Header>
       {sections.map((section) => (

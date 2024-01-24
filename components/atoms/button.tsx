@@ -32,7 +32,7 @@ export const Button = (
   {
     variant = "secondary",
     size = "md",
-    rounded = "sm",
+    rounded,
     isLoading = false,
     loadingContent,
     children,
@@ -65,6 +65,8 @@ export const Button = (
         return "rounded-lg";
       case "full":
         return "rounded-full";
+      default:
+        return "rfui-rounded-default";
     }
   })();
 

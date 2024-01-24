@@ -90,7 +90,15 @@
     --spacing-14: 32rem;
     --spacing-15: 40rem;
     --spacing-16: 48rem;
+
+    --default-roundedness: var(--spacing-1);
   }
+}
+
+/* Default roundedness */
+
+.rfui-rounded-default {
+  border-radius: var(--default-roundedness);
 }
 
 /* Table */

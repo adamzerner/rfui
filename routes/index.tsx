@@ -288,6 +288,7 @@ export default () => {
 
   return (
     <Stack class="gap-10 mt-9">
+      <Button>Example</Button>
       <Stack class="gap-7">
         <Category>Atoms</Category>
         <Flex class="flex-wrap gap-6">

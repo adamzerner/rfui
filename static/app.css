@@ -91,7 +91,11 @@
     --spacing-15: 40rem;
     --spacing-16: 48rem;
 
-    --default-roundedness: var(--spacing-1);
+    --rounded-square: var(--spacing-0);
+    --rounded-sm: var(--spacing-1);
+    --rounded-lg: var(--spacing-2);
+    --rounded-full: 9999px;
+    --default-roundedness: var(--rounded-sm);
   }
 }
 

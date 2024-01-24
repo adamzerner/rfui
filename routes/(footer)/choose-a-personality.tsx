@@ -1,4 +1,3 @@
-import { CodeBlock } from "@/components/atoms/code-block.tsx";
 import { H1 } from "@/components/atoms/h1.tsx";
 import { H2 } from "@/components/atoms/h2.tsx";
 import { InlineCode } from "@/components/atoms/inline-code.tsx";
@@ -127,19 +126,12 @@ export default () => {
           </li>
         </UL>
         <p>
-          Here's one approach you can take to achieve this. Have some sort of
-          global <InlineCode>constants.ts</InlineCode>{" "}
-          file or something that exports{" "}
-          <InlineCode>defaultRounded</InlineCode>. Then, when you use components
-          with a <InlineCode>rounded</InlineCode>{" "}
-          property, do something like this:
+          To choose a roundedness value for your app, in short, you'll want to
+          set the <InlineCode>--default-roundedness</InlineCode>{" "}
+          CSS variable. See the{" "}
+          <Link href="/default-roundedness">"Default roundedness"</Link>{" "}
+          page for more information.
         </p>
-        <CodeBlock
-          language="tsx"
-          code={`<Button rounded={defaultRounded}>
-  Example
-</Button>`}
-        />
       </Text>
 
       <H2 inPageLink="font">Font</H2>

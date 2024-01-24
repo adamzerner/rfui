@@ -155,7 +155,7 @@ const fullName = firstName + " " + lastName;\`}
     >
       <Header
         componentName="CodeBlock"
-        sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/islands/atoms/code-block.tsx"
+        sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/atoms/code-block.tsx"
       >
         <Example>{sections[0].example}</Example>
         <Notes>{notes}</Notes>

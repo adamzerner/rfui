@@ -481,7 +481,7 @@ export default () => {
     >
       <Header
         componentName="FormField"
-        sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/islands/molecules/form-field.tsx"
+        sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/molecules/form-field.tsx"
       >
         <Example>{sections[0].example}</Example>
         <Notes>{notes}</Notes>

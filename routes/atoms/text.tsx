@@ -277,7 +277,7 @@ export default () => {
     >
       <Header
         componentName="Text"
-        sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/islands/atoms/text.tsx"
+        sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/atoms/text.tsx"
       >
         <Example>{sections[0].example}</Example>
         <Notes>{notes}</Notes>

@@ -244,7 +244,7 @@ export default () => {
     >
       <Header
         componentName="Input"
-        sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/islands/atoms/input.tsx"
+        sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/atoms/input.tsx"
       >
         <Example>{sections[0].example}</Example>
         <Notes>{notes}</Notes>

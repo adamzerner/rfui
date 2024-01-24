@@ -669,7 +669,7 @@ export default () => {
     >
       <Header
         componentName="Card"
-        sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/islands/molecules/card.tsx"
+        sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/molecules/card.tsx"
         importStatement='import { Card, CardHeader, CardBody, CardFooter } from "rfui";'
       >
         <Example>{sections[0].example}</Example>
@@ -717,7 +717,7 @@ export default () => {
         })}
       </Props>
       <Props subComponentTitle="CardBody">
-        {cardHeaderProps.map((prop) => {
+        {cardBodyProps.map((prop) => {
           const { notes, ...propWithoutNotes } = prop;
 
           return notes
@@ -730,7 +730,7 @@ export default () => {
         })}
       </Props>
       <Props subComponentTitle="CardFooter">
-        {cardHeaderProps.map((prop) => {
+        {cardFooterProps.map((prop) => {
           const { notes, ...propWithoutNotes } = prop;
 
           return notes

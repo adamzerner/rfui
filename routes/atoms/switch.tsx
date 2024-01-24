@@ -78,7 +78,7 @@ export default () => {
     >
       <Header
         componentName="Switch"
-        sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/islands/atoms/switch.tsx"
+        sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/atoms/switch.tsx"
       >
         <Example>{sections[0].example}</Example>
         <Notes>{notes}</Notes>

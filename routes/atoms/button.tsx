@@ -362,7 +362,7 @@ export default () => {
     >
       <Header
         componentName="Button"
-        sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/islands/atoms/button.tsx"
+        sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/atoms/button.tsx"
       >
         <Example>{sections[0].example}</Example>
         <Notes>{notes}</Notes>

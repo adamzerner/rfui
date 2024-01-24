@@ -411,7 +411,7 @@ export default () => {
     >
       <Header
         componentName="Footer"
-        sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/islands/molecules/footer.tsx"
+        sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/molecules/footer.tsx"
         importStatement={`import { 
   Footer,
   FooterColumn,

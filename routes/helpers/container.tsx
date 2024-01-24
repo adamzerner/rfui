@@ -76,7 +76,7 @@ export default () => {
     >
       <Header
         componentName="Container"
-        sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/islands/helpers/container.tsx"
+        sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/helpers/container.tsx"
       >
         <Example>{sections[0].example}</Example>
         <Notes>{notes}</Notes>

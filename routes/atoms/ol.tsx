@@ -104,7 +104,7 @@ export default () => {
     >
       <Header
         componentName="OL"
-        sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/islands/atoms/ol.tsx"
+        sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/atoms/ol.tsx"
       >
         <Example>{sections[0].example}</Example>
         <Notes>{notes}</Notes>

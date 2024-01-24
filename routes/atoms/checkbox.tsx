@@ -114,7 +114,7 @@ export default () => {
     >
       <Header
         componentName="Checkbox"
-        sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/islands/atoms/checkbox.tsx"
+        sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/atoms/checkbox.tsx"
       >
         <Example>{sections[0].example}</Example>
         <Notes>{notes}</Notes>

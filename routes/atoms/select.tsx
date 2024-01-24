@@ -273,7 +273,7 @@ export default () => {
     >
       <Header
         componentName="Select"
-        sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/islands/atoms/select.tsx"
+        sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/atoms/select.tsx"
       >
         <Example>{sections[0].example}</Example>
         <Notes>{notes}</Notes>

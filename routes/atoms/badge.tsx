@@ -265,7 +265,7 @@ export default () => {
     >
       <Header
         componentName="Badge"
-        sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/islands/atoms/badge.tsx"
+        sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/atoms/badge.tsx"
       >
         <Example>{sections[0].example}</Example>
         <Notes>{notes}</Notes>

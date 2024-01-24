@@ -32,6 +32,14 @@ export default () => {
     exampleCode: <CodeBlock class="mt-4" language="tsx" code={`<Switch />`} />,
   }, {
     title: "Disabled",
+    description: (
+      <div>
+        Set <InlineCode>disabled</InlineCode> to either{" "}
+        <InlineCode>true</InlineCode> or{" "}
+        <InlineCode>false</InlineCode>. Defaults to{" "}
+        <InlineCode>false</InlineCode>.
+      </div>
+    ),
     example: <Switch disabled />,
     exampleCode: (
       <CodeBlock

@@ -30,6 +30,12 @@ export default () => {
     ),
   }, {
     title: "Helper text",
+    description: (
+      <div>
+        Set <InlineCode>helperText</InlineCode>{" "}
+        to a string to render helper text above the form field.
+      </div>
+    ),
     example: <FormField label="Name" helperText="Your first and last name" />,
     exampleCode: (
       <CodeBlock
@@ -40,6 +46,14 @@ export default () => {
     ),
   }, {
     title: "Invalid",
+    description: (
+      <div>
+        Set <InlineCode>invalid</InlineCode> to either{" "}
+        <InlineCode>true</InlineCode> or{" "}
+        <InlineCode>false</InlineCode>. Defaults to{" "}
+        <InlineCode>false</InlineCode>.
+      </div>
+    ),
     example: <FormField label="Name" invalid />,
     exampleCode: (
       <CodeBlock
@@ -50,6 +64,14 @@ export default () => {
     ),
   }, {
     title: "Error text",
+    description: (
+      <div>
+        When <InlineCode>invalid</InlineCode> is{" "}
+        <InlineCode>true</InlineCode>, set <InlineCode>errorText</InlineCode>
+        {" "}
+        to a string to render error text above the form field.
+      </div>
+    ),
     example: <FormField label="Name" invalid errorText="Invalid name" />,
     exampleCode: (
       <CodeBlock
@@ -60,6 +82,7 @@ export default () => {
     ),
   }, {
     title: "Helper and error text",
+    description: "You can include both helper and error text.",
     example: (
       <FormField
         label="Name"
@@ -248,6 +271,14 @@ export default () => {
     ),
   }, {
     title: "Width",
+    description: (
+      <div>
+        These examples use <InlineCode>class="w-14 max-w-full"</InlineCode> and
+        {" "}
+        <InlineCode>class="w-10"</InlineCode>{" "}
+        to set the width of the form field.
+      </div>
+    ),
     example: (
       <Stack class="gap-5">
         <FormField
@@ -302,6 +333,32 @@ export default () => {
     ),
   }, {
     title: "Type",
+    description: (
+      <Stack class="gap-3">
+        <div>
+          <InlineCode>type</InlineCode> gets passed to{" "}
+          <Link href="/atoms/input">
+            <InlineCode>Input</InlineCode>
+          </Link>.
+        </div>
+        <div>
+          RFUI's <InlineCode>Input</InlineCode> component wraps the native HTML
+          {" "}
+          <InlineCode>input</InlineCode> and passes{" "}
+          <InlineCode>type</InlineCode> to{" "}
+          <InlineCode>input</InlineCode>, and so you could find the possible
+          values documented{" "}
+          <Link href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Input#input_types">
+            here on MDN
+          </Link>. If you are thinking of using{" "}
+          <InlineCode>number</InlineCode>, consider taking{" "}
+          <Link href="https://technology.blog.gov.uk/2020/02/24/why-the-gov-uk-design-system-team-changed-the-input-type-for-numbers/">
+            this approach
+          </Link>{" "}
+          instead.
+        </div>
+      </Stack>
+    ),
     example: (
       <Stack class="gap-5">
         <FormField label="Name" type="text" />

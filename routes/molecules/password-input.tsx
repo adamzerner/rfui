@@ -43,6 +43,11 @@ export default () => {
     title: "Default visible",
     description: (
       <div>
+        <div class="mb-3">
+          Set <InlineCode>defaultVisibility</InlineCode> to{" "}
+          <InlineCode>"shown"</InlineCode>. Defaults to{" "}
+          <InlineCode>"hidden"</InlineCode>.
+        </div>
         <div class="mb-2">Consider the factors at play here, including:</div>
         <OL>
           <li>

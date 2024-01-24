@@ -59,7 +59,10 @@ export default () => {
     title: "Disabled",
     description: (
       <div>
-        Set <InlineCode>disabled</InlineCode> to <InlineCode>true</InlineCode>.
+        Set <InlineCode>disabled</InlineCode> to either{" "}
+        <InlineCode>true</InlineCode> or{" "}
+        <InlineCode>false</InlineCode>. Defaults to{" "}
+        <InlineCode>false</InlineCode>.
       </div>
     ),
     example: <Textarea disabled></Textarea>,
@@ -74,7 +77,10 @@ export default () => {
     title: "Readonly",
     description: (
       <div>
-        Set <InlineCode>readonly</InlineCode> to <InlineCode>true</InlineCode>.
+        Set <InlineCode>readonly</InlineCode> to either{" "}
+        <InlineCode>true</InlineCode> or{" "}
+        <InlineCode>false</InlineCode>. Defaults to{" "}
+        <InlineCode>false</InlineCode>.
       </div>
     ),
     example: <Textarea readonly>Example</Textarea>,
@@ -89,7 +95,10 @@ export default () => {
     title: "Invalid",
     description: (
       <div>
-        Set <InlineCode>invalid</InlineCode> to <InlineCode>true</InlineCode>.
+        Set <InlineCode>invalid</InlineCode> to either{" "}
+        <InlineCode>true</InlineCode> or{" "}
+        <InlineCode>false</InlineCode>. Defaults to{" "}
+        <InlineCode>false</InlineCode>.
       </div>
     ),
     example: <Textarea invalid>Example</Textarea>,

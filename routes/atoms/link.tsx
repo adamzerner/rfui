@@ -31,15 +31,24 @@ export default () => {
   }, {
     title: "Underline",
     description: (
-      <div>
-        It is important to indicate that links are clickable. Underlining is a
-        popular way of achieving this goal, but there are many others. The best
-        approach will depend on the context. See{" "}
-        <Link href="https://www.nngroup.com/articles/clickable-elements/">
-          Beyond Blue Links: Making Clickable Elements Recognizable
-        </Link>{" "}
-        for more information.
-      </div>
+      <Stack class="gap-3">
+        <div>
+          Set <InlineCode>underline</InlineCode> to either{" "}
+          <InlineCode>"always"</InlineCode>, <InlineCode>"hover"</InlineCode> or
+          {" "}
+          <InlineCode>"none"</InlineCode>. Defaults to{" "}
+          <InlineCode>"always"</InlineCode>.
+        </div>
+        <div>
+          It is important to indicate that links are clickable. Underlining is a
+          popular way of achieving this goal, but there are many others. The
+          best approach will depend on the context. See{" "}
+          <Link href="https://www.nngroup.com/articles/clickable-elements/">
+            Beyond Blue Links: Making Clickable Elements Recognizable
+          </Link>{" "}
+          for more information.
+        </div>
+      </Stack>
     ),
     example: (
       <Flex class="gap-3">
@@ -62,13 +71,26 @@ export default () => {
   }, {
     title: "In-page link",
     description: (
-      <div>
-        See{" "}
-        <Link href="https://www.nngroup.com/articles/in-page-links/">
-          Anchors OK? Re-Assessing In-Page Links
-        </Link>{" "}
-        from NNGroup.
-      </div>
+      <Stack class="gap-3">
+        <div>
+          Set <InlineCode>inPageLink</InlineCode> to either{" "}
+          <InlineCode>true</InlineCode> or{" "}
+          <InlineCode>false</InlineCode>. Defaults to{" "}
+          <InlineCode>false</InlineCode>.
+        </div>
+        <div>
+          When{" "}
+          <InlineCode>true</InlineCode>, adds a "#" on hover to the left of the
+          text.
+        </div>
+        <div>
+          See{" "}
+          <Link href="https://www.nngroup.com/articles/in-page-links/">
+            Anchors OK? Re-Assessing In-Page Links
+          </Link>{" "}
+          from NNGroup.
+        </div>
+      </Stack>
     ),
     example: <Link inPageLink underline="hover" href="#section">Example</Link>,
     exampleCode: (
@@ -85,7 +107,14 @@ export default () => {
     description: (
       <Stack class="gap-3">
         <div>
-          Sets <InlineCode>target="blank"</InlineCode> and{" "}
+          Set <InlineCode>inPageLink</InlineCode> to either{" "}
+          <InlineCode>true</InlineCode> or{" "}
+          <InlineCode>false</InlineCode>. Defaults to{" "}
+          <InlineCode>false</InlineCode>.
+        </div>
+        <div>
+          When <InlineCode>true</InlineCode>, sets{" "}
+          <InlineCode>target="blank"</InlineCode> and{" "}
           <InlineCode>rel="noopener noreferrer"</InlineCode>{" "}
           to get the link to open in a new tab.
         </div>

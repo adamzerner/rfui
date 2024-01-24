@@ -31,6 +31,11 @@ export default () => {
     ),
   }, {
     title: "With heading",
+    description: (
+      <div>
+        Set <InlineCode>heading</InlineCode> to a string.
+      </div>
+    ),
     example: <ModalExample heading="Modal heading">Example</ModalExample>,
     exampleCode: (
       <CodeBlock

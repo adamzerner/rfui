@@ -116,6 +116,12 @@ export default () => {
     ),
   }, {
     title: "Outside",
+    description: (
+      <div>
+        Set <InlineCode>bulletLocation</InlineCode> to{" "}
+        <InlineCode>"outside"</InlineCode>.
+      </div>
+    ),
     example: (
       <Stack class="gap-5">
         <UL bulletLocation="outside" bulletType="bullet">
@@ -170,6 +176,13 @@ export default () => {
     ),
   }, {
     title: "Bigger",
+    description: (
+      <div>
+        Here is an example of using <InlineCode>class="text-xl"</InlineCode>
+        {" "}
+        to make the unordered list larger.
+      </div>
+    ),
     example: (
       <Stack class="gap-5">
         <UL bulletType="bullet" class="text-xl">
@@ -224,6 +237,13 @@ export default () => {
     ),
   }, {
     title: "Color",
+    description: (
+      <div>
+        Here is an example of using{" "}
+        <InlineCode>class="text-neutral-500"</InlineCode>{" "}
+        to change the color of the unordered list.
+      </div>
+    ),
     example: (
       <Stack class="gap-5">
         <UL bulletType="bullet" class="text-neutral-500">

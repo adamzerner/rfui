@@ -96,6 +96,13 @@ export default () => {
     ),
   }, {
     title: "Starting value",
+    description: (
+      <div>
+        Set <InlineCode>startingValue</InlineCode> to the number you want the
+        {" "}
+        <InlineCode>Stepper</InlineCode> to begin at.
+      </div>
+    ),
     example: <Stepper startingValue={100} />,
     exampleCode: (
       <CodeBlock
@@ -106,7 +113,12 @@ export default () => {
     ),
   }, {
     title: "Min and max",
-    description: "In this example the min is 0 and the max is 5.",
+    description: (
+      <div>
+        In this example the <InlineCode>min</InlineCode> is 0 and the{" "}
+        <InlineCode>max</InlineCode> is 5.
+      </div>
+    ),
     example: <Stepper min={0} max={5} />,
     exampleCode: (
       <CodeBlock

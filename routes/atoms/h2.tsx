@@ -97,11 +97,23 @@ export default () => {
     title: "In-page link",
     description: (
       <div>
-        <div>Makes the header an in-page link by returning the following:</div>
+        <div>
+          Makes the header an{" "}
+          <Link href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#linking_to_an_element_on_the_same_page">
+            in-page link
+          </Link>.
+        </div>
         <CodeBlock
           language="tsx"
-          code={`<h2 id={inPageLink} class={className} {...restWithoutClass}>
-  <Link href={\`#\${inPageLink}\`} underline="hover">{children}</Link>
+          code={`<H2 inPageLink="hello-world">
+  Hello world
+</H2>`}
+        />
+        <div>Gets transformed into something like:</div>
+        <CodeBlock
+          language="tsx"
+          code={`<h2 id="hello-world">
+  <a href="#hello-world">Hello world</a>
 </h2>`}
         />
       </div>

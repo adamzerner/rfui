@@ -186,7 +186,8 @@ export default () => {
         Set <InlineCode>width</InlineCode> to <InlineCode>"sm"</InlineCode>,
         {" "}
         <InlineCode>"md"</InlineCode>, <InlineCode>"lg"</InlineCode>, or{" "}
-        <InlineCode>"full"</InlineCode>.
+        <InlineCode>"full"</InlineCode>. Defaults to{" "}
+        <InlineCode>"md"</InlineCode>.
       </div>
     ),
     example: (
@@ -263,7 +264,9 @@ export default () => {
       <div>
         Set <InlineCode>shadow</InlineCode> to <InlineCode>"sm"</InlineCode>,
         {" "}
-        <InlineCode>"md"</InlineCode>, or <InlineCode>"lg"</InlineCode>.
+        <InlineCode>"md"</InlineCode>, or{" "}
+        <InlineCode>"lg"</InlineCode>. Defaults to{" "}
+        <InlineCode>"sm"</InlineCode>.
       </div>
     ),
     example: (
@@ -326,7 +329,9 @@ export default () => {
       <div>
         Set <InlineCode>padding</InlineCode> to <InlineCode>"sm"</InlineCode>,
         {" "}
-        <InlineCode>"md"</InlineCode>, or <InlineCode>"lg"</InlineCode>.
+        <InlineCode>"md"</InlineCode>, or{" "}
+        <InlineCode>"lg"</InlineCode>. Defaults to{" "}
+        <InlineCode>"md"</InlineCode>.
       </div>
     ),
     example: (

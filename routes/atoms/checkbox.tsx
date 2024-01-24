@@ -26,6 +26,14 @@ export default () => {
     ),
   }, {
     title: "Size",
+    description: (
+      <div>
+        Set <InlineCode>size</InlineCode> to <InlineCode>"sm"</InlineCode>,{" "}
+        <InlineCode>"md"</InlineCode>, or{" "}
+        <InlineCode>"lg"</InlineCode>. Defaults to{" "}
+        <InlineCode>"md"</InlineCode>.
+      </div>
+    ),
     example: (
       <Stack class="gap-5">
         <Checkbox size="sm" />
@@ -46,6 +54,14 @@ export default () => {
     ),
   }, {
     title: "Disabled",
+    description: (
+      <div>
+        Set <InlineCode>disabled</InlineCode> to either{" "}
+        <InlineCode>true</InlineCode> or{" "}
+        <InlineCode>false</InlineCode>. Defaults to{" "}
+        <InlineCode>false</InlineCode>.
+      </div>
+    ),
     example: <Checkbox disabled />,
     exampleCode: (
       <CodeBlock
@@ -56,6 +72,14 @@ export default () => {
     ),
   }, {
     title: "Invalid",
+    description: (
+      <div>
+        Set <InlineCode>invalid</InlineCode> to either{" "}
+        <InlineCode>true</InlineCode> or{" "}
+        <InlineCode>false</InlineCode>. Defaults to{" "}
+        <InlineCode>false</InlineCode>.
+      </div>
+    ),
     example: <Checkbox invalid />,
     exampleCode: (
       <CodeBlock

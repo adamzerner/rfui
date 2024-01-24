@@ -1,5 +1,6 @@
 import { CodeBlock } from "@/components/atoms/code-block.tsx";
 import { H2 } from "@/components/atoms/h2.tsx";
+import { InlineCode } from "@/components/atoms/inline-code.tsx";
 import { Text } from "@/components/atoms/text.tsx";
 import {
   Example,
@@ -44,6 +45,13 @@ export default () => {
     ),
   }, {
     title: "Full width",
+    description: (
+      <div>
+        Set <InlineCode>fullWidth</InlineCode> to{" "}
+        <InlineCode>true</InlineCode>. Defaults to{" "}
+        <InlineCode>false</InlineCode>.
+      </div>
+    ),
     example: (
       <Tabs fullWidth>
         <TabSection tabName="First">One</TabSection>

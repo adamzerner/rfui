@@ -43,7 +43,7 @@ export const FormField = (
     optionalIndicator = "none",
     helperText,
     size = "md",
-    rounded = "sm",
+    rounded,
     invalid = false,
     errorText,
     inputRest,

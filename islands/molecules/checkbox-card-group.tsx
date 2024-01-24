@@ -30,7 +30,7 @@ export type CheckboxCardGroupItemType = {
  * </CheckboxCardGroup>
  */
 export const CheckboxCardGroup = (
-  { padding = "md", rounded = "sm", children }: CheckboxCardGroupType,
+  { padding = "md", rounded, children }: CheckboxCardGroupType,
 ) => {
   const id = crypto.randomUUID();
   let containerClass = `checkbox-card-group-${id}`;
@@ -45,8 +45,14 @@ export const CheckboxCardGroup = (
           padding: var(--spacing-${
           padding === "sm" ? 3 : padding === "md" ? 5 : 7
         });
-          border-radius: var(--spacing-${
-          rounded === "square" ? 0 : rounded === "sm" ? 1 : 2
+          border-radius: var(${
+          rounded === "square"
+            ? "--spacing-0"
+            : rounded === "sm"
+            ? "--spacing-1"
+            : rounded === "lg"
+            ? "--spacing-2"
+            : "--default-roundedness"
         });
         }
 

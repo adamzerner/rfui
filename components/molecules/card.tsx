@@ -20,7 +20,7 @@ export type CardType = {
  */
 export const Card = (
   {
-    rounded = "sm",
+    rounded,
     width = "md",
     shadow = "sm",
     topAccent = false,
@@ -76,6 +76,8 @@ export const Card = (
         return "rounded";
       case "lg":
         return "rounded-lg";
+      default:
+        return "rfui-rounded-default";
     }
   })();
 

@@ -1,9 +1,11 @@
+import { Blockquote } from "@/components/atoms/blockquote.tsx";
 import { CodeBlock } from "@/components/atoms/code-block.tsx";
 import { H1 } from "@/components/atoms/h1.tsx";
 import { H2 } from "@/components/atoms/h2.tsx";
 import { InlineCode } from "@/components/atoms/inline-code.tsx";
 import { Link } from "@/components/atoms/link.tsx";
 import { Text } from "@/components/atoms/text.tsx";
+import { UL } from "@/components/atoms/ul.tsx";
 
 export default () => {
   return (
@@ -163,6 +165,56 @@ export default () => {
           If RFUI isn't giving you the flexibility you need for a given
           component, I would recommend building your own version of the
           component using RFUI's code as a starting point.
+        </p>
+      </Text>
+
+      <H2>
+        How many more bytes will RFUI require me to send to the browser? Will
+        this slow things down a lot?
+      </H2>
+      <Text>
+        <p>Here's an approximation:</p>
+        <UL>
+          <li>
+            <InlineCode>rfui.css</InlineCode>: 24kb
+          </li>
+          <li>
+            <InlineCode>prism.css</InlineCode>: 3kb
+          </li>
+          <li>
+            <InlineCode>prism.js</InlineCode>: 25kb
+          </li>
+        </UL>
+        <p>
+          And how much will this slow things down? According to GitHub Copilot:
+        </p>
+        <Blockquote>
+          Here's a rough estimation based on network speed:
+          <UL>
+            <li>
+              On a 3G network (1.6 Mbps), it would take approximately 0.25
+              seconds to download an extra 50KB.
+            </li>
+            <li>
+              On a 4G network (20 Mbps), it would take approximately 0.02
+              seconds to download an extra 50KB.
+            </li>
+            <li>
+              On a broadband connection (100 Mbps), it would take approximately
+              0.004 seconds to download an extra 50KB.
+            </li>
+          </UL>
+        </Blockquote>
+        <p>
+          So unless your users have a really slow connection, the performance
+          impact is pretty negligible.
+        </p>
+        <p>
+          Note that Prism is{" "}
+          <Link href="/getting-started#set-up-syntax-highlighting">
+            optional
+          </Link>. It's only needed if you need the syntax highlighting and you
+          can cut the impact in half if you avoid using it.
         </p>
       </Text>
     </div>

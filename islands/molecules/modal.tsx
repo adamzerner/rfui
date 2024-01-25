@@ -1,6 +1,6 @@
 import { ComponentChild, JSX } from "preact";
 import { useEffect, useRef } from "preact/hooks";
-import { CloseIcon } from "../icons/close-icon.tsx";
+import { CloseIcon } from "../../components/icons/close-icon.tsx";
 
 export type ModalType = {
   isOpen: boolean;
@@ -37,10 +37,32 @@ export const Modal = (
     if (dialogRef.current) {
       if (isOpen === true) {
         dialogRef.current.showModal();
+        document.body.style.overflow = "hidden";
       } else {
         dialogRef.current.close();
+        document.body.style.overflow = "auto";
       }
+
+      return () => {
+        if (dialogRef.current) {
+          dialogRef.current.close();
+        }
+
+        document.body.style.overflow = "auto";
+      };
     }
+  }, [isOpen]);
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
+    return () => {
+      document.body.style.overflow = "auto";
+    };
   }, [isOpen]);
 
   return (

@@ -110,7 +110,7 @@ export default () => {
     >
       <Header
         componentName="Modal"
-        sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/molecules/modal.tsx"
+        sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/islands/molecules/modal.tsx"
       >
         <Example>{sections[0].example}</Example>
         <Notes>{notes}</Notes>

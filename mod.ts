@@ -53,8 +53,6 @@ export {
 export type { FooterType } from "./components/molecules/footer.tsx";
 export { FormField } from "./components/molecules/form-field.tsx";
 export type { FormFieldType } from "./components/molecules/form-field.tsx";
-export { Modal } from "./components/molecules/modal.tsx";
-export type { ModalType } from "./components/molecules/modal.tsx";
 export {
   Navbar,
   NavbarItem,
@@ -66,6 +64,8 @@ export { Alert, AlertBody, AlertHeader } from "./islands/molecules/alert.tsx";
 export type { AlertType } from "./islands/molecules/alert.tsx";
 export { CheckboxCardGroup } from "./islands/molecules/checkbox-card-group.tsx";
 export type { CheckboxCardGroupType } from "./islands/molecules/checkbox-card-group.tsx";
+export { Modal } from "./islands/molecules/modal.tsx";
+export type { ModalType } from "./islands/molecules/modal.tsx";
 export { PasswordInput } from "./islands/molecules/password-input.tsx";
 export type { PasswordInputType } from "./islands/molecules/password-input.tsx";
 export { RadioButtonCardGroup } from "./islands/molecules/radio-button-card-group.tsx";

@@ -149,6 +149,46 @@ export default () => {
         </p>
       </Text>
 
+      <H2 inPageLink="page-load-speed">Accessibility</H2>
+      <Text>
+        <p>RFUI does a pretty good job with accessibility.</p>
+        <UL>
+          <li>
+            I use the{" "}
+            <Link href="https://marketplace.visualstudio.com/items?itemName=deque-systems.vscode-axe-linter">
+              axe Accessibility Linter
+            </Link>{" "}
+            VSCode plugin when developing which will alert me if I violate
+            various accessibility-related best practices. I address any of these
+            warnings that pop up.
+          </li>
+          <li>All components meet WCAG 2.1 AA standards.</li>
+          <li>
+            The popular{" "}
+            <Link href="https://www.deque.com/axe/devtools/">axe DevTools</Link>
+            {" "}
+            browser plugin shows no issues for any components.
+          </li>
+          <li>
+            All components receive a{" "}
+            <Link href="https://developer.chrome.com/docs/lighthouse/overview/">
+              Google Lighthouse
+            </Link>{" "}
+            score of 100 for accessibility.
+          </li>
+        </UL>
+        <p>
+          That said, I'm sure that I could take things further. Just because
+          there are no <em>violations</em> doesn't mean that the{" "}
+          <em>user experience</em> for those with disabilities is optimal.
+        </p>
+        <p>
+          I'm not aiming to optimize it though. So then, if a notable percentage
+          of your users are disabled and optimizing their experience is
+          something you're seeking to do, RFUI might not be the right choice.
+        </p>
+      </Text>
+
       <H2 inPageLink="developer-experience">Developer experience</H2>
       <Text>
         <p>

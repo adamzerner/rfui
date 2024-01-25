@@ -220,6 +220,15 @@ const SubmitButton = () => {
           RFUI aims to meet accessibility standards and follow best practices.
         </p>
         <UL>
+          <li>
+            I use the{" "}
+            <Link href="https://marketplace.visualstudio.com/items?itemName=deque-systems.vscode-axe-linter">
+              axe Accessibility Linter
+            </Link>{" "}
+            VSCode plugin when developing which will alert me if I violate
+            various accessibility-related best practices. I address any of these
+            warnings that pop up.
+          </li>
           <li>All components meet WCAG 2.1 AA standards.</li>
           <li>
             The popular{" "}

@@ -144,8 +144,8 @@ export default () => {
           app's look and feel.
         </p>
         <p>
-          Here's a CSS formater you can use:{" "}
-          <Link href="https://webformatter.com/css">Web Formatter</Link>.
+          See the <Link href="/css-variables">"CSS variables" page</Link>{" "}
+          for more information.
         </p>
       </Text>
 

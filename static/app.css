@@ -4,6 +4,44 @@
 
 @layer base {
   :root {
+    /* Font */
+
+    --fontFamily-sans: 'Open Sans', sans-serif;
+
+
+    /* Spacing */
+
+    --spacing-px: 1px;
+    --spacing-0: 0;
+    --spacing-1: 0.25rem;
+    --spacing-2: 0.5rem;
+    --spacing-3: 0.75rem;
+    --spacing-4: 1rem;
+    --spacing-5: 1.5rem;
+    --spacing-6: 2rem;
+    --spacing-7: 3rem;
+    --spacing-8: 4rem;
+    --spacing-9: 6rem;
+    --spacing-10: 8rem;
+    --spacing-11: 12rem;
+    --spacing-12: 16rem;
+    --spacing-13: 24rem;
+    --spacing-14: 32rem;
+    --spacing-15: 40rem;
+    --spacing-16: 48rem;
+
+
+    /* Roundedness */
+
+    --rounded-square: var(--spacing-0);
+    --rounded-sm: var(--spacing-1);
+    --rounded-lg: var(--spacing-2);
+    --rounded-full: 9999px;
+    --default-roundedness: var(--rounded-sm);
+
+
+    /* Color */
+
     --color-primary-50: 220 238 251;
     --color-primary-100: 182 224 254;
     --color-primary-200: 132 197 244;
@@ -48,17 +86,6 @@
     --color-supporting-yellow-800: 180 77 18;
     --color-supporting-yellow-900: 141 43 11;
 
-    --color-supporting-cyan-50: 224 252 255;
-    --color-supporting-cyan-100: 190 248 253;
-    --color-supporting-cyan-200: 135 234 242;
-    --color-supporting-cyan-300: 84 209 219;
-    --color-supporting-cyan-400: 56 190 201;
-    --color-supporting-cyan-500: 44 177 188;
-    --color-supporting-cyan-600: 20 145 155;
-    --color-supporting-cyan-700: 14 124 134;
-    --color-supporting-cyan-800: 10 108 116;
-    --color-supporting-cyan-900: 4 78 84;
-
     --color-supporting-red-50: 255 238 238;
     --color-supporting-red-100: 250 205 205;
     --color-supporting-red-200: 242 155 155;
@@ -69,33 +96,6 @@
     --color-supporting-red-700: 145 17 17;
     --color-supporting-red-800: 120 10 10;
     --color-supporting-red-900: 97 4 4;
-
-    --fontFamily-sans: 'Open Sans', sans-serif;
-
-    --spacing-px: 1px;
-    --spacing-0: 0;
-    --spacing-1: 0.25rem;
-    --spacing-2: 0.5rem;
-    --spacing-3: 0.75rem;
-    --spacing-4: 1rem;
-    --spacing-5: 1.5rem;
-    --spacing-6: 2rem;
-    --spacing-7: 3rem;
-    --spacing-8: 4rem;
-    --spacing-9: 6rem;
-    --spacing-10: 8rem;
-    --spacing-11: 12rem;
-    --spacing-12: 16rem;
-    --spacing-13: 24rem;
-    --spacing-14: 32rem;
-    --spacing-15: 40rem;
-    --spacing-16: 48rem;
-
-    --rounded-square: var(--spacing-0);
-    --rounded-sm: var(--spacing-1);
-    --rounded-lg: var(--spacing-2);
-    --rounded-full: 9999px;
-    --default-roundedness: var(--rounded-sm);
   }
 }
 

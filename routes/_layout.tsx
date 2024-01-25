@@ -58,13 +58,14 @@ const TheFooter = () => {
         <FooterHeading>Docs</FooterHeading>
         <FooterItem href="/">Components</FooterItem>
         <FooterItem href="/getting-started">Getting started</FooterItem>
-        <FooterItem href="/rest-parameters">Rest parameters</FooterItem>
+        <FooterItem href="/css-variables">CSS variables</FooterItem>
         <FooterItem href="/choose-a-personality">
           Choose a personality
         </FooterItem>
         <FooterItem href="/default-roundedness">
           Default roundedness
         </FooterItem>
+        <FooterItem href="/rest-parameters">Rest parameters</FooterItem>
       </FooterColumn>
       <FooterColumn>
         <FooterHeading>Tutorials</FooterHeading>

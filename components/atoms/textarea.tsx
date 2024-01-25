@@ -16,7 +16,7 @@ export type TextareaType = {
  */
 export const Textarea = (
   {
-    rounded = "sm",
+    rounded,
     invalid = false,
     children,
     ...rest
@@ -34,6 +34,8 @@ export const Textarea = (
         return "rounded";
       case "lg":
         return "rounded-lg";
+      default:
+        return "rfui-rounded-default";
     }
   })();
 

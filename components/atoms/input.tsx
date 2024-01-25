@@ -17,7 +17,7 @@ export type InputType = {
 export const Input = (
   {
     size = "md",
-    rounded = "sm",
+    rounded,
     invalid = false,
     ...rest
   }: InputType,
@@ -47,6 +47,8 @@ export const Input = (
         return "rounded-lg";
       case "full":
         return "rounded-full px-3";
+      default:
+        return "rfui-rounded-default";
     }
   })();
 

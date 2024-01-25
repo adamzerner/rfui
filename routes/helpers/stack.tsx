@@ -78,7 +78,7 @@ export default () => {
     >
       <Header
         componentName="Stack"
-        sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/islands/helpers/stack.tsx"
+        sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/helpers/stack.tsx"
       >
         <Example>{sections[0].example}</Example>
         <Notes>{notes}</Notes>

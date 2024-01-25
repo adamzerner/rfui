@@ -76,7 +76,7 @@ export default () => {
     >
       <Header
         componentName="InlineCode"
-        sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/islands/atoms/inline-code.tsx"
+        sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/atoms/inline-code.tsx"
       >
         <Example>{sections[0].example}</Example>
         <Notes>{notes}</Notes>

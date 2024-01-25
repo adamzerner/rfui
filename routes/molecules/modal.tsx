@@ -13,7 +13,7 @@ import { Prop } from "@/components/docs-site/component-docs-page/prop.tsx";
 import { Props } from "@/components/docs-site/component-docs-page/props.tsx";
 import { SectionType } from "@/components/docs-site/component-docs-page/section-type.ts";
 import { Card } from "@/components/molecules/card.tsx";
-import { ModalExample } from "../../islands/docs-site/component-docs-page/modal-example.tsx";
+import { ModalExample } from "@/islands/docs-site/component-docs-page/modal-example.tsx";
 
 export default () => {
   const notes = null;
@@ -31,6 +31,11 @@ export default () => {
     ),
   }, {
     title: "With heading",
+    description: (
+      <div>
+        Set <InlineCode>heading</InlineCode> to a string.
+      </div>
+    ),
     example: <ModalExample heading="Modal heading">Example</ModalExample>,
     exampleCode: (
       <CodeBlock
@@ -105,7 +110,7 @@ export default () => {
     >
       <Header
         componentName="Modal"
-        sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/islands/molecules/modal.tsx"
+        sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/molecules/modal.tsx"
       >
         <Example>{sections[0].example}</Example>
         <Notes>{notes}</Notes>

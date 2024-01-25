@@ -1,6 +1,7 @@
 import { CodeBlock } from "@/components/atoms/code-block.tsx";
 import { H2 } from "@/components/atoms/h2.tsx";
 import { InlineCode } from "@/components/atoms/inline-code.tsx";
+import { Link } from "@/components/atoms/link.tsx";
 import { Text } from "@/components/atoms/text.tsx";
 import {
   Example,
@@ -43,6 +44,15 @@ export default () => {
     ),
   }, {
     title: "Padding",
+    description: (
+      <div>
+        Set <InlineCode>padding</InlineCode> to <InlineCode>"sm"</InlineCode>,
+        {" "}
+        <InlineCode>"md"</InlineCode>, or{" "}
+        <InlineCode>"lg"</InlineCode>. Defaults to{" "}
+        <InlineCode>"md"</InlineCode>.
+      </div>
+    ),
     example: (
       <Stack class="gap-5">
         <CheckboxCardGroup padding="sm">
@@ -87,6 +97,19 @@ export default () => {
     ),
   }, {
     title: "Rounded",
+    description: (
+      <div>
+        Set <InlineCode>rounded</InlineCode> to{" "}
+        <InlineCode>"square"</InlineCode>, <InlineCode>"sm"</InlineCode>, or
+        {" "}
+        <InlineCode>"lg"</InlineCode>. Defaults to the value of the CSS variable
+        {" "}
+        <InlineCode>--default-roundedness</InlineCode>. See{" "}
+        <Link href="/default-roundedness">
+          "Default roundedness"
+        </Link>.
+      </div>
+    ),
     example: (
       <Stack class="gap-5">
         <CheckboxCardGroup rounded="square">
@@ -140,8 +163,16 @@ export default () => {
     name: "rounded",
     required: false,
     type: '"square" | "sm" | "lg"',
-    default: '"sm"',
-    notes: null,
+    default: null,
+    notes: (
+      <div>
+        Defaults to the value of the CSS variable{" "}
+        <InlineCode>--default-roundedness</InlineCode>. See{" "}
+        <Link href="/default-roundedness">
+          "Default roundedness"
+        </Link>.
+      </div>
+    ),
   }, {
     name: "children",
     required: true,

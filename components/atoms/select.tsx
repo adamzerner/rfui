@@ -24,7 +24,7 @@ export type SelectType = {
 export const Select = (
   {
     size = "md",
-    rounded = "sm",
+    rounded,
     invalid = false,
     children,
     ...rest
@@ -55,6 +55,8 @@ export const Select = (
         return "rounded-lg";
       case "full":
         return "rounded-full";
+      default:
+        return "rfui-rounded-default";
     }
   })();
 

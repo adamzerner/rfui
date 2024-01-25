@@ -122,7 +122,12 @@ export default () => {
         Set <InlineCode>rounded</InlineCode> to{" "}
         <InlineCode>"square"</InlineCode>, <InlineCode>"sm"</InlineCode>, or
         {" "}
-        <InlineCode>"lg"</InlineCode>.
+        <InlineCode>"lg"</InlineCode>. Defaults to the value of the CSS variable
+        {" "}
+        <InlineCode>--default-roundedness</InlineCode>. See{" "}
+        <Link href="/default-roundedness">
+          "Default roundedness"
+        </Link>.
       </div>
     ),
     example: (
@@ -186,7 +191,8 @@ export default () => {
         Set <InlineCode>width</InlineCode> to <InlineCode>"sm"</InlineCode>,
         {" "}
         <InlineCode>"md"</InlineCode>, <InlineCode>"lg"</InlineCode>, or{" "}
-        <InlineCode>"full"</InlineCode>.
+        <InlineCode>"full"</InlineCode>. Defaults to{" "}
+        <InlineCode>"md"</InlineCode>.
       </div>
     ),
     example: (
@@ -263,7 +269,9 @@ export default () => {
       <div>
         Set <InlineCode>shadow</InlineCode> to <InlineCode>"sm"</InlineCode>,
         {" "}
-        <InlineCode>"md"</InlineCode>, or <InlineCode>"lg"</InlineCode>.
+        <InlineCode>"md"</InlineCode>, or{" "}
+        <InlineCode>"lg"</InlineCode>. Defaults to{" "}
+        <InlineCode>"sm"</InlineCode>.
       </div>
     ),
     example: (
@@ -326,7 +334,9 @@ export default () => {
       <div>
         Set <InlineCode>padding</InlineCode> to <InlineCode>"sm"</InlineCode>,
         {" "}
-        <InlineCode>"md"</InlineCode>, or <InlineCode>"lg"</InlineCode>.
+        <InlineCode>"md"</InlineCode>, or{" "}
+        <InlineCode>"lg"</InlineCode>. Defaults to{" "}
+        <InlineCode>"md"</InlineCode>.
       </div>
     ),
     example: (
@@ -558,8 +568,16 @@ export default () => {
     name: "rounded",
     required: false,
     type: '"square" | "sm" | "lg"',
-    default: '"sm"',
-    notes: null,
+    default: null,
+    notes: (
+      <div>
+        Defaults to the value of the CSS variable{" "}
+        <InlineCode>--default-roundedness</InlineCode>. See{" "}
+        <Link href="/default-roundedness">
+          "Default roundedness"
+        </Link>.
+      </div>
+    ),
   }, {
     name: "width",
     required: false,
@@ -669,7 +687,7 @@ export default () => {
     >
       <Header
         componentName="Card"
-        sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/islands/molecules/card.tsx"
+        sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/molecules/card.tsx"
         importStatement='import { Card, CardHeader, CardBody, CardFooter } from "rfui";'
       >
         <Example>{sections[0].example}</Example>
@@ -717,7 +735,7 @@ export default () => {
         })}
       </Props>
       <Props subComponentTitle="CardBody">
-        {cardHeaderProps.map((prop) => {
+        {cardBodyProps.map((prop) => {
           const { notes, ...propWithoutNotes } = prop;
 
           return notes
@@ -730,7 +748,7 @@ export default () => {
         })}
       </Props>
       <Props subComponentTitle="CardFooter">
-        {cardHeaderProps.map((prop) => {
+        {cardFooterProps.map((prop) => {
           const { notes, ...propWithoutNotes } = prop;
 
           return notes

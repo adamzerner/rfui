@@ -40,7 +40,7 @@ export type RadioButtonCardGroupItemType = {
  * </RadioButtonCardGroup>
  */
 export const RadioButtonCardGroup = (
-  { padding = "md", rounded = "sm", children }: RadioButtonCardGroupType,
+  { padding = "md", rounded, children }: RadioButtonCardGroupType,
 ) => {
   const id = crypto.randomUUID();
   let containerClass = `radio-button-card-group-${id}`;
@@ -55,8 +55,14 @@ export const RadioButtonCardGroup = (
           padding: var(--spacing-${
           padding === "sm" ? 3 : padding === "md" ? 5 : 7
         });
-          border-radius: var(--spacing-${
-          rounded === "square" ? 0 : rounded === "sm" ? 1 : 2
+          border-radius: var(${
+          rounded === "square"
+            ? "--spacing-0"
+            : rounded === "sm"
+            ? "--spacing-1"
+            : rounded === "lg"
+            ? "--spacing-2"
+            : "--default-roundedness"
         });
         }
 

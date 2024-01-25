@@ -78,7 +78,7 @@ export default () => {
     >
       <Header
         componentName="Flex"
-        sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/islands/helpers/flex.tsx"
+        sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/helpers/flex.tsx"
       >
         <Example>{sections[0].example}</Example>
         <Notes>{notes}</Notes>

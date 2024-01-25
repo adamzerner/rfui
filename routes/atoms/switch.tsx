@@ -32,6 +32,14 @@ export default () => {
     exampleCode: <CodeBlock class="mt-4" language="tsx" code={`<Switch />`} />,
   }, {
     title: "Disabled",
+    description: (
+      <div>
+        Set <InlineCode>disabled</InlineCode> to either{" "}
+        <InlineCode>true</InlineCode> or{" "}
+        <InlineCode>false</InlineCode>. Defaults to{" "}
+        <InlineCode>false</InlineCode>.
+      </div>
+    ),
     example: <Switch disabled />,
     exampleCode: (
       <CodeBlock
@@ -78,7 +86,7 @@ export default () => {
     >
       <Header
         componentName="Switch"
-        sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/islands/atoms/switch.tsx"
+        sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/atoms/switch.tsx"
       >
         <Example>{sections[0].example}</Example>
         <Notes>{notes}</Notes>

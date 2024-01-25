@@ -62,6 +62,9 @@ const TheFooter = () => {
         <FooterItem href="/choose-a-personality">
           Choose a personality
         </FooterItem>
+        <FooterItem href="/default-roundedness">
+          Default roundedness
+        </FooterItem>
       </FooterColumn>
       <FooterColumn>
         <FooterHeading>Tutorials</FooterHeading>

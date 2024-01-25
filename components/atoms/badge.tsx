@@ -19,7 +19,7 @@ export const Badge = (
   {
     type = "neutral",
     size = "md",
-    rounded = "sm",
+    rounded,
     children,
     ...rest
   }: BadgeType,
@@ -63,6 +63,8 @@ export const Badge = (
         return "rounded-lg";
       case "full":
         return "rounded-full";
+      default:
+        return "rfui-rounded-default";
     }
   })();
 

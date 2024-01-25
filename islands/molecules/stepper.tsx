@@ -24,7 +24,7 @@ export const Stepper = (
   {
     name,
     size = "md",
-    rounded = "sm",
+    rounded,
     startingValue = 0,
     onChange,
     min,
@@ -82,6 +82,10 @@ export const Stepper = (
     case "full":
       leftButtonClass += " rounded-l-full";
       rightButtonClass += " rounded-r-full";
+      break;
+    default:
+      leftButtonClass += " rfui-rounded-l-default";
+      rightButtonClass += " rfui-rounded-r-default";
       break;
   }
 

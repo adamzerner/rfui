@@ -34,8 +34,12 @@ export default () => {
       <div>
         Set <InlineCode>rounded</InlineCode> to{" "}
         <InlineCode>"square"</InlineCode>, <InlineCode>"sm"</InlineCode> or{" "}
-        <InlineCode>"lg"</InlineCode>. Defaults to{" "}
-        <InlineCode>"sm"</InlineCode>.
+        <InlineCode>"lg"</InlineCode>. Defaults to the value of the CSS variable
+        {" "}
+        <InlineCode>--default-roundedness</InlineCode>. See{" "}
+        <Link href="/default-roundedness">
+          "Default roundedness"
+        </Link>.
       </div>
     ),
     example: (
@@ -60,7 +64,10 @@ export default () => {
     title: "Disabled",
     description: (
       <div>
-        Set <InlineCode>disabled</InlineCode> to <InlineCode>true</InlineCode>.
+        Set <InlineCode>disabled</InlineCode> to either{" "}
+        <InlineCode>true</InlineCode> or{" "}
+        <InlineCode>false</InlineCode>. Defaults to{" "}
+        <InlineCode>false</InlineCode>.
       </div>
     ),
     example: <Textarea disabled></Textarea>,
@@ -75,7 +82,10 @@ export default () => {
     title: "Readonly",
     description: (
       <div>
-        Set <InlineCode>readonly</InlineCode> to <InlineCode>true</InlineCode>.
+        Set <InlineCode>readonly</InlineCode> to either{" "}
+        <InlineCode>true</InlineCode> or{" "}
+        <InlineCode>false</InlineCode>. Defaults to{" "}
+        <InlineCode>false</InlineCode>.
       </div>
     ),
     example: <Textarea readonly>Example</Textarea>,
@@ -90,7 +100,10 @@ export default () => {
     title: "Invalid",
     description: (
       <div>
-        Set <InlineCode>invalid</InlineCode> to <InlineCode>true</InlineCode>.
+        Set <InlineCode>invalid</InlineCode> to either{" "}
+        <InlineCode>true</InlineCode> or{" "}
+        <InlineCode>false</InlineCode>. Defaults to{" "}
+        <InlineCode>false</InlineCode>.
       </div>
     ),
     example: <Textarea invalid>Example</Textarea>,
@@ -106,8 +119,16 @@ export default () => {
     name: "rounded",
     required: false,
     type: "'square' | 'sm' | 'lg'",
-    default: '"sm"',
-    notes: null,
+    default: null,
+    notes: (
+      <div>
+        Defaults to the value of the CSS variable{" "}
+        <InlineCode>--default-roundedness</InlineCode>. See{" "}
+        <Link href="/default-roundedness">
+          "Default roundedness"
+        </Link>.
+      </div>
+    ),
   }, {
     name: "invalid",
     required: false,
@@ -157,7 +178,7 @@ export default () => {
     >
       <Header
         componentName="Textarea"
-        sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/islands/atoms/textarea.tsx"
+        sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/atoms/textarea.tsx"
       >
         <Example>{sections[0].example}</Example>
         <Notes>{notes}</Notes>

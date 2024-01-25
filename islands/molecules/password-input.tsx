@@ -61,6 +61,8 @@ export const PasswordInput = (
         s += " rounded-lg";
       } else if (inputProps.rounded === "full") {
         s += " rounded-full";
+      } else {
+        s += " rfui-rounded-default";
       }
     }
 

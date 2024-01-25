@@ -31,6 +31,8 @@ To create a new version of this library:
 
 Here's the process:
 
+0. Download the `tailwindcss` executable by following
+   [these instructions](https://tailwindcss.com/blog/standalone-cli#get-started).
 1. Go to `tailwind.config.ts` and remove `routes` since that directory is just
    for the documentation, not for code that will be used by library users.
 2. Run `./tailwindcss -i static/app.css -o static/rfui.css --minify`.

@@ -109,8 +109,12 @@ export default () => {
         Set <InlineCode>rounded</InlineCode> to either{" "}
         <InlineCode>"square"</InlineCode>, <InlineCode>"sm"</InlineCode>, or
         {" "}
-        <InlineCode>"lg"</InlineCode>. Defaults to{" "}
-        <InlineCode>"sm"</InlineCode>.
+        <InlineCode>"lg"</InlineCode>. Defaults to the value of the CSS variable
+        {" "}
+        <InlineCode>--default-roundedness</InlineCode>. See{" "}
+        <Link href="/default-roundedness">
+          "Default roundedness"
+        </Link>.
       </div>
     ),
     example: (
@@ -222,8 +226,16 @@ export default () => {
     name: "rounded",
     required: false,
     type: '"square" | "sm" | "lg" | "full"',
-    default: '"sm"',
-    notes: null,
+    default: null,
+    notes: (
+      <div>
+        Defaults to the value of the CSS variable{" "}
+        <InlineCode>--default-roundedness</InlineCode>. See{" "}
+        <Link href="/default-roundedness">
+          "Default roundedness"
+        </Link>.
+      </div>
+    ),
   }, {
     name: "disabled",
     required: false,
@@ -273,7 +285,7 @@ export default () => {
     >
       <Header
         componentName="Select"
-        sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/islands/atoms/select.tsx"
+        sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/atoms/select.tsx"
       >
         <Example>{sections[0].example}</Example>
         <Notes>{notes}</Notes>

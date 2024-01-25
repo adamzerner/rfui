@@ -251,7 +251,7 @@ export default () => {
     >
       <Header
         componentName="Navbar"
-        sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/islands/molecules/navbar.tsx"
+        sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/molecules/navbar.tsx"
         importStatement={`import {
   Navbar,
   NavbarItem,

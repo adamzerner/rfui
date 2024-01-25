@@ -72,8 +72,11 @@ export default () => {
         Set <InlineCode>rounded</InlineCode> to{" "}
         <InlineCode>"square"</InlineCode>, <InlineCode>"sm"</InlineCode>,{" "}
         <InlineCode>"lg"</InlineCode>, or{" "}
-        <InlineCode>"full"</InlineCode>. Defaults to{" "}
-        <InlineCode>"sm"</InlineCode>.
+        <InlineCode>"full"</InlineCode>. Defaults to the value of the CSS
+        variable <InlineCode>--default-roundedness</InlineCode>. See{" "}
+        <Link href="/default-roundedness">
+          "Default roundedness"
+        </Link>.
       </div>
     ),
     example: (
@@ -98,6 +101,13 @@ export default () => {
     ),
   }, {
     title: "Starting value",
+    description: (
+      <div>
+        Set <InlineCode>startingValue</InlineCode> to the number you want the
+        {" "}
+        <InlineCode>Stepper</InlineCode> to begin at.
+      </div>
+    ),
     example: <Stepper startingValue={100} />,
     exampleCode: (
       <CodeBlock
@@ -108,7 +118,12 @@ export default () => {
     ),
   }, {
     title: "Min and max",
-    description: "In this example the min is 0 and the max is 5.",
+    description: (
+      <div>
+        In this example the <InlineCode>min</InlineCode> is 0 and the{" "}
+        <InlineCode>max</InlineCode> is 5.
+      </div>
+    ),
     example: <Stepper min={0} max={5} />,
     exampleCode: (
       <CodeBlock
@@ -142,8 +157,16 @@ export default () => {
     name: "rounded",
     required: false,
     type: '"square" | "sm" | "lg" | "full"',
-    default: '"sm"',
-    notes: null,
+    default: null,
+    notes: (
+      <div>
+        Defaults to the value of the CSS variable{" "}
+        <InlineCode>--default-roundedness</InlineCode>. See{" "}
+        <Link href="/default-roundedness">
+          "Default roundedness"
+        </Link>.
+      </div>
+    ),
   }, {
     name: "startingValue",
     required: false,

@@ -90,7 +90,29 @@
     --spacing-14: 32rem;
     --spacing-15: 40rem;
     --spacing-16: 48rem;
+
+    --rounded-square: var(--spacing-0);
+    --rounded-sm: var(--spacing-1);
+    --rounded-lg: var(--spacing-2);
+    --rounded-full: 9999px;
+    --default-roundedness: var(--rounded-sm);
   }
+}
+
+/* Default roundedness */
+
+.rfui-rounded-default {
+  border-radius: var(--default-roundedness);
+}
+
+.rfui-rounded-l-default {
+  border-top-left-radius: var(--default-roundedness);
+  border-bottom-left-radius: var(--default-roundedness);
+}
+
+.rfui-rounded-r-default {
+  border-top-right-radius: var(--default-roundedness);
+  border-bottom-right-radius: var(--default-roundedness);
 }
 
 /* Table */

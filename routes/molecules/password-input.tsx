@@ -43,6 +43,11 @@ export default () => {
     title: "Default visible",
     description: (
       <div>
+        <div class="mb-3">
+          Set <InlineCode>defaultVisibility</InlineCode> to{" "}
+          <InlineCode>"shown"</InlineCode>. Defaults to{" "}
+          <InlineCode>"hidden"</InlineCode>.
+        </div>
         <div class="mb-2">Consider the factors at play here, including:</div>
         <OL>
           <li>
@@ -124,8 +129,11 @@ export default () => {
         Set <InlineCode>rounded</InlineCode> to{" "}
         <InlineCode>"square"</InlineCode>, <InlineCode>"sm"</InlineCode>,{" "}
         <InlineCode>"lg"</InlineCode>, or{" "}
-        <InlineCode>"full"</InlineCode>. Defaults to{" "}
-        <InlineCode>"sm"</InlineCode>.
+        <InlineCode>"full"</InlineCode>. Defaults to the value of the CSS
+        variable <InlineCode>--default-roundedness</InlineCode>. See{" "}
+        <Link href="/default-roundedness">
+          "Default roundedness"
+        </Link>.
       </div>
     ),
     example: (

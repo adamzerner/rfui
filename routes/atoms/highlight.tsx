@@ -119,7 +119,7 @@ export default () => {
     >
       <Header
         componentName="Highlight"
-        sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/islands/atoms/highlight.tsx"
+        sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/atoms/highlight.tsx"
       >
         <Example>{sections[0].example}</Example>
         <Notes>{notes}</Notes>

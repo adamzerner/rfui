@@ -128,7 +128,12 @@ export default () => {
       <div>
         Set <InlineCode>rounded</InlineCode> to{" "}
         <InlineCode>"square"</InlineCode>, <InlineCode>"sm"</InlineCode>,{" "}
-        <InlineCode>"lg"</InlineCode>, or <InlineCode>"full"</InlineCode>.
+        <InlineCode>"lg"</InlineCode>, or{" "}
+        <InlineCode>"full"</InlineCode>. Defaults to the value of the CSS
+        variable <InlineCode>--default-roundedness</InlineCode>. See{" "}
+        <Link href="/default-roundedness">
+          "Default roundedness"
+        </Link>.
       </div>
     ),
     example: (

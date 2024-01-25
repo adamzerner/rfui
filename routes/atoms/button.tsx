@@ -153,7 +153,12 @@ export default () => {
       <div>
         Set <InlineCode>rounded</InlineCode> to either{" "}
         <InlineCode>"square"</InlineCode>, <InlineCode>"sm"</InlineCode>,{" "}
-        <InlineCode>"lg"</InlineCode>, or <InlineCode>"full"</InlineCode>.
+        <InlineCode>"lg"</InlineCode>, or{" "}
+        <InlineCode>"full"</InlineCode>. Defaults to the value of the CSS
+        variable <InlineCode>--default-roundedness</InlineCode>. See{" "}
+        <Link href="/default-roundedness">
+          "Default roundedness"
+        </Link>.
       </div>
     ),
     example: (
@@ -302,7 +307,15 @@ export default () => {
     required: false,
     type: '"square" | "sm" | "lg" | "full"',
     default: null,
-    notes: null,
+    notes: (
+      <div>
+        Defaults to the value of the CSS variable{" "}
+        <InlineCode>--default-roundedness</InlineCode>. See{" "}
+        <Link href="/default-roundedness">
+          "Default roundedness"
+        </Link>.
+      </div>
+    ),
   }, {
     name: "isLoading",
     required: false,

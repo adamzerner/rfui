@@ -57,8 +57,8 @@ const TheFooter = () => {
       <FooterColumn>
         <FooterHeading>Docs</FooterHeading>
         <FooterItem href="/">Components</FooterItem>
-        <FooterItem href="/rest-parameters">Rest parameters</FooterItem>
         <FooterItem href="/getting-started">Getting started</FooterItem>
+        <FooterItem href="/rest-parameters">Rest parameters</FooterItem>
         <FooterItem href="/choose-a-personality">
           Choose a personality
         </FooterItem>

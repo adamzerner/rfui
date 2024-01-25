@@ -1,4 +1,5 @@
 import { Blockquote } from "@/components/atoms/blockquote.tsx";
+import { CodeBlock } from "@/components/atoms/code-block.tsx";
 import { H1 } from "@/components/atoms/h1.tsx";
 import { H2 } from "@/components/atoms/h2.tsx";
 import { InlineCode } from "@/components/atoms/inline-code.tsx";
@@ -189,6 +190,80 @@ export default () => {
         </p>
       </Text>
 
+      <H2 inPageLink="responsiveness">Responsiveness</H2>
+      <Text>
+        <p>
+          RFUI aims for all of it's components to look good on common screen
+          sizes.
+        </p>
+        <p>
+          Note that this doesn't mean that they're intended to look good on
+          every possible viewport width. That said, my sense is that they do.
+          It's just not a design goal of RFUI. Well, it's something that I try
+          to do if it's reasonably easy, but not if it's difficult.
+        </p>
+      </Text>
+
+      <H2 inPageLink="first-second-and-third-users">
+        The first, second and third users
+      </H2>
+      <Text>
+        <p>
+          There is a good essay by Bruce Tognazzini called{" "}
+          <Link href="https://asktog.com/atc/the-third-user/">
+            The Third User
+          </Link>. Here is an overview of it:
+        </p>
+        <UL>
+          <li>
+            The First User is someone who is using a product for the first time.
+          </li>
+          <li>
+            The Second User is someone who has some experience with using a
+            product and generally knows their way around.
+          </li>
+          <li>
+            Providing a good user experience for a First User doesn't
+            necessarily involve the same things as doing so for a Second User.
+            First Users are new and often confused, so you may need to dumb
+            things down a lot. On the other hand, Second Users are already
+            familiar with a lot of functionality, and so you probably would
+            prefer to not dumb things down for them.
+          </li>
+          <li>
+            The Third User is the user who is{" "}
+            <em>shopping</em>. Someone who hasn't even bought the product yet.
+            (This should probably be called the zeroith user.)
+          </li>
+          <li>
+            Bruce argues that Apple has unwisely been focusing on the Third User
+            at the expense of First and Second Users.
+          </li>
+        </UL>
+        <p>
+          I think it's worth reflecting on this and commenting on what my
+          priorities are with RFUI.
+        </p>
+        <p>
+          This may seem like a cop out, but I think the large majority of the
+          time there isn't a direct tradeoff. Ie. I could come up with ways to
+          please all three types of users.
+        </p>
+        <p>
+          That said, there are times where there are tradeoffs at play and you
+          can't please everyone. In those situations, I think my priorities are
+          something like:
+        </p>
+        <CodeBlock code="Second User >> First User >>>> Third User" />
+        <p>
+          Most of the time spent using RFUI will be in the Second User phase, so
+          it feels like that's who it makes sense to target. Especially since I
+          think the onboarding experience is pretty good. As for Third Users, I
+          dunno, I guess I find it more satisfying to focus on building a great
+          product.
+        </p>
+      </Text>
+
       <H2 inPageLink="developer-experience">Developer experience</H2>
       <Text>
         <p>
@@ -200,6 +275,44 @@ export default () => {
           aggressively limiting dependencies, scaling down, and nudging users
           towards a pit of success. See the{" "}
           <Link href="/philosophy">philosophy page</Link> for more information.
+        </p>
+      </Text>
+
+      <H2 inPageLink="simplicity">Simplicity</H2>
+      <Text>
+        <p>
+          Along the lines of the "Developer experience" section above and a few
+          other sections, something that I really value a lot is{" "}
+          <em>simplicity</em>.
+        </p>
+        <p>
+          Maybe that's not the best word. I'm not sure what the right word is.
+          Minimalism? Low complexity? I dunno.
+        </p>
+        <p>
+          But hopefully you get what I'm trying to say. I value saying no. I
+          value having less "stuff". Less moving parts. I value things that
+          don't require a big brain to understand.
+        </p>
+        <p>
+          Anyway, if you are really big into simplicity too, you might like
+          RFUI.
+        </p>
+      </Text>
+
+      <H2 inPageLink="usability">Usability</H2>
+      <Text>
+        <p>
+          I also take usability very seriously. I spend a lot of time on
+          <Link href="https://www.nngroup.com/">NNGroup</Link>,{" "}
+          <Link href="https://ux.stackexchange.com/">
+            UX Stack Exchange
+          </Link>, and related sites.
+        </p>
+        <p>
+          I think I do a very good job at offering components that do a great
+          job with usability. If usability is something that you prioritize,
+          RFUI might be a good choice for you.
         </p>
       </Text>
 

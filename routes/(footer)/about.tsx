@@ -3,11 +3,9 @@ import { Button } from "@/components/atoms/button.tsx";
 import { CodeBlock } from "@/components/atoms/code-block.tsx";
 import { H1 } from "@/components/atoms/h1.tsx";
 import { H2 } from "@/components/atoms/h2.tsx";
-import { InlineCode } from "@/components/atoms/inline-code.tsx";
 import { Link } from "@/components/atoms/link.tsx";
 import { OL } from "@/components/atoms/ol.tsx";
 import { Text } from "@/components/atoms/text.tsx";
-import { UL } from "@/components/atoms/ul.tsx";
 import { Card } from "@/components/molecules/card.tsx";
 
 export default () => {
@@ -98,66 +96,6 @@ const SubmitButton = () => {
         </p>
       </Text>
 
-      <H2 inPageLink="first-second-and-third-users">
-        The first, second and third users
-      </H2>
-      <Text>
-        <p>
-          There is a good essay by Bruce Tognazzini called{" "}
-          <Link href="https://asktog.com/atc/the-third-user/">
-            The Third User
-          </Link>. Here is an overview of it:
-        </p>
-        <UL>
-          <li>
-            The First User is someone who is using a product for the first time.
-          </li>
-          <li>
-            The Second User is someone who has some experience with using a
-            product and generally knows their way around.
-          </li>
-          <li>
-            Providing a good user experience for a First User doesn't
-            necessarily involve the same things as doing so for a Second User.
-            First Users are new and often confused, so you may need to dumb
-            things down a lot. On the other hand, Second Users are already
-            familiar with a lot of functionality, and so you probably would
-            prefer to not dumb things down for them.
-          </li>
-          <li>
-            The Third User is the user who is{" "}
-            <em>shopping</em>. Someone who hasn't even bought the product yet.
-            (This should probably be called the zeroith user.)
-          </li>
-          <li>
-            Bruce argues that Apple has unwisely been focusing on the Third User
-            at the expense of First and Second Users.
-          </li>
-        </UL>
-        <p>
-          I think it's worth reflecting on this and commenting on what my
-          priorities are with RFUI.
-        </p>
-        <p>
-          This may seem like a cop out, but I think the large majority of the
-          time there isn't a direct tradeoff. Ie. I could come up with ways to
-          please all three types of users.
-        </p>
-        <p>
-          That said, there are times where there are tradeoffs at play and you
-          can't please everyone. In those situations, I think my priorities are
-          something like:
-        </p>
-        <CodeBlock code="Second User >> First User >>>> Third User" />
-        <p>
-          Most of the time spent using RFUI will be in the Second User phase, so
-          it feels like that's who it makes sense to target. Especially since I
-          think the onboarding experience is pretty good. As for Third Users, I
-          dunno, I guess I find it more satisfying to focus on building a great
-          product.
-        </p>
-      </Text>
-
       <H2 inPageLink="atomic-design">Atomic Design</H2>
       <Text>
         <p>
@@ -175,88 +113,6 @@ const SubmitButton = () => {
         <p class="text-sm italic w-96 max-w-full leading-relaxed">
           Right now I don't have plans to get into templates or pages. If I ever
           do it'll probably be pretty far down the road.
-        </p>
-      </Text>
-
-      <H2 inPageLink="ux">UX</H2>
-      <Text>
-        <p>
-          Not everyone is a UX expert. A lot of times design is done by a
-          product manager or a developer. And even when something is designed by
-          a UX designer, mistakes can still be made.
-        </p>
-        <p>
-          RFUI tries to nudge － and sometimes <em>shove</em>{" "}
-          － you in the direction of avoiding UX mistakes. Some examples:
-        </p>
-        <UL>
-          <li>
-            The <InlineCode>Text</InlineCode>{" "}
-            component uses the Tailwind class of{" "}
-            <InlineCode>max-w-prose</InlineCode>, which ensures a{" "}
-            <Link href="https://practicaltypography.com/line-length.html">
-              comfortable line length
-            </Link>{" "}
-            is used.
-          </li>
-          <li>
-            It is{" "}
-            <Link href="https://www.nngroup.com/articles/new-browser-windows-and-tabs/">
-              generally inadvisible
-            </Link>{" "}
-            to have links open in a new tab. So then, RFUI's{" "}
-            <InlineCode>Link</InlineCode>{" "}
-            component nudges you away from doing so by prefixing the attribute
-            with an underscore:{" "}
-            <InlineCode>_newTab</InlineCode>. It also elaborates and provides a
-            reference in the JSDoc documentation.
-          </li>
-        </UL>
-      </Text>
-
-      <H2 inPageLink="accessibility">Accessibility</H2>
-      <Text>
-        <p>
-          RFUI aims to meet accessibility standards and follow best practices.
-        </p>
-        <UL>
-          <li>
-            I use the{" "}
-            <Link href="https://marketplace.visualstudio.com/items?itemName=deque-systems.vscode-axe-linter">
-              axe Accessibility Linter
-            </Link>{" "}
-            VSCode plugin when developing which will alert me if I violate
-            various accessibility-related best practices. I address any of these
-            warnings that pop up.
-          </li>
-          <li>All components meet WCAG 2.1 AA standards.</li>
-          <li>
-            The popular{" "}
-            <Link href="https://www.deque.com/axe/devtools/">axe DevTools</Link>
-            {" "}
-            browser plugin shows no issues for any components.
-          </li>
-          <li>
-            All components receive a{" "}
-            <Link href="https://developer.chrome.com/docs/lighthouse/overview/">
-              Google Lighthouse
-            </Link>{" "}
-            score of 100 for accessibility.
-          </li>
-        </UL>
-      </Text>
-
-      <H2 inPageLink="responsiveness">Responsiveness</H2>
-      <Text>
-        <p>
-          RFUI aims for all of it's components to look good on common screen
-          sizes.
-        </p>
-        <p>
-          Note that this doesn't mean that they're intended to look good on
-          every possible viewport width. That said, my sense is that they do.
-          It's just not a design goal of RFUI. Well, it's something that I try
-          to do if it's reasonably easy, but not if it's difficult.
         </p>
       </Text>
 

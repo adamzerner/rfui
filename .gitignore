@@ -13,3 +13,4 @@ static/fonts
 npm/
 *.DS_Store
 *.todo
+tailwindcss

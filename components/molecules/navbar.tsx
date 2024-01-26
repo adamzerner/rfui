@@ -96,13 +96,13 @@ const getComponents = (children: any) => {
 export const NavbarLeft = (
   { children }: { children: ComponentChild },
 ) => {
-  return <Flex class="gap-6">{children}</Flex>;
+  return <ul class="flex items-stretch gap-6">{children}</ul>;
 };
 
 export const NavbarRight = (
   { children }: { children: ComponentChild },
 ) => {
-  return <Flex class="gap-6">{children}</Flex>;
+  return <ul class="flex gap-6">{children}</ul>;
 };
 
 export const NavbarItem = (
@@ -111,7 +111,7 @@ export const NavbarItem = (
     & LinkType,
 ) => {
   const { class: restClass, ...restWithoutClass } = rest;
-  let containerClass = "py-6 border-b";
+  let containerClass = "border-b inline-block";
 
   if (isActive) {
     containerClass += " border-b-primary-500 pointer-events-none";
@@ -125,8 +125,10 @@ export const NavbarItem = (
   }
 
   return (
-    <Link class={containerClass} underline="none" {...restWithoutClass}>
-      {children}
-    </Link>
+    <li class={containerClass}>
+      <Link underline="none" class="py-6 inline-block" {...restWithoutClass}>
+        {children}
+      </Link>
+    </li>
   );
 };

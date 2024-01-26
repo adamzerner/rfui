@@ -27,24 +27,6 @@ export default () => {
     title: "Basic",
     example: (
       <Navbar size="xl">
-        <NavbarItem href="https://one.com">One</NavbarItem>
-        <NavbarItem href="https://two.com">Two</NavbarItem>
-      </Navbar>
-    ),
-    exampleCode: (
-      <CodeBlock
-        class="mt-4"
-        language="tsx"
-        code={`<Navbar size="xl">
-  <NavbarItem href="https://one.com">One</NavbarItem>
-  <NavbarItem href="https://two.com">Two</NavbarItem>
-</Navbar>`}
-      />
-    ),
-  }, {
-    title: "NavbarLeft",
-    example: (
-      <Navbar size="xl">
         <NavbarLeft>
           <NavbarItem href="https://one.com">One</NavbarItem>
           <NavbarItem href="https://two.com">Two</NavbarItem>
@@ -212,6 +194,12 @@ export default () => {
     ),
   }];
   const navbarItemProps = [{
+    name: "href",
+    required: true,
+    type: "string",
+    default: null,
+    notes: null,
+  }, {
     name: "isActive",
     required: false,
     type: "boolean",
@@ -226,7 +214,7 @@ export default () => {
   }, {
     name: "...rest",
     required: false,
-    type: "LinkType",
+    type: "JSX.HTMLAttributes<HTMLLIElement>",
     default: null,
     notes: null,
   }];

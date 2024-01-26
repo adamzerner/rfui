@@ -1,5 +1,5 @@
 import type { ComponentChild, JSX } from "preact";
-import { Link, LinkType } from "../atoms/link.tsx";
+import { Link } from "../atoms/link.tsx";
 import type { ContainerType } from "../helpers/container.tsx";
 import { Container } from "../helpers/container.tsx";
 import { Flex } from "../helpers/flex.tsx";
@@ -102,13 +102,13 @@ export const NavbarLeft = (
 export const NavbarRight = (
   { children }: { children: ComponentChild },
 ) => {
-  return <ul class="flex gap-6">{children}</ul>;
+  return <ul class="flex items-stretch gap-6">{children}</ul>;
 };
 
 export const NavbarItem = (
-  { isActive = false, children, ...rest }:
-    & { isActive?: boolean; children: ComponentChild }
-    & LinkType,
+  { href, isActive = false, children, ...rest }:
+    & { href: string; isActive?: boolean; children: ComponentChild }
+    & JSX.HTMLAttributes<HTMLLIElement>,
 ) => {
   const { class: restClass, ...restWithoutClass } = rest;
   let containerClass = "border-b inline-block";
@@ -125,8 +125,8 @@ export const NavbarItem = (
   }
 
   return (
-    <li class={containerClass}>
-      <Link underline="none" class="py-6 inline-block" {...restWithoutClass}>
+    <li class={containerClass} {...restWithoutClass}>
+      <Link href={href} underline="none" class="py-6 inline-block">
         {children}
       </Link>
     </li>

@@ -22,7 +22,17 @@ import {
 } from "@/components/molecules/navbar.tsx";
 
 export default () => {
-  const notes = null;
+  const notes = (
+    <div>
+      Based on{" "}
+      <Link href="https://www.nngroup.com/articles/find-navigation-mobile-even-hamburger/">
+        this advice
+      </Link>{" "}
+      from NNGroup, on narrow viewports (eg. mobile devices) a hamburger menu
+      will be used if there are more than four nav items and a stacked list (no
+      hamburger menu) will be used if there are four or less nav items.
+    </div>
+  );
   const sections: SectionType[] = [{
     title: "Basic",
     example: (

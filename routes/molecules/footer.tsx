@@ -22,7 +22,40 @@ import {
 } from "@/components/molecules/footer.tsx";
 
 export default () => {
-  const notes = null;
+  const notes = (
+    <Stack class="gap-3">
+      <p>
+        Check out{" "}
+        <Link href="https://www.nngroup.com/videos/footers/">
+          Footers Are Underrated
+        </Link>{" "}
+        and{" "}
+        <Link href="https://www.nngroup.com/articles/footers/">
+          Footers 101
+        </Link>{" "}
+        from NNGroup. Footers are awesome. Go wild!
+      </p>
+      <p>
+        Note: in the examples below the spacing is a little off. This won't
+        happen in practice though if you do something like this:
+      </p>
+      <CodeBlock
+        language="tsx"
+        code={`export default () => {
+  return (
+    <>
+      <Navbar route={route} />
+      <Container size="xl">
+        <Component />
+      </Container>
+      <Footer />
+    </>
+  );
+}
+`}
+      />
+    </Stack>
+  );
   const sections: SectionType[] = [{
     title: "Basic",
     example: (

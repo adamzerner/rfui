@@ -23,15 +23,38 @@ import {
 
 export default () => {
   const notes = (
-    <div>
-      Based on{" "}
-      <Link href="https://www.nngroup.com/articles/find-navigation-mobile-even-hamburger/">
-        this advice
-      </Link>{" "}
-      from NNGroup, on narrow viewports (eg. mobile devices) a hamburger menu
-      will be used if there are more than four nav items and a stacked list (no
-      hamburger menu) will be used if there are four or less nav items.
-    </div>
+    <Stack class="gap-3">
+      <p>
+        Based on{" "}
+        <Link href="https://www.nngroup.com/articles/find-navigation-mobile-even-hamburger/">
+          this advice
+        </Link>{" "}
+        from NNGroup, on narrow viewports (eg. mobile devices) a hamburger menu
+        will be used if there are more than four nav items and a stacked list
+        (no hamburger menu) will be used if there are four or less nav items.
+      </p>
+      <p>
+        Note: in the examples below the horizontal padding is a little off.
+        There's no space to the left of "One" and no space to the right of
+        "Four". This won't happen in practice though if you do something like
+        this:
+      </p>
+      <CodeBlock
+        language="tsx"
+        code={`export default () => {
+  return (
+    <>
+      <Navbar route={route} />
+      <Container size="xl">
+        <Component />
+      </Container>
+      <Footer />
+    </>
+  );
+}
+`}
+      />
+    </Stack>
   );
   const sections: SectionType[] = [{
     title: "Basic",

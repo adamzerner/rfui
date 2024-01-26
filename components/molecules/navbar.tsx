@@ -33,7 +33,7 @@ export const Navbar = (
     ...rest
   }: NavbarType,
 ) => {
-  const { navbarLeft, navbarRight } = getComponents(children);
+  const { navbarLeft, navbarRight, numItems } = getComponents(children);
   const { class: restClass, ...restWithoutClass } = rest;
   let containerClass = "w-full px-auto";
 
@@ -69,7 +69,11 @@ export const Navbar = (
 // deno-lint-ignore no-explicit-any
 const getComponents = (children: any) => {
   if (!Array.isArray(children)) {
-    return { navbarLeft: children };
+    const numItems = Array.isArray(children.props.children)
+      ? children.props.children.length
+      : 1;
+
+    return { navbarLeft: children, numItems };
   }
 
   const navbarLeft = children.find(
@@ -86,7 +90,19 @@ const getComponents = (children: any) => {
     );
   }
 
-  return { navbarLeft, navbarRight };
+  const numLeftItems = navbarLeft
+    ? Array.isArray(navbarLeft.props.children)
+      ? navbarLeft.props.children.length
+      : 1
+    : 0;
+  const numRightItems = navbarRight
+    ? Array.isArray(navbarRight.props.children)
+      ? navbarRight.props.children.length
+      : 1
+    : 0;
+  const numItems = numLeftItems + numRightItems;
+
+  return { navbarLeft, navbarRight, numItems };
 };
 
 export const NavbarLeft = (

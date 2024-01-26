@@ -1,8 +1,9 @@
-import { ChevronRightIcon } from "@/components/icons/chevron-right.tsx";
 import type { ComponentChild, JSX } from "preact";
 import { Link } from "../atoms/link.tsx";
 import { Container, type ContainerType } from "../helpers/container.tsx";
 import { Flex } from "../helpers/flex.tsx";
+import { Stack } from "../helpers/stack.tsx";
+import { ChevronRightIcon } from "../icons/chevron-right.tsx";
 
 export type NavbarType = {
   size?: ContainerType["size"];
@@ -56,10 +57,16 @@ export const Navbar = (
 
   return (
     <nav class={containerClass} {...restWithoutClass}>
-      <Flex class="justify-between w-full flex-col md:flex-row">
+      <Stack class="justify-between w-full md:hidden">
         {navbarLeft && navbarLeft}
         {navbarRight && navbarRight}
-      </Flex>
+      </Stack>
+      <Container size={size} class="hidden md:block">
+        <Flex class="justify-between w-full flex-col md:flex-row">
+          {navbarLeft && navbarLeft}
+          {navbarRight && navbarRight}
+        </Flex>
+      </Container>
     </nav>
   );
 };

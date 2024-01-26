@@ -84,12 +84,6 @@ const getComponents = (children: any) => {
     return { navbarLeft: <Flex class="gap-6">{children}</Flex> };
   }
 
-  if (!navbarLeft && !navbarRight) {
-    throw new Error(
-      "`NavbarLeft` or `NavbarRight` is needed if you pass an array of elements to `Navbar` as `children`.",
-    );
-  }
-
   return { navbarLeft, navbarRight };
 };
 

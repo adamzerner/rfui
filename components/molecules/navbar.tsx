@@ -126,7 +126,12 @@ export const NavbarItem = (
 
   return (
     <li class={containerClass} {...restWithoutClass}>
-      <Link href={href} underline="none" class="py-6 inline-block">
+      <Link
+        href={href}
+        underline="none"
+        class="py-6 inline-block"
+        aria-current={isActive ? "page" : undefined}
+      >
         {children}
       </Link>
     </li>

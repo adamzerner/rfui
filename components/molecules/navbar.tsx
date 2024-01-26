@@ -1,3 +1,4 @@
+import { ChevronRightIcon } from "@/components/icons/chevron-right.tsx";
 import type { ComponentChild, JSX } from "preact";
 import { Link } from "../atoms/link.tsx";
 import type { ContainerType } from "../helpers/container.tsx";
@@ -57,7 +58,7 @@ export const Navbar = (
   return (
     <nav class={containerClass} {...restWithoutClass}>
       <Container size={size}>
-        <Flex class="justify-between w-full">
+        <Flex class="justify-between w-full flex-col md:flex-row">
           {navbarLeft && navbarLeft}
           {navbarRight && navbarRight}
         </Flex>
@@ -108,13 +109,17 @@ const getComponents = (children: any) => {
 export const NavbarLeft = (
   { children }: { children: ComponentChild },
 ) => {
-  return <ul class="flex items-stretch gap-6">{children}</ul>;
+  return (
+    <ul class="flex flex-col md:flex-row items-stretch gap-6">{children}</ul>
+  );
 };
 
 export const NavbarRight = (
   { children }: { children: ComponentChild },
 ) => {
-  return <ul class="flex items-stretch gap-6">{children}</ul>;
+  return (
+    <ul class="flex flex-col md:flex-row items-stretch gap-6">{children}</ul>
+  );
 };
 
 export const NavbarItem = (
@@ -123,7 +128,7 @@ export const NavbarItem = (
     & JSX.HTMLAttributes<HTMLLIElement>,
 ) => {
   const { class: restClass, ...restWithoutClass } = rest;
-  let containerClass = "border-b inline-block";
+  let containerClass = "md:border-b inline-block";
 
   if (isActive) {
     containerClass += " border-b-primary-500 pointer-events-none";
@@ -141,10 +146,11 @@ export const NavbarItem = (
       <Link
         href={href}
         underline="none"
-        class="py-6 inline-block"
+        class="py-6 flex items-center justify-between md:inline-block"
         aria-current={isActive ? "page" : undefined}
       >
-        {children}
+        <div>{children}</div>
+        <ChevronRightIcon class="inline-block md:!hidden relative top-px" />
       </Link>
     </li>
   );

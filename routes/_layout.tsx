@@ -31,6 +31,15 @@ const TheNavbar = ({ route }: { route: string }) => {
     <Navbar size="xl">
       <NavbarLeft>
         <NavbarItem href="/" isActive={route === "/"}>Components</NavbarItem>
+        <NavbarItem href="/about" isActive={route === "/about"}>
+          About
+        </NavbarItem>
+        <NavbarItem
+          href="/target-audience"
+          isActive={route === "/target-audience"}
+        >
+          Target audience
+        </NavbarItem>
         <NavbarItem
           href="/getting-started"
           isActive={route === "/getting-started"}

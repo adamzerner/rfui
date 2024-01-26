@@ -1,8 +1,7 @@
 import { ChevronRightIcon } from "@/components/icons/chevron-right.tsx";
 import type { ComponentChild, JSX } from "preact";
 import { Link } from "../atoms/link.tsx";
-import type { ContainerType } from "../helpers/container.tsx";
-import { Container } from "../helpers/container.tsx";
+import { Container, type ContainerType } from "../helpers/container.tsx";
 import { Flex } from "../helpers/flex.tsx";
 
 export type NavbarType = {
@@ -57,12 +56,10 @@ export const Navbar = (
 
   return (
     <nav class={containerClass} {...restWithoutClass}>
-      <Container size={size}>
-        <Flex class="justify-between w-full flex-col md:flex-row">
-          {navbarLeft && navbarLeft}
-          {navbarRight && navbarRight}
-        </Flex>
-      </Container>
+      <Flex class="justify-between w-full flex-col md:flex-row">
+        {navbarLeft && navbarLeft}
+        {navbarRight && navbarRight}
+      </Flex>
     </nav>
   );
 };
@@ -110,7 +107,7 @@ export const NavbarLeft = (
   { children }: { children: ComponentChild },
 ) => {
   return (
-    <ul class="flex flex-col md:flex-row items-stretch gap-6">{children}</ul>
+    <ul class="flex flex-col md:flex-row items-stretch md:gap-6">{children}</ul>
   );
 };
 
@@ -118,7 +115,9 @@ export const NavbarRight = (
   { children }: { children: ComponentChild },
 ) => {
   return (
-    <ul class="flex flex-col md:flex-row items-stretch gap-6">{children}</ul>
+    <ul class="flex flex-col md:flex-row items-stretch md:gap-6">
+      {children}
+    </ul>
   );
 };
 
@@ -128,13 +127,14 @@ export const NavbarItem = (
     & JSX.HTMLAttributes<HTMLLIElement>,
 ) => {
   const { class: restClass, ...restWithoutClass } = rest;
-  let containerClass = "md:border-b inline-block";
+  let containerClass =
+    "inline-block border-b border-b-neutral-200 md:border-b-neutral-50";
 
   if (isActive) {
-    containerClass += " border-b-primary-500 pointer-events-none";
-  } else {
     containerClass +=
-      " border-b-neutral-50 hover:border-b-neutral-500 text-neutral-700";
+      " font-bold pointer-events-none md:font-normal md:border-b-primary-500 bg-neutral-100 md:bg-neutral-50";
+  } else {
+    containerClass += " md:hover:border-b-neutral-500 text-neutral-700";
   }
 
   if (restClass) {
@@ -146,12 +146,23 @@ export const NavbarItem = (
       <Link
         href={href}
         underline="none"
-        class="py-6 flex items-center justify-between md:inline-block"
+        class="py-6 items-center justify-between hidden md:inline-block"
         aria-current={isActive ? "page" : undefined}
       >
         <div>{children}</div>
         <ChevronRightIcon class="inline-block md:!hidden relative top-px" />
       </Link>
+      <Container size="xl" class="block md:hidden">
+        <Link
+          href={href}
+          underline="none"
+          class="py-6 flex items-center justify-between md:inline-block"
+          aria-current={isActive ? "page" : undefined}
+        >
+          <div>{children}</div>
+          <ChevronRightIcon class="inline-block md:!hidden relative top-px" />
+        </Link>
+      </Container>
     </li>
   );
 };

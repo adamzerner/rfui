@@ -57,12 +57,12 @@ export const Navbar = (
 
   return (
     <nav class={containerClass} {...restWithoutClass}>
-      <Stack class="justify-between w-full md:hidden">
+      <Stack class="md:hidden">
         {navbarLeft && navbarLeft}
         {navbarRight && navbarRight}
       </Stack>
       <Container size={size} class="hidden md:block">
-        <Flex class="justify-between w-full flex-col md:flex-row">
+        <Flex class="justify-between">
           {navbarLeft && navbarLeft}
           {navbarRight && navbarRight}
         </Flex>
@@ -153,21 +153,20 @@ export const NavbarItem = (
       <Link
         href={href}
         underline="none"
-        class="py-6 items-center justify-between hidden md:inline-block"
+        class="py-6 hidden md:inline-block"
         aria-current={isActive ? "page" : undefined}
       >
-        <div>{children}</div>
-        <ChevronRightIcon class="inline-block md:!hidden relative top-px" />
+        {children}
       </Link>
       <Container size="xl" class="block md:hidden">
         <Link
           href={href}
           underline="none"
-          class="py-6 flex items-center justify-between md:inline-block"
+          class="py-6 flex items-center justify-between"
           aria-current={isActive ? "page" : undefined}
         >
           <div>{children}</div>
-          <ChevronRightIcon class="inline-block md:!hidden relative top-px" />
+          <ChevronRightIcon class="inline-block relative top-px" />
         </Link>
       </Container>
     </li>

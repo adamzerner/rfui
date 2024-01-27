@@ -57,10 +57,13 @@ export const Navbar = (
 
   return (
     <nav class={containerClass} {...restWithoutClass}>
+      {/* Mobile */}
       <Stack class="md:hidden">
         {navbarLeft && navbarLeft}
         {navbarRight && navbarRight}
       </Stack>
+
+      {/* Desktop */}
       <Container size={size} class="hidden md:block">
         <Flex class="justify-between">
           {navbarLeft && navbarLeft}
@@ -148,8 +151,23 @@ export const NavbarItem = (
     containerClass += ` ${restClass}`;
   }
 
+  // For `size="md"` below it doesn't matter that `"md"` might not be accurate
   return (
     <li class={containerClass} {...restWithoutClass}>
+      {/* Mobile */}
+      <Container size="md" class="block md:hidden">
+        <Link
+          href={href}
+          underline="none"
+          aria-current={isActive ? "page" : undefined}
+          class="py-6 flex items-center justify-between"
+        >
+          <div>{children}</div>
+          <ChevronRightIcon class="relative top-px" />
+        </Link>
+      </Container>
+
+      {/* Desktop */}
       <Link
         href={href}
         underline="none"
@@ -158,18 +176,6 @@ export const NavbarItem = (
       >
         {children}
       </Link>
-      {/* For `size="md"` below it doesn't matter that `"md"` might not be accurate */}
-      <Container size="md" class="block md:hidden">
-        <Link
-          href={href}
-          underline="none"
-          class="py-6 flex items-center justify-between"
-          aria-current={isActive ? "page" : undefined}
-        >
-          <div>{children}</div>
-          <ChevronRightIcon class="inline-block relative top-px" />
-        </Link>
-      </Container>
     </li>
   );
 };

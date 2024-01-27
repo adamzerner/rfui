@@ -58,13 +58,13 @@ export const Navbar = (
   return (
     <nav class={containerClass} {...restWithoutClass}>
       {/* Mobile */}
-      <Stack class="md:hidden">
+      <Stack class="sm:hidden">
         {navbarLeft && navbarLeft}
         {navbarRight && navbarRight}
       </Stack>
 
       {/* Desktop */}
-      <Container size={size} class="hidden md:block">
+      <Container size={size} class="hidden sm:block">
         <Flex class="justify-between">
           {navbarLeft && navbarLeft}
           {navbarRight && navbarRight}
@@ -117,7 +117,7 @@ export const NavbarLeft = (
   { children }: { children: ComponentChild },
 ) => {
   return (
-    <ul class="flex flex-col md:flex-row items-stretch md:gap-6">{children}</ul>
+    <ul class="flex flex-col sm:flex-row items-stretch sm:gap-6">{children}</ul>
   );
 };
 
@@ -125,7 +125,7 @@ export const NavbarRight = (
   { children }: { children: ComponentChild },
 ) => {
   return (
-    <ul class="flex flex-col md:flex-row items-stretch md:gap-6">
+    <ul class="flex flex-col sm:flex-row items-stretch sm:gap-6">
       {children}
     </ul>
   );
@@ -138,13 +138,13 @@ export const NavbarItem = (
 ) => {
   const { class: restClass, ...restWithoutClass } = rest;
   let containerClass =
-    "inline-block border-b border-b-neutral-200 md:border-b-neutral-50";
+    "inline-block border-b border-b-neutral-200 sm:border-b-neutral-50";
 
   if (isActive) {
     containerClass +=
-      " font-bold pointer-events-none md:font-normal md:border-b-primary-500 bg-neutral-100 md:bg-neutral-50";
+      " font-bold pointer-events-none sm:font-normal sm:border-b-primary-500 bg-neutral-100 sm:bg-neutral-50";
   } else {
-    containerClass += " md:hover:border-b-neutral-500 text-neutral-700";
+    containerClass += " sm:hover:border-b-neutral-500 text-neutral-700";
   }
 
   if (restClass) {
@@ -155,7 +155,7 @@ export const NavbarItem = (
   return (
     <li class={containerClass} {...restWithoutClass}>
       {/* Mobile */}
-      <Container size="md" class="block md:hidden">
+      <Container size="md" class="block sm:hidden">
         <Link
           href={href}
           underline="none"
@@ -171,7 +171,7 @@ export const NavbarItem = (
       <Link
         href={href}
         underline="none"
-        class="py-6 hidden md:inline-block"
+        class="py-6 hidden sm:inline-block"
         aria-current={isActive ? "page" : undefined}
       >
         {children}

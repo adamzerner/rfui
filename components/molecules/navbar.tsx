@@ -158,7 +158,8 @@ export const NavbarItem = (
       >
         {children}
       </Link>
-      <Container size="xl" class="block md:hidden">
+      {/* For `size="md"` below it doesn't matter that `"md"` might not be accurate */}
+      <Container size="md" class="block md:hidden">
         <Link
           href={href}
           underline="none"

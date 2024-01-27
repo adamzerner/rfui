@@ -151,11 +151,11 @@ export const NavbarItem = (
     containerClass += ` ${restClass}`;
   }
 
-  // For `size="md"` below it doesn't matter that `"md"` might not be accurate
+  // For `size="xl"` below it doesn't matter that `"xl"` might not be accurate
   return (
     <li class={containerClass} {...restWithoutClass}>
       {/* Mobile */}
-      <Container size="md" class="block sm:hidden">
+      <Container size="xl" class="block sm:hidden">
         <Link
           href={href}
           underline="none"

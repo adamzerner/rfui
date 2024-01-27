@@ -178,7 +178,10 @@ export default () => {
     default: '"md"',
     notes: (
       <div>
-        Set this to the same value as the <InlineCode>Container</InlineCode>.
+        Set this to the same value as the{" "}
+        <Link href="/helpers/container">
+          <InlineCode>Container</InlineCode>
+        </Link>.
       </div>
     ),
   }, {

@@ -138,7 +138,7 @@ export const NavbarItem = (
 ) => {
   const { class: restClass, ...restWithoutClass } = rest;
   let containerClass =
-    "inline-block border-b border-b-neutral-200 sm:border-b-neutral-50";
+    "inline-block border-b border-b-neutral-200 sm:border-b-neutral-50 hover:bg-neutral-100/50 sm:hover:bg-neutral-50";
 
   if (isActive) {
     containerClass +=

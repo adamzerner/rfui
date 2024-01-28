@@ -58,8 +58,8 @@ export {
   NavbarItem,
   NavbarLeft,
   NavbarRight,
-} from "./components/molecules/navbar.tsx";
-export type { NavbarType } from "./components/molecules/navbar.tsx";
+} from "./components/molecules/navbar/index.tsx";
+export type { NavbarType } from "./components/molecules/navbar/index.tsx";
 export { Alert, AlertBody, AlertHeader } from "./islands/molecules/alert.tsx";
 export type { AlertType } from "./islands/molecules/alert.tsx";
 export { CheckboxCardGroup } from "./islands/molecules/checkbox-card-group.tsx";

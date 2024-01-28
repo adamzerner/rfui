@@ -19,30 +19,47 @@ import {
   NavbarItem,
   NavbarLeft,
   NavbarRight,
-} from "@/components/molecules/navbar.tsx";
+} from "@/components/molecules/navbar/index.tsx";
 
 export default () => {
-  const notes = null;
+  const notes = (
+    <Stack class="gap-3">
+      {
+        /* <p>
+        Based on{" "}
+        <Link href="https://www.nngroup.com/articles/find-navigation-mobile-even-hamburger/">
+          this advice
+        </Link>{" "}
+        from NNGroup, on narrow viewports (eg. mobile devices) a hamburger menu
+        will be used if there are more than four nav items and a stacked list
+        (no hamburger menu) will be used if there are four or less nav items.
+      </p> */
+      }
+      <p>
+        Note: in the examples below the horizontal padding is a little off.
+        There's no space to the left of "One" and no space to the right of
+        "Four". This won't happen in practice though if you do something like
+        this:
+      </p>
+      <CodeBlock
+        language="tsx"
+        code={`export default () => {
+  return (
+    <>
+      <Navbar route={route} />
+      <Container size="xl">
+        <Component />
+      </Container>
+      <Footer />
+    </>
+  );
+}
+`}
+      />
+    </Stack>
+  );
   const sections: SectionType[] = [{
     title: "Basic",
-    example: (
-      <Navbar size="xl">
-        <NavbarItem href="https://one.com">One</NavbarItem>
-        <NavbarItem href="https://two.com">Two</NavbarItem>
-      </Navbar>
-    ),
-    exampleCode: (
-      <CodeBlock
-        class="mt-4"
-        language="tsx"
-        code={`<Navbar size="xl">
-  <NavbarItem href="https://one.com">One</NavbarItem>
-  <NavbarItem href="https://two.com">Two</NavbarItem>
-</Navbar>`}
-      />
-    ),
-  }, {
-    title: "NavbarLeft",
     example: (
       <Navbar size="xl">
         <NavbarLeft>
@@ -163,7 +180,10 @@ export default () => {
     default: '"md"',
     notes: (
       <div>
-        Set this to the same value as the <InlineCode>Container</InlineCode>.
+        Set this to the same value as the{" "}
+        <Link href="/helpers/container">
+          <InlineCode>Container</InlineCode>
+        </Link>.
       </div>
     ),
   }, {
@@ -177,7 +197,7 @@ export default () => {
     required: false,
     type: "boolean",
     default: "false",
-    notes: null,
+    notes: "Doesn't apply to the stacked UI that appears on small viewports.",
   }, {
     name: "children",
     required: true,
@@ -211,7 +231,27 @@ export default () => {
       </div>
     ),
   }];
+  const navbarLeftProps = [{
+    name: "children",
+    required: true,
+    type: "ComponentChild",
+    default: null,
+    notes: null,
+  }];
+  const navbarRightProps = [{
+    name: "children",
+    required: true,
+    type: "ComponentChild",
+    default: null,
+    notes: null,
+  }];
   const navbarItemProps = [{
+    name: "href",
+    required: true,
+    type: "string",
+    default: null,
+    notes: null,
+  }, {
     name: "isActive",
     required: false,
     type: "boolean",
@@ -226,21 +266,7 @@ export default () => {
   }, {
     name: "...rest",
     required: false,
-    type: "LinkType",
-    default: null,
-    notes: null,
-  }];
-  const navbarLeftProps = [{
-    name: "children",
-    required: true,
-    type: "ComponentChild",
-    default: null,
-    notes: null,
-  }];
-  const navbarRightProps = [{
-    name: "children",
-    required: true,
-    type: "ComponentChild",
+    type: "JSX.HTMLAttributes<HTMLLIElement>",
     default: null,
     notes: null,
   }];
@@ -290,19 +316,6 @@ export default () => {
             : <Prop prop={propWithoutNotes}></Prop>;
         })}
       </Props>
-      <Props subComponentTitle="NavbarItem">
-        {navbarItemProps.map((prop) => {
-          const { notes, ...propWithoutNotes } = prop;
-
-          return notes
-            ? (
-              <Prop prop={prop}>
-                {notes}
-              </Prop>
-            )
-            : <Prop prop={propWithoutNotes}></Prop>;
-        })}
-      </Props>
       <Props subComponentTitle="NavbarLeft">
         {navbarLeftProps.map((prop) => {
           const { notes, ...propWithoutNotes } = prop;
@@ -318,6 +331,19 @@ export default () => {
       </Props>
       <Props subComponentTitle="NavbarRight">
         {navbarRightProps.map((prop) => {
+          const { notes, ...propWithoutNotes } = prop;
+
+          return notes
+            ? (
+              <Prop prop={prop}>
+                {notes}
+              </Prop>
+            )
+            : <Prop prop={propWithoutNotes}></Prop>;
+        })}
+      </Props>
+      <Props subComponentTitle="NavbarItem">
+        {navbarItemProps.map((prop) => {
           const { notes, ...propWithoutNotes } = prop;
 
           return notes

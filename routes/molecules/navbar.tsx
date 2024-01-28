@@ -19,7 +19,7 @@ import {
   NavbarItem,
   NavbarLeft,
   NavbarRight,
-} from "@/components/molecules/navbar.tsx";
+} from "@/components/molecules/navbar/index.tsx";
 
 export default () => {
   const notes = (

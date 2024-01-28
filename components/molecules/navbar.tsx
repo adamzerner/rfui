@@ -39,7 +39,7 @@ export const Navbar = (
   let containerClass = "w-full px-auto";
 
   if (sticky) {
-    containerClass += " sm:sticky sm:top-0 sm:left-0";
+    containerClass += " sm:sticky sm:top-0 sm:left-0 sm:z-10";
   }
 
   containerClass += " " + (() => {

@@ -1,7 +1,7 @@
 import type { ComponentChild, JSX } from "preact";
-import { Link } from "../../../components/atoms/link.tsx";
-import { Container } from "../../../components/helpers/container.tsx";
-import { ChevronRightIcon } from "../../../components/icons/chevron-right.tsx";
+import { Link } from "../../atoms/link.tsx";
+import { Container } from "../../helpers/container.tsx";
+import { ChevronRightIcon } from "../../icons/chevron-right.tsx";
 
 export const NavbarItem = (
   { href, isActive = false, children, ...rest }:

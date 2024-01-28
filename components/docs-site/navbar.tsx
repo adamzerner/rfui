@@ -2,7 +2,7 @@ import {
   Navbar as RFUINavbar,
   NavbarItem,
   NavbarLeft,
-} from "@/islands/molecules/navbar/index.tsx";
+} from "@/components/molecules/navbar/index.tsx";
 
 export const Navbar = ({ route }: { route: string }) => {
   return (

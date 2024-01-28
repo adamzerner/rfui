@@ -195,7 +195,7 @@ export default () => {
     required: false,
     type: "boolean",
     default: "false",
-    notes: null,
+    notes: "Doesn't apply to the stacked UI that appears on small viewports.",
   }, {
     name: "children",
     required: true,
@@ -229,6 +229,20 @@ export default () => {
       </div>
     ),
   }];
+  const navbarLeftProps = [{
+    name: "children",
+    required: true,
+    type: "ComponentChild",
+    default: null,
+    notes: null,
+  }];
+  const navbarRightProps = [{
+    name: "children",
+    required: true,
+    type: "ComponentChild",
+    default: null,
+    notes: null,
+  }];
   const navbarItemProps = [{
     name: "href",
     required: true,
@@ -251,20 +265,6 @@ export default () => {
     name: "...rest",
     required: false,
     type: "JSX.HTMLAttributes<HTMLLIElement>",
-    default: null,
-    notes: null,
-  }];
-  const navbarLeftProps = [{
-    name: "children",
-    required: true,
-    type: "ComponentChild",
-    default: null,
-    notes: null,
-  }];
-  const navbarRightProps = [{
-    name: "children",
-    required: true,
-    type: "ComponentChild",
     default: null,
     notes: null,
   }];
@@ -314,19 +314,6 @@ export default () => {
             : <Prop prop={propWithoutNotes}></Prop>;
         })}
       </Props>
-      <Props subComponentTitle="NavbarItem">
-        {navbarItemProps.map((prop) => {
-          const { notes, ...propWithoutNotes } = prop;
-
-          return notes
-            ? (
-              <Prop prop={prop}>
-                {notes}
-              </Prop>
-            )
-            : <Prop prop={propWithoutNotes}></Prop>;
-        })}
-      </Props>
       <Props subComponentTitle="NavbarLeft">
         {navbarLeftProps.map((prop) => {
           const { notes, ...propWithoutNotes } = prop;
@@ -342,6 +329,19 @@ export default () => {
       </Props>
       <Props subComponentTitle="NavbarRight">
         {navbarRightProps.map((prop) => {
+          const { notes, ...propWithoutNotes } = prop;
+
+          return notes
+            ? (
+              <Prop prop={prop}>
+                {notes}
+              </Prop>
+            )
+            : <Prop prop={propWithoutNotes}></Prop>;
+        })}
+      </Props>
+      <Props subComponentTitle="NavbarItem">
+        {navbarItemProps.map((prop) => {
           const { notes, ...propWithoutNotes } = prop;
 
           return notes

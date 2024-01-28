@@ -58,10 +58,14 @@ export const Navbar = (
   return (
     <nav class={containerClass} {...restWithoutClass}>
       {/* Mobile */}
-      <Stack class="sm:hidden">
-        {navbarLeft && navbarLeft}
-        {navbarRight && navbarRight}
-      </Stack>
+      {numItems < 5
+        ? (
+          <Stack class="sm:hidden">
+            {navbarLeft && navbarLeft}
+            {navbarRight && navbarRight}
+          </Stack>
+        )
+        : <div>Hamburger</div>}
 
       {/* Desktop */}
       <Container size={size} class="hidden sm:block">

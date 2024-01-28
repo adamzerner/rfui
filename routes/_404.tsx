@@ -2,8 +2,6 @@ import { H1 } from "@/components/atoms/h1.tsx";
 import { Text } from "@/components/atoms/text.tsx";
 
 export default () => {
-  throw new Error("fsdfs");
-
   return (
     <div class="max-w-prose text-lg">
       <H1>Page not found</H1>

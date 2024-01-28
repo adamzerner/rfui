@@ -10,7 +10,6 @@ import {
   Navbar,
   NavbarItem,
   NavbarLeft,
-  NavbarRight,
 } from "@/components/molecules/navbar.tsx";
 import { WelcomeMessage } from "@/islands/docs-site/welcome-message.tsx";
 
@@ -39,17 +38,6 @@ const TheNavbar = ({ route }: { route: string }) => {
           Getting started
         </NavbarItem>
       </NavbarLeft>
-      <NavbarRight>
-        <NavbarItem href="/about" isActive={route === "/about"}>
-          About
-        </NavbarItem>
-        <NavbarItem
-          href="/target-audience"
-          isActive={route === "/target-audience"}
-        >
-          Target audience
-        </NavbarItem>
-      </NavbarRight>
     </Navbar>
   );
 };

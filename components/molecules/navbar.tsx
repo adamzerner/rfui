@@ -65,7 +65,7 @@ export const Navbar = (
             {navbarRight && navbarRight}
           </Stack>
         )
-        : <div>Hamburger</div>}
+        : <div class="sm:hidden">Hamburger</div>}
 
       {/* Desktop */}
       <Container size={size} class="hidden sm:block">

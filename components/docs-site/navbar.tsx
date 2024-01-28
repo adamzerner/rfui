@@ -9,11 +9,6 @@ export const Navbar = ({ route }: { route: string }) => {
     <RFUINavbar size="xl">
       <NavbarLeft>
         <NavbarItem href="/" isActive={route === "/"}>Components</NavbarItem>
-        <NavbarItem href="/" isActive={route === "/"}>Components</NavbarItem>
-        <NavbarItem href="/" isActive={route === "/"}>Components</NavbarItem>
-        <NavbarItem href="/" isActive={route === "/"}>Components</NavbarItem>
-        <NavbarItem href="/" isActive={route === "/"}>Components</NavbarItem>
-        <NavbarItem href="/" isActive={route === "/"}>Components</NavbarItem>
         <NavbarItem
           href="/getting-started"
           isActive={route === "/getting-started"}

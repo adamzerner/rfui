@@ -4,6 +4,7 @@
 
 import * as $_footer_about from "./routes/(footer)/about.tsx";
 import * as $_footer_choose_a_personality from "./routes/(footer)/choose-a-personality.tsx";
+import * as $_footer_css_file from "./routes/(footer)/css-file.tsx";
 import * as $_footer_css_variables from "./routes/(footer)/css-variables.tsx";
 import * as $_footer_default_roundedness from "./routes/(footer)/default-roundedness.tsx";
 import * as $_footer_faq from "./routes/(footer)/faq.tsx";
@@ -68,6 +69,7 @@ const manifest = {
   routes: {
     "./routes/(footer)/about.tsx": $_footer_about,
     "./routes/(footer)/choose-a-personality.tsx": $_footer_choose_a_personality,
+    "./routes/(footer)/css-file.tsx": $_footer_css_file,
     "./routes/(footer)/css-variables.tsx": $_footer_css_variables,
     "./routes/(footer)/default-roundedness.tsx": $_footer_default_roundedness,
     "./routes/(footer)/faq.tsx": $_footer_faq,

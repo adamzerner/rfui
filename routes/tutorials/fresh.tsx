@@ -63,6 +63,10 @@ export default () => {
           language="tsx"
           code={`<link rel="stylesheet" href="/styles.css" />`}
         />
+        <p>
+          See the <Link href="/css-file">"CSS file" page</Link>{" "}
+          for more information.
+        </p>
       </Text>
 
       <H2 inPageLink="set-up-import-map">

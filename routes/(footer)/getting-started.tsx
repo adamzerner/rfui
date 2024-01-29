@@ -42,40 +42,22 @@ export default () => {
 
       <H2 inPageLink="include-rfui-css-file">{"1) Include RFUI CSS file"}</H2>
       <Text>
-        <p>
-          Without RFUI's CSS stylesheet the RFUI components will be unstyled.
-          You will need to include the stylesheet for the RFUI components to
-          look as they are intended to look.
-        </p>
-        <p>
-          There is a CSS file that corresponds to each version of RFUI. For
-          example, for v0.1.4 of RFUI there is{" "}
-          <InlineCode>https://rfui.deno.dev/rfui-v0-1-4.css</InlineCode>. So if
-          you know that you're on v0.1.4 of RFUI you can include:
-        </p>
-        <CodeBlock
-          language="html"
-          code={`<link 
-  rel="stylesheet" 
-  href="https://rfui.deno.dev/rfui-v0-1-4.css" 
-/>`}
-        />
-        <p>
-          But then you'll have to remember to update this when you upgrade to a
-          new version of RFUI. So an alternative is to use RFUI's{" "}
-          <InlineCode>getCssUrl</InlineCode>{" "}
-          function. If you are on v0.1.4 of RFUI,{" "}
-          <InlineCode>getCssUrl</InlineCode> will return{" "}
-          <InlineCode>"https://rfui.deno.dev/rfui-v0-1-4.css"</InlineCode>. So
-          then, if you want to "set it and forget it", you can do something like
-          this:
-        </p>
+        <p>Something like this:</p>
         <CodeBlock
           language="tsx"
           code={`import { getCssUrl } from "rfui";
 
 <link  rel="stylesheet" href={getCssUrl()} />`}
         />
+        <p>
+          <InlineCode>getCssUrl</InlineCode> will return eg.{" "}
+          <InlineCode>https://rfui.deno.dev/rfui-v0-1-4.css</InlineCode>{" "}
+          if you're on v0.1.4 of RFUI.
+        </p>
+        <p>
+          See the <Link href="/css-file">"CSS file" page</Link>{" "}
+          for more information.
+        </p>
       </Text>
 
       <H2 inPageLink="import-rfui-component">{"2) Import RFUI component"}</H2>

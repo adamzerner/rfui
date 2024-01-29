@@ -43,19 +43,38 @@ export default () => {
       <H2 inPageLink="include-rfui-css-file">{"1) Include RFUI CSS file"}</H2>
       <Text>
         <p>
-          Without{" "}
-          <Link href="https://rfui.deno.dev/rfui.css">this CSS</Link>, the RFUI
-          components will be unstyled. You will need to link to that CSS in
-          order for the RFUI components to look as they are intended to look.
+          Without RFUI's CSS stylesheet the RFUI components will be unstyled.
+          You will need to include the stylesheet for the RFUI components to
+          look as they are intended to look.
         </p>
         <p>
-          So then, create a CSS file and copy-paste the CSS{" "}
-          <Link href="https://rfui.deno.dev/rfui.css">here</Link>{" "}
-          into that file. Then link to it. Something like:
+          There is a CSS file that corresponds to each version of RFUI. For
+          example, for v0.1.4 of RFUI there is{" "}
+          <InlineCode>https://rfui.deno.dev/rfui-v0-1-4.css</InlineCode>. So if
+          you know that you're on v0.1.4 of RFUI you can include:
         </p>
         <CodeBlock
           language="html"
-          code={`<link rel="stylesheet" href="/rfui.css" />`}
+          code={`<link 
+  rel="stylesheet" 
+  href="https://rfui.deno.dev/rfui-v0-1-4.css" 
+/>`}
+        />
+        <p>
+          But then you'll have to remember to update this when you upgrade to a
+          new version of RFUI. So an alternative is to use RFUI's{" "}
+          <InlineCode>getCssUrl</InlineCode>{" "}
+          function. If you are on v0.1.4 of RFUI,{" "}
+          <InlineCode>getCssUrl</InlineCode> will return{" "}
+          <InlineCode>"https://rfui.deno.dev/rfui-v0-1-4.css"</InlineCode>. So
+          then, if you want to "set it and forget it", you can do something like
+          this:
+        </p>
+        <CodeBlock
+          language="tsx"
+          code={`import { getCssUrl } from "rfui";
+
+<link  rel="stylesheet" href={getCssUrl()} />`}
         />
       </Text>
 
@@ -70,7 +89,7 @@ export default () => {
         </p>
         <CodeBlock
           language="tsx"
-          code={`import { Button } from "https://deno.land/x/rfui@v0.1.0/mod.ts";`}
+          code={`import { Button } from "https://deno.land/x/rfui@v0.1.4/mod.ts";`}
         />
         <Alert isDismissable={false}>
           <AlertBody>
@@ -85,7 +104,7 @@ export default () => {
             </p>
             <CodeBlock
               language="ts"
-              code={`"rfui": "https://deno.land/x/rfui@v0.1.0/mod.ts"`}
+              code={`"rfui": "https://deno.land/x/rfui@v0.1.4/mod.ts"`}
             />
             <p>
               After doing so, you can clean up your import like so:

@@ -46,20 +46,17 @@ export default () => {
       <H2 inPageLink="add-css-file">{"2) Add CSS file"}</H2>
       <Text>
         <p>
-          Create a <InlineCode>rfui.css</InlineCode> file in your{" "}
-          <InlineCode>static</InlineCode> directory. Copy the contents of{" "}
-          <Link href="https://rfui.deno.dev/rfui.css">
-            https://rfui.deno.dev/rfui.css
-          </Link>{" "}
-          and paste them into your newly created{" "}
-          <InlineCode>rfui.css</InlineCode> file.
-        </p>
-        <p>
-          Then in <InlineCode>routes/_app.tsx</InlineCode> add:
+          In <InlineCode>routes/_app.tsx</InlineCode> import{" "}
+          <InlineCode>getCssUrl</InlineCode>:
         </p>
         <CodeBlock
           language="tsx"
-          code={`<link rel="stylesheet" href="/rfui.css" />`}
+          code={`import { getCssUrl } from "rfui";`}
+        />
+        <p>and add:</p>
+        <CodeBlock
+          language="tsx"
+          code={`<link rel="stylesheet" href="{getCssUrl()}" />`}
         />
         <p>right before the:</p>
         <CodeBlock
@@ -77,7 +74,7 @@ export default () => {
         </p>
         <CodeBlock
           language="ts"
-          code={`"rfui": "https://deno.land/x/rfui@v0.1.0/mod.ts"`}
+          code={`"rfui": "https://deno.land/x/rfui@v0.1.4/mod.ts"`}
         />
         <p>
           to the <InlineCode>"imports"</InlineCode> object.

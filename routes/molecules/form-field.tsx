@@ -391,6 +391,29 @@ export default () => {
 </Stack>`}
       />
     ),
+  }, {
+    title: "PasswordInput",
+    description: (
+      <div>
+        To use{" "}
+        <Link href="/molecules/password-input">
+          <InlineCode>PasswordInput</InlineCode>
+        </Link>{" "}
+        with <InlineCode>FormField</InlineCode> set{" "}
+        <InlineCode>type</InlineCode> to{" "}
+        <InlineCode>"rfui-password-input"</InlineCode>.
+      </div>
+    ),
+    example: (
+      <FormField label="Password" type="rfui-password-input" value="foobar" />
+    ),
+    exampleCode: (
+      <CodeBlock
+        class="mt-4"
+        language="tsx"
+        code={`<FormField label="Password" type="rfui-password-input" value="foobar" />`}
+      />
+    ),
   }];
   const props = [{
     name: "label",
@@ -401,19 +424,20 @@ export default () => {
   }, {
     name: "name",
     required: false,
-    type: "string",
+    type: 'JSX.HTMLAttributes<HTMLInputElement>["name"]',
     default: null,
     notes: null,
   }, {
     name: "value",
     required: false,
-    type: "string | number | string[]",
+    type: 'JSX.HTMLAttributes<HTMLInputElement>["value"]',
     default: null,
     notes: null,
   }, {
     name: "type",
     required: false,
-    type: "string",
+    type:
+      'JSX.HTMLAttributes<HTMLInputElement>["type"] | "rfui-password-input"',
     default: null,
     notes: null,
   }, {
@@ -491,7 +515,8 @@ export default () => {
   }, {
     name: "inputRest",
     required: false,
-    type: "JSX.HTMLAttributes<HTMLInputElement>",
+    type:
+      'Omit<JSX.HTMLAttributes<HTMLInputElement>, "name" | "value" | "type" | "required" | "size" | "rounded" | "invalid">',
     default: null,
     notes: (
       <div>

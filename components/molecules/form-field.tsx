@@ -1,3 +1,4 @@
+import { PasswordInput } from "@/islands/molecules/password-input.tsx";
 import type { JSX } from "preact";
 import { Input } from "../atoms/input.tsx";
 import { Flex } from "../helpers/flex.tsx";
@@ -7,7 +8,7 @@ export type FormFieldType = {
   label: string;
   name?: JSX.HTMLAttributes<HTMLInputElement>["name"];
   value?: JSX.HTMLAttributes<HTMLInputElement>["value"];
-  type?: JSX.HTMLAttributes<HTMLInputElement>["type"];
+  type?: JSX.HTMLAttributes<HTMLInputElement>["type"] | "rfui-password-input";
   required?: boolean;
   requiredIndicator?: "text" | "asterisk" | "none";
   optionalIndicator?: "text" | "asterisk" | "none";
@@ -86,18 +87,34 @@ export const FormField = (
           {errorText}
         </Flex>
       )}
-      <Input
-        id={id}
-        name={name}
-        value={value}
-        type={type}
-        required={required}
-        size={size}
-        rounded={rounded}
-        invalid={invalid}
-        class={`block w-full ${inputRest?.class}`}
-        {...inputRest}
-      />
+      {type === "rfui-password-input"
+        ? (
+          <PasswordInput
+            id={id}
+            name={name}
+            value={value}
+            required={required}
+            size={size}
+            rounded={rounded}
+            invalid={invalid}
+            class={`block w-full ${inputRest?.class}`}
+            {...inputRest}
+          />
+        )
+        : (
+          <Input
+            id={id}
+            name={name}
+            value={value}
+            type={type}
+            required={required}
+            size={size}
+            rounded={rounded}
+            invalid={invalid}
+            class={`block w-full ${inputRest?.class}`}
+            {...inputRest}
+          />
+        )}
     </div>
   );
 };

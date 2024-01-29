@@ -156,14 +156,16 @@ export default function Home() {
       </H2>
       <Text>
         <p>
-          In the <InlineCode>rfui.css</InlineCode> file you created in{" "}
-          <Link href="#add-css-file">step two</Link>, you will see{" "}
-          <InlineCode>:root</InlineCode> followed by a bunch of{" "}
-          <Link href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties">
-            CSS variables
-          </Link>. You can change their values if you'd like to customize your
-          app's look and feel.
+          In <InlineCode>static/styles.css</InlineCode>{" "}
+          add the following to set the default roundedness to large instead of
+          small:
         </p>
+        <CodeBlock
+          language="css"
+          code={`:root {
+  --default-roundedness: var(--rounded-lg);
+}`}
+        />
         <p>
           See the <Link href="/css-variables">"CSS variables" page</Link>{" "}
           for more information.

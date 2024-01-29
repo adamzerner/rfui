@@ -59,7 +59,7 @@ export default () => {
           language="tsx"
           code={`import { getCssUrl } from "rfui";
 
-<link  rel="stylesheet" href={getCssUrl()} />`}
+<link rel="stylesheet" href={getCssUrl()} />`}
         />
         <p>
           Then when you upgrade to v0.1.5, <InlineCode>getCssUrl</InlineCode>

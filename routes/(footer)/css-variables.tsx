@@ -16,7 +16,7 @@ export default () => {
           <Link href="/getting-started#customize-css-variables">
             optional steps
           </Link>{" "}
-          for getting started with RFUI is to customize{" "}
+          for getting started with RFUI is to customize the{" "}
           <Link href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties">
             CSS variables
           </Link>.
@@ -124,39 +124,40 @@ export default () => {
         <Alert isDismissable={false}>
           <p>
             Well, technically you can customize any of the CSS variables that
-            you see in{" "}
-            <InlineCode>rfui.css</InlineCode>. It's just that if you change ones
-            that aren't in the list above, I'm not sure how good RFUI's
-            components will look. On the other hand, if you customize the
-            variables in the list above and choose reasonable values, RFUI's
-            components should still all look good.
+            you see in RFUI's CSS file. It's just that if you change ones that
+            aren't in the list above, I'm not sure how good RFUI's components
+            will look. On the other hand, if you customize the variables in the
+            list above and choose reasonable values, RFUI's components should
+            still all look good.
           </p>
         </Alert>
       </Text>
 
       <H2 inPageLink="how">How</H2>
       <Text>
-        <p>
-          It may not be clear <em>how</em>{" "}
-          you actually go about doing this. After all,
-          <InlineCode>rfui.css</InlineCode>{" "}
-          is minified... so where exactly do you make the code change? And how
-          do you organize things?
-        </p>
+        <p>After doing something like:</p>
         <CodeBlock
-          language="css"
-          code={`/*! tailwindcss v3.4.1 | MIT License | https://tailwindcss.com*/*,:after,:before{border:0 solid;box-sizing:border-box}:after,:before{--tw-content:""}:host,html{-webkit-text-size-adjust:100%;font-feature-settings:normal;-webkit-tap-highlight-color:transparent;font-family:var(--fontFamily-sans);font-variation-settings:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4}body{line-height:inherit;margin:0}hr{border-top-width:1px;color:inherit;height:0}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-feature-settings:normal;font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;font-size:1em;font-variation-settings:normal}small{font-size:80%}`}
+          language="tsx"
+          code={`import { getCssUrl } from "rfui";
+
+<link rel="stylesheet" href={getCssUrl()} />`}
         />
         <p>
-          <Link href="https://youtu.be/P3i36ybA8Ms?si=iAcIhkvtDkRgP3JN&t=83">
-            Well, that's up to y'all really.
-          </Link>
+          to link to RFUI's stylesheet, if you want to customize the CSS
+          variables, you'll need a second stylesheet beneath it. For example,
+          maybe you have <InlineCode>app.css</InlineCode> beneath it like so:
         </p>
-        <p>Just kidding. I'll help you out.</p>
+        <CodeBlock
+          language="tsx"
+          code={`import { getCssUrl } from "rfui";
+
+<link rel="stylesheet" href={getCssUrl()} />
+<link rel="stylesheet" href="/app.css" />`}
+        />
         <p>
-          Say you want to update the primary color and the default roundedness.
-          I'd just put the following at the bottom of{" "}
-          <InlineCode>rfui.css</InlineCode>.
+          Then in <InlineCode>app.css</InlineCode>{" "}
+          you can do something like this if you want to update the default
+          roundedness and primary color:
         </p>
         <CodeBlock
           language="css"
@@ -174,18 +175,6 @@ export default () => {
   --color-primary-900: 999 999 999;
 }`}
         />
-        <p>
-          Since they're defined at the bottom of the file, they'll take
-          precedence over the stuff that is defined above it.
-        </p>
-        <p>
-          You can also define a separate CSS file, with these overrides and make
-          sure that the associated <InlineCode>{`<link>`}</InlineCode>{" "}
-          tag is below the one for{" "}
-          <InlineCode>rfui.css</InlineCode>. The benefit here is that you won't
-          end up accidentally losing your customized values by overwriting{" "}
-          <InlineCode>rfui.css</InlineCode>.
-        </p>
       </Text>
     </div>
   );

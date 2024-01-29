@@ -136,14 +136,20 @@ export default () => {
       </H2>
       <Text>
         <p>
-          In the <InlineCode>rfui.css</InlineCode> file you created in{" "}
-          <Link href="#include-rfui-css-file">step one</Link>, you will see{" "}
-          <InlineCode>:root</InlineCode> followed by a bunch of{" "}
+          In your project's eg. <InlineCode>app.css</InlineCode>{" "}
+          file do something like this to override the{" "}
           <Link href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties">
             CSS variables
-          </Link>. You can change their values if you'd like to customize your
-          app's look and feel.
+          </Link>{" "}
+          that were defined in RFUI's stylesheet that you set up in{" "}
+          <Link href="#include-rfui-css-file">step one</Link>.
         </p>
+        <CodeBlock
+          language="css"
+          code={`:root {
+  --default-roundedness: var(--rounded-lg);
+}`}
+        />
         <p>
           See the <Link href="/css-variables">"CSS variables" page</Link>{" "}
           for more information.

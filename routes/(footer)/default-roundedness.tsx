@@ -33,10 +33,9 @@ export default () => {
           />
         </Stack>
         <p>
-          RFUI makes it easy to do this. In <InlineCode>rfui.css</InlineCode>
+          RFUI makes it easy to do this. In RFUI's stylesheet there is a{" "}
+          <InlineCode>--default-roundedness</InlineCode> CSS variable that you
           {" "}
-          there is a <InlineCode>--default-roundedness</InlineCode>{" "}
-          CSS variable that you{" "}
           <Link href="/getting-started#customize-css-variables">can set</Link>.
         </p>
         <CodeBlock

@@ -46,26 +46,27 @@ export default () => {
       <H2 inPageLink="add-css-file">{"2) Add CSS file"}</H2>
       <Text>
         <p>
-          Create a <InlineCode>rfui.css</InlineCode> file in your{" "}
-          <InlineCode>static</InlineCode> directory. Copy the contents of{" "}
-          <Link href="https://rfui.deno.dev/rfui.css">
-            https://rfui.deno.dev/rfui.css
-          </Link>{" "}
-          and paste them into your newly created{" "}
-          <InlineCode>rfui.css</InlineCode> file.
-        </p>
-        <p>
-          Then in <InlineCode>routes/_app.tsx</InlineCode> add:
+          In <InlineCode>routes/_app.tsx</InlineCode> import{" "}
+          <InlineCode>getCssUrl</InlineCode>:
         </p>
         <CodeBlock
           language="tsx"
-          code={`<link rel="stylesheet" href="/rfui.css" />`}
+          code={`import { getCssUrl } from "rfui";`}
+        />
+        <p>and add:</p>
+        <CodeBlock
+          language="tsx"
+          code={`<link rel="stylesheet" href="{getCssUrl()}" />`}
         />
         <p>right before the:</p>
         <CodeBlock
           language="tsx"
           code={`<link rel="stylesheet" href="/styles.css" />`}
         />
+        <p>
+          See the <Link href="/css-file">"CSS file" page</Link>{" "}
+          for more information.
+        </p>
       </Text>
 
       <H2 inPageLink="set-up-import-map">
@@ -77,7 +78,7 @@ export default () => {
         </p>
         <CodeBlock
           language="ts"
-          code={`"rfui": "https://deno.land/x/rfui@v0.1.0/mod.ts"`}
+          code={`"rfui": "https://deno.land/x/rfui@v0.1.4/mod.ts"`}
         />
         <p>
           to the <InlineCode>"imports"</InlineCode> object.
@@ -155,14 +156,16 @@ export default function Home() {
       </H2>
       <Text>
         <p>
-          In the <InlineCode>rfui.css</InlineCode> file you created in{" "}
-          <Link href="#add-css-file">step two</Link>, you will see{" "}
-          <InlineCode>:root</InlineCode> followed by a bunch of{" "}
-          <Link href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties">
-            CSS variables
-          </Link>. You can change their values if you'd like to customize your
-          app's look and feel.
+          In <InlineCode>static/styles.css</InlineCode>{" "}
+          add the following to set the default roundedness to large instead of
+          small:
         </p>
+        <CodeBlock
+          language="css"
+          code={`:root {
+  --default-roundedness: var(--rounded-lg);
+}`}
+        />
         <p>
           See the <Link href="/css-variables">"CSS variables" page</Link>{" "}
           for more information.

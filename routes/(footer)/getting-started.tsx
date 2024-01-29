@@ -42,21 +42,22 @@ export default () => {
 
       <H2 inPageLink="include-rfui-css-file">{"1) Include RFUI CSS file"}</H2>
       <Text>
-        <p>
-          Without{" "}
-          <Link href="https://rfui.deno.dev/rfui.css">this CSS</Link>, the RFUI
-          components will be unstyled. You will need to link to that CSS in
-          order for the RFUI components to look as they are intended to look.
-        </p>
-        <p>
-          So then, create a CSS file and copy-paste the CSS{" "}
-          <Link href="https://rfui.deno.dev/rfui.css">here</Link>{" "}
-          into that file. Then link to it. Something like:
-        </p>
+        <p>Something like this:</p>
         <CodeBlock
-          language="html"
-          code={`<link rel="stylesheet" href="/rfui.css" />`}
+          language="tsx"
+          code={`import { getCssUrl } from "rfui";
+
+<link  rel="stylesheet" href={getCssUrl()} />`}
         />
+        <p>
+          <InlineCode>getCssUrl</InlineCode> will return eg.{" "}
+          <InlineCode>https://rfui.deno.dev/rfui-v0-1-4.css</InlineCode>{" "}
+          if you're on v0.1.4 of RFUI.
+        </p>
+        <p>
+          See the <Link href="/css-file">"CSS file" page</Link>{" "}
+          for more information.
+        </p>
       </Text>
 
       <H2 inPageLink="import-rfui-component">{"2) Import RFUI component"}</H2>
@@ -70,7 +71,7 @@ export default () => {
         </p>
         <CodeBlock
           language="tsx"
-          code={`import { Button } from "https://deno.land/x/rfui@v0.1.0/mod.ts";`}
+          code={`import { Button } from "https://deno.land/x/rfui@v0.1.4/mod.ts";`}
         />
         <Alert isDismissable={false}>
           <AlertBody>
@@ -85,7 +86,7 @@ export default () => {
             </p>
             <CodeBlock
               language="ts"
-              code={`"rfui": "https://deno.land/x/rfui@v0.1.0/mod.ts"`}
+              code={`"rfui": "https://deno.land/x/rfui@v0.1.4/mod.ts"`}
             />
             <p>
               After doing so, you can clean up your import like so:
@@ -135,14 +136,20 @@ export default () => {
       </H2>
       <Text>
         <p>
-          In the <InlineCode>rfui.css</InlineCode> file you created in{" "}
-          <Link href="#include-rfui-css-file">step one</Link>, you will see{" "}
-          <InlineCode>:root</InlineCode> followed by a bunch of{" "}
+          In your project's eg. <InlineCode>app.css</InlineCode>{" "}
+          file do something like this to override the{" "}
           <Link href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties">
             CSS variables
-          </Link>. You can change their values if you'd like to customize your
-          app's look and feel.
+          </Link>{" "}
+          that were defined in RFUI's stylesheet that you set up in{" "}
+          <Link href="#include-rfui-css-file">step one</Link>.
         </p>
+        <CodeBlock
+          language="css"
+          code={`:root {
+  --default-roundedness: var(--rounded-lg);
+}`}
+        />
         <p>
           See the <Link href="/css-variables">"CSS variables" page</Link>{" "}
           for more information.

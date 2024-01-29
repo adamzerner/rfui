@@ -201,8 +201,8 @@ export default () => {
           primary color based on the "vibe" you want your app to have.
         </p>
         <Alert isDismissable={false}>
-          To set your color palette you can edit the CSS variables in{" "}
-          <InlineCode>rfui.css</InlineCode>. For example,{" "}
+          To set your color palette you can edit the CSS variables. For example,
+          {" "}
           <InlineCode>--color-primary-50</InlineCode>,{" "}
           <InlineCode>--color-primary-100</InlineCode>, etc. See{" "}
           <Link href="/getting-started#customize-css-variables">here</Link>{" "}

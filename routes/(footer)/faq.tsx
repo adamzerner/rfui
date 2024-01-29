@@ -113,12 +113,7 @@ export default () => {
       </H2>
       <Text>
         <p>
-          Yes. In <InlineCode>rfui.css</InlineCode>{" "}
-          there are a bunch of CSS variables that you can set. See the{" "}
-          <Link href="/getting-started#customize-css-variables">
-            Getting Started page
-          </Link>{" "}
-          for more information.
+          Yes. See the <Link href="/css-variables">"CSS variables"</Link> page.
         </p>
       </Text>
 
@@ -142,8 +137,7 @@ export default () => {
           No.{" "}
           <Link href="/getting-started#include-rfui-css-file">Including</Link>
           {" "}
-          the <InlineCode>rfui.css</InlineCode>{" "}
-          file will provide you with all of the styles you need.
+          the RFUI stylesheet will provide you with all of the styles you need.
         </p>
       </Text>
 

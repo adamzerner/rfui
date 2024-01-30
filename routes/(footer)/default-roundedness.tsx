@@ -12,7 +12,7 @@ export default () => {
       <Text>
         <p>
           As described on the{" "}
-          <Link href="/choose-a-personality#roundedness">
+          <Link href="/choose-a-personality">
             "Choose a personality"
           </Link>{" "}
           page, it is usually good to decide on the personality you're going for
@@ -36,7 +36,7 @@ export default () => {
           RFUI makes it easy to do this. In RFUI's stylesheet there is a{" "}
           <InlineCode>--default-roundedness</InlineCode> CSS variable that you
           {" "}
-          <Link href="/getting-started#customize-css-variables">can set</Link>.
+          <Link href="/css-variables">can set</Link>.
         </p>
         <CodeBlock
           language="css"
@@ -50,8 +50,8 @@ export default () => {
         <p>
           If you don't pass <InlineCode>rounded</InlineCode> to components like
           {" "}
-          <InlineCode>Button</InlineCode> or <InlineCode>Card</InlineCode>, the
-          {" "}
+          <InlineCode>Button</InlineCode> or <InlineCode>Card</InlineCode>{" "}
+          that accept <InlineCode>rounded</InlineCode>, the{" "}
           <InlineCode>border-radius</InlineCode> will be set to the value of the
           {" "}
           <InlineCode>--default-roundedness</InlineCode> CSS variable.

@@ -138,24 +138,26 @@ export default () => {
         <p>After doing something like:</p>
         <CodeBlock
           language="tsx"
-          code={`import { getCssUrl } from "rfui";
+          code={`import { getStylesheetUrl } from "rfui";
 
-<link rel="stylesheet" href={getCssUrl()} />`}
+<link rel="stylesheet" href={getStylesheetUrl()} />`}
         />
         <p>
           to link to RFUI's stylesheet, if you want to customize the CSS
-          variables, you'll need a second stylesheet beneath it. For example,
-          maybe you have <InlineCode>app.css</InlineCode> beneath it like so:
+          variables, you'll need a second stylesheet beneath it. Often times
+          you'll have something like <InlineCode>app.css</InlineCode>{" "}
+          beneath it like so:
         </p>
         <CodeBlock
           language="tsx"
-          code={`import { getCssUrl } from "rfui";
+          code={`import { getStylesheetUrl } from "rfui";
 
-<link rel="stylesheet" href={getCssUrl()} />
+<link rel="stylesheet" href={getStylesheetUrl()} />
 <link rel="stylesheet" href="/app.css" />`}
         />
         <p>
-          Then in <InlineCode>app.css</InlineCode>{" "}
+          If not, go ahead and create it. Then in{" "}
+          <InlineCode>app.css</InlineCode>{" "}
           you can do something like this if you want to update the default
           roundedness and primary color:
         </p>
@@ -175,6 +177,10 @@ export default () => {
   --color-primary-900: 999 999 999;
 }`}
         />
+        <p>
+          Because these appear after the CSS variables that were defined in the
+          RFUI stylesheet, they will take precedence.
+        </p>
       </Text>
     </div>
   );

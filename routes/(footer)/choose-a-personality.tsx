@@ -70,8 +70,8 @@ export default () => {
           alt="Personality spectrum"
         />
         <p>
-          From there, you can control how "serious" your app feels by tweaking
-          the following three variables:
+          You can control how "serious" your app feels by tweaking the following
+          three variables:
         </p>
         <OL>
           <li>Roundedness</li>
@@ -96,7 +96,7 @@ export default () => {
           </li>
         </UL>
         <p>
-          With RFUI, the components will accept a{" "}
+          With RFUI, various components will accept a{" "}
           <InlineCode>rounded</InlineCode> property. The possible values will be
           {" "}
           <InlineCode>"square"</InlineCode>, <InlineCode>"sm"</InlineCode>,{" "}
@@ -108,8 +108,8 @@ export default () => {
           as an example.
         </p>
         <p>
-          So basically, I'd recommend choosing a value and sticking with it
-          throughout your app. For example:
+          I'd recommend choosing a value and sticking with it throughout your
+          app. For example:
         </p>
         <UL>
           <li>
@@ -204,8 +204,8 @@ export default () => {
           To set your color palette you can edit the CSS variables. For example,
           {" "}
           <InlineCode>--color-primary-50</InlineCode>,{" "}
-          <InlineCode>--color-primary-100</InlineCode>, etc. See{" "}
-          <Link href="/getting-started#customize-css-variables">here</Link>{" "}
+          <InlineCode>--color-primary-100</InlineCode>, etc. See the{" "}
+          <Link href="/css-variables">"CSS variables"</Link> page{" "}
           for more information.
         </Alert>
         <p>

@@ -4,13 +4,13 @@
 
 import * as $_footer_about from "./routes/(footer)/about.tsx";
 import * as $_footer_choose_a_personality from "./routes/(footer)/choose-a-personality.tsx";
-import * as $_footer_css_file from "./routes/(footer)/css-file.tsx";
 import * as $_footer_css_variables from "./routes/(footer)/css-variables.tsx";
 import * as $_footer_default_roundedness from "./routes/(footer)/default-roundedness.tsx";
 import * as $_footer_faq from "./routes/(footer)/faq.tsx";
 import * as $_footer_getting_started from "./routes/(footer)/getting-started.tsx";
 import * as $_footer_philosophy from "./routes/(footer)/philosophy.tsx";
 import * as $_footer_rest_parameters from "./routes/(footer)/rest-parameters.tsx";
+import * as $_footer_stylesheet from "./routes/(footer)/stylesheet.tsx";
 import * as $_footer_target_audience from "./routes/(footer)/target-audience.tsx";
 import * as $_404 from "./routes/_404.tsx";
 import * as $_500 from "./routes/_500.tsx";
@@ -69,13 +69,13 @@ const manifest = {
   routes: {
     "./routes/(footer)/about.tsx": $_footer_about,
     "./routes/(footer)/choose-a-personality.tsx": $_footer_choose_a_personality,
-    "./routes/(footer)/css-file.tsx": $_footer_css_file,
     "./routes/(footer)/css-variables.tsx": $_footer_css_variables,
     "./routes/(footer)/default-roundedness.tsx": $_footer_default_roundedness,
     "./routes/(footer)/faq.tsx": $_footer_faq,
     "./routes/(footer)/getting-started.tsx": $_footer_getting_started,
     "./routes/(footer)/philosophy.tsx": $_footer_philosophy,
     "./routes/(footer)/rest-parameters.tsx": $_footer_rest_parameters,
+    "./routes/(footer)/stylesheet.tsx": $_footer_stylesheet,
     "./routes/(footer)/target-audience.tsx": $_footer_target_audience,
     "./routes/_404.tsx": $_404,
     "./routes/_500.tsx": $_500,

@@ -43,34 +43,8 @@ export default () => {
         </Alert>
       </Text>
 
-      <H2 inPageLink="add-css-file">{"2) Add CSS file"}</H2>
-      <Text>
-        <p>
-          In <InlineCode>routes/_app.tsx</InlineCode> import{" "}
-          <InlineCode>getCssUrl</InlineCode>:
-        </p>
-        <CodeBlock
-          language="tsx"
-          code={`import { getCssUrl } from "rfui";`}
-        />
-        <p>and add:</p>
-        <CodeBlock
-          language="tsx"
-          code={`<link rel="stylesheet" href="{getCssUrl()}" />`}
-        />
-        <p>right before the:</p>
-        <CodeBlock
-          language="tsx"
-          code={`<link rel="stylesheet" href="/styles.css" />`}
-        />
-        <p>
-          See the <Link href="/css-file">"CSS file" page</Link>{" "}
-          for more information.
-        </p>
-      </Text>
-
       <H2 inPageLink="set-up-import-map">
-        {"3) Set up import map"}
+        {"2) Set up import map"}
       </H2>
       <Text>
         <p>
@@ -93,6 +67,32 @@ export default () => {
             for more information.
           </div>
         </Alert>
+      </Text>
+
+      <H2 inPageLink="add-css-file">{"3) Add CSS file"}</H2>
+      <Text>
+        <p>
+          In <InlineCode>routes/_app.tsx</InlineCode> import{" "}
+          <InlineCode>getStylesheetUrl</InlineCode>:
+        </p>
+        <CodeBlock
+          language="tsx"
+          code={`import { getStylesheetUrl } from "rfui";`}
+        />
+        <p>and add:</p>
+        <CodeBlock
+          language="tsx"
+          code={`<link rel="stylesheet" href="{getStylesheetUrl()}" />`}
+        />
+        <p>right before the:</p>
+        <CodeBlock
+          language="tsx"
+          code={`<link rel="stylesheet" href="/styles.css" />`}
+        />
+        <p>
+          See the <Link href="/stylesheet">Stylesheet</Link>{" "}
+          page for more information.
+        </p>
       </Text>
 
       <H2 inPageLink="use-rfui-component">{"4) Use RFUI component"}</H2>
@@ -167,8 +167,8 @@ export default function Home() {
 }`}
         />
         <p>
-          See the <Link href="/css-variables">"CSS variables" page</Link>{" "}
-          for more information.
+          See the <Link href="/css-variables">"CSS variables"</Link>{" "}
+          page for more information.
         </p>
       </Text>
 

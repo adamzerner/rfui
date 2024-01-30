@@ -8,7 +8,7 @@ import { Card } from "@/components/molecules/card.tsx";
 export default () => {
   return (
     <div class="max-w-prose text-lg">
-      <H1>CSS file</H1>
+      <H1>Stylesheet</H1>
       <Text>
         <p>
           Without RFUI's stylesheet the RFUI components will be unstyled. For
@@ -47,24 +47,23 @@ export default () => {
           be easy to forget to do this.
         </p>
         <p>
-          So an alternative is to use RFUI's <InlineCode>getCssUrl</InlineCode>
-          {" "}
+          So an alternative is to use RFUI's{" "}
+          <InlineCode>getStylesheetUrl</InlineCode>{" "}
           function. If you are on v0.1.4 of RFUI,{" "}
-          <InlineCode>getCssUrl</InlineCode> will return{" "}
+          <InlineCode>getStylesheetUrl</InlineCode> will return{" "}
           <InlineCode>"https://rfui.deno.dev/rfui-v0-1-4.css"</InlineCode>. So
           then, if you want to "set it and forget it", you can do something like
           this:
         </p>
         <CodeBlock
           language="tsx"
-          code={`import { getCssUrl } from "rfui";
+          code={`import { getStylesheetUrl } from "rfui";
 
-<link rel="stylesheet" href={getCssUrl()} />`}
+<link rel="stylesheet" href={getStylesheetUrl()} />`}
         />
         <p>
-          Then when you upgrade to v0.1.5, <InlineCode>getCssUrl</InlineCode>
-          {" "}
-          will return{" "}
+          Then when you upgrade to v0.1.5,{" "}
+          <InlineCode>getStylesheetUrl</InlineCode> will return{" "}
           <InlineCode>https://rfui.deno.dev/rfui-v0-1-5.css</InlineCode>{" "}
           and you will have the correct CSS file without needing to make any
           changes.

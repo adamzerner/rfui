@@ -82,4 +82,4 @@ export type { FlexType } from "./components/helpers/flex.tsx";
 export { Stack } from "./components/helpers/stack.tsx";
 export type { StackType } from "./components/helpers/stack.tsx";
 
-export { getCssUrl } from "./utilities/get-css-url.ts";
+export { getStylesheetUrl } from "./utilities/get-stylesheet-url.ts";

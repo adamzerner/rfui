@@ -21,7 +21,7 @@ export const Footer = () => {
         <FooterHeading>Docs</FooterHeading>
         <FooterItem href="/">Components</FooterItem>
         <FooterItem href="/getting-started">Getting started</FooterItem>
-        <FooterItem href="/css-file">CSS file</FooterItem>
+        <FooterItem href="/stylesheet">Stylesheet</FooterItem>
         <FooterItem href="/css-variables">CSS variables</FooterItem>
         <FooterItem href="/choose-a-personality">
           Choose a personality

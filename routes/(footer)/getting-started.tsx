@@ -40,71 +40,61 @@ export default () => {
         </Alert>
       </Text>
 
-      <H2 inPageLink="include-rfui-css-file">{"1) Include RFUI CSS file"}</H2>
-      <Text>
-        <p>Something like this:</p>
-        <CodeBlock
-          language="tsx"
-          code={`import { getCssUrl } from "rfui";
-
-<link  rel="stylesheet" href={getCssUrl()} />`}
-        />
-        <p>
-          <InlineCode>getCssUrl</InlineCode> will return eg.{" "}
-          <InlineCode>https://rfui.deno.dev/rfui-v0-1-4.css</InlineCode>{" "}
-          if you're on v0.1.4 of RFUI.
-        </p>
-        <p>
-          See the <Link href="/css-file">"CSS file" page</Link>{" "}
-          for more information.
-        </p>
-      </Text>
-
-      <H2 inPageLink="import-rfui-component">{"2) Import RFUI component"}</H2>
+      <H2 inPageLink="set-up-import-map">{"1) Set up import map"}</H2>
       <Text>
         <p>
           The RFUI library is hosted as a{" "}
           <Link href="https://deno.land/x">Deno Third Party Module</Link>.{" "}
           <Link href="https://deno.land/x/rfui">This</Link>{" "}
-          is the corresponding page. It is only usable in Deno projects. To
-          import from it, you'll want to do something like this:
+          is the corresponding page. It is only usable in Deno projects.
+        </p>
+        <p>
+          Using{" "}
+          <Link href="https://docs.deno.com/runtime/manual/basics/import_maps">
+            Import Maps
+          </Link>{" "}
+          is a practice you'll probably want to follow in your Deno app. Add the
+          following to the <InlineCode>"imports"</InlineCode> object in{" "}
+          <InlineCode>deno.json</InlineCode>:
         </p>
         <CodeBlock
-          language="tsx"
-          code={`import { Button } from "https://deno.land/x/rfui@v0.1.4/mod.ts";`}
+          language="ts"
+          code={`"rfui": "https://deno.land/x/rfui@v0.1.4/mod.ts"`}
         />
-        <Alert isDismissable={false}>
-          <AlertBody>
-            <p>
-              Or even better, use{" "}
-              <Link href="https://docs.deno.com/runtime/manual/basics/import_maps">
-                Import Maps
-              </Link>{" "}
-              by adding the following to the <InlineCode>"imports"</InlineCode>
-              {" "}
-              object in <InlineCode>deno.json</InlineCode>:
-            </p>
-            <CodeBlock
-              language="ts"
-              code={`"rfui": "https://deno.land/x/rfui@v0.1.4/mod.ts"`}
-            />
-            <p>
-              After doing so, you can clean up your import like so:
-            </p>
-            <CodeBlock
-              language="tsx"
-              code={`import { Button } from "rfui";`}
-            />
-          </AlertBody>
-        </Alert>
       </Text>
 
-      <H2 inPageLink="use-the-component">{"3) Use the component"}</H2>
+      <H2 inPageLink="include-rfui-stylesheet">
+        {"2) Include RFUI stylesheet"}
+      </H2>
+      <Text>
+        <p>Something like this:</p>
+        <CodeBlock
+          language="tsx"
+          code={`import { getStylesheetUrl } from "rfui";
+
+<link  rel="stylesheet" href={getStylesheetUrl()} />`}
+        />
+        <p>
+          <InlineCode>getStylesheetUrl</InlineCode> will return eg.{" "}
+          <InlineCode>https://rfui.deno.dev/rfui-v0-1-4.css</InlineCode>{" "}
+          if you're on v0.1.4 of RFUI.
+        </p>
+        <p>
+          See the <Link href="/stylesheet">Stylesheet</Link>{" "}
+          page for more information.
+        </p>
+      </Text>
+
+      <H2 inPageLink="import-rfui-component">
+        {"3) Import and use RFUI component"}
+      </H2>
       <Text>
         <p>Something like:</p>
         <CodeBlock
           language="tsx"
-          code={`<Button>Example</Button>`}
+          code={`import { Button } from "rfui";
+
+<Button>Example</Button>`}
         />
       </Text>
 
@@ -142,7 +132,7 @@ export default () => {
             CSS variables
           </Link>{" "}
           that were defined in RFUI's stylesheet that you set up in{" "}
-          <Link href="#include-rfui-css-file">step one</Link>.
+          <Link href="#include-rfui-stylesheet">step two</Link>.
         </p>
         <CodeBlock
           language="css"

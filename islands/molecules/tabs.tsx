@@ -1,7 +1,5 @@
 // deno-lint-ignore-file no-explicit-any
 import type { ComponentChild, JSX } from "preact";
-import { useState } from "preact/hooks";
-import { Flex } from "../../components/helpers/flex.tsx";
 
 export type TabsType = {
   fullWidth?: boolean;
@@ -23,28 +21,30 @@ export type TabsType = {
 export const Tabs = (
   { fullWidth = false, children, ...rest }: TabsType,
 ) => {
-  console.log("Tabs");
-  const tabNames = getTabNames(children);
-  const [activeTab, setActiveTab] = useState<string>(tabNames[0]);
-  const activeTabSection = getActiveTabSection(children, activeTab);
+  console.log(children);
 
-  return (
-    <div {...rest}>
-      <Flex class="border-b border-b-neutral-500">
-        {tabNames.map((tabName) => (
-          <Tab
-            tabName={tabName}
-            activeTab={activeTab}
-            onClick={() => {
-              setActiveTab(tabName);
-            }}
-            fullWidth={fullWidth}
-          />
-        ))}
-      </Flex>
-      <div class="mt-6">{activeTabSection}</div>
-    </div>
-  );
+  return <div>Tabs</div>;
+  // const tabNames = getTabNames(children);
+  // const [activeTab, setActiveTab] = useState<string>(tabNames[0]);
+  // const activeTabSection = getActiveTabSection(children, activeTab);
+
+  // return (
+  //   <div {...rest}>
+  //     <Flex class="border-b border-b-neutral-500">
+  //       {tabNames.map((tabName) => (
+  //         <Tab
+  //           tabName={tabName}
+  //           activeTab={activeTab}
+  //           onClick={() => {
+  //             setActiveTab(tabName);
+  //           }}
+  //           fullWidth={fullWidth}
+  //         />
+  //       ))}
+  //     </Flex>
+  //     <div class="mt-6">{activeTabSection}</div>
+  //   </div>
+  // );
 };
 
 const getTabNames = (props: any) => {

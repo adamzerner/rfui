@@ -39,7 +39,6 @@ export const Button = (
     ...rest
   }: ButtonType,
 ) => {
-  console.log("Button");
   const { class: restClass, ...restWithoutClass } = rest;
   let className = "font-semibold";
 

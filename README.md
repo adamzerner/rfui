@@ -25,14 +25,11 @@ To create a new version of this library:
 
 - Add version-specific CSS file in `static` directory
 - Update `utilities/get-css-path.ts`
-- Update docs (cmd+f for eg. v0.1.8, 0-1-8, v0.1.9 and 0-1-9 and change it to
+- Update docs (cmd+f for eg. v0.1.9, 0-1-9, v0.1.10 and 0-1-10 and change it to
   the most recent version)
 - Use https://github.com/adamzerner/rfui/releases/new
 - Update CHANGELOG.md
 - Follow [semantic versioning](https://semver.org/)
-
-To just update a current version (not a great practice; only relevant for
-pre-release phase) see https://stackoverflow.com/a/28280404/1927876.
 
 ## Generating the Tailwind CSS file
 

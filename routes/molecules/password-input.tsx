@@ -21,6 +21,8 @@ import { PasswordInput } from "@/islands/molecules/password-input.tsx";
 export default () => {
   const notes = (
     <div>
+      The <InlineCode>PasswordInput</InlineCode>{" "}
+      component provides a button that toggles whether the password is visible.
       The ability to see your password in plain text as you're typing{" "}
       <Link href="https://www.nngroup.com/articles/stop-password-masking">
         often

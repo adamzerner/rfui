@@ -49,7 +49,7 @@ export const Tabs = (
 const getTabNames = (props: any) => {
   console.log("getTabNames");
   console.log(props);
-  const children = props.props.children;
+  const children = props.props ? props.props.children : props;
 
   if (!Array.isArray(children)) {
     return [children.props.tabName];

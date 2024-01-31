@@ -1,5 +1,5 @@
-import { PasswordInput } from "@/islands/molecules/password-input.tsx";
 import type { JSX } from "preact";
+import { PasswordInput } from "../../islands/molecules/password-input.tsx";
 import { Input } from "../atoms/input.tsx";
 import { Flex } from "../helpers/flex.tsx";
 import { XCircleIcon } from "../icons/x-circle-icon.tsx";

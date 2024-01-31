@@ -62,17 +62,23 @@ export {
 export type { NavbarType } from "./components/molecules/navbar/index.tsx";
 export { Alert, AlertBody, AlertHeader } from "./islands/molecules/alert.tsx";
 export type { AlertType } from "./islands/molecules/alert.tsx";
-export { CheckboxCardGroup } from "./islands/molecules/checkbox-card-group.tsx";
+export {
+  CheckboxCardGroup,
+  CheckboxCardGroupItem,
+} from "./islands/molecules/checkbox-card-group.tsx";
 export type { CheckboxCardGroupType } from "./islands/molecules/checkbox-card-group.tsx";
 export { Modal } from "./islands/molecules/modal.tsx";
 export type { ModalType } from "./islands/molecules/modal.tsx";
 export { PasswordInput } from "./islands/molecules/password-input.tsx";
 export type { PasswordInputType } from "./islands/molecules/password-input.tsx";
-export { RadioButtonCardGroup } from "./islands/molecules/radio-button-card-group.tsx";
+export {
+  RadioButtonCardGroup,
+  RadioButtonCardGroupItem,
+} from "./islands/molecules/radio-button-card-group.tsx";
 export type { RadioButtonCardGroupType } from "./islands/molecules/radio-button-card-group.tsx";
 export { Stepper } from "./islands/molecules/stepper.tsx";
 export type { StepperType } from "./islands/molecules/stepper.tsx";
-export { Tabs } from "./islands/molecules/tabs.tsx";
+export { Tabs, TabSection } from "./islands/molecules/tabs.tsx";
 export type { TabsType } from "./islands/molecules/tabs.tsx";
 
 export { Container } from "./components/helpers/container.tsx";

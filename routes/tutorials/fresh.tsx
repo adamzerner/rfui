@@ -82,7 +82,7 @@ export default () => {
         <p>and add:</p>
         <CodeBlock
           language="tsx"
-          code={`<link rel="stylesheet" href="{getStylesheetUrl()}" />`}
+          code={`<link rel="stylesheet" href={getStylesheetUrl()} />`}
         />
         <p>right before the:</p>
         <CodeBlock

@@ -1,5 +1,5 @@
 // deno-lint-ignore no-explicit-any
 export const getChildren = (children: any) =>
-  children?.type?.name === "ServerComponent"
+  children?.type?.displayName === "PreactServerComponent"
     ? children.props.children
     : children;

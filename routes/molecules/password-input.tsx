@@ -21,6 +21,8 @@ import { PasswordInput } from "@/islands/molecules/password-input.tsx";
 export default () => {
   const notes = (
     <div>
+      The <InlineCode>PasswordInput</InlineCode>{" "}
+      component provides a button that toggles whether the password is visible.
       The ability to see your password in plain text as you're typing{" "}
       <Link href="https://www.nngroup.com/articles/stop-password-masking">
         often
@@ -37,6 +39,28 @@ export default () => {
         class="mt-4"
         language="tsx"
         code={`<PasswordInput />`}
+      />
+    ),
+  }, {
+    title: "Controlled",
+    description: (
+      <div>
+        See{" "}
+        <Link href="https://preactjs.com/guide/v10/forms#controlled--uncontrolled-components">
+          Controlled & Uncontrolled Components
+        </Link>. Passing <InlineCode>value</InlineCode> and{" "}
+        <InlineCode>onInput</InlineCode> work because of{" "}
+        <Link href="/rest-parameters">
+          <InlineCode>...rest</InlineCode>
+        </Link>.
+      </div>
+    ),
+    example: <PasswordInput />,
+    exampleCode: (
+      <CodeBlock
+        class="mt-4"
+        language="tsx"
+        code={`<PasswordInput value={value} onInput={onInput} />`}
       />
     ),
   }, {

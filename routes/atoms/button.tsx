@@ -30,6 +30,24 @@ export default () => {
       />
     ),
   }, {
+    title: "Handle click",
+    description: (
+      <div>
+        Passing <InlineCode>onClick</InlineCode> works because of{" "}
+        <Link href="/rest-parameters">
+          <InlineCode>...rest</InlineCode>
+        </Link>.
+      </div>
+    ),
+    example: <Button>Example</Button>,
+    exampleCode: (
+      <CodeBlock
+        class="mt-4"
+        language="tsx"
+        code={`<Button onClick={onClick}>Example</Button>`}
+      />
+    ),
+  }, {
     title: "Variant",
     description: (
       <div>

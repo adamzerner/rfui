@@ -29,6 +29,24 @@ export default () => {
       />
     ),
   }, {
+    title: "Controlled",
+    description: (
+      <div>
+        See{" "}
+        <Link href="https://preactjs.com/guide/v10/forms#controlled--uncontrolled-components">
+          Controlled & Uncontrolled Components
+        </Link>.
+      </div>
+    ),
+    example: <FormField label="Name" />,
+    exampleCode: (
+      <CodeBlock
+        class="mt-4"
+        language="tsx"
+        code={`<FormField label="Name" value={value} inputRest={{ onInput: onInput }} />`}
+      />
+    ),
+  }, {
     title: "Helper text",
     description: (
       <div>

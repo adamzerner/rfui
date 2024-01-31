@@ -563,6 +563,40 @@ export default () => {
 </Card>`}
       />
     ),
+  }, {
+    title: "As link",
+    description: (
+      <div>
+        To make the <InlineCode>Card</InlineCode> act as a link, wrap it in{" "}
+        <Link href="/atoms/link">
+          <InlineCode>Link</InlineCode>
+        </Link>. You'll probably also want to add{" "}
+        <InlineCode>pointer-events: none;</InlineCode> to{" "}
+        <InlineCode>Card</InlineCode>.
+      </div>
+    ),
+    example: (
+      <Link href="https://example.com">
+        <Card class="pointer-events-none">
+          <CardBody>
+            Click to visit example.com
+          </CardBody>
+        </Card>
+      </Link>
+    ),
+    exampleCode: (
+      <CodeBlock
+        class="mt-4"
+        language="tsx"
+        code={`<Link href="https://example.com">
+  <Card class="pointer-events-none">
+    <CardBody>
+      Click to visit example.com
+    </CardBody>
+  </Card>
+</Link>`}
+      />
+    ),
   }];
   const props = [{
     name: "rounded",

@@ -43,6 +43,71 @@ export default () => {
       />
     ),
   }, {
+    title: "Uncontrolled",
+    description: (
+      <div>
+        The approach below leads to <InlineCode>name</InlineCode>{" "}
+        being passed to <InlineCode>{`<input type="checkbox" />`}</InlineCode>.
+      </div>
+    ),
+    example: (
+      <CheckboxCardGroup>
+        <CheckboxCardGroupItem checkboxRest={{ name: "one" }}>
+          One
+        </CheckboxCardGroupItem>
+        <CheckboxCardGroupItem checkboxRest={{ name: "two" }}>
+          Two
+        </CheckboxCardGroupItem>
+        <CheckboxCardGroupItem checkboxRest={{ name: "three" }}>
+          Three
+        </CheckboxCardGroupItem>
+      </CheckboxCardGroup>
+    ),
+    exampleCode: (
+      <CodeBlock
+        class="mt-4"
+        language="tsx"
+        code={`<CheckboxCardGroup>
+  <CheckboxCardGroupItem checkboxRest={{ name: "one" }}>
+    One
+  </CheckboxCardGroupItem>
+  <CheckboxCardGroupItem checkboxRest={{ name: "two" }}>
+    Two
+  </CheckboxCardGroupItem>
+  <CheckboxCardGroupItem checkboxRest={{ name: "three" }}>
+    Three
+  </CheckboxCardGroupItem>
+</CheckboxCardGroup>`}
+      />
+    ),
+  }, {
+    title: "Controlled",
+    description: (
+      <div>
+        Pass <InlineCode>onChange</InlineCode> to{" "}
+        <InlineCode>CheckboxCardGroupItem</InlineCode>. It has a type of{" "}
+        <InlineCode>{`(newValue: boolean) => void`}</InlineCode>.
+      </div>
+    ),
+    example: (
+      <CheckboxCardGroup>
+        <CheckboxCardGroupItem>One</CheckboxCardGroupItem>
+        <CheckboxCardGroupItem>Two</CheckboxCardGroupItem>
+        <CheckboxCardGroupItem>Three</CheckboxCardGroupItem>
+      </CheckboxCardGroup>
+    ),
+    exampleCode: (
+      <CodeBlock
+        class="mt-4"
+        language="tsx"
+        code={`<CheckboxCardGroup>
+  <CheckboxCardGroupItem onChange={() => {...}}>One</CheckboxCardGroupItem>
+  <CheckboxCardGroupItem onChange={() => {...}}>Two</CheckboxCardGroupItem>
+  <CheckboxCardGroupItem onChange={() => {...}}>Three</CheckboxCardGroupItem>
+</CheckboxCardGroup>`}
+      />
+    ),
+  }, {
     title: "Padding",
     description: (
       <div>

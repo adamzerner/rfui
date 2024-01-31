@@ -42,6 +42,28 @@ export default () => {
       />
     ),
   }, {
+    title: "Controlled",
+    description: (
+      <div>
+        See{" "}
+        <Link href="https://preactjs.com/guide/v10/forms#controlled--uncontrolled-components">
+          Controlled & Uncontrolled Components
+        </Link>. Passing <InlineCode>value</InlineCode> and{" "}
+        <InlineCode>onInput</InlineCode> work because of{" "}
+        <Link href="/rest-parameters">
+          <InlineCode>...rest</InlineCode>
+        </Link>.
+      </div>
+    ),
+    example: <PasswordInput />,
+    exampleCode: (
+      <CodeBlock
+        class="mt-4"
+        language="tsx"
+        code={`<PasswordInput value={value} onInput={onInput} />`}
+      />
+    ),
+  }, {
     title: "Default visible",
     description: (
       <div>

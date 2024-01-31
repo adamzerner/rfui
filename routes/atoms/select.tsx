@@ -51,6 +51,42 @@ export default () => {
       />
     ),
   }, {
+    title: "Controlled",
+    description: (
+      <div>
+        See{" "}
+        <Link href="https://preactjs.com/guide/v10/forms#controlled--uncontrolled-components">
+          Controlled & Uncontrolled Components
+        </Link>{" "}
+        and{" "}
+        <Link href="https://preactjs.com/guide/v10/forms#select-input">
+          Select Input
+        </Link>. Passing <InlineCode>checked</InlineCode> and{" "}
+        <InlineCode>onChange</InlineCode> work because of{" "}
+        <Link href="/rest-parameters">
+          <InlineCode>...rest</InlineCode>
+        </Link>.
+      </div>
+    ),
+    example: (
+      <Select>
+        <option value="foo">foo</option>
+        <option value="bar">bar</option>
+        <option value="baz">baz</option>
+      </Select>
+    ),
+    exampleCode: (
+      <CodeBlock
+        class="mt-4"
+        language="tsx"
+        code={`<Select value={value} onChange={onChange}>
+  <option value="foo">foo</option>
+  <option value="bar">bar</option>
+  <option value="baz">baz</option>
+</Select>`}
+      />
+    ),
+  }, {
     title: "Size",
     description: (
       <div>

@@ -38,6 +38,43 @@ export default () => {
       />
     ),
   }, {
+    title: "Uncontrolled",
+    description: (
+      <div>
+        Adding <InlineCode>name="number-of-items"</InlineCode> will lead to an
+        {" "}
+        <InlineCode>{`<input type="hidden" name="number-of-items"`}</InlineCode>
+        {" "}
+        being present with a <InlineCode>value</InlineCode>{" "}
+        set to the value of the <InlineCode>Stepper</InlineCode>.
+      </div>
+    ),
+    example: <Stepper name="number-of-items" />,
+    exampleCode: (
+      <CodeBlock
+        class="mt-4"
+        language="tsx"
+        code={`<Stepper name="number-of-items" />`}
+      />
+    ),
+  }, {
+    title: "Controlled",
+    description: (
+      <div>
+        Use the <InlineCode>onChange</InlineCode> function. It has a type of
+        {" "}
+        <InlineCode>{`(newValue: number) => void`}</InlineCode>.
+      </div>
+    ),
+    example: <Stepper />,
+    exampleCode: (
+      <CodeBlock
+        class="mt-4"
+        language="tsx"
+        code={`<Stepper onChange={onChange} />`}
+      />
+    ),
+  }, {
     title: "Size",
     description: (
       <div>

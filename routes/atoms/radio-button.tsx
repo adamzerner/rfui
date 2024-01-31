@@ -37,6 +37,32 @@ export default () => {
       <CodeBlock class="mt-4" language="tsx" code={`<RadioButton />`} />
     ),
   }, {
+    title: "Controlled",
+    description: (
+      <div>
+        See{" "}
+        <Link href="https://preactjs.com/guide/v10/forms#controlled--uncontrolled-components">
+          Controlled & Uncontrolled Components
+        </Link>{" "}
+        and{" "}
+        <Link href="https://preactjs.com/guide/v10/forms#checkboxes--radio-buttons">
+          Checkboxes & Radio Buttons
+        </Link>. Passing <InlineCode>checked</InlineCode> and{" "}
+        <InlineCode>onClick</InlineCode> work because of{" "}
+        <Link href="/rest-parameters">
+          <InlineCode>...rest</InlineCode>
+        </Link>.
+      </div>
+    ),
+    example: <RadioButton />,
+    exampleCode: (
+      <CodeBlock
+        class="mt-4"
+        language="tsx"
+        code={`<RadioButton checked={checked} onClick={onClick} />`}
+      />
+    ),
+  }, {
     title: "Size",
     description: (
       <div>

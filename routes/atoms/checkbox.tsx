@@ -25,6 +25,32 @@ export default () => {
       <CodeBlock class="mt-4" language="tsx" code={`<Checkbox />`} />
     ),
   }, {
+    title: "Controlled",
+    description: (
+      <div>
+        See{" "}
+        <Link href="https://preactjs.com/guide/v10/forms#controlled--uncontrolled-components">
+          Controlled & Uncontrolled Components
+        </Link>{" "}
+        and{" "}
+        <Link href="https://preactjs.com/guide/v10/forms#checkbox-example">
+          Checkbox Example
+        </Link>. Passing <InlineCode>checked</InlineCode> and{" "}
+        <InlineCode>onClick</InlineCode> work because of{" "}
+        <Link href="/rest-parameters">
+          <InlineCode>...rest</InlineCode>
+        </Link>.
+      </div>
+    ),
+    example: <Checkbox />,
+    exampleCode: (
+      <CodeBlock
+        class="mt-4"
+        language="tsx"
+        code={`<Checkbox checked={checked} onClick={onClick} />`}
+      />
+    ),
+  }, {
     title: "Size",
     description: (
       <div>

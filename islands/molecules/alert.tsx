@@ -4,6 +4,7 @@ import type { ComponentChild, JSX } from "preact";
 import { useState } from "preact/hooks";
 import { Flex } from "../../components/helpers/flex.tsx";
 import { CloseIcon } from "../../components/icons/close-icon.tsx";
+import { getChildren } from "../../utilities/get-children.ts";
 
 export type AlertType = {
   variant?: "success" | "info" | "warning" | "danger" | "neutral";
@@ -107,7 +108,9 @@ export const Alert = (
   );
 };
 
-const getComponents = (children: any) => {
+const getComponents = (_children: any) => {
+  const children = getChildren(_children);
+
   if (!Array.isArray(children)) {
     return { alertBody: children };
   }

@@ -1,8 +1,11 @@
+import { getChildren } from "../../../utilities/get-children.ts";
 import { NavbarLeft } from "./navbar-left.tsx";
 import { NavbarRight } from "./navbar-right.tsx";
 
 // deno-lint-ignore no-explicit-any
-export const getComponents = (children: any) => {
+export const getComponents = (_children: any) => {
+  const children = getChildren(_children);
+
   if (!Array.isArray(children)) {
     const numItems = Array.isArray(children.props.children)
       ? children.props.children.length

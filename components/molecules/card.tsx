@@ -1,4 +1,5 @@
 import type { ComponentChild, JSX } from "preact";
+import { getChildren } from "../../utilities/get-children.ts";
 
 export type CardType = {
   rounded?: "square" | "sm" | "lg";
@@ -98,7 +99,9 @@ export const Card = (
 };
 
 // deno-lint-ignore no-explicit-any
-const getComponents = (children: any) => {
+const getComponents = (_children: any) => {
+  const children = getChildren(_children);
+
   if (!Array.isArray(children)) {
     return { cardBody: children, isArray: false };
   }

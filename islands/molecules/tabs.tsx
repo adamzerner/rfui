@@ -1,5 +1,8 @@
 // deno-lint-ignore-file no-explicit-any
 import type { ComponentChild, JSX } from "preact";
+import { useState } from "preact/hooks";
+import { Flex } from "../../components/helpers/flex.tsx";
+import { getChildren } from "../../utilities/get-children.ts";
 
 export type TabsType = {
   fullWidth?: boolean;
@@ -21,36 +24,31 @@ export type TabsType = {
 export const Tabs = (
   { fullWidth = false, children, ...rest }: TabsType,
 ) => {
-  console.log(children);
+  const tabNames = getTabNames(children);
+  const [activeTab, setActiveTab] = useState<string>(tabNames[0]);
+  const activeTabSection = getActiveTabSection(children, activeTab);
 
-  return <div>Tabs</div>;
-  // const tabNames = getTabNames(children);
-  // const [activeTab, setActiveTab] = useState<string>(tabNames[0]);
-  // const activeTabSection = getActiveTabSection(children, activeTab);
-
-  // return (
-  //   <div {...rest}>
-  //     <Flex class="border-b border-b-neutral-500">
-  //       {tabNames.map((tabName) => (
-  //         <Tab
-  //           tabName={tabName}
-  //           activeTab={activeTab}
-  //           onClick={() => {
-  //             setActiveTab(tabName);
-  //           }}
-  //           fullWidth={fullWidth}
-  //         />
-  //       ))}
-  //     </Flex>
-  //     <div class="mt-6">{activeTabSection}</div>
-  //   </div>
-  // );
+  return (
+    <div {...rest}>
+      <Flex class="border-b border-b-neutral-500">
+        {tabNames.map((tabName) => (
+          <Tab
+            tabName={tabName}
+            activeTab={activeTab}
+            onClick={() => {
+              setActiveTab(tabName);
+            }}
+            fullWidth={fullWidth}
+          />
+        ))}
+      </Flex>
+      <div class="mt-6">{activeTabSection}</div>
+    </div>
+  );
 };
 
-const getTabNames = (props: any) => {
-  console.log("getTabNames");
-  console.log(props);
-  const children = props.props ? props.props.children : props;
+const getTabNames = (_children: any) => {
+  const children = getChildren(_children);
 
   if (!Array.isArray(children)) {
     return [children.props.tabName];
@@ -59,8 +57,8 @@ const getTabNames = (props: any) => {
   return children.map((child) => child.props.tabName);
 };
 
-const getActiveTabSection = (props: any, tabName: string) => {
-  const children = props.props.children;
+const getActiveTabSection = (_children: any, tabName: string) => {
+  const children = getChildren(_children);
 
   if (!Array.isArray(children)) {
     return children;

@@ -25,8 +25,8 @@ To create a new version of this library:
 
 - Add version-specific CSS file in `static` directory
 - Update `utilities/get-css-path.ts`
-- Update docs (cmd+f for eg. v0.1.9, 0-1-9, v0.1.10 and 0-1-10 and change it to
-  the most recent version)
+- Update docs (cmd+f for eg. v0.1.10, 0-1-10, v0.1.11 and 0-1-11 and change it
+  to the most recent version)
 - Use https://github.com/adamzerner/rfui/releases/new
 - Update CHANGELOG.md
 - Follow [semantic versioning](https://semver.org/)

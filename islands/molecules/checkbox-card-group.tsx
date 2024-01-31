@@ -83,7 +83,7 @@ export const CheckboxCardGroupItem = (
   { defaultIsChecked = false, onChange, checkboxRest, children }:
     CheckboxCardGroupItemType,
 ) => {
-  const [isChecked, setIsChecked] = useState<boolean>(defaultIsChecked);
+  const [isChecked, setIsChecked] = useState(defaultIsChecked);
   const handleClick = () => {
     if (onChange) {
       onChange(!isChecked);

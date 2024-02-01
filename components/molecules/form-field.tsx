@@ -1,6 +1,8 @@
 import type { JSX } from "preact";
 import { PasswordInput } from "../../islands/molecules/password-input.tsx";
+import { Checkbox } from "../atoms/checkbox.tsx";
 import { Input } from "../atoms/input.tsx";
+import { RadioButton } from "../atoms/radio-button.tsx";
 import { Flex } from "../helpers/flex.tsx";
 import { XCircleIcon } from "../icons/x-circle-icon.tsx";
 
@@ -87,7 +89,33 @@ export const FormField = (
           {errorText}
         </Flex>
       )}
-      {type === "rfui-password-input"
+      {type === "checkbox"
+        ? (
+          <Checkbox
+            id={id}
+            name={name}
+            value={value}
+            required={required}
+            size={size}
+            invalid={invalid}
+            class={`mt-1 ${inputRest?.class}`}
+            {...inputRest}
+          />
+        )
+        : type === "radio"
+        ? (
+          <RadioButton
+            id={id}
+            name={name}
+            value={value}
+            required={required}
+            size={size}
+            invalid={invalid}
+            class={`mt-1 ${inputRest?.class}`}
+            {...inputRest}
+          />
+        )
+        : type === "rfui-password-input"
         ? (
           <PasswordInput
             id={id}

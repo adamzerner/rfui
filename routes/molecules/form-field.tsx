@@ -357,6 +357,16 @@ export default () => {
           <InlineCode>type</InlineCode> gets passed to{" "}
           <Link href="/atoms/input">
             <InlineCode>Input</InlineCode>
+          </Link>. However, there are three minor exceptions:{" "}
+          <Link href="#checkbox">
+            <InlineCode>"checkbox"</InlineCode>
+          </Link>,{" "}
+          <Link href="#radio-button">
+            <InlineCode>"radio"</InlineCode>
+          </Link>{" "}
+          and{" "}
+          <Link href="#passwordinput">
+            <InlineCode>"rfui-password-input"</InlineCode>
           </Link>.
         </div>
         <div>
@@ -407,6 +417,48 @@ export default () => {
   <FormField label="Mood" type="range" />
   <FormField label="Favorite color" type="color" />
 </Stack>`}
+      />
+    ),
+  }, {
+    title: "Checkbox",
+    description: (
+      <div>
+        If you pass <InlineCode>type="checkbox"</InlineCode> it will use RFUI's
+        {" "}
+        <Link href="/atoms/checkbox">
+          <InlineCode>Checkbox</InlineCode>
+        </Link>{" "}
+        component instead of doing{" "}
+        <InlineCode>{`<Input type="checkbox" />`}</InlineCode>.
+      </div>
+    ),
+    example: <FormField label="Agreed" type="checkbox" />,
+    exampleCode: (
+      <CodeBlock
+        class="mt-4"
+        language="tsx"
+        code={`<FormField label="Agreed" type="checkbox" />`}
+      />
+    ),
+  }, {
+    title: "Radio button",
+    description: (
+      <div>
+        If you pass <InlineCode>type="radio"</InlineCode> it will use RFUI's
+        {" "}
+        <Link href="/atoms/radio-button">
+          <InlineCode>RadioButton</InlineCode>
+        </Link>{" "}
+        component instead of doing{" "}
+        <InlineCode>{`<Input type="checkbox" />`}</InlineCode>.
+      </div>
+    ),
+    example: <FormField label="Free" type="radio" />,
+    exampleCode: (
+      <CodeBlock
+        class="mt-4"
+        language="tsx"
+        code={`<FormField label="Free" type="radio" />`}
       />
     ),
   }, {

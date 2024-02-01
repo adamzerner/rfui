@@ -24,7 +24,6 @@ export type TabsType = {
 export const Tabs = (
   { fullWidth = false, children, ...rest }: TabsType,
 ) => {
-  console.log("Debugging `Tabs`...");
   const tabNames = getTabNames(children);
   const [activeTab, setActiveTab] = useState<string>(tabNames[0]);
   const activeTabSection = getActiveTabSection(children, activeTab);
@@ -49,7 +48,6 @@ export const Tabs = (
 };
 
 const getTabNames = (_children: any) => {
-  console.log(_children);
   const children = getChildren(_children);
 
   if (!Array.isArray(children)) {

@@ -30,6 +30,7 @@ To create a new version of this library:
 - Use https://github.com/adamzerner/rfui/releases/new
 - Update CHANGELOG.md
 - Follow [semantic versioning](https://semver.org/)
+- Update `rfui-react`
 
 ## Generating the Tailwind CSS file
 

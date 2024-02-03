@@ -84,11 +84,27 @@ export default () => {
           language="tsx"
           code={`<link rel="stylesheet" href={getStylesheetUrl()} />`}
         />
-        <p>right before the:</p>
+        <p>right after:</p>
         <CodeBlock
           language="tsx"
           code={`<link rel="stylesheet" href="/styles.css" />`}
         />
+        <p>
+          Then if you have any custom styles that you want to take precedence
+          over RFUI's styles, you can define your own{" "}
+          <InlineCode>app.css</InlineCode>{" "}
+          stylesheet in the static directory and include:
+        </p>
+        <CodeBlock
+          language="tsx"
+          code={`<link rel="stylesheet" href="/app.css" />`}
+        />
+        <p>
+          After the other two <InlineCode>link</InlineCode> tags. See{" "}
+          <Link href="https://discord.com/channels/684898665143206084/1202816377677680730">
+            this Discord conversation
+          </Link>.
+        </p>
         <p>
           See the <Link href="/stylesheet">Stylesheet</Link>{" "}
           page for more information.

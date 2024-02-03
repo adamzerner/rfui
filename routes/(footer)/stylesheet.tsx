@@ -2,6 +2,7 @@ import { Checkbox } from "@/components/atoms/checkbox.tsx";
 import { CodeBlock } from "@/components/atoms/code-block.tsx";
 import { H1 } from "@/components/atoms/h1.tsx";
 import { InlineCode } from "@/components/atoms/inline-code.tsx";
+import { Link } from "@/components/atoms/link.tsx";
 import { Text } from "@/components/atoms/text.tsx";
 import { Card } from "@/components/molecules/card.tsx";
 
@@ -67,6 +68,23 @@ export default () => {
           <InlineCode>https://rfui.deno.dev/rfui-v0-1-12.css</InlineCode>{" "}
           and you will have the correct CSS file without needing to make any
           changes.
+        </p>
+        <p>
+          Be sure to think about which CSS rules take{" "}
+          <Link href="https://developer.mozilla.org/en-US/docs/Web/CSS/Cascade">
+            precedence
+          </Link>{" "}
+          over other CSS rules. Ie. if you have custom styles of your own, do
+          you want them to take precedence over RFUI's styles? If so you'll
+          probably want to place the <InlineCode>{`<link>`}</InlineCode>{" "}
+          tag underneath{" "}
+          <InlineCode>
+            {`<link rel="stylesheet" href={getStylesheetUrl()} />`}
+          </InlineCode>{" "}
+          and give your rules the appropriate{" "}
+          <Link href="https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity">
+            specificity
+          </Link>.
         </p>
       </Text>
     </div>

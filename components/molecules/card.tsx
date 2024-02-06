@@ -1,5 +1,5 @@
-import type { ComponentChild, JSX } from "preact";
-import { getChildren } from "../../utilities/get-children.ts";
+// deno-lint-ignore-file no-explicit-any
+import { ComponentChild, JSX, toChildArray } from "preact";
 
 export type CardType = {
   rounded?: "square" | "sm" | "lg";
@@ -98,24 +98,23 @@ export const Card = (
   );
 };
 
-// deno-lint-ignore no-explicit-any
-const getComponents = (_children: any) => {
-  const children = getChildren(_children);
+const getComponents = (children: ComponentChild) => {
+  const childrenArray = toChildArray(children);
 
-  if (!Array.isArray(children)) {
+  if (childrenArray.length === 1) {
     return { cardBody: children, isArray: false };
   }
 
-  const cardHeader = children.find(
-    (child) => child && child.type && child.type.name === CardHeader.name,
+  const cardHeader = childrenArray.find(
+    (child: any) => child && child.type && child.type.name === CardHeader.name,
   );
 
-  const cardBody = children.find(
-    (child) => child && child.type && child.type.name === CardBody.name,
+  const cardBody = childrenArray.find(
+    (child: any) => child && child.type && child.type.name === CardBody.name,
   );
 
-  const cardFooter = children.find(
-    (child) => child && child.type && child.type.name === CardFooter.name,
+  const cardFooter = childrenArray.find(
+    (child: any) => child && child.type && child.type.name === CardFooter.name,
   );
 
   if (!cardBody) {

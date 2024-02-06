@@ -1,7 +1,8 @@
 // deno-lint-ignore-file no-explicit-any
-import { ComponentChild, JSX, toChildArray } from "preact";
+import type { ComponentChild, JSX } from "preact";
 import { useState } from "preact/hooks";
 import { Flex } from "../../components/helpers/flex.tsx";
+import { getChildren } from "../../utilities/get-children.ts";
 
 export type TabsType = {
   fullWidth?: boolean;
@@ -46,24 +47,24 @@ export const Tabs = (
   );
 };
 
-const getTabNames = (children: ComponentChild) => {
-  const childrenArray: any[] = toChildArray(children);
+const getTabNames = (_children: any) => {
+  const children = getChildren(_children);
 
-  if (childrenArray.length === 1) {
-    return [childrenArray[0].props.tabName];
+  if (!Array.isArray(children)) {
+    return [children.props.tabName];
   }
 
-  return childrenArray.map((child) => child.props.tabName);
+  return children.map((child) => child.props.tabName);
 };
 
-const getActiveTabSection = (children: ComponentChild, tabName: string) => {
-  const childrenArray: any[] = toChildArray(children);
+const getActiveTabSection = (_children: any, tabName: string) => {
+  const children = getChildren(_children);
 
-  if (childrenArray.length === 1) {
+  if (!Array.isArray(children)) {
     return children;
   }
 
-  return childrenArray.find((child) => child.props.tabName === tabName);
+  return children.find((child) => child.props.tabName === tabName);
 };
 
 const Tab = (

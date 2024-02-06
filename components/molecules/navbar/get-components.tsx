@@ -1,23 +1,25 @@
-// deno-lint-ignore-file no-explicit-any
-import { ComponentChild, toChildArray } from "preact";
+import { getChildren } from "../../../utilities/get-children.ts";
 import { NavbarLeft } from "./navbar-left.tsx";
 import { NavbarRight } from "./navbar-right.tsx";
 
-export const getComponents = (children: ComponentChild) => {
-  const childrenArray = toChildArray(children);
+// deno-lint-ignore no-explicit-any
+export const getComponents = (_children: any) => {
+  const children = getChildren(_children);
 
-  if (childrenArray.length === 1) {
-    const numItems = toChildArray(childrenArray[0]).length;
+  if (!Array.isArray(children)) {
+    const numItems = Array.isArray(children.props.children)
+      ? children.props.children.length
+      : 1;
 
     return { navbarLeft: children, numItems };
   }
 
-  const navbarLeft = childrenArray.find(
-    (child: any) => child && child.type && child.type.name === NavbarLeft.name,
+  const navbarLeft = children.find(
+    (child) => child && child.type && child.type.name === NavbarLeft.name,
   );
 
-  const navbarRight = childrenArray.find(
-    (child: any) => child && child.type && child.type.name === NavbarRight.name,
+  const navbarRight = children.find(
+    (child) => child && child.type && child.type.name === NavbarRight.name,
   );
 
   if (!navbarLeft && !navbarRight) {
@@ -26,8 +28,16 @@ export const getComponents = (children: ComponentChild) => {
     );
   }
 
-  const numLeftItems = toChildArray(navbarLeft).length;
-  const numRightItems = toChildArray(navbarRight).length;
+  const numLeftItems = navbarLeft
+    ? Array.isArray(navbarLeft.props.children)
+      ? navbarLeft.props.children.length
+      : 1
+    : 0;
+  const numRightItems = navbarRight
+    ? Array.isArray(navbarRight.props.children)
+      ? navbarRight.props.children.length
+      : 1
+    : 0;
   const numItems = numLeftItems + numRightItems;
 
   return { navbarLeft, navbarRight, numItems };

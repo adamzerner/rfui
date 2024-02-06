@@ -1,10 +1,10 @@
 // Something about this being an island is making the types weird.
 // deno-lint-ignore-file no-explicit-any
 import type { ComponentChild, JSX } from "preact";
-import { toChildArray } from "preact";
 import { useState } from "preact/hooks";
 import { Flex } from "../../components/helpers/flex.tsx";
 import { CloseIcon } from "../../components/icons/close-icon.tsx";
+import { getChildren } from "../../utilities/get-children.ts";
 
 export type AlertType = {
   variant?: "success" | "info" | "warning" | "danger" | "neutral";
@@ -108,18 +108,18 @@ export const Alert = (
   );
 };
 
-const getComponents = (children: ComponentChild) => {
-  const childrenArray = toChildArray(children);
+const getComponents = (_children: any) => {
+  const children = getChildren(_children);
 
-  if (childrenArray.length === 1) {
+  if (!Array.isArray(children)) {
     return { alertBody: children };
   }
 
-  const alertHeader = childrenArray.find(
+  const alertHeader = children.find(
     (child: any) => child && child.type && child.type.name === AlertHeader.name,
   );
 
-  const alertBody = childrenArray.find(
+  const alertBody = children.find(
     (child: any) => child && child.type && child.type.name === AlertBody.name,
   );
 

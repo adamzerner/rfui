@@ -20,7 +20,8 @@ export default () => {
           </Link>{" "}
           and{" "}
           <Link href="https://chakra-ui.com/">Chakra UI</Link>, RFUI is a
-          component library for Preact apps. It lets you do stuff like this:
+          component library for React and Preact apps. It lets you do stuff like
+          this:
         </p>
         <CodeBlock
           language="tsx"

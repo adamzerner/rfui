@@ -40,22 +40,30 @@ export default () => {
         </Alert>
       </Text>
 
-      <H2 inPageLink="set-up-import-map">{"1) Set up import map"}</H2>
+      <H2 inPageLink="set-up-package">{"1) Set up package"}</H2>
       <Text>
         <p>
-          The RFUI library is hosted as a{" "}
-          <Link href="https://deno.land/x">Deno Third Party Module</Link>.{" "}
-          <Link href="https://deno.land/x/rfui">This</Link>{" "}
-          is the corresponding page. It is only usable in Deno projects.
+          There are two versions of the RFUI library: a{" "}
+          <Link href="https://www.npmjs.com/package/@adamzerner/rfui-react">
+            React version
+          </Link>{" "}
+          that is hosted on NPM and a{" "}
+          <Link href="https://deno.land/x/rfui">Preact version</Link>{" "}
+          that is hosted as a{" "}
+          <Link href="https://deno.land/x">Deno Third Party Module</Link>.
         </p>
+        <p>If you want the React version:</p>
+        <CodeBlock
+          code={`npm install @adamzerner/rfui-react`}
+        />
         <p>
-          Using{" "}
+          If you are using Deno and want the Preact version, you'll probably
+          want to use{"  "}
           <Link href="https://docs.deno.com/runtime/manual/basics/import_maps">
             Import Maps
           </Link>{" "}
-          is a practice you'll probably want to follow in your Deno app. Add the
-          following to the <InlineCode>"imports"</InlineCode> object in{" "}
-          <InlineCode>deno.json</InlineCode>:
+          . Add the following to the <InlineCode>"imports"</InlineCode>{" "}
+          object in <InlineCode>deno.json</InlineCode>:
         </p>
         <CodeBlock
           language="ts"

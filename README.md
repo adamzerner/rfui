@@ -2,10 +2,8 @@
 
 Webite: https://rfui.deno.dev/
 
-This is a component library that is currently intended to be used on projects
-using Deno's web framework [Fresh](https://fresh.deno.dev/) and is built
-according to the following
-[philosophical principles](https://rfui.deno.dev/philosophy).
+This is a component library for React and Preact apps and is built according to
+the following [philosophical principles](https://rfui.deno.dev/philosophy).
 
 1. Opinionated
 2. Scale down
@@ -24,7 +22,7 @@ according to the following
 To create a new version of this library:
 
 - Add version-specific CSS file in `static` directory
-- Update `utilities/get-css-path.ts`
+- Update `utilities/get-css-path.ts` here and in `rfui-react`
 - Update docs (cmd+f for eg. v0.1.11, 0-1-11, v0.1.12 and 0-1-12 and change it
   to the most recent version)
 - Use https://github.com/adamzerner/rfui/releases/new

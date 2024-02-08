@@ -64,6 +64,26 @@ export default () => {
         </p>
       </Text>
 
+      <H2 inPageLink="jsx">
+        Why am I seeing stuff like <InlineCode>JSX.HTMLAttributes</InlineCode>
+        {" "}
+        in the docs?
+      </H2>
+      <Text>
+        <p>
+          <InlineCode>JSX</InlineCode>{" "}
+          comes from Preact. If you are using React, the types will be slightly
+          different. Hovering over things in your text editor will provide the
+          actual types.
+        </p>
+        <p>
+          There are a few other places in the docs where things will be
+          different if you're using React instead of Preact, but they should be
+          pretty easy to figure out when you hover over things in your text
+          editor.
+        </p>
+      </Text>
+
       <H2 inPageLink="customize">
         Can I customize things like the color or spacing palattes?
       </H2>

@@ -80,7 +80,7 @@ export default () => {
           language="tsx"
           code={`import { getStylesheetUrl } from "rfui";
 
-<link  rel="stylesheet" href={getStylesheetUrl()} />`}
+<link rel="stylesheet" href={getStylesheetUrl()} />`}
         />
         <p>
           <InlineCode>getStylesheetUrl</InlineCode> will return eg.{" "}

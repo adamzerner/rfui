@@ -12,64 +12,6 @@ export default () => {
     <div class="max-w-prose text-lg">
       <H1>FAQ</H1>
 
-      <H2 inPageLink="npm">
-        Where is RFUI on NPM?
-      </H2>
-      <Text>
-        <p>
-          I don't have it on NPM yet, sorry.
-        </p>
-        <p>
-          I do have plans to add it though. See{" "}
-          <Link href="https://github.com/adamzerner/rfui/issues/1">
-            this GitHub issue
-          </Link>.
-        </p>
-      </Text>
-
-      <H2 inPageLink="deno">
-        Well then how do I use RFUI in a non-Deno project?
-      </H2>
-      <Text>
-        <p>
-          Right now you can't. Sorry. But once I{" "}
-          <Link href="https://github.com/adamzerner/rfui/issues/1">
-            figure out
-          </Link>{" "}
-          how to publish to NPM you will be able to.
-        </p>
-      </Text>
-
-      <H2 inPageLink="react">
-        How do I use RFUI with React instead of Preact?
-      </H2>
-      <Text>
-        <p>
-          Right now you can't. Sorry.
-        </p>
-        <p>
-          I do have plans to support React though. See{" "}
-          <Link href="https://github.com/adamzerner/rfui/issues/9">
-            this GitHub issue
-          </Link>.
-        </p>
-      </Text>
-
-      <H2 inPageLink="fresh">
-        So basically, my options are to use RFUI for Fresh projects?
-      </H2>
-      <Text>
-        <p>
-          Sorta. There are{" "}
-          <Link href="https://deno.com/blog/web-frameworks-on-deno">
-            other options
-          </Link>{" "}
-          for building Preact + Deno apps, but I think that{" "}
-          <Link href="https://fresh.deno.dev/">Fresh</Link>{" "}
-          is the most mature and popular one.
-        </p>
-      </Text>
-
       <H2 inPageLink="tailwind">
         What's with this <InlineCode>class="gap-5"</InlineCode> stuff?
       </H2>
@@ -105,6 +47,40 @@ export default () => {
           <Link href="https://atomicdesign.bradfrost.com/chapter-2/">
             Atomic Design Methodology
           </Link>.
+        </p>
+      </Text>
+
+      <H2 inPageLink="rfui-package">
+        Are you sure I should be importing from <InlineCode>"rfui"</InlineCode>?
+      </H2>
+      <Text>
+        <p>
+          No. If you are using the React version of RFUI that is hosted on NPM,
+          you should be importing from{" "}
+          <InlineCode>"@adamzerner/rfui-react"</InlineCode> instead. See{" "}
+          <Link href="/getting-started#set-up-package">
+            step one of "Getting started"
+          </Link>.
+        </p>
+      </Text>
+
+      <H2 inPageLink="jsx">
+        Why am I seeing stuff like <InlineCode>JSX.HTMLAttributes</InlineCode>
+        {" "}
+        in the docs?
+      </H2>
+      <Text>
+        <p>
+          <InlineCode>JSX</InlineCode>{" "}
+          comes from Preact. If you are using React, the types will be slightly
+          different. Hovering over things in your text editor will provide the
+          actual types.
+        </p>
+        <p>
+          There are a few other places in the docs where things will be
+          different if you're using React instead of Preact, but they should be
+          pretty easy to figure out when you hover over things in your text
+          editor.
         </p>
       </Text>
 

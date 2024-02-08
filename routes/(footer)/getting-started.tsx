@@ -61,8 +61,8 @@ export default () => {
           want to use{"  "}
           <Link href="https://docs.deno.com/runtime/manual/basics/import_maps">
             Import Maps
-          </Link>{" "}
-          . Add the following to the <InlineCode>"imports"</InlineCode>{" "}
+          </Link>. Add the following to the <InlineCode>"imports"</InlineCode>
+          {" "}
           object in <InlineCode>deno.json</InlineCode>:
         </p>
         <CodeBlock

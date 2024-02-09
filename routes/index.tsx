@@ -287,7 +287,30 @@ export default () => {
   };
 
   return (
-    <Stack class="gap-10 mt-9">
+    <Stack class="gap-10">
+      <header class="max-w-prose">
+        <H1 class="text-6xl">
+          RFUI
+        </H1>
+        <H2 class="text-2xl">
+          A lightweight, DX-focused, footgun-free component library for React
+          and Preact apps.
+        </H2>
+        <Text>
+          <p>
+            RFUI is opinionated. It doesn't try to please everyone, and it
+            doesn't try to do too much. It prioritizes simplicity, developer
+            experience, pits of success, avoiding dependencies, and{" "}
+            <InlineCode>#useThePlatform</InlineCode>.
+          </p>
+          <p>
+            Interested? Check out the <Link href="/about">About</Link>,{" "}
+            <Link href="/philosophy">Philosophy</Link> and{" "}
+            <Link href="/target-audience">Target audience</Link>{" "}
+            pages for more information.
+          </p>
+        </Text>
+      </header>
       <Stack class="gap-7">
         <Category>Atoms</Category>
         <Flex class="flex-wrap gap-6">

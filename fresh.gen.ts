@@ -55,7 +55,6 @@ import * as $tutorials_preact from "./routes/tutorials/preact.tsx";
 import * as $tutorials_react from "./routes/tutorials/react.tsx";
 import * as $tutorials_remix from "./routes/tutorials/remix.tsx";
 import * as $docs_site_component_docs_page_modal_example from "./islands/docs-site/component-docs-page/modal-example.tsx";
-import * as $docs_site_welcome_message from "./islands/docs-site/welcome-message.tsx";
 import * as $molecules_alert_1 from "./islands/molecules/alert.tsx";
 import * as $molecules_checkbox_card_group_1 from "./islands/molecules/checkbox-card-group.tsx";
 import * as $molecules_modal_1 from "./islands/molecules/modal.tsx";
@@ -125,7 +124,6 @@ const manifest = {
   islands: {
     "./islands/docs-site/component-docs-page/modal-example.tsx":
       $docs_site_component_docs_page_modal_example,
-    "./islands/docs-site/welcome-message.tsx": $docs_site_welcome_message,
     "./islands/molecules/alert.tsx": $molecules_alert_1,
     "./islands/molecules/checkbox-card-group.tsx":
       $molecules_checkbox_card_group_1,

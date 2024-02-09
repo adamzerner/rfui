@@ -307,7 +307,11 @@ export default () => {
             Interested? Check out the <Link href="/about">About</Link>,{" "}
             <Link href="/philosophy">Philosophy</Link> and{" "}
             <Link href="/target-audience">Target audience</Link>{" "}
-            pages for more information.
+            pages for more information. Alternatively, mess around in the{" "}
+            <Link href="https://stackblitz.com/edit/react-tmwfhl?file=src%2FApp.js">
+              playground
+            </Link>{" "}
+            or just <Link href="/getting-started">get started</Link>.
           </p>
         </Text>
       </header>

@@ -13,6 +13,9 @@ export const Footer = () => {
         <FooterItem href="/about">About</FooterItem>
         <FooterItem href="/philosophy">Philosophy</FooterItem>
         <FooterItem href="/target-audience">Target audience</FooterItem>
+        <FooterItem href="https://stackblitz.com/edit/react-tmwfhl?file=src%2FApp.js">
+          Playground
+        </FooterItem>
         <FooterItem href="https://github.com/users/adamzerner/projects/2">
           Roadmap
         </FooterItem>

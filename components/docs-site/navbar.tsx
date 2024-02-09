@@ -15,6 +15,9 @@ export const Navbar = ({ route }: { route: string }) => {
         >
           Getting started
         </NavbarItem>
+        <NavbarItem href="/about" isActive={route === "/about"}>
+          About
+        </NavbarItem>
       </NavbarLeft>
     </RFUINavbar>
   );

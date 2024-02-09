@@ -37,9 +37,7 @@ export const Footer = () => {
       <FooterColumn>
         <FooterHeading>Tutorials</FooterHeading>
         <FooterItem href="/tutorials/fresh">Fresh</FooterItem>
-        {/* <FooterItem href="/tutorials/remix">Remix</FooterItem> */}
-        {/* <FooterItem href="/tutorials/preact">Preact</FooterItem> */}
-        {/* <FooterItem href="/tutorials/react">React</FooterItem> */}
+        <FooterItem href="/tutorials/remix">Remix</FooterItem>
       </FooterColumn>
       <FooterColumn>
         <FooterHeading>Code</FooterHeading>

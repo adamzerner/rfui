@@ -51,8 +51,6 @@ import * as $molecules_radio_button_card_group from "./routes/molecules/radio-bu
 import * as $molecules_stepper from "./routes/molecules/stepper.tsx";
 import * as $molecules_tabs from "./routes/molecules/tabs.tsx";
 import * as $tutorials_fresh from "./routes/tutorials/fresh.tsx";
-import * as $tutorials_preact from "./routes/tutorials/preact.tsx";
-import * as $tutorials_react from "./routes/tutorials/react.tsx";
 import * as $tutorials_remix from "./routes/tutorials/remix.tsx";
 import * as $docs_site_component_docs_page_modal_example from "./islands/docs-site/component-docs-page/modal-example.tsx";
 import * as $molecules_alert_1 from "./islands/molecules/alert.tsx";
@@ -117,8 +115,6 @@ const manifest = {
     "./routes/molecules/stepper.tsx": $molecules_stepper,
     "./routes/molecules/tabs.tsx": $molecules_tabs,
     "./routes/tutorials/fresh.tsx": $tutorials_fresh,
-    "./routes/tutorials/preact.tsx": $tutorials_preact,
-    "./routes/tutorials/react.tsx": $tutorials_react,
     "./routes/tutorials/remix.tsx": $tutorials_remix,
   },
   islands: {

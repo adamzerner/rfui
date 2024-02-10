@@ -19,7 +19,7 @@ To create a new version of this library (be sure to follow
   - Change 0-1-16 to next version.
   - Change v0.1.15 to next version.
   - Change 0-1-15 to next version.
-- Update CHANGELOG.md
+- Update `CHANGELOG.md`.
 - Commit and push.
 - Use https://github.com/adamzerner/rfui/releases/new.
   - Click "Choose a tag".

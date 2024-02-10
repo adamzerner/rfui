@@ -1,6 +1,6 @@
 export default {
   content: [
-    "{islands,components}/**/*.{ts,tsx}",
+    "{routes,islands,components}/**/*.{ts,tsx}",
   ],
   theme: {
     fontFamily: {

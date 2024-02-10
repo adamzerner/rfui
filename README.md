@@ -21,7 +21,12 @@ To create a new version of this library (be sure to follow
   - Change 0-1-15 to next version.
 - Update `CHANGELOG.md`.
 - Commit and push.
-- Use https://github.com/adamzerner/rfui/releases/new.
+- Use https://github.com/adamzerner/rfui/releases/new to update the third party
+  module.
+  - Creating a new tag should trigger a GitHub webhook that Deno's third party
+    module repo subscribes to and releases the new version. (Note: I was having
+    issues [here](https://github.com/denoland/deno/issues/22014) but I think
+    they've been resolved.)
   - Click "Choose a tag".
   - Type in the new version in the input field.
   - Click "Create a new tag".

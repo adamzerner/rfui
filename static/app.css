@@ -118,12 +118,13 @@
 /* Table */
 
 table.rfui-table th {
-  font-weight: normal;
+  font-weight: bold;
   text-transform: uppercase;
   font-size: 0.75em;
   padding-top: var(--spacing-2);
   padding-bottom: var(--spacing-2);
   border-bottom: 1px solid rgb(var(--color-neutral-100));
+  color: rgb(var(--color-neutral-700))
 }
 
 table.rfui-table.sticky-header thead {

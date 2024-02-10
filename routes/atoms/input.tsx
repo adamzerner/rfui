@@ -17,7 +17,19 @@ import { Stack } from "@/components/helpers/stack.tsx";
 import { Card } from "@/components/molecules/card.tsx";
 
 export default () => {
-  const notes = null;
+  const notes = (
+    <div>
+      This component is basically just a wrapper for{" "}
+      <InlineCode>{`<input />`}</InlineCode>. You'll probably want to use it
+      along with a{" "}
+      <InlineCode>{`<label>`}</InlineCode>. You also might prefer to use RFUI's
+      {" "}
+      <Link href="/molecules/form-field">
+        <InlineCode>{`FormField`}</InlineCode>
+      </Link>{" "}
+      component instead.
+    </div>
+  );
   const sections: SectionType[] = [{
     title: "Basic",
     example: <Input />,

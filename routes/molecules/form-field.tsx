@@ -441,6 +441,25 @@ export default () => {
       />
     ),
   }, {
+    title: "Switch",
+    description: (
+      <div>
+        If you pass <InlineCode>type="switch"</InlineCode> it will use RFUI's
+        {" "}
+        <Link href="/atoms/switch">
+          <InlineCode>Switch</InlineCode>
+        </Link>.
+      </div>
+    ),
+    example: <FormField label="Agreed" type="switch" />,
+    exampleCode: (
+      <CodeBlock
+        class="mt-4"
+        language="tsx"
+        code={`<FormField label="Agreed" type="switch" />`}
+      />
+    ),
+  }, {
     title: "Radio button",
     description: (
       <div>

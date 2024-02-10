@@ -13,18 +13,31 @@ import { ComponentDocsPage } from "@/components/docs-site/component-docs-page/in
 import { Prop } from "@/components/docs-site/component-docs-page/prop.tsx";
 import { Props } from "@/components/docs-site/component-docs-page/props.tsx";
 import { SectionType } from "@/components/docs-site/component-docs-page/section-type.ts";
+import { Stack } from "@/components/helpers/stack.tsx";
 import { Card } from "@/components/molecules/card.tsx";
 
 export default () => {
   const notes = (
-    <div>
-      Unlike checkboxes, switches should deliver immediate results instead of
-      requiring the user to click "Save" to see the results. See{" "}
-      <Link href="https://www.nngroup.com/articles/toggle-switch-guidelines/">
-        Toggle-Switch Guidelines
-      </Link>{" "}
-      for more information.
-    </div>
+    <Stack class="gap-3">
+      <div>
+        Unlike checkboxes, switches should deliver immediate results instead of
+        requiring the user to click "Save" to see the results. See{" "}
+        <Link href="https://www.nngroup.com/articles/toggle-switch-guidelines/">
+          Toggle-Switch Guidelines
+        </Link>{" "}
+        for more information.
+      </div>
+      <div>
+        Consider using RFUI's{" "}
+        <Link href="/molecules/form-field#switch">
+          <InlineCode>FormField</InlineCode>
+        </Link>{" "}
+        component with <InlineCode>type="switch"</InlineCode>{" "}
+        instead. If not, you'll probably want to use{" "}
+        <InlineCode>{`<label>`}</InlineCode> along with{" "}
+        <InlineCode>{`Switch`}</InlineCode>.
+      </div>
+    </Stack>
   );
   const sections: SectionType[] = [{
     title: "Basic",

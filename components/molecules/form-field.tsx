@@ -3,6 +3,7 @@ import { PasswordInput } from "../../islands/molecules/password-input.tsx";
 import { Checkbox } from "../atoms/checkbox.tsx";
 import { Input } from "../atoms/input.tsx";
 import { RadioButton } from "../atoms/radio-button.tsx";
+import { Switch } from "../atoms/switch.tsx";
 import { Flex } from "../helpers/flex.tsx";
 import { XCircleIcon } from "../icons/x-circle-icon.tsx";
 
@@ -98,6 +99,17 @@ export const FormField = (
             required={required}
             size={size}
             invalid={invalid}
+            class={`mt-1 ${inputRest?.class}`}
+            {...inputRest}
+          />
+        )
+        : type === "switch"
+        ? (
+          <Switch
+            id={id}
+            name={name}
+            value={value}
+            required={required}
             class={`mt-1 ${inputRest?.class}`}
             {...inputRest}
           />

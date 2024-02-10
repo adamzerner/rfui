@@ -1,1 +1,1 @@
-export const getStylesheetUrl = () => "https://rfui.deno.dev/rfui-v0-1-11.css";
+export const getStylesheetUrl = () => "https://rfui.deno.dev/rfui-v0-1-12.css";

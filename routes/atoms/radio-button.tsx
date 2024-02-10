@@ -18,17 +18,30 @@ import { Card } from "@/components/molecules/card.tsx";
 
 export default () => {
   const notes = (
-    <div>
-      Radio buttons are{" "}
-      <Link href="https://ux.stackexchange.com/q/456/39046">appropriate</Link>
-      {" "}
-      when you are allowing the user to choose between a few options. If there
-      are many options to choose from, prefer the{" "}
-      <Link href="/atoms/select">
-        <InlineCode>Select</InlineCode>
-      </Link>{" "}
-      component.
-    </div>
+    <Stack class="gap-3">
+      <div>
+        This component is basically just a wrapper for{" "}
+        <InlineCode>{`<input type="radio" />`}</InlineCode>. You'll probably
+        want to use it along with a{" "}
+        <InlineCode>{`<label>`}</InlineCode>. You also might prefer to use
+        RFUI's{" "}
+        <Link href="/molecules/form-field">
+          <InlineCode>{`FormField`}</InlineCode>
+        </Link>{" "}
+        component instead.
+      </div>
+      <div>
+        Radio buttons are{" "}
+        <Link href="https://ux.stackexchange.com/q/456/39046">appropriate</Link>
+        {" "}
+        when you are allowing the user to choose between a few options. If there
+        are many options to choose from, prefer the{" "}
+        <Link href="/atoms/select">
+          <InlineCode>Select</InlineCode>
+        </Link>{" "}
+        component.
+      </div>
+    </Stack>
   );
   const sections: SectionType[] = [{
     title: "Basic",

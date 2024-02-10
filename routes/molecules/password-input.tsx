@@ -20,16 +20,32 @@ import { PasswordInput } from "@/islands/molecules/password-input.tsx";
 
 export default () => {
   const notes = (
-    <div>
-      The <InlineCode>PasswordInput</InlineCode>{" "}
-      component provides a button that toggles whether the password is visible.
-      The ability to see your password in plain text as you're typing{" "}
-      <Link href="https://www.nngroup.com/articles/stop-password-masking">
-        often
-      </Link>{" "}
-      <Link href="https://www.lukew.com/ff/entry.asp?1653">improves</Link>{" "}
-      <Link href="https://ux.stackexchange.com/q/144503/39046">usability</Link>.
-    </div>
+    <Stack class="gap-3">
+      <div>
+        The <InlineCode>PasswordInput</InlineCode>{" "}
+        component provides a button that toggles whether the password is
+        visible. The ability to see your password in plain text as you're typing
+        {" "}
+        <Link href="https://www.nngroup.com/articles/stop-password-masking">
+          often
+        </Link>{" "}
+        <Link href="https://www.lukew.com/ff/entry.asp?1653">improves</Link>
+        {" "}
+        <Link href="https://ux.stackexchange.com/q/144503/39046">
+          usability
+        </Link>.
+      </div>
+      <div>
+        Consider using RFUI's{" "}
+        <Link href="/molecules/form-field#passwordinput">
+          <InlineCode>FormField</InlineCode>
+        </Link>{" "}
+        component with <InlineCode>type="rfui-password-input"</InlineCode>{" "}
+        instead. If not, you'll probably want to use{" "}
+        <InlineCode>{`<label>`}</InlineCode> along with{" "}
+        <InlineCode>{`PasswordInput`}</InlineCode>.
+      </div>
+    </Stack>
   );
   const sections: SectionType[] = [{
     title: "Basic",

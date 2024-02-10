@@ -9,7 +9,7 @@ Webite: https://rfui.deno.dev/
 To create a new version of this library:
 
 - Add version-specific CSS file in `static` directory
-- Update docs (cmd+f for eg. v0.1.12, 0-1-11, v0.1.13 and 0-1-12 and change it
+- Update docs (cmd+f for eg. v0.1.13, 0-1-13, v0.1.14 and 0-1-14 and change it
   - Update `utilities/get-stylesheet-url.ts` here and in `rfui-react` to the
     most recent version)
 - Use https://github.com/adamzerner/rfui/releases/new

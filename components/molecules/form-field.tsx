@@ -11,7 +11,10 @@ export type FormFieldType = {
   label: string;
   name?: JSX.HTMLAttributes<HTMLInputElement>["name"];
   value?: JSX.HTMLAttributes<HTMLInputElement>["value"];
-  type?: JSX.HTMLAttributes<HTMLInputElement>["type"] | "rfui-password-input";
+  type?:
+    | JSX.HTMLAttributes<HTMLInputElement>["type"]
+    | "rfui-password-input"
+    | "switch";
   required?: boolean;
   requiredIndicator?: "text" | "asterisk" | "none";
   optionalIndicator?: "text" | "asterisk" | "none";

@@ -306,6 +306,30 @@ export default () => {
 </Flex>`}
       />
     ),
+  }, {
+    title: "With icon",
+    description: (
+      <div>
+        Icons{" "}
+        <Link href="https://ux.stackexchange.com/q/56023/39046">should</Link>
+        {" "}
+        typically appear to the left of the other content in the button.
+      </div>
+    ),
+    example: (
+      <Button>
+        <span>＋</span> Example
+      </Button>
+    ),
+    exampleCode: (
+      <CodeBlock
+        class="mt-4"
+        language="tsx"
+        code={`<Button>
+  <span>＋</span> Example
+</Button>`}
+      />
+    ),
   }];
   const props = [{
     name: "variant",

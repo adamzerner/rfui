@@ -31,13 +31,12 @@ export const Link = (
   }: LinkType,
 ) => {
   const { class: restClass, ...restWithoutClass } = rest;
-  let className =
-    "cursor-pointer relative visited:text-[#19216C] [aria-current]:text-[#19216C]";
+  let className = "cursor-pointer relative";
 
   className += (() => {
     switch (underline) {
       case "always":
-        return " underline underline-offset-2 text-primary-800";
+        return " underline underline-offset-2 text-primary-800 visited:text-[#19216C] [aria-current]:text-[#19216C]";
       case "hover":
         return " hover:underline hover:underline-offset-2";
       default:

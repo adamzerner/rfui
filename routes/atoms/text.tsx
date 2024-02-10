@@ -133,7 +133,10 @@ export default () => {
     title: "Large",
     description: (
       <div>
-        Set <InlineCode>size</InlineCode> to <InlineCode>"lg"</InlineCode>.
+        Set <InlineCode>size</InlineCode> to{" "}
+        <InlineCode>"lg"</InlineCode>. Note: This comes across kinda strong so
+        you might want to balance it out with a lighter font weight or lighter
+        font color.
       </div>
     ),
     example: (

@@ -13,7 +13,7 @@ To create a new version of this library (be sure to follow
   Tailwind CSS file" below.)
 - Update `utilities/get-stylesheet-url.ts` to the most recent version.
   - In this repo.
-  - And in `rfui-react`.
+  - And in [`rfui-react`](https://github.com/adamzerner/rfui-react).
 - Update docs. Make the following "find and replace" changes:
   - Change v0.1.16 to next version.
   - Change 0-1-16 to next version.

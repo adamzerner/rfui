@@ -11,14 +11,11 @@ To create a new version of this library (be sure to follow
 
 - Add version-specific CSS file in `static` directory. (See "Generating the
   Tailwind CSS file" below.)
-- Update `utilities/get-stylesheet-url.ts` to the most recent version.
-  - In this repo.
-  - And in [`rfui-react`](https://github.com/adamzerner/rfui-react).
-- Update docs. Make the following "find and replace" changes:
+- Update version stuff. Make the following "find and replace" changes:
+  - Change v0.1.18 to next version.
+  - Change 0-1-18 to next version.
   - Change v0.1.17 to next version.
   - Change 0-1-17 to next version.
-  - Change v0.1.16 to next version.
-  - Change 0-1-16 to next version.
 - Update `CHANGELOG.md`.
 - Commit and push.
 - Use https://github.com/adamzerner/rfui/releases/new to update the third party

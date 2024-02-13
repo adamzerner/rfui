@@ -118,9 +118,9 @@ const getComponents = (_children: any) => {
     (child) => child && child.type && child.type.name === CardFooter.name,
   );
 
-  if (!cardBody) {
+  if (!cardHeader && !cardBody && !cardFooter) {
     throw new Error(
-      "A `CardBody` is needed if you pass an array of elements to `Card` as `children`.",
+      "A `CardHeader`, `CardBody` or `CardFooter` is needed if you pass an array of elements to `Card` as `children`.",
     );
   }
 

@@ -2,7 +2,7 @@ import { ComponentChild, JSX } from "preact";
 
 export type StackType =
   & { children: ComponentChild }
-  & JSX.HTMLAttributes<HTMLDivElement>;
+  & JSX.IntrinsicElements["div"];
 
 /** *
  * @function Stack

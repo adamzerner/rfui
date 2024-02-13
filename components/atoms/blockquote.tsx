@@ -3,7 +3,7 @@ import { ComponentChild } from "preact";
 
 export type BlockquoteType = {
   children: ComponentChild;
-} & JSX.HTMLAttributes<HTMLQuoteElement>;
+} & JSX.IntrinsicElements["blockquote"];
 
 /** *
  * @function Blockquote

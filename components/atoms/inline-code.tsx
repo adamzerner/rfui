@@ -3,7 +3,7 @@ import { ComponentChild } from "preact";
 
 export type InlineCodeType = {
   children: ComponentChild;
-} & JSX.HTMLAttributes<HTMLElement>;
+} & JSX.IntrinsicElements["code"];
 
 /** *
  * @function InlineCode

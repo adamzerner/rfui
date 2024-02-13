@@ -4,7 +4,7 @@ import { useEffect } from "preact/hooks";
 export type CodeBlockType = {
   code: string;
   language?: string;
-} & JSX.HTMLAttributes<HTMLPreElement>;
+} & JSX.IntrinsicElements["pre"];
 
 /** *
  * @function CodeBlock

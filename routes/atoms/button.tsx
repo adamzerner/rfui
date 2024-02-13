@@ -384,7 +384,7 @@ export default () => {
   }, {
     name: "...rest",
     required: false,
-    type: 'Omit<JSX.HTMLAttributes<HTMLButtonElement>, "icon" | "size">',
+    type: 'Omit<JSX.IntrinsicElements["button"], "icon" | "size">',
     default: null,
     notes: (
       <div>

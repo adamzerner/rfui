@@ -7,7 +7,7 @@ export type ModalType = {
   close: () => void;
   heading?: string;
   children: ComponentChild;
-} & JSX.HTMLAttributes<HTMLDialogElement>;
+} & JSX.IntrinsicElements["dialog"];
 
 /** *
  * @function Modal

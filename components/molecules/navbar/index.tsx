@@ -13,7 +13,7 @@ export type NavbarType = {
   background?: "neutral" | "none";
   sticky?: boolean;
   children: ComponentChild;
-} & Omit<JSX.HTMLAttributes<HTMLElement>, "size">;
+} & Omit<JSX.IntrinsicElements["nav"], "size">;
 
 /** *
  * @function Navbar

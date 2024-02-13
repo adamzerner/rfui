@@ -4,7 +4,7 @@ import { Link } from "./link.tsx";
 export type H2Type = {
   inPageLink?: string;
   children: ComponentChild;
-} & JSX.HTMLAttributes<HTMLHeadingElement>;
+} & JSX.IntrinsicElements["h2"];
 
 /** *
  * @function H1

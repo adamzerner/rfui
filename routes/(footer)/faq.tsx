@@ -65,9 +65,8 @@ export default () => {
       </Text>
 
       <H2 inPageLink="jsx">
-        Why am I seeing stuff like <InlineCode>JSX.HTMLAttributes</InlineCode>
-        {" "}
-        in the docs?
+        Why am I seeing stuff like{" "}
+        <InlineCode>JSX.IntrinsicElements</InlineCode> in the docs?
       </H2>
       <Text>
         <p>

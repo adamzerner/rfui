@@ -8,7 +8,7 @@ export type FooterType = {
   size?: ContainerType["size"];
   background?: "neutral" | "none";
   children: ComponentChild;
-} & Omit<JSX.HTMLAttributes<HTMLElement>, "size">;
+} & Omit<JSX.IntrinsicElements["footer"], "size">;
 
 /** *
  * @function Footer

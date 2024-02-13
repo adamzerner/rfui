@@ -126,7 +126,7 @@ export default () => {
   }, {
     name: "...rest",
     required: false,
-    type: "JSX.HTMLAttributes<HTMLQuoteElement>",
+    type: `JSX.IntrinsicElements["blockquote"]`,
     default: null,
     notes: (
       <div>

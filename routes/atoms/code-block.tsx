@@ -126,7 +126,7 @@ const fullName = firstName + " " + lastName;\`}
   }, {
     name: "...rest",
     required: false,
-    type: "JSX.HTMLAttributes<HTMLPreElement>",
+    type: 'JSX.IntrinsicElements["pre"]',
     default: null,
     notes: (
       <div>

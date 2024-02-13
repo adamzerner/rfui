@@ -4,7 +4,7 @@ export type TextareaType = {
   rounded?: "square" | "sm" | "lg";
   invalid?: boolean;
   children?: ComponentChild;
-} & JSX.HTMLAttributes<HTMLTextAreaElement>;
+} & JSX.IntrinsicElements["textarea"];
 
 /** *
  * @function Textarea

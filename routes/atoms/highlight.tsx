@@ -85,7 +85,7 @@ export default () => {
   }, {
     name: "...rest",
     required: false,
-    type: "JSX.HTMLAttributes<HTMLUnknownElement>",
+    type: 'JSX.IntrinsicElements["mark"]',
     default: null,
     notes: (
       <div>

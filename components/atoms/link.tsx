@@ -9,7 +9,7 @@ export type LinkType = {
   _newTab?: boolean;
   _includeNewTabIcon?: boolean;
   children: ComponentChild;
-} & JSX.HTMLAttributes<HTMLAnchorElement>;
+} & JSX.IntrinsicElements["a"];
 
 /** *
  * @function Link

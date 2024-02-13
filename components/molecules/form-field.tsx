@@ -9,10 +9,10 @@ import { XCircleIcon } from "../icons/x-circle-icon.tsx";
 
 export type FormFieldType = {
   label: string;
-  name?: JSX.HTMLAttributes<HTMLInputElement>["name"];
-  value?: JSX.HTMLAttributes<HTMLInputElement>["value"];
+  name?: JSX.IntrinsicElements["input"]["name"];
+  value?: JSX.IntrinsicElements["input"]["value"];
   type?:
-    | JSX.HTMLAttributes<HTMLInputElement>["type"]
+    | JSX.IntrinsicElements["input"]["type"]
     | "rfui-password-input"
     | "switch";
   required?: boolean;
@@ -24,10 +24,10 @@ export type FormFieldType = {
   invalid?: boolean;
   errorText?: string;
   inputRest?: Omit<
-    JSX.HTMLAttributes<HTMLInputElement>,
+    JSX.IntrinsicElements["input"],
     "name" | "value" | "type" | "required" | "size" | "rounded" | "invalid"
   >;
-} & Omit<JSX.HTMLAttributes<HTMLDivElement>, "size">;
+} & Omit<JSX.IntrinsicElements["div"], "size">;
 
 /** *
  * @function FormField

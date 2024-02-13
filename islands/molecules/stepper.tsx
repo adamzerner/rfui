@@ -10,7 +10,7 @@ export type StepperType = {
   onChange?: (newValue: number) => void;
   min?: number;
   max?: number;
-} & Omit<JSX.HTMLAttributes<HTMLDivElement>, "size" | "min" | "max">;
+} & Omit<JSX.IntrinsicElements["div"], "size" | "min" | "max">;
 
 /** *
  * @function Stepper

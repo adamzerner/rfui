@@ -10,7 +10,7 @@ export type AlertType = {
   variant?: "success" | "info" | "warning" | "danger" | "neutral";
   isDismissable?: boolean;
   children: any;
-} & Omit<JSX.HTMLAttributes<HTMLDivElement>, "size">;
+} & Omit<JSX.IntrinsicElements["div"], "size">;
 
 /** *
  * @function Alert
@@ -135,7 +135,7 @@ const getComponents = (_children: any) => {
 export const AlertHeader = (
   { children, ...rest }:
     & { children: ComponentChild }
-    & JSX.HTMLAttributes<HTMLDivElement>,
+    & JSX.IntrinsicElements["div"],
 ) => {
   return <div {...rest}>{children}</div>;
 };
@@ -143,7 +143,7 @@ export const AlertHeader = (
 export const AlertBody = (
   { children, ...rest }:
     & { children: ComponentChild }
-    & JSX.HTMLAttributes<HTMLDivElement>,
+    & JSX.IntrinsicElements["div"],
 ) => {
   return <div {...rest}>{children}</div>;
 };

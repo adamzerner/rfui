@@ -6,7 +6,7 @@ import { ChevronRightIcon } from "../../icons/chevron-right.tsx";
 export const NavbarItem = (
   { href, isActive = false, children, ...rest }:
     & { href: string; isActive?: boolean; children: ComponentChild }
-    & JSX.HTMLAttributes<HTMLLIElement>,
+    & JSX.IntrinsicElements["li"],
 ) => {
   const { class: restClass, ...restWithoutClass } = rest;
   let containerClass =

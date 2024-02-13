@@ -42,7 +42,7 @@ export default () => {
   }, {
     name: "...rest",
     required: false,
-    type: "JSX.HTMLAttributes<HTMLElement>",
+    type: 'JSX.IntrinsicElements["code"]',
     default: null,
     notes: (
       <div>

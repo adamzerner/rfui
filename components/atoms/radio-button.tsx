@@ -3,7 +3,7 @@ import type { JSX } from "preact";
 export type RadioButtonType = {
   size?: "sm" | "md" | "lg";
   invalid?: boolean;
-} & Omit<JSX.HTMLAttributes<HTMLInputElement>, "size">;
+} & Omit<JSX.IntrinsicElements["input"], "size">;
 
 /** *
  * @function RadioButton

@@ -104,7 +104,7 @@ export default () => {
   }, {
     name: "...rest",
     required: false,
-    type: "JSX.HTMLAttributes<HTMLHeadingElement>",
+    type: 'JSX.IntrinsicElements["h1"]',
     default: null,
     notes: (
       <div>

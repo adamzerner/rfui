@@ -364,7 +364,7 @@ export default () => {
   }, {
     name: "...rest",
     required: false,
-    type: "JSX.HTMLAttributes<HTMLUListElement>",
+    type: 'JSX.IntrinsicElements["ul"]',
     default: null,
     notes: (
       <div>

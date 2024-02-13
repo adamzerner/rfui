@@ -1,6 +1,6 @@
 import type { JSX } from "preact";
 
-export type SwitchType = JSX.HTMLAttributes<HTMLInputElement>;
+export type SwitchType = JSX.IntrinsicElements["input"];
 
 /** *
  * @function Switch

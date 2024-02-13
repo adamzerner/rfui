@@ -2,7 +2,7 @@ import { ComponentChild, JSX } from "preact";
 
 export type FlexType =
   & { children: ComponentChild }
-  & JSX.HTMLAttributes<HTMLDivElement>;
+  & JSX.IntrinsicElements["div"];
 
 /** *
  * @function Flex

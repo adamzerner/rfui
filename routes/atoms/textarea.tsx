@@ -166,7 +166,7 @@ export default () => {
   }, {
     name: "...rest",
     required: false,
-    type: "JSX.HTMLAttributes<HTMLTextAreaElement>",
+    type: 'JSX.IntrinsicElements["textarea"]',
     default: null,
     notes: (
       <div>

@@ -7,7 +7,7 @@ import { getChildren } from "../../utilities/get-children.ts";
 export type TabsType = {
   fullWidth?: boolean;
   children: ComponentChild;
-} & JSX.HTMLAttributes<HTMLDivElement>;
+} & JSX.IntrinsicElements["div"];
 
 /** *
  * @function Tabs

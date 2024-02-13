@@ -4,7 +4,7 @@ export type InputType = {
   size?: "sm" | "md" | "lg";
   rounded?: "square" | "sm" | "lg" | "full";
   invalid?: boolean;
-} & Omit<JSX.HTMLAttributes<HTMLInputElement>, "size">;
+} & Omit<JSX.IntrinsicElements["input"], "size">;
 
 /** *
  * @function Input

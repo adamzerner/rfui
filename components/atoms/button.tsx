@@ -14,7 +14,7 @@ export type ButtonType = {
   isLoading?: boolean;
   loadingContent?: string;
   children: ComponentChild;
-} & Omit<JSX.HTMLAttributes<HTMLButtonElement>, "icon" | "size">;
+} & Omit<JSX.IntrinsicElements["button"], "icon" | "size">;
 
 /** *
  * @function Button

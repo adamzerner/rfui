@@ -3,7 +3,7 @@ import { ComponentChild, JSX } from "preact";
 export type OLType = {
   bulletLocation?: "inside" | "outside";
   children: ComponentChild;
-} & JSX.HTMLAttributes<HTMLOListElement>;
+} & JSX.IntrinsicElements["ol"];
 
 /** *
  * @function OL

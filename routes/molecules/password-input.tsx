@@ -267,7 +267,7 @@ export default () => {
   }, {
     name: "containerProps",
     required: false,
-    type: 'Omit<JSX.HTMLAttributes<HTMLDivElement>, "size">',
+    type: 'Omit<JSX.IntrinsicElements["div"], "size">',
     default: null,
     notes: (
       <div>
@@ -296,7 +296,7 @@ export default () => {
   size?: "sm" | "md" | "lg";
   rounded?: "square" | "sm" | "lg" | "full";
   invalid?: boolean;
-} & Omit<JSX.HTMLAttributes<HTMLInputElement>, "size">`,
+} & Omit<JSX.IntrinsicElements["input"], "size">`,
     default: null,
     notes: (
       <div>

@@ -9,7 +9,7 @@ export type CardType = {
   topAccent?: boolean;
   leftAccent?: boolean;
   children: ComponentChild;
-} & Omit<JSX.HTMLAttributes<HTMLDivElement>, "size">;
+} & Omit<JSX.IntrinsicElements["div"], "size">;
 
 /** *
  * @function Card
@@ -130,7 +130,7 @@ const getComponents = (_children: any) => {
 export const CardHeader = (
   { children, ...rest }:
     & { children: ComponentChild }
-    & JSX.HTMLAttributes<HTMLDivElement>,
+    & JSX.IntrinsicElements["div"],
 ) => {
   const { class: restClass, ...restWithoutClass } = rest;
   let className = "rfui-card-header";
@@ -145,7 +145,7 @@ export const CardHeader = (
 export const CardBody = (
   { children, ...rest }:
     & { children: ComponentChild }
-    & JSX.HTMLAttributes<HTMLDivElement>,
+    & JSX.IntrinsicElements["div"],
 ) => {
   const { class: restClass, ...restWithoutClass } = rest;
   let className = "rfui-card-body";
@@ -160,7 +160,7 @@ export const CardBody = (
 export const CardFooter = (
   { children, ...rest }:
     & { children: ComponentChild }
-    & JSX.HTMLAttributes<HTMLDivElement>,
+    & JSX.IntrinsicElements["div"],
 ) => {
   const { class: restClass, ...restWithoutClass } = rest;
   let className = "rfui-card-footer";

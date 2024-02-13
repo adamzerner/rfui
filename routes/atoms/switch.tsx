@@ -95,7 +95,7 @@ export default () => {
   const props = [{
     name: "...rest",
     required: false,
-    type: "JSX.HTMLAttributes<HTMLInputElement>",
+    type: 'JSX.IntrinsicElements["input"]',
     default: null,
     notes: (
       <div>

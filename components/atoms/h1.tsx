@@ -2,7 +2,7 @@ import { ComponentChild, JSX } from "preact";
 
 export type H1Type = {
   children: ComponentChild;
-} & JSX.HTMLAttributes<HTMLHeadingElement>;
+} & JSX.IntrinsicElements["h1"];
 
 /** *
  * @function H1

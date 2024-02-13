@@ -5,7 +5,7 @@ export type SelectType = {
   rounded?: "square" | "sm" | "lg" | "full";
   invalid?: boolean;
   children?: ComponentChild;
-} & Omit<JSX.HTMLAttributes<HTMLSelectElement>, "size">;
+} & Omit<JSX.IntrinsicElements["select"], "size">;
 
 /** *
  * @function Select

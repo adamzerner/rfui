@@ -4,7 +4,7 @@ export type ULType = {
   bulletType?: "bullet" | "check" | "arrow" | "triangle" | "none";
   bulletLocation?: "inside" | "outside";
   children: ComponentChild;
-} & JSX.HTMLAttributes<HTMLUListElement>;
+} & JSX.IntrinsicElements["ul"];
 
 /** *
  * @function UL

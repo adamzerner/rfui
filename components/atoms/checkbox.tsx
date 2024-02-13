@@ -3,7 +3,7 @@ import type { JSX } from "preact";
 export type CheckboxType = {
   size?: "sm" | "md" | "lg";
   invalid?: boolean;
-} & Omit<JSX.HTMLAttributes<HTMLInputElement>, "size">;
+} & Omit<JSX.IntrinsicElements["input"], "size">;
 
 /** *
  * @function Checkbox

@@ -380,7 +380,7 @@ export default () => {
   }, {
     name: "...rest",
     required: false,
-    type: 'Omit<JSX.HTMLAttributes<HTMLElement>, "size">',
+    type: 'Omit<JSX.IntrinsicElements["footer"], "size">',
     default: null,
     notes: (
       <div>

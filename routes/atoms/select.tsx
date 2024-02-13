@@ -287,7 +287,7 @@ export default () => {
   }, {
     name: "...rest",
     required: false,
-    type: 'Omit<JSX.HTMLAttributes<HTMLSelectElement>, "size">',
+    type: 'Omit<JSX.IntrinsicElements["select"], "size">',
     default: null,
     notes: (
       <div>

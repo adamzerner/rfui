@@ -303,7 +303,7 @@ export default () => {
   }, {
     name: "...rest",
     required: false,
-    type: "JSX.HTMLAttributes<HTMLAnchorElement>",
+    type: 'JSX.IntrinsicElements["a"]',
     default: null,
     notes: (
       <div>

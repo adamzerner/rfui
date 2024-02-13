@@ -4,7 +4,7 @@ import { Stack } from "../helpers/stack.tsx";
 export type TextType = {
   size?: "sm" | "md" | "lg";
   children: ComponentChild;
-} & Omit<JSX.HTMLAttributes<HTMLDivElement>, "size">;
+} & Omit<JSX.IntrinsicElements["div"], "size">;
 
 /** *
  * @function Text

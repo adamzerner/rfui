@@ -5,7 +5,7 @@ import { Flex } from "../../components/helpers/flex.tsx";
 
 export type PasswordInputType = {
   defaultVisibility?: "hidden" | "shown";
-  containerProps?: Omit<JSX.HTMLAttributes<HTMLDivElement>, "size">;
+  containerProps?: Omit<JSX.IntrinsicElements["div"], "size">;
 } & InputType;
 
 /** *

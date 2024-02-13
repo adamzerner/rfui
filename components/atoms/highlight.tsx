@@ -3,7 +3,7 @@ import { ComponentChild } from "preact";
 
 export type HighlightType = {
   children: ComponentChild;
-} & JSX.HTMLAttributes<HTMLUnknownElement>;
+} & JSX.IntrinsicElements["mark"];
 
 /** *
  * @function Highlight

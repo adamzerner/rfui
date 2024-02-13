@@ -5,7 +5,7 @@ export type BadgeType = {
   size?: "sm" | "md" | "lg";
   rounded?: "square" | "sm" | "lg" | "full";
   children: ComponentChild;
-} & Omit<JSX.HTMLAttributes<HTMLDivElement>, "size">;
+} & Omit<JSX.IntrinsicElements["div"], "size">;
 
 /**
  * @function Badge

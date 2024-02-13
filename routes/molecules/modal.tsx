@@ -79,7 +79,7 @@ export default () => {
   }, {
     name: "...rest",
     required: false,
-    type: "JSX.HTMLAttributes<HTMLDialogElement>",
+    type: 'JSX.IntrinsicElements["dialog"]',
     default: null,
     notes: (
       <div>

@@ -2,7 +2,7 @@ import { ComponentChild, JSX } from "preact";
 
 export type ContainerType =
   & { size?: "sm" | "md" | "lg" | "xl"; children: ComponentChild }
-  & Omit<JSX.HTMLAttributes<HTMLDivElement>, "size">;
+  & Omit<JSX.IntrinsicElements["div"], "size">;
 
 /** *
  * @function Container

@@ -8,7 +8,7 @@ export type TableType = {
   stickyHeader?: boolean;
   stickyFirstColumn?: boolean;
   children?: ComponentChild;
-} & JSX.HTMLAttributes<HTMLTableElement>;
+} & JSX.IntrinsicElements["table"];
 
 /** *
  * @function Table

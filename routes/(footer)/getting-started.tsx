@@ -67,7 +67,7 @@ export default () => {
         </p>
         <CodeBlock
           language="ts"
-          code={`"rfui": "https://deno.land/x/rfui@v0.1.15/mod.ts"`}
+          code={`"rfui": "https://deno.land/x/rfui@v0.1.16/mod.ts"`}
         />
       </Text>
 
@@ -84,8 +84,8 @@ export default () => {
         />
         <p>
           <InlineCode>getStylesheetUrl</InlineCode> will return eg.{" "}
-          <InlineCode>https://rfui.deno.dev/rfui-v0-1-15.css</InlineCode>{" "}
-          if you're on v0.1.15 of RFUI.
+          <InlineCode>https://rfui.deno.dev/rfui-v0-1-16.css</InlineCode>{" "}
+          if you're on v0.1.16 of RFUI.
         </p>
         <p>
           See the <Link href="/stylesheet">Stylesheet</Link>{" "}

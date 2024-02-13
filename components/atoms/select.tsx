@@ -1,11 +1,11 @@
-import { ComponentChild, JSX } from "preact";
+import type { ComponentChild, ComponentProps } from "preact";
 
 export type SelectType = {
   size?: "sm" | "md" | "lg";
   rounded?: "square" | "sm" | "lg" | "full";
   invalid?: boolean;
   children?: ComponentChild;
-} & Omit<JSX.IntrinsicElements["select"], "size">;
+} & Omit<ComponentProps<"select">, "size">;
 
 /** *
  * @function Select

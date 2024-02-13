@@ -303,7 +303,7 @@ export default () => {
   }, {
     name: "...rest",
     required: false,
-    type: 'JSX.IntrinsicElements["a"]',
+    type: 'ComponentProps<"a">',
     default: null,
     notes: (
       <div>

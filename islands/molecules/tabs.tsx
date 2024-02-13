@@ -1,5 +1,5 @@
 // deno-lint-ignore-file no-explicit-any
-import type { ComponentChild, JSX } from "preact";
+import type { ComponentChild, ComponentProps } from "preact";
 import { useState } from "preact/hooks";
 import { Flex } from "../../components/helpers/flex.tsx";
 import { getChildren } from "../../utilities/get-children.ts";
@@ -7,7 +7,7 @@ import { getChildren } from "../../utilities/get-children.ts";
 export type TabsType = {
   fullWidth?: boolean;
   children: ComponentChild;
-} & JSX.IntrinsicElements["div"];
+} & ComponentProps<"div">;
 
 /** *
  * @function Tabs

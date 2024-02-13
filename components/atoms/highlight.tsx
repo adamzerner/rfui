@@ -1,9 +1,8 @@
-import type { JSX } from "preact";
-import { ComponentChild } from "preact";
+import type { ComponentChild, ComponentProps } from "preact";
 
 export type HighlightType = {
   children: ComponentChild;
-} & JSX.IntrinsicElements["mark"];
+} & ComponentProps<"mark">;
 
 /** *
  * @function Highlight

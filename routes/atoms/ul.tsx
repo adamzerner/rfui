@@ -364,7 +364,7 @@ export default () => {
   }, {
     name: "...rest",
     required: false,
-    type: 'JSX.IntrinsicElements["ul"]',
+    type: 'ComponentProps<"ul">',
     default: null,
     notes: (
       <div>

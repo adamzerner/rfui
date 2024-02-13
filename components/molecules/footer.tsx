@@ -1,4 +1,4 @@
-import type { ComponentChild, JSX } from "preact";
+import type { ComponentChild, ComponentProps } from "preact";
 import { Link } from "../atoms/link.tsx";
 import { Container, ContainerType } from "../helpers/container.tsx";
 import { Flex } from "../helpers/flex.tsx";
@@ -8,7 +8,7 @@ export type FooterType = {
   size?: ContainerType["size"];
   background?: "neutral" | "none";
   children: ComponentChild;
-} & Omit<JSX.IntrinsicElements["footer"], "size">;
+} & Omit<ComponentProps<"footer">, "size">;
 
 /** *
  * @function Footer

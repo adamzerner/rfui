@@ -152,7 +152,7 @@ export default () => {
   }, {
     name: "...rest",
     required: false,
-    type: 'JSX.IntrinsicElements["h2"]',
+    type: 'ComponentProps<"h2">',
     default: null,
     notes: (
       <div>

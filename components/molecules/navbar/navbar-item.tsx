@@ -1,4 +1,4 @@
-import type { ComponentChild, JSX } from "preact";
+import type { ComponentChild, ComponentProps } from "preact";
 import { Link } from "../../atoms/link.tsx";
 import { Container } from "../../helpers/container.tsx";
 import { ChevronRightIcon } from "../../icons/chevron-right.tsx";
@@ -6,7 +6,7 @@ import { ChevronRightIcon } from "../../icons/chevron-right.tsx";
 export const NavbarItem = (
   { href, isActive = false, children, ...rest }:
     & { href: string; isActive?: boolean; children: ComponentChild }
-    & JSX.IntrinsicElements["li"],
+    & ComponentProps<"li">,
 ) => {
   const { class: restClass, ...restWithoutClass } = rest;
   let containerClass =

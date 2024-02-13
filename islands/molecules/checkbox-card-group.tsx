@@ -1,4 +1,4 @@
-import { ComponentChild } from "preact";
+import type { ComponentChild } from "preact";
 import { useState } from "preact/hooks";
 import { Checkbox, CheckboxType } from "../../components/atoms/checkbox.tsx";
 import { Flex } from "../../components/helpers/flex.tsx";

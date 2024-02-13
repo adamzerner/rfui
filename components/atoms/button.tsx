@@ -1,5 +1,4 @@
-import type { JSX } from "preact";
-import { ComponentChild } from "preact";
+import type { ComponentChild, ComponentProps } from "preact";
 
 export type ButtonType = {
   variant?:
@@ -14,7 +13,7 @@ export type ButtonType = {
   isLoading?: boolean;
   loadingContent?: string;
   children: ComponentChild;
-} & Omit<JSX.IntrinsicElements["button"], "icon" | "size">;
+} & Omit<ComponentProps<"button">, "icon" | "size">;
 
 /** *
  * @function Button

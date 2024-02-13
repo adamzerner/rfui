@@ -593,7 +593,7 @@ export default () => {
   }, {
     name: "...rest",
     required: false,
-    type: 'JSX.IntrinsicElements["table"]',
+    type: 'ComponentProps<"table">',
     default: null,
     notes: (
       <div>

@@ -1,8 +1,8 @@
-import { ComponentChild, JSX } from "preact";
+import type { ComponentChild, ComponentProps } from "preact";
 
 export type H1Type = {
   children: ComponentChild;
-} & JSX.IntrinsicElements["h1"];
+} & ComponentProps<"h1">;
 
 /** *
  * @function H1

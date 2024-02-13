@@ -85,7 +85,7 @@ export default () => {
   }, {
     name: "...rest",
     required: false,
-    type: 'JSX.IntrinsicElements["mark"]',
+    type: 'ComponentProps<"mark">',
     default: null,
     notes: (
       <div>

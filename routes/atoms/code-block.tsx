@@ -126,7 +126,7 @@ const fullName = firstName + " " + lastName;\`}
   }, {
     name: "...rest",
     required: false,
-    type: 'JSX.IntrinsicElements["pre"]',
+    type: 'ComponentProps<"pre">',
     default: null,
     notes: (
       <div>

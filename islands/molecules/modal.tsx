@@ -1,4 +1,4 @@
-import { ComponentChild, JSX } from "preact";
+import type { ComponentChild, ComponentProps } from "preact";
 import { useEffect, useRef } from "preact/hooks";
 import { CloseIcon } from "../../components/icons/close-icon.tsx";
 
@@ -7,7 +7,7 @@ export type ModalType = {
   close: () => void;
   heading?: string;
   children: ComponentChild;
-} & JSX.IntrinsicElements["dialog"];
+} & ComponentProps<"dialog">;
 
 /** *
  * @function Modal

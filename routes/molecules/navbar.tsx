@@ -207,7 +207,7 @@ export default () => {
   }, {
     name: "...rest",
     required: false,
-    type: 'Omit<JSX.IntrinsicElements["nav"], "size">',
+    type: 'Omit<ComponentProps<"nav">, "size">',
     default: null,
     notes: (
       <div>
@@ -266,7 +266,7 @@ export default () => {
   }, {
     name: "...rest",
     required: false,
-    type: 'JSX.IntrinsicElements["li"]',
+    type: 'ComponentProps<"li">',
     default: null,
     notes: null,
   }];

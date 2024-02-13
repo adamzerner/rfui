@@ -1,4 +1,4 @@
-import { JSX } from "preact";
+import type { ComponentProps } from "preact";
 import { useState } from "preact/hooks";
 import { Flex } from "../../components/helpers/flex.tsx";
 
@@ -10,7 +10,7 @@ export type StepperType = {
   onChange?: (newValue: number) => void;
   min?: number;
   max?: number;
-} & Omit<JSX.IntrinsicElements["div"], "size" | "min" | "max">;
+} & Omit<ComponentProps<"div">, "size" | "min" | "max">;
 
 /** *
  * @function Stepper

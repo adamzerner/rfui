@@ -1,9 +1,9 @@
-import { ComponentChild, JSX } from "preact";
+import type { ComponentChild, ComponentProps } from "preact";
 
 export type OLType = {
   bulletLocation?: "inside" | "outside";
   children: ComponentChild;
-} & JSX.IntrinsicElements["ol"];
+} & ComponentProps<"ol">;
 
 /** *
  * @function OL

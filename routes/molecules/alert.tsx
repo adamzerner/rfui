@@ -199,7 +199,7 @@ export default () => {
   }, {
     name: "...rest",
     required: false,
-    type: 'Omit<JSX.IntrinsicElements["div"], "size">',
+    type: 'Omit<ComponentProps<"div">, "size">',
     default: null,
     notes: (
       <div>
@@ -232,7 +232,7 @@ export default () => {
   }, {
     name: "...rest",
     required: false,
-    type: 'JSX.IntrinsicElements["div"]',
+    type: 'ComponentProps<"div">',
     default: null,
     notes: null,
   }];
@@ -245,7 +245,7 @@ export default () => {
   }, {
     name: "...rest",
     required: false,
-    type: 'JSX.IntrinsicElements["div"]',
+    type: 'ComponentProps<"div">',
     default: null,
     notes: null,
   }];

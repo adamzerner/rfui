@@ -64,22 +64,14 @@ export default () => {
         </p>
       </Text>
 
-      <H2 inPageLink="jsx">
-        Why am I seeing stuff like{" "}
-        <InlineCode>JSX.IntrinsicElements</InlineCode> in the docs?
+      <H2 inPageLink="signal">
+        Why am I seeing stuff like <InlineCode>Signal</InlineCode> in the docs?
       </H2>
       <Text>
         <p>
-          <InlineCode>JSX</InlineCode>{" "}
-          comes from Preact. If you are using React, the types will be slightly
-          different. Hovering over things in your text editor will provide the
-          actual types.
-        </p>
-        <p>
-          There are a few other places in the docs where things will be
-          different if you're using React instead of Preact, but they should be
-          pretty easy to figure out when you hover over things in your text
-          editor.
+          <InlineCode>Signal</InlineCode>{" "}
+          comes from Preact. If you are using React, this and a few other small
+          things will be different.
         </p>
       </Text>
 

@@ -1,9 +1,8 @@
-import type { JSX } from "preact";
-import { ComponentChild } from "preact";
+import type { ComponentChild, ComponentProps } from "preact";
 
 export type InlineCodeType = {
   children: ComponentChild;
-} & JSX.IntrinsicElements["code"];
+} & ComponentProps<"code">;
 
 /** *
  * @function InlineCode

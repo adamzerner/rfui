@@ -1,10 +1,10 @@
-import { ComponentChild, JSX } from "preact";
+import type { ComponentChild, ComponentProps } from "preact";
 import { Link } from "./link.tsx";
 
 export type H2Type = {
   inPageLink?: string;
   children: ComponentChild;
-} & JSX.IntrinsicElements["h2"];
+} & ComponentProps<"h2">;
 
 /** *
  * @function H1

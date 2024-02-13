@@ -126,7 +126,7 @@ export default () => {
   }, {
     name: "...rest",
     required: false,
-    type: `JSX.IntrinsicElements["blockquote"]`,
+    type: `ComponentProps<"blockquote">`,
     default: null,
     notes: (
       <div>

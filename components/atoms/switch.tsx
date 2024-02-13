@@ -1,6 +1,6 @@
-import type { JSX } from "preact";
+import type { ComponentProps } from "preact";
 
-export type SwitchType = JSX.IntrinsicElements["input"];
+export type SwitchType = ComponentProps<"input">;
 
 /** *
  * @function Switch

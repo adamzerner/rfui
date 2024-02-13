@@ -1,10 +1,10 @@
-import type { JSX } from "preact";
+import type { ComponentProps } from "preact";
 
 export type InputType = {
   size?: "sm" | "md" | "lg";
   rounded?: "square" | "sm" | "lg" | "full";
   invalid?: boolean;
-} & Omit<JSX.IntrinsicElements["input"], "size">;
+} & Omit<ComponentProps<"input">, "size">;
 
 /** *
  * @function Input

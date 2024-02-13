@@ -1,5 +1,7 @@
-export const XCircleIcon = ({ ...rest }) => {
-  let { className: classNameFromRest, ...restWithoutClass } = rest;
+import type { ComponentProps } from "preact";
+
+export const XCircleIcon = ({ ...rest }: ComponentProps<"svg">) => {
+  let { class: classNameFromRest, ...restWithoutClass } = rest;
 
   if (!classNameFromRest) {
     classNameFromRest = "w-5 h-5";
@@ -12,7 +14,7 @@ export const XCircleIcon = ({ ...rest }) => {
       viewBox="0 0 24 24"
       strokeWidth={1.5}
       stroke="currentColor"
-      className={`inline ${classNameFromRest}`}
+      class={`inline ${classNameFromRest}`}
       {...restWithoutClass}
     >
       <path

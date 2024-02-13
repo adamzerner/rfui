@@ -1,4 +1,4 @@
-import type { ComponentChild, JSX } from "preact";
+import type { ComponentChild, ComponentProps } from "preact";
 import { Container, type ContainerType } from "../../helpers/container.tsx";
 import { Flex } from "../../helpers/flex.tsx";
 import { Stack } from "../../helpers/stack.tsx";
@@ -13,7 +13,7 @@ export type NavbarType = {
   background?: "neutral" | "none";
   sticky?: boolean;
   children: ComponentChild;
-} & Omit<JSX.IntrinsicElements["nav"], "size">;
+} & Omit<ComponentProps<"nav">, "size">;
 
 /** *
  * @function Navbar

@@ -47,7 +47,7 @@ export default () => {
   }, {
     name: "...rest",
     required: false,
-    type: 'Omit<JSX.IntrinsicElements["div"], "size">',
+    type: 'Omit<ComponentProps<"div">, "size">',
     default: null,
     notes: (
       <div>

@@ -1,9 +1,9 @@
-import type { JSX } from "preact";
+import type { ComponentProps } from "preact";
 
 export type RadioButtonType = {
   size?: "sm" | "md" | "lg";
   invalid?: boolean;
-} & Omit<JSX.IntrinsicElements["input"], "size">;
+} & Omit<ComponentProps<"input">, "size">;
 
 /** *
  * @function RadioButton

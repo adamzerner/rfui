@@ -1,4 +1,4 @@
-import { ComponentChild, JSX } from "preact";
+import type { ComponentChild, ComponentProps } from "preact";
 
 export type TableType = {
   bordered?: boolean;
@@ -8,7 +8,7 @@ export type TableType = {
   stickyHeader?: boolean;
   stickyFirstColumn?: boolean;
   children?: ComponentChild;
-} & JSX.IntrinsicElements["table"];
+} & ComponentProps<"table">;
 
 /** *
  * @function Table

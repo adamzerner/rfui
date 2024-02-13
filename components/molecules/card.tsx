@@ -1,4 +1,4 @@
-import type { ComponentChild, JSX } from "preact";
+import type { ComponentChild, ComponentProps } from "preact";
 import { getChildren } from "../../utilities/get-children.ts";
 
 export type CardType = {
@@ -9,7 +9,7 @@ export type CardType = {
   topAccent?: boolean;
   leftAccent?: boolean;
   children: ComponentChild;
-} & Omit<JSX.IntrinsicElements["div"], "size">;
+} & Omit<ComponentProps<"div">, "size">;
 
 /** *
  * @function Card
@@ -130,7 +130,7 @@ const getComponents = (_children: any) => {
 export const CardHeader = (
   { children, ...rest }:
     & { children: ComponentChild }
-    & JSX.IntrinsicElements["div"],
+    & ComponentProps<"div">,
 ) => {
   const { class: restClass, ...restWithoutClass } = rest;
   let className = "rfui-card-header";
@@ -145,7 +145,7 @@ export const CardHeader = (
 export const CardBody = (
   { children, ...rest }:
     & { children: ComponentChild }
-    & JSX.IntrinsicElements["div"],
+    & ComponentProps<"div">,
 ) => {
   const { class: restClass, ...restWithoutClass } = rest;
   let className = "rfui-card-body";
@@ -160,7 +160,7 @@ export const CardBody = (
 export const CardFooter = (
   { children, ...rest }:
     & { children: ComponentChild }
-    & JSX.IntrinsicElements["div"],
+    & ComponentProps<"div">,
 ) => {
   const { class: restClass, ...restWithoutClass } = rest;
   let className = "rfui-card-footer";

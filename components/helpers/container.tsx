@@ -1,8 +1,8 @@
-import { ComponentChild, JSX } from "preact";
+import type { ComponentChild, ComponentProps } from "preact";
 
 export type ContainerType =
   & { size?: "sm" | "md" | "lg" | "xl"; children: ComponentChild }
-  & Omit<JSX.IntrinsicElements["div"], "size">;
+  & Omit<ComponentProps<"div">, "size">;
 
 /** *
  * @function Container

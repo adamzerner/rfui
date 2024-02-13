@@ -1,6 +1,6 @@
 // Something about this being an island is making the types weird.
 // deno-lint-ignore-file no-explicit-any
-import type { ComponentChild, JSX } from "preact";
+import type { ComponentChild, ComponentProps } from "preact";
 import { useState } from "preact/hooks";
 import { Flex } from "../../components/helpers/flex.tsx";
 import { CloseIcon } from "../../components/icons/close-icon.tsx";
@@ -10,7 +10,7 @@ export type AlertType = {
   variant?: "success" | "info" | "warning" | "danger" | "neutral";
   isDismissable?: boolean;
   children: any;
-} & Omit<JSX.IntrinsicElements["div"], "size">;
+} & Omit<ComponentProps<"div">, "size">;
 
 /** *
  * @function Alert
@@ -135,7 +135,7 @@ const getComponents = (_children: any) => {
 export const AlertHeader = (
   { children, ...rest }:
     & { children: ComponentChild }
-    & JSX.IntrinsicElements["div"],
+    & ComponentProps<"div">,
 ) => {
   return <div {...rest}>{children}</div>;
 };
@@ -143,7 +143,7 @@ export const AlertHeader = (
 export const AlertBody = (
   { children, ...rest }:
     & { children: ComponentChild }
-    & JSX.IntrinsicElements["div"],
+    & ComponentProps<"div">,
 ) => {
   return <div {...rest}>{children}</div>;
 };

@@ -1,4 +1,4 @@
-import type { JSX } from "preact";
+import type { ComponentProps } from "preact";
 import { PasswordInput } from "../../islands/molecules/password-input.tsx";
 import { Checkbox } from "../atoms/checkbox.tsx";
 import { Input } from "../atoms/input.tsx";
@@ -9,10 +9,10 @@ import { XCircleIcon } from "../icons/x-circle-icon.tsx";
 
 export type FormFieldType = {
   label: string;
-  name?: JSX.IntrinsicElements["input"]["name"];
-  value?: JSX.IntrinsicElements["input"]["value"];
+  name?: ComponentProps<"input">["name"];
+  value?: ComponentProps<"input">["value"];
   type?:
-    | JSX.IntrinsicElements["input"]["type"]
+    | ComponentProps<"input">["type"]
     | "rfui-password-input"
     | "switch";
   required?: boolean;
@@ -24,10 +24,10 @@ export type FormFieldType = {
   invalid?: boolean;
   errorText?: string;
   inputRest?: Omit<
-    JSX.IntrinsicElements["input"],
+    ComponentProps<"input">,
     "name" | "value" | "type" | "required" | "size" | "rounded" | "invalid"
   >;
-} & Omit<JSX.IntrinsicElements["div"], "size">;
+} & Omit<ComponentProps<"div">, "size">;
 
 /** *
  * @function FormField
@@ -89,7 +89,7 @@ export const FormField = (
         <Flex
           class={`${smallFontClass} text-supporting-red-700 mb-1 gap-1 items-center`}
         >
-          <XCircleIcon className={size === "sm" ? "w-4 h-4" : null} />{" "}
+          <XCircleIcon class={size === "sm" ? "w-4 h-4" : undefined} />{" "}
           {errorText}
         </Flex>
       )}

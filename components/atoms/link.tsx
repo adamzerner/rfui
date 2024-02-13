@@ -1,5 +1,4 @@
-import type { JSX } from "preact";
-import { ComponentChild } from "preact";
+import type { ComponentChild, ComponentProps } from "preact";
 import { NewTabIcon } from "../icons/new-tab-icon.tsx";
 
 export type LinkType = {
@@ -9,7 +8,7 @@ export type LinkType = {
   _newTab?: boolean;
   _includeNewTabIcon?: boolean;
   children: ComponentChild;
-} & JSX.IntrinsicElements["a"];
+} & ComponentProps<"a">;
 
 /** *
  * @function Link

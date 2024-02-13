@@ -513,19 +513,19 @@ export default () => {
   }, {
     name: "name",
     required: false,
-    type: 'JSX.IntrinsicElements["input"]["name"]',
+    type: 'ComponentProps<"input">["name"]',
     default: null,
     notes: null,
   }, {
     name: "value",
     required: false,
-    type: 'JSX.IntrinsicElements["input"]["value"]',
+    type: 'ComponentProps<"input">["value"]',
     default: null,
     notes: null,
   }, {
     name: "type",
     required: false,
-    type: 'JSX.IntrinsicElements["input"]["type"] | "rfui-password-input"',
+    type: 'ComponentProps<"input">["type"] | "rfui-password-input"',
     default: null,
     notes: null,
   }, {
@@ -604,7 +604,7 @@ export default () => {
     name: "inputRest",
     required: false,
     type:
-      'Omit<JSX.IntrinsicElements["input"], "name" | "value" | "type" | "required" | "size" | "rounded" | "invalid">',
+      'Omit<ComponentProps<"input">, "name" | "value" | "type" | "required" | "size" | "rounded" | "invalid">',
     default: null,
     notes: (
       <div>
@@ -628,7 +628,7 @@ export default () => {
   }, {
     name: "...rest",
     required: false,
-    type: 'Omit<JSX.IntrinsicElements["div"], "size">',
+    type: 'Omit<ComponentProps<"div">, "size">',
     default: null,
     notes: (
       <div>

@@ -1,11 +1,11 @@
-import { ComponentChild, JSX } from "preact";
+import type { ComponentChild, ComponentProps } from "preact";
 
 export type BadgeType = {
   type?: "neutral" | "info" | "success" | "warning" | "danger";
   size?: "sm" | "md" | "lg";
   rounded?: "square" | "sm" | "lg" | "full";
   children: ComponentChild;
-} & Omit<JSX.IntrinsicElements["div"], "size">;
+} & Omit<ComponentProps<"div">, "size">;
 
 /**
  * @function Badge

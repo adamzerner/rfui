@@ -42,7 +42,7 @@ export default () => {
   }, {
     name: "...rest",
     required: false,
-    type: 'JSX.IntrinsicElements["code"]',
+    type: 'ComponentProps<"code">',
     default: null,
     notes: (
       <div>

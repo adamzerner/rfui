@@ -95,7 +95,7 @@ export default () => {
   const props = [{
     name: "...rest",
     required: false,
-    type: 'JSX.IntrinsicElements["input"]',
+    type: 'ComponentProps<"input">',
     default: null,
     notes: (
       <div>

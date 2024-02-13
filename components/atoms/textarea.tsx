@@ -1,10 +1,10 @@
-import { ComponentChild, JSX } from "preact";
+import type { ComponentChild, ComponentProps } from "preact";
 
 export type TextareaType = {
   rounded?: "square" | "sm" | "lg";
   invalid?: boolean;
   children?: ComponentChild;
-} & JSX.IntrinsicElements["textarea"];
+} & ComponentProps<"textarea">;
 
 /** *
  * @function Textarea

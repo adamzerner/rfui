@@ -1,5 +1,5 @@
 import { Signal } from "@preact/signals";
-import { ComponentChild } from "preact";
+import type { ComponentChild } from "preact";
 import {
   RadioButton,
   RadioButtonType,

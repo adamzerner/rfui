@@ -1,10 +1,10 @@
-import { ComponentChild, JSX } from "preact";
+import type { ComponentChild, ComponentProps } from "preact";
 import { Stack } from "../helpers/stack.tsx";
 
 export type TextType = {
   size?: "sm" | "md" | "lg";
   children: ComponentChild;
-} & Omit<JSX.IntrinsicElements["div"], "size">;
+} & Omit<ComponentProps<"div">, "size">;
 
 /** *
  * @function Text

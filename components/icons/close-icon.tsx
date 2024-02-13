@@ -1,12 +1,11 @@
-import type { JSX } from "preact";
+import type { ComponentProps } from "preact";
 
 export const CloseIcon = (
-  { ...rest }: JSX.SVGAttributes<HTMLElement & SVGElement>,
+  { ...rest }: ComponentProps<"svg">,
 ) => {
   const { className: restClass, ...restWithoutClass } = rest;
 
   return (
-    // @ts-expect-error I'm not sure what the issue is here
     <svg
       xmlns="http://www.w3.org/2000/svg"
       fill="none"

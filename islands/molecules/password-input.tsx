@@ -1,11 +1,11 @@
-import { JSX } from "preact";
+import type { ComponentProps } from "preact";
 import { useState } from "preact/hooks";
 import { Input, InputType } from "../../components/atoms/input.tsx";
 import { Flex } from "../../components/helpers/flex.tsx";
 
 export type PasswordInputType = {
   defaultVisibility?: "hidden" | "shown";
-  containerProps?: Omit<JSX.IntrinsicElements["div"], "size">;
+  containerProps?: Omit<ComponentProps<"div">, "size">;
 } & InputType;
 
 /** *

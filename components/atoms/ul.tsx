@@ -1,10 +1,10 @@
-import { ComponentChild, JSX } from "preact";
+import type { ComponentChild, ComponentProps } from "preact";
 
 export type ULType = {
   bulletType?: "bullet" | "check" | "arrow" | "triangle" | "none";
   bulletLocation?: "inside" | "outside";
   children: ComponentChild;
-} & JSX.IntrinsicElements["ul"];
+} & ComponentProps<"ul">;
 
 /** *
  * @function UL

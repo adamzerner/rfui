@@ -1,10 +1,10 @@
-import type { JSX } from "preact";
+import type { ComponentProps } from "preact";
 import { useEffect } from "preact/hooks";
 
 export type CodeBlockType = {
   code: string;
   language?: string;
-} & JSX.IntrinsicElements["pre"];
+} & ComponentProps<"pre">;
 
 /** *
  * @function CodeBlock

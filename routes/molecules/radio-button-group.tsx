@@ -66,6 +66,24 @@ export default () => {
     ),
   }];
   const props = [{
+    name: "name",
+    required: false,
+    type: "string",
+    default: null,
+    notes: (
+      <div>
+        This will be passed to the{" "}
+        <InlineCode>{`<input type="radio" />`}</InlineCode> in{" "}
+        <InlineCode>{`RadioButtonGroupItem`}</InlineCode>.
+      </div>
+    ),
+  }, {
+    name: "onChange",
+    required: false,
+    type: '(newSelectedVal: RadioButtonType["value"]) => void',
+    default: null,
+    notes: null,
+  }, {
     name: "children",
     required: true,
     type: "ComponentChild",

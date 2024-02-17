@@ -19,6 +19,19 @@ import {
 
 export default () => {
   const notes = null;
+  const topExample = (
+    <RadioButtonGroup name="the-plan">
+      <RadioButtonGroupItem value="free">
+        Free
+      </RadioButtonGroupItem>
+      <RadioButtonGroupItem value="basic">
+        Basic
+      </RadioButtonGroupItem>
+      <RadioButtonGroupItem value="premium">
+        Premium
+      </RadioButtonGroupItem>
+    </RadioButtonGroup>
+  );
   const sections: SectionType[] = [{
     title: "Basic",
     example: (
@@ -107,7 +120,7 @@ export default () => {
         sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/islands/molecules/radio-button-group.tsx"
         importStatement='import { RadioButtonGroup, RadioButtonGroupItem } from "rfui";'
       >
-        <Example>{sections[0].example}</Example>
+        <Example>{topExample}</Example>
         <Notes>{notes}</Notes>
       </Header>
       {sections.map((section) => (

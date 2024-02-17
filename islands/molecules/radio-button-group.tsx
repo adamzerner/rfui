@@ -1,3 +1,4 @@
+import { getChildren } from "@/utilities/get-children.ts";
 import {
   cloneElement,
   ComponentChild,
@@ -44,10 +45,11 @@ export type RadioButtonGroupItemType = {
 export const RadioButtonGroup = (
   { name, children, onChange }: RadioButtonGroupType,
 ) => {
-  console.log(name);
+  const theChildren = toChildArray(getChildren(children));
+
   return (
     <Stack class="gap-3">
-      {toChildArray(children)
+      {theChildren
         // deno-lint-ignore no-explicit-any
         .map((child: any) =>
           cloneElement(child, {

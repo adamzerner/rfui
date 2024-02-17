@@ -76,6 +76,11 @@ export {
   RadioButtonCardGroupItem,
 } from "./islands/molecules/radio-button-card-group.tsx";
 export type { RadioButtonCardGroupType } from "./islands/molecules/radio-button-card-group.tsx";
+export {
+  RadioButtonGroup,
+  RadioButtonGroupItem,
+} from "./islands/molecules/radio-button-group.tsx";
+export type { RadioButtonGroupType } from "./islands/molecules/radio-button-group.tsx";
 export { Stepper } from "./islands/molecules/stepper.tsx";
 export type { StepperType } from "./islands/molecules/stepper.tsx";
 export { Tabs, TabSection } from "./islands/molecules/tabs.tsx";

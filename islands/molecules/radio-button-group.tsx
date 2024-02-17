@@ -71,7 +71,10 @@ export const RadioButtonGroupItem = (
   const { class: restClass, ...restWithoutClass } = rest;
 
   return (
-    <label class="flex gap-3 items-center cursor-pointer" {...restWithoutClass}>
+    <label
+      class={`flex gap-3 items-center cursor-pointer ${restClass}`}
+      {...restWithoutClass}
+    >
       <RadioButton
         name={name}
         value={value}

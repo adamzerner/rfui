@@ -18,6 +18,7 @@ export type RadioButtonGroupType = {
 };
 
 export type RadioButtonGroupItemType = {
+  name?: string;
   value?: RadioButtonType["value"];
   radioButtonRest?: Omit<RadioButtonType, "size" | "name" | "value">;
   children: ComponentChild;

@@ -44,8 +44,9 @@ export type RadioButtonGroupItemType = {
 export const RadioButtonGroup = (
   { name, children, onChange }: RadioButtonGroupType,
 ) => {
+  console.log(name);
   return (
-    <Stack>
+    <Stack class="gap-3">
       {toChildArray(children)
         // deno-lint-ignore no-explicit-any
         .map((child: any) =>
@@ -58,7 +59,6 @@ export const RadioButtonGroup = (
             },
           })
         )}
-      {children}
     </Stack>
   );
 };
@@ -69,7 +69,7 @@ export const RadioButtonGroupItem = (
   const { class: restClass, ...restWithoutClass } = rest;
 
   return (
-    <label class="flex gap-2" {...restWithoutClass}>
+    <label class="flex gap-2 items-center cursor-pointer" {...restWithoutClass}>
       <RadioButton
         name={name}
         value={value}

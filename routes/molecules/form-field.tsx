@@ -354,17 +354,12 @@ export default () => {
     description: (
       <Stack class="gap-3">
         <div>
-          <InlineCode>type</InlineCode> gets passed to{" "}
+          <InlineCode>type</InlineCode> usually gets passed to{" "}
           <Link href="/atoms/input">
             <InlineCode>Input</InlineCode>
-          </Link>. However, there are two minor exceptions:{" "}
-          <Link href="#checkbox">
-            <InlineCode>"checkbox"</InlineCode>
-          </Link>{" "}
-          and{" "}
-          <Link href="#passwordinput">
-            <InlineCode>"rfui-password-input"</InlineCode>
-          </Link>.
+          </Link>. However, for some of the values a component other than{" "}
+          <InlineCode>Input</InlineCode>{" "}
+          is used. See the examples in the following sections.
         </div>
         <div>
           RFUI's <InlineCode>Input</InlineCode> component wraps the native HTML

@@ -183,7 +183,7 @@ export const FormField = (
           <RadioButtonGroup
             id={id}
             name={name as string}
-            class={`block w-full ${radioButtonGroupRest?.class}`}
+            class={`block w-full mt-3 ${radioButtonGroupRest?.class}`}
             {...radioButtonGroupRest}
           >
             {radioButtonGroupOptions.map(({ value, display }) => (

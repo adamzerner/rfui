@@ -51,7 +51,7 @@ export const Footer = () => {
         <FooterItem href="https://stackblitz.com/edit/react-posvdg?file=src%2FApp.js">
           Controlled form
         </FooterItem>
-        <FooterItem href="#">
+        <FooterItem href="https://stackblitz.com/edit/react-vskqay?file=src%2FApp.js">
           Text-centric page
         </FooterItem>
       </FooterColumn>

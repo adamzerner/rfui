@@ -24,7 +24,10 @@ export const Props = (
           </H1>
         )}
 
-      <div class="grid grid-cols-1 sm:grid-cols-3 gap-y-5 sm:gap-y-10 justify-items-start place-items-start">
+      <div
+        class="grid grid-cols-1 sm:grid-cols-3 gap-y-5 sm:gap-y-10 gap-x-3 justify-items-start place-items-start"
+        style={{ overflowWrap: "anywhere" }}
+      >
         {children}
       </div>
     </section>

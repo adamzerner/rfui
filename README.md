@@ -28,6 +28,7 @@ To create a new version of this library (be sure to follow
   - Type in the new version in the input field.
   - Click "Create a new tag".
   - Fill in other fields and submit.
+- Test in [`cannabis-journal`](https://github.com/adamzerner/cannabis-journal).
 - Update [`rfui-react`](https://github.com/adamzerner/rfui) (see the README in
   that repo for more information).
 

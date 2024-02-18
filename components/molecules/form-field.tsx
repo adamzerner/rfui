@@ -1,8 +1,17 @@
 import type { ComponentProps } from "preact";
 import { PasswordInput } from "../../islands/molecules/password-input.tsx";
+import type { RadioButtonGroupType } from "../../islands/molecules/radio-button-group.tsx";
+import {
+  RadioButtonGroup,
+  RadioButtonGroupItem,
+} from "../../islands/molecules/radio-button-group.tsx";
 import { Checkbox } from "../atoms/checkbox.tsx";
 import { Input } from "../atoms/input.tsx";
+import type { SelectType } from "../atoms/select.tsx";
+import { Select } from "../atoms/select.tsx";
 import { Switch } from "../atoms/switch.tsx";
+import type { TextareaType } from "../atoms/textarea.tsx";
+import { Textarea } from "../atoms/textarea.tsx";
 import { Flex } from "../helpers/flex.tsx";
 import { XCircleIcon } from "../icons/x-circle-icon.tsx";
 
@@ -12,8 +21,11 @@ export type FormFieldType = {
   value?: ComponentProps<"input">["value"];
   type?:
     | ComponentProps<"input">["type"]
+    | "switch"
     | "rfui-password-input"
-    | "switch";
+    | "textarea"
+    | "radio-button-group"
+    | "select";
   required?: boolean;
   requiredIndicator?: "text" | "asterisk" | "none";
   optionalIndicator?: "text" | "asterisk" | "none";
@@ -22,9 +34,29 @@ export type FormFieldType = {
   rounded?: "square" | "sm" | "lg" | "full";
   invalid?: boolean;
   errorText?: string;
+  radioButtonGroupOptions?: {
+    value: string;
+    display: string;
+  }[];
+  selectOptions?: {
+    value: string;
+    display: string;
+  }[];
   inputRest?: Omit<
     ComponentProps<"input">,
     "name" | "value" | "type" | "required" | "size" | "rounded" | "invalid"
+  >;
+  textareaRest?: Omit<
+    TextareaType,
+    "id" | "name" | "value" | "required" | "invalid"
+  >;
+  radioButtonGroupRest?: Omit<
+    RadioButtonGroupType,
+    "id" | "name" | "value" | "required" | "invalid"
+  >;
+  selectRest?: Omit<
+    SelectType,
+    "id" | "name" | "value" | "required" | "invalid"
   >;
 } & Omit<ComponentProps<"div">, "size">;
 
@@ -52,7 +84,12 @@ export const FormField = (
     rounded,
     invalid = false,
     errorText,
+    radioButtonGroupOptions,
+    selectOptions,
     inputRest,
+    textareaRest,
+    radioButtonGroupRest,
+    selectRest,
     ...rest
   }: FormFieldType,
 ) => {
@@ -129,6 +166,50 @@ export const FormField = (
             class={`block w-full ${inputRest?.class}`}
             {...inputRest}
           />
+        )
+        : type === "textarea"
+        ? (
+          <Textarea
+            id={id}
+            name={name}
+            value={value}
+            required={required}
+            invalid={invalid}
+            class={`block w-full ${textareaRest?.class}`}
+            {...textareaRest}
+          >
+          </Textarea>
+        )
+        : type === "radio-button-group" && radioButtonGroupOptions
+        ? (
+          <RadioButtonGroup
+            id={id}
+            name={name as string}
+            class={`block w-full mt-3 ${radioButtonGroupRest?.class}`}
+            {...radioButtonGroupRest}
+          >
+            {radioButtonGroupOptions.map(({ value, display }) => (
+              <RadioButtonGroupItem value={value}>
+                {display}
+              </RadioButtonGroupItem>
+            ))}
+          </RadioButtonGroup>
+        )
+        : type === "select" && selectOptions
+        ? (
+          <Select
+            id={id}
+            name={name}
+            value={value}
+            required={required}
+            invalid={invalid}
+            class={`block w-full ${selectRest?.class}`}
+            {...selectRest}
+          >
+            {selectOptions.map(({ value, display }) => (
+              <option value={value}>{display}</option>
+            ))}
+          </Select>
         )
         : (
           <Input

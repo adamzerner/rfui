@@ -354,17 +354,12 @@ export default () => {
     description: (
       <Stack class="gap-3">
         <div>
-          <InlineCode>type</InlineCode> gets passed to{" "}
+          <InlineCode>type</InlineCode> usually gets passed to{" "}
           <Link href="/atoms/input">
             <InlineCode>Input</InlineCode>
-          </Link>. However, there are two minor exceptions:{" "}
-          <Link href="#checkbox">
-            <InlineCode>"checkbox"</InlineCode>
-          </Link>{" "}
-          and{" "}
-          <Link href="#passwordinput">
-            <InlineCode>"rfui-password-input"</InlineCode>
-          </Link>.
+          </Link>. However, for some of the values a component other than{" "}
+          <InlineCode>Input</InlineCode>{" "}
+          is used. See the examples in the following sections.
         </div>
         <div>
           RFUI's <InlineCode>Input</InlineCode> component wraps the native HTML
@@ -479,6 +474,107 @@ export default () => {
         code={`<FormField label="Password" type="rfui-password-input" value="foobar" />`}
       />
     ),
+  }, {
+    title: "Textarea",
+    description: (
+      <div>
+        To use{" "}
+        <Link href="/molecules/textarea">
+          <InlineCode>Textarea</InlineCode>
+        </Link>{" "}
+        with <InlineCode>FormField</InlineCode> set{" "}
+        <InlineCode>type</InlineCode> to <InlineCode>"textarea"</InlineCode>.
+      </div>
+    ),
+    example: <FormField label="Notes" type="textarea" />,
+    exampleCode: (
+      <CodeBlock
+        class="mt-4"
+        language="tsx"
+        code={`<FormField label="Notes" type="textarea" />`}
+      />
+    ),
+  }, {
+    title: "RadioButtonGroup",
+    description: (
+      <div>
+        To use{" "}
+        <Link href="/molecules/radio-button-group">
+          <InlineCode>RadioButtonGroup</InlineCode>
+        </Link>{" "}
+        with <InlineCode>FormField</InlineCode> set{" "}
+        <InlineCode>type</InlineCode> to{" "}
+        <InlineCode>"radio-button-group"</InlineCode> and use{" "}
+        <InlineCode>radioButtonGroupOptions</InlineCode> like so:
+      </div>
+    ),
+    example: (
+      <FormField
+        label="Plan"
+        type="radio-button-group"
+        name="plan"
+        radioButtonGroupOptions={[
+          { value: "free", display: "Free" },
+          { value: "basic", display: "Basic" },
+          { value: "premium", display: "Premium" },
+        ]}
+      />
+    ),
+    exampleCode: (
+      <CodeBlock
+        class="mt-4"
+        language="tsx"
+        code={`<FormField
+  label="Plan"
+  type="radio-button-group"
+  name="plan"
+  radioButtonGroupOptions={[
+    { value: "free", display: "Free" },
+    { value: "basic", display: "Basic" },
+    { value: "premium", display: "Premium" },
+  ]}
+/>`}
+      />
+    ),
+  }, {
+    title: "Select",
+    description: (
+      <div>
+        To use{" "}
+        <Link href="/molecules/select">
+          <InlineCode>Select</InlineCode>
+        </Link>{" "}
+        with <InlineCode>FormField</InlineCode> set{" "}
+        <InlineCode>type</InlineCode> to <InlineCode>"select"</InlineCode>{" "}
+        and use <InlineCode>selectOptions</InlineCode> like so:
+      </div>
+    ),
+    example: (
+      <FormField
+        label="Country"
+        type="select"
+        selectOptions={[
+          { value: "united-states", display: "United States" },
+          { value: "france", display: "France" },
+          { value: "japan", display: "Japan" },
+        ]}
+      />
+    ),
+    exampleCode: (
+      <CodeBlock
+        class="mt-4"
+        language="tsx"
+        code={`<FormField
+  label="Country"
+  type="select"
+  selectOptions={[
+    { value: "united-states", display: "United States" },
+    { value: "france", display: "France" },
+    { value: "japan", display: "Japan" },
+  ]}
+/>`}
+      />
+    ),
   }];
   const props = [{
     name: "label",
@@ -577,6 +673,31 @@ export default () => {
     default: null,
     notes: null,
   }, {
+    name: "radioButtonGroupOptions",
+    required: false,
+    type: "{ value: string; display: string; }[]",
+    default: null,
+    notes: (
+      <div>
+        This is to be used to be used to construct{" "}
+        <InlineCode>{`<input type="radio">`}</InlineCode> elements when you have
+        {" "}
+        <InlineCode>type="radio-button-group"</InlineCode>.
+      </div>
+    ),
+  }, {
+    name: "selectOptions",
+    required: false,
+    type: "{ value: string; display: string; }[]",
+    default: null,
+    notes: (
+      <div>
+        This is to be used to be used to construct{" "}
+        <InlineCode>{`<option>`}</InlineCode> elements when you have{" "}
+        <InlineCode>type="select"</InlineCode>.
+      </div>
+    ),
+  }, {
     name: "inputRest",
     required: false,
     type:
@@ -599,6 +720,93 @@ export default () => {
           <InlineCode>inputRest</InlineCode> gets passed like this:
         </div>
         <CodeBlock language="tsx" code={`<Input {...inputRest} />`} />
+      </div>
+    ),
+  }, {
+    name: "textareaRest",
+    required: false,
+    type:
+      'Omit<TextareaType, "id" | "name" | "value" | "required" | "invalid">',
+    default: null,
+    notes: (
+      <div>
+        <div>
+          The structure of <InlineCode>FormField</InlineCode> when used with
+          {" "}
+          <InlineCode>type="textarea"</InlineCode> is something like this:
+        </div>
+        <CodeBlock
+          language="tsx"
+          code={`<div>
+  ...
+  <Textarea></Textarea>
+</div>`}
+        />
+        <div class="mt-4 mb-3">
+          <InlineCode>textareaRest</InlineCode> gets passed like this:
+        </div>
+        <CodeBlock
+          language="tsx"
+          code={`<Textarea {...textareaRest}></Textarea>`}
+        />
+      </div>
+    ),
+  }, {
+    name: "radioButtonGroupRest",
+    required: false,
+    type:
+      'Omit<RadioButtonGroupType, "id" | "name" | "value" | "required" | "invalid">',
+    default: null,
+    notes: (
+      <div>
+        <div>
+          The structure of <InlineCode>FormField</InlineCode> when used with
+          {" "}
+          <InlineCode>type="radio-button-group"</InlineCode>{" "}
+          is something like this:
+        </div>
+        <CodeBlock
+          language="tsx"
+          code={`<div>
+  ...
+  <RadioButtonGroup></RadioButtonGroup>
+</div>`}
+        />
+        <div class="mt-4 mb-3">
+          <InlineCode>radioButtonGroupRest</InlineCode> gets passed like this:
+        </div>
+        <CodeBlock
+          language="tsx"
+          code={`<RadioButtonGroup {...radioButtonGroupRest}></RadioButtonGroup>`}
+        />
+      </div>
+    ),
+  }, {
+    name: "selectRest",
+    required: false,
+    type: 'Omit<SelectType, "id" | "name" | "value" | "required" | "invalid">',
+    default: null,
+    notes: (
+      <div>
+        <div>
+          The structure of <InlineCode>FormField</InlineCode> when used with
+          {" "}
+          <InlineCode>type="select"</InlineCode> is something like this:
+        </div>
+        <CodeBlock
+          language="tsx"
+          code={`<div>
+  ...
+  <Select></Select>
+</div>`}
+        />
+        <div class="mt-4 mb-3">
+          <InlineCode>selectRest</InlineCode> gets passed like this:
+        </div>
+        <CodeBlock
+          language="tsx"
+          code={`<Select {...selectRest}></Select>`}
+        />
       </div>
     ),
   }, {

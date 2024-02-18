@@ -2,7 +2,10 @@ import type { ComponentProps } from "preact";
 import { PasswordInput } from "../../islands/molecules/password-input.tsx";
 import { Checkbox } from "../atoms/checkbox.tsx";
 import { Input } from "../atoms/input.tsx";
+import type { SelectType } from "../atoms/select.tsx";
+import { Select } from "../atoms/select.tsx";
 import { Switch } from "../atoms/switch.tsx";
+import type { TextareaType } from "../atoms/textarea.tsx";
 import { Textarea } from "../atoms/textarea.tsx";
 import { Flex } from "../helpers/flex.tsx";
 import { XCircleIcon } from "../icons/x-circle-icon.tsx";
@@ -24,12 +27,20 @@ export type FormFieldType = {
   rounded?: "square" | "sm" | "lg" | "full";
   invalid?: boolean;
   errorText?: string;
+  selectOptions?: {
+    value: string;
+    display: string;
+  }[];
   inputRest?: Omit<
     ComponentProps<"input">,
     "name" | "value" | "type" | "required" | "size" | "rounded" | "invalid"
   >;
   textareaRest?: Omit<
-    ComponentProps<"textarea">,
+    TextareaType,
+    "id" | "name" | "value" | "required" | "invalid"
+  >;
+  selectRest?: Omit<
+    SelectType,
     "id" | "name" | "value" | "required" | "invalid"
   >;
 } & Omit<ComponentProps<"div">, "size">;
@@ -58,8 +69,10 @@ export const FormField = (
     rounded,
     invalid = false,
     errorText,
+    selectOptions,
     inputRest,
     textareaRest,
+    selectRest,
     ...rest
   }: FormFieldType,
 ) => {
@@ -149,6 +162,22 @@ export const FormField = (
             {...textareaRest}
           >
           </Textarea>
+        )
+        : type === "select" && selectOptions
+        ? (
+          <Select
+            id={id}
+            name={name}
+            value={value}
+            required={required}
+            invalid={invalid}
+            class={`block w-full ${selectRest?.class}`}
+            {...selectRest}
+          >
+            {selectOptions.map(({ value, display }) => (
+              <option value={value}>{display}</option>
+            ))}
+          </Select>
         )
         : (
           <Input

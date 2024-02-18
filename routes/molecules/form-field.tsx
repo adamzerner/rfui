@@ -499,6 +499,45 @@ export default () => {
         code={`<FormField label="Notes" type="textarea" />`}
       />
     ),
+  }, {
+    title: "Select",
+    description: (
+      <div>
+        To use{" "}
+        <Link href="/molecules/select">
+          <InlineCode>Select</InlineCode>
+        </Link>{" "}
+        with <InlineCode>FormField</InlineCode> set{" "}
+        <InlineCode>type</InlineCode> to <InlineCode>"select"</InlineCode>{" "}
+        and use <InlineCode>selectOptions</InlineCode> like so:
+      </div>
+    ),
+    example: (
+      <FormField
+        label="Plan"
+        type="select"
+        selectOptions={[
+          { value: "united-states", display: "United States" },
+          { value: "france", display: "France" },
+          { value: "japan", display: "Japan" },
+        ]}
+      />
+    ),
+    exampleCode: (
+      <CodeBlock
+        class="mt-4"
+        language="tsx"
+        code={`<FormField
+  label="Plan"
+  type="select"
+  selectOptions={[
+    { value: "united-states", display: "United States" },
+    { value: "france", display: "France" },
+    { value: "japan", display: "Japan" },
+  ]}
+/>`}
+      />
+    ),
   }];
   const props = [{
     name: "label",
@@ -597,6 +636,18 @@ export default () => {
     default: null,
     notes: null,
   }, {
+    name: "selectOptions",
+    required: false,
+    type: "{ value: string; display: string; }[]",
+    default: null,
+    notes: (
+      <div>
+        This is to be used to be used to construct{" "}
+        <InlineCode>{`<option>`}</InlineCode> elements when you have{" "}
+        <InlineCode>type="select"</InlineCode>.
+      </div>
+    ),
+  }, {
     name: "inputRest",
     required: false,
     type:
@@ -647,6 +698,35 @@ export default () => {
         <CodeBlock
           language="tsx"
           code={`<Textarea {...textareaRest}></Textarea>`}
+        />
+      </div>
+    ),
+  }, {
+    name: "selectRest",
+    required: false,
+    type:
+      'Omit<ComponentProps<"select">, "id" | "name" | "value" | "required" | "invalid">',
+    default: null,
+    notes: (
+      <div>
+        <div>
+          The structure of <InlineCode>FormField</InlineCode> when used with
+          {" "}
+          <InlineCode>type="select"</InlineCode> is something like this:
+        </div>
+        <CodeBlock
+          language="tsx"
+          code={`<div>
+  ...
+  <Select></Select>
+</div>`}
+        />
+        <div class="mt-4 mb-3">
+          <InlineCode>selectRest</InlineCode> gets passed like this:
+        </div>
+        <CodeBlock
+          language="tsx"
+          code={`<Select {...selectRest}></Select>`}
         />
       </div>
     ),

@@ -31,6 +31,10 @@ import {
   RadioButtonCardGroup,
   RadioButtonCardGroupItem,
 } from "@/islands/molecules/radio-button-card-group.tsx";
+import {
+  RadioButtonGroup,
+  RadioButtonGroupItem,
+} from "@/islands/molecules/radio-button-group.tsx";
 import { Stepper } from "@/islands/molecules/stepper.tsx";
 import { Tabs, TabSection } from "@/islands/molecules/tabs.tsx";
 import { useSignal } from "@preact/signals";
@@ -224,6 +228,20 @@ export default () => {
         name: "PasswordInput",
         href: "/molecules/password-input",
         example: <PasswordInput class="bg-neutral-50/20" />,
+      },
+      {
+        name: "RadioButtonGroup",
+        href: "/molecules/radio-button-group",
+        example: (
+          <RadioButtonGroup name="example">
+            <RadioButtonGroupItem value="one">
+              One
+            </RadioButtonGroupItem>
+            <RadioButtonGroupItem value="two">
+              Two
+            </RadioButtonGroupItem>
+          </RadioButtonGroup>
+        ),
       },
       {
         name: "RadioButtonCardGroup",

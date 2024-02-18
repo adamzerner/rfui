@@ -13,7 +13,7 @@ export const Footer = () => {
         <FooterItem href="/about">About</FooterItem>
         <FooterItem href="/philosophy">Philosophy</FooterItem>
         <FooterItem href="/target-audience">Target audience</FooterItem>
-        <FooterItem href="https://stackblitz.com/edit/react-tmwfhl?file=src%2FApp.js">
+        <FooterItem href="https://stackblitz.com/edit/react-c8dwoe?file=src%2FApp.js">
           Playground
         </FooterItem>
         <FooterItem href="https://github.com/users/adamzerner/projects/2">
@@ -48,7 +48,7 @@ export const Footer = () => {
         <FooterItem href="https://stackblitz.com/edit/react-ztswgb?file=src%2FApp.js">
           Uncontrolled form
         </FooterItem>
-        <FooterItem href="#">
+        <FooterItem href="https://stackblitz.com/edit/react-posvdg?file=src%2FApp.js">
           Controlled form
         </FooterItem>
         <FooterItem href="#">

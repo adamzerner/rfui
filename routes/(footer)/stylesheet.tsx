@@ -28,31 +28,31 @@ export default () => {
           need the stylesheet.
         </p>
         <p>
-          Each version of RFUI has it's own stylesheet. For example, v0.1.17 has
+          Each version of RFUI has it's own stylesheet. For example, v0.1.18 has
           {" "}
-          <InlineCode>https://rfui.deno.dev/rfui-v0-1-17.css</InlineCode>. So
+          <InlineCode>https://rfui.deno.dev/rfui-v0-1-18.css</InlineCode>. So
           the simplest thing to do is probably:
         </p>
         <CodeBlock
           language="html"
           code={`<link
   rel="stylesheet"
-  href="https://rfui.deno.dev/rfui-v0-1-17.css"
+  href="https://rfui.deno.dev/rfui-v0-1-18.css"
 />`}
         />
         <p>
           But then you'll have to remember to update this when you upgrade to a
-          new version of RFUI. For example, if you upgrade to v0.1.18 of RFUI
+          new version of RFUI. For example, if you upgrade to v0.1.19 of RFUI
           you'll neeed{" "}
-          <InlineCode>https://rfui.deno.dev/rfui-v0-1-18.css</InlineCode>. It
+          <InlineCode>https://rfui.deno.dev/rfui-v0-1-19.css</InlineCode>. It
           can be easy to forget to do this.
         </p>
         <p>
           So an alternative is to use RFUI's{" "}
           <InlineCode>getStylesheetUrl</InlineCode>{" "}
-          function. If you are on v0.1.17 of RFUI,{" "}
+          function. If you are on v0.1.18 of RFUI,{" "}
           <InlineCode>getStylesheetUrl</InlineCode> will return{" "}
-          <InlineCode>"https://rfui.deno.dev/rfui-v0-1-17.css"</InlineCode>. So
+          <InlineCode>"https://rfui.deno.dev/rfui-v0-1-18.css"</InlineCode>. So
           then, if you want to "set it and forget it", you can do something like
           this:
         </p>
@@ -63,9 +63,9 @@ export default () => {
 <link rel="stylesheet" href={getStylesheetUrl()} />`}
         />
         <p>
-          Then when you upgrade to v0.1.18,{" "}
+          Then when you upgrade to v0.1.19,{" "}
           <InlineCode>getStylesheetUrl</InlineCode> will return{" "}
-          <InlineCode>https://rfui.deno.dev/rfui-v0-1-18.css</InlineCode>{" "}
+          <InlineCode>https://rfui.deno.dev/rfui-v0-1-19.css</InlineCode>{" "}
           and you will have the correct CSS file without needing to make any
           changes.
         </p>

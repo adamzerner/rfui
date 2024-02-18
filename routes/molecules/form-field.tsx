@@ -500,6 +500,48 @@ export default () => {
       />
     ),
   }, {
+    title: "RadioButtonGroup",
+    description: (
+      <div>
+        To use{" "}
+        <Link href="/molecules/radio-button-group">
+          <InlineCode>RadioButtonGroup</InlineCode>
+        </Link>{" "}
+        with <InlineCode>FormField</InlineCode> set{" "}
+        <InlineCode>type</InlineCode> to{" "}
+        <InlineCode>"radio-button-group"</InlineCode> and use{" "}
+        <InlineCode>radioButtonGroupOptions</InlineCode> like so:
+      </div>
+    ),
+    example: (
+      <FormField
+        label="Plan"
+        type="radio-button-group"
+        name="plan"
+        radioButtonGroupOptions={[
+          { value: "free", display: "Free" },
+          { value: "basic", display: "Basic" },
+          { value: "premium", display: "Premium" },
+        ]}
+      />
+    ),
+    exampleCode: (
+      <CodeBlock
+        class="mt-4"
+        language="tsx"
+        code={`<FormField
+  label="Plan"
+  type="radio-button-group"
+  name="plan"
+  radioButtonGroupOptions={[
+    { value: "free", display: "Free" },
+    { value: "basic", display: "Basic" },
+    { value: "premium", display: "Premium" },
+  ]}
+/>`}
+      />
+    ),
+  }, {
     title: "Select",
     description: (
       <div>
@@ -514,7 +556,7 @@ export default () => {
     ),
     example: (
       <FormField
-        label="Plan"
+        label="Country"
         type="select"
         selectOptions={[
           { value: "united-states", display: "United States" },
@@ -528,7 +570,7 @@ export default () => {
         class="mt-4"
         language="tsx"
         code={`<FormField
-  label="Plan"
+  label="Country"
   type="select"
   selectOptions={[
     { value: "united-states", display: "United States" },
@@ -636,6 +678,19 @@ export default () => {
     default: null,
     notes: null,
   }, {
+    name: "radioButtonGroupOptions",
+    required: false,
+    type: "{ value: string; display: string; }[]",
+    default: null,
+    notes: (
+      <div>
+        This is to be used to be used to construct{" "}
+        <InlineCode>{`<input type="radio">`}</InlineCode> elements when you have
+        {" "}
+        <InlineCode>type="radio-button-group"</InlineCode>.
+      </div>
+    ),
+  }, {
     name: "selectOptions",
     required: false,
     type: "{ value: string; display: string; }[]",
@@ -676,7 +731,7 @@ export default () => {
     name: "textareaRest",
     required: false,
     type:
-      'Omit<ComponentProps<"textarea">, "id" | "name" | "value" | "required" | "invalid">',
+      'Omit<TextareaType, "id" | "name" | "value" | "required" | "invalid">',
     default: null,
     notes: (
       <div>
@@ -702,10 +757,39 @@ export default () => {
       </div>
     ),
   }, {
-    name: "selectRest",
+    name: "radioButtonGroupRest",
     required: false,
     type:
-      'Omit<ComponentProps<"select">, "id" | "name" | "value" | "required" | "invalid">',
+      'Omit<RadioButtonGroupType, "id" | "name" | "value" | "required" | "invalid">',
+    default: null,
+    notes: (
+      <div>
+        <div>
+          The structure of <InlineCode>FormField</InlineCode> when used with
+          {" "}
+          <InlineCode>type="radio-button-group"</InlineCode>{" "}
+          is something like this:
+        </div>
+        <CodeBlock
+          language="tsx"
+          code={`<div>
+  ...
+  <RadioButtonGroup></RadioButtonGroup>
+</div>`}
+        />
+        <div class="mt-4 mb-3">
+          <InlineCode>radioButtonGroupRest</InlineCode> gets passed like this:
+        </div>
+        <CodeBlock
+          language="tsx"
+          code={`<RadioButtonGroup {...radioButtonGroupRest}></RadioButtonGroup>`}
+        />
+      </div>
+    ),
+  }, {
+    name: "selectRest",
+    required: false,
+    type: 'Omit<SelectType, "id" | "name" | "value" | "required" | "invalid">',
     default: null,
     notes: (
       <div>

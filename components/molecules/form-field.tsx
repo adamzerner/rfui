@@ -1,5 +1,10 @@
 import type { ComponentProps } from "preact";
 import { PasswordInput } from "../../islands/molecules/password-input.tsx";
+import type { RadioButtonGroupType } from "../../islands/molecules/radio-button-group.tsx";
+import {
+  RadioButtonGroup,
+  RadioButtonGroupItem,
+} from "../../islands/molecules/radio-button-group.tsx";
 import { Checkbox } from "../atoms/checkbox.tsx";
 import { Input } from "../atoms/input.tsx";
 import type { SelectType } from "../atoms/select.tsx";
@@ -27,6 +32,10 @@ export type FormFieldType = {
   rounded?: "square" | "sm" | "lg" | "full";
   invalid?: boolean;
   errorText?: string;
+  radioButtonGroupOptions?: {
+    value: string;
+    display: string;
+  }[];
   selectOptions?: {
     value: string;
     display: string;
@@ -37,6 +46,10 @@ export type FormFieldType = {
   >;
   textareaRest?: Omit<
     TextareaType,
+    "id" | "name" | "value" | "required" | "invalid"
+  >;
+  radioButtonGroupRest?: Omit<
+    RadioButtonGroupType,
     "id" | "name" | "value" | "required" | "invalid"
   >;
   selectRest?: Omit<
@@ -69,9 +82,11 @@ export const FormField = (
     rounded,
     invalid = false,
     errorText,
+    radioButtonGroupOptions,
     selectOptions,
     inputRest,
     textareaRest,
+    radioButtonGroupRest,
     selectRest,
     ...rest
   }: FormFieldType,
@@ -162,6 +177,21 @@ export const FormField = (
             {...textareaRest}
           >
           </Textarea>
+        )
+        : type === "radio-button-group" && radioButtonGroupOptions
+        ? (
+          <RadioButtonGroup
+            id={id}
+            name={name as string}
+            class={`block w-full ${radioButtonGroupRest?.class}`}
+            {...radioButtonGroupRest}
+          >
+            {radioButtonGroupOptions.map(({ value, display }) => (
+              <RadioButtonGroupItem value={value}>
+                {display}
+              </RadioButtonGroupItem>
+            ))}
+          </RadioButtonGroup>
         )
         : type === "select" && selectOptions
         ? (

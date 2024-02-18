@@ -479,6 +479,26 @@ export default () => {
         code={`<FormField label="Password" type="rfui-password-input" value="foobar" />`}
       />
     ),
+  }, {
+    title: "Textarea",
+    description: (
+      <div>
+        To use{" "}
+        <Link href="/molecules/textarea">
+          <InlineCode>Textarea</InlineCode>
+        </Link>{" "}
+        with <InlineCode>FormField</InlineCode> set{" "}
+        <InlineCode>type</InlineCode> to <InlineCode>"textarea"</InlineCode>.
+      </div>
+    ),
+    example: <FormField label="Notes" type="textarea" />,
+    exampleCode: (
+      <CodeBlock
+        class="mt-4"
+        language="tsx"
+        code={`<FormField label="Notes" type="textarea" />`}
+      />
+    ),
   }];
   const props = [{
     name: "label",
@@ -599,6 +619,35 @@ export default () => {
           <InlineCode>inputRest</InlineCode> gets passed like this:
         </div>
         <CodeBlock language="tsx" code={`<Input {...inputRest} />`} />
+      </div>
+    ),
+  }, {
+    name: "textareaRest",
+    required: false,
+    type:
+      'Omit<ComponentProps<"textarea">, "id" | "name" | "value" | "required" | "invalid">',
+    default: null,
+    notes: (
+      <div>
+        <div>
+          The structure of <InlineCode>FormField</InlineCode> when used with
+          {" "}
+          <InlineCode>type="textarea"</InlineCode> is something like this:
+        </div>
+        <CodeBlock
+          language="tsx"
+          code={`<div>
+  ...
+  <Textarea></Textarea>
+</div>`}
+        />
+        <div class="mt-4 mb-3">
+          <InlineCode>textareaRest</InlineCode> gets passed like this:
+        </div>
+        <CodeBlock
+          language="tsx"
+          code={`<Textarea {...textareaRest}></Textarea>`}
+        />
       </div>
     ),
   }, {

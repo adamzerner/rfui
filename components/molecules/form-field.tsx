@@ -3,6 +3,7 @@ import { PasswordInput } from "../../islands/molecules/password-input.tsx";
 import { Checkbox } from "../atoms/checkbox.tsx";
 import { Input } from "../atoms/input.tsx";
 import { Switch } from "../atoms/switch.tsx";
+import { Textarea } from "../atoms/textarea.tsx";
 import { Flex } from "../helpers/flex.tsx";
 import { XCircleIcon } from "../icons/x-circle-icon.tsx";
 
@@ -12,8 +13,9 @@ export type FormFieldType = {
   value?: ComponentProps<"input">["value"];
   type?:
     | ComponentProps<"input">["type"]
+    | "switch"
     | "rfui-password-input"
-    | "switch";
+    | "textarea";
   required?: boolean;
   requiredIndicator?: "text" | "asterisk" | "none";
   optionalIndicator?: "text" | "asterisk" | "none";
@@ -25,6 +27,10 @@ export type FormFieldType = {
   inputRest?: Omit<
     ComponentProps<"input">,
     "name" | "value" | "type" | "required" | "size" | "rounded" | "invalid"
+  >;
+  textareaRest?: Omit<
+    ComponentProps<"textarea">,
+    "id" | "name" | "value" | "required" | "invalid"
   >;
 } & Omit<ComponentProps<"div">, "size">;
 
@@ -53,6 +59,7 @@ export const FormField = (
     invalid = false,
     errorText,
     inputRest,
+    textareaRest,
     ...rest
   }: FormFieldType,
 ) => {
@@ -129,6 +136,19 @@ export const FormField = (
             class={`block w-full ${inputRest?.class}`}
             {...inputRest}
           />
+        )
+        : type === "textarea"
+        ? (
+          <Textarea
+            id={id}
+            name={name}
+            value={value}
+            required={required}
+            invalid={invalid}
+            class={`block w-full ${textareaRest?.class}`}
+            {...textareaRest}
+          >
+          </Textarea>
         )
         : (
           <Input

@@ -13,12 +13,16 @@ export const Footer = () => {
         <FooterItem href="/about">About</FooterItem>
         <FooterItem href="/philosophy">Philosophy</FooterItem>
         <FooterItem href="/target-audience">Target audience</FooterItem>
-        <FooterItem href="https://stackblitz.com/edit/react-tmwfhl?file=src%2FApp.js">
+        <FooterItem href="https://stackblitz.com/edit/react-c8dwoe?file=src%2FApp.js">
           Playground
         </FooterItem>
         <FooterItem href="https://github.com/users/adamzerner/projects/2">
           Roadmap
         </FooterItem>
+        <FooterItem href="mailto:adamzerner@protonmail.com">
+          Contact
+        </FooterItem>
+        <FooterItem href="/faq">FAQ</FooterItem>
       </FooterColumn>
       <FooterColumn>
         <FooterHeading>Docs</FooterHeading>
@@ -40,6 +44,18 @@ export const Footer = () => {
         <FooterItem href="/tutorials/remix">Remix</FooterItem>
       </FooterColumn>
       <FooterColumn>
+        <FooterHeading>Examples</FooterHeading>
+        <FooterItem href="https://stackblitz.com/edit/react-ztswgb?file=src%2FApp.js">
+          Uncontrolled form
+        </FooterItem>
+        <FooterItem href="https://stackblitz.com/edit/react-posvdg?file=src%2FApp.js">
+          Controlled form
+        </FooterItem>
+        <FooterItem href="https://stackblitz.com/edit/react-vskqay?file=src%2FApp.js">
+          Text-centric page
+        </FooterItem>
+      </FooterColumn>
+      <FooterColumn>
         <FooterHeading>Code</FooterHeading>
         <FooterItem href="https://github.com/adamzerner/rfui">
           GitHub
@@ -53,13 +69,6 @@ export const Footer = () => {
         <FooterItem href="https://github.com/adamzerner/rfui/blob/master/LICENSE">
           License
         </FooterItem>
-      </FooterColumn>
-      <FooterColumn>
-        <FooterHeading>Help</FooterHeading>
-        <FooterItem href="mailto:adamzerner@protonmail.com">
-          Contact
-        </FooterItem>
-        <FooterItem href="/faq">FAQ</FooterItem>
       </FooterColumn>
     </RFUIFooter>
   );

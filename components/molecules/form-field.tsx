@@ -1,3 +1,4 @@
+// deno-lint-ignore-file no-explicit-any
 import type { ComponentProps } from "preact";
 import { PasswordInput } from "../../islands/molecules/password-input.tsx";
 import type { RadioButtonGroupType } from "../../islands/molecules/radio-button-group.tsx";
@@ -22,7 +23,9 @@ type ExcludedInputProps =
   | "required"
   | "size"
   | "rounded"
-  | "invalid";
+  | "invalid"
+  | "onChange"
+  | "onInput";
 
 export type FormFieldType = {
   label: string;
@@ -51,6 +54,8 @@ export type FormFieldType = {
     value: string;
     display: string;
   }[];
+  onChange?: (e: any) => void;
+  onInput?: (e: any) => void;
   inputRest?: Omit<ComponentProps<"input">, ExcludedInputProps>;
   textareaRest?: Omit<TextareaType, ExcludedInputProps>;
   radioButtonGroupRest?: Omit<RadioButtonGroupType, ExcludedInputProps>;
@@ -83,6 +88,8 @@ export const FormField = (
     errorText,
     radioButtonGroupOptions,
     selectOptions,
+    onChange,
+    onInput,
     inputRest,
     textareaRest,
     radioButtonGroupRest,
@@ -136,6 +143,8 @@ export const FormField = (
             size={size}
             invalid={invalid}
             class={`mt-1 ${inputRest?.class}`}
+            onChange={onChange}
+            onInput={onInput}
             {...inputRest}
           />
         )
@@ -147,6 +156,8 @@ export const FormField = (
             value={value}
             required={required}
             class={`mt-1 ${inputRest?.class}`}
+            onChange={onChange}
+            onInput={onInput}
             {...inputRest}
           />
         )
@@ -161,6 +172,8 @@ export const FormField = (
             rounded={rounded}
             invalid={invalid}
             class={`block w-full ${inputRest?.class}`}
+            onChange={onChange}
+            onInput={onInput}
             {...inputRest}
           />
         )
@@ -173,6 +186,8 @@ export const FormField = (
             required={required}
             invalid={invalid}
             class={`block w-full ${textareaRest?.class}`}
+            onChange={onChange}
+            onInput={onInput}
             {...textareaRest}
           >
           </Textarea>
@@ -183,6 +198,15 @@ export const FormField = (
             id={id}
             name={name as string}
             class={`block w-full mt-3 ${radioButtonGroupRest?.class}`}
+            onChange={(newVal) => {
+              if (onChange) {
+                onChange({
+                  target: {
+                    value: newVal,
+                  },
+                });
+              }
+            }}
             {...radioButtonGroupRest}
           >
             {radioButtonGroupOptions.map(({ value, display }) => (
@@ -201,6 +225,8 @@ export const FormField = (
             required={required}
             invalid={invalid}
             class={`block w-full ${selectRest?.class}`}
+            onChange={onChange}
+            onInput={onInput}
             {...selectRest}
           >
             {selectOptions.map(({ value, display }) => (
@@ -219,6 +245,8 @@ export const FormField = (
             rounded={rounded}
             invalid={invalid}
             class={`block w-full ${inputRest?.class}`}
+            onChange={onChange}
+            onInput={onInput}
             {...inputRest}
           />
         )}

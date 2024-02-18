@@ -15,6 +15,15 @@ import { Textarea } from "../atoms/textarea.tsx";
 import { Flex } from "../helpers/flex.tsx";
 import { XCircleIcon } from "../icons/x-circle-icon.tsx";
 
+type ExcludedInputProps =
+  | "name"
+  | "value"
+  | "type"
+  | "required"
+  | "size"
+  | "rounded"
+  | "invalid";
+
 export type FormFieldType = {
   label: string;
   name?: ComponentProps<"input">["name"];
@@ -42,22 +51,10 @@ export type FormFieldType = {
     value: string;
     display: string;
   }[];
-  inputRest?: Omit<
-    ComponentProps<"input">,
-    "name" | "value" | "type" | "required" | "size" | "rounded" | "invalid"
-  >;
-  textareaRest?: Omit<
-    TextareaType,
-    "id" | "name" | "value" | "required" | "invalid"
-  >;
-  radioButtonGroupRest?: Omit<
-    RadioButtonGroupType,
-    "id" | "name" | "value" | "required" | "invalid"
-  >;
-  selectRest?: Omit<
-    SelectType,
-    "id" | "name" | "value" | "required" | "invalid"
-  >;
+  inputRest?: Omit<ComponentProps<"input">, ExcludedInputProps>;
+  textareaRest?: Omit<TextareaType, ExcludedInputProps>;
+  radioButtonGroupRest?: Omit<RadioButtonGroupType, ExcludedInputProps>;
+  selectRest?: Omit<SelectType, ExcludedInputProps>;
 } & Omit<ComponentProps<"div">, "size">;
 
 /** *

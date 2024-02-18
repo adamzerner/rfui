@@ -52,7 +52,7 @@ export default () => {
         </p>
         <CodeBlock
           language="ts"
-          code={`"rfui": "https://deno.land/x/rfui@v0.1.18/mod.ts"`}
+          code={`"rfui": "https://deno.land/x/rfui@v0.1.19/mod.ts"`}
         />
         <p>
           to the <InlineCode>"imports"</InlineCode> object.

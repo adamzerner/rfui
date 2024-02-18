@@ -1,4 +1,3 @@
-import { getChildren } from "@/utilities/get-children.ts";
 import {
   cloneElement,
   ComponentChild,
@@ -10,6 +9,7 @@ import {
   RadioButtonType,
 } from "../../components/atoms/radio-button.tsx";
 import { Stack } from "../../components/helpers/stack.tsx";
+import { getChildren } from "../../utilities/get-children.ts";
 
 export type RadioButtonGroupType = {
   name?: string;

@@ -23,7 +23,9 @@ export type FormFieldType = {
     | ComponentProps<"input">["type"]
     | "switch"
     | "rfui-password-input"
-    | "textarea";
+    | "textarea"
+    | "radio-button-group"
+    | "select";
   required?: boolean;
   requiredIndicator?: "text" | "asterisk" | "none";
   optionalIndicator?: "text" | "asterisk" | "none";

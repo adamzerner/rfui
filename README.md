@@ -29,7 +29,6 @@ To create a new version of this library (be sure to follow
   - Click "Create a new tag".
   - Fill in other fields and submit.
 - Test in [`cannabis-journal`](https://github.com/adamzerner/cannabis-journal).
-- Update StackBlitz's.
 - Update [`rfui-react`](https://github.com/adamzerner/rfui) (see the README in
   that repo for more information).
 

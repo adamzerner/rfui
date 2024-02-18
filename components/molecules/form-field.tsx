@@ -210,7 +210,7 @@ export const FormField = (
             {...radioButtonGroupRest}
           >
             {radioButtonGroupOptions.map(({ value, display }) => (
-              <RadioButtonGroupItem value={value}>
+              <RadioButtonGroupItem value={value} key={value}>
                 {display}
               </RadioButtonGroupItem>
             ))}
@@ -230,7 +230,7 @@ export const FormField = (
             {...selectRest}
           >
             {selectOptions.map(({ value, display }) => (
-              <option value={value}>{display}</option>
+              <option value={value} key={value}>{display}</option>
             ))}
           </Select>
         )

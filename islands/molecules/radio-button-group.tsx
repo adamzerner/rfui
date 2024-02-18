@@ -58,7 +58,9 @@ export const RadioButtonGroup = (
           cloneElement(child, {
             name,
             radioButtonRest: {
-              checked: selectedValue === child.props.value,
+              checked: onChange && selectedValue
+                ? selectedValue === child.props.value
+                : undefined,
             },
             onClick: () => {
               if (onChange) {

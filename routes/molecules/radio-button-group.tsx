@@ -64,6 +64,44 @@ export default () => {
 </RadioButtonGroup>`}
       />
     ),
+  }, {
+    title: "Controlled",
+    example: (
+      <RadioButtonGroup name="plan">
+        <RadioButtonGroupItem value="free">
+          Free
+        </RadioButtonGroupItem>
+        <RadioButtonGroupItem value="basic">
+          Basic
+        </RadioButtonGroupItem>
+        <RadioButtonGroupItem value="premium">
+          Premium
+        </RadioButtonGroupItem>
+      </RadioButtonGroup>
+    ),
+    exampleCode: (
+      <CodeBlock
+        class="mt-4"
+        language="tsx"
+        code={`<RadioButtonGroup
+  name="plan"
+  selectedValue={selectedValue}
+  onChange={(newSelectedValue) => {
+    setSelectedValue(newSelectedValue);
+  }}
+>
+  <RadioButtonGroupItem value="free">
+    Free
+  </RadioButtonGroupItem>
+  <RadioButtonGroupItem value="basic">
+    Basic
+  </RadioButtonGroupItem>
+  <RadioButtonGroupItem value="premium">
+    Premium
+  </RadioButtonGroupItem>
+</RadioButtonGroup>`}
+      />
+    ),
   }];
   const props = [{
     name: "name",
@@ -77,6 +115,12 @@ export default () => {
         <InlineCode>{`RadioButtonGroupItem`}</InlineCode>.
       </div>
     ),
+  }, {
+    name: "selectedValue",
+    required: false,
+    type: 'RadioButtonType["value"]',
+    default: null,
+    notes: null,
   }, {
     name: "onChange",
     required: false,

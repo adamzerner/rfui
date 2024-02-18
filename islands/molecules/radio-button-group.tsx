@@ -13,6 +13,7 @@ import { getChildren } from "../../utilities/get-children.ts";
 
 export type RadioButtonGroupType = {
   name?: string;
+  selectedValue?: RadioButtonType["value"];
   onChange?: (newSelectedVal: RadioButtonType["value"]) => void;
   children: ComponentChild;
 } & ComponentProps<"div">;
@@ -44,7 +45,7 @@ export type RadioButtonGroupItemType = {
  */
 
 export const RadioButtonGroup = (
-  { name, children, onChange, ...rest }: RadioButtonGroupType,
+  { name, selectedValue, onChange, children, ...rest }: RadioButtonGroupType,
 ) => {
   const { class: restClass, ...restWithoutClass } = rest;
   const theChildren = toChildArray(getChildren(children));
@@ -56,6 +57,9 @@ export const RadioButtonGroup = (
         .map((child: any) =>
           cloneElement(child, {
             name,
+            radioButtonRest: {
+              checked: selectedValue === child.props.value,
+            },
             onClick: () => {
               if (onChange) {
                 onChange(child.props.value);

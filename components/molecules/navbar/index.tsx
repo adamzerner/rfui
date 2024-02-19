@@ -39,7 +39,7 @@ export const Navbar = (
 ) => {
   const { navbarLeft, navbarRight, numItems } = getComponents(children);
   const { class: restClass, ...restWithoutClass } = rest;
-  let containerClass = "w-full px-auto";
+  let containerClass = "px-auto w-full";
 
   if (sticky) {
     containerClass += " sm:sticky sm:top-0 sm:left-0 sm:z-10";

@@ -27,7 +27,7 @@ export const Checkbox = (
   }: CheckboxType,
 ) => {
   const { class: restClass, ...restWithoutClass } = rest;
-  let className = "rfui-checkbox accent-primary-500 cursor-pointer";
+  let className = "rfui-checkbox cursor-pointer accent-primary-500";
 
   className += " " + (() => {
     switch (size) {

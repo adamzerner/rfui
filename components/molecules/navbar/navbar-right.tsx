@@ -4,7 +4,7 @@ export const NavbarRight = (
   { children }: { children: ComponentChild },
 ) => {
   return (
-    <ul class="flex flex-col sm:flex-row items-stretch sm:gap-6">
+    <ul class="flex flex-col items-stretch sm:flex-row sm:gap-6">
       {children}
     </ul>
   );

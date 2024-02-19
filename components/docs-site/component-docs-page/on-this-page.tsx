@@ -4,7 +4,7 @@ import { Stack } from "@/components/helpers/stack.tsx";
 export const OnThisPage = ({ sectionTitles }: { sectionTitles: string[] }) => {
   return (
     <nav>
-      <div class="font-bold text-neutral-700 mb-4">On this page</div>
+      <div class="mb-4 font-bold text-neutral-700">On this page</div>
       <Stack class="gap-2">
         {sectionTitles.map((sectionTitle) => (
           <Link

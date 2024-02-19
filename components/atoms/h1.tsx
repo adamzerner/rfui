@@ -19,7 +19,7 @@ export const H1 = (
   }: H1Type,
 ) => {
   const { class: restClass, ...restWithoutClass } = rest;
-  let className = "text-4xl text-neutral-700 mt-9 mb-7 max-w-prose";
+  let className = "mb-7 mt-9 max-w-prose text-4xl text-neutral-700";
 
   if (restClass) {
     className += ` ${restClass}`;

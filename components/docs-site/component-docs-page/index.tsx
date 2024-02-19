@@ -11,11 +11,11 @@ export const ComponentDocsPage = (
   { sectionTitles, children }: ComponentDocsPageType,
 ) => {
   return (
-    <Flex class="mt-9 gap-11 max-w-full">
+    <Flex class="mt-9 max-w-full gap-11">
       <div class="hidden lg:flex">
         <OnThisPage sectionTitles={sectionTitles} />
       </div>
-      <main class="flex-1 max-w-full">
+      <main class="max-w-full flex-1">
         {children}
       </main>
     </Flex>

@@ -7,7 +7,7 @@ export default ({ Component, route }: PageProps) => {
   return (
     <>
       <Navbar route={route} />
-      <Container size="xl" class="mt-8 mb-6 font-sans min-h-[200px]">
+      <Container size="xl" class="mb-6 mt-8 min-h-[200px] font-sans">
         <Component />
       </Container>
       <Footer />

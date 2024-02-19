@@ -37,7 +37,7 @@ export default () => {
     title: "Longer example",
     example: (
       <div>
-        <h1 class="text-3xl mb-5">
+        <h1 class="mb-5 text-3xl">
           Lorem ipsum <Highlight>dolor</Highlight> sit amet, consectetur.
         </h1>
         <div>
@@ -58,7 +58,7 @@ export default () => {
         class="mt-4"
         language="tsx"
         code={`<div>
-  <h1 class="text-3xl mb-5">
+  <h1 class="mb-5 text-3xl">
     Lorem ipsum <Highlight>dolor</Highlight> sit amet, consectetur.
   </h1>
   <div>

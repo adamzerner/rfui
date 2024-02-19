@@ -25,7 +25,7 @@ export const Props = (
         )}
 
       <div
-        class="grid grid-cols-1 sm:grid-cols-3 gap-y-5 sm:gap-y-10 gap-x-3 justify-items-start place-items-start"
+        class="grid grid-cols-1 place-items-start justify-items-start gap-x-3 gap-y-5 sm:grid-cols-3 sm:gap-y-10"
         style={{ overflowWrap: "anywhere" }}
       >
         {children}

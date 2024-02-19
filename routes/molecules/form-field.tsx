@@ -716,7 +716,7 @@ export default () => {
   <Input />
 </div>`}
         />
-        <div class="mt-4 mb-3">
+        <div class="mb-3 mt-4">
           <InlineCode>inputRest</InlineCode> gets passed like this:
         </div>
         <CodeBlock language="tsx" code={`<Input {...inputRest} />`} />
@@ -742,7 +742,7 @@ export default () => {
   <Textarea></Textarea>
 </div>`}
         />
-        <div class="mt-4 mb-3">
+        <div class="mb-3 mt-4">
           <InlineCode>textareaRest</InlineCode> gets passed like this:
         </div>
         <CodeBlock
@@ -772,7 +772,7 @@ export default () => {
   <RadioButtonGroup></RadioButtonGroup>
 </div>`}
         />
-        <div class="mt-4 mb-3">
+        <div class="mb-3 mt-4">
           <InlineCode>radioButtonGroupRest</InlineCode> gets passed like this:
         </div>
         <CodeBlock
@@ -800,7 +800,7 @@ export default () => {
   <Select></Select>
 </div>`}
         />
-        <div class="mt-4 mb-3">
+        <div class="mb-3 mt-4">
           <InlineCode>selectRest</InlineCode> gets passed like this:
         </div>
         <CodeBlock

@@ -31,7 +31,7 @@ export const CodeBlock = (
   }: CodeBlockType,
 ) => {
   const { class: restClass, ...restWithoutClass } = rest;
-  let className = "block p-5 bg-neutral-50 whitespace-pre-wrap";
+  let className = "block whitespace-pre-wrap bg-neutral-50 p-5";
 
   if (language) {
     className += ` language-${language}`;

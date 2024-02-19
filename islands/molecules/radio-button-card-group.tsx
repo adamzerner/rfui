@@ -98,7 +98,7 @@ export const RadioButtonCardGroupItem = (
     selectedItemName.value = name;
   };
   let containerClass =
-    "radio-button-card-group-item border items-center cursor-pointer";
+    "radio-button-card-group-item cursor-pointer items-center border";
 
   containerClass += isSelected
     ? " border-2 border-neutral-500"

@@ -20,7 +20,7 @@ export const Blockquote = (
 ) => {
   const { class: restClass, ...restWithoutClass } = rest;
   let className =
-    "border-l border-neutral-300 pl-5 text-neutral-700 flex flex-col gap-3";
+    "flex flex-col gap-3 border-l border-neutral-300 pl-5 text-neutral-700";
 
   if (restClass) {
     className += ` ${restClass}`;

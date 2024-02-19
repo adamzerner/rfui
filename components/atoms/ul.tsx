@@ -29,7 +29,7 @@ export const UL = (
   }: ULType,
 ) => {
   const { class: restClass, ...restWithoutClass } = rest;
-  let className = "rfui-unordered-list flex flex-col gap-2 list-outside";
+  let className = "rfui-unordered-list flex list-outside flex-col gap-2";
 
   const bulletTypeMap = {
     bullet: "list-disc",

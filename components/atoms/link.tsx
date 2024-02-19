@@ -30,7 +30,7 @@ export const Link = (
   }: LinkType,
 ) => {
   const { class: restClass, ...restWithoutClass } = rest;
-  let className = "cursor-pointer relative";
+  let className = "relative cursor-pointer";
 
   className += (() => {
     switch (underline) {
@@ -61,7 +61,7 @@ export const Link = (
     >
       {inPageLink &&
         (
-          <span class="rfui-in-page-link-icon absolute top-0 -left-[1em]">
+          <span class="rfui-in-page-link-icon absolute -left-[1em] top-0">
             #
           </span>
         )}

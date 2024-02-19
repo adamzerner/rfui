@@ -66,7 +66,7 @@ export default () => {
       </div>
     ),
     example: (
-      <Stack class="gap-5 w-full">
+      <Stack class="w-full gap-5">
         <Alert variant="success">
           <AlertHeader>Success</AlertHeader>
           <AlertBody>Your profile has been saved.</AlertBody>
@@ -93,7 +93,7 @@ export default () => {
       <CodeBlock
         class="mt-4"
         language="tsx"
-        code={`<Stack class="gap-5 w-full">
+        code={`<Stack class="w-full gap-5">
   <Alert variant="success">
     <AlertHeader>Success</AlertHeader>
     <AlertBody>Your profile has been saved.</AlertBody>
@@ -126,7 +126,7 @@ export default () => {
       </div>
     ),
     example: (
-      <Stack class="gap-5 w-full">
+      <Stack class="w-full gap-5">
         <Alert isDismissable={false} variant="success">
           <AlertHeader>Success</AlertHeader>
           <AlertBody>Your profile has been saved.</AlertBody>
@@ -153,7 +153,7 @@ export default () => {
       <CodeBlock
         class="mt-4"
         language="tsx"
-        code={`<Stack class="gap-5 w-full">
+        code={`<Stack class="w-full gap-5">
   <Alert isDismissable={false} variant="success">
     <AlertHeader>Success</AlertHeader>
     <AlertBody>Your profile has been saved.</AlertBody>

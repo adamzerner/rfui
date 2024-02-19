@@ -62,7 +62,7 @@ export default () => {
         name: "Button",
         href: "/atoms/button",
         example: (
-          <Button class="!text-neutral-900 !border-neutral-900">Submit</Button>
+          <Button class="!border-neutral-900 !text-neutral-900">Submit</Button>
         ),
       },
       {
@@ -106,7 +106,7 @@ export default () => {
         name: "Link",
         href: "/atoms/link",
         example: (
-          <div class="underline underline-offset-2 text-neutral-700 cursor-pointer text-lg">
+          <div class="cursor-pointer text-lg text-neutral-700 underline underline-offset-2">
             GitHub
           </div>
         ),
@@ -277,16 +277,16 @@ export default () => {
       {
         name: "Container",
         href: "/helpers/container",
-        example: <div class="bg-neutral-100/50 rounded w-full h-2/3"></div>,
+        example: <div class="h-2/3 w-full rounded bg-neutral-100/50"></div>,
       },
       {
         name: "Flex",
         href: "/helpers/flex",
         example: (
-          <Flex class="gap-3 justify-between items-stretch w-full h-2/3">
-            <div class="bg-neutral-100/50 p-2 rounded w-10"></div>
-            <div class="bg-neutral-100/50 p-2 rounded w-10"></div>
-            <div class="bg-neutral-100/50 p-2 rounded w-10"></div>
+          <Flex class="h-2/3 w-full items-stretch justify-between gap-3">
+            <div class="w-10 rounded bg-neutral-100/50 p-2"></div>
+            <div class="w-10 rounded bg-neutral-100/50 p-2"></div>
+            <div class="w-10 rounded bg-neutral-100/50 p-2"></div>
           </Flex>
         ),
       },
@@ -294,10 +294,10 @@ export default () => {
         name: "Stack",
         href: "/helpers/stack",
         example: (
-          <Stack class="gap-3 items-stretch w-full">
-            <div class="bg-neutral-100/50 p-2 rounded h-6"></div>
-            <div class="bg-neutral-100/50 p-2 rounded h-6"></div>
-            <div class="bg-neutral-100/50 p-2 rounded h-6"></div>
+          <Stack class="w-full items-stretch gap-3">
+            <div class="h-6 rounded bg-neutral-100/50 p-2"></div>
+            <div class="h-6 rounded bg-neutral-100/50 p-2"></div>
+            <div class="h-6 rounded bg-neutral-100/50 p-2"></div>
           </Stack>
         ),
       },
@@ -390,7 +390,7 @@ const Item = (
 ) => {
   return (
     <Link underline="none" href={href} class="w-full sm:w-auto">
-      <Card class="hover:shadow-lg sm:hover:shadow-md w-full sm:w-60 bg-neutral-50/20">
+      <Card class="w-full bg-neutral-50/20 hover:shadow-lg sm:w-60 sm:hover:shadow-md">
         <CardBody>
           <Flex
             style={{

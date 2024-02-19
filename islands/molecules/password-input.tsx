@@ -76,7 +76,7 @@ export const PasswordInput = (
   })();
 
   return (
-    <Flex class="gap-2 items-stretch" {...containerProps}>
+    <Flex class="items-stretch gap-2" {...containerProps}>
       <Input
         type={shouldShow ? "text" : "password"}
         {...inputProps}

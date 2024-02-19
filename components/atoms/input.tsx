@@ -24,7 +24,7 @@ export const Input = (
 ) => {
   const { class: restClass, ...restWithoutClass } = rest;
   let className =
-    "border border-neutral-500 px-2 py-1 w-full focus:outline-none focus:border-neutral-900 focus:shadow-sm";
+    "w-full border border-neutral-500 px-2 py-1 focus:border-neutral-900 focus:shadow-sm focus:outline-none";
 
   className += " " + (() => {
     switch (size) {

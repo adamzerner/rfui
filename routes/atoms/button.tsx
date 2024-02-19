@@ -132,7 +132,7 @@ export default () => {
           <Button variant="secondary" size="lg">Secondary</Button>
           <Button variant="tertiary" size="lg">Tertiary</Button>
         </Flex>
-        <Stack class="gap-3 w-full">
+        <Stack class="w-full gap-3">
           <Button variant="primary" size="block">Primary</Button>
           <Button variant="secondary" size="block">Secondary</Button>
         </Stack>
@@ -158,7 +158,7 @@ export default () => {
     <Button variant="secondary" size="lg">Secondary</Button>
     <Button variant="tertiary" size="lg">Tertiary</Button>
   </Flex>
-  <Stack class="gap-3 w-full">
+  <Stack class="w-full gap-3">
     <Button variant="primary" size="block">Primary</Button>
     <Button variant="secondary" size="block">Secondary</Button>
   </Stack>

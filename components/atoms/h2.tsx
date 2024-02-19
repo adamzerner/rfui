@@ -22,7 +22,7 @@ export const H2 = (
   }: H2Type,
 ) => {
   const { class: restClass, ...restWithoutClass } = rest;
-  let className = "text-2xl text-neutral-700 mt-8 mb-5 max-w-prose";
+  let className = "mb-5 mt-8 max-w-prose text-2xl text-neutral-700";
 
   if (restClass) {
     className += ` ${restClass}`;

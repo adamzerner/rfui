@@ -104,7 +104,7 @@ export default () => {
             their password in plaintext by default instead.
           </li>
         </OL>
-        <div class="mt-4 mb-2">
+        <div class="mb-2 mt-4">
           Related reading:
         </div>
         <UL>
@@ -242,7 +242,7 @@ export default () => {
             their password in plaintext by default instead.
           </li>
         </OL>
-        <div class="mt-4 mb-2">
+        <div class="mb-2 mt-4">
           Related reading:
         </div>
         <UL>
@@ -282,7 +282,7 @@ export default () => {
   <button></button>
 </Flex>`}
         />
-        <div class="mt-4 mb-3">
+        <div class="mb-3 mt-4">
           <InlineCode>containerProps</InlineCode> will get passed to{" "}
           <InlineCode>Flex</InlineCode> like this:
         </div>
@@ -311,7 +311,7 @@ export default () => {
   <button></button>
 </Flex>`}
         />
-        <div class="mt-4 mb-3">
+        <div class="mb-3 mt-4">
           <InlineCode>...rest</InlineCode> will get passed to{" "}
           <InlineCode>{"<Input />"}</InlineCode> like this:
         </div>

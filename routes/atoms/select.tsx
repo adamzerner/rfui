@@ -97,7 +97,7 @@ export default () => {
       </div>
     ),
     example: (
-      <Stack class="gap-5 w-fit">
+      <Stack class="w-fit gap-5">
         <Select size="sm">
           <option value="foo">foo</option>
           <option value="bar">bar</option>
@@ -119,7 +119,7 @@ export default () => {
       <CodeBlock
         class="mt-4"
         language="tsx"
-        code={`<Stack class="gap-5 w-fit">
+        code={`<Stack class="w-fit gap-5">
   <Select size="sm">
     <option value="foo">foo</option>
     <option value="bar">bar</option>
@@ -154,7 +154,7 @@ export default () => {
       </div>
     ),
     example: (
-      <Stack class="gap-5 w-fit">
+      <Stack class="w-fit gap-5">
         <Select rounded="square">
           <option value="foo">foo</option>
           <option value="bar">bar</option>
@@ -176,7 +176,7 @@ export default () => {
       <CodeBlock
         class="mt-4"
         language="tsx"
-        code={`<Stack class="gap-5 w-fit">
+        code={`<Stack class="w-fit gap-5">
   <Select rounded="square">
     <option value="foo">foo</option>
     <option value="bar">bar</option>

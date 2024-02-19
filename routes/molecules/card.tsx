@@ -401,7 +401,7 @@ export default () => {
           <h1 class="font-bold tracking-wide text-neutral-700">Profile</h1>
         </CardHeader>
         <CardBody>
-          <div class="text-neutral-700 mb-6">
+          <div class="mb-6 text-neutral-700">
             Please fill out the following information.
           </div>
           <Stack class="gap-3">
@@ -427,7 +427,7 @@ export default () => {
     <h1 class="font-bold tracking-wide text-neutral-700">Profile</h1>
   </CardHeader>
   <CardBody>
-    <div class="text-neutral-700 mb-6">
+    <div class="mb-6 text-neutral-700">
       Please fill out the following information.
     </div>
     <Stack class="gap-3">
@@ -460,7 +460,7 @@ export default () => {
           <h1 class="font-bold tracking-wide text-neutral-700">Profile</h1>
         </CardHeader>
         <CardBody>
-          <div class="text-neutral-700 mb-6">
+          <div class="mb-6 text-neutral-700">
             Please fill out the following information.
           </div>
           <Stack class="gap-3">
@@ -486,7 +486,7 @@ export default () => {
     <h1 class="font-bold tracking-wide text-neutral-700">Profile</h1>
   </CardHeader>
   <CardBody>
-    <div class="text-neutral-700 mb-6">
+    <div class="mb-6 text-neutral-700">
       Please fill out the following information.
     </div>
     <Stack class="gap-3">
@@ -519,7 +519,7 @@ export default () => {
           <h1 class="font-bold tracking-wide text-neutral-700">Profile</h1>
         </CardHeader>
         <CardBody>
-          <div class="text-neutral-700 mb-6">
+          <div class="mb-6 text-neutral-700">
             Please fill out the following information.
           </div>
           <Stack class="gap-3">
@@ -545,7 +545,7 @@ export default () => {
     <h1 class="font-bold tracking-wide text-neutral-700">Profile</h1>
   </CardHeader>
   <CardBody>
-    <div class="text-neutral-700 mb-6">
+    <div class="mb-6 text-neutral-700">
       Please fill out the following information.
     </div>
     <Stack class="gap-3">

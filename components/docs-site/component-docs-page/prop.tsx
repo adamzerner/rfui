@@ -14,14 +14,14 @@ export const Prop = ({ prop, children }: {
 }) => {
   return (
     <>
-      <div class="first-of-type:mt-0 mt-8 sm:mt-0">
+      <div class="mt-8 first-of-type:mt-0 sm:mt-0">
         <InlineCode class="text-2xl">
           {prop.name}
         </InlineCode>
         {prop.required &&
-          <sup class="text-supporting-red-500 text-2xl ml-1">*</sup>}
+          <sup class="ml-1 text-2xl text-supporting-red-500">*</sup>}
       </div>
-      <Stack class="gap-5 col-span-2 text-sm">
+      <Stack class="col-span-2 gap-5 text-sm">
         <div class="self-start">
           <div class="mb-3">Required</div>
           <CodeBlock language="ts" code={prop.required.toString()} />

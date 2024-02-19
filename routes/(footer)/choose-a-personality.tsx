@@ -20,7 +20,7 @@ export default () => {
             Tailwind CSS
           </Link>:
         </p>
-        <Stack class="gap-8 my-5 w-14 max-w-full">
+        <Stack class="my-5 w-14 max-w-full gap-8">
           <img
             src="/images/simple.png"
             alt="Example of simple personality"

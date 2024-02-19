@@ -53,7 +53,7 @@ export const Stepper = (
   let leftButtonClass = "";
   let rightButtonClass = "";
   let divClass =
-    "border-y border-neutral-500 flex justify-center items-center bg-neutral-50";
+    "flex items-center justify-center border-y border-neutral-500 bg-neutral-50";
 
   switch (size) {
     case "sm":

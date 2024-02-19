@@ -10,7 +10,7 @@ export const NavbarItem = (
 ) => {
   const { class: restClass, ...restWithoutClass } = rest;
   let containerClass =
-    "inline-block border-b border-b-neutral-200 sm:border-b-neutral-50 max-sm:hover:bg-neutral-100/50";
+    "inline-block border-b border-b-neutral-200 max-sm:hover:bg-neutral-100/50 sm:border-b-neutral-50";
 
   if (isActive) {
     containerClass +=
@@ -32,7 +32,7 @@ export const NavbarItem = (
           href={href}
           underline="none"
           aria-current={isActive ? "page" : undefined}
-          class="py-6 flex items-center justify-between"
+          class="flex items-center justify-between py-6"
         >
           <div>{children}</div>
           <ChevronRightIcon class="relative top-px" />
@@ -43,7 +43,7 @@ export const NavbarItem = (
       <Link
         href={href}
         underline="none"
-        class="py-6 hidden sm:inline-block"
+        class="hidden py-6 sm:inline-block"
         aria-current={isActive ? "page" : undefined}
       >
         {children}

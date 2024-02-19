@@ -25,7 +25,7 @@ export const OL = (
   }: OLType,
 ) => {
   const { class: restClass, ...restWithoutClass } = rest;
-  let className = "list-decimal flex flex-col gap-2";
+  let className = "flex list-decimal flex-col gap-2";
 
   className += ` ${
     bulletLocation === "inside" ? "list-inside" : "list-outside"

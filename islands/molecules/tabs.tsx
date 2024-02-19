@@ -76,7 +76,7 @@ const Tab = (
   },
 ) => {
   const isActive = tabName === activeTab;
-  let containerClass = "rfui-tab px-5 text-center py-4 cursor-pointer";
+  let containerClass = "rfui-tab cursor-pointer px-5 py-4 text-center";
 
   if (isActive) {
     containerClass += " border-b text-neutral-900";

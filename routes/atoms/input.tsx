@@ -67,7 +67,7 @@ export default () => {
       </div>
     ),
     example: (
-      <Stack class="gap-5 w-fit">
+      <Stack class="w-fit gap-5">
         <Input size="sm" />
         <Input size="md" />
         <Input size="lg" />
@@ -77,7 +77,7 @@ export default () => {
       <CodeBlock
         class="mt-4"
         language="tsx"
-        code={`<Stack class="gap-5 w-fit">
+        code={`<Stack class="w-fit gap-5">
   <Input size="sm" />
   <Input size="md" />
   <Input size="lg" />
@@ -99,7 +99,7 @@ export default () => {
       </div>
     ),
     example: (
-      <Stack class="gap-5 w-fit">
+      <Stack class="w-fit gap-5">
         <Input rounded="square" />
         <Input rounded="sm" />
         <Input rounded="lg" />
@@ -110,7 +110,7 @@ export default () => {
       <CodeBlock
         class="mt-4"
         language="tsx"
-        code={`<Stack class="gap-5 w-fit">
+        code={`<Stack class="w-fit gap-5">
   <Input rounded="square" />
   <Input rounded="sm" />
   <Input rounded="lg" />

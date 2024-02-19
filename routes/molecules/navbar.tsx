@@ -121,7 +121,7 @@ export default () => {
       </div>
     ),
     example: (
-      <Stack class="gap-5 w-full">
+      <Stack class="w-full gap-5">
         <Navbar size="xl" background="neutral">
           <NavbarLeft>
             <NavbarItem href="https://one.com">One</NavbarItem>
@@ -148,7 +148,7 @@ export default () => {
       <CodeBlock
         class="mt-4"
         language="tsx"
-        code={`<Stack class="gap-5 w-full">
+        code={`<Stack class="w-full gap-5">
   <Navbar size="xl" background="neutral">
     <NavbarLeft>
       <NavbarItem href="https://one.com">One</NavbarItem>

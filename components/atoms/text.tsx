@@ -30,7 +30,7 @@ export const Text = (
     lg: "text-2xl",
   };
   const { class: restClass, ...restWithoutClass } = rest;
-  let className = "gap-4 leading-relaxed max-w-prose";
+  let className = "max-w-prose gap-4 leading-relaxed";
 
   className += ` ${sizeMap[size]}`;
 

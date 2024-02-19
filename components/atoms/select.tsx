@@ -32,7 +32,7 @@ export const Select = (
 ) => {
   const { class: restClass, ...restWithoutClass } = rest;
   let className =
-    "border border-neutral-500 bg-[#fff] px-2 py-1 cursor-pointer focus:outline-none focus:border-neutral-900 focus:shadow-sm";
+    "cursor-pointer border border-neutral-500 bg-[#fff] px-2 py-1 focus:border-neutral-900 focus:shadow-sm focus:outline-none";
 
   className += " " + (() => {
     switch (size) {

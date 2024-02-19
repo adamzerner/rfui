@@ -35,7 +35,7 @@ export const Footer = (
   }: FooterType,
 ) => {
   const { class: restClass, ...restWithoutClass } = rest;
-  let containerClass = "w-full py-8 md:py-10 mt-10 md:mt-12";
+  let containerClass = "mt-10 w-full py-8 md:mt-12 md:py-10";
 
   containerClass += " " + (() => {
     switch (background) {
@@ -53,7 +53,7 @@ export const Footer = (
   return (
     <footer class={containerClass} {...restWithoutClass}>
       <Container size={size}>
-        <Flex class="w-full gap-9 md:gap-10 flex-col md:flex-row">
+        <Flex class="w-full flex-col gap-9 md:flex-row md:gap-10">
           {children}
         </Flex>
       </Container>

@@ -20,7 +20,7 @@ export default () => {
           you'll want rounder corners and to convey a more serious personality
           you'll want less rounded corners.
         </p>
-        <Stack class="gap-8 my-5 w-14 max-w-full">
+        <Stack class="my-5 w-14 max-w-full gap-8">
           <img
             src="/images/playful.png"
             alt="Example of playful personality"

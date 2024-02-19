@@ -67,13 +67,13 @@ export const Modal = (
 
   return (
     <dialog ref={dialogRef} class={containerClass} {...restWithoutClass}>
-      <div class="text-right mb-2">
+      <div class="mb-2 text-right">
         <button onClick={close}>
           <CloseIcon />
         </button>
       </div>
       <div class="mx-4 mb-4">
-        {heading && <h3 class="text-xl mb-4 text-neutral-700">{heading}</h3>}
+        {heading && <h3 class="mb-4 text-xl text-neutral-700">{heading}</h3>}
         {children}
       </div>
     </dialog>

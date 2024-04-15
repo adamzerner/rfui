@@ -46,7 +46,7 @@ export default () => {
         </p>
         <CodeBlock
           language="ts"
-          code={`"rfui": "https://deno.land/x/rfui@v0.1.21/mod.ts"`}
+          code={`"rfui": "https://deno.land/x/rfui/mod.ts"`}
         />
       </Text>
 
@@ -57,15 +57,8 @@ export default () => {
         <p>Something like this:</p>
         <CodeBlock
           language="tsx"
-          code={`import { getStylesheetUrl } from "rfui";
-
-<link rel="stylesheet" href={getStylesheetUrl()} />`}
+          code={`<link rel="stylesheet" href="https://rfui.deno.dev/rfui.css" />`}
         />
-        <p>
-          <InlineCode>getStylesheetUrl</InlineCode> will return eg.{" "}
-          <InlineCode>https://rfui.deno.dev/rfui-v0-1-21.css</InlineCode>{" "}
-          if you're on v0.1.21 of RFUI.
-        </p>
         <p>
           See the <Link href="/stylesheet">Stylesheet</Link>{" "}
           page for more information.

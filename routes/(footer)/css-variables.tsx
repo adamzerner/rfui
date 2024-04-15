@@ -138,9 +138,7 @@ export default () => {
         <p>After doing something like:</p>
         <CodeBlock
           language="tsx"
-          code={`import { getStylesheetUrl } from "rfui";
-
-<link rel="stylesheet" href={getStylesheetUrl()} />`}
+          code={`<link rel="stylesheet" href="https://rfui.deno.dev/rfui.css" />`}
         />
         <p>
           to link to RFUI's stylesheet, if you want to customize the CSS
@@ -150,9 +148,7 @@ export default () => {
         </p>
         <CodeBlock
           language="tsx"
-          code={`import { getStylesheetUrl } from "rfui";
-
-<link rel="stylesheet" href={getStylesheetUrl()} />
+          code={`<link rel="stylesheet" href="https://rfui.deno.dev/rfui.css" />
 <link rel="stylesheet" href="/app.css" />`}
         />
         <p>

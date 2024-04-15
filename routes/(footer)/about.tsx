@@ -39,10 +39,17 @@ const SubmitButton = () => {
           if you'd like to give it a try.
         </p>
         <Alert class="mt-4">
-          Note: Anyone is welcome to use RFUI. However, consider that I am my
-          own target audience for this project and I am not looking to support
-          others. It probably will always remain this way, but it's possible
-          that I look to target a wider, public audience in the future.
+          <Text>
+            <p>
+              Note: Anyone is welcome to use RFUI. However, consider that I am
+              my own target audience for this project and I am not looking to
+              support others.
+            </p>
+            <p>
+              It probably will always remain this way, but it's possible that I
+              look to target a wider, public audience in the future.
+            </p>
+          </Text>
         </Alert>
       </Text>
     </div>

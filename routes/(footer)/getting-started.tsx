@@ -25,16 +25,6 @@ export default () => {
                   tutorial
                 </Link>.
               </p>
-              <p>
-                Tutorials walk you through the process of getting set up in a
-                specific web framework like Fresh, Remix or NextJS.
-              </p>
-              <p>
-                How-to guides on the other hand are more general. They aren't
-                specific to a given web framework. They are an outline of the
-                high-level steps one needs to take. The target audience is
-                expected to need less hand-holding.
-              </p>
             </Text>
           </AlertBody>
         </Alert>
@@ -43,22 +33,11 @@ export default () => {
       <H2 inPageLink="set-up-package">{"1) Set up package"}</H2>
       <Text>
         <p>
-          There are two versions of the RFUI library: a{" "}
-          <Link href="https://www.npmjs.com/package/@adamzerner/rfui-react">
-            React version
-          </Link>{" "}
-          that is hosted on NPM and a{" "}
-          <Link href="https://deno.land/x/rfui">Preact version</Link>{" "}
-          that is hosted as a{" "}
+          The RFUI library is hosted as a{" "}
           <Link href="https://deno.land/x">Deno Third Party Module</Link>.
         </p>
-        <p>If you want the React version:</p>
-        <CodeBlock
-          code={`npm install @adamzerner/rfui-react`}
-        />
         <p>
-          If you are using Deno and want the Preact version, you'll probably
-          want to use{"  "}
+          You'll probably want to use{"  "}
           <Link href="https://docs.deno.com/runtime/manual/basics/import_maps">
             Import Maps
           </Link>. Add the following to the <InlineCode>"imports"</InlineCode>

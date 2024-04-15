@@ -2,10 +2,10 @@
 
 Webite: https://rfui.deno.dev/
 
-Note: Anyone is welcome to use the code Deno module or the code in this repo.
-However, I am my own target audience for this project. It probably will always
-remain this way, but it's possible that I look to target a wider, public
-audience in the future.
+Note: Anyone is welcome to use RFUI. However, consider that I am my own target
+audience for this project and I am not looking to support others. It probably
+will always remain this way, but it's possible that I look to target a wider,
+public audience in the future.
 
 # Releasing
 

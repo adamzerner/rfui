@@ -311,8 +311,7 @@ export default () => {
           RFUI
         </H1>
         <H2 class="text-2xl">
-          A lightweight, DX-focused, footgun-free component library for React
-          and Preact apps.
+          A lightweight, DX-focused component library for Preact + Deno apps.
         </H2>
         <Text>
           <p>
@@ -322,14 +321,8 @@ export default () => {
             <InlineCode>#useThePlatform</InlineCode>.
           </p>
           <p>
-            Interested? Check out the <Link href="/about">About</Link>,{" "}
-            <Link href="/philosophy">Philosophy</Link> and{" "}
-            <Link href="/target-audience">Target audience</Link>{" "}
-            pages for more information. Alternatively, mess around in the{" "}
-            <Link href="https://stackblitz.com/edit/react-tmwfhl?file=src%2FApp.js">
-              playground
-            </Link>{" "}
-            or just <Link href="/getting-started">get started</Link>.
+            Interested? Check out the <Link href="/about">About</Link>{" "}
+            page or just <Link href="/getting-started">get started</Link>.
           </p>
         </Text>
       </header>

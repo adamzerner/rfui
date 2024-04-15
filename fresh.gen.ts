@@ -6,12 +6,9 @@ import * as $_footer_about from "./routes/(footer)/about.tsx";
 import * as $_footer_choose_a_personality from "./routes/(footer)/choose-a-personality.tsx";
 import * as $_footer_css_variables from "./routes/(footer)/css-variables.tsx";
 import * as $_footer_default_roundedness from "./routes/(footer)/default-roundedness.tsx";
-import * as $_footer_faq from "./routes/(footer)/faq.tsx";
 import * as $_footer_getting_started from "./routes/(footer)/getting-started.tsx";
-import * as $_footer_philosophy from "./routes/(footer)/philosophy.tsx";
 import * as $_footer_rest_parameters from "./routes/(footer)/rest-parameters.tsx";
 import * as $_footer_stylesheet from "./routes/(footer)/stylesheet.tsx";
-import * as $_footer_target_audience from "./routes/(footer)/target-audience.tsx";
 import * as $_404 from "./routes/_404.tsx";
 import * as $_500 from "./routes/_500.tsx";
 import * as $_app from "./routes/_app.tsx";
@@ -51,8 +48,6 @@ import * as $molecules_radio_button_card_group from "./routes/molecules/radio-bu
 import * as $molecules_radio_button_group from "./routes/molecules/radio-button-group.tsx";
 import * as $molecules_stepper from "./routes/molecules/stepper.tsx";
 import * as $molecules_tabs from "./routes/molecules/tabs.tsx";
-import * as $tutorials_fresh from "./routes/tutorials/fresh.tsx";
-import * as $tutorials_remix from "./routes/tutorials/remix.tsx";
 import * as $docs_site_component_docs_page_modal_example from "./islands/docs-site/component-docs-page/modal-example.tsx";
 import * as $molecules_alert_1 from "./islands/molecules/alert.tsx";
 import * as $molecules_checkbox_card_group_1 from "./islands/molecules/checkbox-card-group.tsx";
@@ -70,12 +65,9 @@ const manifest = {
     "./routes/(footer)/choose-a-personality.tsx": $_footer_choose_a_personality,
     "./routes/(footer)/css-variables.tsx": $_footer_css_variables,
     "./routes/(footer)/default-roundedness.tsx": $_footer_default_roundedness,
-    "./routes/(footer)/faq.tsx": $_footer_faq,
     "./routes/(footer)/getting-started.tsx": $_footer_getting_started,
-    "./routes/(footer)/philosophy.tsx": $_footer_philosophy,
     "./routes/(footer)/rest-parameters.tsx": $_footer_rest_parameters,
     "./routes/(footer)/stylesheet.tsx": $_footer_stylesheet,
-    "./routes/(footer)/target-audience.tsx": $_footer_target_audience,
     "./routes/_404.tsx": $_404,
     "./routes/_500.tsx": $_500,
     "./routes/_app.tsx": $_app,
@@ -117,8 +109,6 @@ const manifest = {
     "./routes/molecules/radio-button-group.tsx": $molecules_radio_button_group,
     "./routes/molecules/stepper.tsx": $molecules_stepper,
     "./routes/molecules/tabs.tsx": $molecules_tabs,
-    "./routes/tutorials/fresh.tsx": $tutorials_fresh,
-    "./routes/tutorials/remix.tsx": $tutorials_remix,
   },
   islands: {
     "./islands/docs-site/component-docs-page/modal-example.tsx":

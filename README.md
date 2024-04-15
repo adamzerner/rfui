@@ -2,6 +2,11 @@
 
 Webite: https://rfui.deno.dev/
 
+Note: Anyone is welcome to use the code Deno module or the code in this repo.
+However, I am my own target audience for this project. It probably will always
+remain this way, but it's possible that I look to target a wider, public
+audience in the future.
+
 # Releasing
 
 ## Versioning
@@ -28,9 +33,6 @@ To create a new version of this library (be sure to follow
   - Type in the new version in the input field.
   - Click "Create a new tag".
   - Fill in other fields and submit.
-- Test in [`cannabis-journal`](https://github.com/adamzerner/cannabis-journal).
-- Update [`rfui-react`](https://github.com/adamzerner/rfui) (see the README in
-  that repo for more information).
 
 ## Generating the Tailwind CSS file
 

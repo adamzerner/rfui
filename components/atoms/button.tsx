@@ -24,7 +24,7 @@ export type ButtonType = {
  * @param _rightIcon An icon that will be placed to the right of the button's text. Typically not a good idea, but useful for something like "Next →".
  *
  * @example
- * <Button type="primary">Submit</Button>
+ * <Button variant="primary">Submit</Button>
  * <Button isLoading loadingContent="Submitting...">Submit</Button>
  */
 export const Button = (

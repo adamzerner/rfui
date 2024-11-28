@@ -57,7 +57,7 @@ import * as $molecules_radio_button_card_group_1 from "./islands/molecules/radio
 import * as $molecules_radio_button_group_1 from "./islands/molecules/radio-button-group.tsx";
 import * as $molecules_stepper_1 from "./islands/molecules/stepper.tsx";
 import * as $molecules_tabs_1 from "./islands/molecules/tabs.tsx";
-import { type Manifest } from "$fresh/server.ts";
+import type { Manifest } from "$fresh/server.ts";
 
 const manifest = {
   routes: {

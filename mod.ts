@@ -92,5 +92,3 @@ export { Flex } from "./components/helpers/flex.tsx";
 export type { FlexType } from "./components/helpers/flex.tsx";
 export { Stack } from "./components/helpers/stack.tsx";
 export type { StackType } from "./components/helpers/stack.tsx";
-
-export { getStylesheetUrl } from "./utilities/get-stylesheet-url.ts";

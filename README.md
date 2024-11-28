@@ -16,6 +16,7 @@ To create a new version of this library (be sure to follow
 
 - Update CSS file in `static` directory. (See "Generating the Tailwind CSS file"
   below.)
+- Update `getting-started.tsx`.
 - Commit and push.
 - Use https://github.com/adamzerner/rfui/releases/new to update the third party
   module.

@@ -68,6 +68,7 @@ export type FormFieldType = {
  * @see {@link https://rfui.deno.dev/molecules/form-field}
  *
  * @param requiredIndicator See https://ux.stackexchange.com/q/840/39046 for a discussion.
+ * @param value When `type` is `textarea` the `value` prop is passed like this `<Textarea>{value}</Textarea>` and isn't passed as a prop.
  *
  * @example
  * <FormField label="Name" />
@@ -182,7 +183,6 @@ export const FormField = (
           <Textarea
             id={id}
             name={name}
-            value={value}
             required={required}
             invalid={invalid}
             class={`block w-full ${textareaRest?.class}`}
@@ -190,6 +190,7 @@ export const FormField = (
             onInput={onInput}
             {...textareaRest}
           >
+            {value}
           </Textarea>
         )
         : type === "radio-button-group" && radioButtonGroupOptions

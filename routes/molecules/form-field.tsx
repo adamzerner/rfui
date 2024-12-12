@@ -477,14 +477,21 @@ export default () => {
   }, {
     title: "Textarea",
     description: (
-      <div>
-        To use{" "}
-        <Link href="/molecules/textarea">
-          <InlineCode>Textarea</InlineCode>
-        </Link>{" "}
-        with <InlineCode>FormField</InlineCode> set{" "}
-        <InlineCode>type</InlineCode> to <InlineCode>"textarea"</InlineCode>.
-      </div>
+      <Stack class="gap-2">
+        <div>
+          To use{" "}
+          <Link href="/molecules/textarea">
+            <InlineCode>Textarea</InlineCode>
+          </Link>{" "}
+          with <InlineCode>FormField</InlineCode> set{" "}
+          <InlineCode>type</InlineCode> to <InlineCode>"textarea"</InlineCode>.
+        </div>
+        <div>
+          Note: <InlineCode>value</InlineCode>{" "}
+          isn't passed as a prop; it's passed instead like this:{" "}
+          <InlineCode>{"<Textarea>{value}</Textarea>"}</InlineCode>
+        </div>
+      </Stack>
     ),
     example: <FormField label="Notes" type="textarea" />,
     exampleCode: (

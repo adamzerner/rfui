@@ -548,7 +548,7 @@ export default () => {
     description: (
       <div>
         To use{" "}
-        <Link href="/molecules/select">
+        <Link href="/atoms/select">
           <InlineCode>Select</InlineCode>
         </Link>{" "}
         with <InlineCode>FormField</InlineCode> set{" "}

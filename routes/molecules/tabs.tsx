@@ -70,12 +70,46 @@ export default () => {
 </Tabs>`}
       />
     ),
+  }, {
+    title: "Initial active tab",
+    description: (
+      <div>
+        Set <InlineCode>initialActiveTab</InlineCode> to the{" "}
+        <InlineCode>tabName</InlineCode> of the{" "}
+        <InlineCode>TabSection</InlineCode>{" "}
+        that you want to display when the component loads.
+      </div>
+    ),
+    example: (
+      <Tabs initialActiveTab="Second">
+        <TabSection tabName="First">One</TabSection>
+        <TabSection tabName="Second">Two</TabSection>
+        <TabSection tabName="Third">Three</TabSection>
+      </Tabs>
+    ),
+    exampleCode: (
+      <CodeBlock
+        class="mt-4"
+        language="tsx"
+        code={`<Tabs initialActiveTab="Second">
+  <TabSection tabName="First">One</TabSection>
+  <TabSection tabName="Second">Two</TabSection>
+  <TabSection tabName="Third">Three</TabSection>
+</Tabs>`}
+      />
+    ),
   }];
   const props = [{
     name: "fullWidth",
     required: false,
     type: "boolean",
     default: "false",
+    notes: null,
+  }, {
+    name: "initialActiveTab",
+    required: false,
+    type: "string",
+    default: null,
     notes: null,
   }, {
     name: "children",

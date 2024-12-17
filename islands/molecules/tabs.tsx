@@ -6,6 +6,7 @@ import { getChildren } from "../../utilities/get-children.ts";
 
 export type TabsType = {
   fullWidth?: boolean;
+  initialActiveTab?: string;
   children: ComponentChild;
 } & ComponentProps<"div">;
 
@@ -22,10 +23,12 @@ export type TabsType = {
  * </Tabs>
  */
 export const Tabs = (
-  { fullWidth = false, children, ...rest }: TabsType,
+  { fullWidth = false, initialActiveTab, children, ...rest }: TabsType,
 ) => {
   const tabNames = getTabNames(children);
-  const [activeTab, setActiveTab] = useState<string>(tabNames[0]);
+  const [activeTab, setActiveTab] = useState<string>(
+    initialActiveTab ?? tabNames[0],
+  );
   const activeTabSection = getActiveTabSection(children, activeTab);
 
   return (
@@ -92,6 +95,7 @@ const Tab = (
 };
 
 export const TabSection = (
+  // deno-lint-ignore no-unused-vars
   { tabName, children }: { tabName: string; children: ComponentChild },
 ) => {
   return <>{children}</>;

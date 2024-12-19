@@ -37,6 +37,7 @@ export const Navbar = (
     ...rest
   }: NavbarType,
 ) => {
+  // deno-lint-ignore no-unused-vars
   const { navbarLeft, navbarRight, numItems } = getComponents(children);
   const { class: restClass, ...restWithoutClass } = rest;
   let containerClass = "px-auto w-full";

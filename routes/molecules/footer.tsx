@@ -54,6 +54,33 @@ export default () => {
 }
 `}
       />
+      <p>
+        Note: check out this{" "}
+        <Link href="https://css-tricks.com/couple-takes-sticky-footer/">
+          CSS Tricks article
+        </Link>{" "}
+        on how to get a footer that alawys stays at the bottom of the page
+        (something you'll probably want). My preferred approach is to utilize
+        flexbox by wrapping the <InlineCode>Navar</InlineCode>,{" "}
+        <InlineCode>Container</InlineCode> and <InlineCode>Footer</InlineCode>
+        {" "}
+        in a <InlineCode>Stack</InlineCode> like so:
+      </p>
+      <CodeBlock
+        language="tsx"
+        code={`export default () => {
+  return (
+    <Stack class="min-h-screen">
+      <Navbar route={route} />
+      <Container size="xl" class="grow">
+        <Component />
+      </Container>
+      <Footer />
+    </Stack>
+  );
+}
+`}
+      />
     </Stack>
   );
   const sections: SectionType[] = [{

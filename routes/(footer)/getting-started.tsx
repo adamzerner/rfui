@@ -46,7 +46,7 @@ export default () => {
         </p>
         <CodeBlock
           language="ts"
-          code={`"rfui": "https://deno.land/x/rfui@v0.1.28/mod.ts"`}
+          code={`"rfui": "https://deno.land/x/rfui@v0.1.30/mod.ts"`}
         />
       </Text>
 

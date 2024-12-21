@@ -1,15 +1,18 @@
-export const ChevronUpIcon = ({ ...rest }) => {
-  const { class: restClass, ...restWithoutClass } = rest;
-
+export const ChevronUpIcon = (
+  { className, strokeWidth = 1.5, ...rest }: {
+    className?: string;
+    strokeWidth?: number;
+  },
+) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
       viewBox="0 0 24 24"
-      stroke-width="2"
+      stroke-width={strokeWidth}
       stroke="currentColor"
-      className={`w-4 h-4 inline ${restClass}`}
-      {...restWithoutClass}
+      className={`w-4 h-4 inline ${className}`}
+      {...rest}
     >
       <path
         stroke-linecap="round"

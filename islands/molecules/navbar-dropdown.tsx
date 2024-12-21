@@ -1,5 +1,7 @@
 import type { ComponentChild, ComponentProps } from "preact";
 import { useEffect, useRef, useState } from "preact/hooks";
+import { Container } from "../../components/helpers/container.tsx";
+import { Flex } from "../../components/helpers/flex.tsx";
 import { ChevronDownIcon } from "../../components/icons/chevron-down.tsx";
 import { ChevronUpIcon } from "../../components/icons/chevron-up.tsx";
 
@@ -20,7 +22,7 @@ export const NavbarDropdown = (
   };
   const { class: restClass, ...restWithoutClass } = rest;
   let containerClass =
-    "relative hidden cursor-pointer border-b border-b-neutral-200 text-neutral-700 max-sm:hover:bg-neutral-100/50 sm:inline-block sm:border-b-neutral-50";
+    "relative inline-block cursor-pointer border-b border-b-neutral-200 py-6 text-neutral-700 max-sm:hover:bg-neutral-100/50 sm:border-b-neutral-50";
 
   if (restClass) {
     containerClass += ` ${restClass}`;
@@ -34,29 +36,39 @@ export const NavbarDropdown = (
     };
   }, []);
 
-  // For `size="xl"` below it doesn't matter that `"xl"` might not be accurate
   return (
-    <>
-      {/* Mobile */}
-      {children}
+    <li
+      class={containerClass}
+      ref={menuRef}
+      onClick={toggleMenu}
+      {...restWithoutClass}
+    >
       {/* Desktop */}
-      <li class={containerClass} {...restWithoutClass} ref={menuRef}>
-        <div
-          class="hidden py-6 sm:inline-block"
-          onClick={toggleMenu}
-        >
-          <div>
-            <span class="mr-1">{title}</span> {isMenuOpen
-              ? <ChevronUpIcon class="relative bottom-[2px]" />
-              : <ChevronDownIcon />}
-          </div>
-          {isMenuOpen && (
-            <ul class="absolute left-0 top-[89px] w-72 rounded border border-neutral-100 py-2">
-              {children}
-            </ul>
-          )}
-        </div>
-      </li>
-    </>
+      <div class="hidden sm:block">
+        <span class="mr-1">{title}</span> {isMenuOpen
+          ? (
+            <ChevronUpIcon
+              className="relative bottom-[2px]"
+              strokeWidth={2}
+            />
+          )
+          : <ChevronDownIcon strokeWidth={2} />}
+      </div>
+      {isMenuOpen && (
+        <ul class="absolute left-0 top-[89px] hidden w-72 rounded border border-neutral-100 py-2 sm:block">
+          {children}
+        </ul>
+      )}
+
+      {/* Mobile */}
+      <Container size="xl" class="block sm:hidden">
+        <Flex class="block items-center justify-between sm:hidden">
+          <span>{title}</span>
+          {isMenuOpen
+            ? <ChevronUpIcon className="mr-[2px] h-6 w-6" strokeWidth={1} />
+            : <ChevronDownIcon className="mr-[2px] h-6 w-6" strokeWidth={1} />}
+        </Flex>
+      </Container>
+    </li>
   );
 };

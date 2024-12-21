@@ -68,6 +68,7 @@ export const NavbarDropdown = (
             ? <ChevronUpIcon className="mr-[2px] h-6 w-6" strokeWidth={1} />
             : <ChevronDownIcon className="mr-[2px] h-6 w-6" strokeWidth={1} />}
         </Flex>
+        {isMenuOpen && <ul class="my-6">{children}</ul>}
       </Container>
     </li>
   );

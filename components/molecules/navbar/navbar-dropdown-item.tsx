@@ -12,10 +12,10 @@ export const NavbarDropdownItem = (
         <Link
           href={href}
           underline="none"
-          class="flex items-center py-4 italic"
+          class="flex items-center gap-3 break-all py-4 italic"
         >
           {children}{" "}
-          <ChevronRightIcon class="relative left-2 inline !h-4 !w-4" />
+          <ChevronRightIcon class="relative top-px inline !h-4 !w-4" />
         </Link>
       </li>
 

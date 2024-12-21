@@ -1,6 +1,5 @@
 import type { ComponentChild } from "preact";
 import { Link } from "../../atoms/link.tsx";
-import { ChevronRightIcon } from "../../icons/chevron-right.tsx";
 
 export const NavbarDropdownItem = (
   { href, children }: { href: string; children: ComponentChild },
@@ -11,11 +10,9 @@ export const NavbarDropdownItem = (
       <li class="block sm:hidden">
         <Link
           href={href}
-          underline="none"
-          class="flex items-center gap-3 break-all py-4 italic"
+          class="block break-all py-4"
         >
-          {children}{" "}
-          <ChevronRightIcon class="relative top-px inline !h-4 !w-4" />
+          {children}
         </Link>
       </li>
 

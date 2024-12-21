@@ -22,7 +22,7 @@ export const NavbarDropdown = (
   };
   const { class: restClass, ...restWithoutClass } = rest;
   let containerClass =
-    "relative inline-block cursor-pointer border-b border-b-neutral-200 py-6 text-neutral-700 max-sm:hover:bg-neutral-100/50 sm:border-b-neutral-50";
+    "relative inline-block border-b border-b-neutral-200 py-6 text-neutral-700 max-sm:hover:bg-neutral-100/50 sm:cursor-pointer sm:border-b-neutral-50";
 
   if (restClass) {
     containerClass += ` ${restClass}`;
@@ -68,7 +68,11 @@ export const NavbarDropdown = (
             ? <ChevronUpIcon className="mr-[2px] h-6 w-6" strokeWidth={1} />
             : <ChevronDownIcon className="mr-[2px] h-6 w-6" strokeWidth={1} />}
         </Flex>
-        {isMenuOpen && <ul class="my-6">{children}</ul>}
+        {isMenuOpen && (
+          <ul class="my-6 rounded border border-neutral-200/75 p-6">
+            {children}
+          </ul>
+        )}
       </Container>
     </li>
   );

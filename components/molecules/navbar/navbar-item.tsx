@@ -41,7 +41,7 @@ export const NavbarItem = (
           href={href}
           underline="none"
           aria-current={isActive ? "page" : undefined}
-          class="block py-6"
+          class="block break-all py-6"
         >
           {children}
         </Link>

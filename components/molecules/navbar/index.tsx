@@ -63,12 +63,6 @@ export const Navbar = (
 
   return (
     <nav class={containerClass} {...restWithoutClass}>
-      {/* Mobile */}
-      <Stack class="sm:hidden">
-        {navbarLeft && navbarLeft}
-        {navbarRight && navbarRight}
-      </Stack>
-
       {/* Desktop */}
       <Container size={size} class="hidden sm:block">
         <Flex class="justify-between">
@@ -76,6 +70,12 @@ export const Navbar = (
           {navbarRight && navbarRight}
         </Flex>
       </Container>
+
+      {/* Mobile */}
+      <Stack class="sm:hidden">
+        {navbarLeft && navbarLeft}
+        {navbarRight && navbarRight}
+      </Stack>
     </nav>
   );
 };

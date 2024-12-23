@@ -26,6 +26,16 @@ export const NavbarItem = (
   // For `size="xl"` below it doesn't matter that `"xl"` might not be accurate
   return (
     <li class={containerClass} {...restWithoutClass}>
+      {/* Desktop */}
+      <Link
+        href={href}
+        underline="none"
+        class="hidden py-6 sm:inline-block"
+        aria-current={isActive ? "page" : undefined}
+      >
+        {children}
+      </Link>
+
       {/* Mobile */}
       <Container size="xl" class="block sm:hidden">
         <Link
@@ -38,16 +48,6 @@ export const NavbarItem = (
           <ChevronRightIcon class="relative top-px" />
         </Link>
       </Container>
-
-      {/* Desktop */}
-      <Link
-        href={href}
-        underline="none"
-        class="hidden py-6 sm:inline-block"
-        aria-current={isActive ? "page" : undefined}
-      >
-        {children}
-      </Link>
     </li>
   );
 };

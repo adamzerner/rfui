@@ -8,6 +8,17 @@ export const NavbarDropdownItem = (
 ) => {
   return (
     <>
+      {/* Desktop */}
+      <li class="hidden sm:block">
+        <Link
+          href={href}
+          underline="none"
+          class="block break-all px-4 py-2 hover:bg-neutral-100/30"
+        >
+          {children}
+        </Link>
+      </li>
+
       {/* Mobile */}
       <li class="block border-b border-b-neutral-200 text-neutral-700 max-sm:hover:bg-neutral-100/50 sm:hidden sm:border-b-neutral-50 sm:hover:border-b-neutral-500">
         <Container size="xl" class="block sm:hidden">
@@ -20,17 +31,6 @@ export const NavbarDropdownItem = (
             <ChevronRightIcon class="relative top-px min-w-fit" />
           </Link>
         </Container>
-      </li>
-
-      {/* Desktop */}
-      <li class="hidden sm:block">
-        <Link
-          href={href}
-          underline="none"
-          class="block break-all px-4 py-2 hover:bg-neutral-100/30"
-        >
-          {children}
-        </Link>
       </li>
     </>
   );

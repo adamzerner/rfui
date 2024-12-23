@@ -24,9 +24,9 @@ export const NavbarDropdownItem = (
           <Link
             href={href}
             underline="none"
-            class="flex items-center justify-between gap-4 py-6"
+            class="block py-6"
           >
-            <div class="grow break-all">{children}</div>
+            {children}
           </Link>
         </Container>
       </li>

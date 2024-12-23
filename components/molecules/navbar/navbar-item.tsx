@@ -1,7 +1,6 @@
 import type { ComponentChild, ComponentProps } from "preact";
 import { Link } from "../../atoms/link.tsx";
 import { Container } from "../../helpers/container.tsx";
-import { ChevronRightIcon } from "../../icons/chevron-right.tsx";
 
 export const NavbarItem = (
   { href, isActive = false, children, ...rest }:
@@ -45,7 +44,6 @@ export const NavbarItem = (
           class="flex items-center justify-between py-6"
         >
           <div>{children}</div>
-          <ChevronRightIcon class="relative top-px" />
         </Link>
       </Container>
     </li>

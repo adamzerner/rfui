@@ -12,11 +12,17 @@ export const NavbarDropdown = (
 ) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const menuRef = useRef<HTMLLIElement>(null);
+  const subMenuRef = useRef<HTMLLIElement>(null);
   const toggleMenu = () => {
     setIsMenuOpen((v) => !v);
   };
   const handleClickOutside = (event: MouseEvent) => {
-    if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+    const target = event.target as Node;
+
+    if (
+      menuRef.current && !menuRef.current.contains(target) &&
+      !(subMenuRef.current && subMenuRef.current.contains(target))
+    ) {
       setIsMenuOpen(false);
     }
   };
@@ -77,7 +83,7 @@ export const NavbarDropdown = (
         </Container>
       </li>
       {isMenuOpen && (
-        <li class="block sm:hidden">
+        <li ref={subMenuRef} class="block sm:hidden">
           <ul class="ml-8">{children}</ul>
         </li>
       )}

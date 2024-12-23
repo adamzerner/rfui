@@ -62,7 +62,7 @@ export const NavbarDropdown = (
             : <ChevronDownIcon strokeWidth={2} />}
         </div>
         {isMenuOpen && (
-          <ul class="absolute left-0 top-[89px] hidden w-72 rounded border border-neutral-100 py-2 sm:block">
+          <ul class="absolute left-0 top-[89px] z-10 hidden w-72 rounded border border-neutral-100 bg-[#fff] py-2 sm:block">
             {children}
           </ul>
         )}

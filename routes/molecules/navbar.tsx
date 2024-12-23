@@ -310,6 +310,31 @@ export default () => {
     default: null,
     notes: null,
   }];
+  const navbarDropdownProps = [{
+    name: "children",
+    required: true,
+    type: "ComponentChild",
+    default: null,
+    notes: (
+      <div>
+        The <InlineCode>children</InlineCode> should consist of{" "}
+        <InlineCode>NavbarDropdownItem</InlineCode> elements.
+      </div>
+    ),
+  }];
+  const navbarDropdownItemProps = [{
+    name: "href",
+    required: true,
+    type: "string",
+    default: null,
+    notes: null,
+  }, {
+    name: "children",
+    required: true,
+    type: "ComponentChild",
+    default: null,
+    notes: null,
+  }];
 
   return (
     <ComponentDocsPage
@@ -384,6 +409,32 @@ export default () => {
       </Props>
       <Props subComponentTitle="NavbarItem">
         {navbarItemProps.map((prop) => {
+          const { notes, ...propWithoutNotes } = prop;
+
+          return notes
+            ? (
+              <Prop prop={prop}>
+                {notes}
+              </Prop>
+            )
+            : <Prop prop={propWithoutNotes}></Prop>;
+        })}
+      </Props>
+      <Props subComponentTitle="NavbarDropdown">
+        {navbarDropdownProps.map((prop) => {
+          const { notes, ...propWithoutNotes } = prop;
+
+          return notes
+            ? (
+              <Prop prop={prop}>
+                {notes}
+              </Prop>
+            )
+            : <Prop prop={propWithoutNotes}></Prop>;
+        })}
+      </Props>
+      <Props subComponentTitle="NavbarDropdownItem">
+        {navbarDropdownItemProps.map((prop) => {
           const { notes, ...propWithoutNotes } = prop;
 
           return notes

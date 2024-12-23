@@ -16,6 +16,8 @@ import { Stack } from "@/components/helpers/stack.tsx";
 import { Card } from "@/components/molecules/card.tsx";
 import {
   Navbar,
+  NavbarDropdown,
+  NavbarDropdownItem,
   NavbarItem,
   NavbarLeft,
   NavbarRight,
@@ -170,6 +172,44 @@ export default () => {
     </NavbarRight>
   </Navbar>
 </Stack>`}
+      />
+    ),
+  }, {
+    title: "Dropdown",
+    example: (
+      <Navbar size="xl">
+        <NavbarLeft>
+          <NavbarItem href="https://one.com">One</NavbarItem>
+          <NavbarItem href="https://two.com">Two</NavbarItem>
+          <NavbarDropdown title="Dropdown">
+            <NavbarDropdownItem href="https://three.com">
+              Three
+            </NavbarDropdownItem>
+            <NavbarDropdownItem href="https://four.com">
+              Four
+            </NavbarDropdownItem>
+          </NavbarDropdown>
+        </NavbarLeft>
+      </Navbar>
+    ),
+    exampleCode: (
+      <CodeBlock
+        class="mt-4"
+        language="tsx"
+        code={`<Navbar size="xl">
+  <NavbarLeft>
+    <NavbarItem href="https://one.com">One</NavbarItem>
+    <NavbarItem href="https://two.com">Two</NavbarItem>
+    <NavbarDropdown title="Dropdown">
+      <NavbarDropdownItem href="https://three.com">
+        Three
+      </NavbarDropdownItem>
+      <NavbarDropdownItem href="https://four.com">
+        Four
+      </NavbarDropdownItem>
+    </NavbarDropdown>
+  </NavbarLeft>
+</Navbar>`}
       />
     ),
   }];

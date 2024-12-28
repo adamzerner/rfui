@@ -69,7 +69,10 @@ export const NavbarMegamenu = (
 
         {/* Mobile */}
         <Container size="xl" class="block sm:hidden">
-          <Flex class="block items-center justify-between sm:hidden">
+          <Flex
+            class="block items-center justify-between py-6 sm:hidden"
+            onClick={toggleMenu}
+          >
             <span>{title}</span>
             {isMenuOpen
               ? <ChevronUpIcon className="mr-[2px] h-6 w-6" strokeWidth={1} />

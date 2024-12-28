@@ -38,10 +38,8 @@ export default () => {
       </p> */
       }
       <p>
-        Note: in the examples below the horizontal padding is a little off.
-        There's no space to the left of "One" and no space to the right of
-        "Four". This won't happen in practice though if you do something like
-        this:
+        Note: in the examples below the horizontal padding is a little off. This
+        won't happen in practice though if you do something like this:
       </p>
       <CodeBlock
         language="tsx"

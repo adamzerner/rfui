@@ -2,6 +2,7 @@ import {
   Navbar as RFUINavbar,
   NavbarItem,
   NavbarLeft,
+  NavbarMegamenu,
 } from "@/components/molecules/navbar/index.tsx";
 
 export const Navbar = ({ route }: { route: string }) => {
@@ -18,6 +19,9 @@ export const Navbar = ({ route }: { route: string }) => {
         <NavbarItem href="/about" isActive={route === "/about"}>
           About
         </NavbarItem>
+        <NavbarMegamenu title="Megamenu">
+          <div>Test</div>
+        </NavbarMegamenu>
       </NavbarLeft>
     </RFUINavbar>
   );

@@ -5,6 +5,7 @@ import { Stack } from "../../helpers/stack.tsx";
 import { getComponents } from "./get-components.tsx";
 
 export { NavbarDropdown } from "../../../islands/molecules/navbar-dropdown.tsx";
+export { NavbarMegamenu } from "../../../islands/molecules/navbar-megamenu.tsx";
 export { NavbarDropdownItem } from "./navbar-dropdown-item.tsx";
 export { NavbarItem } from "./navbar-item.tsx";
 export { NavbarLeft } from "./navbar-left.tsx";
@@ -39,6 +40,7 @@ export const Navbar = (
     ...rest
   }: NavbarType,
 ) => {
+  console.log("RFUINavbar");
   // deno-lint-ignore no-unused-vars
   const { navbarLeft, navbarRight, numItems } = getComponents(children);
   const { class: restClass, ...restWithoutClass } = rest;

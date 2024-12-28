@@ -18,21 +18,15 @@ export const NavbarMegamenu = (
   };
   const handleClickOutside = (event: MouseEvent) => {
     const target = event.target as Node;
-    console.log(menuRef.current);
-    console.log(menuRef.current?.contains(target));
-    console.log(desktopSubmenuRef.current);
-    console.log(desktopSubmenuRef.current?.contains(target));
+    const clickedInside = menuRef.current && menuRef.current.contains(target);
 
-    if (
-      menuRef.current && !menuRef.current.contains(target) &&
-      !(desktopSubmenuRef.current && desktopSubmenuRef.current.contains(target))
-    ) {
+    if (!clickedInside) {
       setIsMenuOpen(false);
     }
   };
   const { class: restClass, ...restWithoutClass } = rest;
   let containerClass =
-    "relative inline-block border-b border-b-neutral-200 py-6 text-neutral-700 max-sm:hover:bg-neutral-100/50 sm:cursor-pointer sm:border-b-neutral-50";
+    "relative inline-block border-b border-b-neutral-200 text-neutral-700 max-sm:hover:bg-neutral-100/50 sm:cursor-pointer sm:border-b-neutral-50";
 
   if (restClass) {
     containerClass += ` ${restClass}`;
@@ -51,11 +45,10 @@ export const NavbarMegamenu = (
       <li
         class={containerClass}
         ref={menuRef}
-        onClick={toggleMenu}
         {...restWithoutClass}
       >
         {/* Desktop */}
-        <div class="hidden sm:block">
+        <div class="hidden py-6 sm:block" onClick={toggleMenu}>
           <span class="mr-1">{title}</span> {isMenuOpen
             ? (
               <ChevronUpIcon

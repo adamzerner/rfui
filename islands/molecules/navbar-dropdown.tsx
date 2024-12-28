@@ -18,17 +18,17 @@ export const NavbarDropdown = (
   };
   const handleClickOutside = (event: MouseEvent) => {
     const target = event.target as Node;
+    const clickedInside =
+      (menuRef.current && menuRef.current.contains(target)) ||
+      (subMenuRef.current && subMenuRef.current.contains(target));
 
-    if (
-      menuRef.current && !menuRef.current.contains(target) &&
-      !(subMenuRef.current && subMenuRef.current.contains(target))
-    ) {
+    if (!clickedInside) {
       setIsMenuOpen(false);
     }
   };
   const { class: restClass, ...restWithoutClass } = rest;
   let containerClass =
-    "relative inline-block border-b border-b-neutral-200 py-6 text-neutral-700 max-sm:hover:bg-neutral-100/50 sm:cursor-pointer sm:border-b-neutral-50";
+    "relative inline-block border-b border-b-neutral-200 text-neutral-700 max-sm:hover:bg-neutral-100/50 sm:cursor-pointer sm:border-b-neutral-50";
 
   if (restClass) {
     containerClass += ` ${restClass}`;
@@ -47,11 +47,10 @@ export const NavbarDropdown = (
       <li
         class={containerClass}
         ref={menuRef}
-        onClick={toggleMenu}
         {...restWithoutClass}
       >
         {/* Desktop */}
-        <div class="hidden sm:block">
+        <div class="hidden py-6 sm:block" onClick={toggleMenu}>
           <span class="mr-1">{title}</span> {isMenuOpen
             ? (
               <ChevronUpIcon
@@ -69,7 +68,10 @@ export const NavbarDropdown = (
 
         {/* Mobile */}
         <Container size="xl" class="block sm:hidden">
-          <Flex class="block items-center justify-between sm:hidden">
+          <Flex
+            class="block items-center justify-between py-6 sm:hidden"
+            onClick={toggleMenu}
+          >
             <span>{title}</span>
             {isMenuOpen
               ? <ChevronUpIcon className="mr-[2px] h-6 w-6" strokeWidth={1} />

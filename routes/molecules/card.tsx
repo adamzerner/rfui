@@ -32,7 +32,7 @@ export default () => {
       <CodeBlock
         class="mt-4"
         language="tsx"
-        code={`<Card>A summary of your account.</Card>,`}
+        code={`<Card>A summary of your account.</Card>`}
       />
     ),
   }, {

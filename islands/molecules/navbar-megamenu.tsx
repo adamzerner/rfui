@@ -6,11 +6,12 @@ import { ChevronDownIcon } from "../../components/icons/chevron-down.tsx";
 import { ChevronUpIcon } from "../../components/icons/chevron-up.tsx";
 
 export const NavbarMegamenu = (
-  { title, children, desktopSubmenu, ...rest }:
+  { title, children, desktopSubmenu, mobileSubmenu, ...rest }:
     & {
       title: string;
       children: ComponentChild;
       desktopSubmenu?: ComponentProps<"div">;
+      mobileSubmenu?: ComponentProps<"div">;
     }
     & ComponentProps<"li">,
 ) => {
@@ -31,9 +32,13 @@ export const NavbarMegamenu = (
   const { class: restClass, ...restWithoutClass } = rest;
   const { class: desktopSubmenuClassArg, ...desktopSubmenuWithoutClass } =
     desktopSubmenu || {};
+  const { class: mobileSubmenuClassArg, ...mobileSubmenuWithoutClass } =
+    mobileSubmenu || {};
+
   let containerClass =
     "inline-block border-b border-b-neutral-200 text-neutral-700 max-sm:hover:bg-neutral-100/50 sm:cursor-pointer sm:border-b-neutral-50";
   let desktopSubmenuClass = "absolute top-[89px] z-10 hidden sm:block";
+  let mobileSubmenuClass = "block sm:hidden";
 
   if (restClass) {
     containerClass += ` ${restClass}`;
@@ -41,6 +46,10 @@ export const NavbarMegamenu = (
 
   if (desktopSubmenuClassArg) {
     desktopSubmenuClass += ` ${desktopSubmenuClassArg}`;
+  }
+
+  if (mobileSubmenuClassArg) {
+    mobileSubmenuClass += ` ${mobileSubmenuClassArg}`;
   }
 
   useEffect(() => {
@@ -98,9 +107,9 @@ export const NavbarMegamenu = (
         </Container>
       </li>
       {isMenuOpen && (
-        <li class="block sm:hidden">
-          <ul class="ml-8">{children}</ul>
-        </li>
+        <div class={mobileSubmenuClass} {...mobileSubmenuWithoutClass}>
+          {children}
+        </div>
       )}
     </>
   );

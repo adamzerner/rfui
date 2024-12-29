@@ -7,9 +7,8 @@ export const getComponents = (_children: any) => {
   const children = getChildren(_children);
 
   if (!Array.isArray(children)) {
-    const numItems = Array.isArray(children.props.children)
-      ? children.props.children.length
-      : 1;
+    const localChildren = getChildren(children.props.children);
+    const numItems = Array.isArray(localChildren) ? localChildren.length : 1;
 
     return { navbarLeft: children, numItems };
   }
@@ -28,15 +27,13 @@ export const getComponents = (_children: any) => {
     );
   }
 
+  const navbarLeftChildren = getChildren(navbarLeft.props.children);
   const numLeftItems = navbarLeft
-    ? Array.isArray(navbarLeft.props.children)
-      ? navbarLeft.props.children.length
-      : 1
+    ? Array.isArray(navbarLeftChildren) ? navbarLeftChildren.length : 1
     : 0;
+  const navbarRightChildren = getChildren(navbarRight.props.children);
   const numRightItems = navbarRight
-    ? Array.isArray(navbarRight.props.children)
-      ? navbarRight.props.children.length
-      : 1
+    ? Array.isArray(navbarRightChildren) ? navbarRightChildren.length : 1
     : 0;
   const numItems = numLeftItems + numRightItems;
 

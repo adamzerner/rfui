@@ -4,6 +4,12 @@ export const CloseIcon = (
   { ...rest }: ComponentProps<"svg">,
 ) => {
   const { className: restClass, ...restWithoutClass } = rest;
+  let className =
+    "h-6 w-6 cursor-pointer rounded outline-1 outline-offset-2 hover:outline";
+
+  if (restClass) {
+    className += ` ${restClass}`;
+  }
 
   return (
     <svg
@@ -12,7 +18,7 @@ export const CloseIcon = (
       viewBox="0 0 24 24"
       strokeWidth={1.5}
       stroke="currentColor"
-      className={`w-6 h-6 cursor-pointer hover:outline rounded outline-offset-2 outline-1 ${restClass}`}
+      className={className}
       {...restWithoutClass}
     >
       <path

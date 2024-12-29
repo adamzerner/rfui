@@ -6,6 +6,8 @@ import {
 } from "../../../components/helpers/container.tsx";
 import { Flex } from "../../../components/helpers/flex.tsx";
 import { Stack } from "../../../components/helpers/stack.tsx";
+import { CloseIcon } from "../../../components/icons/close-icon.tsx";
+import { HamburgerIcon } from "../../../components/icons/hamburger-icon.tsx";
 import { getComponents } from "../../../components/molecules/navbar/get-components.tsx";
 
 export { NavbarDropdownItem } from "../../../components/molecules/navbar/navbar-dropdown-item.tsx";
@@ -82,11 +84,16 @@ export const Navbar = (
 
       {/* Mobile */}
       <Stack class="sm:hidden">
-        <Container size="xl" class="block sm:hidden">
-          <div class="cursor-pointer py-6" onClick={toggleHamburgerMenu}>
-            Menu
-          </div>
-        </Container>
+        <Flex
+          class="cursor-pointer items-center gap-2 border-b border-b-neutral-200 px-6 py-6 text-neutral-700 hover:bg-neutral-100/50"
+          onClick={toggleHamburgerMenu}
+        >
+          {isHamburgerMenuOpen ? <CloseIcon className="outline-none" /> : (
+            <>
+              <HamburgerIcon class="!inline-block w-6" /> Menu
+            </>
+          )}
+        </Flex>
         {(!hasHamburgerMenu || (hasHamburgerMenu && isHamburgerMenuOpen)) &&
           navbarLeft && navbarLeft}
         {(!hasHamburgerMenu || (hasHamburgerMenu && isHamburgerMenuOpen)) &&

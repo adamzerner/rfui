@@ -51,7 +51,7 @@ export const Navbar = (
     setIsHamburgerMenuOpen((v) => !v);
   };
   const { navbarLeft, navbarRight, numItems } = getComponents(children);
-  const hasHamburgerMenu = true;
+  const hasHamburgerMenu = false;
   const { class: restClass, ...restWithoutClass } = rest;
   let containerClass = "px-auto w-full";
 
@@ -84,16 +84,18 @@ export const Navbar = (
 
       {/* Mobile */}
       <Stack class="sm:hidden">
-        <Flex
-          class="cursor-pointer items-center gap-2 border-b border-b-neutral-200 px-6 py-6 text-neutral-700 hover:bg-neutral-100/50"
-          onClick={toggleHamburgerMenu}
-        >
-          {isHamburgerMenuOpen ? <CloseIcon className="outline-none" /> : (
-            <>
-              <HamburgerIcon class="!inline-block w-6" /> Menu
-            </>
-          )}
-        </Flex>
+        {hasHamburgerMenu && (
+          <Flex
+            class="cursor-pointer items-center gap-2 border-b border-b-neutral-200 px-6 py-6 text-neutral-700 hover:bg-neutral-100/50"
+            onClick={toggleHamburgerMenu}
+          >
+            {isHamburgerMenuOpen ? <CloseIcon className="outline-none" /> : (
+              <>
+                <HamburgerIcon class="!inline-block w-6" /> Menu
+              </>
+            )}
+          </Flex>
+        )}
         {(!hasHamburgerMenu || (hasHamburgerMenu && isHamburgerMenuOpen)) &&
           navbarLeft && navbarLeft}
         {(!hasHamburgerMenu || (hasHamburgerMenu && isHamburgerMenuOpen)) &&

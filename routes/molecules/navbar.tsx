@@ -27,19 +27,18 @@ import {
 export default () => {
   const notes = (
     <Stack class="gap-3">
-      {
-        /* <p>
-        Based on{" "}
+      <p>
+        Note: Based on{" "}
         <Link href="https://www.nngroup.com/articles/find-navigation-mobile-even-hamburger/">
           this advice
         </Link>{" "}
-        from NNGroup, on narrow viewports (eg. mobile devices) a hamburger menu
-        will be used if there are more than four nav items and a stacked list
-        (no hamburger menu) will be used if there are four or less nav items.
-      </p> */
-      }
+        from Nielsen Norman Group, on narrow viewports (eg. mobile devices) a
+        hamburger menu will be used if there are more than four nav items and a
+        stacked list (no hamburger menu) will be used if there are four or less
+        nav items.
+      </p>
       <p>
-        Note: in the examples below the horizontal padding is a little off. This
+        Note: In the examples below the horizontal padding is a little off. This
         won't happen in practice though if you do something like this:
       </p>
       <CodeBlock

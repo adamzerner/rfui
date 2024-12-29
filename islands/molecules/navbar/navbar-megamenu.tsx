@@ -1,9 +1,9 @@
 import type { ComponentChild, ComponentProps } from "preact";
 import { useEffect, useRef, useState } from "preact/hooks";
-import { Container } from "../../components/helpers/container.tsx";
-import { Flex } from "../../components/helpers/flex.tsx";
-import { ChevronDownIcon } from "../../components/icons/chevron-down.tsx";
-import { ChevronUpIcon } from "../../components/icons/chevron-up.tsx";
+import { Container } from "../../../components/helpers/container.tsx";
+import { Flex } from "../../../components/helpers/flex.tsx";
+import { ChevronDownIcon } from "../../../components/icons/chevron-down.tsx";
+import { ChevronUpIcon } from "../../../components/icons/chevron-up.tsx";
 
 export const NavbarMegamenu = (
   { title, children, desktopSubmenu, mobileSubmenu, ...rest }:

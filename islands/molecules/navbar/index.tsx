@@ -1,15 +1,18 @@
 import type { ComponentChild, ComponentProps } from "preact";
-import { Container, type ContainerType } from "../../helpers/container.tsx";
-import { Flex } from "../../helpers/flex.tsx";
-import { Stack } from "../../helpers/stack.tsx";
-import { getComponents } from "./get-components.tsx";
+import {
+  Container,
+  type ContainerType,
+} from "../../../components/helpers/container.tsx";
+import { Flex } from "../../../components/helpers/flex.tsx";
+import { Stack } from "../../../components/helpers/stack.tsx";
+import { getComponents } from "../../../components/molecules/navbar/get-components.tsx";
 
-export { NavbarDropdown } from "../../../islands/molecules/navbar/navbar-dropdown.tsx";
-export { NavbarMegamenu } from "../../../islands/molecules/navbar/navbar-megamenu.tsx";
-export { NavbarDropdownItem } from "./navbar-dropdown-item.tsx";
-export { NavbarItem } from "./navbar-item.tsx";
-export { NavbarLeft } from "./navbar-left.tsx";
-export { NavbarRight } from "./navbar-right.tsx";
+export { NavbarDropdownItem } from "../../../components/molecules/navbar/navbar-dropdown-item.tsx";
+export { NavbarItem } from "../../../components/molecules/navbar/navbar-item.tsx";
+export { NavbarLeft } from "../../../components/molecules/navbar/navbar-left.tsx";
+export { NavbarRight } from "../../../components/molecules/navbar/navbar-right.tsx";
+export { NavbarDropdown } from "./navbar-dropdown.tsx";
+export { NavbarMegamenu } from "./navbar-megamenu.tsx";
 
 export type NavbarType = {
   size?: ContainerType["size"];
@@ -74,8 +77,15 @@ export const Navbar = (
 
       {/* Mobile */}
       <Stack class="sm:hidden">
-        {navbarLeft && navbarLeft}
-        {navbarRight && navbarRight}
+        <Container size="xl" class="block sm:hidden">
+          <div class="cursor-pointer py-6">
+            Menu
+          </div>
+        </Container>
+        {
+          /* {navbarLeft && navbarLeft}
+        {navbarRight && navbarRight} */
+        }
       </Stack>
     </nav>
   );

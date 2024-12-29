@@ -52,6 +52,7 @@ import * as $docs_site_component_docs_page_modal_example from "./islands/docs-si
 import * as $molecules_alert_1 from "./islands/molecules/alert.tsx";
 import * as $molecules_checkbox_card_group_1 from "./islands/molecules/checkbox-card-group.tsx";
 import * as $molecules_modal_1 from "./islands/molecules/modal.tsx";
+import * as $molecules_navbar_index from "./islands/molecules/navbar/index.tsx";
 import * as $molecules_navbar_navbar_dropdown from "./islands/molecules/navbar/navbar-dropdown.tsx";
 import * as $molecules_navbar_navbar_megamenu from "./islands/molecules/navbar/navbar-megamenu.tsx";
 import * as $molecules_password_input_1 from "./islands/molecules/password-input.tsx";
@@ -119,6 +120,7 @@ const manifest = {
     "./islands/molecules/checkbox-card-group.tsx":
       $molecules_checkbox_card_group_1,
     "./islands/molecules/modal.tsx": $molecules_modal_1,
+    "./islands/molecules/navbar/index.tsx": $molecules_navbar_index,
     "./islands/molecules/navbar/navbar-dropdown.tsx":
       $molecules_navbar_navbar_dropdown,
     "./islands/molecules/navbar/navbar-megamenu.tsx":

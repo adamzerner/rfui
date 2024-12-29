@@ -51,7 +51,7 @@ export const Navbar = (
     setIsHamburgerMenuOpen((v) => !v);
   };
   const { navbarLeft, navbarRight, numItems } = getComponents(children);
-  const hasHamburgerMenu = false;
+  const hasHamburgerMenu = numItems > 4;
   const { class: restClass, ...restWithoutClass } = rest;
   let containerClass = "px-auto w-full";
 

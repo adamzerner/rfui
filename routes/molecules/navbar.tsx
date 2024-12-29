@@ -20,6 +20,7 @@ import {
   NavbarDropdownItem,
   NavbarItem,
   NavbarLeft,
+  NavbarMegamenu,
   NavbarRight,
 } from "@/components/molecules/navbar/index.tsx";
 
@@ -174,6 +175,15 @@ export default () => {
     ),
   }, {
     title: "Dropdown",
+    description: (
+      <div>
+        Dropdowns work well when there are few menu items. Prefer using a{" "}
+        <Link href="https://www.nngroup.com/articles/mega-menus-work-well/">
+          megamenu
+        </Link>{" "}
+        when there are many menu items.
+      </div>
+    ),
     example: (
       <Navbar size="xl">
         <NavbarLeft>
@@ -206,6 +216,77 @@ export default () => {
         Four
       </NavbarDropdownItem>
     </NavbarDropdown>
+  </NavbarLeft>
+</Navbar>`}
+      />
+    ),
+  }, {
+    title: "Megamenu",
+    description: (
+      <Stack class="gap-3">
+        <div>
+          While <Link href="/molecules/navbar#dropdown">dropdowns</Link>{" "}
+          work well when there are few menu items, megamenus{" "}
+          <Link href="https://www.nngroup.com/articles/mega-menus-work-well/">
+            work well
+          </Link>{" "}
+          when there are many menu items.
+        </div>
+        <div>
+          To control the submenu on desktop views,{" "}
+          <InlineCode>desktopRest</InlineCode>{" "}
+          will be passed in a manner similar to other{" "}
+          <Link href="/rest-parameters">rest parameters</Link>. For the mobile
+          submenu, use <InlineCode>mobileRest</InlineCode> instead of{" "}
+          <InlineCode>desktopRest</InlineCode>.
+        </div>
+        <div>
+          Note: this demo is sorta broken. You need to scroll to the top of the
+          page to see the desktop submenu. In practice, if your navbar is at the
+          top of the page, you won't have this problem. If you need to position
+          the submenu you can set the <InlineCode>left</InlineCode> and{" "}
+          <InlineCode>top</InlineCode> css properties.
+        </div>
+      </Stack>
+    ),
+    example: (
+      <Navbar size="xl">
+        <NavbarLeft>
+          <NavbarItem href="https://one.com">One</NavbarItem>
+          <NavbarItem href="https://two.com">Two</NavbarItem>
+          <NavbarMegamenu
+            title="Megamenu"
+            desktopSubmenu={{
+              class: "left-0 w-full p-6 bg-neutral-900 text-neutral-100",
+            }}
+            mobileSubmenu={{
+              class: "bg-neutral-900 text-neutral-100 p-6",
+            }}
+          >
+            <div>Example</div>
+          </NavbarMegamenu>
+        </NavbarLeft>
+      </Navbar>
+    ),
+    exampleCode: (
+      <CodeBlock
+        class="mt-4"
+        language="tsx"
+        code={`<Navbar size="xl">
+  <NavbarLeft>
+    <NavbarItem href="https://one.com">One</NavbarItem>
+    <NavbarItem href="https://two.com">Two</NavbarItem>
+    <NavbarMegamenu
+      title="Megamenu"
+      desktopSubmenu={{
+        class: "left-0 w-full p-6 bg-neutral-900 text-neutral-100",
+      }}
+      mobileSubmenu={{
+        class: "bg-neutral-900 text-neutral-100 p-6",
+      }}
+    >
+      <div>Example</div>
+    </NavbarMegamenu>
   </NavbarLeft>
 </Navbar>`}
       />
@@ -309,6 +390,11 @@ export default () => {
     notes: null,
   }];
   const navbarDropdownProps = [{
+    name: "title",
+    required: true,
+    type: "string",
+    default: null,
+  }, {
     name: "children",
     required: true,
     type: "ComponentChild",
@@ -319,6 +405,12 @@ export default () => {
         <InlineCode>NavbarDropdownItem</InlineCode> elements.
       </div>
     ),
+  }, {
+    name: "...rest",
+    required: false,
+    type: 'ComponentProps<"li">',
+    default: null,
+    notes: null,
   }];
   const navbarDropdownItemProps = [{
     name: "href",
@@ -330,6 +422,53 @@ export default () => {
     name: "children",
     required: true,
     type: "ComponentChild",
+    default: null,
+    notes: null,
+  }];
+  const navbarMegamenuProps = [{
+    name: "title",
+    required: true,
+    type: "string",
+    default: null,
+  }, {
+    name: "children",
+    required: true,
+    type: "ComponentChild",
+    default: null,
+    notes: (
+      <div>
+        The <InlineCode>children</InlineCode> should consist of{" "}
+        <InlineCode>NavbarDropdownItem</InlineCode> elements.
+      </div>
+    ),
+  }, {
+    name: "desktopSubmenu",
+    required: false,
+    type: 'ComponentProps<"div">',
+    default: null,
+    notes: (
+      <div>
+        This will be passed to the desktop submenu in a manner similar to other
+        {" "}
+        <Link href="/rest-parameters">rest parameters</Link>.
+      </div>
+    ),
+  }, {
+    name: "mobileSubmenu",
+    required: false,
+    type: 'ComponentProps<"div">',
+    default: null,
+    notes: (
+      <div>
+        This will be passed to the mobile submenu in a manner similar to other
+        {" "}
+        <Link href="/rest-parameters">rest parameters</Link>.
+      </div>
+    ),
+  }, {
+    name: "...rest",
+    required: false,
+    type: 'ComponentProps<"li">',
     default: null,
     notes: null,
   }];
@@ -433,6 +572,19 @@ export default () => {
       </Props>
       <Props subComponentTitle="NavbarDropdownItem">
         {navbarDropdownItemProps.map((prop) => {
+          const { notes, ...propWithoutNotes } = prop;
+
+          return notes
+            ? (
+              <Prop prop={prop}>
+                {notes}
+              </Prop>
+            )
+            : <Prop prop={propWithoutNotes}></Prop>;
+        })}
+      </Props>
+      <Props subComponentTitle="NavbarMegamenu">
+        {navbarMegamenuProps.map((prop) => {
           const { notes, ...propWithoutNotes } = prop;
 
           return notes

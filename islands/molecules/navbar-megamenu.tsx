@@ -5,33 +5,51 @@ import { Flex } from "../../components/helpers/flex.tsx";
 import { ChevronDownIcon } from "../../components/icons/chevron-down.tsx";
 import { ChevronUpIcon } from "../../components/icons/chevron-up.tsx";
 
-export const NavbarDropdown = (
-  { title, children, ...rest }:
-    & { title: string; children: ComponentChild }
+export const NavbarMegamenu = (
+  { title, children, desktopSubmenu, mobileSubmenu, ...rest }:
+    & {
+      title: string;
+      children: ComponentChild;
+      desktopSubmenu?: ComponentProps<"div">;
+      mobileSubmenu?: ComponentProps<"div">;
+    }
     & ComponentProps<"li">,
 ) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const menuRef = useRef<HTMLLIElement>(null);
-  const subMenuRef = useRef<HTMLLIElement>(null);
+  const desktopSubmenuRef = useRef<HTMLDivElement>(null);
   const toggleMenu = () => {
     setIsMenuOpen((v) => !v);
   };
   const handleClickOutside = (event: MouseEvent) => {
     const target = event.target as Node;
-    const clickedInside =
-      (menuRef.current && menuRef.current.contains(target)) ||
-      (subMenuRef.current && subMenuRef.current.contains(target));
+    const clickedInside = menuRef.current && menuRef.current.contains(target);
 
     if (!clickedInside) {
       setIsMenuOpen(false);
     }
   };
   const { class: restClass, ...restWithoutClass } = rest;
+  const { class: desktopSubmenuClassArg, ...desktopSubmenuWithoutClass } =
+    desktopSubmenu || {};
+  const { class: mobileSubmenuClassArg, ...mobileSubmenuWithoutClass } =
+    mobileSubmenu || {};
+
   let containerClass =
-    "relative inline-block border-b border-b-neutral-200 text-neutral-700 max-sm:hover:bg-neutral-100/50 sm:cursor-pointer sm:border-b-neutral-50";
+    "inline-block border-b border-b-neutral-200 text-neutral-700 max-sm:hover:bg-neutral-100/50 sm:cursor-pointer sm:border-b-neutral-50";
+  let desktopSubmenuClass = "absolute top-[89px] z-10 hidden sm:block";
+  let mobileSubmenuClass = "block sm:hidden";
 
   if (restClass) {
     containerClass += ` ${restClass}`;
+  }
+
+  if (desktopSubmenuClassArg) {
+    desktopSubmenuClass += ` ${desktopSubmenuClassArg}`;
+  }
+
+  if (mobileSubmenuClassArg) {
+    mobileSubmenuClass += ` ${mobileSubmenuClassArg}`;
   }
 
   useEffect(() => {
@@ -61,9 +79,13 @@ export const NavbarDropdown = (
             : <ChevronDownIcon strokeWidth={2} />}
         </div>
         {isMenuOpen && (
-          <ul class="absolute left-0 top-[89px] z-10 hidden w-72 rounded border border-neutral-100 bg-[#fff] py-2 sm:block">
+          <div
+            ref={desktopSubmenuRef}
+            class={desktopSubmenuClass}
+            {...desktopSubmenuWithoutClass}
+          >
             {children}
-          </ul>
+          </div>
         )}
 
         {/* Mobile */}
@@ -85,9 +107,9 @@ export const NavbarDropdown = (
         </Container>
       </li>
       {isMenuOpen && (
-        <li ref={subMenuRef} class="block sm:hidden">
-          <ul class="ml-8">{children}</ul>
-        </li>
+        <div class={mobileSubmenuClass} {...mobileSubmenuWithoutClass}>
+          {children}
+        </div>
       )}
     </>
   );

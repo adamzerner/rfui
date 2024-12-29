@@ -36,7 +36,7 @@ export const NavbarMegamenu = (
     mobileSubmenu || {};
 
   let containerClass =
-    "inline-block border-b border-b-neutral-200 text-neutral-700 max-sm:hover:bg-neutral-100/50 sm:cursor-pointer sm:border-b-neutral-50";
+    "inline-block cursor-pointer border-b border-b-neutral-200 text-neutral-700 max-sm:hover:bg-neutral-100/50 sm:border-b-neutral-50";
   let desktopSubmenuClass = "absolute top-[89px] z-10 hidden sm:block";
   let mobileSubmenuClass = "block sm:hidden";
 

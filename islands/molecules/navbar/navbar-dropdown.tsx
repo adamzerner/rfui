@@ -28,7 +28,7 @@ export const NavbarDropdown = (
   };
   const { class: restClass, ...restWithoutClass } = rest;
   let containerClass =
-    "relative inline-block border-b border-b-neutral-200 text-neutral-700 max-sm:hover:bg-neutral-100/50 sm:cursor-pointer sm:border-b-neutral-50";
+    "relative inline-block cursor-pointer border-b border-b-neutral-200 text-neutral-700 max-sm:hover:bg-neutral-100/50 sm:border-b-neutral-50";
 
   if (restClass) {
     containerClass += ` ${restClass}`;

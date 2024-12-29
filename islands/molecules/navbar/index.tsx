@@ -85,16 +85,10 @@ export const Navbar = (
       {/* Mobile */}
       <Stack class="sm:hidden">
         {hasHamburgerMenu && (
-          <Flex
-            class="cursor-pointer items-center gap-2 border-b border-b-neutral-200 px-6 py-6 text-neutral-700 hover:bg-neutral-100/50"
-            onClick={toggleHamburgerMenu}
-          >
-            {isHamburgerMenuOpen ? <CloseIcon className="outline-none" /> : (
-              <>
-                <HamburgerIcon class="!inline-block w-6" /> Menu
-              </>
-            )}
-          </Flex>
+          <HamburgerMenuToggle
+            isOpen={isHamburgerMenuOpen}
+            toggleHamburgerMenu={toggleHamburgerMenu}
+          />
         )}
         {(!hasHamburgerMenu || (hasHamburgerMenu && isHamburgerMenuOpen)) &&
           navbarLeft && navbarLeft}
@@ -102,5 +96,25 @@ export const Navbar = (
           navbarRight && navbarRight}
       </Stack>
     </nav>
+  );
+};
+
+const HamburgerMenuToggle = (
+  { isOpen, toggleHamburgerMenu }: {
+    isOpen: boolean;
+    toggleHamburgerMenu: () => void;
+  },
+) => {
+  return (
+    <Flex
+      class="cursor-pointer items-center gap-2 border-b border-b-neutral-200 px-6 py-6 text-neutral-700 hover:bg-neutral-100/50"
+      onClick={toggleHamburgerMenu}
+    >
+      {isOpen ? <CloseIcon className="outline-none" /> : (
+        <>
+          <HamburgerIcon class="!inline-block w-6" /> Menu
+        </>
+      )}
+    </Flex>
   );
 };

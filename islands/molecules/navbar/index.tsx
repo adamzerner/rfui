@@ -1,4 +1,5 @@
 import type { ComponentChild, ComponentProps } from "preact";
+import { useState } from "preact/hooks";
 import {
   Container,
   type ContainerType,
@@ -43,6 +44,10 @@ export const Navbar = (
     ...rest
   }: NavbarType,
 ) => {
+  const [isHamburgerMenuOpen, setIsHamburgerMenuOpen] = useState(false);
+  const toggleHamburgerMenu = () => {
+    setIsHamburgerMenuOpen((v) => !v);
+  };
   // deno-lint-ignore no-unused-vars
   const { navbarLeft, navbarRight, numItems } = getComponents(children);
   const { class: restClass, ...restWithoutClass } = rest;
@@ -78,14 +83,12 @@ export const Navbar = (
       {/* Mobile */}
       <Stack class="sm:hidden">
         <Container size="xl" class="block sm:hidden">
-          <div class="cursor-pointer py-6">
+          <div class="cursor-pointer py-6" onClick={toggleHamburgerMenu}>
             Menu
           </div>
         </Container>
-        {
-          /* {navbarLeft && navbarLeft}
-        {navbarRight && navbarRight} */
-        }
+        {(isHamburgerMenuOpen && navbarLeft) && navbarLeft}
+        {(isHamburgerMenuOpen && navbarRight) && navbarRight}
       </Stack>
     </nav>
   );

@@ -40,7 +40,6 @@ export const Navbar = (
     ...rest
   }: NavbarType,
 ) => {
-  console.log("RFUINavbar");
   // deno-lint-ignore no-unused-vars
   const { navbarLeft, navbarRight, numItems } = getComponents(children);
   const { class: restClass, ...restWithoutClass } = rest;

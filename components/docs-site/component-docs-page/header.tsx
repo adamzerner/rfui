@@ -23,7 +23,7 @@ export const Header = (
   const { notes, example } = getComponents(children);
 
   return (
-    <nav class="mb-10">
+    <header class="mb-10">
       <H1 class="!mt-0">{componentName}</H1>
       <Stack class="gap-5">
         <Text>
@@ -51,7 +51,7 @@ export const Header = (
           code={importStatement}
         />
       </Stack>
-    </nav>
+    </header>
   );
 };
 

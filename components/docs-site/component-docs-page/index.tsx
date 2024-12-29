@@ -11,11 +11,11 @@ export const ComponentDocsPage = (
   { sectionTitles, children }: ComponentDocsPageType,
 ) => {
   return (
-    <Flex class="mt-9 gap-11">
+    <Flex class="mt-9 gap-10">
       <div class="hidden flex-shrink-0 lg:block">
         <OnThisPage sectionTitles={sectionTitles} />
       </div>
-      <main class="flex-grow overflow-x-hidden">
+      <main class="flex-grow">
         {children}
       </main>
     </Flex>

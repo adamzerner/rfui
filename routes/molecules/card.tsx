@@ -10,7 +10,6 @@ import {
   Notes,
 } from "@/components/docs-site/component-docs-page/header.tsx";
 import { ComponentDocsPage } from "@/components/docs-site/component-docs-page/index.tsx";
-import { Prop } from "@/components/docs-site/component-docs-page/prop.tsx";
 import { Props } from "@/components/docs-site/component-docs-page/props.tsx";
 import { SectionType } from "@/components/docs-site/component-docs-page/section-type.ts";
 import { Flex } from "@/components/helpers/flex.tsx";
@@ -742,58 +741,10 @@ export default () => {
           {section.exampleCode}
         </section>
       ))}
-      <Props>
-        {props.map((prop) => {
-          const { notes, ...propWithoutNotes } = prop;
-
-          return notes
-            ? (
-              <Prop prop={prop}>
-                {notes}
-              </Prop>
-            )
-            : <Prop prop={propWithoutNotes}></Prop>;
-        })}
-      </Props>
-      <Props subComponentTitle="CardHeader">
-        {cardHeaderProps.map((prop) => {
-          const { notes, ...propWithoutNotes } = prop;
-
-          return notes
-            ? (
-              <Prop prop={prop}>
-                {notes}
-              </Prop>
-            )
-            : <Prop prop={propWithoutNotes}></Prop>;
-        })}
-      </Props>
-      <Props subComponentTitle="CardBody">
-        {cardBodyProps.map((prop) => {
-          const { notes, ...propWithoutNotes } = prop;
-
-          return notes
-            ? (
-              <Prop prop={prop}>
-                {notes}
-              </Prop>
-            )
-            : <Prop prop={propWithoutNotes}></Prop>;
-        })}
-      </Props>
-      <Props subComponentTitle="CardFooter">
-        {cardFooterProps.map((prop) => {
-          const { notes, ...propWithoutNotes } = prop;
-
-          return notes
-            ? (
-              <Prop prop={prop}>
-                {notes}
-              </Prop>
-            )
-            : <Prop prop={propWithoutNotes}></Prop>;
-        })}
-      </Props>
+      <Props props={props} />
+      <Props subComponentTitle="CardHeader" props={cardHeaderProps} />
+      <Props subComponentTitle="CardBody" props={cardBodyProps} />
+      <Props subComponentTitle="CardFooter" props={cardFooterProps} />
     </ComponentDocsPage>
   );
 };

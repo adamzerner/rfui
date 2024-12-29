@@ -6,8 +6,12 @@ import { ChevronDownIcon } from "../../components/icons/chevron-down.tsx";
 import { ChevronUpIcon } from "../../components/icons/chevron-up.tsx";
 
 export const NavbarMegamenu = (
-  { title, children, ...rest }:
-    & { title: string; children: ComponentChild }
+  { title, children, desktopSubmenu, ...rest }:
+    & {
+      title: string;
+      children: ComponentChild;
+      desktopSubmenu?: ComponentProps<"div">;
+    }
     & ComponentProps<"li">,
 ) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -25,11 +29,18 @@ export const NavbarMegamenu = (
     }
   };
   const { class: restClass, ...restWithoutClass } = rest;
+  const { class: desktopSubmenuClassArg, ...desktopSubmenuWithoutClass } =
+    desktopSubmenu || {};
   let containerClass =
-    "relative inline-block border-b border-b-neutral-200 text-neutral-700 max-sm:hover:bg-neutral-100/50 sm:cursor-pointer sm:border-b-neutral-50";
+    "inline-block border-b border-b-neutral-200 text-neutral-700 max-sm:hover:bg-neutral-100/50 sm:cursor-pointer sm:border-b-neutral-50";
+  let desktopSubmenuClass = "absolute top-[89px] z-10 hidden sm:block";
 
   if (restClass) {
     containerClass += ` ${restClass}`;
+  }
+
+  if (desktopSubmenuClassArg) {
+    desktopSubmenuClass += ` ${desktopSubmenuClassArg}`;
   }
 
   useEffect(() => {
@@ -61,7 +72,8 @@ export const NavbarMegamenu = (
         {isMenuOpen && (
           <div
             ref={desktopSubmenuRef}
-            class="absolute left-0 top-[89px] z-10 hidden w-72 rounded border border-neutral-100 bg-[#fff] py-2 sm:block"
+            class={desktopSubmenuClass}
+            {...desktopSubmenuWithoutClass}
           >
             {children}
           </div>

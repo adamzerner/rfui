@@ -48,8 +48,8 @@ export const Navbar = (
   const toggleHamburgerMenu = () => {
     setIsHamburgerMenuOpen((v) => !v);
   };
-  // deno-lint-ignore no-unused-vars
   const { navbarLeft, navbarRight, numItems } = getComponents(children);
+  const hasHamburgerMenu = true;
   const { class: restClass, ...restWithoutClass } = rest;
   let containerClass = "px-auto w-full";
 
@@ -87,8 +87,10 @@ export const Navbar = (
             Menu
           </div>
         </Container>
-        {(isHamburgerMenuOpen && navbarLeft) && navbarLeft}
-        {(isHamburgerMenuOpen && navbarRight) && navbarRight}
+        {(!hasHamburgerMenu || (hasHamburgerMenu && isHamburgerMenuOpen)) &&
+          navbarLeft && navbarLeft}
+        {(!hasHamburgerMenu || (hasHamburgerMenu && isHamburgerMenuOpen)) &&
+          navbarRight && navbarRight}
       </Stack>
     </nav>
   );

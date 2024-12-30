@@ -150,7 +150,7 @@ const fullName = firstName + " " + lastName;\`}
 
   return (
     <ComponentDocsPage
-      sectionTitles={sections.map((s) => s.title)}
+      examplesSectionTitles={sections.map((s) => s.title)}
     >
       <Header
         componentName="CodeBlock"

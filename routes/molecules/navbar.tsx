@@ -9,7 +9,7 @@ import {
   Notes,
 } from "@/components/docs-site/component-docs-page/header.tsx";
 import { ComponentDocsPage } from "@/components/docs-site/component-docs-page/index.tsx";
-import { Props } from "@/components/docs-site/component-docs-page/props.tsx";
+import { PropsTable } from "@/components/docs-site/component-docs-page/props-table.tsx";
 import { SectionType } from "@/components/docs-site/component-docs-page/section-type.ts";
 import { Stack } from "@/components/helpers/stack.tsx";
 import { Card } from "@/components/molecules/card.tsx";
@@ -392,6 +392,7 @@ export default () => {
     required: true,
     type: "string",
     default: null,
+    notes: null,
   }, {
     name: "children",
     required: true,
@@ -428,6 +429,7 @@ export default () => {
     required: true,
     type: "string",
     default: null,
+    notes: null,
   }, {
     name: "children",
     required: true,
@@ -503,16 +505,22 @@ export default () => {
           {section.exampleCode}
         </section>
       ))}
-      <Props props={props} />
-      <Props props={navbarLeftProps} subComponentTitle="NavbarLeft" />
-      <Props props={navbarRightProps} subComponentTitle="NavbarRight" />
-      <Props props={navbarItemProps} subComponentTitle="NavbarItem" />
-      <Props props={navbarDropdownProps} subComponentTitle="NavbarDropdown" />
-      <Props
+      <PropsTable props={props} />
+      <PropsTable props={navbarLeftProps} subComponentTitle="NavbarLeft" />
+      <PropsTable props={navbarRightProps} subComponentTitle="NavbarRight" />
+      <PropsTable props={navbarItemProps} subComponentTitle="NavbarItem" />
+      <PropsTable
+        props={navbarDropdownProps}
+        subComponentTitle="NavbarDropdown"
+      />
+      <PropsTable
         props={navbarDropdownItemProps}
         subComponentTitle="NavbarDropdownItem"
       />
-      <Props props={navbarMegamenuProps} subComponentTitle="NavbarMegamenu" />
+      <PropsTable
+        props={navbarMegamenuProps}
+        subComponentTitle="NavbarMegamenu"
+      />
     </ComponentDocsPage>
   );
 };

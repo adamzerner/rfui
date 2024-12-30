@@ -9,7 +9,7 @@ import {
   Notes,
 } from "@/components/docs-site/component-docs-page/header.tsx";
 import { ComponentDocsPage } from "@/components/docs-site/component-docs-page/index.tsx";
-import { Props } from "@/components/docs-site/component-docs-page/props.tsx";
+import { PropsTable } from "@/components/docs-site/component-docs-page/props-table.tsx";
 import { SectionType } from "@/components/docs-site/component-docs-page/section-type.ts";
 import { Stack } from "@/components/helpers/stack.tsx";
 import { Card } from "@/components/molecules/card.tsx";
@@ -498,8 +498,8 @@ export default () => {
           {section.exampleCode}
         </section>
       ))}
-      <Props props={props} />
-      <Props
+      <PropsTable props={props} />
+      <PropsTable
         props={radioButtonCardGroupItemProps}
         subComponentTitle="RadioButtonCardGroupItem"
       />

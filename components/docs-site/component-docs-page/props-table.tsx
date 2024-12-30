@@ -7,7 +7,7 @@ import { Table } from "@/components/atoms/table.tsx";
 import { Stack } from "@/components/helpers/stack.tsx";
 import { JSX } from "preact";
 
-export const Props = (
+export const PropsTable = (
   { props, subComponentTitle }: {
     props: {
       name: string;

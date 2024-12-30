@@ -1,22 +1,13 @@
 import { CodeBlock } from "@/components/atoms/code-block.tsx";
-import { H2 } from "@/components/atoms/h2.tsx";
 import { InlineCode } from "@/components/atoms/inline-code.tsx";
 import { Link } from "@/components/atoms/link.tsx";
 import { Select } from "@/components/atoms/select.tsx";
-import { Text } from "@/components/atoms/text.tsx";
-import {
-  Example,
-  Header,
-  Notes,
-} from "@/components/docs-site/component-docs-page/header.tsx";
+import { ExamplesSectionType } from "@/components/docs-site/component-docs-page/examples-section-type.ts";
 import { ComponentDocsPage } from "@/components/docs-site/component-docs-page/index.tsx";
-import { PropsTable } from "@/components/docs-site/component-docs-page/props-table.tsx";
-import { SectionType } from "@/components/docs-site/component-docs-page/section-type.ts";
 import { Stack } from "@/components/helpers/stack.tsx";
-import { Card } from "@/components/molecules/card.tsx";
 
 export default () => {
-  const notes = (
+  const overviewNotes = (
     <div>
       Select dropdowns are{" "}
       <Link href="https://ux.stackexchange.com/q/456/39046">appropriate</Link>
@@ -29,7 +20,7 @@ export default () => {
       component.
     </div>
   );
-  const sections: SectionType[] = [{
+  const examplesSections: ExamplesSectionType[] = [{
     title: "Basic",
     example: (
       <Select>
@@ -251,96 +242,79 @@ export default () => {
       />
     ),
   }];
-  const props = [{
-    name: "size",
-    required: false,
-    type: '"sm" | "md" | "lg"',
-    default: '"md"',
-    notes: null,
-  }, {
-    name: "rounded",
-    required: false,
-    type: '"square" | "sm" | "lg" | "full"',
-    default: null,
-    notes: (
-      <div>
-        Defaults to the value of the CSS variable{" "}
-        <InlineCode>--default-roundedness</InlineCode>. See{" "}
-        <Link href="/default-roundedness">
-          "Default roundedness"
-        </Link>.
-      </div>
-    ),
-  }, {
-    name: "disabled",
-    required: false,
-    type: "boolean",
-    default: "false",
-    notes: null,
-  }, {
-    name: "invalid",
-    required: false,
-    type: "boolean",
-    default: "false",
-    notes: null,
-  }, {
-    name: "...rest",
-    required: false,
-    type: 'Omit<ComponentProps<"select">, "size">',
-    default: null,
-    notes: (
-      <div>
-        <div class="leading-relaxed">
-          See the docs for{" "}
-          <Link href="/rest-parameters">rest parameters</Link>. For{" "}
-          <InlineCode>Select</InlineCode>, you could pass anything you normally
-          would pass to <InlineCode>{"<select>"}</InlineCode>{" "}
-          because the return value{" "}
-          <Link href="https://github.com/adamzerner/rfui/blob/master/islands/atoms/select.tsx">
-            looks something like
-          </Link>{" "}
-          this:
+  const propsTables = [{
+    title: null,
+    props: [{
+      name: "size",
+      required: false,
+      type: '"sm" | "md" | "lg"',
+      default: '"md"',
+      notes: null,
+    }, {
+      name: "rounded",
+      required: false,
+      type: '"square" | "sm" | "lg" | "full"',
+      default: null,
+      notes: (
+        <div>
+          Defaults to the value of the CSS variable{" "}
+          <InlineCode>--default-roundedness</InlineCode>. See{" "}
+          <Link href="/default-roundedness">
+            "Default roundedness"
+          </Link>.
         </div>
-        <CodeBlock
-          language="tsx"
-          code={`<select
+      ),
+    }, {
+      name: "disabled",
+      required: false,
+      type: "boolean",
+      default: "false",
+      notes: null,
+    }, {
+      name: "invalid",
+      required: false,
+      type: "boolean",
+      default: "false",
+      notes: null,
+    }, {
+      name: "...rest",
+      required: false,
+      type: 'Omit<ComponentProps<"select">, "size">',
+      default: null,
+      notes: (
+        <div>
+          <div class="leading-relaxed">
+            See the docs for{" "}
+            <Link href="/rest-parameters">rest parameters</Link>. For{" "}
+            <InlineCode>Select</InlineCode>, you could pass anything you
+            normally would pass to <InlineCode>{"<select>"}</InlineCode>{" "}
+            because the return value{" "}
+            <Link href="https://github.com/adamzerner/rfui/blob/master/islands/atoms/select.tsx">
+              looks something like
+            </Link>{" "}
+            this:
+          </div>
+          <CodeBlock
+            language="tsx"
+            code={`<select
   class={className}
   {...restWithoutClass}
 >
   {children}
 </select>`}
-        />
-      </div>
-    ),
+          />
+        </div>
+      ),
+    }],
   }];
 
   return (
     <ComponentDocsPage
-      examplesSectionTitles={sections.map((s) => s.title)}
-    >
-      <Header
-        componentName="Select"
-        sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/atoms/select.tsx"
-      >
-        <Example>{sections[0].example}</Example>
-        <Notes>{notes}</Notes>
-      </Header>
-      {sections.map((section) => (
-        <section>
-          <H2 inPageLink={section.title.toLowerCase().split(/\s+/).join("-")}>
-            {section.title}
-          </H2>
-          {section.description &&
-            (
-              <Text size="sm" class="mb-6">
-                {section.description}
-              </Text>
-            )}
-          <Card width="full" class="mb-4">{section.example}</Card>
-          {section.exampleCode}
-        </section>
-      ))}
-      <PropsTable props={props} />
-    </ComponentDocsPage>
+      componentName="Select"
+      sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/atoms/select.tsx"
+      overviewNotes={overviewNotes}
+      examplesSections={examplesSections}
+      propsTables={propsTables}
+    />
   );
 };

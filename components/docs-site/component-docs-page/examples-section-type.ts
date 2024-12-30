@@ -1,6 +1,6 @@
 import { JSX } from "preact";
 
-export type SectionType = {
+export type ExamplesSectionType = {
   title: string;
   description?: string | JSX.Element;
   example: JSX.Element;

@@ -1,22 +1,13 @@
 import { CodeBlock } from "@/components/atoms/code-block.tsx";
-import { H2 } from "@/components/atoms/h2.tsx";
 import { InlineCode } from "@/components/atoms/inline-code.tsx";
 import { Link } from "@/components/atoms/link.tsx";
-import { Text } from "@/components/atoms/text.tsx";
-import {
-  Example,
-  Header,
-  Notes,
-} from "@/components/docs-site/component-docs-page/header.tsx";
+import { ExamplesSectionType } from "@/components/docs-site/component-docs-page/examples-section-type.ts";
 import { ComponentDocsPage } from "@/components/docs-site/component-docs-page/index.tsx";
-import { PropsTable } from "@/components/docs-site/component-docs-page/props-table.tsx";
-import { SectionType } from "@/components/docs-site/component-docs-page/section-type.ts";
 import { Stack } from "@/components/helpers/stack.tsx";
-import { Card } from "@/components/molecules/card.tsx";
 import { Stepper } from "@/islands/molecules/stepper.tsx";
 
 export default () => {
-  const notes = (
+  const overviewNotes = (
     <div>
       A stepper component like this lets users select the number they want in a
       few easy clicks. See{" "}
@@ -26,7 +17,7 @@ export default () => {
       from Nielsen Norman Group.
     </div>
   );
-  const sections: SectionType[] = [{
+  const examplesSections: ExamplesSectionType[] = [{
     title: "Basic",
     example: <Stepper />,
     exampleCode: (
@@ -169,119 +160,102 @@ export default () => {
       />
     ),
   }];
-  const props = [{
-    name: "name",
-    required: false,
-    type: "string",
-    default: null,
-    notes: (
-      <div>
-        To be used for{" "}
-        <InlineCode>
-          {`<input type="hidden" name={name} value={value} />`}
-        </InlineCode>. Without <InlineCode>name</InlineCode>, the{" "}
-        <InlineCode>{`<input type="hidden" />`}</InlineCode> won't be present.
-      </div>
-    ),
-  }, {
-    name: "size",
-    required: false,
-    type: '"sm" | "md" | "lg"',
-    default: '"md"',
-    notes: null,
-  }, {
-    name: "rounded",
-    required: false,
-    type: '"square" | "sm" | "lg" | "full"',
-    default: null,
-    notes: (
-      <div>
-        Defaults to the value of the CSS variable{" "}
-        <InlineCode>--default-roundedness</InlineCode>. See{" "}
-        <Link href="/default-roundedness">
-          "Default roundedness"
-        </Link>.
-      </div>
-    ),
-  }, {
-    name: "startingValue",
-    required: false,
-    type: "number",
-    default: "0",
-    notes: null,
-  }, {
-    name: "onChange",
-    required: false,
-    type: "(newValue: number) => void",
-    default: null,
-    notes: null,
-  }, {
-    name: "min",
-    required: false,
-    type: "number",
-    default: null,
-    notes: null,
-  }, {
-    name: "max",
-    required: false,
-    type: "number",
-    default: null,
-    notes: null,
-  }, {
-    name: "...rest",
-    required: false,
-    type: 'Omit<ComponentProps<"div">, "size" | "min" | "max">',
-    default: null,
-    notes: (
-      <div>
-        <div class="leading-relaxed">
-          See the docs for{" "}
-          <Link href="/rest-parameters">rest parameters</Link>. For{" "}
-          <InlineCode>Stepper</InlineCode>, you could pass anything you normally
-          would pass to <InlineCode>{"<div>"}</InlineCode>{" "}
-          because the return value{" "}
-          <Link href="https://github.com/adamzerner/rfui/blob/master/islands/molecules/stepper.tsx">
-            looks something like
-          </Link>{" "}
-          this:
+  const propsTables = [{
+    title: null,
+    props: [{
+      name: "name",
+      required: false,
+      type: "string",
+      default: null,
+      notes: (
+        <div>
+          To be used for{" "}
+          <InlineCode>
+            {`<input type="hidden" name={name} value={value} />`}
+          </InlineCode>. Without <InlineCode>name</InlineCode>, the{" "}
+          <InlineCode>{`<input type="hidden" />`}</InlineCode> won't be present.
         </div>
-        <CodeBlock
-          language="tsx"
-          code={`<div class={containerClass} {...restWithoutClass}>
+      ),
+    }, {
+      name: "size",
+      required: false,
+      type: '"sm" | "md" | "lg"',
+      default: '"md"',
+      notes: null,
+    }, {
+      name: "rounded",
+      required: false,
+      type: '"square" | "sm" | "lg" | "full"',
+      default: null,
+      notes: (
+        <div>
+          Defaults to the value of the CSS variable{" "}
+          <InlineCode>--default-roundedness</InlineCode>. See{" "}
+          <Link href="/default-roundedness">
+            "Default roundedness"
+          </Link>.
+        </div>
+      ),
+    }, {
+      name: "startingValue",
+      required: false,
+      type: "number",
+      default: "0",
+      notes: null,
+    }, {
+      name: "onChange",
+      required: false,
+      type: "(newValue: number) => void",
+      default: null,
+      notes: null,
+    }, {
+      name: "min",
+      required: false,
+      type: "number",
+      default: null,
+      notes: null,
+    }, {
+      name: "max",
+      required: false,
+      type: "number",
+      default: null,
+      notes: null,
+    }, {
+      name: "...rest",
+      required: false,
+      type: 'Omit<ComponentProps<"div">, "size" | "min" | "max">',
+      default: null,
+      notes: (
+        <div>
+          <div class="leading-relaxed">
+            See the docs for{" "}
+            <Link href="/rest-parameters">rest parameters</Link>. For{" "}
+            <InlineCode>Stepper</InlineCode>, you could pass anything you
+            normally would pass to <InlineCode>{"<div>"}</InlineCode>{" "}
+            because the return value{" "}
+            <Link href="https://github.com/adamzerner/rfui/blob/master/islands/molecules/stepper.tsx">
+              looks something like
+            </Link>{" "}
+            this:
+          </div>
+          <CodeBlock
+            language="tsx"
+            code={`<div class={containerClass} {...restWithoutClass}>
   {children}
 </div>`}
-        />
-      </div>
-    ),
+          />
+        </div>
+      ),
+    }],
   }];
 
   return (
     <ComponentDocsPage
-      examplesSectionTitles={sections.map((s) => s.title)}
-    >
-      <Header
-        componentName="Stepper"
-        sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/islands/molecules/stepper.tsx"
-      >
-        <Example>{sections[0].example}</Example>
-        <Notes>{notes}</Notes>
-      </Header>
-      {sections.map((section) => (
-        <section>
-          <H2 inPageLink={section.title.toLowerCase().split(/\s+/).join("-")}>
-            {section.title}
-          </H2>
-          {section.description &&
-            (
-              <Text size="sm" class="mb-6">
-                {section.description}
-              </Text>
-            )}
-          <Card width="full" class="mb-4">{section.example}</Card>
-          {section.exampleCode}
-        </section>
-      ))}
-      <PropsTable props={props} />
-    </ComponentDocsPage>
+      componentName="Stepper"
+      sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/islands/molecules/stepper.tsx"
+      overviewNotes={overviewNotes}
+      examplesSections={examplesSections}
+      propsTables={propsTables}
+    />
   );
 };

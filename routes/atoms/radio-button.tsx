@@ -1,22 +1,13 @@
 import { CodeBlock } from "@/components/atoms/code-block.tsx";
-import { H2 } from "@/components/atoms/h2.tsx";
 import { InlineCode } from "@/components/atoms/inline-code.tsx";
 import { Link } from "@/components/atoms/link.tsx";
 import { RadioButton } from "@/components/atoms/radio-button.tsx";
-import { Text } from "@/components/atoms/text.tsx";
-import {
-  Example,
-  Header,
-  Notes,
-} from "@/components/docs-site/component-docs-page/header.tsx";
+import { ExamplesSectionType } from "@/components/docs-site/component-docs-page/examples-section-type.ts";
 import { ComponentDocsPage } from "@/components/docs-site/component-docs-page/index.tsx";
-import { PropsTable } from "@/components/docs-site/component-docs-page/props-table.tsx";
-import { SectionType } from "@/components/docs-site/component-docs-page/section-type.ts";
 import { Stack } from "@/components/helpers/stack.tsx";
-import { Card } from "@/components/molecules/card.tsx";
 
 export default () => {
-  const notes = (
+  const overviewNotes = (
     <Stack class="gap-3">
       <div>
         This component is basically just a wrapper for{" "}
@@ -42,7 +33,7 @@ export default () => {
       </div>
     </Stack>
   );
-  const sections: SectionType[] = [{
+  const examplesSections: ExamplesSectionType[] = [{
     title: "Basic",
     example: <RadioButton />,
     exampleCode: (
@@ -139,76 +130,59 @@ export default () => {
       />
     ),
   }];
-  const props = [{
-    name: "size",
-    required: false,
-    type: '"sm" | "md" | "lg"',
-    default: '"md"',
-    notes: null,
-  }, {
-    name: "invalid",
-    required: false,
-    type: '"sm" | "md" | "lg"',
-    default: '"md"',
-    notes: null,
-  }, {
-    name: "...rest",
-    required: false,
-    type: 'Omit<ComponentProps<"input">, "size">',
-    default: null,
-    notes: (
-      <div>
-        <div class="leading-relaxed">
-          See the docs for{" "}
-          <Link href="/rest-parameters">rest parameters</Link>. For{" "}
-          <InlineCode>RadioButton</InlineCode>, you could pass anything you
-          normally would pass to{" "}
-          <InlineCode>{'<input type="radio">'}</InlineCode>{" "}
-          because the return value{" "}
-          <Link href="https://github.com/adamzerner/rfui/blob/master/islands/atoms/radio-button.tsx">
-            looks something like
-          </Link>{" "}
-          this:
-        </div>
-        <CodeBlock
-          language="tsx"
-          code={`<input
+  const propsTables = [{
+    title: null,
+    props: [{
+      name: "size",
+      required: false,
+      type: '"sm" | "md" | "lg"',
+      default: '"md"',
+      notes: null,
+    }, {
+      name: "invalid",
+      required: false,
+      type: '"sm" | "md" | "lg"',
+      default: '"md"',
+      notes: null,
+    }, {
+      name: "...rest",
+      required: false,
+      type: 'Omit<ComponentProps<"input">, "size">',
+      default: null,
+      notes: (
+        <div>
+          <div class="leading-relaxed">
+            See the docs for{" "}
+            <Link href="/rest-parameters">rest parameters</Link>. For{" "}
+            <InlineCode>RadioButton</InlineCode>, you could pass anything you
+            normally would pass to{" "}
+            <InlineCode>{'<input type="radio">'}</InlineCode>{" "}
+            because the return value{" "}
+            <Link href="https://github.com/adamzerner/rfui/blob/master/islands/atoms/radio-button.tsx">
+              looks something like
+            </Link>{" "}
+            this:
+          </div>
+          <CodeBlock
+            language="tsx"
+            code={`<input
   type="radio"
   class={className}
   {...restWithoutClass}
 />`}
-        />
-      </div>
-    ),
+          />
+        </div>
+      ),
+    }],
   }];
 
   return (
     <ComponentDocsPage
-      examplesSectionTitles={sections.map((s) => s.title)}
-    >
-      <Header
-        componentName="RadioButton"
-        sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/atoms/radio-button.tsx"
-      >
-        <Example>{sections[0].example}</Example>
-        <Notes>{notes}</Notes>
-      </Header>
-      {sections.map((section) => (
-        <section>
-          <H2 inPageLink={section.title.toLowerCase().split(/\s+/).join("-")}>
-            {section.title}
-          </H2>
-          {section.description &&
-            (
-              <Text size="sm" class="mb-6">
-                {section.description}
-              </Text>
-            )}
-          <Card width="full" class="mb-4">{section.example}</Card>
-          {section.exampleCode}
-        </section>
-      ))}
-      <PropsTable props={props} />
-    </ComponentDocsPage>
+      componentName="RadioButton"
+      sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/atoms/radio-button.tsx"
+      overviewNotes={overviewNotes}
+      examplesSections={examplesSections}
+      propsTables={propsTables}
+    />
   );
 };

@@ -1,22 +1,13 @@
 import { CodeBlock } from "@/components/atoms/code-block.tsx";
-import { H2 } from "@/components/atoms/h2.tsx";
 import { InlineCode } from "@/components/atoms/inline-code.tsx";
 import { Link } from "@/components/atoms/link.tsx";
-import { Text } from "@/components/atoms/text.tsx";
-import {
-  Example,
-  Header,
-  Notes,
-} from "@/components/docs-site/component-docs-page/header.tsx";
+import { ExamplesSectionType } from "@/components/docs-site/component-docs-page/examples-section-type.ts";
 import { ComponentDocsPage } from "@/components/docs-site/component-docs-page/index.tsx";
-import { PropsTable } from "@/components/docs-site/component-docs-page/props-table.tsx";
-import { SectionType } from "@/components/docs-site/component-docs-page/section-type.ts";
-import { Card } from "@/components/molecules/card.tsx";
 import { ModalExample } from "@/islands/docs-site/component-docs-page/modal-example.tsx";
 
 export default () => {
-  const notes = null;
-  const sections: SectionType[] = [{
+  const overviewNotes = null;
+  const examplesSections: ExamplesSectionType[] = [{
     title: "Basic",
     example: <ModalExample>Example</ModalExample>,
     exampleCode: (
@@ -46,90 +37,73 @@ export default () => {
       />
     ),
   }];
-  const props = [{
-    name: "isOpen",
-    required: true,
-    type: "boolean",
-    default: null,
-    notes: null,
-  }, {
-    name: "close",
-    required: true,
-    type: "() => void",
-    default: null,
-    notes: (
-      <div>
-        Use this to set <InlineCode>isOpen</InlineCode> to{" "}
-        <InlineCode>false</InlineCode>.
-      </div>
-    ),
-  }, {
-    name: "heading",
-    required: false,
-    type: "string",
-    default: null,
-    notes: null,
-  }, {
-    name: "children",
-    required: true,
-    type: "ComponentChild",
-    default: null,
-    notes: null,
-  }, {
-    name: "...rest",
-    required: false,
-    type: 'ComponentProps<"dialog">',
-    default: null,
-    notes: (
-      <div>
-        <div class="leading-relaxed">
-          See the docs for{" "}
-          <Link href="/rest-parameters">rest parameters</Link>. For{" "}
-          <InlineCode>Modal</InlineCode>, you could pass anything you normally
-          would pass to <InlineCode>{"<dialog>"}</InlineCode>{" "}
-          because the return value{" "}
-          <Link href="https://github.com/adamzerner/rfui/blob/master/islands/molecules/modal.tsx">
-            looks something like
-          </Link>{" "}
-          this:
+  const propsTables = [{
+    title: null,
+    props: [{
+      name: "isOpen",
+      required: true,
+      type: "boolean",
+      default: null,
+      notes: null,
+    }, {
+      name: "close",
+      required: true,
+      type: "() => void",
+      default: null,
+      notes: (
+        <div>
+          Use this to set <InlineCode>isOpen</InlineCode> to{" "}
+          <InlineCode>false</InlineCode>.
         </div>
-        <CodeBlock
-          language="tsx"
-          code={`<dialog class={containerClass} {...restWithoutClass}>
+      ),
+    }, {
+      name: "heading",
+      required: false,
+      type: "string",
+      default: null,
+      notes: null,
+    }, {
+      name: "children",
+      required: true,
+      type: "ComponentChild",
+      default: null,
+      notes: null,
+    }, {
+      name: "...rest",
+      required: false,
+      type: 'ComponentProps<"dialog">',
+      default: null,
+      notes: (
+        <div>
+          <div class="leading-relaxed">
+            See the docs for{" "}
+            <Link href="/rest-parameters">rest parameters</Link>. For{" "}
+            <InlineCode>Modal</InlineCode>, you could pass anything you normally
+            would pass to <InlineCode>{"<dialog>"}</InlineCode>{" "}
+            because the return value{" "}
+            <Link href="https://github.com/adamzerner/rfui/blob/master/islands/molecules/modal.tsx">
+              looks something like
+            </Link>{" "}
+            this:
+          </div>
+          <CodeBlock
+            language="tsx"
+            code={`<dialog class={containerClass} {...restWithoutClass}>
   {children}
 </dialog>`}
-        />
-      </div>
-    ),
+          />
+        </div>
+      ),
+    }],
   }];
 
   return (
     <ComponentDocsPage
-      examplesSectionTitles={sections.map((s) => s.title)}
-    >
-      <Header
-        componentName="Modal"
-        sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/islands/molecules/modal.tsx"
-      >
-        <Example>{sections[0].example}</Example>
-        <Notes>{notes}</Notes>
-      </Header>
-      {sections.map((section) => (
-        <section>
-          <H2 inPageLink={section.title.toLowerCase().split(/\s+/).join("-")}>
-            {section.title}
-          </H2>
-          {section.description &&
-            (
-              <Text size="sm" class="mb-6">
-                {section.description}
-              </Text>
-            )}
-          <Card width="full" class="mb-4">{section.example}</Card>
-          {section.exampleCode}
-        </section>
-      ))}
-      <PropsTable props={props} />
-    </ComponentDocsPage>
+      componentName="Modal"
+      sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/islands/molecules/modal.tsx"
+      overviewNotes={overviewNotes}
+      examplesSections={examplesSections}
+      propsTables={propsTables}
+    />
   );
 };

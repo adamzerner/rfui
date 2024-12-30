@@ -1,23 +1,14 @@
 import { CodeBlock } from "@/components/atoms/code-block.tsx";
-import { H2 } from "@/components/atoms/h2.tsx";
 import { InlineCode } from "@/components/atoms/inline-code.tsx";
 import { Link } from "@/components/atoms/link.tsx";
-import { Text } from "@/components/atoms/text.tsx";
-import {
-  Example,
-  Header,
-  Notes,
-} from "@/components/docs-site/component-docs-page/header.tsx";
+import { ExamplesSectionType } from "@/components/docs-site/component-docs-page/examples-section-type.ts";
 import { ComponentDocsPage } from "@/components/docs-site/component-docs-page/index.tsx";
-import { PropsTable } from "@/components/docs-site/component-docs-page/props-table.tsx";
-import { SectionType } from "@/components/docs-site/component-docs-page/section-type.ts";
 import { Stack } from "@/components/helpers/stack.tsx";
-import { Card } from "@/components/molecules/card.tsx";
 import { FormField } from "@/components/molecules/form-field.tsx";
 
 export default () => {
-  const notes = null;
-  const sections: SectionType[] = [{
+  const overviewNotes = null;
+  const examplesSections: ExamplesSectionType[] = [{
     title: "Basic",
     example: <FormField label="Name" />,
     exampleCode: (
@@ -582,294 +573,278 @@ export default () => {
       />
     ),
   }];
-  const props = [{
-    name: "label",
-    required: true,
-    type: "string",
-    default: null,
-    notes: null,
-  }, {
-    name: "name",
-    required: false,
-    type: 'ComponentProps<"input">["name"]',
-    default: null,
-    notes: null,
-  }, {
-    name: "value",
-    required: false,
-    type: 'ComponentProps<"input">["value"]',
-    default: null,
-    notes: null,
-  }, {
-    name: "type",
-    required: false,
-    type: 'ComponentProps<"input">["type"] | "rfui-password-input"',
-    default: null,
-    notes: null,
-  }, {
-    name: "required",
-    required: false,
-    type: "boolean",
-    default: "false",
-    notes: null,
-  }, {
-    name: "requiredIndicator",
-    required: false,
-    type: '"text" | "asterisk" | "none"',
-    default: '"none"',
-    notes: (
-      <div>
-        See{" "}
-        <Link href="https://ux.stackexchange.com/q/840/39046">
-          https://ux.stackexchange.com/q/840/39046
-        </Link>{" "}
-        for a discussion.
-      </div>
-    ),
-  }, {
-    name: "optionalIndicator",
-    required: false,
-    type: '"text" | "asterisk" | "none"',
-    default: '"none"',
-    notes: (
-      <div>
-        See{" "}
-        <Link href="https://ux.stackexchange.com/q/840/39046">
-          https://ux.stackexchange.com/q/840/39046
-        </Link>{" "}
-        for a discussion.
-      </div>
-    ),
-  }, {
-    name: "helperText",
-    required: false,
-    type: "string",
-    default: null,
-    notes: null,
-  }, {
-    name: "size",
-    required: false,
-    type: '"sm" | "md" | "lg"',
-    default: '"md"',
-    notes: null,
-  }, {
-    name: "rounded",
-    required: false,
-    type: '"square" | "sm" | "lg" | "full"',
-    default: null,
-    notes: (
-      <div>
-        Defaults to the value of the CSS variable{" "}
-        <InlineCode>--default-roundedness</InlineCode>. See{" "}
-        <Link href="/default-roundedness">
-          "Default roundedness"
-        </Link>.
-      </div>
-    ),
-  }, {
-    name: "invalid",
-    required: false,
-    type: "boolean",
-    default: "false",
-    notes: null,
-  }, {
-    name: "errorText",
-    required: false,
-    type: "string",
-    default: null,
-    notes: null,
-  }, {
-    name: "radioButtonGroupOptions",
-    required: false,
-    type: "{ value: string; display: string; }[]",
-    default: null,
-    notes: (
-      <div>
-        This is to be used to be used to construct{" "}
-        <InlineCode>{`<input type="radio">`}</InlineCode> elements when you have
-        {" "}
-        <InlineCode>type="radio-button-group"</InlineCode>.
-      </div>
-    ),
-  }, {
-    name: "selectOptions",
-    required: false,
-    type: "{ value: string; display: string; }[]",
-    default: null,
-    notes: (
-      <div>
-        This is to be used to be used to construct{" "}
-        <InlineCode>{`<option>`}</InlineCode> elements when you have{" "}
-        <InlineCode>type="select"</InlineCode>.
-      </div>
-    ),
-  }, {
-    name: "inputRest",
-    required: false,
-    type:
-      'Omit<ComponentProps<"input">, "name" | "value" | "type" | "required" | "size" | "rounded" | "invalid">',
-    default: null,
-    notes: (
-      <div>
+  const propsTables = [{
+    title: null,
+    props: [{
+      name: "label",
+      required: true,
+      type: "string",
+      default: null,
+      notes: null,
+    }, {
+      name: "name",
+      required: false,
+      type: 'ComponentProps<"input">["name"]',
+      default: null,
+      notes: null,
+    }, {
+      name: "value",
+      required: false,
+      type: 'ComponentProps<"input">["value"]',
+      default: null,
+      notes: null,
+    }, {
+      name: "type",
+      required: false,
+      type: 'ComponentProps<"input">["type"] | "rfui-password-input"',
+      default: null,
+      notes: null,
+    }, {
+      name: "required",
+      required: false,
+      type: "boolean",
+      default: "false",
+      notes: null,
+    }, {
+      name: "requiredIndicator",
+      required: false,
+      type: '"text" | "asterisk" | "none"',
+      default: '"none"',
+      notes: (
         <div>
-          The structure of <InlineCode>FormField</InlineCode>{" "}
-          is something like this:
+          See{" "}
+          <Link href="https://ux.stackexchange.com/q/840/39046">
+            https://ux.stackexchange.com/q/840/39046
+          </Link>{" "}
+          for a discussion.
         </div>
-        <CodeBlock
-          language="tsx"
-          code={`<div>
+      ),
+    }, {
+      name: "optionalIndicator",
+      required: false,
+      type: '"text" | "asterisk" | "none"',
+      default: '"none"',
+      notes: (
+        <div>
+          See{" "}
+          <Link href="https://ux.stackexchange.com/q/840/39046">
+            https://ux.stackexchange.com/q/840/39046
+          </Link>{" "}
+          for a discussion.
+        </div>
+      ),
+    }, {
+      name: "helperText",
+      required: false,
+      type: "string",
+      default: null,
+      notes: null,
+    }, {
+      name: "size",
+      required: false,
+      type: '"sm" | "md" | "lg"',
+      default: '"md"',
+      notes: null,
+    }, {
+      name: "rounded",
+      required: false,
+      type: '"square" | "sm" | "lg" | "full"',
+      default: null,
+      notes: (
+        <div>
+          Defaults to the value of the CSS variable{" "}
+          <InlineCode>--default-roundedness</InlineCode>. See{" "}
+          <Link href="/default-roundedness">
+            "Default roundedness"
+          </Link>.
+        </div>
+      ),
+    }, {
+      name: "invalid",
+      required: false,
+      type: "boolean",
+      default: "false",
+      notes: null,
+    }, {
+      name: "errorText",
+      required: false,
+      type: "string",
+      default: null,
+      notes: null,
+    }, {
+      name: "radioButtonGroupOptions",
+      required: false,
+      type: "{ value: string; display: string; }[]",
+      default: null,
+      notes: (
+        <div>
+          This is to be used to be used to construct{" "}
+          <InlineCode>{`<input type="radio">`}</InlineCode>{" "}
+          elements when you have{" "}
+          <InlineCode>type="radio-button-group"</InlineCode>.
+        </div>
+      ),
+    }, {
+      name: "selectOptions",
+      required: false,
+      type: "{ value: string; display: string; }[]",
+      default: null,
+      notes: (
+        <div>
+          This is to be used to be used to construct{" "}
+          <InlineCode>{`<option>`}</InlineCode> elements when you have{" "}
+          <InlineCode>type="select"</InlineCode>.
+        </div>
+      ),
+    }, {
+      name: "inputRest",
+      required: false,
+      type:
+        'Omit<ComponentProps<"input">, "name" | "value" | "type" | "required" | "size" | "rounded" | "invalid">',
+      default: null,
+      notes: (
+        <div>
+          <div>
+            The structure of <InlineCode>FormField</InlineCode>{" "}
+            is something like this:
+          </div>
+          <CodeBlock
+            language="tsx"
+            code={`<div>
   ...
   <Input />
 </div>`}
-        />
-        <div class="mb-3 mt-4">
-          <InlineCode>inputRest</InlineCode> gets passed like this:
+          />
+          <div class="mb-3 mt-4">
+            <InlineCode>inputRest</InlineCode> gets passed like this:
+          </div>
+          <CodeBlock language="tsx" code={`<Input {...inputRest} />`} />
         </div>
-        <CodeBlock language="tsx" code={`<Input {...inputRest} />`} />
-      </div>
-    ),
-  }, {
-    name: "textareaRest",
-    required: false,
-    type:
-      'Omit<TextareaType, "id" | "name" | "value" | "required" | "invalid">',
-    default: null,
-    notes: (
-      <div>
+      ),
+    }, {
+      name: "textareaRest",
+      required: false,
+      type:
+        'Omit<TextareaType, "id" | "name" | "value" | "required" | "invalid">',
+      default: null,
+      notes: (
         <div>
-          The structure of <InlineCode>FormField</InlineCode> when used with
-          {" "}
-          <InlineCode>type="textarea"</InlineCode> is something like this:
-        </div>
-        <CodeBlock
-          language="tsx"
-          code={`<div>
+          <div>
+            The structure of <InlineCode>FormField</InlineCode> when used with
+            {" "}
+            <InlineCode>type="textarea"</InlineCode> is something like this:
+          </div>
+          <CodeBlock
+            language="tsx"
+            code={`<div>
   ...
   <Textarea></Textarea>
 </div>`}
-        />
-        <div class="mb-3 mt-4">
-          <InlineCode>textareaRest</InlineCode> gets passed like this:
+          />
+          <div class="mb-3 mt-4">
+            <InlineCode>textareaRest</InlineCode> gets passed like this:
+          </div>
+          <CodeBlock
+            language="tsx"
+            code={`<Textarea {...textareaRest}></Textarea>`}
+          />
         </div>
-        <CodeBlock
-          language="tsx"
-          code={`<Textarea {...textareaRest}></Textarea>`}
-        />
-      </div>
-    ),
-  }, {
-    name: "radioButtonGroupRest",
-    required: false,
-    type:
-      'Omit<RadioButtonGroupType, "id" | "name" | "value" | "required" | "invalid">',
-    default: null,
-    notes: (
-      <div>
+      ),
+    }, {
+      name: "radioButtonGroupRest",
+      required: false,
+      type:
+        'Omit<RadioButtonGroupType, "id" | "name" | "value" | "required" | "invalid">',
+      default: null,
+      notes: (
         <div>
-          The structure of <InlineCode>FormField</InlineCode> when used with
-          {" "}
-          <InlineCode>type="radio-button-group"</InlineCode>{" "}
-          is something like this:
-        </div>
-        <CodeBlock
-          language="tsx"
-          code={`<div>
+          <div>
+            The structure of <InlineCode>FormField</InlineCode> when used with
+            {" "}
+            <InlineCode>type="radio-button-group"</InlineCode>{" "}
+            is something like this:
+          </div>
+          <CodeBlock
+            language="tsx"
+            code={`<div>
   ...
   <RadioButtonGroup></RadioButtonGroup>
 </div>`}
-        />
-        <div class="mb-3 mt-4">
-          <InlineCode>radioButtonGroupRest</InlineCode> gets passed like this:
+          />
+          <div class="mb-3 mt-4">
+            <InlineCode>radioButtonGroupRest</InlineCode> gets passed like this:
+          </div>
+          <CodeBlock
+            language="tsx"
+            code={`<RadioButtonGroup {...radioButtonGroupRest}></RadioButtonGroup>`}
+          />
         </div>
-        <CodeBlock
-          language="tsx"
-          code={`<RadioButtonGroup {...radioButtonGroupRest}></RadioButtonGroup>`}
-        />
-      </div>
-    ),
-  }, {
-    name: "selectRest",
-    required: false,
-    type: 'Omit<SelectType, "id" | "name" | "value" | "required" | "invalid">',
-    default: null,
-    notes: (
-      <div>
+      ),
+    }, {
+      name: "selectRest",
+      required: false,
+      type:
+        'Omit<SelectType, "id" | "name" | "value" | "required" | "invalid">',
+      default: null,
+      notes: (
         <div>
-          The structure of <InlineCode>FormField</InlineCode> when used with
-          {" "}
-          <InlineCode>type="select"</InlineCode> is something like this:
-        </div>
-        <CodeBlock
-          language="tsx"
-          code={`<div>
+          <div>
+            The structure of <InlineCode>FormField</InlineCode> when used with
+            {" "}
+            <InlineCode>type="select"</InlineCode> is something like this:
+          </div>
+          <CodeBlock
+            language="tsx"
+            code={`<div>
   ...
   <Select></Select>
 </div>`}
-        />
-        <div class="mb-3 mt-4">
-          <InlineCode>selectRest</InlineCode> gets passed like this:
+          />
+          <div class="mb-3 mt-4">
+            <InlineCode>selectRest</InlineCode> gets passed like this:
+          </div>
+          <CodeBlock
+            language="tsx"
+            code={`<Select {...selectRest}></Select>`}
+          />
         </div>
-        <CodeBlock
-          language="tsx"
-          code={`<Select {...selectRest}></Select>`}
-        />
-      </div>
-    ),
-  }, {
-    name: "...rest",
-    required: false,
-    type: 'Omit<ComponentProps<"div">, "size">',
-    default: null,
-    notes: (
-      <div>
-        <div class="leading-relaxed">
-          See the docs for{" "}
-          <Link href="/rest-parameters">rest parameters</Link>. For{" "}
-          <InlineCode>FormField</InlineCode>, you could pass anything you
-          normally would pass to <InlineCode>{"<div>"}</InlineCode>{" "}
-          because the return value{" "}
-          <Link href="https://github.com/adamzerner/rfui/blob/master/islands/molecules/form-field.tsx">
-            looks something like
-          </Link>{" "}
-          this:
-        </div>
-        <CodeBlock
-          language="tsx"
-          code={`<div {...rest}>
+      ),
+    }, {
+      name: "...rest",
+      required: false,
+      type: 'Omit<ComponentProps<"div">, "size">',
+      default: null,
+      notes: (
+        <div>
+          <div class="leading-relaxed">
+            See the docs for{" "}
+            <Link href="/rest-parameters">rest parameters</Link>. For{" "}
+            <InlineCode>FormField</InlineCode>, you could pass anything you
+            normally would pass to <InlineCode>{"<div>"}</InlineCode>{" "}
+            because the return value{" "}
+            <Link href="https://github.com/adamzerner/rfui/blob/master/islands/molecules/form-field.tsx">
+              looks something like
+            </Link>{" "}
+            this:
+          </div>
+          <CodeBlock
+            language="tsx"
+            code={`<div {...rest}>
   ...
 </div>`}
-        />
-      </div>
-    ),
+          />
+        </div>
+      ),
+    }],
   }];
 
   return (
     <ComponentDocsPage
-      examplesSectionTitles={sections.map((s) => s.title)}
-    >
-      <Header
-        componentName="FormField"
-        sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/molecules/form-field.tsx"
-      >
-        <Example>{sections[0].example}</Example>
-        <Notes>{notes}</Notes>
-      </Header>
-      {sections.map((section) => (
-        <section>
-          <H2 inPageLink={section.title.toLowerCase().split(/\s+/).join("-")}>
-            {section.title}
-          </H2>
-          {section.description &&
-            (
-              <Text size="sm" class="mb-6">
-                {section.description}
-              </Text>
-            )}
-          <Card width="full" class="mb-4">{section.example}</Card>
-          {section.exampleCode}
-        </section>
-      ))}
-      <PropsTable props={props} />
-    </ComponentDocsPage>
+      componentName="FormField"
+      sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/molecules/form-field.tsx"
+      overviewNotes={overviewNotes}
+      examplesSections={examplesSections}
+      propsTables={propsTables}
+    />
   );
 };

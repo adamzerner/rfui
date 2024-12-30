@@ -1,18 +1,9 @@
 import { CodeBlock } from "@/components/atoms/code-block.tsx";
-import { H2 } from "@/components/atoms/h2.tsx";
 import { InlineCode } from "@/components/atoms/inline-code.tsx";
 import { Link } from "@/components/atoms/link.tsx";
-import { Text } from "@/components/atoms/text.tsx";
-import {
-  Example,
-  Header,
-  Notes,
-} from "@/components/docs-site/component-docs-page/header.tsx";
+import { ExamplesSectionType } from "@/components/docs-site/component-docs-page/examples-section-type.ts";
 import { ComponentDocsPage } from "@/components/docs-site/component-docs-page/index.tsx";
-import { PropsTable } from "@/components/docs-site/component-docs-page/props-table.tsx";
-import { SectionType } from "@/components/docs-site/component-docs-page/section-type.ts";
 import { Stack } from "@/components/helpers/stack.tsx";
-import { Card } from "@/components/molecules/card.tsx";
 import {
   Navbar,
   NavbarDropdown,
@@ -24,7 +15,7 @@ import {
 } from "@/islands/molecules/navbar/index.tsx";
 
 export default () => {
-  const notes = (
+  const overviewNotes = (
     <Stack class="gap-3">
       <p>
         Note: Based on{" "}
@@ -57,7 +48,7 @@ export default () => {
       />
     </Stack>
   );
-  const sections: SectionType[] = [{
+  const examplesSections: ExamplesSectionType[] = [{
     title: "Basic",
     example: (
       <Navbar size="xl">
@@ -290,237 +281,216 @@ export default () => {
       />
     ),
   }];
-  const props = [{
-    name: "size",
-    required: false,
-    type: '"sm" | "md" | "lg" | "xl"',
-    default: '"md"',
-    notes: (
-      <div>
-        Set this to the same value as the{" "}
-        <Link href="/helpers/container">
-          <InlineCode>Container</InlineCode>
-        </Link>.
-      </div>
-    ),
-  }, {
-    name: "background",
-    required: false,
-    type: '"neutral" | "none"',
-    default: '"neutral"',
-    notes: null,
-  }, {
-    name: "sticky",
-    required: false,
-    type: "boolean",
-    default: "false",
-    notes: "Doesn't apply to the stacked UI that appears on small viewports.",
-  }, {
-    name: "children",
-    required: true,
-    type: "ComponentChild",
-    default: null,
-    notes: null,
-  }, {
-    name: "...rest",
-    required: false,
-    type: 'Omit<ComponentProps<"nav">, "size">',
-    default: null,
-    notes: (
-      <div>
-        <div class="leading-relaxed">
-          See the docs for{" "}
-          <Link href="/rest-parameters">rest parameters</Link>. For{" "}
-          <InlineCode>Navbar</InlineCode>, you could pass anything you normally
-          would pass to <InlineCode>{"<nav>"}</InlineCode>{" "}
-          because the return value{" "}
-          <Link href="https://github.com/adamzerner/rfui/blob/master/islands/molecules/navbar.tsx">
-            looks something like
-          </Link>{" "}
-          this:
+  const propsTables = [{
+    title: null,
+    props: [{
+      name: "size",
+      required: false,
+      type: '"sm" | "md" | "lg" | "xl"',
+      default: '"md"',
+      notes: (
+        <div>
+          Set this to the same value as the{" "}
+          <Link href="/helpers/container">
+            <InlineCode>Container</InlineCode>
+          </Link>.
         </div>
-        <CodeBlock
-          language="tsx"
-          code={`<nav class={containerClass} {...restWithoutClass}>
+      ),
+    }, {
+      name: "background",
+      required: false,
+      type: '"neutral" | "none"',
+      default: '"neutral"',
+      notes: null,
+    }, {
+      name: "sticky",
+      required: false,
+      type: "boolean",
+      default: "false",
+      notes: "Doesn't apply to the stacked UI that appears on small viewports.",
+    }, {
+      name: "children",
+      required: true,
+      type: "ComponentChild",
+      default: null,
+      notes: null,
+    }, {
+      name: "...rest",
+      required: false,
+      type: 'Omit<ComponentProps<"nav">, "size">',
+      default: null,
+      notes: (
+        <div>
+          <div class="leading-relaxed">
+            See the docs for{" "}
+            <Link href="/rest-parameters">rest parameters</Link>. For{" "}
+            <InlineCode>Navbar</InlineCode>, you could pass anything you
+            normally would pass to <InlineCode>{"<nav>"}</InlineCode>{" "}
+            because the return value{" "}
+            <Link href="https://github.com/adamzerner/rfui/blob/master/islands/molecules/navbar.tsx">
+              looks something like
+            </Link>{" "}
+            this:
+          </div>
+          <CodeBlock
+            language="tsx"
+            code={`<nav class={containerClass} {...restWithoutClass}>
   ...
 </nav>`}
-        />
-      </div>
-    ),
-  }];
-  const navbarLeftProps = [{
-    name: "children",
-    required: true,
-    type: "ComponentChild",
-    default: null,
-    notes: null,
-  }];
-  const navbarRightProps = [{
-    name: "children",
-    required: true,
-    type: "ComponentChild",
-    default: null,
-    notes: null,
-  }];
-  const navbarItemProps = [{
-    name: "href",
-    required: true,
-    type: "string",
-    default: null,
-    notes: null,
+          />
+        </div>
+      ),
+    }],
   }, {
-    name: "isActive",
-    required: false,
-    type: "boolean",
-    default: "false",
-    notes: null,
+    title: "NavbarLeft",
+    props: [{
+      name: "children",
+      required: true,
+      type: "ComponentChild",
+      default: null,
+      notes: null,
+    }],
   }, {
-    name: "children",
-    required: true,
-    type: "ComponentChild",
-    default: null,
-    notes: null,
+    title: "NavbarRight",
+    props: [{
+      name: "children",
+      required: true,
+      type: "ComponentChild",
+      default: null,
+      notes: null,
+    }],
   }, {
-    name: "...rest",
-    required: false,
-    type: 'ComponentProps<"li">',
-    default: null,
-    notes: null,
-  }];
-  const navbarDropdownProps = [{
-    name: "title",
-    required: true,
-    type: "string",
-    default: null,
-    notes: null,
+    title: "NavbarItem",
+    props: [{
+      name: "href",
+      required: true,
+      type: "string",
+      default: null,
+      notes: null,
+    }, {
+      name: "isActive",
+      required: false,
+      type: "boolean",
+      default: "false",
+      notes: null,
+    }, {
+      name: "children",
+      required: true,
+      type: "ComponentChild",
+      default: null,
+      notes: null,
+    }, {
+      name: "...rest",
+      required: false,
+      type: 'ComponentProps<"li">',
+      default: null,
+      notes: null,
+    }],
   }, {
-    name: "children",
-    required: true,
-    type: "ComponentChild",
-    default: null,
-    notes: (
-      <div>
-        The <InlineCode>children</InlineCode> should consist of{" "}
-        <InlineCode>NavbarDropdownItem</InlineCode> elements.
-      </div>
-    ),
+    title: "NavbarDropdown",
+    props: [{
+      name: "title",
+      required: true,
+      type: "string",
+      default: null,
+      notes: null,
+    }, {
+      name: "children",
+      required: true,
+      type: "ComponentChild",
+      default: null,
+      notes: (
+        <div>
+          The <InlineCode>children</InlineCode> should consist of{" "}
+          <InlineCode>NavbarDropdownItem</InlineCode> elements.
+        </div>
+      ),
+    }, {
+      name: "...rest",
+      required: false,
+      type: 'ComponentProps<"li">',
+      default: null,
+      notes: null,
+    }],
   }, {
-    name: "...rest",
-    required: false,
-    type: 'ComponentProps<"li">',
-    default: null,
-    notes: null,
-  }];
-  const navbarDropdownItemProps = [{
-    name: "href",
-    required: true,
-    type: "string",
-    default: null,
-    notes: null,
+    title: "NavbarDropdownItem",
+    props: [{
+      name: "href",
+      required: true,
+      type: "string",
+      default: null,
+      notes: null,
+    }, {
+      name: "children",
+      required: true,
+      type: "ComponentChild",
+      default: null,
+      notes: null,
+    }],
   }, {
-    name: "children",
-    required: true,
-    type: "ComponentChild",
-    default: null,
-    notes: null,
-  }];
-  const navbarMegamenuProps = [{
-    name: "title",
-    required: true,
-    type: "string",
-    default: null,
-    notes: null,
-  }, {
-    name: "children",
-    required: true,
-    type: "ComponentChild",
-    default: null,
-    notes: (
-      <div>
-        The <InlineCode>children</InlineCode> should consist of{" "}
-        <InlineCode>NavbarDropdownItem</InlineCode> elements.
-      </div>
-    ),
-  }, {
-    name: "desktopSubmenu",
-    required: false,
-    type: 'ComponentProps<"div">',
-    default: null,
-    notes: (
-      <div>
-        This will be passed to the desktop submenu in a manner similar to other
-        {" "}
-        <Link href="/rest-parameters">rest parameters</Link>.
-      </div>
-    ),
-  }, {
-    name: "mobileSubmenu",
-    required: false,
-    type: 'ComponentProps<"div">',
-    default: null,
-    notes: (
-      <div>
-        This will be passed to the mobile submenu in a manner similar to other
-        {" "}
-        <Link href="/rest-parameters">rest parameters</Link>.
-      </div>
-    ),
-  }, {
-    name: "...rest",
-    required: false,
-    type: 'ComponentProps<"li">',
-    default: null,
-    notes: null,
+    title: "NavbarMegamenu",
+    props: [{
+      name: "title",
+      required: true,
+      type: "string",
+      default: null,
+      notes: null,
+    }, {
+      name: "children",
+      required: true,
+      type: "ComponentChild",
+      default: null,
+      notes: (
+        <div>
+          The <InlineCode>children</InlineCode> should consist of{" "}
+          <InlineCode>NavbarDropdownItem</InlineCode> elements.
+        </div>
+      ),
+    }, {
+      name: "desktopSubmenu",
+      required: false,
+      type: 'ComponentProps<"div">',
+      default: null,
+      notes: (
+        <div>
+          This will be passed to the desktop submenu in a manner similar to
+          other <Link href="/rest-parameters">rest parameters</Link>.
+        </div>
+      ),
+    }, {
+      name: "mobileSubmenu",
+      required: false,
+      type: 'ComponentProps<"div">',
+      default: null,
+      notes: (
+        <div>
+          This will be passed to the mobile submenu in a manner similar to other
+          {" "}
+          <Link href="/rest-parameters">rest parameters</Link>.
+        </div>
+      ),
+    }, {
+      name: "...rest",
+      required: false,
+      type: 'ComponentProps<"li">',
+      default: null,
+      notes: null,
+    }],
   }];
 
   return (
     <ComponentDocsPage
-      examplesSectionTitles={sections.map((s) => s.title)}
-    >
-      <Header
-        componentName="Navbar"
-        sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/molecules/navbar.tsx"
-        importStatement={`import {
+      componentName="Navbar"
+      sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/molecules/navbar.tsx"
+      importStatement={`import {
   Navbar,
   NavbarItem,
   NavbarLeft,
   NavbarRight,
 } from "rfui";`}
-      >
-        <Example>{sections[0].example}</Example>
-        <Notes>{notes}</Notes>
-      </Header>
-      {sections.map((section) => (
-        <section>
-          <H2 inPageLink={section.title.toLowerCase().split(/\s+/).join("-")}>
-            {section.title}
-          </H2>
-          {section.description &&
-            (
-              <Text size="sm" class="mb-6">
-                {section.description}
-              </Text>
-            )}
-          <Card width="full" class="mb-4">{section.example}</Card>
-          {section.exampleCode}
-        </section>
-      ))}
-      <PropsTable props={props} />
-      <PropsTable props={navbarLeftProps} subComponentTitle="NavbarLeft" />
-      <PropsTable props={navbarRightProps} subComponentTitle="NavbarRight" />
-      <PropsTable props={navbarItemProps} subComponentTitle="NavbarItem" />
-      <PropsTable
-        props={navbarDropdownProps}
-        subComponentTitle="NavbarDropdown"
-      />
-      <PropsTable
-        props={navbarDropdownItemProps}
-        subComponentTitle="NavbarDropdownItem"
-      />
-      <PropsTable
-        props={navbarMegamenuProps}
-        subComponentTitle="NavbarMegamenu"
-      />
-    </ComponentDocsPage>
+      overviewNotes={overviewNotes}
+      examplesSections={examplesSections}
+      propsTables={propsTables}
+    />
   );
 };

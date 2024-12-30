@@ -1,18 +1,9 @@
 import { CodeBlock } from "@/components/atoms/code-block.tsx";
-import { H2 } from "@/components/atoms/h2.tsx";
 import { InlineCode } from "@/components/atoms/inline-code.tsx";
 import { Link } from "@/components/atoms/link.tsx";
-import { Text } from "@/components/atoms/text.tsx";
-import {
-  Example,
-  Header,
-  Notes,
-} from "@/components/docs-site/component-docs-page/header.tsx";
+import { ExamplesSectionType } from "@/components/docs-site/component-docs-page/examples-section-type.ts";
 import { ComponentDocsPage } from "@/components/docs-site/component-docs-page/index.tsx";
-import { PropsTable } from "@/components/docs-site/component-docs-page/props-table.tsx";
-import { SectionType } from "@/components/docs-site/component-docs-page/section-type.ts";
 import { Stack } from "@/components/helpers/stack.tsx";
-import { Card } from "@/components/molecules/card.tsx";
 import {
   Footer,
   FooterColumn,
@@ -21,7 +12,7 @@ import {
 } from "@/components/molecules/footer.tsx";
 
 export default () => {
-  const notes = (
+  const overviewNotes = (
     <Stack class="gap-3">
       <p>
         Check out{" "}
@@ -82,7 +73,7 @@ export default () => {
       />
     </Stack>
   );
-  const sections: SectionType[] = [{
+  const examplesSections: ExamplesSectionType[] = [{
     title: "Basic",
     example: (
       <Footer>
@@ -373,136 +364,119 @@ export default () => {
       />
     ),
   }];
-  const props = [{
-    name: "size",
-    required: false,
-    type: '"sm" | "md" | "lg" | "xl"',
-    default: '"md"',
-    notes: (
-      <div>
-        Set this to the same value as the <InlineCode>Container</InlineCode>.
-      </div>
-    ),
-  }, {
-    name: "background",
-    required: false,
-    type: '"neutral" | "none"',
-    default: '"neutral"',
-    notes: (
-      <div>
-        A dark color is{" "}
-        <Link href="https://ux.stackexchange.com/q/17253/39046">
-          often preferred
-        </Link>{" "}
-        as a way to distinguish the main content from the footer content.
-      </div>
-    ),
-  }, {
-    name: "children",
-    required: true,
-    type: "ComponentChild",
-    default: null,
-    notes: null,
-  }, {
-    name: "...rest",
-    required: false,
-    type: 'Omit<ComponentProps<"footer">, "size">',
-    default: null,
-    notes: (
-      <div>
-        <div class="leading-relaxed">
-          See the docs for{" "}
-          <Link href="/rest-parameters">rest parameters</Link>. For{" "}
-          <InlineCode>Footer</InlineCode>, you could pass anything you normally
-          would pass to <InlineCode>{"<footer>"}</InlineCode>{" "}
-          because the return value{" "}
-          <Link href="https://github.com/adamzerner/rfui/blob/master/islands/molecules/footer.tsx">
-            looks something like
-          </Link>{" "}
-          this:
+  const propsTables = [{
+    title: null,
+    props: [{
+      name: "size",
+      required: false,
+      type: '"sm" | "md" | "lg" | "xl"',
+      default: '"md"',
+      notes: (
+        <div>
+          Set this to the same value as the <InlineCode>Container</InlineCode>.
         </div>
-        <CodeBlock
-          language="tsx"
-          code={`<footer class={containerClass} {...restWithoutClass}>
+      ),
+    }, {
+      name: "background",
+      required: false,
+      type: '"neutral" | "none"',
+      default: '"neutral"',
+      notes: (
+        <div>
+          A dark color is{" "}
+          <Link href="https://ux.stackexchange.com/q/17253/39046">
+            often preferred
+          </Link>{" "}
+          as a way to distinguish the main content from the footer content.
+        </div>
+      ),
+    }, {
+      name: "children",
+      required: true,
+      type: "ComponentChild",
+      default: null,
+      notes: null,
+    }, {
+      name: "...rest",
+      required: false,
+      type: 'Omit<ComponentProps<"footer">, "size">',
+      default: null,
+      notes: (
+        <div>
+          <div class="leading-relaxed">
+            See the docs for{" "}
+            <Link href="/rest-parameters">rest parameters</Link>. For{" "}
+            <InlineCode>Footer</InlineCode>, you could pass anything you
+            normally would pass to <InlineCode>{"<footer>"}</InlineCode>{" "}
+            because the return value{" "}
+            <Link href="https://github.com/adamzerner/rfui/blob/master/islands/molecules/footer.tsx">
+              looks something like
+            </Link>{" "}
+            this:
+          </div>
+          <CodeBlock
+            language="tsx"
+            code={`<footer class={containerClass} {...restWithoutClass}>
   {children}
 </footer>`}
-        />
-      </div>
-    ),
-  }];
-  const footerColumnProps = [{
-    name: "children",
-    required: true,
-    type: "ComponentChild",
-    default: null,
-    notes: null,
-  }];
-  const footerHeadingProps = [{
-    name: "background",
-    required: false,
-    type: '"neutral" | "none"',
-    default: '"neutral"',
-    notes: null,
+          />
+        </div>
+      ),
+    }],
   }, {
-    name: "children",
-    required: true,
-    type: "ComponentChild",
-    default: null,
-    notes: null,
-  }];
-  const footerItemProps = [{
-    name: "href",
-    required: true,
-    type: "string",
-    default: null,
-    notes: null,
+    title: "FooterColumn",
+    props: [{
+      name: "children",
+      required: true,
+      type: "ComponentChild",
+      default: null,
+      notes: null,
+    }],
   }, {
-    name: "children",
-    required: true,
-    type: "ComponentChild",
-    default: null,
-    notes: null,
+    title: "FooterHeading",
+    props: [{
+      name: "background",
+      required: false,
+      type: '"neutral" | "none"',
+      default: '"neutral"',
+      notes: null,
+    }, {
+      name: "children",
+      required: true,
+      type: "ComponentChild",
+      default: null,
+      notes: null,
+    }],
+  }, {
+    title: "FooterItem",
+    props: [{
+      name: "href",
+      required: true,
+      type: "string",
+      default: null,
+      notes: null,
+    }, {
+      name: "children",
+      required: true,
+      type: "ComponentChild",
+      default: null,
+      notes: null,
+    }],
   }];
 
   return (
     <ComponentDocsPage
-      examplesSectionTitles={sections.map((s) => s.title)}
-    >
-      <Header
-        componentName="Footer"
-        sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/molecules/footer.tsx"
-        importStatement={`import { 
+      componentName="Footer"
+      sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/molecules/footer.tsx"
+      importStatement={`import { 
   Footer,
   FooterColumn,
   FooterHeading,
   FooterItem
 } from "rfui";`}
-      >
-        <Example>{sections[0].example}</Example>
-        <Notes>{notes}</Notes>
-      </Header>
-      {sections.map((section) => (
-        <section>
-          <H2 inPageLink={section.title.toLowerCase().split(/\s+/).join("-")}>
-            {section.title}
-          </H2>
-          {section.description &&
-            (
-              <Text size="sm" class="mb-6">
-                {section.description}
-              </Text>
-            )}
-          <Card width="full" class="mb-4">{section.example}</Card>
-          {section.exampleCode}
-        </section>
-      ))}
-      <PropsTable props={props} />
-      <PropsTable props={footerColumnProps} subComponentTitle="FooterColumn" />
-      <PropsTable
-        props={footerHeadingProps}
-        subComponentTitle="FooterHeading"
-      />
-      <PropsTable props={footerItemProps} subComponentTitle="FooterItem" />
-    </ComponentDocsPage>
+      overviewNotes={overviewNotes}
+      examplesSections={examplesSections}
+      propsTables={propsTables}
+    />
   );
 };

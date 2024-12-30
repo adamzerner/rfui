@@ -1,23 +1,14 @@
 import { CodeBlock } from "@/components/atoms/code-block.tsx";
-import { H2 } from "@/components/atoms/h2.tsx";
 import { InlineCode } from "@/components/atoms/inline-code.tsx";
 import { Link } from "@/components/atoms/link.tsx";
 import { Table } from "@/components/atoms/table.tsx";
-import { Text } from "@/components/atoms/text.tsx";
-import {
-  Example,
-  Header,
-  Notes,
-} from "@/components/docs-site/component-docs-page/header.tsx";
+import { ExamplesSectionType } from "@/components/docs-site/component-docs-page/examples-section-type.ts";
 import { ComponentDocsPage } from "@/components/docs-site/component-docs-page/index.tsx";
-import { PropsTable } from "@/components/docs-site/component-docs-page/props-table.tsx";
-import { SectionType } from "@/components/docs-site/component-docs-page/section-type.ts";
 import { Stack } from "@/components/helpers/stack.tsx";
-import { Card } from "@/components/molecules/card.tsx";
 
 export default () => {
-  const notes = null;
-  const sections: SectionType[] = [{
+  const overviewNotes = null;
+  const examplesSections: ExamplesSectionType[] = [{
     title: "Basic",
     example: (
       <Table>
@@ -535,118 +526,101 @@ export default () => {
       />
     ),
   }];
-  const props = [{
-    name: "bordered",
-    required: false,
-    type: "boolean",
-    default: "true",
-    notes: null,
-  }, {
-    name: "hover",
-    required: false,
-    type: "boolean",
-    default: "true",
-    notes: null,
-  }, {
-    name: "striped",
-    required: false,
-    type: "boolean",
-    default: "false",
-    notes: (
-      <div>
-        Discussions of utilizing zebra stripes:{" "}
-        <Link href="https://ux.stackexchange.com/q/3562/39046">
-          https://ux.stackexchange.com/q/3562/39046
-        </Link>,{" "}
-        <Link href="https://ux.stackexchange.com/q/60715/39046">
-          https://ux.stackexchange.com/q/60715/39046
-        </Link>.
-      </div>
-    ),
-  }, {
-    name: "condensed",
-    required: false,
-    type: "boolean",
-    default: "false",
-    notes: null,
-  }, {
-    name: "stickyHeader",
-    required: false,
-    type: "boolean",
-    default: "false",
-    notes:
-      "Making the header sticky is helpful when the user needs to cross-reference and avoid losing context.",
-  }, {
-    name: "stickyFirstColumn",
-    required: false,
-    type: "boolean",
-    default: "false",
-    notes:
-      "Making the first column sticky is helpful when the user needs to cross-reference and avoid losing context.",
-  }, {
-    name: "children",
-    required: true,
-    type: "ComponentChild",
-    default: null,
-    notes: null,
-  }, {
-    name: "...rest",
-    required: false,
-    type: 'ComponentProps<"table">',
-    default: null,
-    notes: (
-      <div>
-        <div class="leading-relaxed">
-          See the docs for{" "}
-          <Link href="/rest-parameters">rest parameters</Link>. For{" "}
-          <InlineCode>Table</InlineCode>, you could pass anything you normally
-          would pass to <InlineCode>{"<table>"}</InlineCode>{" "}
-          because the return value{" "}
-          <Link href="https://github.com/adamzerner/rfui/blob/master/islands/atoms/table.tsx">
-            looks something like
-          </Link>{" "}
-          this:
+  const propsTables = [{
+    title: null,
+    props: [{
+      name: "bordered",
+      required: false,
+      type: "boolean",
+      default: "true",
+      notes: null,
+    }, {
+      name: "hover",
+      required: false,
+      type: "boolean",
+      default: "true",
+      notes: null,
+    }, {
+      name: "striped",
+      required: false,
+      type: "boolean",
+      default: "false",
+      notes: (
+        <div>
+          Discussions of utilizing zebra stripes:{" "}
+          <Link href="https://ux.stackexchange.com/q/3562/39046">
+            https://ux.stackexchange.com/q/3562/39046
+          </Link>,{" "}
+          <Link href="https://ux.stackexchange.com/q/60715/39046">
+            https://ux.stackexchange.com/q/60715/39046
+          </Link>.
         </div>
-        <CodeBlock
-          language="tsx"
-          code={`<table
+      ),
+    }, {
+      name: "condensed",
+      required: false,
+      type: "boolean",
+      default: "false",
+      notes: null,
+    }, {
+      name: "stickyHeader",
+      required: false,
+      type: "boolean",
+      default: "false",
+      notes:
+        "Making the header sticky is helpful when the user needs to cross-reference and avoid losing context.",
+    }, {
+      name: "stickyFirstColumn",
+      required: false,
+      type: "boolean",
+      default: "false",
+      notes:
+        "Making the first column sticky is helpful when the user needs to cross-reference and avoid losing context.",
+    }, {
+      name: "children",
+      required: true,
+      type: "ComponentChild",
+      default: null,
+      notes: null,
+    }, {
+      name: "...rest",
+      required: false,
+      type: 'ComponentProps<"table">',
+      default: null,
+      notes: (
+        <div>
+          <div class="leading-relaxed">
+            See the docs for{" "}
+            <Link href="/rest-parameters">rest parameters</Link>. For{" "}
+            <InlineCode>Table</InlineCode>, you could pass anything you normally
+            would pass to <InlineCode>{"<table>"}</InlineCode>{" "}
+            because the return value{" "}
+            <Link href="https://github.com/adamzerner/rfui/blob/master/islands/atoms/table.tsx">
+              looks something like
+            </Link>{" "}
+            this:
+          </div>
+          <CodeBlock
+            language="tsx"
+            code={`<table
   class={className}
   {...restWithoutClass}
 >
   {children}
 </table>`}
-        />
-      </div>
-    ),
+          />
+        </div>
+      ),
+    }],
   }];
 
   return (
     <ComponentDocsPage
-      examplesSectionTitles={sections.map((s) => s.title)}
-    >
-      <Header
-        componentName="Table"
-        sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/atoms/table.tsx"
-      >
-        <Example>{sections[0].example}</Example>
-        <Notes>{notes}</Notes>
-      </Header>
-      {sections.map((section) => (
-        <section>
-          <H2 inPageLink={section.title.toLowerCase().split(/\s+/).join("-")}>
-            {section.title}
-          </H2>
-          {section.description &&
-            (
-              <Text size="sm" class="mb-6">
-                {section.description}
-              </Text>
-            )}
-          <Card width="full" class="mb-4">{section.example}</Card>
-          {section.exampleCode}
-        </section>
-      ))}
-      <PropsTable props={props} />
-    </ComponentDocsPage>
+      componentName="Table"
+      sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/atoms/table.tsx"
+      overviewNotes={overviewNotes}
+      examplesSections={examplesSections}
+      propsTables={propsTables}
+    />
   );
 };

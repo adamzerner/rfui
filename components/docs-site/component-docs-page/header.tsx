@@ -11,12 +11,12 @@ export const Header = (
   {
     componentName,
     sourceCodeUrl,
-    importStatement = `import { ${componentName} } from "rfui";`,
+    importStatement,
     children,
   }: {
     componentName: string;
     sourceCodeUrl: string;
-    importStatement?: string;
+    importStatement: string;
     children: ComponentChild;
   },
 ) => {

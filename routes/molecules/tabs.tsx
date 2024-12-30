@@ -124,7 +124,6 @@ export default () => {
     <ComponentDocsPage
       componentName="Tabs"
       sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/islands/molecules/tabs.tsx"
-      importStatement='import { Tabs, TabSection } from "rfui";'
       overviewNotes={overviewNotes}
       examplesSections={examplesSections}
       propsTables={propsTables}

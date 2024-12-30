@@ -283,7 +283,6 @@ export default () => {
     <ComponentDocsPage
       componentName="CheckboxCardGroup"
       sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/islands/molecules/checkbox-card-group.tsx"
-      importStatement='import { CheckboxCardGroup, CheckboxCardGroupItem } from "rfui";'
       overviewNotes={overviewNotes}
       examplesSections={examplesSections}
       propsTables={propsTables}

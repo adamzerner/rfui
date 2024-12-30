@@ -482,12 +482,6 @@ export default () => {
     <ComponentDocsPage
       componentName="Navbar"
       sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/molecules/navbar.tsx"
-      importStatement={`import {
-  Navbar,
-  NavbarItem,
-  NavbarLeft,
-  NavbarRight,
-} from "rfui";`}
       overviewNotes={overviewNotes}
       examplesSections={examplesSections}
       propsTables={propsTables}

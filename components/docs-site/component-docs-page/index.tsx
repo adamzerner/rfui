@@ -18,7 +18,6 @@ import { OnThisPage } from "./on-this-page.tsx";
 export type ComponentDocsPageType = {
   componentName: string;
   sourceCodeUrl: string;
-  importStatement?: string;
   overviewNotes: string | JSX.Element | null;
   examplesSections: ExamplesSectionType[];
   propsTables: PropsTableType[];
@@ -28,13 +27,28 @@ export const ComponentDocsPage = (
   {
     componentName,
     sourceCodeUrl,
-    importStatement,
     overviewNotes,
     examplesSections,
     propsTables,
   }: ComponentDocsPageType,
 ) => {
   const examplesSectionTitles = examplesSections.map((s) => s.title);
+  const componentsToImport = [
+    componentName,
+    ...propsTables.filter((p) => p.title).map((p) => p.title),
+  ];
+  const componentsToImportString = componentsToImport.length > 2
+    ? componentsToImport
+      .map((c, i) =>
+        i === 0
+          ? `\n  ${c}`
+          : i === componentsToImport.length - 1
+          ? `  ${c}\n`
+          : `  ${c}`
+      )
+      .join(`, \n`)
+    : componentsToImport.join(",") + " ";
+  const importStatement = `import { ${componentsToImportString}} from "rfui";`;
 
   return (
     <Flex class="mt-9 gap-10">

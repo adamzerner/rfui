@@ -468,12 +468,6 @@ export default () => {
     <ComponentDocsPage
       componentName="Footer"
       sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/molecules/footer.tsx"
-      importStatement={`import { 
-  Footer,
-  FooterColumn,
-  FooterHeading,
-  FooterItem
-} from "rfui";`}
       overviewNotes={overviewNotes}
       examplesSections={examplesSections}
       propsTables={propsTables}

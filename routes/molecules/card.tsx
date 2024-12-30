@@ -719,7 +719,6 @@ export default () => {
     <ComponentDocsPage
       componentName="Card"
       sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/molecules/card.tsx"
-      importStatement='import { Card, CardHeader, CardBody, CardFooter } from "rfui";'
       overviewNotes={overviewNotes}
       examplesSections={examplesSections}
       propsTables={propsTables}

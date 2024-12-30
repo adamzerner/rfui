@@ -251,7 +251,6 @@ export default () => {
     <ComponentDocsPage
       componentName="Alert"
       sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/islands/molecules/alert.tsx"
-      importStatement='import { Alert, AlertHeader, AlertBody } from "rfui";'
       overviewNotes={overviewNotes}
       examplesSections={examplesSections}
       propsTables={propsTables}

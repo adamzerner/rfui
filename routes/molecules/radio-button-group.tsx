@@ -161,7 +161,6 @@ export default () => {
     <ComponentDocsPage
       componentName="RadioButtonGroup"
       sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/islands/molecules/radio-button-group.tsx"
-      importStatement='import { RadioButtonGroup, RadioButtonGroupItem } from "rfui";'
       overviewNotes={overviewNotes}
       examplesSections={examplesSections}
       propsTables={propsTables}

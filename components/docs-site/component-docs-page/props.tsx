@@ -4,6 +4,7 @@ import { H2 } from "@/components/atoms/h2.tsx";
 import { InlineCode } from "@/components/atoms/inline-code.tsx";
 import { Link } from "@/components/atoms/link.tsx";
 import { Table } from "@/components/atoms/table.tsx";
+import { Stack } from "@/components/helpers/stack.tsx";
 import { JSX } from "preact";
 
 export const Props = (
@@ -37,8 +38,7 @@ export const Props = (
             <th>Prop</th>
             <th class="w-10">Required</th>
             <th class="w-10">Default</th>
-            <th class="w-14">Type</th>
-            <th>Notes</th>
+            <th>Type and notes</th>
           </tr>
         </thead>
         <tbody>
@@ -54,9 +54,11 @@ export const Props = (
                   : "-"}
               </td>
               <td>
-                <CodeBlock lang="ts" code={prop.type} />
+                <Stack class="gap-4">
+                  <CodeBlock lang="ts" code={prop.type} />
+                  {prop.notes}
+                </Stack>
               </td>
-              <td class="text-wrap break-words">{prop.notes ?? "-"}</td>
             </tr>
           ))}
         </tbody>

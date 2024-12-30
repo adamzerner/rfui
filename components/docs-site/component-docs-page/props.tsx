@@ -48,12 +48,12 @@ export const Props = (
                 <InlineCode>{prop.name}</InlineCode>
               </td>
               <td>{prop.required ? "✔" : "-"}</td>
-              <td>
+              <td class="whitespace-nowrap">
                 {prop.default !== null
                   ? <InlineCode>{prop.default}</InlineCode>
                   : "-"}
               </td>
-              <td>
+              <td style={{ wordBreak: "break-word" }}>
                 <Stack class="gap-4">
                   <CodeBlock lang="ts" code={prop.type} />
                   {prop.notes}

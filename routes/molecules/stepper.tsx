@@ -9,7 +9,6 @@ import {
   Notes,
 } from "@/components/docs-site/component-docs-page/header.tsx";
 import { ComponentDocsPage } from "@/components/docs-site/component-docs-page/index.tsx";
-import { Prop } from "@/components/docs-site/component-docs-page/prop.tsx";
 import { Props } from "@/components/docs-site/component-docs-page/props.tsx";
 import { SectionType } from "@/components/docs-site/component-docs-page/section-type.ts";
 import { Stack } from "@/components/helpers/stack.tsx";
@@ -24,7 +23,7 @@ export default () => {
       <Link href="https://www.nngroup.com/articles/input-steppers/">
         Design Guidelines for Input Steppers
       </Link>{" "}
-      from NNGroup.
+      from Nielsen Norman Group.
     </div>
   );
   const sections: SectionType[] = [{
@@ -282,19 +281,7 @@ export default () => {
           {section.exampleCode}
         </section>
       ))}
-      <Props>
-        {props.map((prop) => {
-          const { notes, ...propWithoutNotes } = prop;
-
-          return notes
-            ? (
-              <Prop prop={prop}>
-                {notes}
-              </Prop>
-            )
-            : <Prop prop={propWithoutNotes}></Prop>;
-        })}
-      </Props>
+      <Props props={props} />
     </ComponentDocsPage>
   );
 };

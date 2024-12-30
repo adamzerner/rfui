@@ -9,7 +9,6 @@ import {
   Notes,
 } from "@/components/docs-site/component-docs-page/header.tsx";
 import { ComponentDocsPage } from "@/components/docs-site/component-docs-page/index.tsx";
-import { Prop } from "@/components/docs-site/component-docs-page/prop.tsx";
 import { Props } from "@/components/docs-site/component-docs-page/props.tsx";
 import { SectionType } from "@/components/docs-site/component-docs-page/section-type.ts";
 import { Stack } from "@/components/helpers/stack.tsx";
@@ -311,32 +310,11 @@ export default () => {
           {section.exampleCode}
         </section>
       ))}
-      <Props>
-        {props.map((prop) => {
-          const { notes, ...propWithoutNotes } = prop;
-
-          return notes
-            ? (
-              <Prop prop={prop}>
-                {notes}
-              </Prop>
-            )
-            : <Prop prop={propWithoutNotes}></Prop>;
-        })}
-      </Props>
-      <Props subComponentTitle="CheckboxCardGroupItem">
-        {checkboxCardGroupItemProps.map((prop) => {
-          const { notes, ...propWithoutNotes } = prop;
-
-          return notes
-            ? (
-              <Prop prop={prop}>
-                {notes}
-              </Prop>
-            )
-            : <Prop prop={propWithoutNotes}></Prop>;
-        })}
-      </Props>
+      <Props props={props} />
+      <Props
+        props={checkboxCardGroupItemProps}
+        subComponentTitle="CheckboxCardGroupItem"
+      />
     </ComponentDocsPage>
   );
 };

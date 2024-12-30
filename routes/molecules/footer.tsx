@@ -9,7 +9,6 @@ import {
   Notes,
 } from "@/components/docs-site/component-docs-page/header.tsx";
 import { ComponentDocsPage } from "@/components/docs-site/component-docs-page/index.tsx";
-import { Prop } from "@/components/docs-site/component-docs-page/prop.tsx";
 import { Props } from "@/components/docs-site/component-docs-page/props.tsx";
 import { SectionType } from "@/components/docs-site/component-docs-page/section-type.ts";
 import { Stack } from "@/components/helpers/stack.tsx";
@@ -497,58 +496,10 @@ export default () => {
           {section.exampleCode}
         </section>
       ))}
-      <Props>
-        {props.map((prop) => {
-          const { notes, ...propWithoutNotes } = prop;
-
-          return notes
-            ? (
-              <Prop prop={prop}>
-                {notes}
-              </Prop>
-            )
-            : <Prop prop={propWithoutNotes}></Prop>;
-        })}
-      </Props>
-      <Props subComponentTitle="FooterColumn">
-        {footerColumnProps.map((prop) => {
-          const { notes, ...propWithoutNotes } = prop;
-
-          return notes
-            ? (
-              <Prop prop={prop}>
-                {notes}
-              </Prop>
-            )
-            : <Prop prop={propWithoutNotes}></Prop>;
-        })}
-      </Props>
-      <Props subComponentTitle="FooterHeading">
-        {footerHeadingProps.map((prop) => {
-          const { notes, ...propWithoutNotes } = prop;
-
-          return notes
-            ? (
-              <Prop prop={prop}>
-                {notes}
-              </Prop>
-            )
-            : <Prop prop={propWithoutNotes}></Prop>;
-        })}
-      </Props>
-      <Props subComponentTitle="FooterItem">
-        {footerItemProps.map((prop) => {
-          const { notes, ...propWithoutNotes } = prop;
-
-          return notes
-            ? (
-              <Prop prop={prop}>
-                {notes}
-              </Prop>
-            )
-            : <Prop prop={propWithoutNotes}></Prop>;
-        })}
-      </Props>
+      <Props props={props} />
+      <Props props={footerColumnProps} subComponentTitle="FooterColumn" />
+      <Props props={footerHeadingProps} subComponentTitle="FooterHeading" />
+      <Props props={footerItemProps} subComponentTitle="FooterItem" />
     </ComponentDocsPage>
   );
 };

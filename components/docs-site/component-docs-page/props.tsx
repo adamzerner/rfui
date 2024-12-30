@@ -32,7 +32,7 @@ export const Props = (
             <Link inPageLink href="#props" underline="hover">Props</Link>
           </H1>
         )}
-      <Table hover={false}>
+      <Table hover={false} class="min-w-[900px]">
         <thead>
           <tr>
             <th>Prop</th>

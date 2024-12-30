@@ -5,6 +5,7 @@ import { InlineCode } from "@/components/atoms/inline-code.tsx";
 import { Link } from "@/components/atoms/link.tsx";
 import { Table } from "@/components/atoms/table.tsx";
 import { Stack } from "@/components/helpers/stack.tsx";
+import { titleToHref } from "@/utilities/title-to-href.ts";
 import { JSX } from "preact";
 
 export type PropsTableType = {
@@ -27,7 +28,7 @@ export const PropsTable = (
     <section class="mt-10">
       {title
         ? (
-          <H2 class="mb-8">
+          <H2 class="mb-8" id={`props-${titleToHref(title)}`}>
             <InlineCode>{title}</InlineCode>
           </H2>
         )

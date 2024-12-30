@@ -25,7 +25,7 @@ export const PropsTable = (
   { props, title }: PropsTableType,
 ) => {
   return (
-    <section class="mt-10">
+    <section class="mt-10 overflow-x-scroll">
       {title
         ? (
           <H2 class="mb-8" id={`props-${titleToHref(title)}`}>
@@ -37,7 +37,7 @@ export const PropsTable = (
             <Link inPageLink href="#props" underline="hover">Props</Link>
           </H1>
         )}
-      <Table hover={false} class="min-w-[900px]">
+      <Table hover={false} class="min-w-[600px]">
         <thead>
           <tr>
             <th>Prop</th>

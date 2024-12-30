@@ -60,7 +60,7 @@ export const ComponentDocsPage = (
           propsTableTitles={propsTableTitles}
         />
       </div>
-      <main class="flex-grow" id="overview">
+      <main class="flex-grow overflow-x-hidden" id="overview">
         <Header
           componentName={componentName}
           sourceCodeUrl={sourceCodeUrl}

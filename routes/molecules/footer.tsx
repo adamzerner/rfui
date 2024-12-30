@@ -32,7 +32,7 @@ export default () => {
         <Link href="https://www.nngroup.com/articles/footers/">
           Footers 101
         </Link>{" "}
-        from NNGroup. Footers are awesome. Go wild!
+        from Nielsen Norman Group. Footers are awesome. Go wild!
       </p>
       <p>
         Note: in the examples below the spacing is a little off. This won't

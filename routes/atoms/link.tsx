@@ -87,7 +87,7 @@ export default () => {
           <Link href="https://www.nngroup.com/articles/in-page-links/">
             Anchors OK? Re-Assessing In-Page Links
           </Link>{" "}
-          from NNGroup.
+          from Nielsen Norman Group.
         </div>
       </Stack>
     ),
@@ -254,7 +254,7 @@ export default () => {
         <Link href="https://www.nngroup.com/articles/in-page-links/">
           Anchors OK? Re-Assessing In-Page Links
         </Link>{" "}
-        from NNGroup.
+        from Nielsen Norman Group.
       </div>
     ),
   }, {

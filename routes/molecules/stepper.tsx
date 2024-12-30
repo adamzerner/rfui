@@ -23,7 +23,7 @@ export default () => {
       <Link href="https://www.nngroup.com/articles/input-steppers/">
         Design Guidelines for Input Steppers
       </Link>{" "}
-      from NNGroup.
+      from Nielsen Norman Group.
     </div>
   );
   const sections: SectionType[] = [{

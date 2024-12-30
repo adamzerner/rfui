@@ -1,22 +1,13 @@
 import { Blockquote } from "@/components/atoms/blockquote.tsx";
 import { CodeBlock } from "@/components/atoms/code-block.tsx";
-import { H2 } from "@/components/atoms/h2.tsx";
 import { InlineCode } from "@/components/atoms/inline-code.tsx";
 import { Link } from "@/components/atoms/link.tsx";
-import { Text } from "@/components/atoms/text.tsx";
-import {
-  Example,
-  Header,
-  Notes,
-} from "@/components/docs-site/component-docs-page/header.tsx";
+import { ExamplesSectionType } from "@/components/docs-site/component-docs-page/examples-section-type.ts";
 import { ComponentDocsPage } from "@/components/docs-site/component-docs-page/index.tsx";
-import { PropsTable } from "@/components/docs-site/component-docs-page/props-table.tsx";
-import { SectionType } from "@/components/docs-site/component-docs-page/section-type.ts";
-import { Card } from "@/components/molecules/card.tsx";
 
 export default () => {
-  const notes = null;
-  const sections: SectionType[] = [{
+  const overviewNotes = null;
+  const examplesSections: ExamplesSectionType[] = [{
     title: "Basic",
     example: <Blockquote>All models are wrong. Some are useful.</Blockquote>,
     exampleCode: (
@@ -116,67 +107,51 @@ export default () => {
       />
     ),
   }];
-  const props = [{
-    name: "children",
-    required: true,
-    type: "ComponentChild",
-    default: null,
-    notes: null,
-  }, {
-    name: "...rest",
-    required: false,
-    type: `ComponentProps<"blockquote">`,
-    default: null,
-    notes: (
-      <div>
-        <div class="leading-relaxed">
-          See the docs for{" "}
-          <Link href="/rest-parameters">rest parameters</Link>. For{" "}
-          <InlineCode>Blockquote</InlineCode>, you could pass anything you
-          normally would pass to <InlineCode>{"<blockquote>"}</InlineCode>{" "}
-          because the container{" "}
-          <Link href="https://github.com/adamzerner/rfui/blob/master/islands/atoms/blockquote.tsx">
-            looks something like
-          </Link>{" "}
-          this:
-        </div>
-        <CodeBlock
-          language="tsx"
-          code={`<blockquote class={className} {...restWithoutClass}>
+  const propsTables = [{
+    title: null,
+    props: [{
+      name: "children",
+      required: true,
+      type: "ComponentChild",
+      default: null,
+      notes: null,
+    }, {
+      name: "...rest",
+      required: false,
+      type: `ComponentProps<"blockquote">`,
+      default: null,
+      notes: (
+        <div>
+          <div class="leading-relaxed">
+            See the docs for{" "}
+            <Link href="/rest-parameters">rest parameters</Link>. For{" "}
+            <InlineCode>Blockquote</InlineCode>, you could pass anything you
+            normally would pass to <InlineCode>{"<blockquote>"}</InlineCode>
+            {" "}
+            because the container{" "}
+            <Link href="https://github.com/adamzerner/rfui/blob/master/islands/atoms/blockquote.tsx">
+              looks something like
+            </Link>{" "}
+            this:
+          </div>
+          <CodeBlock
+            language="tsx"
+            code={`<blockquote class={className} {...restWithoutClass}>
   {children}
 </blockquote>`}
-        />
-      </div>
-    ),
+          />
+        </div>
+      ),
+    }],
   }];
 
   return (
     <ComponentDocsPage
-      sectionTitles={sections.map((s) => s.title)}
-    >
-      <Header
-        componentName="Blockquote"
-        sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/atoms/blockquote.tsx"
-      >
-        <Example>{sections[0].example}</Example>
-        <Notes>{notes}</Notes>
-      </Header>
-      {sections.map((section) => (
-        <section>
-          <H2 inPageLink={section.title.toLowerCase().split(/\s+/).join("-")}>
-            {section.title}
-          </H2>
-          {section.description &&
-            (
-              <Text size="sm" class="mb-6">
-                {section.description}
-              </Text>
-            )}
-          <Card width="full" class="mb-4">{section.example}</Card>
-          {section.exampleCode}
-        </section>
-      ))}
-      <PropsTable props={props} />
-    </ComponentDocsPage>
+      componentName="Blockquote"
+      sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/atoms/blockquote.tsx"
+      overviewNotes={overviewNotes}
+      examplesSections={examplesSections}
+      propsTables={propsTables}
+    />
   );
 };

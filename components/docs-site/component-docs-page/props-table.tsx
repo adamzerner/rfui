@@ -5,26 +5,31 @@ import { InlineCode } from "@/components/atoms/inline-code.tsx";
 import { Link } from "@/components/atoms/link.tsx";
 import { Table } from "@/components/atoms/table.tsx";
 import { Stack } from "@/components/helpers/stack.tsx";
+import { titleToHref } from "@/utilities/title-to-href.ts";
 import { JSX } from "preact";
 
+export type PropsTableType = {
+  title: string | null;
+  props: PropsType;
+};
+
+type PropsType = {
+  name: string;
+  required: boolean;
+  default: string | null;
+  type: string;
+  notes: JSX.Element | string | null;
+}[];
+
 export const PropsTable = (
-  { props, subComponentTitle }: {
-    props: {
-      name: string;
-      required: boolean;
-      default: string | null;
-      type: string;
-      notes: JSX.Element | string | null;
-    }[];
-    subComponentTitle?: string;
-  },
+  { props, title }: PropsTableType,
 ) => {
   return (
     <section class="mt-10">
-      {subComponentTitle
+      {title
         ? (
-          <H2 class="mb-8">
-            <InlineCode>{subComponentTitle}</InlineCode>
+          <H2 class="mb-8" id={`props-${titleToHref(title)}`}>
+            <InlineCode>{title}</InlineCode>
           </H2>
         )
         : (

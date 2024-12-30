@@ -11,25 +11,25 @@ export const Header = (
   {
     componentName,
     sourceCodeUrl,
-    importStatement = `import { ${componentName} } from "rfui";`,
+    importStatement,
     children,
   }: {
     componentName: string;
     sourceCodeUrl: string;
-    importStatement?: string;
+    importStatement: string;
     children: ComponentChild;
   },
 ) => {
-  const { notes, example } = getComponents(children);
+  const { overviewNotes, example } = getComponents(children);
 
   return (
     <header class="mb-10">
       <H1 class="!mt-0">{componentName}</H1>
       <Stack class="gap-5">
         <Text>
-          {notes && (
+          {overviewNotes && (
             <div class="text-base leading-relaxed text-neutral-700">
-              {notes}
+              {overviewNotes}
             </div>
           )}
           <Link
@@ -68,7 +68,7 @@ const getComponents = (children: any) => {
     return { example: children };
   }
 
-  const notes = children.find(
+  const overviewNotes = children.find(
     (child: any) => child && child.type && child.type.name === Notes.name,
   );
 
@@ -82,5 +82,5 @@ const getComponents = (children: any) => {
     );
   }
 
-  return { notes, example };
+  return { overviewNotes, example };
 };

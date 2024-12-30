@@ -1,24 +1,15 @@
 import { CodeBlock } from "@/components/atoms/code-block.tsx";
-import { H2 } from "@/components/atoms/h2.tsx";
 import { InlineCode } from "@/components/atoms/inline-code.tsx";
 import { Link } from "@/components/atoms/link.tsx";
 import { OL } from "@/components/atoms/ol.tsx";
-import { Text } from "@/components/atoms/text.tsx";
 import { UL } from "@/components/atoms/ul.tsx";
-import {
-  Example,
-  Header,
-  Notes,
-} from "@/components/docs-site/component-docs-page/header.tsx";
+import { ExamplesSectionType } from "@/components/docs-site/component-docs-page/examples-section-type.ts";
 import { ComponentDocsPage } from "@/components/docs-site/component-docs-page/index.tsx";
-import { PropsTable } from "@/components/docs-site/component-docs-page/props-table.tsx";
-import { SectionType } from "@/components/docs-site/component-docs-page/section-type.ts";
 import { Stack } from "@/components/helpers/stack.tsx";
-import { Card } from "@/components/molecules/card.tsx";
 import { PasswordInput } from "@/islands/molecules/password-input.tsx";
 
 export default () => {
-  const notes = (
+  const overviewNotes = (
     <Stack class="gap-3">
       <div>
         The <InlineCode>PasswordInput</InlineCode>{" "}
@@ -46,7 +37,7 @@ export default () => {
       </div>
     </Stack>
   );
-  const sections: SectionType[] = [{
+  const examplesSections: ExamplesSectionType[] = [{
     title: "Basic",
     example: <PasswordInput />,
     exampleCode: (
@@ -214,138 +205,121 @@ export default () => {
       />
     ),
   }];
-  const props = [{
-    name: "defaultVisibility",
-    required: false,
-    type: '"hidden" | "shown"',
-    default: '"hidden"',
-    notes: (
-      <div>
-        <div class="mb-3">
-          Whether the password is displayed with asterisks (like this: ******)
-          or in plain text (like this: foobar).
-        </div>
-        <div class="mb-2">Consider the factors at play here, including:</div>
-        <OL>
-          <li>
-            Usability: Seeing * as you type instead of characters like "a" and
-            "b" can hurt usability.
-          </li>
-          <li>
-            Actual security: In public places, ***** can prevent malicious
-            onlookers from stealing your password.
-          </li>
-          <li>
-            Perceived security: Some users expect to see * as they type their
-            password and might question how secure your website is if they see
-            their password in plaintext by default instead.
-          </li>
-        </OL>
-        <div class="mb-2 mt-4">
-          Related reading:
-        </div>
-        <UL>
-          <li>
-            <Link href="https://www.nngroup.com/articles/stop-password-masking">
-              Stop Password Masking
-            </Link>
-          </li>
-          <li>
-            <Link href="https://www.lukew.com/ff/entry.asp?1653">
-              Mobile Design Details: Hide/Show Passwords
-            </Link>
-          </li>
-          <li>
-            <Link href="https://ux.stackexchange.com/q/144503/39046">
-              Is password-unmasking worth the potential security downside?
-            </Link>
-          </li>
-        </UL>
-      </div>
-    ),
-  }, {
-    name: "containerProps",
-    required: false,
-    type: 'Omit<ComponentProps<"div">, "size">',
-    default: null,
-    notes: (
-      <div>
+  const propsTables = [{
+    title: null,
+    props: [{
+      name: "defaultVisibility",
+      required: false,
+      type: '"hidden" | "shown"',
+      default: '"hidden"',
+      notes: (
         <div>
-          The structure of <InlineCode>PasswordInput</InlineCode>{" "}
-          is something like this:
+          <div class="mb-3">
+            Whether the password is displayed with asterisks (like this: ******)
+            or in plain text (like this: foobar).
+          </div>
+          <div class="mb-2">Consider the factors at play here, including:</div>
+          <OL>
+            <li>
+              Usability: Seeing * as you type instead of characters like "a" and
+              "b" can hurt usability.
+            </li>
+            <li>
+              Actual security: In public places, ***** can prevent malicious
+              onlookers from stealing your password.
+            </li>
+            <li>
+              Perceived security: Some users expect to see * as they type their
+              password and might question how secure your website is if they see
+              their password in plaintext by default instead.
+            </li>
+          </OL>
+          <div class="mb-2 mt-4">
+            Related reading:
+          </div>
+          <UL>
+            <li>
+              <Link href="https://www.nngroup.com/articles/stop-password-masking">
+                Stop Password Masking
+              </Link>
+            </li>
+            <li>
+              <Link href="https://www.lukew.com/ff/entry.asp?1653">
+                Mobile Design Details: Hide/Show Passwords
+              </Link>
+            </li>
+            <li>
+              <Link href="https://ux.stackexchange.com/q/144503/39046">
+                Is password-unmasking worth the potential security downside?
+              </Link>
+            </li>
+          </UL>
         </div>
-        <CodeBlock
-          language="tsx"
-          code={`<Flex>
+      ),
+    }, {
+      name: "containerProps",
+      required: false,
+      type: 'Omit<ComponentProps<"div">, "size">',
+      default: null,
+      notes: (
+        <div>
+          <div>
+            The structure of <InlineCode>PasswordInput</InlineCode>{" "}
+            is something like this:
+          </div>
+          <CodeBlock
+            language="tsx"
+            code={`<Flex>
   <Input />
   <button></button>
 </Flex>`}
-        />
-        <div class="mb-3 mt-4">
-          <InlineCode>containerProps</InlineCode> will get passed to{" "}
-          <InlineCode>Flex</InlineCode> like this:
+          />
+          <div class="mb-3 mt-4">
+            <InlineCode>containerProps</InlineCode> will get passed to{" "}
+            <InlineCode>Flex</InlineCode> like this:
+          </div>
+          <CodeBlock language="tsx" code={`<Flex {...containerProps}>`} />
         </div>
-        <CodeBlock language="tsx" code={`<Flex {...containerProps}>`} />
-      </div>
-    ),
-  }, {
-    name: "...rest",
-    required: false,
-    type: `{
+      ),
+    }, {
+      name: "...rest",
+      required: false,
+      type: `{
   size?: "sm" | "md" | "lg";
   rounded?: "square" | "sm" | "lg" | "full";
   invalid?: boolean;
 } & Omit<ComponentProps<"input">, "size">`,
-    default: null,
-    notes: (
-      <div>
+      default: null,
+      notes: (
         <div>
-          The structure of <InlineCode>PasswordInput</InlineCode>{" "}
-          is something like this:
-        </div>
-        <CodeBlock
-          language="tsx"
-          code={`<Flex>
+          <div>
+            The structure of <InlineCode>PasswordInput</InlineCode>{" "}
+            is something like this:
+          </div>
+          <CodeBlock
+            language="tsx"
+            code={`<Flex>
   <Input />
   <button></button>
 </Flex>`}
-        />
-        <div class="mb-3 mt-4">
-          <InlineCode>...rest</InlineCode> will get passed to{" "}
-          <InlineCode>{"<Input />"}</InlineCode> like this:
+          />
+          <div class="mb-3 mt-4">
+            <InlineCode>...rest</InlineCode> will get passed to{" "}
+            <InlineCode>{"<Input />"}</InlineCode> like this:
+          </div>
+          <CodeBlock language="tsx" code={`<Input {...rest} />`} />
         </div>
-        <CodeBlock language="tsx" code={`<Input {...rest} />`} />
-      </div>
-    ),
+      ),
+    }],
   }];
 
   return (
     <ComponentDocsPage
-      sectionTitles={sections.map((s) => s.title)}
-    >
-      <Header
-        componentName="PasswordInput"
-        sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/islands/molecules/password-input.tsx"
-      >
-        <Example>{sections[0].example}</Example>
-        <Notes>{notes}</Notes>
-      </Header>
-      {sections.map((section) => (
-        <section>
-          <H2 inPageLink={section.title.toLowerCase().split(/\s+/).join("-")}>
-            {section.title}
-          </H2>
-          {section.description &&
-            (
-              <Text size="sm" class="mb-6">
-                {section.description}
-              </Text>
-            )}
-          <Card width="full" class="mb-4">{section.example}</Card>
-          {section.exampleCode}
-        </section>
-      ))}
-      <PropsTable props={props} />
-    </ComponentDocsPage>
+      componentName="PasswordInput"
+      sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/islands/molecules/password-input.tsx"
+      overviewNotes={overviewNotes}
+      examplesSections={examplesSections}
+      propsTables={propsTables}
+    />
   );
 };

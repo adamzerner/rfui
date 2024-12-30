@@ -1,18 +1,9 @@
 import { CodeBlock } from "@/components/atoms/code-block.tsx";
-import { H2 } from "@/components/atoms/h2.tsx";
 import { InlineCode } from "@/components/atoms/inline-code.tsx";
 import { Link } from "@/components/atoms/link.tsx";
-import { Text } from "@/components/atoms/text.tsx";
-import {
-  Example,
-  Header,
-  Notes,
-} from "@/components/docs-site/component-docs-page/header.tsx";
+import { ExamplesSectionType } from "@/components/docs-site/component-docs-page/examples-section-type.ts";
 import { ComponentDocsPage } from "@/components/docs-site/component-docs-page/index.tsx";
-import { PropsTable } from "@/components/docs-site/component-docs-page/props-table.tsx";
-import { SectionType } from "@/components/docs-site/component-docs-page/section-type.ts";
 import { Stack } from "@/components/helpers/stack.tsx";
-import { Card } from "@/components/molecules/card.tsx";
 import {
   RadioButtonCardGroup,
   RadioButtonCardGroupItem,
@@ -20,7 +11,6 @@ import {
 import { useSignal } from "@preact/signals";
 
 export default () => {
-  const topExampleSelectedItemName = useSignal<string | null>(null);
   const basicExampleSelectedItemName = useSignal<string | null>(null);
   const paddingSmExampleSelectedItemName = useSignal<string | null>(null);
   const paddingMdExampleSelectedItemName = useSignal<string | null>(null);
@@ -29,31 +19,18 @@ export default () => {
   const roundedSmExampleSelectedItemName = useSignal<string | null>(null);
   const roundedLgExampleSelectedItemName = useSignal<string | null>(null);
 
-  const notes =
-    "Add some flair and professionalism to your radio buttons and associated content.";
-  const topExample = (
-    <RadioButtonCardGroup>
-      <RadioButtonCardGroupItem
-        name="top-one"
-        selectedItemName={topExampleSelectedItemName}
-      >
-        One
-      </RadioButtonCardGroupItem>
-      <RadioButtonCardGroupItem
-        name="top-two"
-        selectedItemName={topExampleSelectedItemName}
-      >
-        Two
-      </RadioButtonCardGroupItem>
-      <RadioButtonCardGroupItem
-        name="top-three"
-        selectedItemName={topExampleSelectedItemName}
-      >
-        Three
-      </RadioButtonCardGroupItem>
-    </RadioButtonCardGroup>
+  const overviewNotes = (
+    <Stack class="gap-2">
+      <div>
+        Add some flair and professionalism to your radio buttons and associated
+        content.
+      </div>
+      <div>
+        Note: The example below doesn't work due to a quirk in the docs.
+      </div>
+    </Stack>
   );
-  const sections: SectionType[] = [{
+  const examplesSections: ExamplesSectionType[] = [{
     title: "Basic",
     example: (
       <RadioButtonCardGroup>
@@ -394,115 +371,96 @@ export default () => {
       />
     ),
   }];
-  const props = [{
-    name: "padding",
-    required: false,
-    type: '"sm" | "md" | "lg"',
-    default: '"md"',
-    notes: null,
-  }, {
-    name: "rounded",
-    required: false,
-    type: '"square" | "sm" | "lg"',
-    default: null,
-    notes: (
-      <div>
-        Defaults to the value of the CSS variable{" "}
-        <InlineCode>--default-roundedness</InlineCode>. See{" "}
-        <Link href="/default-roundedness">
-          "Default roundedness"
-        </Link>.
-      </div>
-    ),
-  }, {
-    name: "children",
-    required: true,
-    type: "ComponentChild",
-    default: null,
-    notes: null,
-  }];
-  const radioButtonCardGroupItemProps = [{
-    name: "name",
-    required: true,
-    type: "string",
-    default: null,
-    notes: null,
-  }, {
-    name: "value",
-    required: false,
-    type: 'RadioButtonType["value"]',
-    default: null,
-    notes: null,
-  }, {
-    name: "selectedItemName",
-    required: true,
-    type: "Signal<string | null>",
-    default: null,
-    notes: (
-      <div>
-        See the Preact docs for{" "}
-        <Link href="https://preactjs.com/guide/v10/signals">signals</Link>.
-      </div>
-    ),
-  }, {
-    name: "radioButtonRest",
-    required: false,
-    type: 'Omit<RadioButtonType, "size">',
-    default: null,
-    notes: (
-      <div>
-        <div class="leading-relaxed">
-          This gets spread to the <InlineCode>RadioButton</InlineCode> like so:
+  const propsTables = [{
+    title: null,
+    props: [{
+      name: "padding",
+      required: false,
+      type: '"sm" | "md" | "lg"',
+      default: '"md"',
+      notes: null,
+    }, {
+      name: "rounded",
+      required: false,
+      type: '"square" | "sm" | "lg"',
+      default: null,
+      notes: (
+        <div>
+          Defaults to the value of the CSS variable{" "}
+          <InlineCode>--default-roundedness</InlineCode>. See{" "}
+          <Link href="/default-roundedness">
+            "Default roundedness"
+          </Link>.
         </div>
-        <CodeBlock
-          language="tsx"
-          code={`<div>
+      ),
+    }, {
+      name: "children",
+      required: true,
+      type: "ComponentChild",
+      default: null,
+      notes: null,
+    }],
+  }, {
+    title: "RadioButtonCardGroupItem",
+    props: [{
+      name: "name",
+      required: true,
+      type: "string",
+      default: null,
+      notes: null,
+    }, {
+      name: "value",
+      required: false,
+      type: 'RadioButtonType["value"]',
+      default: null,
+      notes: null,
+    }, {
+      name: "selectedItemName",
+      required: true,
+      type: "Signal<string | null>",
+      default: null,
+      notes: (
+        <div>
+          See the Preact docs for{" "}
+          <Link href="https://preactjs.com/guide/v10/signals">signals</Link>.
+        </div>
+      ),
+    }, {
+      name: "radioButtonRest",
+      required: false,
+      type: 'Omit<RadioButtonType, "size">',
+      default: null,
+      notes: (
+        <div>
+          <div class="leading-relaxed">
+            This gets spread to the <InlineCode>RadioButton</InlineCode>{" "}
+            like so:
+          </div>
+          <CodeBlock
+            language="tsx"
+            code={`<div>
   ...
   <RadioButton {...radioButtonRest} />
 </div>`}
-        />
-      </div>
-    ),
-  }, {
-    name: "children",
-    required: true,
-    type: "ComponentChild",
-    default: null,
-    notes: null,
+          />
+        </div>
+      ),
+    }, {
+      name: "children",
+      required: true,
+      type: "ComponentChild",
+      default: null,
+      notes: null,
+    }],
   }];
 
   return (
     <ComponentDocsPage
-      sectionTitles={sections.map((s) => s.title)}
-    >
-      <Header
-        componentName="RadioButtonCardGroup"
-        sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/islands/molecules/radio-button-card-group.tsx"
-        importStatement='import { RadioButtonCardGroup, RadioButtonCardGroupItem } from "rfui";'
-      >
-        <Example>{topExample}</Example>
-        <Notes>{notes}</Notes>
-      </Header>
-      {sections.map((section) => (
-        <section>
-          <H2 inPageLink={section.title.toLowerCase().split(/\s+/).join("-")}>
-            {section.title}
-          </H2>
-          {section.description &&
-            (
-              <Text size="sm" class="mb-6">
-                {section.description}
-              </Text>
-            )}
-          <Card width="full" class="mb-4">{section.example}</Card>
-          {section.exampleCode}
-        </section>
-      ))}
-      <PropsTable props={props} />
-      <PropsTable
-        props={radioButtonCardGroupItemProps}
-        subComponentTitle="RadioButtonCardGroupItem"
-      />
-    </ComponentDocsPage>
+      componentName="RadioButtonCardGroup"
+      sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/islands/molecules/radio-button-card-group.tsx"
+      overviewNotes={overviewNotes}
+      examplesSections={examplesSections}
+      propsTables={propsTables}
+    />
   );
 };

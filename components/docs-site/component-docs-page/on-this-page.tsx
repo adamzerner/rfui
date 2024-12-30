@@ -1,23 +1,48 @@
 import { Link } from "@/components/atoms/link.tsx";
 import { Stack } from "@/components/helpers/stack.tsx";
+import { titleToHref } from "@/utilities/title-to-href.ts";
 
-export const OnThisPage = ({ sectionTitles }: { sectionTitles: string[] }) => {
+type OnThisPageType = {
+  examplesSectionTitles: string[];
+  propsTableTitles: string[];
+};
+
+export const OnThisPage = (
+  { examplesSectionTitles, propsTableTitles }: OnThisPageType,
+) => {
   return (
-    <nav class="sticky top-8">
+    <nav class="sticky top-6 max-h-[90vh] overflow-y-scroll text-neutral-900">
       <div class="mb-4 font-bold text-neutral-700">On this page</div>
       <Stack class="gap-2">
-        {sectionTitles.map((sectionTitle) => (
+        <Link
+          inPageLink
+          underline="hover"
+          href="#overview"
+        >
+          Overview
+        </Link>
+        <div>Examples</div>
+        {examplesSectionTitles.map((examplesSectionTitle) => (
           <Link
             inPageLink
             underline="hover"
-            href={`#${sectionTitle.toLowerCase().split(/\s+/).join("-")}`}
+            href={`#example-${titleToHref(examplesSectionTitle)}`}
+            class="ml-4"
           >
-            {sectionTitle}
+            {examplesSectionTitle}
           </Link>
         ))}
-        <Link inPageLink underline="hover" href="#props">
-          Props
-        </Link>
+        <div>Props</div>
+        {propsTableTitles.map((propsTableTitle, i) => (
+          <Link
+            inPageLink
+            underline="hover"
+            class="ml-4"
+            href={i === 0 ? "#props" : `#props-${titleToHref(propsTableTitle)}`}
+          >
+            {propsTableTitle}
+          </Link>
+        ))}
       </Stack>
     </nav>
   );

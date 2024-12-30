@@ -1,24 +1,15 @@
 import { Button } from "@/components/atoms/button.tsx";
 import { CodeBlock } from "@/components/atoms/code-block.tsx";
-import { H2 } from "@/components/atoms/h2.tsx";
 import { InlineCode } from "@/components/atoms/inline-code.tsx";
 import { Link } from "@/components/atoms/link.tsx";
-import { Text } from "@/components/atoms/text.tsx";
-import {
-  Example,
-  Header,
-  Notes,
-} from "@/components/docs-site/component-docs-page/header.tsx";
+import { ExamplesSectionType } from "@/components/docs-site/component-docs-page/examples-section-type.ts";
 import { ComponentDocsPage } from "@/components/docs-site/component-docs-page/index.tsx";
-import { PropsTable } from "@/components/docs-site/component-docs-page/props-table.tsx";
-import { SectionType } from "@/components/docs-site/component-docs-page/section-type.ts";
 import { Flex } from "@/components/helpers/flex.tsx";
 import { Stack } from "@/components/helpers/stack.tsx";
-import { Card } from "@/components/molecules/card.tsx";
 
 export default () => {
-  const notes = null;
-  const sections: SectionType[] = [{
+  const overviewNotes = null;
+  const examplesSections: ExamplesSectionType[] = [{
     title: "Basic",
     example: <Button>Example</Button>,
     exampleCode: (
@@ -330,111 +321,93 @@ export default () => {
       />
     ),
   }];
-  const props = [{
-    name: "variant",
-    required: false,
-    type:
-      '"primary" | "secondary" | "tertiary" | "danger-primary" | "danger-secondary" | "danger-tertiary"',
-    default: '"secondary"',
-    notes: null,
-  }, {
-    name: "size",
-    required: false,
-    type: '"sm" | "md" | "lg" | "block"',
-    default: '"md"',
-    notes: null,
-  }, {
-    name: "rounded",
-    required: false,
-    type: '"square" | "sm" | "lg" | "full"',
-    default: null,
-    notes: (
-      <div>
-        Defaults to the value of the CSS variable{" "}
-        <InlineCode>--default-roundedness</InlineCode>. See{" "}
-        <Link href="/default-roundedness">
-          "Default roundedness"
-        </Link>.
-      </div>
-    ),
-  }, {
-    name: "isLoading",
-    required: false,
-    type: "boolean",
-    default: "false",
-    notes: "When true, the button will appear disabled.",
-  }, {
-    name: "loadingContent",
-    required: false,
-    type: "string",
-    default: null,
-    notes: (
-      <div>
-        The text to change the button's content to when loading. Ie. when{" "}
-        <InlineCode>isLoading</InlineCode> is <InlineCode>true</InlineCode>.
-      </div>
-    ),
-  }, {
-    name: "children",
-    required: true,
-    type: "ComponentChild",
-    default: null,
-    notes: null,
-  }, {
-    name: "...rest",
-    required: false,
-    type: 'Omit<ComponentProps<"button">, "icon" | "size">',
-    default: null,
-    notes: (
-      <div>
-        <div class="leading-relaxed">
-          See the docs for{" "}
-          <Link href="/rest-parameters">rest parameters</Link>. For{" "}
-          <InlineCode>Button</InlineCode>, you could pass anything you normally
-          would pass to <InlineCode>{"<button>"}</InlineCode>{" "}
-          because the container{" "}
-          <Link href="https://github.com/adamzerner/rfui/blob/master/islands/atoms/button.tsx">
-            looks something like
-          </Link>{" "}
-          this:
+  const propsTables = [{
+    title: null,
+    props: [{
+      name: "variant",
+      required: false,
+      type:
+        '"primary" | "secondary" | "tertiary" | "danger-primary" | "danger-secondary" | "danger-tertiary"',
+      default: '"secondary"',
+      notes: null,
+    }, {
+      name: "size",
+      required: false,
+      type: '"sm" | "md" | "lg" | "block"',
+      default: '"md"',
+      notes: null,
+    }, {
+      name: "rounded",
+      required: false,
+      type: '"square" | "sm" | "lg" | "full"',
+      default: null,
+      notes: (
+        <div>
+          Defaults to the value of the CSS variable{" "}
+          <InlineCode>--default-roundedness</InlineCode>. See{" "}
+          <Link href="/default-roundedness">
+            "Default roundedness"
+          </Link>.
         </div>
-        <CodeBlock
-          language="tsx"
-          code={`<button class={className} {...restWithoutClass}>
+      ),
+    }, {
+      name: "isLoading",
+      required: false,
+      type: "boolean",
+      default: "false",
+      notes: "When true, the button will appear disabled.",
+    }, {
+      name: "loadingContent",
+      required: false,
+      type: "string",
+      default: null,
+      notes: (
+        <div>
+          The text to change the button's content to when loading. Ie. when{" "}
+          <InlineCode>isLoading</InlineCode> is <InlineCode>true</InlineCode>.
+        </div>
+      ),
+    }, {
+      name: "children",
+      required: true,
+      type: "ComponentChild",
+      default: null,
+      notes: null,
+    }, {
+      name: "...rest",
+      required: false,
+      type: 'Omit<ComponentProps<"button">, "icon" | "size">',
+      default: null,
+      notes: (
+        <div>
+          <div class="leading-relaxed">
+            See the docs for{" "}
+            <Link href="/rest-parameters">rest parameters</Link>. For{" "}
+            <InlineCode>Button</InlineCode>, you could pass anything you
+            normally would pass to <InlineCode>{"<button>"}</InlineCode>{" "}
+            because the container{" "}
+            <Link href="https://github.com/adamzerner/rfui/blob/master/islands/atoms/button.tsx">
+              looks something like
+            </Link>{" "}
+            this:
+          </div>
+          <CodeBlock
+            language="tsx"
+            code={`<button class={className} {...restWithoutClass}>
   ...
 </button>`}
-        />
-      </div>
-    ),
+          />
+        </div>
+      ),
+    }],
   }];
-
   return (
     <ComponentDocsPage
-      sectionTitles={sections.map((s) => s.title)}
-    >
-      <Header
-        componentName="Button"
-        sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/atoms/button.tsx"
-      >
-        <Example>{sections[0].example}</Example>
-        <Notes>{notes}</Notes>
-      </Header>
-      {sections.map((section) => (
-        <section>
-          <H2 inPageLink={section.title.toLowerCase().split(/\s+/).join("-")}>
-            {section.title}
-          </H2>
-          {section.description &&
-            (
-              <Text size="sm" class="mb-6">
-                {section.description}
-              </Text>
-            )}
-          <Card width="full" class="mb-4">{section.example}</Card>
-          {section.exampleCode}
-        </section>
-      ))}
-      <PropsTable props={props} />
-    </ComponentDocsPage>
+      componentName="Button"
+      sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/atoms/button.tsx"
+      overviewNotes={overviewNotes}
+      examplesSections={examplesSections}
+      propsTables={propsTables}
+    />
   );
 };

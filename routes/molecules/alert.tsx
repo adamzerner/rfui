@@ -1,22 +1,13 @@
 import { CodeBlock } from "@/components/atoms/code-block.tsx";
-import { H2 } from "@/components/atoms/h2.tsx";
 import { InlineCode } from "@/components/atoms/inline-code.tsx";
 import { Link } from "@/components/atoms/link.tsx";
-import { Text } from "@/components/atoms/text.tsx";
-import {
-  Example,
-  Header,
-  Notes,
-} from "@/components/docs-site/component-docs-page/header.tsx";
+import { ExamplesSectionType } from "@/components/docs-site/component-docs-page/examples-section-type.ts";
 import { ComponentDocsPage } from "@/components/docs-site/component-docs-page/index.tsx";
-import { PropsTable } from "@/components/docs-site/component-docs-page/props-table.tsx";
-import { SectionType } from "@/components/docs-site/component-docs-page/section-type.ts";
 import { Stack } from "@/components/helpers/stack.tsx";
-import { Card } from "@/components/molecules/card.tsx";
 import { Alert, AlertBody, AlertHeader } from "@/islands/molecules/alert.tsx";
 
 export default () => {
-  const notes = (
+  const overviewNotes = (
     <div>
       Don't overdo it. If you "cry wolf", users will become{" "}
       <Link href="https://ux.stackexchange.com/q/44609/39046">
@@ -24,7 +15,7 @@ export default () => {
       </Link>.
     </div>
   );
-  const sections: SectionType[] = [{
+  const examplesSections: ExamplesSectionType[] = [{
     title: "Basic",
     example: <Alert>Your profile has been saved</Alert>,
     exampleCode: (
@@ -177,108 +168,92 @@ export default () => {
       />
     ),
   }];
-  const props = [{
-    name: "variant",
-    required: false,
-    type: "'success' | 'info' | 'warning' | 'danger' | 'neutral'",
-    default: '"neutral"',
-    notes: null,
-  }, {
-    name: "isDismissable",
-    required: false,
-    type: "boolean",
-    default: "true",
-    notes: null,
-  }, {
-    name: "children",
-    required: true,
-    type: "ComponentChild",
-    default: null,
-    notes: null,
-  }, {
-    name: "...rest",
-    required: false,
-    type: 'Omit<ComponentProps<"div">, "size">',
-    default: null,
-    notes: (
-      <div>
-        <div class="leading-relaxed">
-          See the docs for{" "}
-          <Link href="/rest-parameters">rest parameters</Link>. For{" "}
-          <InlineCode>Alert</InlineCode>, you could pass anything you normally
-          would pass to <InlineCode>{"<div>"}</InlineCode>{" "}
-          because the return value{" "}
-          <Link href="https://github.com/adamzerner/rfui/blob/master/islands/molecules/alert.tsx">
-            looks something like
-          </Link>{" "}
-          this:
-        </div>
-        <CodeBlock
-          language="tsx"
-          code={`<div class={containerClass} {...restWithoutClass}>
+  const propsTables = [{
+    title: null,
+    props: [{
+      name: "variant",
+      required: false,
+      type: "'success' | 'info' | 'warning' | 'danger' | 'neutral'",
+      default: '"neutral"',
+      notes: null,
+    }, {
+      name: "isDismissable",
+      required: false,
+      type: "boolean",
+      default: "true",
+      notes: null,
+    }, {
+      name: "children",
+      required: true,
+      type: "ComponentChild",
+      default: null,
+      notes: null,
+    }, {
+      name: "...rest",
+      required: false,
+      type: 'Omit<ComponentProps<"div">, "size">',
+      default: null,
+      notes: (
+        <div>
+          <div class="leading-relaxed">
+            See the docs for{" "}
+            <Link href="/rest-parameters">rest parameters</Link>. For{" "}
+            <InlineCode>Alert</InlineCode>, you could pass anything you normally
+            would pass to <InlineCode>{"<div>"}</InlineCode>{" "}
+            because the return value{" "}
+            <Link href="https://github.com/adamzerner/rfui/blob/master/islands/molecules/alert.tsx">
+              looks something like
+            </Link>{" "}
+            this:
+          </div>
+          <CodeBlock
+            language="tsx"
+            code={`<div class={containerClass} {...restWithoutClass}>
   {children}
 </div>`}
-        />
-      </div>
-    ),
-  }];
-  const alertHeaderProps = [{
-    name: "children",
-    required: true,
-    type: "ComponentChild",
-    default: null,
-    notes: null,
+          />
+        </div>
+      ),
+    }],
   }, {
-    name: "...rest",
-    required: false,
-    type: 'ComponentProps<"div">',
-    default: null,
-    notes: null,
-  }];
-  const alertBodyProps = [{
-    name: "children",
-    required: true,
-    type: "ComponentChild",
-    default: null,
-    notes: null,
+    title: "AlertHeader",
+    props: [{
+      name: "children",
+      required: true,
+      type: "ComponentChild",
+      default: null,
+      notes: null,
+    }, {
+      name: "...rest",
+      required: false,
+      type: 'ComponentProps<"div">',
+      default: null,
+      notes: null,
+    }],
   }, {
-    name: "...rest",
-    required: false,
-    type: 'ComponentProps<"div">',
-    default: null,
-    notes: null,
+    title: "AlertBody",
+    props: [{
+      name: "children",
+      required: true,
+      type: "ComponentChild",
+      default: null,
+      notes: null,
+    }, {
+      name: "...rest",
+      required: false,
+      type: 'ComponentProps<"div">',
+      default: null,
+      notes: null,
+    }],
   }];
 
   return (
     <ComponentDocsPage
-      sectionTitles={sections.map((s) => s.title)}
-    >
-      <Header
-        componentName="Alert"
-        sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/islands/molecules/alert.tsx"
-        importStatement='import { Alert, AlertHeader, AlertBody } from "rfui";'
-      >
-        <Example>{sections[0].example}</Example>
-        <Notes>{notes}</Notes>
-      </Header>
-      {sections.map((section) => (
-        <section>
-          <H2 inPageLink={section.title.toLowerCase().split(/\s+/).join("-")}>
-            {section.title}
-          </H2>
-          {section.description &&
-            (
-              <Text size="sm" class="mb-6">
-                {section.description}
-              </Text>
-            )}
-          <Card width="full" class="mb-4">{section.example}</Card>
-          {section.exampleCode}
-        </section>
-      ))}
-      <PropsTable props={props} />
-      <PropsTable props={alertHeaderProps} subComponentTitle="AlertHeader" />
-      <PropsTable props={alertBodyProps} subComponentTitle="AlertBody" />
-    </ComponentDocsPage>
+      componentName="Alert"
+      sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/islands/molecules/alert.tsx"
+      overviewNotes={overviewNotes}
+      examplesSections={examplesSections}
+      propsTables={propsTables}
+    />
   );
 };

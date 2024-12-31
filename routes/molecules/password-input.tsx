@@ -3,8 +3,10 @@ import { InlineCode } from "@/components/atoms/inline-code.tsx";
 import { Link } from "@/components/atoms/link.tsx";
 import { OL } from "@/components/atoms/ol.tsx";
 import { UL } from "@/components/atoms/ul.tsx";
-import { ExamplesSectionType } from "@/components/docs-site/component-docs-page/examples-section-type.ts";
-import { ComponentDocsPage } from "@/components/docs-site/component-docs-page/index.tsx";
+import {
+  ComponentDocsPage,
+  ExamplesSectionType,
+} from "@/components/docs-site/component-docs-page/index.tsx";
 import { Stack } from "@/components/helpers/stack.tsx";
 import { PasswordInput } from "@/islands/molecules/password-input.tsx";
 

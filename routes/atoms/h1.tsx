@@ -3,8 +3,10 @@ import { H1 } from "@/components/atoms/h1.tsx";
 import { InlineCode } from "@/components/atoms/inline-code.tsx";
 import { Link } from "@/components/atoms/link.tsx";
 import { Text } from "@/components/atoms/text.tsx";
-import { ExamplesSectionType } from "@/components/docs-site/component-docs-page/examples-section-type.ts";
-import { ComponentDocsPage } from "@/components/docs-site/component-docs-page/index.tsx";
+import {
+  ComponentDocsPage,
+  ExamplesSectionType,
+} from "@/components/docs-site/component-docs-page/index.tsx";
 import { Stack } from "@/components/helpers/stack.tsx";
 
 export default () => {

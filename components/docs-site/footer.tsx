@@ -7,7 +7,7 @@ import {
 
 export const Footer = () => {
   return (
-    <RFUIFooter size="xl">
+    <RFUIFooter size="2xl">
       <FooterColumn>
         <FooterHeading>About</FooterHeading>
         <FooterItem href="/about">About</FooterItem>

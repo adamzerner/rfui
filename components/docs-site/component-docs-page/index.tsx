@@ -9,12 +9,19 @@ import {
   PropsTable,
   PropsTableType,
 } from "@/components/docs-site/component-docs-page/props-table.tsx";
+import { ComponentsList } from "@/components/docs-site/components-list.tsx";
 import { Flex } from "@/components/helpers/flex.tsx";
 import { Card } from "@/components/molecules/card.tsx";
 import { titleToHref } from "@/utilities/title-to-href.ts";
 import { JSX } from "preact";
-import { ExamplesSectionType } from "./examples-section-type.ts";
 import { OnThisPage } from "./on-this-page.tsx";
+
+export type ExamplesSectionType = {
+  title: string;
+  description?: string | JSX.Element;
+  example: JSX.Element;
+  exampleCode: JSX.Element;
+};
 
 export type ComponentDocsPageType = {
   componentName: string;
@@ -54,12 +61,9 @@ export const ComponentDocsPage = (
 
   return (
     <Flex class="mt-9 gap-10">
-      <div class="hidden flex-shrink-0 lg:block">
-        <OnThisPage
-          examplesSectionTitles={examplesSectionTitles}
-          propsTableTitles={propsTableTitles}
-        />
-      </div>
+      <section class="hidden xl:block">
+        <ComponentsList />
+      </section>
       <main class="flex-grow overflow-x-hidden" id="overview">
         <Header
           componentName={componentName}
@@ -85,6 +89,12 @@ export const ComponentDocsPage = (
         ))}
         {propsTables.map((propsTable) => <PropsTable {...propsTable} />)}
       </main>
+      <div class="hidden flex-shrink-0 lg:block">
+        <OnThisPage
+          examplesSectionTitles={examplesSectionTitles}
+          propsTableTitles={propsTableTitles}
+        />
+      </div>
     </Flex>
   );
 };

@@ -1,7 +1,9 @@
 import { CodeBlock } from "@/components/atoms/code-block.tsx";
 import { InlineCode } from "@/components/atoms/inline-code.tsx";
-import { ExamplesSectionType } from "@/components/docs-site/component-docs-page/examples-section-type.ts";
-import { ComponentDocsPage } from "@/components/docs-site/component-docs-page/index.tsx";
+import {
+  ComponentDocsPage,
+  ExamplesSectionType,
+} from "@/components/docs-site/component-docs-page/index.tsx";
 import { Tabs, TabSection } from "@/islands/molecules/tabs.tsx";
 
 export default () => {

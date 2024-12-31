@@ -1,8 +1,10 @@
 import { CodeBlock } from "@/components/atoms/code-block.tsx";
 import { InlineCode } from "@/components/atoms/inline-code.tsx";
 import { Link } from "@/components/atoms/link.tsx";
-import { ExamplesSectionType } from "@/components/docs-site/component-docs-page/examples-section-type.ts";
-import { ComponentDocsPage } from "@/components/docs-site/component-docs-page/index.tsx";
+import {
+  ComponentDocsPage,
+  ExamplesSectionType,
+} from "@/components/docs-site/component-docs-page/index.tsx";
 import { Container } from "@/components/helpers/container.tsx";
 
 export default () => {
@@ -24,10 +26,18 @@ export default () => {
     props: [{
       name: "size",
       required: false,
-      type: '"sm" | "md" | "lg" | "xl"',
+      type: '"sm" | "md" | "lg" | "xl" | "2xl"',
       default: '"lg"',
-      notes:
-        "The screen size that you want the width of the inner content to be.",
+      notes: (
+        <div>
+          The screen size that you want the width of the inner content to be.
+          See Tailwind CSS's{" "}
+          <Link href="https://tailwindcss.com/docs/responsive-design">
+            Responsive Design
+          </Link>{" "}
+          page.
+        </div>
+      ),
     }, {
       name: "children",
       required: true,

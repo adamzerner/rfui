@@ -1,7 +1,7 @@
 import type { ComponentChild, ComponentProps } from "preact";
 
 export type ContainerType =
-  & { size?: "sm" | "md" | "lg" | "xl"; children: ComponentChild }
+  & { size?: "sm" | "md" | "lg" | "xl" | "2xl"; children: ComponentChild }
   & Omit<ComponentProps<"div">, "size">;
 
 /** *
@@ -32,6 +32,9 @@ export const Container = (
       break;
     case "xl":
       classValue += " max-w-screen-xl";
+      break;
+    case "2xl":
+      classValue += " max-w-screen-2xl";
       break;
   }
 

@@ -25,7 +25,7 @@ export const PropsTable = (
   { props, title }: PropsTableType,
 ) => {
   return (
-    <section class="mt-10 overflow-x-scroll">
+    <section class="mt-10 overflow-x-auto">
       {title
         ? (
           <H2 class="mb-8" id={`props-${titleToHref(title)}`}>

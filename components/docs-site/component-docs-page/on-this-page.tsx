@@ -11,7 +11,7 @@ export const OnThisPage = (
   { examplesSectionTitles, propsTableTitles }: OnThisPageType,
 ) => {
   return (
-    <nav class="sticky top-6 max-h-[90vh] max-w-[200px] overflow-y-scroll text-neutral-900">
+    <nav class="sticky top-6 max-h-[90vh] max-w-[200px] overflow-y-auto text-neutral-900">
       <div class="mb-4 font-bold text-neutral-700">On this page</div>
       <Stack class="gap-2">
         <Link

@@ -36,7 +36,7 @@ export const NavigationLinks = (
   }: NavigationLinksType,
 ) => {
   const { class: restClass, ...restWithoutClass } = rest;
-  let className = "gap-2 text-neutral-900";
+  let className = "gap-3 text-neutral-900";
 
   if (restClass) {
     className += ` ${restClass}`;

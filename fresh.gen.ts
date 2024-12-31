@@ -43,6 +43,7 @@ import * as $molecules_footer from "./routes/molecules/footer.tsx";
 import * as $molecules_form_field from "./routes/molecules/form-field.tsx";
 import * as $molecules_modal from "./routes/molecules/modal.tsx";
 import * as $molecules_navbar from "./routes/molecules/navbar.tsx";
+import * as $molecules_navigation_links from "./routes/molecules/navigation-links.tsx";
 import * as $molecules_password_input from "./routes/molecules/password-input.tsx";
 import * as $molecules_radio_button_card_group from "./routes/molecules/radio-button-card-group.tsx";
 import * as $molecules_radio_button_group from "./routes/molecules/radio-button-group.tsx";
@@ -106,6 +107,7 @@ const manifest = {
     "./routes/molecules/form-field.tsx": $molecules_form_field,
     "./routes/molecules/modal.tsx": $molecules_modal,
     "./routes/molecules/navbar.tsx": $molecules_navbar,
+    "./routes/molecules/navigation-links.tsx": $molecules_navigation_links,
     "./routes/molecules/password-input.tsx": $molecules_password_input,
     "./routes/molecules/radio-button-card-group.tsx":
       $molecules_radio_button_card_group,

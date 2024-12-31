@@ -13,8 +13,14 @@ import { Flex } from "@/components/helpers/flex.tsx";
 import { Card } from "@/components/molecules/card.tsx";
 import { titleToHref } from "@/utilities/title-to-href.ts";
 import { JSX } from "preact";
-import { ExamplesSectionType } from "./examples-section-type.ts";
 import { OnThisPage } from "./on-this-page.tsx";
+
+export type ExamplesSectionType = {
+  title: string;
+  description?: string | JSX.Element;
+  example: JSX.Element;
+  exampleCode: JSX.Element;
+};
 
 export type ComponentDocsPageType = {
   componentName: string;

@@ -13,15 +13,14 @@ export const OnThisPage = (
   { examplesSectionTitles, propsTableTitles }: OnThisPageType,
 ) => {
   const linkItems: LinkItemType[] = [
-    { name: "On this page", isHeader: true, children: [] },
-    { name: "Overview", href: "#overview", inPage: true, children: [] },
+    { name: "On this page", isHeader: true },
+    { name: "Overview", href: "#overview", inPage: true },
     {
       name: "Examples",
       children: examplesSectionTitles.map((examplesSectionTitle) => ({
         name: examplesSectionTitle,
         href: `#example-${titleToHref(examplesSectionTitle)}`,
         inPage: true,
-        children: [],
       })),
     },
     {
@@ -30,7 +29,6 @@ export const OnThisPage = (
         name: propsTableTitle,
         href: i === 0 ? "#props" : `#props-${titleToHref(propsTableTitle)}`,
         inPage: true,
-        children: [],
       })),
     },
   ];

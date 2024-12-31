@@ -18,11 +18,9 @@ export default () => {
         linkItems={[{
           name: "One",
           href: "/one",
-          children: [],
         }, {
           name: "Two",
           href: "/two",
-          children: [],
         }]}
       />
     ),
@@ -34,11 +32,9 @@ export default () => {
   linkItems={[{
     name: "One",
     href: "/one",
-    children: [],
   }, {
     name: "Two",
     href: "/two",
-    children: [],
   }]}
 />`}
       />
@@ -50,15 +46,12 @@ export default () => {
         linkItems={[{
           name: "Header",
           isHeader: true,
-          children: [],
         }, {
           name: "One",
           href: "/one",
-          children: [],
         }, {
           name: "Two",
           href: "/two",
-          children: [],
         }]}
       />
     ),
@@ -70,15 +63,12 @@ export default () => {
   linkItems={[{
     name: "Header",
     isHeader: true,
-    children: [],
   }, {
     name: "One",
     href: "/one",
-    children: [],
   }, {
     name: "Two",
     href: "/two",
-    children: [],
   }]}
 />`}
       />
@@ -96,28 +86,23 @@ export default () => {
         linkItems={[{
           name: "Components",
           isHeader: true,
-          children: [],
         }, {
           name: "Atoms",
           children: [{
             name: "Badge",
             href: "/atoms/badge",
-            children: [],
           }, {
             name: "Blockquote",
             href: "/atoms/blockquote",
-            children: [],
           }],
         }, {
           name: "Molecules",
           children: [{
             name: "Alert",
             href: "/molecules/alert",
-            children: [],
           }, {
             name: "Card",
             href: "/molecules/card",
-            children: [],
           }],
         }]}
       />
@@ -130,28 +115,23 @@ export default () => {
   linkItems={[{
     name: "Components",
     isHeader: true,
-    children: [],
   }, {
     name: "Atoms",
     children: [{
       name: "Badge",
       href: "/atoms/badge",
-      children: [],
     }, {
       name: "Blockquote",
       href: "/atoms/blockquote",
-      children: [],
     }],
   }, {
     name: "Molecules",
     children: [{
       name: "Alert",
       href: "/molecules/alert",
-      children: [],
     }, {
       name: "Card",
       href: "/molecules/card",
-      children: [],
     }],
   }]}
 />`}
@@ -174,12 +154,10 @@ export default () => {
           name: "One",
           href: "#one",
           inPage: true,
-          children: [],
         }, {
           name: "Two",
           href: "#two",
           inPage: true,
-          children: [],
         }]}
       />
     ),
@@ -192,12 +170,10 @@ export default () => {
     name: "One",
     href: "#one",
     inPage: true,
-    children: [],
   }, {
     name: "Two",
     href: "#two",
     inPage: true,
-    children: [],
   }]}
 />`}
       />
@@ -223,11 +199,9 @@ export default () => {
         linkItems={[{
           name: "One",
           href: "/one",
-          children: [],
         }, {
           name: "Two",
           href: "/two",
-          children: [],
         }]}
       />
     ),
@@ -240,11 +214,9 @@ export default () => {
   linkItems={[{
     name: "One",
     href: "/one",
-    children: [],
   }, {
     name: "Two",
     href: "/two",
-    children: [],
   }]}
 />`}
       />
@@ -268,7 +240,7 @@ export default () => {
   href?: string;
   isHeader?: boolean;
   inPage?: boolean;
-  children: LinkItemType[];
+  children?: LinkItemType[];
 }`}
           />
         </div>

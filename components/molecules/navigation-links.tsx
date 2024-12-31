@@ -10,7 +10,7 @@ export type LinkItemType = {
   href?: string;
   isHeader?: boolean;
   inPage?: boolean;
-  children: LinkItemType[];
+  children?: LinkItemType[];
 };
 
 /**
@@ -19,7 +19,15 @@ export type LinkItemType = {
  * @see {@link https://rfui.deno.dev/molecules/navigation-links}
  *
  * @example
- * <NavigationLinks links={[{ name: 'Example', href: '/example' }]}>
+ * <NavigationLinks
+    linkItems={[{
+      name: "One",
+      href: "/one",
+    }, {
+      name: "Two",
+      href: "/two",
+    }]}
+  />
  */
 export const NavigationLinks = (
   {
@@ -52,10 +60,12 @@ const LinkItems = (
       {linkItems.map((linkItem) => (
         <>
           <LinkItem linkItem={linkItem} indentationLevel={indentationLevel} />
-          <LinkItems
-            linkItems={linkItem.children}
-            indentationLevel={indentationLevel + 1}
-          />
+          {linkItem.children && (
+            <LinkItems
+              linkItems={linkItem.children}
+              indentationLevel={indentationLevel + 1}
+            />
+          )}
         </>
       ))}
     </>

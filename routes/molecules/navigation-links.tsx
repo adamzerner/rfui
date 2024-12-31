@@ -248,7 +248,7 @@ export default () => {
     }, {
       name: "...rest",
       required: false,
-      type: 'Omit<StackType, "children">',
+      type: 'ComponentProps<"nav">',
       default: null,
       notes: (
         <div>
@@ -256,7 +256,7 @@ export default () => {
             See the docs for{" "}
             <Link href="/rest-parameters">rest parameters</Link>. For{" "}
             <InlineCode>NavigationLinks</InlineCode>, you could pass anything
-            you normally would pass to <InlineCode>{"<Stack>"}</InlineCode>{" "}
+            you normally would pass to <InlineCode>{"<nav>"}</InlineCode>{" "}
             because the return value{" "}
             <Link href="https://github.com/adamzerner/rfui/blob/master/components/molecules/navigation-links.tsx">
               looks something like
@@ -265,9 +265,9 @@ export default () => {
           </div>
           <CodeBlock
             language="tsx"
-            code={`<Stack class={containerClass} {...restWithoutClass}>
+            code={`<nav class={containerClass} {...restWithoutClass}>
   ...
-</Stack>`}
+</nav>`}
           />
         </div>
       ),

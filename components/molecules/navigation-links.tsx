@@ -1,9 +1,9 @@
+import { ComponentProps } from "preact";
 import { Link } from "../../components/atoms/link.tsx";
-import { Stack, StackType } from "../../components/helpers/stack.tsx";
 
 export type NavigationLinksType = {
   linkItems: LinkItemType[];
-} & Omit<StackType, "children">;
+} & ComponentProps<"nav">;
 
 export type LinkItemType = {
   name: string;
@@ -36,16 +36,16 @@ export const NavigationLinks = (
   }: NavigationLinksType,
 ) => {
   const { class: restClass, ...restWithoutClass } = rest;
-  let className = "gap-3 text-neutral-900";
+  let className = "text-neutral-900";
 
   if (restClass) {
     className += ` ${restClass}`;
   }
 
   return (
-    <Stack class={className} {...restWithoutClass}>
+    <nav class={className} {...restWithoutClass}>
       <LinkItems linkItems={linkItems} indentationLevel={0} />
-    </Stack>
+    </nav>
   );
 };
 
@@ -56,9 +56,9 @@ const LinkItems = (
   },
 ) => {
   return (
-    <>
+    <ul>
       {linkItems.map((linkItem) => (
-        <>
+        <li class="my-4">
           <LinkItem linkItem={linkItem} indentationLevel={indentationLevel} />
           {linkItem.children && (
             <LinkItems
@@ -66,9 +66,9 @@ const LinkItems = (
               indentationLevel={indentationLevel + 1}
             />
           )}
-        </>
+        </li>
       ))}
-    </>
+    </ul>
   );
 };
 

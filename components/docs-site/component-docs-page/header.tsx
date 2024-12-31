@@ -24,7 +24,7 @@ export const Header = (
 
   return (
     <header class="mb-10">
-      <H1 class="!mt-0">{componentName}</H1>
+      <H1 class="!mt-0 break-words">{componentName}</H1>
       <Stack class="gap-5">
         <Text>
           {overviewNotes && (

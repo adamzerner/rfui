@@ -224,6 +224,11 @@ export const getComponents = (signal: Signal<null>) => ({
       example: <InlineCode>{"<Navbar>"}</InlineCode>,
     },
     {
+      name: "NavigationLinks",
+      href: "/molecules/navigation-links",
+      example: <InlineCode>{"<NavigationLinks>"}</InlineCode>,
+    },
+    {
       name: "PasswordInput",
       href: "/molecules/password-input",
       example: <PasswordInput class="bg-neutral-50/20" />,

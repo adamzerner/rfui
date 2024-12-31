@@ -5,19 +5,248 @@ import {
   ComponentDocsPage,
   ExamplesSectionType,
 } from "@/components/docs-site/component-docs-page/index.tsx";
+import { Stack } from "@/components/helpers/stack.tsx";
 import { NavigationLinks } from "@/components/molecules/navigation-links.tsx";
 
 export default () => {
   const overviewNotes =
-    'This component is useful for lists of links. RFUI uses it for the components "Components" section on the left side of this page and for the "On this page" section on the right side of this page.';
+    'This component is useful for lists of links. RFUI uses it for the "Components" section on the left side of this page and for the "On this page" section on the right side of this page.';
   const examplesSections: ExamplesSectionType[] = [{
     title: "Basic",
-    example: <NavigationLinks linkItems={[]} />,
+    example: (
+      <NavigationLinks
+        linkItems={[{
+          name: "One",
+          href: "/one",
+          children: [],
+        }, {
+          name: "Two",
+          href: "/two",
+          children: [],
+        }]}
+      />
+    ),
     exampleCode: (
       <CodeBlock
         class="mt-4"
         language="tsx"
-        code={`<Stepper />`}
+        code={`<NavigationLinks
+  linkItems={[{
+    name: "One",
+    href: "/one",
+    children: [],
+  }, {
+    name: "Two",
+    href: "/two",
+    children: [],
+  }]}
+/>`}
+      />
+    ),
+  }, {
+    title: "With header",
+    example: (
+      <NavigationLinks
+        linkItems={[{
+          name: "Header",
+          isHeader: true,
+          children: [],
+        }, {
+          name: "One",
+          href: "/one",
+          children: [],
+        }, {
+          name: "Two",
+          href: "/two",
+          children: [],
+        }]}
+      />
+    ),
+    exampleCode: (
+      <CodeBlock
+        class="mt-4"
+        language="tsx"
+        code={`<NavigationLinks
+  linkItems={[{
+    name: "Header",
+    isHeader: true,
+    children: [],
+  }, {
+    name: "One",
+    href: "/one",
+    children: [],
+  }, {
+    name: "Two",
+    href: "/two",
+    children: [],
+  }]}
+/>`}
+      />
+    ),
+  }, {
+    title: "Multilevel",
+    description: (
+      <div>
+        To go more levels deep, just keep using{" "}
+        <InlineCode>children</InlineCode>.
+      </div>
+    ),
+    example: (
+      <NavigationLinks
+        linkItems={[{
+          name: "Components",
+          isHeader: true,
+          children: [],
+        }, {
+          name: "Atoms",
+          children: [{
+            name: "Badge",
+            href: "/atoms/badge",
+            children: [],
+          }, {
+            name: "Blockquote",
+            href: "/atoms/blockquote",
+            children: [],
+          }],
+        }, {
+          name: "Molecules",
+          children: [{
+            name: "Alert",
+            href: "/molecules/alert",
+            children: [],
+          }, {
+            name: "Card",
+            href: "/molecules/card",
+            children: [],
+          }],
+        }]}
+      />
+    ),
+    exampleCode: (
+      <CodeBlock
+        class="mt-4"
+        language="tsx"
+        code={`<NavigationLinks
+  linkItems={[{
+    name: "Components",
+    isHeader: true,
+    children: [],
+  }, {
+    name: "Atoms",
+    children: [{
+      name: "Badge",
+      href: "/atoms/badge",
+      children: [],
+    }, {
+      name: "Blockquote",
+      href: "/atoms/blockquote",
+      children: [],
+    }],
+  }, {
+    name: "Molecules",
+    children: [{
+      name: "Alert",
+      href: "/molecules/alert",
+      children: [],
+    }, {
+      name: "Card",
+      href: "/molecules/card",
+      children: [],
+    }],
+  }]}
+/>`}
+      />
+    ),
+  }, {
+    title: "In page",
+    description: (
+      <div>
+        Using the <InlineCode>inPage</InlineCode> property will trigger the{" "}
+        <InlineCode>Link</InlineCode> component's{" "}
+        <Link href="/atoms/link#example-in-page-link">
+          in-page link functionality
+        </Link>.
+      </div>
+    ),
+    example: (
+      <NavigationLinks
+        linkItems={[{
+          name: "One",
+          href: "#one",
+          inPage: true,
+          children: [],
+        }, {
+          name: "Two",
+          href: "#two",
+          inPage: true,
+          children: [],
+        }]}
+      />
+    ),
+    exampleCode: (
+      <CodeBlock
+        class="mt-4"
+        language="tsx"
+        code={`<NavigationLinks
+  linkItems={[{
+    name: "One",
+    href: "#one",
+    inPage: true,
+    children: [],
+  }, {
+    name: "Two",
+    href: "#two",
+    inPage: true,
+    children: [],
+  }]}
+/>`}
+      />
+    ),
+  }, {
+    title: "Sticky",
+    description: (
+      <Stack class="gap-4">
+        <div>
+          Often times you'll want this component to be sticky, such that it
+          stays in place when you scroll down. To accomplish this you'll want to
+          add something like:
+        </div>
+        <CodeBlock
+          language="tsx"
+          code='class="sticky top-6 max-h-[90vh] overflow-y-auto"'
+        />
+        <div>Note: the example below isn't actually sticky.</div>
+      </Stack>
+    ),
+    example: (
+      <NavigationLinks
+        linkItems={[{
+          name: "One",
+          href: "/one",
+          children: [],
+        }, {
+          name: "Two",
+          href: "/two",
+          children: [],
+        }]}
+      />
+    ),
+    exampleCode: (
+      <CodeBlock
+        class="mt-4"
+        language="tsx"
+        code={`<NavigationLinks
+  class="sticky top-6 max-h-[90vh] overflow-y-auto"
+  linkItems={[{
+    name: "One",
+    href: "/one",
+    children: [],
+  }, {
+    name: "Two",
+    href: "/two",
+    children: [],
+  }]}
+/>`}
       />
     ),
   }];

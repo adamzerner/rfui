@@ -9,6 +9,7 @@ import {
   PropsTable,
   PropsTableType,
 } from "@/components/docs-site/component-docs-page/props-table.tsx";
+import { ComponentsList } from "@/components/docs-site/components-list.tsx";
 import { Flex } from "@/components/helpers/flex.tsx";
 import { Card } from "@/components/molecules/card.tsx";
 import { titleToHref } from "@/utilities/title-to-href.ts";
@@ -60,6 +61,9 @@ export const ComponentDocsPage = (
 
   return (
     <Flex class="mt-9 gap-10">
+      <section class="hidden xl:block">
+        <ComponentsList />
+      </section>
       <main class="flex-grow overflow-x-hidden" id="overview">
         <Header
           componentName={componentName}

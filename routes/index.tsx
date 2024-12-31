@@ -331,7 +331,7 @@ export default () => {
       </header>
       <Flex class="gap-10">
         <section class="hidden xl:block">
-          <ComponentsList isSticky={false} shouldHideOverview={true} />
+          <ComponentsList shouldHideOverview />
         </section>
         <Stack class="gap-10 overflow-x-hidden">
           <Stack class="gap-7">

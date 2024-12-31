@@ -6,7 +6,7 @@ import {
 
 export const Navbar = ({ route }: { route: string }) => {
   return (
-    <RFUINavbar size="xl">
+    <RFUINavbar size="2xl">
       <NavbarLeft>
         <NavbarItem href="/" isActive={route === "/"}>Components</NavbarItem>
         <NavbarItem

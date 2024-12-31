@@ -8,7 +8,7 @@ export default ({ Component, route }: PageProps) => {
   return (
     <Stack class="min-h-screen">
       <Navbar route={route} />
-      <Container size="xl" class="mb-6 mt-8 grow font-sans">
+      <Container size="2xl" class="mb-6 mt-8 grow font-sans">
         <Component />
       </Container>
       <Footer />

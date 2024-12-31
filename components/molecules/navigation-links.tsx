@@ -36,7 +36,7 @@ export const NavigationLinks = (
   }: NavigationLinksType,
 ) => {
   const { class: restClass, ...restWithoutClass } = rest;
-  let className = "text-neutral-900";
+  let className = "text-sm text-neutral-900";
 
   if (restClass) {
     className += ` ${restClass}`;
@@ -58,7 +58,7 @@ const LinkItems = (
   return (
     <ul>
       {linkItems.map((linkItem) => (
-        <li class="my-4">
+        <li class="my-3">
           <LinkItem linkItem={linkItem} indentationLevel={indentationLevel} />
           {linkItem.children && (
             <LinkItems

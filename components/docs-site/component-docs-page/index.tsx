@@ -60,12 +60,6 @@ export const ComponentDocsPage = (
 
   return (
     <Flex class="mt-9 gap-10">
-      <div class="hidden flex-shrink-0 lg:block">
-        <OnThisPage
-          examplesSectionTitles={examplesSectionTitles}
-          propsTableTitles={propsTableTitles}
-        />
-      </div>
       <main class="flex-grow overflow-x-hidden" id="overview">
         <Header
           componentName={componentName}
@@ -91,6 +85,12 @@ export const ComponentDocsPage = (
         ))}
         {propsTables.map((propsTable) => <PropsTable {...propsTable} />)}
       </main>
+      <div class="hidden flex-shrink-0 lg:block">
+        <OnThisPage
+          examplesSectionTitles={examplesSectionTitles}
+          propsTableTitles={propsTableTitles}
+        />
+      </div>
     </Flex>
   );
 };

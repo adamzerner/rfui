@@ -2,8 +2,10 @@ import { Button } from "@/components/atoms/button.tsx";
 import { CodeBlock } from "@/components/atoms/code-block.tsx";
 import { InlineCode } from "@/components/atoms/inline-code.tsx";
 import { Link } from "@/components/atoms/link.tsx";
-import { ExamplesSectionType } from "@/components/docs-site/component-docs-page/examples-section-type.ts";
-import { ComponentDocsPage } from "@/components/docs-site/component-docs-page/index.tsx";
+import {
+  ComponentDocsPage,
+  ExamplesSectionType,
+} from "@/components/docs-site/component-docs-page/index.tsx";
 import { Flex } from "@/components/helpers/flex.tsx";
 import { Stack } from "@/components/helpers/stack.tsx";
 

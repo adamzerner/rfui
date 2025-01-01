@@ -4,7 +4,7 @@ import { InlineCode } from "@/components/atoms/inline-code.tsx";
 import { Link } from "@/components/atoms/link.tsx";
 import {
   ComponentDocsPage,
-  ExamplesSectionType,
+  ExampleType,
 } from "@/components/docs-site/component-docs-page/index.tsx";
 import { Stack } from "@/components/helpers/stack.tsx";
 
@@ -22,12 +22,10 @@ export default () => {
       component instead.
     </div>
   );
-  const examplesSections: ExamplesSectionType[] = [{
+  const examples: ExampleType[] = [{
     title: "Basic",
-    example: <Checkbox />,
-    exampleCode: (
-      <CodeBlock class="mt-4" language="tsx" code={`<Checkbox />`} />
-    ),
+    demo: <Checkbox />,
+    code: <CodeBlock class="mt-4" language="tsx" code={`<Checkbox />`} />,
   }, {
     title: "Controlled",
     description: (
@@ -46,8 +44,8 @@ export default () => {
         </Link>.
       </div>
     ),
-    example: <Checkbox />,
-    exampleCode: (
+    demo: <Checkbox />,
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -64,14 +62,14 @@ export default () => {
         <InlineCode>"md"</InlineCode>.
       </div>
     ),
-    example: (
+    demo: (
       <Stack class="gap-5">
         <Checkbox size="sm" />
         <Checkbox size="md" />
         <Checkbox size="lg" />
       </Stack>
     ),
-    exampleCode: (
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -92,8 +90,8 @@ export default () => {
         <InlineCode>false</InlineCode>.
       </div>
     ),
-    example: <Checkbox disabled />,
-    exampleCode: (
+    demo: <Checkbox disabled />,
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -110,8 +108,8 @@ export default () => {
         <InlineCode>false</InlineCode>.
       </div>
     ),
-    example: <Checkbox invalid />,
-    exampleCode: (
+    demo: <Checkbox invalid />,
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -170,7 +168,7 @@ export default () => {
       componentName="Checkbox"
       sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/atoms/checkbox.tsx"
       overviewNotes={overviewNotes}
-      examplesSections={examplesSections}
+      examples={examples}
       propsTables={propsTables}
     />
   );

@@ -5,16 +5,16 @@ import { Link } from "@/components/atoms/link.tsx";
 import { Text } from "@/components/atoms/text.tsx";
 import {
   ComponentDocsPage,
-  ExamplesSectionType,
+  ExampleType,
 } from "@/components/docs-site/component-docs-page/index.tsx";
 import { Stack } from "@/components/helpers/stack.tsx";
 
 export default () => {
   const overviewNotes = null;
-  const examplesSections: ExamplesSectionType[] = [{
+  const examples: ExampleType[] = [{
     title: "Basic",
-    example: <H2>Hello world</H2>,
-    exampleCode: (
+    demo: <H2>Hello world</H2>,
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -23,7 +23,7 @@ export default () => {
     ),
   }, {
     title: "Alongside paragraphs",
-    example: (
+    demo: (
       <div>
         <H2>Hello world</H2>
         <Text>
@@ -39,7 +39,7 @@ export default () => {
         </Text>
       </div>
     ),
-    exampleCode: (
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -79,8 +79,8 @@ export default () => {
         </div>
       </Stack>
     ),
-    example: <H2 class="!my-2">Hello world</H2>,
-    exampleCode: (
+    demo: <H2 class="!my-2">Hello world</H2>,
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -112,8 +112,8 @@ export default () => {
         />
       </div>
     ),
-    example: <H2 inPageLink="hello-world">Hello world</H2>,
-    exampleCode: (
+    demo: <H2 inPageLink="hello-world">Hello world</H2>,
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -184,7 +184,7 @@ export default () => {
       componentName="H2"
       sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/atoms/h2.tsx"
       overviewNotes={overviewNotes}
-      examplesSections={examplesSections}
+      examples={examples}
       propsTables={propsTables}
     />
   );

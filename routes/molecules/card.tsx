@@ -4,7 +4,7 @@ import { InlineCode } from "@/components/atoms/inline-code.tsx";
 import { Link } from "@/components/atoms/link.tsx";
 import {
   ComponentDocsPage,
-  ExamplesSectionType,
+  ExampleType,
 } from "@/components/docs-site/component-docs-page/index.tsx";
 import { Flex } from "@/components/helpers/flex.tsx";
 import { Stack } from "@/components/helpers/stack.tsx";
@@ -18,10 +18,10 @@ import { FormField } from "@/components/molecules/form-field.tsx";
 
 export default () => {
   const overviewNotes = null;
-  const examplesSections: ExamplesSectionType[] = [{
+  const examples: ExampleType[] = [{
     title: "Basic",
-    example: <Card>A summary of your account.</Card>,
-    exampleCode: (
+    demo: <Card>A summary of your account.</Card>,
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -30,12 +30,12 @@ export default () => {
     ),
   }, {
     title: "CardBody",
-    example: (
+    demo: (
       <Card>
         <CardBody>A summary of your account.</CardBody>
       </Card>
     ),
-    exampleCode: (
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -46,13 +46,13 @@ export default () => {
     ),
   }, {
     title: "CardHeader and CardBody",
-    example: (
+    demo: (
       <Card>
         <CardHeader>Summary</CardHeader>
         <CardBody>A summary of your account.</CardBody>
       </Card>
     ),
-    exampleCode: (
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -64,7 +64,7 @@ export default () => {
     ),
   }, {
     title: "CardBody and CardFooter",
-    example: (
+    demo: (
       <Card>
         <CardBody>A summary of your account.</CardBody>
         <CardFooter>
@@ -72,7 +72,7 @@ export default () => {
         </CardFooter>
       </Card>
     ),
-    exampleCode: (
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -86,7 +86,7 @@ export default () => {
     ),
   }, {
     title: "CardHeader, CardBody and CardFooter",
-    example: (
+    demo: (
       <Card>
         <CardHeader>Summary</CardHeader>
         <CardBody>A summary of your account.</CardBody>
@@ -95,7 +95,7 @@ export default () => {
         </CardFooter>
       </Card>
     ),
-    exampleCode: (
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -123,7 +123,7 @@ export default () => {
         </Link>.
       </div>
     ),
-    example: (
+    demo: (
       <Stack class="gap-5">
         <Card rounded="square">
           <CardHeader>Summary</CardHeader>
@@ -148,7 +148,7 @@ export default () => {
         </Card>
       </Stack>
     ),
-    exampleCode: (
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -188,7 +188,7 @@ export default () => {
         <InlineCode>"md"</InlineCode>.
       </div>
     ),
-    example: (
+    demo: (
       <Stack class="gap-5">
         <Card width="sm">
           <CardHeader>Summary</CardHeader>
@@ -220,7 +220,7 @@ export default () => {
         </Card>
       </Stack>
     ),
-    exampleCode: (
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -267,7 +267,7 @@ export default () => {
         <InlineCode>"sm"</InlineCode>.
       </div>
     ),
-    example: (
+    demo: (
       <Stack class="gap-5">
         <Card shadow="sm">
           <CardHeader>Summary</CardHeader>
@@ -292,7 +292,7 @@ export default () => {
         </Card>
       </Stack>
     ),
-    exampleCode: (
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -332,7 +332,7 @@ export default () => {
         <InlineCode>"md"</InlineCode>.
       </div>
     ),
-    example: (
+    demo: (
       <Stack class="gap-5">
         <Card padding="sm">
           <CardHeader>Summary</CardHeader>
@@ -357,7 +357,7 @@ export default () => {
         </Card>
       </Stack>
     ),
-    exampleCode: (
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -388,7 +388,7 @@ export default () => {
     ),
   }, {
     title: "Realistic",
-    example: (
+    demo: (
       <Card>
         <CardHeader>
           <h1 class="font-bold tracking-wide text-neutral-700">Profile</h1>
@@ -411,7 +411,7 @@ export default () => {
         </CardFooter>
       </Card>
     ),
-    exampleCode: (
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -447,7 +447,7 @@ export default () => {
         <InlineCode>rounded</InlineCode> to <InlineCode>"square"</InlineCode>.
       </div>
     ),
-    example: (
+    demo: (
       <Card topAccent rounded="square">
         <CardHeader>
           <h1 class="font-bold tracking-wide text-neutral-700">Profile</h1>
@@ -470,7 +470,7 @@ export default () => {
         </CardFooter>
       </Card>
     ),
-    exampleCode: (
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -506,7 +506,7 @@ export default () => {
         <InlineCode>rounded</InlineCode> to <InlineCode>"square"</InlineCode>.
       </div>
     ),
-    example: (
+    demo: (
       <Card leftAccent rounded="square">
         <CardHeader>
           <h1 class="font-bold tracking-wide text-neutral-700">Profile</h1>
@@ -529,7 +529,7 @@ export default () => {
         </CardFooter>
       </Card>
     ),
-    exampleCode: (
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -568,7 +568,7 @@ export default () => {
         <InlineCode>Card</InlineCode>.
       </div>
     ),
-    example: (
+    demo: (
       <Link href="https://example.com">
         <Card class="pointer-events-none">
           <CardBody>
@@ -577,7 +577,7 @@ export default () => {
         </Card>
       </Link>
     ),
-    exampleCode: (
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -722,7 +722,7 @@ export default () => {
       componentName="Card"
       sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/molecules/card.tsx"
       overviewNotes={overviewNotes}
-      examplesSections={examplesSections}
+      examples={examples}
       propsTables={propsTables}
     />
   );

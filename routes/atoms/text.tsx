@@ -4,7 +4,7 @@ import { Link } from "@/components/atoms/link.tsx";
 import { Text } from "@/components/atoms/text.tsx";
 import {
   ComponentDocsPage,
-  ExamplesSectionType,
+  ExampleType,
 } from "@/components/docs-site/component-docs-page/index.tsx";
 
 export default () => {
@@ -22,9 +22,9 @@ export default () => {
       class.
     </div>
   );
-  const examplesSections: ExamplesSectionType[] = [{
+  const examples: ExampleType[] = [{
     title: "Basic",
-    example: (
+    demo: (
       <Text>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -38,7 +38,7 @@ export default () => {
         </p>
       </Text>
     ),
-    exampleCode: (
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -55,7 +55,7 @@ export default () => {
         Set <InlineCode>size</InlineCode> to <InlineCode>"sm"</InlineCode>.
       </div>
     ),
-    example: (
+    demo: (
       <Text size="sm">
         <p>
           Illo quia quam perferendis ut consectetur rerum dolores dolores.
@@ -68,7 +68,7 @@ export default () => {
         </p>
       </Text>
     ),
-    exampleCode: (
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -92,7 +92,7 @@ export default () => {
         Set <InlineCode>size</InlineCode> to <InlineCode>"md"</InlineCode>.
       </div>
     ),
-    example: (
+    demo: (
       <Text size="md">
         <p>
           Illo quia quam perferendis ut consectetur rerum dolores dolores.
@@ -105,7 +105,7 @@ export default () => {
         </p>
       </Text>
     ),
-    exampleCode: (
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -132,7 +132,7 @@ export default () => {
         font color.
       </div>
     ),
-    example: (
+    demo: (
       <Text size="lg">
         <p>
           Illo quia quam perferendis ut consectetur rerum dolores dolores.
@@ -145,7 +145,7 @@ export default () => {
         </p>
       </Text>
     ),
-    exampleCode: (
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -170,14 +170,14 @@ export default () => {
         the code as demonstrated below.
       </div>
     ),
-    example: (
+    demo: (
       <Text>
         Illo quia quam perferendis ut consectetur rerum dolores dolores.
         Reiciendis est beatae magnam ut amet quis sequi. Eaque consequatur
         consectetur non amet nostrum quo animi.
       </Text>
     ),
-    exampleCode: (
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -202,7 +202,7 @@ export default () => {
         </Link>.
       </div>
     ),
-    example: (
+    demo: (
       <Text>
         <p>
           Illo quia quam perferendis ut consectetur{" "}
@@ -212,7 +212,7 @@ export default () => {
         </p>
       </Text>
     ),
-    exampleCode: (
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -275,7 +275,7 @@ export default () => {
       componentName="Text"
       sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/atoms/text.tsx"
       overviewNotes={overviewNotes}
-      examplesSections={examplesSections}
+      examples={examples}
       propsTables={propsTables}
     />
   );

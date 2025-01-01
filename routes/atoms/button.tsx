@@ -4,17 +4,17 @@ import { InlineCode } from "@/components/atoms/inline-code.tsx";
 import { Link } from "@/components/atoms/link.tsx";
 import {
   ComponentDocsPage,
-  ExamplesSectionType,
+  ExampleType,
 } from "@/components/docs-site/component-docs-page/index.tsx";
 import { Flex } from "@/components/helpers/flex.tsx";
 import { Stack } from "@/components/helpers/stack.tsx";
 
 export default () => {
   const overviewNotes = null;
-  const examplesSections: ExamplesSectionType[] = [{
+  const examples: ExampleType[] = [{
     title: "Basic",
-    example: <Button>Example</Button>,
-    exampleCode: (
+    demo: <Button>Example</Button>,
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -31,8 +31,8 @@ export default () => {
         </Link>.
       </div>
     ),
-    example: <Button>Example</Button>,
-    exampleCode: (
+    demo: <Button>Example</Button>,
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -50,14 +50,14 @@ export default () => {
         <InlineCode>"secondary"</InlineCode>.
       </div>
     ),
-    example: (
+    demo: (
       <Flex class="gap-3">
         <Button variant="primary">Primary</Button>
         <Button variant="secondary">Secondary</Button>
         <Button variant="tertiary">Tertiary</Button>
       </Flex>
     ),
-    exampleCode: (
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -78,14 +78,14 @@ export default () => {
         <InlineCode>"danger-tertiary"</InlineCode>.
       </p>
     ),
-    example: (
+    demo: (
       <Flex class="gap-3">
         <Button variant="danger-primary">Primary</Button>
         <Button variant="danger-secondary">Secondary</Button>
         <Button variant="danger-tertiary">Tertiary</Button>
       </Flex>
     ),
-    exampleCode: (
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -107,7 +107,7 @@ export default () => {
         <InlineCode>"md"</InlineCode>.
       </p>
     ),
-    example: (
+    demo: (
       <Stack class="gap-5">
         <Flex class="gap-3">
           <Button variant="primary" size="sm">Primary</Button>
@@ -130,7 +130,7 @@ export default () => {
         </Stack>
       </Stack>
     ),
-    exampleCode: (
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -171,7 +171,7 @@ export default () => {
         </Link>.
       </div>
     ),
-    example: (
+    demo: (
       <Stack class="gap-5">
         <Flex class="gap-3">
           <Button variant="primary" rounded="square">Primary</Button>
@@ -195,7 +195,7 @@ export default () => {
         </Flex>
       </Stack>
     ),
-    exampleCode: (
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -233,14 +233,14 @@ export default () => {
         <InlineCode>false</InlineCode>.
       </div>
     ),
-    example: (
+    demo: (
       <Flex class="gap-3">
         <Button disabled variant="primary">Primary</Button>
         <Button disabled variant="secondary">Secondary</Button>
         <Button disabled variant="tertiary">Tertiary</Button>
       </Flex>
     ),
-    exampleCode: (
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -268,7 +268,7 @@ export default () => {
         </p>
       </Stack>
     ),
-    example: (
+    demo: (
       <Flex class="gap-3">
         <Button variant="primary" isLoading loadingContent="Loading...">
           Primary
@@ -281,7 +281,7 @@ export default () => {
         </Button>
       </Flex>
     ),
-    exampleCode: (
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -308,12 +308,12 @@ export default () => {
         typically appear to the left of the other content in the button.
       </div>
     ),
-    example: (
+    demo: (
       <Button>
         <span>＋</span> Example
       </Button>
     ),
-    exampleCode: (
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -408,7 +408,7 @@ export default () => {
       componentName="Button"
       sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/atoms/button.tsx"
       overviewNotes={overviewNotes}
-      examplesSections={examplesSections}
+      examples={examples}
       propsTables={propsTables}
     />
   );

@@ -4,17 +4,17 @@ import { InlineCode } from "@/components/atoms/inline-code.tsx";
 import { Link } from "@/components/atoms/link.tsx";
 import {
   ComponentDocsPage,
-  ExamplesSectionType,
+  ExampleType,
 } from "@/components/docs-site/component-docs-page/index.tsx";
 import { Flex } from "@/components/helpers/flex.tsx";
 import { Stack } from "@/components/helpers/stack.tsx";
 
 export default () => {
   const overviewNotes = null;
-  const examplesSections: ExamplesSectionType[] = [{
+  const examples: ExampleType[] = [{
     title: "Basic",
-    example: <Badge>Basic</Badge>,
-    exampleCode: (
+    demo: <Badge>Basic</Badge>,
+    code: (
       <CodeBlock class="mt-4" language="tsx" code={`<Badge>Basic</Badge>`} />
     ),
   }, {
@@ -30,7 +30,7 @@ export default () => {
         <InlineCode>"neutral"</InlineCode>.
       </p>
     ),
-    example: (
+    demo: (
       <Flex class="flex-wrap gap-3">
         <Badge type="neutral">neutral</Badge>
         <Badge type="info">info</Badge>
@@ -39,7 +39,7 @@ export default () => {
         <Badge type="danger">danger</Badge>
       </Flex>
     ),
-    exampleCode: (
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -63,7 +63,7 @@ export default () => {
         <InlineCode>"md"</InlineCode>.
       </p>
     ),
-    example: (
+    demo: (
       <Stack class="gap-5">
         <Flex class="flex-wrap gap-3">
           <Badge type="neutral" size="sm">neutral</Badge>
@@ -88,7 +88,7 @@ export default () => {
         </Flex>
       </Stack>
     ),
-    exampleCode: (
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -132,7 +132,7 @@ export default () => {
         </Link>.
       </p>
     ),
-    example: (
+    demo: (
       <Stack class="gap-5">
         <Flex class="flex-wrap gap-3">
           <Badge type="neutral" rounded="square">neutral</Badge>
@@ -164,7 +164,7 @@ export default () => {
         </Flex>
       </Stack>
     ),
-    exampleCode: (
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -270,7 +270,7 @@ export default () => {
       componentName="Badge"
       sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/atoms/badge.tsx"
       overviewNotes={overviewNotes}
-      examplesSections={examplesSections}
+      examples={examples}
       propsTables={propsTables}
     />
   );

@@ -3,7 +3,7 @@ import { InlineCode } from "@/components/atoms/inline-code.tsx";
 import { Link } from "@/components/atoms/link.tsx";
 import {
   ComponentDocsPage,
-  ExamplesSectionType,
+  ExampleType,
 } from "@/components/docs-site/component-docs-page/index.tsx";
 import { Stack } from "@/components/helpers/stack.tsx";
 import { Stepper } from "@/islands/molecules/stepper.tsx";
@@ -19,10 +19,10 @@ export default () => {
       from Nielsen Norman Group.
     </div>
   );
-  const examplesSections: ExamplesSectionType[] = [{
+  const examples: ExampleType[] = [{
     title: "Basic",
-    example: <Stepper />,
-    exampleCode: (
+    demo: <Stepper />,
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -41,8 +41,8 @@ export default () => {
         set to the value of the <InlineCode>Stepper</InlineCode>.
       </div>
     ),
-    example: <Stepper name="number-of-items" />,
-    exampleCode: (
+    demo: <Stepper name="number-of-items" />,
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -58,8 +58,8 @@ export default () => {
         <InlineCode>{`(newValue: number) => void`}</InlineCode>.
       </div>
     ),
-    example: <Stepper />,
-    exampleCode: (
+    demo: <Stepper />,
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -76,14 +76,14 @@ export default () => {
         <InlineCode>"md"</InlineCode>.
       </div>
     ),
-    example: (
+    demo: (
       <Stack class="gap-5">
         <Stepper size="sm" />
         <Stepper size="md" />
         <Stepper size="lg" />
       </Stack>
     ),
-    exampleCode: (
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -108,7 +108,7 @@ export default () => {
         </Link>.
       </div>
     ),
-    example: (
+    demo: (
       <Stack class="gap-5">
         <Stepper rounded="square" />
         <Stepper rounded="sm" />
@@ -116,7 +116,7 @@ export default () => {
         <Stepper rounded="full" />
       </Stack>
     ),
-    exampleCode: (
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -137,8 +137,8 @@ export default () => {
         <InlineCode>Stepper</InlineCode> to begin at.
       </div>
     ),
-    example: <Stepper startingValue={100} />,
-    exampleCode: (
+    demo: <Stepper startingValue={100} />,
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -153,8 +153,8 @@ export default () => {
         <InlineCode>max</InlineCode> is 5.
       </div>
     ),
-    example: <Stepper min={0} max={5} />,
-    exampleCode: (
+    demo: <Stepper min={0} max={5} />,
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -256,7 +256,7 @@ export default () => {
       componentName="Stepper"
       sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/islands/molecules/stepper.tsx"
       overviewNotes={overviewNotes}
-      examplesSections={examplesSections}
+      examples={examples}
       propsTables={propsTables}
     />
   );

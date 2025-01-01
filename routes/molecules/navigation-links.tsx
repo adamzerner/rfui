@@ -3,7 +3,7 @@ import { InlineCode } from "@/components/atoms/inline-code.tsx";
 import { Link } from "@/components/atoms/link.tsx";
 import {
   ComponentDocsPage,
-  ExamplesSectionType,
+  ExampleType,
 } from "@/components/docs-site/component-docs-page/index.tsx";
 import { Stack } from "@/components/helpers/stack.tsx";
 import { NavigationLinks } from "@/components/molecules/navigation-links.tsx";
@@ -11,9 +11,9 @@ import { NavigationLinks } from "@/components/molecules/navigation-links.tsx";
 export default () => {
   const overviewNotes =
     'This component is useful for lists of links. RFUI uses it for the "Components" section on the left side of this page and for the "On this page" section on the right side of this page.';
-  const examplesSections: ExamplesSectionType[] = [{
+  const examples: ExampleType[] = [{
     title: "Basic",
-    example: (
+    demo: (
       <NavigationLinks
         linkItems={[{
           name: "One",
@@ -24,7 +24,7 @@ export default () => {
         }]}
       />
     ),
-    exampleCode: (
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -41,7 +41,7 @@ export default () => {
     ),
   }, {
     title: "With header",
-    example: (
+    demo: (
       <NavigationLinks
         linkItems={[{
           name: "Header",
@@ -55,7 +55,7 @@ export default () => {
         }]}
       />
     ),
-    exampleCode: (
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -81,7 +81,7 @@ export default () => {
         <InlineCode>children</InlineCode>.
       </div>
     ),
-    example: (
+    demo: (
       <NavigationLinks
         linkItems={[{
           name: "Components",
@@ -107,7 +107,7 @@ export default () => {
         }]}
       />
     ),
-    exampleCode: (
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -148,7 +148,7 @@ export default () => {
         </Link>.
       </div>
     ),
-    example: (
+    demo: (
       <NavigationLinks
         linkItems={[{
           name: "One",
@@ -161,7 +161,7 @@ export default () => {
         }]}
       />
     ),
-    exampleCode: (
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -194,7 +194,7 @@ export default () => {
         <div>Note: the example below isn't actually sticky.</div>
       </Stack>
     ),
-    example: (
+    demo: (
       <NavigationLinks
         linkItems={[{
           name: "One",
@@ -205,7 +205,7 @@ export default () => {
         }]}
       />
     ),
-    exampleCode: (
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -279,7 +279,7 @@ export default () => {
       componentName="NavigationLinks"
       sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/molecules/navigation-links.tsx"
       overviewNotes={overviewNotes}
-      examplesSections={examplesSections}
+      examples={examples}
       propsTables={propsTables}
     />
   );

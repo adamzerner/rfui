@@ -4,19 +4,19 @@ import { InlineCode } from "@/components/atoms/inline-code.tsx";
 import { Link } from "@/components/atoms/link.tsx";
 import {
   ComponentDocsPage,
-  ExamplesSectionType,
+  ExampleType,
 } from "@/components/docs-site/component-docs-page/index.tsx";
 
 export default () => {
   const overviewNotes = null;
-  const examplesSections: ExamplesSectionType[] = [{
+  const examples: ExampleType[] = [{
     title: "Basic",
-    example: (
+    demo: (
       <div>
         The <Highlight>pizza</Highlight> is very good.
       </div>
     ),
-    exampleCode: (
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -27,7 +27,7 @@ export default () => {
     ),
   }, {
     title: "Longer example",
-    example: (
+    demo: (
       <div>
         <h1 class="mb-5 text-3xl">
           Lorem ipsum <Highlight>dolor</Highlight> sit amet, consectetur.
@@ -45,7 +45,7 @@ export default () => {
         </div>
       </div>
     ),
-    exampleCode: (
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -113,7 +113,7 @@ export default () => {
       componentName="Highlight"
       sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/atoms/highlight.tsx"
       overviewNotes={overviewNotes}
-      examplesSections={examplesSections}
+      examples={examples}
       propsTables={propsTables}
     />
   );

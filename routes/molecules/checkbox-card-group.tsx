@@ -3,7 +3,7 @@ import { InlineCode } from "@/components/atoms/inline-code.tsx";
 import { Link } from "@/components/atoms/link.tsx";
 import {
   ComponentDocsPage,
-  ExamplesSectionType,
+  ExampleType,
 } from "@/components/docs-site/component-docs-page/index.tsx";
 import { Stack } from "@/components/helpers/stack.tsx";
 import {
@@ -14,16 +14,16 @@ import {
 export default () => {
   const overviewNotes =
     "Add some flair and professionalism to your checkboxes and associated content.";
-  const examplesSections: ExamplesSectionType[] = [{
+  const examples: ExampleType[] = [{
     title: "Basic",
-    example: (
+    demo: (
       <CheckboxCardGroup>
         <CheckboxCardGroupItem>One</CheckboxCardGroupItem>
         <CheckboxCardGroupItem>Two</CheckboxCardGroupItem>
         <CheckboxCardGroupItem>Three</CheckboxCardGroupItem>
       </CheckboxCardGroup>
     ),
-    exampleCode: (
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -42,7 +42,7 @@ export default () => {
         being passed to <InlineCode>{`<input type="checkbox" />`}</InlineCode>.
       </div>
     ),
-    example: (
+    demo: (
       <CheckboxCardGroup>
         <CheckboxCardGroupItem checkboxRest={{ name: "one" }}>
           One
@@ -55,7 +55,7 @@ export default () => {
         </CheckboxCardGroupItem>
       </CheckboxCardGroup>
     ),
-    exampleCode: (
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -81,14 +81,14 @@ export default () => {
         <InlineCode>{`(newValue: boolean) => void`}</InlineCode>.
       </div>
     ),
-    example: (
+    demo: (
       <CheckboxCardGroup>
         <CheckboxCardGroupItem>One</CheckboxCardGroupItem>
         <CheckboxCardGroupItem>Two</CheckboxCardGroupItem>
         <CheckboxCardGroupItem>Three</CheckboxCardGroupItem>
       </CheckboxCardGroup>
     ),
-    exampleCode: (
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -110,7 +110,7 @@ export default () => {
         <InlineCode>"md"</InlineCode>.
       </div>
     ),
-    example: (
+    demo: (
       <Stack class="gap-5">
         <CheckboxCardGroup padding="sm">
           <CheckboxCardGroupItem>One</CheckboxCardGroupItem>
@@ -129,7 +129,7 @@ export default () => {
         </CheckboxCardGroup>
       </Stack>
     ),
-    exampleCode: (
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -167,7 +167,7 @@ export default () => {
         </Link>.
       </div>
     ),
-    example: (
+    demo: (
       <Stack class="gap-5">
         <CheckboxCardGroup rounded="square">
           <CheckboxCardGroupItem>One</CheckboxCardGroupItem>
@@ -186,7 +186,7 @@ export default () => {
         </CheckboxCardGroup>
       </Stack>
     ),
-    exampleCode: (
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -286,7 +286,7 @@ export default () => {
       componentName="CheckboxCardGroup"
       sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/islands/molecules/checkbox-card-group.tsx"
       overviewNotes={overviewNotes}
-      examplesSections={examplesSections}
+      examples={examples}
       propsTables={propsTables}
     />
   );

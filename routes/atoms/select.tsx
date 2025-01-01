@@ -4,7 +4,7 @@ import { Link } from "@/components/atoms/link.tsx";
 import { Select } from "@/components/atoms/select.tsx";
 import {
   ComponentDocsPage,
-  ExamplesSectionType,
+  ExampleType,
 } from "@/components/docs-site/component-docs-page/index.tsx";
 import { Stack } from "@/components/helpers/stack.tsx";
 
@@ -22,16 +22,16 @@ export default () => {
       component.
     </div>
   );
-  const examplesSections: ExamplesSectionType[] = [{
+  const examples: ExampleType[] = [{
     title: "Basic",
-    example: (
+    demo: (
       <Select>
         <option value="foo">foo</option>
         <option value="bar">bar</option>
         <option value="baz">baz</option>
       </Select>
     ),
-    exampleCode: (
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -60,14 +60,14 @@ export default () => {
         </Link>.
       </div>
     ),
-    example: (
+    demo: (
       <Select>
         <option value="foo">foo</option>
         <option value="bar">bar</option>
         <option value="baz">baz</option>
       </Select>
     ),
-    exampleCode: (
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -88,7 +88,7 @@ export default () => {
         <InlineCode>"md"</InlineCode>.
       </div>
     ),
-    example: (
+    demo: (
       <Stack class="w-fit gap-5">
         <Select size="sm">
           <option value="foo">foo</option>
@@ -107,7 +107,7 @@ export default () => {
         </Select>
       </Stack>
     ),
-    exampleCode: (
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -145,7 +145,7 @@ export default () => {
         </Link>.
       </div>
     ),
-    example: (
+    demo: (
       <Stack class="w-fit gap-5">
         <Select rounded="square">
           <option value="foo">foo</option>
@@ -164,7 +164,7 @@ export default () => {
         </Select>
       </Stack>
     ),
-    exampleCode: (
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -197,14 +197,14 @@ export default () => {
         <InlineCode>false</InlineCode>.
       </div>
     ),
-    example: (
+    demo: (
       <Select disabled>
         <option value="foo">foo</option>
         <option value="bar">bar</option>
         <option value="baz">baz</option>
       </Select>
     ),
-    exampleCode: (
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -225,14 +225,14 @@ export default () => {
         <InlineCode>false</InlineCode>.
       </div>
     ),
-    example: (
+    demo: (
       <Select invalid>
         <option value="foo">foo</option>
         <option value="bar">bar</option>
         <option value="baz">baz</option>
       </Select>
     ),
-    exampleCode: (
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -315,7 +315,7 @@ export default () => {
       componentName="Select"
       sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/atoms/select.tsx"
       overviewNotes={overviewNotes}
-      examplesSections={examplesSections}
+      examples={examples}
       propsTables={propsTables}
     />
   );

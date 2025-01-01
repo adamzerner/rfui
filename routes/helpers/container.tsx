@@ -3,17 +3,17 @@ import { InlineCode } from "@/components/atoms/inline-code.tsx";
 import { Link } from "@/components/atoms/link.tsx";
 import {
   ComponentDocsPage,
-  ExamplesSectionType,
+  ExampleType,
 } from "@/components/docs-site/component-docs-page/index.tsx";
 import { Container } from "@/components/helpers/container.tsx";
 
 export default () => {
   const overviewNotes =
     "Wrap your site's content in a container to provide an app-wide width.";
-  const examplesSections: ExamplesSectionType[] = [{
+  const examples: ExampleType[] = [{
     title: "Basic",
-    example: <Container class="bg-neutral-50">Example</Container>,
-    exampleCode: (
+    demo: <Container class="bg-neutral-50">Example</Container>,
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -78,7 +78,7 @@ export default () => {
       componentName="Container"
       sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/helpers/container.tsx"
       overviewNotes={overviewNotes}
-      examplesSections={examplesSections}
+      examples={examples}
       propsTables={propsTables}
     />
   );

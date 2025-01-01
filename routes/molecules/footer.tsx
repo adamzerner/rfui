@@ -3,7 +3,7 @@ import { InlineCode } from "@/components/atoms/inline-code.tsx";
 import { Link } from "@/components/atoms/link.tsx";
 import {
   ComponentDocsPage,
-  ExamplesSectionType,
+  ExampleType,
 } from "@/components/docs-site/component-docs-page/index.tsx";
 import { Stack } from "@/components/helpers/stack.tsx";
 import {
@@ -75,9 +75,9 @@ export default () => {
       />
     </Stack>
   );
-  const examplesSections: ExamplesSectionType[] = [{
+  const examples: ExampleType[] = [{
     title: "Basic",
-    example: (
+    demo: (
       <Footer>
         <FooterColumn>
           <FooterHeading>About</FooterHeading>
@@ -117,7 +117,7 @@ export default () => {
         </FooterColumn>
       </Footer>
     ),
-    exampleCode: (
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -178,7 +178,7 @@ export default () => {
         </div>
       </Stack>
     ),
-    example: (
+    demo: (
       <Footer background="none">
         <FooterColumn>
           <FooterHeading background="none">About</FooterHeading>
@@ -218,7 +218,7 @@ export default () => {
         </FooterColumn>
       </Footer>
     ),
-    exampleCode: (
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -281,7 +281,7 @@ export default () => {
         </div>
       </Stack>
     ),
-    example: (
+    demo: (
       <Footer class="!mt-0">
         <FooterColumn>
           <FooterHeading>About</FooterHeading>
@@ -321,7 +321,7 @@ export default () => {
         </FooterColumn>
       </Footer>
     ),
-    exampleCode: (
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -471,7 +471,7 @@ export default () => {
       componentName="Footer"
       sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/molecules/footer.tsx"
       overviewNotes={overviewNotes}
-      examplesSections={examplesSections}
+      examples={examples}
       propsTables={propsTables}
     />
   );

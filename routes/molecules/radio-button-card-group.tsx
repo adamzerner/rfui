@@ -3,7 +3,7 @@ import { InlineCode } from "@/components/atoms/inline-code.tsx";
 import { Link } from "@/components/atoms/link.tsx";
 import {
   ComponentDocsPage,
-  ExamplesSectionType,
+  ExampleType,
 } from "@/components/docs-site/component-docs-page/index.tsx";
 import { Stack } from "@/components/helpers/stack.tsx";
 import {
@@ -32,9 +32,9 @@ export default () => {
       </div>
     </Stack>
   );
-  const examplesSections: ExamplesSectionType[] = [{
+  const examples: ExampleType[] = [{
     title: "Basic",
-    example: (
+    demo: (
       <RadioButtonCardGroup>
         <RadioButtonCardGroupItem
           name="basic-one"
@@ -56,7 +56,7 @@ export default () => {
         </RadioButtonCardGroupItem>
       </RadioButtonCardGroup>
     ),
-    exampleCode: (
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -93,7 +93,7 @@ export default () => {
         <InlineCode>"md"</InlineCode>.
       </div>
     ),
-    example: (
+    demo: (
       <Stack class="gap-5">
         <RadioButtonCardGroup padding="sm">
           <RadioButtonCardGroupItem
@@ -157,7 +157,7 @@ export default () => {
         </RadioButtonCardGroup>
       </Stack>
     ),
-    exampleCode: (
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -240,7 +240,7 @@ export default () => {
         </Link>.
       </div>
     ),
-    example: (
+    demo: (
       <Stack class="gap-5">
         <RadioButtonCardGroup rounded="square">
           <RadioButtonCardGroupItem
@@ -304,7 +304,7 @@ export default () => {
         </RadioButtonCardGroup>
       </Stack>
     ),
-    exampleCode: (
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -461,7 +461,7 @@ export default () => {
       componentName="RadioButtonCardGroup"
       sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/islands/molecules/radio-button-card-group.tsx"
       overviewNotes={overviewNotes}
-      examplesSections={examplesSections}
+      examples={examples}
       propsTables={propsTables}
     />
   );

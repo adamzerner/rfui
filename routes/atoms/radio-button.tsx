@@ -4,7 +4,7 @@ import { Link } from "@/components/atoms/link.tsx";
 import { RadioButton } from "@/components/atoms/radio-button.tsx";
 import {
   ComponentDocsPage,
-  ExamplesSectionType,
+  ExampleType,
 } from "@/components/docs-site/component-docs-page/index.tsx";
 import { Stack } from "@/components/helpers/stack.tsx";
 
@@ -35,12 +35,10 @@ export default () => {
       </div>
     </Stack>
   );
-  const examplesSections: ExamplesSectionType[] = [{
+  const examples: ExampleType[] = [{
     title: "Basic",
-    example: <RadioButton />,
-    exampleCode: (
-      <CodeBlock class="mt-4" language="tsx" code={`<RadioButton />`} />
-    ),
+    demo: <RadioButton />,
+    code: <CodeBlock class="mt-4" language="tsx" code={`<RadioButton />`} />,
   }, {
     title: "Controlled",
     description: (
@@ -59,8 +57,8 @@ export default () => {
         </Link>.
       </div>
     ),
-    example: <RadioButton />,
-    exampleCode: (
+    demo: <RadioButton />,
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -77,14 +75,14 @@ export default () => {
         <InlineCode>"md"</InlineCode>.
       </div>
     ),
-    example: (
+    demo: (
       <Stack class="gap-5">
         <RadioButton size="sm" />
         <RadioButton size="md" />
         <RadioButton size="lg" />
       </Stack>
     ),
-    exampleCode: (
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -105,8 +103,8 @@ export default () => {
         <InlineCode>false</InlineCode>.
       </div>
     ),
-    example: <RadioButton disabled />,
-    exampleCode: (
+    demo: <RadioButton disabled />,
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -123,8 +121,8 @@ export default () => {
         <InlineCode>false</InlineCode>.
       </div>
     ),
-    example: <RadioButton invalid />,
-    exampleCode: (
+    demo: <RadioButton invalid />,
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -183,7 +181,7 @@ export default () => {
       componentName="RadioButton"
       sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/atoms/radio-button.tsx"
       overviewNotes={overviewNotes}
-      examplesSections={examplesSections}
+      examples={examples}
       propsTables={propsTables}
     />
   );

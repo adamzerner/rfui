@@ -4,16 +4,16 @@ import { Link } from "@/components/atoms/link.tsx";
 import { Textarea } from "@/components/atoms/textarea.tsx";
 import {
   ComponentDocsPage,
-  ExamplesSectionType,
+  ExampleType,
 } from "@/components/docs-site/component-docs-page/index.tsx";
 import { Stack } from "@/components/helpers/stack.tsx";
 
 export default () => {
   const overviewNotes = null;
-  const examplesSections: ExamplesSectionType[] = [{
+  const examples: ExampleType[] = [{
     title: "Basic",
-    example: <Textarea></Textarea>,
-    exampleCode: (
+    demo: <Textarea></Textarea>,
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -34,8 +34,8 @@ export default () => {
         </Link>.
       </div>
     ),
-    example: <Textarea></Textarea>,
-    exampleCode: (
+    demo: <Textarea></Textarea>,
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -56,14 +56,14 @@ export default () => {
         </Link>.
       </div>
     ),
-    example: (
+    demo: (
       <Stack class="gap-5">
         <Textarea rounded="square"></Textarea>
         <Textarea rounded="sm"></Textarea>
         <Textarea rounded="lg"></Textarea>
       </Stack>
     ),
-    exampleCode: (
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -84,8 +84,8 @@ export default () => {
         <InlineCode>false</InlineCode>.
       </div>
     ),
-    example: <Textarea disabled></Textarea>,
-    exampleCode: (
+    demo: <Textarea disabled></Textarea>,
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -102,8 +102,8 @@ export default () => {
         <InlineCode>false</InlineCode>.
       </div>
     ),
-    example: <Textarea readonly>Example</Textarea>,
-    exampleCode: (
+    demo: <Textarea readonly>Example</Textarea>,
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -120,8 +120,8 @@ export default () => {
         <InlineCode>false</InlineCode>.
       </div>
     ),
-    example: <Textarea invalid>Example</Textarea>,
-    exampleCode: (
+    demo: <Textarea invalid>Example</Textarea>,
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -194,7 +194,7 @@ export default () => {
       componentName="Textarea"
       sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/atoms/textarea.tsx"
       overviewNotes={overviewNotes}
-      examplesSections={examplesSections}
+      examples={examples}
       propsTables={propsTables}
     />
   );

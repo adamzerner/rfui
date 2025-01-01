@@ -5,16 +5,16 @@ import { Link } from "@/components/atoms/link.tsx";
 import { Text } from "@/components/atoms/text.tsx";
 import {
   ComponentDocsPage,
-  ExamplesSectionType,
+  ExampleType,
 } from "@/components/docs-site/component-docs-page/index.tsx";
 import { Stack } from "@/components/helpers/stack.tsx";
 
 export default () => {
   const overviewNotes = null;
-  const examplesSections: ExamplesSectionType[] = [{
+  const examples: ExampleType[] = [{
     title: "Basic",
-    example: <H1>Hello world</H1>,
-    exampleCode: (
+    demo: <H1>Hello world</H1>,
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -23,7 +23,7 @@ export default () => {
     ),
   }, {
     title: "Alongside paragraphs",
-    example: (
+    demo: (
       <div>
         <H1>Hello world</H1>
         <Text>
@@ -39,7 +39,7 @@ export default () => {
         </Text>
       </div>
     ),
-    exampleCode: (
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -79,8 +79,8 @@ export default () => {
         </div>
       </Stack>
     ),
-    example: <H1 class="!my-4">Hello world</H1>,
-    exampleCode: (
+    demo: <H1 class="!my-4">Hello world</H1>,
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -133,7 +133,7 @@ export default () => {
       componentName="H1"
       sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/atoms/h1.tsx"
       overviewNotes={overviewNotes}
-      examplesSections={examplesSections}
+      examples={examples}
       propsTables={propsTables}
     />
   );

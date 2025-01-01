@@ -13,18 +13,18 @@ import { titleToHref } from "@/utilities/title-to-href.ts";
 import { JSX } from "preact";
 import { OnThisPage } from "./on-this-page.tsx";
 
-export type ExamplesSectionType = {
+export type ExampleType = {
   title: string;
-  description?: string | JSX.Element;
-  example: JSX.Element;
-  exampleCode: JSX.Element;
+  description?: JSX.Element | string;
+  demo: JSX.Element;
+  code: JSX.Element;
 };
 
 export type ComponentDocsPageType = {
   componentName: string;
   sourceCodeUrl: string;
-  overviewNotes: string | JSX.Element | null;
-  examplesSections: ExamplesSectionType[];
+  overviewNotes: JSX.Element | string | null;
+  examples: ExampleType[];
   propsTables: PropsTableType[];
 };
 
@@ -33,11 +33,11 @@ export const ComponentDocsPage = (
     componentName,
     sourceCodeUrl,
     overviewNotes,
-    examplesSections,
+    examples,
     propsTables,
   }: ComponentDocsPageType,
 ) => {
-  const examplesSectionTitles = examplesSections.map((s) => s.title);
+  const exampleTitles = examples.map((e) => e.title);
   const propsTableTitles = propsTables.map((p) => p.title ?? componentName);
   const componentsToImport = [
     componentName,
@@ -58,28 +58,28 @@ export const ComponentDocsPage = (
           componentName={componentName}
           overviewNotes={overviewNotes}
           sourceCodeUrl={sourceCodeUrl}
-          example={examplesSections[0].example}
+          demo={examples[0].demo}
           importStatement={importStatement}
         />
-        {examplesSections.map((section) => (
+        {examples.map((example) => (
           <section>
-            <H2 inPageLink={`example-${titleToHref(section.title)}`}>
-              {section.title}
+            <H2 inPageLink={`example-${titleToHref(example.title)}`}>
+              {example.title}
             </H2>
-            {section.description && (
+            {example.description && (
               <Text size="sm" class="mb-6">
-                {section.description}
+                {example.description}
               </Text>
             )}
-            <Card width="full" class="mb-4">{section.example}</Card>
-            {section.exampleCode}
+            <Card width="full" class="mb-4">{example.demo}</Card>
+            {example.code}
           </section>
         ))}
         {propsTables.map((propsTable) => <PropsTable {...propsTable} />)}
       </main>
       <div class="hidden flex-shrink-0 lg:block">
         <OnThisPage
-          examplesSectionTitles={examplesSectionTitles}
+          exampleTitles={exampleTitles}
           propsTableTitles={propsTableTitles}
         />
       </div>

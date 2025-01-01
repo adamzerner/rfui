@@ -4,15 +4,15 @@ import { InlineCode } from "@/components/atoms/inline-code.tsx";
 import { Link } from "@/components/atoms/link.tsx";
 import {
   ComponentDocsPage,
-  ExamplesSectionType,
+  ExampleType,
 } from "@/components/docs-site/component-docs-page/index.tsx";
 
 export default () => {
   const overviewNotes = null;
-  const examplesSections: ExamplesSectionType[] = [{
+  const examples: ExampleType[] = [{
     title: "Basic",
-    example: <Blockquote>All models are wrong. Some are useful.</Blockquote>,
-    exampleCode: (
+    demo: <Blockquote>All models are wrong. Some are useful.</Blockquote>,
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -21,7 +21,7 @@ export default () => {
     ),
   }, {
     title: "Multi-paragraph quote",
-    example: (
+    demo: (
       <Blockquote class="gap-3">
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -51,7 +51,7 @@ export default () => {
         </p>
       </Blockquote>
     ),
-    exampleCode: (
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -88,7 +88,7 @@ export default () => {
     ),
   }, {
     title: "With citation",
-    example: (
+    demo: (
       <Blockquote cite="https://example.com">
         <p>All models are wrong. Some are useful.</p>
         <footer>
@@ -96,7 +96,7 @@ export default () => {
         </footer>
       </Blockquote>
     ),
-    exampleCode: (
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -152,7 +152,7 @@ export default () => {
       componentName="Blockquote"
       sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/atoms/blockquote.tsx"
       overviewNotes={overviewNotes}
-      examplesSections={examplesSections}
+      examples={examples}
       propsTables={propsTables}
     />
   );

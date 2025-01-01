@@ -10,7 +10,7 @@ type HeaderType = {
   componentName: string;
   overviewNotes: string | JSX.Element | null;
   sourceCodeUrl: string;
-  example: JSX.Element;
+  demo: JSX.Element;
   importStatement: string;
 };
 
@@ -18,7 +18,7 @@ export const Header = ({
   componentName,
   overviewNotes,
   sourceCodeUrl,
-  example,
+  demo,
   importStatement,
 }: HeaderType) => {
   return (
@@ -42,7 +42,7 @@ export const Header = ({
         </Text>
         <Card width="full" padding="lg">
           <CardBody>
-            {example}
+            {demo}
           </CardBody>
         </Card>
         <CodeBlock

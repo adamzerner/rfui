@@ -8,6 +8,10 @@ import { Stack } from "@/components/helpers/stack.tsx";
 import { titleToHref } from "@/utilities/title-to-href.ts";
 import { JSX } from "preact";
 
+type PropsTablesType = {
+  propsTables: PropsTableType[];
+};
+
 export type PropsTableType = {
   title: string | null;
   props: PropsType;
@@ -21,7 +25,15 @@ type PropsType = {
   notes: JSX.Element | string | null;
 }[];
 
-export const PropsTable = (
+export const PropsTables = ({ propsTables }: PropsTablesType) => {
+  return (
+    <section>
+      {propsTables.map((propsTable) => <PropsTable {...propsTable} />)}
+    </section>
+  );
+};
+
+const PropsTable = (
   { props, title }: PropsTableType,
 ) => {
   return (

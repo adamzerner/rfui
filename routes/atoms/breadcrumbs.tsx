@@ -9,7 +9,25 @@ import {
 import { Stack } from "@/components/helpers/stack.tsx";
 
 export default () => {
-  const overviewNotes = null;
+  const overviewNotes = (
+    <Stack class="gap-4">
+      <div>
+        Breadcrumbs are{" "}
+        <Link href="https://www.nngroup.com/articles/breadcrumb-navigation-useful/">
+          frequently
+        </Link>{" "}
+        a good idea to include if the page the user is on is three or more
+        levels deep. See Nielsen Norman Group's{" "}
+        <Link href="https://www.nngroup.com/articles/breadcrumbs/">post</Link>
+        {" "}
+        for design guidelines.
+      </div>
+      <div>
+        Note: The last item in the breadcrumbs should be the page the user is
+        currently on and so it isn't clickable as a link.
+      </div>
+    </Stack>
+  );
   const examples: ExampleType[] = [{
     title: "Basic",
     demo: (

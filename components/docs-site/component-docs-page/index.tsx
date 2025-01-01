@@ -1,5 +1,6 @@
 import { H2 } from "@/components/atoms/h2.tsx";
 import { Text } from "@/components/atoms/text.tsx";
+import { getComponentsToImportString } from "@/components/docs-site/component-docs-page/get-components-to-import-string.ts";
 import { Header } from "@/components/docs-site/component-docs-page/header.tsx";
 import {
   PropsTable,
@@ -40,19 +41,11 @@ export const ComponentDocsPage = (
   const propsTableTitles = propsTables.map((p) => p.title ?? componentName);
   const componentsToImport = [
     componentName,
-    ...propsTables.filter((p) => p.title).map((p) => p.title),
+    ...propsTables.filter((p) => p.title).map((p) => p.title as string),
   ];
-  const componentsToImportString = componentsToImport.length > 2
-    ? componentsToImport
-      .map((c, i) =>
-        i === 0
-          ? `\n  ${c}`
-          : i === componentsToImport.length - 1
-          ? `  ${c}\n`
-          : `  ${c}`
-      )
-      .join(`, \n`)
-    : componentsToImport.join(",") + " ";
+  const componentsToImportString = getComponentsToImportString(
+    componentsToImport,
+  );
   const importStatement = `import { ${componentsToImportString}} from "rfui";`;
 
   return (

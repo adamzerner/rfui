@@ -16,8 +16,6 @@ export const VerticalNavbar = ({ route }: VerticalNavbarType) => {
           <VerticalNavbarItem
             href="/"
             isActive={route === "/"}
-            shouldOpenInNewTab
-            shouldIncludeNewTabIcon
           >
             Components
           </VerticalNavbarItem>
@@ -31,23 +29,42 @@ export const VerticalNavbar = ({ route }: VerticalNavbarType) => {
             About
           </VerticalNavbarItem>
         </VerticalNavbarSection>
-        <VerticalNavbarSection>
+        <VerticalNavbarSection heading="Projects">
           <VerticalNavbarItem
             href="/one"
             isActive={route === "/one"}
-            shouldOpenInNewTab
-            shouldIncludeNewTabIcon
           >
             One
           </VerticalNavbarItem>
           <VerticalNavbarItem
             href="/two"
             isActive={route === "/two"}
+            shouldOpenInNewTab
+            shouldIncludeNewTabIcon
           >
             Two
           </VerticalNavbarItem>
           <VerticalNavbarItem href="/three" isActive={route === "/three"}>
             Three
+          </VerticalNavbarItem>
+        </VerticalNavbarSection>
+        <VerticalNavbarSection heading="Invoices">
+          <VerticalNavbarItem
+            href="/four"
+            isActive={route === "/four"}
+          >
+            Four
+          </VerticalNavbarItem>
+          <VerticalNavbarItem
+            href="/five"
+            isActive={route === "/five"}
+            shouldOpenInNewTab
+            shouldIncludeNewTabIcon
+          >
+            Five
+          </VerticalNavbarItem>
+          <VerticalNavbarItem href="/six" isActive={route === "/six"}>
+            Six
           </VerticalNavbarItem>
         </VerticalNavbarSection>
       </VerticalNavbarTop>

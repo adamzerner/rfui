@@ -1,8 +1,6 @@
-import type { ComponentChild, ComponentProps } from "preact";
+import type { ComponentProps } from "preact";
 
-export type BreadcrumbsType = {
-  children: ComponentChild;
-} & ComponentProps<"nav">;
+export type BreadcrumbsType = {} & ComponentProps<"nav">;
 
 /** *
  * @function Breadcrumbs
@@ -10,7 +8,7 @@ export type BreadcrumbsType = {
  * @see {@link https://rfui.deno.dev/atoms/breadcrumbs}
  *
  * @example
- * <Blockquote>All models are wrong. Some models are useful.</Blockquote>
+ * <Breadcrumbs />
  */
 export const Breadcrumbs = (
   {

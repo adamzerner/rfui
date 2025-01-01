@@ -1,6 +1,5 @@
 import { Badge } from "@/components/atoms/badge.tsx";
 import { Blockquote } from "@/components/atoms/blockquote.tsx";
-import { Breadcrumbs } from "@/components/atoms/breadcrumbs.tsx";
 import { Button } from "@/components/atoms/button.tsx";
 import { Checkbox } from "@/components/atoms/checkbox.tsx";
 import { CodeBlock } from "@/components/atoms/code-block.tsx";
@@ -61,14 +60,7 @@ export const getComponents = (signal: Signal<null>) => ({
     {
       name: "Breadcrumbs",
       href: "/atoms/breadcrumbs",
-      demo: (
-        <Breadcrumbs
-          links={[{ title: "Home", href: "#" }, {
-            title: "Academics",
-            href: "#",
-          }]}
-        />
-      ),
+      demo: <InlineCode>{"<Breadcrumbs>"}</InlineCode>,
     },
     {
       name: "Button",

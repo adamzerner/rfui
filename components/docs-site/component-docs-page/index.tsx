@@ -1,9 +1,9 @@
-import { getComponentsToImportString } from "@/components/docs-site/component-docs-page/get-components-to-import-string.ts";
 import { Header } from "@/components/docs-site/component-docs-page/header.tsx";
 import { ComponentsList } from "@/components/docs-site/components-list.tsx";
 import { Flex } from "@/components/helpers/flex.tsx";
 import { JSX } from "preact";
 import { Examples } from "./examples.tsx";
+import { getImportStatement } from "./get-import-statement.ts";
 import { OnThisPage } from "./on-this-page.tsx";
 import { PropsTables, PropsTableType } from "./props-tables.tsx";
 
@@ -33,14 +33,7 @@ export const ComponentDocsPage = (
 ) => {
   const exampleTitles = examples.map((e) => e.title);
   const propsTableTitles = propsTables.map((p) => p.title ?? componentName);
-  const componentsToImport = [
-    componentName,
-    ...propsTables.filter((p) => p.title).map((p) => p.title as string),
-  ];
-  const componentsToImportString = getComponentsToImportString(
-    componentsToImport,
-  );
-  const importStatement = `import { ${componentsToImportString}} from "rfui";`;
+  const importStatement = getImportStatement(componentName, propsTables);
 
   return (
     <Flex class="mt-9 gap-10">

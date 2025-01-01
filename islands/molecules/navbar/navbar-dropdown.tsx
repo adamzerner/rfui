@@ -54,7 +54,7 @@ export const NavbarDropdown = (
           <span class="mr-1">{title}</span> {isMenuOpen
             ? (
               <ChevronUpIcon
-                className="relative bottom-[2px]"
+                class="relative bottom-[2px]"
                 strokeWidth={2}
               />
             )
@@ -74,10 +74,10 @@ export const NavbarDropdown = (
           >
             <span>{title}</span>
             {isMenuOpen
-              ? <ChevronUpIcon className="mr-[2px] h-6 w-6" strokeWidth={1} />
+              ? <ChevronUpIcon class="mr-[2px] h-6 w-6" strokeWidth={1} />
               : (
                 <ChevronDownIcon
-                  className="mr-[2px] h-6 w-6"
+                  class="mr-[2px] h-6 w-6"
                   strokeWidth={1}
                 />
               )}

@@ -58,6 +58,11 @@ export const getComponents = (signal: Signal<null>) => ({
       ),
     },
     {
+      name: "Breadcrumbs",
+      href: "/atoms/breadcrumbs",
+      demo: <InlineCode>{"<Breadcrumbs>"}</InlineCode>,
+    },
+    {
       name: "Button",
       href: "/atoms/button",
       demo: (
@@ -346,7 +351,7 @@ export default () => {
                 <Item
                   name={component.name}
                   href={component.href}
-                  demo={component.demo || null}
+                  demo={component.demo}
                 />
               ))}
             </Flex>
@@ -358,7 +363,7 @@ export default () => {
                 <Item
                   name={component.name}
                   href={component.href}
-                  demo={component.demo || null}
+                  demo={component.demo}
                 />
               ))}
             </Flex>
@@ -370,7 +375,7 @@ export default () => {
                 <Item
                   name={component.name}
                   href={component.href}
-                  demo={component.demo || null}
+                  demo={component.demo}
                 />
               ))}
             </Flex>

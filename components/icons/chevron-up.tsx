@@ -1,9 +1,16 @@
 export const ChevronUpIcon = (
-  { className, strokeWidth = 1.5, ...rest }: {
-    className?: string;
+  { strokeWidth = 1.5, ...rest }: {
+    class?: string;
     strokeWidth?: number;
   },
 ) => {
+  const { class: restClass, ...restWithoutClass } = rest;
+  let className = "inline h-4 w-4";
+
+  if (restClass) {
+    className += ` ${restClass}`;
+  }
+
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -11,8 +18,8 @@ export const ChevronUpIcon = (
       viewBox="0 0 24 24"
       stroke-width={strokeWidth}
       stroke="currentColor"
-      className={`w-4 h-4 inline ${className}`}
-      {...rest}
+      className={className}
+      {...restWithoutClass}
     >
       <path
         stroke-linecap="round"

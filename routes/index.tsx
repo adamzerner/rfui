@@ -359,7 +359,7 @@ export default () => {
                 <Item
                   name={component.name}
                   href={component.href}
-                  demo={component.demo || null}
+                  demo={component.demo}
                 />
               ))}
             </Flex>
@@ -371,7 +371,7 @@ export default () => {
                 <Item
                   name={component.name}
                   href={component.href}
-                  demo={component.demo || null}
+                  demo={component.demo}
                 />
               ))}
             </Flex>
@@ -383,7 +383,7 @@ export default () => {
                 <Item
                   name={component.name}
                   href={component.href}
-                  demo={component.demo || null}
+                  demo={component.demo}
                 />
               ))}
             </Flex>

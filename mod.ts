@@ -42,6 +42,7 @@ export {
   CardBody,
   CardFooter,
   CardHeader,
+  CardHeading,
 } from "./components/molecules/card.tsx";
 export type { CardType } from "./components/molecules/card.tsx";
 export {

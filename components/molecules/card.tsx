@@ -171,3 +171,18 @@ export const CardFooter = (
 
   return <div class={className} {...restWithoutClass}>{children}</div>;
 };
+
+export const CardHeading = (
+  { children, ...rest }:
+    & { children: ComponentChild }
+    & ComponentProps<"h1">,
+) => {
+  const { class: restClass, ...restWithoutClass } = rest;
+  let className = "font-bold tracking-wide text-neutral-700";
+
+  if (restClass) {
+    className += ` ${restClass}`;
+  }
+
+  return <h1 class={className} {...restWithoutClass}>{children}</h1>;
+};

@@ -13,6 +13,7 @@ import {
   CardBody,
   CardFooter,
   CardHeader,
+  CardHeading,
 } from "@/components/molecules/card.tsx";
 import { FormField } from "@/components/molecules/form-field.tsx";
 
@@ -58,6 +59,28 @@ export default () => {
         language="tsx"
         code={`<Card>
   <CardHeader>Summary</CardHeader>
+  <CardBody>A summary of your account.</CardBody>
+</Card>`}
+      />
+    ),
+  }, {
+    title: "CardHeading",
+    demo: (
+      <Card>
+        <CardHeader>
+          <CardHeading>Summary</CardHeading>
+        </CardHeader>
+        <CardBody>A summary of your account.</CardBody>
+      </Card>
+    ),
+    code: (
+      <CodeBlock
+        class="mt-4"
+        language="tsx"
+        code={`<Card>
+  <CardHeader>
+    <CardHeading>Summary</CardHeading>
+  </CardHeader>
   <CardBody>A summary of your account.</CardBody>
 </Card>`}
       />
@@ -391,7 +414,7 @@ export default () => {
     demo: (
       <Card>
         <CardHeader>
-          <h1 class="font-bold tracking-wide text-neutral-700">Profile</h1>
+          <CardHeading>Profile</CardHeading>
         </CardHeader>
         <CardBody>
           <div class="mb-6 text-neutral-700">
@@ -417,7 +440,7 @@ export default () => {
         language="tsx"
         code={`<Card>
   <CardHeader>
-    <h1 class="font-bold tracking-wide text-neutral-700">Profile</h1>
+    <CardHeading>Profile</CardHeading>
   </CardHeader>
   <CardBody>
     <div class="mb-6 text-neutral-700">
@@ -682,6 +705,21 @@ export default () => {
       name: "...rest",
       required: false,
       type: 'ComponentProps<"div">',
+      default: null,
+      notes: null,
+    }],
+  }, {
+    title: "CardHeading",
+    props: [{
+      name: "children",
+      required: true,
+      type: "ComponentChild",
+      default: null,
+      notes: null,
+    }, {
+      name: "...rest",
+      required: false,
+      type: 'ComponentProps<"h1">',
       default: null,
       notes: null,
     }],

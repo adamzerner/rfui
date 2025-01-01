@@ -11,7 +11,12 @@ export const VerticalNavbar = ({ route }: VerticalNavbarType) => {
   return (
     <RFUIVerticalNavbar>
       <VerticalNavbarTop>
-        <VerticalNavbarItem href="/" isActive={route === "/"}>
+        <VerticalNavbarItem
+          href="/"
+          isActive={route === "/"}
+          shouldOpenInNewTab
+          shouldIncludeNewTabIcon
+        >
           Components
         </VerticalNavbarItem>
         <VerticalNavbarItem

@@ -2,9 +2,17 @@ import type { ComponentChild } from "preact";
 import { Link } from "../../atoms/link.tsx";
 
 export const VerticalNavbarItem = (
-  { href, isActive, children }: {
+  {
+    href,
+    isActive,
+    shouldOpenInNewTab = false,
+    shouldIncludeNewTabIcon = false,
+    children,
+  }: {
     href: string;
     isActive: boolean;
+    shouldOpenInNewTab?: boolean;
+    shouldIncludeNewTabIcon?: boolean;
     children: ComponentChild;
   },
 ) => {
@@ -18,6 +26,8 @@ export const VerticalNavbarItem = (
         href={href}
         class={containerClass}
         underline="none"
+        _newTab={shouldOpenInNewTab}
+        _includeNewTabIcon={shouldIncludeNewTabIcon}
       >
         {children}
       </Link>

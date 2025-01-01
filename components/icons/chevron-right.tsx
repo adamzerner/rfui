@@ -1,4 +1,4 @@
-export const ChevronRightIcon = ({ ...rest }) => {
+export const ChevronRightIcon = ({ strokeWidth = 1.5, ...rest }) => {
   const { class: restClass, ...restWithoutClass } = rest;
   let className = "h-6 w-6";
 
@@ -11,7 +11,7 @@ export const ChevronRightIcon = ({ ...rest }) => {
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
       viewBox="0 0 24 24"
-      strokeWidth={1.5}
+      strokeWidth={strokeWidth}
       stroke="currentColor"
       className={className}
       {...restWithoutClass}

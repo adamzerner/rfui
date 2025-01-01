@@ -26,7 +26,7 @@ export const Breadcrumbs = (
   }: BreadcrumbsType,
 ) => {
   const { class: restClass, ...restWithoutClass } = rest;
-  let className = "flex gap-2 align-middle";
+  let className = "flex items-center gap-2 text-sm text-neutral-700";
 
   if (restClass) {
     className += ` ${restClass}`;
@@ -45,7 +45,7 @@ export const Breadcrumbs = (
             {!isLastLink
               ? <Link href={link.href} underline="hover">{link.title}</Link>
               : <div>{link.title}</div>}
-            {!isLastLink && <ChevronRightIcon />}
+            {!isLastLink && <ChevronRightIcon class="!h-4 !w-4" />}
           </>
         );
       })}

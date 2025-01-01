@@ -1,27 +1,26 @@
-// deno-lint-ignore-file no-explicit-any
 import { CodeBlock } from "@/components/atoms/code-block.tsx";
 import { H1 } from "@/components/atoms/h1.tsx";
 import { Link } from "@/components/atoms/link.tsx";
 import { Text } from "@/components/atoms/text.tsx";
 import { Stack } from "@/components/helpers/stack.tsx";
 import { Card, CardBody } from "@/components/molecules/card.tsx";
-import { ComponentChild } from "preact";
+import { JSX } from "preact";
 
-export const Header = (
-  {
-    componentName,
-    sourceCodeUrl,
-    importStatement,
-    children,
-  }: {
-    componentName: string;
-    sourceCodeUrl: string;
-    importStatement: string;
-    children: ComponentChild;
-  },
-) => {
-  const { overviewNotes, example } = getComponents(children);
+type HeaderType = {
+  componentName: string;
+  overviewNotes: string | JSX.Element | null;
+  sourceCodeUrl: string;
+  example: JSX.Element;
+  importStatement: string;
+};
 
+export const Header = ({
+  componentName,
+  overviewNotes,
+  sourceCodeUrl,
+  example,
+  importStatement,
+}: HeaderType) => {
   return (
     <header class="mb-10">
       <H1 class="!mt-0 break-words">{componentName}</H1>
@@ -53,34 +52,4 @@ export const Header = (
       </Stack>
     </header>
   );
-};
-
-export const Notes = ({ children }: { children: ComponentChild }) => {
-  return <div>{children}</div>;
-};
-
-export const Example = ({ children }: { children: ComponentChild }) => {
-  return <div>{children}</div>;
-};
-
-const getComponents = (children: any) => {
-  if (!Array.isArray(children)) {
-    return { example: children };
-  }
-
-  const overviewNotes = children.find(
-    (child: any) => child && child.type && child.type.name === Notes.name,
-  );
-
-  const example = children.find(
-    (child: any) => child && child.type && child.type.name === Example.name,
-  );
-
-  if (!example) {
-    throw new Error(
-      "An `Example` is needed.",
-    );
-  }
-
-  return { overviewNotes, example };
 };

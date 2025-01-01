@@ -1,10 +1,6 @@
 import { H2 } from "@/components/atoms/h2.tsx";
 import { Text } from "@/components/atoms/text.tsx";
-import {
-  Example,
-  Header,
-  Notes,
-} from "@/components/docs-site/component-docs-page/header.tsx";
+import { Header } from "@/components/docs-site/component-docs-page/header.tsx";
 import {
   PropsTable,
   PropsTableType,
@@ -67,12 +63,11 @@ export const ComponentDocsPage = (
       <main class="flex-grow overflow-x-hidden" id="overview">
         <Header
           componentName={componentName}
+          overviewNotes={overviewNotes}
           sourceCodeUrl={sourceCodeUrl}
+          example={examplesSections[0].example}
           importStatement={importStatement}
-        >
-          <Example>{examplesSections[0].example}</Example>
-          {overviewNotes && <Notes>{overviewNotes}</Notes>}
-        </Header>
+        />
         {examplesSections.map((section) => (
           <section>
             <H2 inPageLink={`example-${titleToHref(section.title)}`}>

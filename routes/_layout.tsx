@@ -1,17 +1,29 @@
 import { PageProps } from "$fresh/server.ts";
 import { Footer } from "@/components/docs-site/footer.tsx";
-import { Navbar } from "@/components/docs-site/navbar.tsx";
+import { VerticalNavbar } from "@/components/docs-site/vertical-navbar.tsx";
 import { Container } from "@/components/helpers/container.tsx";
-import { Stack } from "@/components/helpers/stack.tsx";
+import { Flex } from "@/components/helpers/flex.tsx";
 
 export default ({ Component, route }: PageProps) => {
   return (
-    <Stack class="min-h-screen">
-      <Navbar route={route} />
-      <Container size="2xl" class="mb-6 mt-8 grow font-sans">
-        <Component />
-      </Container>
+    <>
+      <Flex>
+        <VerticalNavbar route={route} />
+        <Container size="2xl" class="grow font-sans">
+          <Component />
+        </Container>
+      </Flex>
       <Footer />
-    </Stack>
+    </>
   );
+
+  // return (
+  //   <Stack class="min-h-screen">
+  //     <Navbar route={route} />
+  //     <Container size="2xl" class="mb-6 mt-8 grow font-sans">
+  //       <Component />
+  //     </Container>
+  //     <Footer />
+  //   </Stack>
+  // );
 };

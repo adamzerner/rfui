@@ -63,6 +63,7 @@ import * as $molecules_radio_button_card_group_1 from "./islands/molecules/radio
 import * as $molecules_radio_button_group_1 from "./islands/molecules/radio-button-group.tsx";
 import * as $molecules_stepper_1 from "./islands/molecules/stepper.tsx";
 import * as $molecules_tabs_1 from "./islands/molecules/tabs.tsx";
+import * as $molecules_vertical_navbar_index from "./islands/molecules/vertical-navbar/index.tsx";
 import type { Manifest } from "$fresh/server.ts";
 
 const manifest = {
@@ -138,6 +139,8 @@ const manifest = {
       $molecules_radio_button_group_1,
     "./islands/molecules/stepper.tsx": $molecules_stepper_1,
     "./islands/molecules/tabs.tsx": $molecules_tabs_1,
+    "./islands/molecules/vertical-navbar/index.tsx":
+      $molecules_vertical_navbar_index,
   },
   baseUrl: import.meta.url,
 } satisfies Manifest;

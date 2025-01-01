@@ -52,9 +52,9 @@ const PropsTable = (
       <Table hover={false} class="min-w-[600px]">
         <thead>
           <tr>
-            <th>Prop</th>
-            <th class="w-10">Required</th>
-            <th class="w-10">Default</th>
+            <th class="min-w-[100px]">Prop</th>
+            <th class="min-w-[100px]">Required</th>
+            <th class="min-w-[100px]">Default</th>
             <th>Type and notes</th>
           </tr>
         </thead>

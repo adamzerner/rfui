@@ -1,7 +1,8 @@
-import type { ComponentProps } from "preact";
+import type { ComponentChild, ComponentProps } from "preact";
 
 export type VerticalNavbarType = {
   background?: "neutral" | "none";
+  children: ComponentChild;
 } & Omit<ComponentProps<"nav">, "size">;
 
 /** *
@@ -14,7 +15,7 @@ export type VerticalNavbarType = {
 
 export const VerticalNavbar = ({ background = "neutral", ...rest }) => {
   const { class: restClass, ...restWithoutClass } = rest;
-  let containerClass = "";
+  let containerClass = "flex h-screen flex-col justify-between";
 
   if (restClass) {
     containerClass += ` ${restClass}`;

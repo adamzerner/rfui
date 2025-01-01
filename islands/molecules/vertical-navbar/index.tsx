@@ -15,9 +15,10 @@ export type VerticalNavbarType = {
 
 export const VerticalNavbar = ({ background = "neutral", ...rest }) => {
   const { class: restClass, ...restWithoutClass } = rest;
-  let containerClass = "flex h-screen flex-col justify-between py-6";
+  let containerClass =
+    "flex h-screen flex-col justify-between px-3 py-6 text-neutral-900";
 
-  containerClass += ` ${background === "neutral" ? "bg-neutral-50" : ""}`;
+  containerClass += ` ${background === "neutral" ? "bg-neutral-50/75" : ""}`;
 
   if (restClass) {
     containerClass += ` ${restClass}`;

@@ -1,4 +1,5 @@
 import type { ComponentChild } from "preact";
+import { Link } from "../../atoms/link.tsx";
 
 export const VerticalNavbarItem = (
   { href, isActive, children }: {
@@ -8,8 +9,12 @@ export const VerticalNavbarItem = (
   },
 ) => {
   return (
-    <div class="">
+    <Link
+      href={href}
+      class="my-2 block rounded px-3 py-2 hover:bg-neutral-100"
+      underline="none"
+    >
       {children}
-    </div>
+    </Link>
   );
 };

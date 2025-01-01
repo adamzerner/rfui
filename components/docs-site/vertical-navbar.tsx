@@ -9,7 +9,7 @@ type VerticalNavbarType = {
 
 export const VerticalNavbar = ({ route }: VerticalNavbarType) => {
   return (
-    <RFUIVerticalNavbar background="none">
+    <RFUIVerticalNavbar>
       <VerticalNavbarTop>
         <VerticalNavbarItem href="/" isActive={route === "/"}>
           Components

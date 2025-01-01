@@ -11,18 +11,49 @@ export default () => {
   const overviewNotes = null;
   const examples: ExampleType[] = [{
     title: "Basic",
-    demo: <Breadcrumbs />,
+    demo: (
+      <Breadcrumbs
+        links={[
+          { title: "One", href: "/one" },
+          { title: "Two", href: "/two" },
+          { title: "Three", href: "/three" },
+        ]}
+      />
+    ),
     code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
-        code={`<Breadcrumbs />`}
+        code={`<Breadcrumbs
+  links={[
+    { title: "One", href: "/one" },
+    { title: "Two", href: "/two" },
+    { title: "Three", href: "/three" },
+  ]}
+/>`}
       />
     ),
   }];
   const propsTables = [{
     title: null,
     props: [{
+      name: "links",
+      required: true,
+      type: "BreadcrumbLink[]",
+      default: null,
+      notes: (
+        <div>
+          The type for <InlineCode>BreadcrumbLink</InlineCode> is:
+          <CodeBlock
+            language="tsx"
+            code={`type BreadcrumbLink = {
+  title: string;
+  href: string;
+};`}
+          />
+        </div>
+      ),
+    }, {
       name: "...rest",
       required: false,
       type: `ComponentProps<"nav">`,

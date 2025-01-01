@@ -1,6 +1,15 @@
 import type { ComponentProps } from "preact";
+import { ChevronRightIcon } from "../icons/chevron-right.tsx";
+import { Link } from "./link.tsx";
 
-export type BreadcrumbsType = {} & ComponentProps<"nav">;
+export type BreadcrumbsType = {
+  links: BreadcrumbLink[];
+} & ComponentProps<"nav">;
+
+type BreadcrumbLink = {
+  title: string;
+  href: string;
+};
 
 /** *
  * @function Breadcrumbs
@@ -12,12 +21,12 @@ export type BreadcrumbsType = {} & ComponentProps<"nav">;
  */
 export const Breadcrumbs = (
   {
-    children,
+    links,
     ...rest
   }: BreadcrumbsType,
 ) => {
   const { class: restClass, ...restWithoutClass } = rest;
-  let className = "";
+  let className = "flex gap-2 align-middle";
 
   if (restClass) {
     className += ` ${restClass}`;
@@ -28,7 +37,18 @@ export const Breadcrumbs = (
       {...restWithoutClass}
       class={className}
     >
-      {children}
+      {links.map((link, i) => {
+        const isLastLink = i === links.length - 1;
+
+        return (
+          <>
+            {!isLastLink
+              ? <Link href={link.href} underline="hover">{link.title}</Link>
+              : <div>{link.title}</div>}
+            {!isLastLink && <ChevronRightIcon />}
+          </>
+        );
+      })}
     </nav>
   );
 };

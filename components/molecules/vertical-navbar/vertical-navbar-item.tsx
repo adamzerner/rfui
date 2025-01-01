@@ -8,13 +8,19 @@ export const VerticalNavbarItem = (
     children: ComponentChild;
   },
 ) => {
+  let containerClass = "my-2 block rounded px-3 py-2";
+
+  containerClass += ` ${isActive ? "font-bold" : "hover:bg-neutral-100"}`;
+
   return (
-    <Link
-      href={href}
-      class="my-2 block rounded px-3 py-2 hover:bg-neutral-100"
-      underline="none"
-    >
-      {children}
-    </Link>
+    isActive ? <div class={containerClass}>{children}</div> : (
+      <Link
+        href={href}
+        class={containerClass}
+        underline="none"
+      >
+        {children}
+      </Link>
+    )
   );
 };

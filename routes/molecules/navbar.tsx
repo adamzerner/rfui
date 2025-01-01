@@ -3,7 +3,7 @@ import { InlineCode } from "@/components/atoms/inline-code.tsx";
 import { Link } from "@/components/atoms/link.tsx";
 import {
   ComponentDocsPage,
-  ExamplesSectionType,
+  ExampleType,
 } from "@/components/docs-site/component-docs-page/index.tsx";
 import { Stack } from "@/components/helpers/stack.tsx";
 import {
@@ -50,9 +50,9 @@ export default () => {
       />
     </Stack>
   );
-  const examplesSections: ExamplesSectionType[] = [{
+  const examples: ExampleType[] = [{
     title: "Basic",
-    example: (
+    demo: (
       <Navbar size="xl">
         <NavbarLeft>
           <NavbarItem href="https://one.com">One</NavbarItem>
@@ -60,7 +60,7 @@ export default () => {
         </NavbarLeft>
       </Navbar>
     ),
-    exampleCode: (
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -74,7 +74,7 @@ export default () => {
     ),
   }, {
     title: "NavbarLeft and NavbarRight",
-    example: (
+    demo: (
       <Navbar size="xl">
         <NavbarLeft>
           <NavbarItem href="https://one.com">One</NavbarItem>
@@ -86,7 +86,7 @@ export default () => {
         </NavbarRight>
       </Navbar>
     ),
-    exampleCode: (
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -112,7 +112,7 @@ export default () => {
         <InlineCode>"neutral"</InlineCode>.
       </div>
     ),
-    example: (
+    demo: (
       <Stack class="w-full gap-5">
         <Navbar size="xl" background="neutral">
           <NavbarLeft>
@@ -136,7 +136,7 @@ export default () => {
         </Navbar>
       </Stack>
     ),
-    exampleCode: (
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -175,7 +175,7 @@ export default () => {
         when there are many menu items.
       </div>
     ),
-    example: (
+    demo: (
       <Navbar size="xl">
         <NavbarLeft>
           <NavbarItem href="https://one.com">One</NavbarItem>
@@ -191,7 +191,7 @@ export default () => {
         </NavbarLeft>
       </Navbar>
     ),
-    exampleCode: (
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -240,7 +240,7 @@ export default () => {
         </div>
       </Stack>
     ),
-    example: (
+    demo: (
       <Navbar size="xl">
         <NavbarLeft>
           <NavbarItem href="https://one.com">One</NavbarItem>
@@ -259,7 +259,7 @@ export default () => {
         </NavbarLeft>
       </Navbar>
     ),
-    exampleCode: (
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -485,7 +485,7 @@ export default () => {
       componentName="Navbar"
       sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/molecules/navbar.tsx"
       overviewNotes={overviewNotes}
-      examplesSections={examplesSections}
+      examples={examples}
       propsTables={propsTables}
     />
   );

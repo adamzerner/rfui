@@ -3,17 +3,17 @@ import { InlineCode } from "@/components/atoms/inline-code.tsx";
 import { Link } from "@/components/atoms/link.tsx";
 import {
   ComponentDocsPage,
-  ExamplesSectionType,
+  ExampleType,
 } from "@/components/docs-site/component-docs-page/index.tsx";
 import { Flex } from "@/components/helpers/flex.tsx";
 import { Stack } from "@/components/helpers/stack.tsx";
 
 export default () => {
   const overviewNotes = null;
-  const examplesSections: ExamplesSectionType[] = [{
+  const examples: ExampleType[] = [{
     title: "Basic",
-    example: <Link href="https://example.com">Example</Link>,
-    exampleCode: (
+    demo: <Link href="https://example.com">Example</Link>,
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -42,14 +42,14 @@ export default () => {
         </div>
       </Stack>
     ),
-    example: (
+    demo: (
       <Flex class="gap-3">
         <Link underline="always" href="https://example.com">always</Link>
         <Link underline="hover" href="https://example.com">hover</Link>
         <Link underline="none" href="https://example.com">none</Link>
       </Flex>
     ),
-    exampleCode: (
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -84,8 +84,8 @@ export default () => {
         </div>
       </Stack>
     ),
-    example: <Link inPageLink underline="hover" href="#section">Example</Link>,
-    exampleCode: (
+    demo: <Link inPageLink underline="hover" href="#section">Example</Link>,
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -127,7 +127,7 @@ export default () => {
         </div>
       </Stack>
     ),
-    example: (
+    demo: (
       <Stack class="gap-8">
         <Stack class="gap-5">
           <Link _newTab href="https://example.com" underline="always">
@@ -168,7 +168,7 @@ export default () => {
         </Stack>
       </Stack>
     ),
-    exampleCode: (
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -328,7 +328,7 @@ export default () => {
       componentName="Link"
       sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/atoms/link.tsx"
       overviewNotes={overviewNotes}
-      examplesSections={examplesSections}
+      examples={examples}
       propsTables={propsTables}
     />
   );

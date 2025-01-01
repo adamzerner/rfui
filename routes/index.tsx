@@ -46,12 +46,12 @@ export const getComponents = (signal: Signal<null>) => ({
     {
       name: "Badge",
       href: "/atoms/badge",
-      example: <Badge size="lg">new</Badge>,
+      demo: <Badge size="lg">new</Badge>,
     },
     {
       name: "Blockquote",
       href: "/atoms/blockquote",
-      example: (
+      demo: (
         <Blockquote>
           All models are wrong. Some are useful.
         </Blockquote>
@@ -60,36 +60,36 @@ export const getComponents = (signal: Signal<null>) => ({
     {
       name: "Button",
       href: "/atoms/button",
-      example: (
+      demo: (
         <Button class="!border-neutral-900 !text-neutral-900">Submit</Button>
       ),
     },
     {
       name: "Checkbox",
       href: "/atoms/checkbox",
-      example: <Checkbox />,
+      demo: <Checkbox />,
     },
     {
       name: "CodeBlock",
       href: "/atoms/code-block",
-      example: <CodeBlock code={`const n = 1;`} />,
+      demo: <CodeBlock code={`const n = 1;`} />,
     },
     {
       name: "Highlight",
       href: "/atoms/highlight",
-      example: (
+      demo: (
         <div>
           The <Highlight class="!bg-neutral-100">map</Highlight>{" "}
           is not the territory.
         </div>
       ),
     },
-    { name: "H1", href: "/atoms/h1", example: <H1>Main heading</H1> },
-    { name: "H2", href: "/atoms/h2", example: <H2>Subheading</H2> },
+    { name: "H1", href: "/atoms/h1", demo: <H1>Main heading</H1> },
+    { name: "H2", href: "/atoms/h2", demo: <H2>Subheading</H2> },
     {
       name: "InlineCode",
       href: "/atoms/inline-code",
-      example: (
+      demo: (
         <div>
           Prefer using <InlineCode>const</InlineCode> over{" "}
           <InlineCode>let</InlineCode>.
@@ -99,12 +99,12 @@ export const getComponents = (signal: Signal<null>) => ({
     {
       name: "Input",
       href: "/atoms/input",
-      example: <Input class="bg-neutral-50/20" />,
+      demo: <Input class="bg-neutral-50/20" />,
     },
     {
       name: "Link",
       href: "/atoms/link",
-      example: (
+      demo: (
         <div class="cursor-pointer text-lg text-neutral-700 underline underline-offset-2">
           GitHub
         </div>
@@ -113,7 +113,7 @@ export const getComponents = (signal: Signal<null>) => ({
     {
       name: "OL",
       href: "/atoms/ol",
-      example: (
+      demo: (
         <OL>
           <li>Gold</li>
           <li>Silver</li>
@@ -124,22 +124,22 @@ export const getComponents = (signal: Signal<null>) => ({
     {
       name: "RadioButton",
       href: "/atoms/radio-button",
-      example: <RadioButton />,
+      demo: <RadioButton />,
     },
     {
       name: "Select",
       href: "/atoms/select",
-      example: (
+      demo: (
         <Select class="bg-neutral-50/20">
           <option value="united-states">United States</option>
         </Select>
       ),
     },
-    { name: "Switch", href: "/atoms/switch", example: <Switch /> },
+    { name: "Switch", href: "/atoms/switch", demo: <Switch /> },
     {
       name: "Table",
       href: "/atoms/table",
-      example: (
+      demo: (
         <Table>
           <thead>
             <tr>
@@ -159,19 +159,19 @@ export const getComponents = (signal: Signal<null>) => ({
     {
       name: "Text",
       href: "/atoms/text",
-      example: (
+      demo: (
         <Text>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</Text>
       ),
     },
     {
       name: "Textarea",
       href: "/atoms/textarea",
-      example: <Textarea class="w-5/6 bg-neutral-50/20"></Textarea>,
+      demo: <Textarea class="w-5/6 bg-neutral-50/20"></Textarea>,
     },
     {
       name: "UL",
       href: "/atoms/ul",
-      example: (
+      demo: (
         <UL>
           <li>Milk</li>
           <li>Bread</li>
@@ -184,17 +184,17 @@ export const getComponents = (signal: Signal<null>) => ({
     {
       name: "Alert",
       href: "/molecules/alert",
-      example: (
+      demo: (
         <Alert isDismissable={false}>
           Done
         </Alert>
       ),
     },
-    { name: "Card", href: "/molecules/card", example: <Card>Example</Card> },
+    { name: "Card", href: "/molecules/card", demo: <Card>Example</Card> },
     {
       name: "CheckboxCardGroup",
       href: "/molecules/checkbox-card-group",
-      example: (
+      demo: (
         <CheckboxCardGroup padding="sm">
           <CheckboxCardGroupItem>One</CheckboxCardGroupItem>
           <CheckboxCardGroupItem>Two</CheckboxCardGroupItem>
@@ -204,39 +204,39 @@ export const getComponents = (signal: Signal<null>) => ({
     {
       name: "Footer",
       href: "/molecules/footer",
-      example: <InlineCode>{"<Footer>"}</InlineCode>,
+      demo: <InlineCode>{"<Footer>"}</InlineCode>,
     },
     {
       name: "FormField",
       href: "/molecules/form-field",
-      example: (
+      demo: (
         <FormField label="Email" inputRest={{ class: "bg-neutral-50/20" }} />
       ),
     },
     {
       name: "Modal",
       href: "/molecules/modal",
-      example: <InlineCode>{"<Modal>"}</InlineCode>,
+      demo: <InlineCode>{"<Modal>"}</InlineCode>,
     },
     {
       name: "Navbar",
       href: "/molecules/navbar",
-      example: <InlineCode>{"<Navbar>"}</InlineCode>,
+      demo: <InlineCode>{"<Navbar>"}</InlineCode>,
     },
     {
       name: "NavigationLinks",
       href: "/molecules/navigation-links",
-      example: <InlineCode>{"<NavigationLinks>"}</InlineCode>,
+      demo: <InlineCode>{"<NavigationLinks>"}</InlineCode>,
     },
     {
       name: "PasswordInput",
       href: "/molecules/password-input",
-      example: <PasswordInput class="bg-neutral-50/20" />,
+      demo: <PasswordInput class="bg-neutral-50/20" />,
     },
     {
       name: "RadioButtonGroup",
       href: "/molecules/radio-button-group",
-      example: (
+      demo: (
         <RadioButtonGroup name="example">
           <RadioButtonGroupItem value="one">
             One
@@ -250,7 +250,7 @@ export const getComponents = (signal: Signal<null>) => ({
     {
       name: "RadioButtonCardGroup",
       href: "/molecules/radio-button-card-group",
-      example: (
+      demo: (
         <RadioButtonCardGroup padding="sm">
           <RadioButtonCardGroupItem name="one" selectedItemName={signal}>
             One
@@ -264,12 +264,12 @@ export const getComponents = (signal: Signal<null>) => ({
     {
       name: "Stepper",
       href: "/molecules/stepper",
-      example: <Stepper size="sm" />,
+      demo: <Stepper size="sm" />,
     },
     {
       name: "Tabs",
       href: "/molecules/tabs",
-      example: (
+      demo: (
         <Tabs>
           <TabSection tabName="First">Content</TabSection>
           <TabSection tabName="Second">Content</TabSection>
@@ -281,12 +281,12 @@ export const getComponents = (signal: Signal<null>) => ({
     {
       name: "Container",
       href: "/helpers/container",
-      example: <div class="h-2/3 w-full rounded bg-neutral-100/50"></div>,
+      demo: <div class="h-2/3 w-full rounded bg-neutral-100/50"></div>,
     },
     {
       name: "Flex",
       href: "/helpers/flex",
-      example: (
+      demo: (
         <Flex class="h-2/3 w-full items-stretch justify-between gap-3">
           <div class="w-10 rounded bg-neutral-100/50 p-2"></div>
           <div class="w-10 rounded bg-neutral-100/50 p-2"></div>
@@ -297,7 +297,7 @@ export const getComponents = (signal: Signal<null>) => ({
     {
       name: "Stack",
       href: "/helpers/stack",
-      example: (
+      demo: (
         <Stack class="w-full items-stretch gap-3">
           <div class="h-6 rounded bg-neutral-100/50 p-2"></div>
           <div class="h-6 rounded bg-neutral-100/50 p-2"></div>
@@ -346,7 +346,7 @@ export default () => {
                 <Item
                   name={component.name}
                   href={component.href}
-                  example={component.example || null}
+                  demo={component.demo || null}
                 />
               ))}
             </Flex>
@@ -358,7 +358,7 @@ export default () => {
                 <Item
                   name={component.name}
                   href={component.href}
-                  example={component.example || null}
+                  demo={component.demo || null}
                 />
               ))}
             </Flex>
@@ -370,7 +370,7 @@ export default () => {
                 <Item
                   name={component.name}
                   href={component.href}
-                  example={component.example || null}
+                  demo={component.demo || null}
                 />
               ))}
             </Flex>
@@ -390,10 +390,10 @@ const Category = ({ children }: { children: ComponentChild }) => {
 };
 
 const Item = (
-  { name, href, example }: {
+  { name, href, demo }: {
     name: string;
     href: string;
-    example: JSX.Element;
+    demo: JSX.Element;
   },
 ) => {
   return (
@@ -410,7 +410,7 @@ const Item = (
               paddingRight: 10,
             }}
           >
-            {example}
+            {demo}
           </Flex>
         </CardBody>
         <CardFooter class="text-center">

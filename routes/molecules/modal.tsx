@@ -3,16 +3,16 @@ import { InlineCode } from "@/components/atoms/inline-code.tsx";
 import { Link } from "@/components/atoms/link.tsx";
 import {
   ComponentDocsPage,
-  ExamplesSectionType,
+  ExampleType,
 } from "@/components/docs-site/component-docs-page/index.tsx";
 import { ModalExample } from "@/islands/docs-site/component-docs-page/modal-example.tsx";
 
 export default () => {
   const overviewNotes = null;
-  const examplesSections: ExamplesSectionType[] = [{
+  const examples: ExampleType[] = [{
     title: "Basic",
-    example: <ModalExample>Example</ModalExample>,
-    exampleCode: (
+    demo: <ModalExample>Example</ModalExample>,
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -28,8 +28,8 @@ export default () => {
         Set <InlineCode>heading</InlineCode> to a string.
       </div>
     ),
-    example: <ModalExample heading="Modal heading">Example</ModalExample>,
-    exampleCode: (
+    demo: <ModalExample heading="Modal heading">Example</ModalExample>,
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -104,7 +104,7 @@ export default () => {
       componentName="Modal"
       sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/islands/molecules/modal.tsx"
       overviewNotes={overviewNotes}
-      examplesSections={examplesSections}
+      examples={examples}
       propsTables={propsTables}
     />
   );

@@ -3,17 +3,17 @@ import { InlineCode } from "@/components/atoms/inline-code.tsx";
 import { Link } from "@/components/atoms/link.tsx";
 import {
   ComponentDocsPage,
-  ExamplesSectionType,
+  ExampleType,
 } from "@/components/docs-site/component-docs-page/index.tsx";
 import { Stack } from "@/components/helpers/stack.tsx";
 import { FormField } from "@/components/molecules/form-field.tsx";
 
 export default () => {
   const overviewNotes = null;
-  const examplesSections: ExamplesSectionType[] = [{
+  const examples: ExampleType[] = [{
     title: "Basic",
-    example: <FormField label="Name" />,
-    exampleCode: (
+    demo: <FormField label="Name" />,
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -30,8 +30,8 @@ export default () => {
         </Link>.
       </div>
     ),
-    example: <FormField label="Name" />,
-    exampleCode: (
+    demo: <FormField label="Name" />,
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -46,8 +46,8 @@ export default () => {
         to a string to render helper text above the form field.
       </div>
     ),
-    example: <FormField label="Name" helperText="Your first and last name" />,
-    exampleCode: (
+    demo: <FormField label="Name" helperText="Your first and last name" />,
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -64,8 +64,8 @@ export default () => {
         <InlineCode>false</InlineCode>.
       </div>
     ),
-    example: <FormField label="Name" invalid />,
-    exampleCode: (
+    demo: <FormField label="Name" invalid />,
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -82,8 +82,8 @@ export default () => {
         to a string to render error text above the form field.
       </div>
     ),
-    example: <FormField label="Name" invalid errorText="Invalid name" />,
-    exampleCode: (
+    demo: <FormField label="Name" invalid errorText="Invalid name" />,
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -93,7 +93,7 @@ export default () => {
   }, {
     title: "Helper and error text",
     description: "You can include both helper and error text.",
-    example: (
+    demo: (
       <FormField
         label="Name"
         helperText="Your first and last name"
@@ -101,7 +101,7 @@ export default () => {
         errorText="Invalid name"
       />
     ),
-    exampleCode: (
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -134,7 +134,7 @@ export default () => {
         </div>
       </Stack>
     ),
-    example: (
+    demo: (
       <Stack class="gap-5">
         <FormField
           label="Name"
@@ -148,7 +148,7 @@ export default () => {
         />
       </Stack>
     ),
-    exampleCode: (
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -187,7 +187,7 @@ export default () => {
         </div>
       </Stack>
     ),
-    example: (
+    demo: (
       <Stack class="gap-5">
         <FormField
           label="Name"
@@ -199,7 +199,7 @@ export default () => {
         />
       </Stack>
     ),
-    exampleCode: (
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -225,7 +225,7 @@ export default () => {
         <InlineCode>"md"</InlineCode>.
       </div>
     ),
-    example: (
+    demo: (
       <Stack class="gap-5">
         <FormField
           label="Name"
@@ -250,7 +250,7 @@ export default () => {
         />
       </Stack>
     ),
-    exampleCode: (
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -289,7 +289,7 @@ export default () => {
         to set the width of the form field.
       </div>
     ),
-    example: (
+    demo: (
       <Stack class="gap-5">
         <FormField
           label="Name on card"
@@ -313,7 +313,7 @@ export default () => {
         />
       </Stack>
     ),
-    exampleCode: (
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -371,7 +371,7 @@ export default () => {
         </div>
       </Stack>
     ),
-    example: (
+    demo: (
       <Stack class="gap-5">
         <FormField label="Name" type="text" />
         <FormField label="Email" type="email" />
@@ -385,7 +385,7 @@ export default () => {
         <FormField label="Favorite color" type="color" />
       </Stack>
     ),
-    exampleCode: (
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -416,8 +416,8 @@ export default () => {
         <InlineCode>{`<Input type="checkbox" />`}</InlineCode>.
       </div>
     ),
-    example: <FormField label="Agreed" type="checkbox" />,
-    exampleCode: (
+    demo: <FormField label="Agreed" type="checkbox" />,
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -435,8 +435,8 @@ export default () => {
         </Link>.
       </div>
     ),
-    example: <FormField label="Agreed" type="switch" />,
-    exampleCode: (
+    demo: <FormField label="Agreed" type="switch" />,
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -456,10 +456,10 @@ export default () => {
         <InlineCode>"rfui-password-input"</InlineCode>.
       </div>
     ),
-    example: (
+    demo: (
       <FormField label="Password" type="rfui-password-input" value="foobar" />
     ),
-    exampleCode: (
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -485,8 +485,8 @@ export default () => {
         </div>
       </Stack>
     ),
-    example: <FormField label="Notes" type="textarea" />,
-    exampleCode: (
+    demo: <FormField label="Notes" type="textarea" />,
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -507,7 +507,7 @@ export default () => {
         <InlineCode>radioButtonGroupOptions</InlineCode> like so:
       </div>
     ),
-    example: (
+    demo: (
       <FormField
         label="Plan"
         type="radio-button-group"
@@ -519,7 +519,7 @@ export default () => {
         ]}
       />
     ),
-    exampleCode: (
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -548,7 +548,7 @@ export default () => {
         and use <InlineCode>selectOptions</InlineCode> like so:
       </div>
     ),
-    example: (
+    demo: (
       <FormField
         label="Country"
         type="select"
@@ -559,7 +559,7 @@ export default () => {
         ]}
       />
     ),
-    exampleCode: (
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -845,7 +845,7 @@ export default () => {
       componentName="FormField"
       sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/molecules/form-field.tsx"
       overviewNotes={overviewNotes}
-      examplesSections={examplesSections}
+      examples={examples}
       propsTables={propsTables}
     />
   );

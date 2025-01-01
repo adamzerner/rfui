@@ -4,7 +4,7 @@ import { Link } from "@/components/atoms/link.tsx";
 import { Switch } from "@/components/atoms/switch.tsx";
 import {
   ComponentDocsPage,
-  ExamplesSectionType,
+  ExampleType,
 } from "@/components/docs-site/component-docs-page/index.tsx";
 import { Stack } from "@/components/helpers/stack.tsx";
 
@@ -31,10 +31,10 @@ export default () => {
       </div>
     </Stack>
   );
-  const examplesSections: ExamplesSectionType[] = [{
+  const examples: ExampleType[] = [{
     title: "Basic",
-    example: <Switch />,
-    exampleCode: <CodeBlock class="mt-4" language="tsx" code={`<Switch />`} />,
+    demo: <Switch />,
+    code: <CodeBlock class="mt-4" language="tsx" code={`<Switch />`} />,
   }, {
     title: "Switch",
     description: (
@@ -57,8 +57,8 @@ export default () => {
         </Link>.
       </div>
     ),
-    example: <Switch />,
-    exampleCode: (
+    demo: <Switch />,
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -75,8 +75,8 @@ export default () => {
         <InlineCode>false</InlineCode>.
       </div>
     ),
-    example: <Switch disabled />,
-    exampleCode: (
+    demo: <Switch disabled />,
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -123,7 +123,7 @@ export default () => {
       componentName="Switch"
       sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/atoms/switch.tsx"
       overviewNotes={overviewNotes}
-      examplesSections={examplesSections}
+      examples={examples}
       propsTables={propsTables}
     />
   );

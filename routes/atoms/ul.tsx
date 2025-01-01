@@ -4,23 +4,23 @@ import { Link } from "@/components/atoms/link.tsx";
 import { UL } from "@/components/atoms/ul.tsx";
 import {
   ComponentDocsPage,
-  ExamplesSectionType,
+  ExampleType,
 } from "@/components/docs-site/component-docs-page/index.tsx";
 import { Flex } from "@/components/helpers/flex.tsx";
 import { Stack } from "@/components/helpers/stack.tsx";
 
 export default () => {
   const overviewNotes = null;
-  const examplesSections: ExamplesSectionType[] = [{
+  const examples: ExampleType[] = [{
     title: "Basic",
-    example: (
+    demo: (
       <UL>
         <li>First</li>
         <li>Second</li>
         <li>Third</li>
       </UL>
     ),
-    exampleCode: (
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -44,7 +44,7 @@ export default () => {
         <InlineCode>"bullet"</InlineCode>.
       </div>
     ),
-    example: (
+    demo: (
       <Stack class="gap-5">
         <UL bulletType="bullet">
           <li>One</li>
@@ -73,7 +73,7 @@ export default () => {
         </UL>
       </Stack>
     ),
-    exampleCode: (
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -114,7 +114,7 @@ export default () => {
         <InlineCode>"outside"</InlineCode>.
       </div>
     ),
-    example: (
+    demo: (
       <Stack class="gap-5">
         <UL bulletLocation="outside" bulletType="bullet">
           <li>One</li>
@@ -138,7 +138,7 @@ export default () => {
         </UL>
       </Stack>
     ),
-    exampleCode: (
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -175,7 +175,7 @@ export default () => {
         to make the unordered list larger.
       </div>
     ),
-    example: (
+    demo: (
       <Stack class="gap-5">
         <UL bulletType="bullet" class="text-xl">
           <li>One</li>
@@ -199,7 +199,7 @@ export default () => {
         </UL>
       </Stack>
     ),
-    exampleCode: (
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -236,7 +236,7 @@ export default () => {
         to change the color of the unordered list.
       </div>
     ),
-    example: (
+    demo: (
       <Stack class="gap-5">
         <UL bulletType="bullet" class="text-neutral-500">
           <li>One</li>
@@ -260,7 +260,7 @@ export default () => {
         </UL>
       </Stack>
     ),
-    exampleCode: (
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -292,7 +292,7 @@ export default () => {
     title: "Custom",
     description:
       "You'll have to do a little more work yourself for custom bullet types.",
-    example: (
+    demo: (
       <UL bulletType="none">
         <li>
           <Flex class="gap-2">
@@ -314,7 +314,7 @@ export default () => {
         </li>
       </UL>
     ),
-    exampleCode: (
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -392,7 +392,7 @@ export default () => {
       componentName="UL"
       sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/atoms/ul.tsx"
       overviewNotes={overviewNotes}
-      examplesSections={examplesSections}
+      examples={examples}
       propsTables={propsTables}
     />
   );

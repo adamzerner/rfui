@@ -5,29 +5,29 @@ import {
 import { titleToHref } from "@/utilities/title-to-href.ts";
 
 type OnThisPageType = {
-  examplesSectionTitles: string[];
+  exampleTitles: string[];
   propsTableTitles: string[];
 };
 
 export const OnThisPage = (
-  { examplesSectionTitles, propsTableTitles }: OnThisPageType,
+  { exampleTitles, propsTableTitles }: OnThisPageType,
 ) => {
   const linkItems: LinkItemType[] = [
     { name: "On this page", isHeader: true },
     { name: "Overview", href: "#overview", inPage: true },
     {
       name: "Examples",
-      children: examplesSectionTitles.map((examplesSectionTitle) => ({
-        name: examplesSectionTitle,
-        href: `#example-${titleToHref(examplesSectionTitle)}`,
+      children: exampleTitles.map((title) => ({
+        name: title,
+        href: `#example-${titleToHref(title)}`,
         inPage: true,
       })),
     },
     {
       name: "Props",
-      children: propsTableTitles.map((propsTableTitle, i) => ({
-        name: propsTableTitle,
-        href: i === 0 ? "#props" : `#props-${titleToHref(propsTableTitle)}`,
+      children: propsTableTitles.map((title, i) => ({
+        name: title,
+        href: i === 0 ? "#props" : `#props-${titleToHref(title)}`,
         inPage: true,
       })),
     },

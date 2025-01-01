@@ -2,22 +2,22 @@ import { CodeBlock } from "@/components/atoms/code-block.tsx";
 import { InlineCode } from "@/components/atoms/inline-code.tsx";
 import {
   ComponentDocsPage,
-  ExamplesSectionType,
+  ExampleType,
 } from "@/components/docs-site/component-docs-page/index.tsx";
 import { Tabs, TabSection } from "@/islands/molecules/tabs.tsx";
 
 export default () => {
   const overviewNotes = null;
-  const examplesSections: ExamplesSectionType[] = [{
+  const examples: ExampleType[] = [{
     title: "Basic",
-    example: (
+    demo: (
       <Tabs>
         <TabSection tabName="First">One</TabSection>
         <TabSection tabName="Second">Two</TabSection>
         <TabSection tabName="Third">Three</TabSection>
       </Tabs>
     ),
-    exampleCode: (
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -37,14 +37,14 @@ export default () => {
         <InlineCode>false</InlineCode>.
       </div>
     ),
-    example: (
+    demo: (
       <Tabs fullWidth>
         <TabSection tabName="First">One</TabSection>
         <TabSection tabName="Second">Two</TabSection>
         <TabSection tabName="Third">Three</TabSection>
       </Tabs>
     ),
-    exampleCode: (
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -65,14 +65,14 @@ export default () => {
         that you want to display when the component loads.
       </div>
     ),
-    example: (
+    demo: (
       <Tabs initialActiveTab="Second">
         <TabSection tabName="First">One</TabSection>
         <TabSection tabName="Second">Two</TabSection>
         <TabSection tabName="Third">Three</TabSection>
       </Tabs>
     ),
-    exampleCode: (
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -127,7 +127,7 @@ export default () => {
       componentName="Tabs"
       sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/islands/molecules/tabs.tsx"
       overviewNotes={overviewNotes}
-      examplesSections={examplesSections}
+      examples={examples}
       propsTables={propsTables}
     />
   );

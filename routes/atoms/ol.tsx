@@ -4,21 +4,21 @@ import { Link } from "@/components/atoms/link.tsx";
 import { OL } from "@/components/atoms/ol.tsx";
 import {
   ComponentDocsPage,
-  ExamplesSectionType,
+  ExampleType,
 } from "@/components/docs-site/component-docs-page/index.tsx";
 
 export default () => {
   const overviewNotes = null;
-  const examplesSections: ExamplesSectionType[] = [{
+  const examples: ExampleType[] = [{
     title: "Basic",
-    example: (
+    demo: (
       <OL>
         <li>First</li>
         <li>Second</li>
         <li>Third</li>
       </OL>
     ),
-    exampleCode: (
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -31,14 +31,14 @@ export default () => {
     ),
   }, {
     title: "Outside",
-    example: (
+    demo: (
       <OL bulletLocation="outside">
         <li>First</li>
         <li>Second</li>
         <li>Third</li>
       </OL>
     ),
-    exampleCode: (
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -98,7 +98,7 @@ export default () => {
       componentName="OL"
       sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/atoms/ol.tsx"
       overviewNotes={overviewNotes}
-      examplesSections={examplesSections}
+      examples={examples}
       propsTables={propsTables}
     />
   );

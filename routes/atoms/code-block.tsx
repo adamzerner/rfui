@@ -3,15 +3,15 @@ import { InlineCode } from "@/components/atoms/inline-code.tsx";
 import { Link } from "@/components/atoms/link.tsx";
 import {
   ComponentDocsPage,
-  ExamplesSectionType,
+  ExampleType,
 } from "@/components/docs-site/component-docs-page/index.tsx";
 
 export default () => {
   const overviewNotes = null;
-  const examplesSections: ExamplesSectionType[] = [{
+  const examples: ExampleType[] = [{
     title: "Basic",
-    example: <CodeBlock code={`console.log("Hello world");`} />,
-    exampleCode: (
+    demo: <CodeBlock code={`console.log("Hello world");`} />,
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -30,7 +30,7 @@ export default () => {
         instead of a normal string.
       </div>
     ),
-    example: (
+    demo: (
       <CodeBlock
         language="ts"
         code={`function sayHello() {
@@ -38,7 +38,7 @@ export default () => {
 }`}
       />
     ),
-    exampleCode: (
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -63,7 +63,7 @@ export default () => {
         </Link>) that you check off the languages you need.
       </div>
     ),
-    example: (
+    demo: (
       <CodeBlock
         language="ts"
         code={`const firstName = 'John';
@@ -71,7 +71,7 @@ const lastName = 'Doe';
 const fullName = firstName + " " + lastName;`}
       />
     ),
-    exampleCode: (
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -150,7 +150,7 @@ const fullName = firstName + " " + lastName;\`}
       componentName="CodeBlock"
       sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/atoms/code-block.tsx"
       overviewNotes={overviewNotes}
-      examplesSections={examplesSections}
+      examples={examples}
       propsTables={propsTables}
     />
   );

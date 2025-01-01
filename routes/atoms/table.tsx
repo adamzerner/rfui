@@ -4,15 +4,15 @@ import { Link } from "@/components/atoms/link.tsx";
 import { Table } from "@/components/atoms/table.tsx";
 import {
   ComponentDocsPage,
-  ExamplesSectionType,
+  ExampleType,
 } from "@/components/docs-site/component-docs-page/index.tsx";
 import { Stack } from "@/components/helpers/stack.tsx";
 
 export default () => {
   const overviewNotes = null;
-  const examplesSections: ExamplesSectionType[] = [{
+  const examples: ExampleType[] = [{
     title: "Basic",
-    example: (
+    demo: (
       <Table>
         <thead>
           <tr>
@@ -32,7 +32,7 @@ export default () => {
         </tbody>
       </Table>
     ),
-    exampleCode: (
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -63,7 +63,7 @@ export default () => {
         Set <InlineCode>bordered</InlineCode> to <InlineCode>false</InlineCode>.
       </div>
     ),
-    example: (
+    demo: (
       <Table bordered={false}>
         <thead>
           <tr>
@@ -83,7 +83,7 @@ export default () => {
         </tbody>
       </Table>
     ),
-    exampleCode: (
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -114,7 +114,7 @@ export default () => {
         Set <InlineCode>hover</InlineCode> to <InlineCode>false</InlineCode>.
       </div>
     ),
-    example: (
+    demo: (
       <Table hover={false}>
         <thead>
           <tr>
@@ -134,7 +134,7 @@ export default () => {
         </tbody>
       </Table>
     ),
-    exampleCode: (
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -179,7 +179,7 @@ export default () => {
         </div>
       </Stack>
     ),
-    example: (
+    demo: (
       <Table striped bordered={false}>
         <thead>
           <tr>
@@ -207,7 +207,7 @@ export default () => {
         </tbody>
       </Table>
     ),
-    exampleCode: (
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -246,7 +246,7 @@ export default () => {
         Set <InlineCode>striped</InlineCode> to <InlineCode>true</InlineCode>.
       </div>
     ),
-    example: (
+    demo: (
       <Table striped>
         <thead>
           <tr>
@@ -274,7 +274,7 @@ export default () => {
         </tbody>
       </Table>
     ),
-    exampleCode: (
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -320,7 +320,7 @@ export default () => {
         </div>
       </Stack>
     ),
-    example: (
+    demo: (
       <Table stickyHeader>
         <thead>
           <tr>
@@ -340,7 +340,7 @@ export default () => {
         </tbody>
       </Table>
     ),
-    exampleCode: (
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -378,7 +378,7 @@ export default () => {
         </div>
       </Stack>
     ),
-    example: (
+    demo: (
       <Table stickyFirstColumn>
         <thead>
           <tr>
@@ -398,7 +398,7 @@ export default () => {
         </tbody>
       </Table>
     ),
-    exampleCode: (
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -432,7 +432,7 @@ export default () => {
         <InlineCode>true</InlineCode>.
       </div>
     ),
-    example: (
+    demo: (
       <Table stickyHeader stickyFirstColumn>
         <thead>
           <tr>
@@ -452,7 +452,7 @@ export default () => {
         </tbody>
       </Table>
     ),
-    exampleCode: (
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -483,7 +483,7 @@ export default () => {
         Set <InlineCode>condensed</InlineCode> to <InlineCode>true</InlineCode>.
       </div>
     ),
-    example: (
+    demo: (
       <Table condensed>
         <thead>
           <tr>
@@ -503,7 +503,7 @@ export default () => {
         </tbody>
       </Table>
     ),
-    exampleCode: (
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -621,7 +621,7 @@ export default () => {
       componentName="Table"
       sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/atoms/table.tsx"
       overviewNotes={overviewNotes}
-      examplesSections={examplesSections}
+      examples={examples}
       propsTables={propsTables}
     />
   );

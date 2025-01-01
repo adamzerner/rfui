@@ -3,7 +3,7 @@ import { InlineCode } from "@/components/atoms/inline-code.tsx";
 import { Link } from "@/components/atoms/link.tsx";
 import {
   ComponentDocsPage,
-  ExamplesSectionType,
+  ExampleType,
 } from "@/components/docs-site/component-docs-page/index.tsx";
 import { Stack } from "@/components/helpers/stack.tsx";
 import { Alert, AlertBody, AlertHeader } from "@/islands/molecules/alert.tsx";
@@ -17,10 +17,10 @@ export default () => {
       </Link>.
     </div>
   );
-  const examplesSections: ExamplesSectionType[] = [{
+  const examples: ExampleType[] = [{
     title: "Basic",
-    example: <Alert>Your profile has been saved</Alert>,
-    exampleCode: (
+    demo: <Alert>Your profile has been saved</Alert>,
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -29,13 +29,13 @@ export default () => {
     ),
   }, {
     title: "AlertHeader and AlertBody",
-    example: (
+    demo: (
       <Alert>
         <AlertHeader>Success</AlertHeader>
         <AlertBody>Your profile has been saved.</AlertBody>
       </Alert>
     ),
-    exampleCode: (
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -57,7 +57,7 @@ export default () => {
         <InlineCode>"neutral"</InlineCode>.
       </div>
     ),
-    example: (
+    demo: (
       <Stack class="w-full gap-5">
         <Alert variant="success">
           <AlertHeader>Success</AlertHeader>
@@ -81,7 +81,7 @@ export default () => {
         </Alert>
       </Stack>
     ),
-    exampleCode: (
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -117,7 +117,7 @@ export default () => {
         <InlineCode>false</InlineCode>.
       </div>
     ),
-    example: (
+    demo: (
       <Stack class="w-full gap-5">
         <Alert isDismissable={false} variant="success">
           <AlertHeader>Success</AlertHeader>
@@ -141,7 +141,7 @@ export default () => {
         </Alert>
       </Stack>
     ),
-    exampleCode: (
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -254,7 +254,7 @@ export default () => {
       componentName="Alert"
       sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/islands/molecules/alert.tsx"
       overviewNotes={overviewNotes}
-      examplesSections={examplesSections}
+      examples={examples}
       propsTables={propsTables}
     />
   );

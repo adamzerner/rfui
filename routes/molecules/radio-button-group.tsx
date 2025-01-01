@@ -2,7 +2,7 @@ import { CodeBlock } from "@/components/atoms/code-block.tsx";
 import { InlineCode } from "@/components/atoms/inline-code.tsx";
 import {
   ComponentDocsPage,
-  ExamplesSectionType,
+  ExampleType,
 } from "@/components/docs-site/component-docs-page/index.tsx";
 import {
   RadioButtonGroup,
@@ -12,9 +12,9 @@ import {
 export default () => {
   const overviewNotes =
     "Note: The example below won't work due to a quirk in the docs.";
-  const examplesSections: ExamplesSectionType[] = [{
+  const examples: ExampleType[] = [{
     title: "Basic",
-    example: (
+    demo: (
       <RadioButtonGroup name="plan">
         <RadioButtonGroupItem value="free">
           Free
@@ -27,7 +27,7 @@ export default () => {
         </RadioButtonGroupItem>
       </RadioButtonGroup>
     ),
-    exampleCode: (
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -46,7 +46,7 @@ export default () => {
     ),
   }, {
     title: "Controlled",
-    example: (
+    demo: (
       <RadioButtonGroup name="plan">
         <RadioButtonGroupItem value="free">
           Free
@@ -59,7 +59,7 @@ export default () => {
         </RadioButtonGroupItem>
       </RadioButtonGroup>
     ),
-    exampleCode: (
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -164,7 +164,7 @@ export default () => {
       componentName="RadioButtonGroup"
       sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/islands/molecules/radio-button-group.tsx"
       overviewNotes={overviewNotes}
-      examplesSections={examplesSections}
+      examples={examples}
       propsTables={propsTables}
     />
   );

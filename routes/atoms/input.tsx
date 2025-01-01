@@ -4,7 +4,7 @@ import { Input } from "@/components/atoms/input.tsx";
 import { Link } from "@/components/atoms/link.tsx";
 import {
   ComponentDocsPage,
-  ExamplesSectionType,
+  ExampleType,
 } from "@/components/docs-site/component-docs-page/index.tsx";
 import { Stack } from "@/components/helpers/stack.tsx";
 
@@ -22,10 +22,10 @@ export default () => {
       component instead.
     </div>
   );
-  const examplesSections: ExamplesSectionType[] = [{
+  const examples: ExampleType[] = [{
     title: "Basic",
-    example: <Input />,
-    exampleCode: <CodeBlock class="mt-4" language="tsx" code={`<Input />`} />,
+    demo: <Input />,
+    code: <CodeBlock class="mt-4" language="tsx" code={`<Input />`} />,
   }, {
     title: "Controlled",
     description: (
@@ -40,8 +40,8 @@ export default () => {
         </Link>.
       </div>
     ),
-    example: <Input />,
-    exampleCode: (
+    demo: <Input />,
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -58,14 +58,14 @@ export default () => {
         <InlineCode>"md"</InlineCode>.
       </div>
     ),
-    example: (
+    demo: (
       <Stack class="w-fit gap-5">
         <Input size="sm" />
         <Input size="md" />
         <Input size="lg" />
       </Stack>
     ),
-    exampleCode: (
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -90,7 +90,7 @@ export default () => {
         </Link>.
       </div>
     ),
-    example: (
+    demo: (
       <Stack class="w-fit gap-5">
         <Input rounded="square" />
         <Input rounded="sm" />
@@ -98,7 +98,7 @@ export default () => {
         <Input rounded="full" />
       </Stack>
     ),
-    exampleCode: (
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -120,8 +120,8 @@ export default () => {
         <InlineCode>false</InlineCode>.
       </div>
     ),
-    example: <Input disabled />,
-    exampleCode: (
+    demo: <Input disabled />,
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -138,8 +138,8 @@ export default () => {
         <InlineCode>false</InlineCode>.
       </div>
     ),
-    example: <Input readonly value="example" />,
-    exampleCode: (
+    demo: <Input readonly value="example" />,
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -156,8 +156,8 @@ export default () => {
         <InlineCode>false</InlineCode>.
       </div>
     ),
-    example: <Input invalid value="example" />,
-    exampleCode: (
+    demo: <Input invalid value="example" />,
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -185,7 +185,7 @@ export default () => {
         instead.
       </div>
     ),
-    example: (
+    demo: (
       <Stack class="gap-5">
         <Input type="text" placeholder="text" />
         <Input type="email" placeholder="email" />
@@ -200,7 +200,7 @@ export default () => {
         <Input type="color" />
       </Stack>
     ),
-    exampleCode: (
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -283,7 +283,7 @@ export default () => {
       componentName="Input"
       sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/atoms/input.tsx"
       overviewNotes={overviewNotes}
-      examplesSections={examplesSections}
+      examples={examples}
       propsTables={propsTables}
     />
   );

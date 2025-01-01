@@ -5,7 +5,7 @@ import { OL } from "@/components/atoms/ol.tsx";
 import { UL } from "@/components/atoms/ul.tsx";
 import {
   ComponentDocsPage,
-  ExamplesSectionType,
+  ExampleType,
 } from "@/components/docs-site/component-docs-page/index.tsx";
 import { Stack } from "@/components/helpers/stack.tsx";
 import { PasswordInput } from "@/islands/molecules/password-input.tsx";
@@ -39,10 +39,10 @@ export default () => {
       </div>
     </Stack>
   );
-  const examplesSections: ExamplesSectionType[] = [{
+  const examples: ExampleType[] = [{
     title: "Basic",
-    example: <PasswordInput />,
-    exampleCode: (
+    demo: <PasswordInput />,
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -63,8 +63,8 @@ export default () => {
         </Link>.
       </div>
     ),
-    example: <PasswordInput />,
-    exampleCode: (
+    demo: <PasswordInput />,
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -118,8 +118,8 @@ export default () => {
         </UL>
       </div>
     ),
-    example: <PasswordInput defaultVisibility="shown" />,
-    exampleCode: (
+    demo: <PasswordInput defaultVisibility="shown" />,
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -136,14 +136,14 @@ export default () => {
         <InlineCode>"md"</InlineCode>.
       </div>
     ),
-    example: (
+    demo: (
       <Stack class="gap-5">
         <PasswordInput size="sm" />
         <PasswordInput size="md" />
         <PasswordInput size="lg" />
       </Stack>
     ),
-    exampleCode: (
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -168,7 +168,7 @@ export default () => {
         </Link>.
       </div>
     ),
-    example: (
+    demo: (
       <Stack class="gap-5">
         <PasswordInput rounded="square" />
         <PasswordInput rounded="sm" />
@@ -176,7 +176,7 @@ export default () => {
         <PasswordInput rounded="full" />
       </Stack>
     ),
-    exampleCode: (
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -198,8 +198,8 @@ export default () => {
         <InlineCode>false</InlineCode>.
       </div>
     ),
-    example: <PasswordInput invalid />,
-    exampleCode: (
+    demo: <PasswordInput invalid />,
+    code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
@@ -320,7 +320,7 @@ export default () => {
       componentName="PasswordInput"
       sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/islands/molecules/password-input.tsx"
       overviewNotes={overviewNotes}
-      examplesSections={examplesSections}
+      examples={examples}
       propsTables={propsTables}
     />
   );

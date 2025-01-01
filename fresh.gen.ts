@@ -50,6 +50,7 @@ import * as $molecules_radio_button_card_group from "./routes/molecules/radio-bu
 import * as $molecules_radio_button_group from "./routes/molecules/radio-button-group.tsx";
 import * as $molecules_stepper from "./routes/molecules/stepper.tsx";
 import * as $molecules_tabs from "./routes/molecules/tabs.tsx";
+import * as $molecules_vertical_navbar from "./routes/molecules/vertical-navbar.tsx";
 import * as $docs_site_component_docs_page_modal_example from "./islands/docs-site/component-docs-page/modal-example.tsx";
 import * as $molecules_alert_1 from "./islands/molecules/alert.tsx";
 import * as $molecules_checkbox_card_group_1 from "./islands/molecules/checkbox-card-group.tsx";
@@ -116,6 +117,7 @@ const manifest = {
     "./routes/molecules/radio-button-group.tsx": $molecules_radio_button_group,
     "./routes/molecules/stepper.tsx": $molecules_stepper,
     "./routes/molecules/tabs.tsx": $molecules_tabs,
+    "./routes/molecules/vertical-navbar.tsx": $molecules_vertical_navbar,
   },
   islands: {
     "./islands/docs-site/component-docs-page/modal-example.tsx":

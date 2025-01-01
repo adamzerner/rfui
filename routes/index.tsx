@@ -281,6 +281,11 @@ export const getComponents = (signal: Signal<null>) => ({
         </Tabs>
       ),
     },
+    {
+      name: "VerticalNavbar",
+      href: "/molecules/vertical-navbar",
+      demo: <InlineCode>{"<VerticalNavbar>"}</InlineCode>,
+    },
   ],
   helpers: [
     {

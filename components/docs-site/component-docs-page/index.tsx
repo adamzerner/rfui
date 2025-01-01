@@ -51,12 +51,12 @@ export const ComponentDocsPage = (
         <Examples examples={examples} />
         <PropsTables propsTables={propsTables} />
       </main>
-      <div class="hidden flex-shrink-0 lg:block">
+      <section class="hidden flex-shrink-0 lg:block">
         <OnThisPage
           exampleTitles={exampleTitles}
           propsTableTitles={propsTableTitles}
         />
-      </div>
+      </section>
     </Flex>
   );
 };

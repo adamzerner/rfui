@@ -56,9 +56,9 @@ const LinkItems = (
   },
 ) => {
   return (
-    <ul>
+    <>
       {linkItems.map((linkItem) => (
-        <li class="my-3 overflow-x-hidden text-ellipsis whitespace-nowrap">
+        <>
           <LinkItem linkItem={linkItem} indentationLevel={indentationLevel} />
           {linkItem.children && (
             <LinkItems
@@ -66,9 +66,9 @@ const LinkItems = (
               indentationLevel={indentationLevel + 1}
             />
           )}
-        </li>
+        </>
       ))}
-    </ul>
+    </>
   );
 };
 
@@ -79,22 +79,24 @@ const LinkItem = (
   },
 ) => {
   const indentationLevelClass = `ml-${indentationLevel * 4}`;
+  const sharedClass =
+    `${indentationLevelClass} block my-3 overflow-x-hidden text-ellipsis whitespace-nowrap`;
 
   if (linkItem.isHeader) {
     return (
-      <div class={`mb-2 font-bold text-neutral-700 ${indentationLevelClass}`}>
+      <div class={`font-bold text-neutral-700 ${sharedClass}`}>
         {linkItem.name}
       </div>
     );
   } else if (!linkItem.href) {
-    return <div class={indentationLevelClass}>{linkItem.name}</div>;
+    return <div class={sharedClass}>{linkItem.name}</div>;
   } else {
     return (
       <Link
         inPageLink={linkItem.inPage}
         underline="hover"
         href={linkItem.href}
-        class={indentationLevelClass}
+        class={sharedClass}
       >
         {linkItem.name}
       </Link>

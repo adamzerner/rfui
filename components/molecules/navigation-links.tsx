@@ -58,7 +58,7 @@ const LinkItems = (
   return (
     <ul>
       {linkItems.map((linkItem) => (
-        <li class="my-3">
+        <li class="my-3 overflow-x-hidden text-ellipsis whitespace-nowrap">
           <LinkItem linkItem={linkItem} indentationLevel={indentationLevel} />
           {linkItem.children && (
             <LinkItems
@@ -82,7 +82,7 @@ const LinkItem = (
 
   if (linkItem.isHeader) {
     return (
-      <div class={`mb-2 font-bold text-neutral-700 ${indentationLevel}`}>
+      <div class={`mb-2 font-bold text-neutral-700 ${indentationLevelClass}`}>
         {linkItem.name}
       </div>
     );

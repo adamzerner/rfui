@@ -4,7 +4,11 @@ import {
   NavbarLeft,
 } from "@/islands/molecules/navbar/index.tsx";
 
-export const Navbar = ({ route }: { route: string }) => {
+type NavbarType = {
+  route: string;
+};
+
+export const Navbar = ({ route }: NavbarType) => {
   return (
     <RFUINavbar size="2xl">
       <NavbarLeft>

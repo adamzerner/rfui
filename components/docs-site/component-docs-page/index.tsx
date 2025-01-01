@@ -7,19 +7,19 @@ import { getImportStatement } from "./get-import-statement.ts";
 import { OnThisPage } from "./on-this-page.tsx";
 import { PropsTables, PropsTableType } from "./props-tables.tsx";
 
-export type ExampleType = {
-  title: string;
-  description?: JSX.Element | string;
-  demo: JSX.Element;
-  code: JSX.Element;
-};
-
 export type ComponentDocsPageType = {
   componentName: string;
   sourceCodeUrl: string;
   overviewNotes: JSX.Element | string | null;
   examples: ExampleType[];
   propsTables: PropsTableType[];
+};
+
+export type ExampleType = {
+  title: string;
+  description?: JSX.Element | string;
+  demo: JSX.Element;
+  code: JSX.Element;
 };
 
 export const ComponentDocsPage = (

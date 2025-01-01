@@ -3,8 +3,10 @@ import { Modal } from "@/islands/molecules/modal.tsx";
 import { ComponentChild } from "preact";
 import { useState } from "preact/hooks";
 
+type ModalExampleProps = { heading?: string; children: ComponentChild };
+
 export const ModalExample = (
-  { heading, children }: { heading?: string; children: ComponentChild },
+  { heading, children }: ModalExampleProps,
 ) => {
   const [isOpen, setIsOpen] = useState(false);
   const open = () => {

@@ -6,6 +6,7 @@ import {
   ComponentDocsPage,
   ExampleType,
 } from "@/components/docs-site/component-docs-page/index.tsx";
+import { Stack } from "@/components/helpers/stack.tsx";
 
 export default () => {
   const overviewNotes = null;
@@ -33,6 +34,84 @@ export default () => {
 />`}
       />
     ),
+  }, {
+    title: "Size",
+    demo: (
+      <Stack class="gap-6">
+        <Breadcrumbs
+          size="sm"
+          links={[
+            { title: "One", href: "/one" },
+            { title: "Two", href: "/two" },
+            { title: "Three", href: "/three" },
+          ]}
+        />
+        <Breadcrumbs
+          size="md"
+          links={[
+            { title: "One", href: "/one" },
+            { title: "Two", href: "/two" },
+            { title: "Three", href: "/three" },
+          ]}
+        />
+        <Breadcrumbs
+          size="lg"
+          links={[
+            { title: "One", href: "/one" },
+            { title: "Two", href: "/two" },
+            { title: "Three", href: "/three" },
+          ]}
+        />
+        <Breadcrumbs
+          size="xl"
+          links={[
+            { title: "One", href: "/one" },
+            { title: "Two", href: "/two" },
+            { title: "Three", href: "/three" },
+          ]}
+        />
+      </Stack>
+    ),
+    code: (
+      <CodeBlock
+        class="mt-4"
+        language="tsx"
+        code={`<Stack class="gap-6">
+  <Breadcrumbs
+    size="sm"
+    links={[
+      { title: "One", href: "/one" },
+      { title: "Two", href: "/two" },
+      { title: "Three", href: "/three" },
+    ]}
+  />
+  <Breadcrumbs
+    size="md"
+    links={[
+      { title: "One", href: "/one" },
+      { title: "Two", href: "/two" },
+      { title: "Three", href: "/three" },
+    ]}
+  />
+  <Breadcrumbs
+    size="lg"
+    links={[
+      { title: "One", href: "/one" },
+      { title: "Two", href: "/two" },
+      { title: "Three", href: "/three" },
+    ]}
+  />
+  <Breadcrumbs
+    size="xl"
+    links={[
+      { title: "One", href: "/one" },
+      { title: "Two", href: "/two" },
+      { title: "Three", href: "/three" },
+    ]}
+  />
+</Stack>`}
+      />
+    ),
   }];
   const propsTables = [{
     title: null,
@@ -53,6 +132,12 @@ export default () => {
           />
         </div>
       ),
+    }, {
+      name: "size",
+      required: false,
+      type: '"sm" | "md" | "lg" | "xl"',
+      default: '"sm"',
+      notes: null,
     }, {
       name: "...rest",
       required: false,

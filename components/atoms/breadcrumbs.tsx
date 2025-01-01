@@ -4,7 +4,8 @@ import { Link } from "./link.tsx";
 
 export type BreadcrumbsType = {
   links: BreadcrumbLink[];
-} & ComponentProps<"nav">;
+  size?: "sm" | "md" | "lg" | "xl";
+} & Omit<ComponentProps<"nav">, "size">;
 
 type BreadcrumbLink = {
   title: string;
@@ -17,16 +18,37 @@ type BreadcrumbLink = {
  * @see {@link https://rfui.deno.dev/atoms/breadcrumbs}
  *
  * @example
- * <Breadcrumbs />
+ * <Breadcrumbs
+     links={[
+       { title: "One", href: "/one" },
+       { title: "Two", href: "/two" },
+       { title: "Three", href: "/three" },
+     ]}
+   />
  */
 export const Breadcrumbs = (
   {
     links,
+    size = "sm",
     ...rest
   }: BreadcrumbsType,
 ) => {
   const { class: restClass, ...restWithoutClass } = rest;
-  let className = "flex items-center gap-2 text-sm text-neutral-700";
+  const chevronClassName = size === "xl"
+    ? "!h-5 !w-5"
+    : size === "lg"
+    ? "!h-[18px] !w-[18px]"
+    : size === "md"
+    ? "!h-4 !w-4"
+    : "!h-3.5 !w-3.5";
+  let className = "flex items-center gap-2 text-neutral-700" +
+    (size === "xl"
+      ? " text-xl"
+      : size === "lg"
+      ? " text-lg"
+      : size === "sm"
+      ? " text-sm"
+      : "");
 
   if (restClass) {
     className += ` ${restClass}`;
@@ -34,8 +56,8 @@ export const Breadcrumbs = (
 
   return (
     <nav
-      {...restWithoutClass}
       class={className}
+      {...restWithoutClass}
     >
       {links.map((link, i) => {
         const isLastLink = i === links.length - 1;
@@ -44,8 +66,8 @@ export const Breadcrumbs = (
           <>
             {!isLastLink
               ? <Link href={link.href} underline="hover">{link.title}</Link>
-              : <div>{link.title}</div>}
-            {!isLastLink && <ChevronRightIcon class="!h-4 !w-4" />}
+              : <span>{link.title}</span>}
+            {!isLastLink && <ChevronRightIcon class={chevronClassName} />}
           </>
         );
       })}

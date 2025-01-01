@@ -2,6 +2,8 @@ export { Badge } from "./components/atoms/badge.tsx";
 export type { BadgeType } from "./components/atoms/badge.tsx";
 export { Blockquote } from "./components/atoms/blockquote.tsx";
 export type { BlockquoteType } from "./components/atoms/blockquote.tsx";
+export { Breadcrumbs } from "./components/atoms/breadcrumbs.tsx";
+export type { BreadcrumbsType } from "./components/atoms/breadcrumbs.tsx";
 export { Button } from "./components/atoms/button.tsx";
 export type { ButtonType } from "./components/atoms/button.tsx";
 export { Checkbox } from "./components/atoms/checkbox.tsx";

@@ -58,6 +58,15 @@ export const getComponents = (signal: Signal<null>) => ({
       ),
     },
     {
+      name: "Breadcrumbs",
+      href: "/atoms/breadcrumbs",
+      demo: (
+        <Blockquote>
+          All models are wrong. Some are useful.
+        </Blockquote>
+      ),
+    },
+    {
       name: "Button",
       href: "/atoms/button",
       demo: (

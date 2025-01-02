@@ -26,7 +26,7 @@ export const VerticalNavbar = (
   };
   const { class: restClass, ...restWithoutClass } = rest;
   let containerClass =
-    "flex flex-col justify-between px-3 py-2 text-neutral-900 max-sm:w-full max-sm:shrink-0 sm:sticky sm:top-0 sm:h-screen sm:min-w-[250px] sm:overflow-y-auto";
+    "px-3 py-2 text-neutral-900 max-sm:w-full max-sm:shrink-0 sm:sticky sm:top-0 sm:h-screen sm:min-w-[250px] sm:overflow-y-auto";
 
   containerClass += ` ${background === "neutral" ? "bg-neutral-50/75" : ""}`;
 
@@ -36,11 +36,19 @@ export const VerticalNavbar = (
 
   return (
     <nav class={containerClass} {...restWithoutClass}>
-      <HamburgerMenuToggle
-        isOpen={isOpen}
-        toggleHamburgerMenu={toggleIsOpen}
-      />
-      {isOpen && children}
+      {/* Desktop */}
+      <div class="flex h-full flex-col justify-between max-sm:hidden">
+        {children}
+      </div>
+
+      {/* Mobile */}
+      <div class="sm:hidden">
+        <HamburgerMenuToggle
+          isOpen={isOpen}
+          toggleHamburgerMenu={toggleIsOpen}
+        />
+        {isOpen && children}
+      </div>
     </nav>
   );
 };

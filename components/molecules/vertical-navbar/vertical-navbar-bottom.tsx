@@ -4,7 +4,7 @@ export const VerticalNavbarBottom = (
   { children }: { children: ComponentChild },
 ) => {
   return (
-    <section class="">
+    <section>
       {children}
     </section>
   );

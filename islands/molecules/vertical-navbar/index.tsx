@@ -13,7 +13,9 @@ export type VerticalNavbarType = {
  * @example
  */
 
-export const VerticalNavbar = ({ background = "neutral", ...rest }) => {
+export const VerticalNavbar = (
+  { background = "neutral", children, ...rest }: VerticalNavbarType,
+) => {
   const { class: restClass, ...restWithoutClass } = rest;
   let containerClass =
     "flex flex-col justify-between px-3 py-2 text-neutral-900 max-sm:w-full max-sm:shrink-0 sm:sticky sm:top-0 sm:h-screen sm:min-w-[250px] sm:overflow-y-auto";
@@ -24,5 +26,9 @@ export const VerticalNavbar = ({ background = "neutral", ...rest }) => {
     containerClass += ` ${restClass}`;
   }
 
-  return <nav class={containerClass} {...restWithoutClass}></nav>;
+  return (
+    <nav class={containerClass} {...restWithoutClass}>
+      {children}
+    </nav>
+  );
 };

@@ -1,8 +1,8 @@
 import { VerticalNavbarBottom } from "@/components/molecules/vertical-navbar/vertical-navbar-bottom.tsx";
 import { VerticalNavbarItem } from "@/components/molecules/vertical-navbar/vertical-navbar-item.tsx";
-import { VerticalNavbarSection } from "@/components/molecules/vertical-navbar/vertical-navbar-section.tsx";
 import { VerticalNavbarTop } from "@/components/molecules/vertical-navbar/vertical-navbar-top.tsx";
 import { VerticalNavbar as RFUIVerticalNavbar } from "@/islands/molecules/vertical-navbar/index.tsx";
+import { VerticalNavbarSection } from "@/islands/molecules/vertical-navbar/vertical-navbar-section.tsx";
 
 type VerticalNavbarType = {
   route: string;

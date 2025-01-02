@@ -50,6 +50,7 @@ import * as $molecules_radio_button_card_group from "./routes/molecules/radio-bu
 import * as $molecules_radio_button_group from "./routes/molecules/radio-button-group.tsx";
 import * as $molecules_stepper from "./routes/molecules/stepper.tsx";
 import * as $molecules_tabs from "./routes/molecules/tabs.tsx";
+import * as $molecules_vertical_navbar from "./routes/molecules/vertical-navbar.tsx";
 import * as $docs_site_component_docs_page_modal_example from "./islands/docs-site/component-docs-page/modal-example.tsx";
 import * as $molecules_alert_1 from "./islands/molecules/alert.tsx";
 import * as $molecules_checkbox_card_group_1 from "./islands/molecules/checkbox-card-group.tsx";
@@ -62,6 +63,8 @@ import * as $molecules_radio_button_card_group_1 from "./islands/molecules/radio
 import * as $molecules_radio_button_group_1 from "./islands/molecules/radio-button-group.tsx";
 import * as $molecules_stepper_1 from "./islands/molecules/stepper.tsx";
 import * as $molecules_tabs_1 from "./islands/molecules/tabs.tsx";
+import * as $molecules_vertical_navbar_index from "./islands/molecules/vertical-navbar/index.tsx";
+import * as $molecules_vertical_navbar_vertical_navbar_section from "./islands/molecules/vertical-navbar/vertical-navbar-section.tsx";
 import type { Manifest } from "$fresh/server.ts";
 
 const manifest = {
@@ -116,6 +119,7 @@ const manifest = {
     "./routes/molecules/radio-button-group.tsx": $molecules_radio_button_group,
     "./routes/molecules/stepper.tsx": $molecules_stepper,
     "./routes/molecules/tabs.tsx": $molecules_tabs,
+    "./routes/molecules/vertical-navbar.tsx": $molecules_vertical_navbar,
   },
   islands: {
     "./islands/docs-site/component-docs-page/modal-example.tsx":
@@ -136,6 +140,10 @@ const manifest = {
       $molecules_radio_button_group_1,
     "./islands/molecules/stepper.tsx": $molecules_stepper_1,
     "./islands/molecules/tabs.tsx": $molecules_tabs_1,
+    "./islands/molecules/vertical-navbar/index.tsx":
+      $molecules_vertical_navbar_index,
+    "./islands/molecules/vertical-navbar/vertical-navbar-section.tsx":
+      $molecules_vertical_navbar_vertical_navbar_section,
   },
   baseUrl: import.meta.url,
 } satisfies Manifest;

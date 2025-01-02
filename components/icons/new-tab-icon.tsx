@@ -7,7 +7,7 @@ export const NewTabIcon = () => {
       viewBox="0 0 24 24"
       strokeWidth={1.5}
       stroke="currentColor"
-      className="relative bottom-[1px] left-1 inline w-4 underline"
+      className="relative bottom-[1px] left-2 inline w-4 underline"
     >
       <path
         strokeLinecap="round"

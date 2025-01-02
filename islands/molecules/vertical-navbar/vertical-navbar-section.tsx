@@ -13,7 +13,7 @@ export const VerticalNavbarSection = (
     <section class={isExpanded ? "mb-8" : "mb-6"}>
       {heading && (
         <h3
-          class="mt-3 cursor-pointer rounded px-3 py-2 font-bold tracking-wide text-neutral-700 hover:bg-neutral-100/50 max-sm:text-sm sm:py-1 sm:text-xs"
+          class="mt-3 cursor-pointer rounded px-3 py-2 font-bold tracking-wide text-neutral-700 max-sm:text-sm sm:py-1 sm:text-xs sm:hover:bg-neutral-100/50"
           onClick={toggleIsExpanded}
         >
           {heading}

@@ -25,7 +25,7 @@ export default () => {
       </p>
       <p>
         Note: If you're using this component you'll probably want to structure
-        your layout in a manner similar to this.
+        your layout in a manner similar to this:
       </p>
       <CodeBlock
         language="tsx"

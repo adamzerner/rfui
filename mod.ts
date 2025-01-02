@@ -61,6 +61,9 @@ export type {
   LinkItemType,
   NavigationLinksType,
 } from "./components/molecules/navigation-links.tsx";
+export { VerticalNavbarBottom } from "./components/molecules/vertical-navbar/vertical-navbar-bottom.tsx";
+export { VerticalNavbarItem } from "./components/molecules/vertical-navbar/vertical-navbar-item.tsx";
+export { VerticalNavbarTop } from "./components/molecules/vertical-navbar/vertical-navbar-top.tsx";
 export { Alert, AlertBody, AlertHeader } from "./islands/molecules/alert.tsx";
 export type { AlertType } from "./islands/molecules/alert.tsx";
 export {
@@ -93,14 +96,9 @@ export { Stepper } from "./islands/molecules/stepper.tsx";
 export type { StepperType } from "./islands/molecules/stepper.tsx";
 export { Tabs, TabSection } from "./islands/molecules/tabs.tsx";
 export type { TabsType } from "./islands/molecules/tabs.tsx";
-export {
-  VerticalNavbar,
-  VerticalNavbarBottom,
-  VerticalNavbarItem,
-  VerticalNavbarSection,
-  VerticalNavbarTop,
-} from "./islands/molecules/vertical-navbar/index.tsx";
+export { VerticalNavbar } from "./islands/molecules/vertical-navbar/index.tsx";
 export type { VerticalNavbarType } from "./islands/molecules/vertical-navbar/index.tsx";
+export { VerticalNavbarSection } from "./islands/molecules/vertical-navbar/vertical-navbar-section.tsx";
 
 export { Container } from "./components/helpers/container.tsx";
 export type { ContainerType } from "./components/helpers/container.tsx";

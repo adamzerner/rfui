@@ -1,6 +1,7 @@
 import { CodeBlock } from "@/components/atoms/code-block.tsx";
 import { InlineCode } from "@/components/atoms/inline-code.tsx";
 import { Link } from "@/components/atoms/link.tsx";
+import { Text } from "@/components/atoms/text.tsx";
 import {
   ComponentDocsPage,
   ExampleType,
@@ -12,7 +13,19 @@ import {
 } from "@/islands/molecules/navbar/index.tsx";
 
 export default () => {
-  const overviewNotes = null;
+  const overviewNotes = (
+    <Text>
+      <p>
+        A vertical navbar is a good option for more complex sites that have a
+        lot of navigation items they want to display. See Nielsen Norman Group's
+        {" "}
+        <Link href="https://www.nngroup.com/articles/vertical-nav/">
+          blog post
+        </Link>{" "}
+        for more information.
+      </p>
+    </Text>
+  );
   const examples: ExampleType[] = [{
     title: "Basic",
     demo: (

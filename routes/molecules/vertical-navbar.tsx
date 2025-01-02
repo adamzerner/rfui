@@ -6,11 +6,10 @@ import {
   ComponentDocsPage,
   ExampleType,
 } from "@/components/docs-site/component-docs-page/index.tsx";
-import {
-  Navbar,
-  NavbarItem,
-  NavbarLeft,
-} from "@/islands/molecules/navbar/index.tsx";
+import { VerticalNavbarItem } from "@/components/molecules/vertical-navbar/vertical-navbar-item.tsx";
+import { VerticalNavbarTop } from "@/components/molecules/vertical-navbar/vertical-navbar-top.tsx";
+import { VerticalNavbar } from "@/islands/molecules/vertical-navbar/index.tsx";
+import { VerticalNavbarSection } from "@/islands/molecules/vertical-navbar/vertical-navbar-section.tsx";
 
 export default () => {
   const overviewNotes = (
@@ -29,23 +28,41 @@ export default () => {
   const examples: ExampleType[] = [{
     title: "Basic",
     demo: (
-      <Navbar size="xl">
-        <NavbarLeft>
-          <NavbarItem href="https://one.com">One</NavbarItem>
-          <NavbarItem href="https://two.com">Two</NavbarItem>
-        </NavbarLeft>
-      </Navbar>
+      <VerticalNavbar class="!h-[300px]">
+        <VerticalNavbarTop>
+          <VerticalNavbarSection>
+            <VerticalNavbarItem href="/one" isActive={true}>
+              One
+            </VerticalNavbarItem>
+            <VerticalNavbarItem href="/two" isActive={false}>
+              Two
+            </VerticalNavbarItem>
+            <VerticalNavbarItem href="/three" isActive={false}>
+              Three
+            </VerticalNavbarItem>
+          </VerticalNavbarSection>
+        </VerticalNavbarTop>
+      </VerticalNavbar>
     ),
     code: (
       <CodeBlock
         class="mt-4"
         language="tsx"
-        code={`<Navbar size="xl">
-  <NavbarLeft>
-    <NavbarItem href="https://one.com">One</NavbarItem>
-    <NavbarItem href="https://two.com">Two</NavbarItem>
-  </NavbarLeft>
-</Navbar>`}
+        code={`<VerticalNavbar>
+  <VerticalNavbarTop>
+    <VerticalNavbarSection>
+      <VerticalNavbarItem href="/one" isActive={true}>
+        One
+      </VerticalNavbarItem>
+      <VerticalNavbarItem href="/two" isActive={false}>
+        Two
+      </VerticalNavbarItem>
+      <VerticalNavbarItem href="/three" isActive={false}>
+        Three
+      </VerticalNavbarItem>
+    </VerticalNavbarSection>
+  </VerticalNavbarTop>
+</VerticalNavbar>`}
       />
     ),
   }];

@@ -23,6 +23,25 @@ export default () => {
         </Link>{" "}
         for more information.
       </p>
+      <p>
+        Note: If you're using this component you'll probably want to structure
+        your layout in a manner similar to this.
+      </p>
+      <CodeBlock
+        language="tsx"
+        code={`<section class="sm:flex">
+  <VerticalNavbar route={route} />
+  <Container class="grow pb-8">
+    <Component />
+  </Container>
+</section>`}
+      />
+      <p>
+        Note: This component doesn't work well with{" "}
+        <Link href="/molecules/footer">
+          <InlineCode>Footer</InlineCode>
+        </Link>. You probably won't want to combine the two though.
+      </p>
     </Text>
   );
   const examples: ExampleType[] = [{

@@ -93,6 +93,14 @@ export { Stepper } from "./islands/molecules/stepper.tsx";
 export type { StepperType } from "./islands/molecules/stepper.tsx";
 export { Tabs, TabSection } from "./islands/molecules/tabs.tsx";
 export type { TabsType } from "./islands/molecules/tabs.tsx";
+export {
+  VerticalNavbar,
+  VerticalNavbarBottom,
+  VerticalNavbarItem,
+  VerticalNavbarSection,
+  VerticalNavbarTop,
+} from "./islands/molecules/vertical-navbar/index.tsx";
+export type { VerticalNavbarType } from "./islands/molecules/vertical-navbar/index.tsx";
 
 export { Container } from "./components/helpers/container.tsx";
 export type { ContainerType } from "./components/helpers/container.tsx";

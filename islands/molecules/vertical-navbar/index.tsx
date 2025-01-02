@@ -4,6 +4,11 @@ import { Flex } from "../../../components/helpers/flex.tsx";
 import { CloseIcon } from "../../../components/icons/close-icon.tsx";
 import { HamburgerIcon } from "../../../components/icons/hamburger-icon.tsx";
 
+export { VerticalNavbarBottom } from "../../../components/molecules/vertical-navbar/vertical-navbar-bottom.tsx";
+export { VerticalNavbarItem } from "../../../components/molecules/vertical-navbar/vertical-navbar-item.tsx";
+export { VerticalNavbarTop } from "../../../components/molecules/vertical-navbar/vertical-navbar-top.tsx";
+export { VerticalNavbarSection } from "./vertical-navbar-section.tsx";
+
 export type VerticalNavbarType = {
   background?: "neutral" | "none";
   children: ComponentChild;

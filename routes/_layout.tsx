@@ -1,16 +1,15 @@
 import { PageProps } from "$fresh/server.ts";
 import { VerticalNavbar } from "@/components/docs-site/vertical-navbar.tsx";
 import { Container } from "@/components/helpers/container.tsx";
-import { Flex } from "@/components/helpers/flex.tsx";
 
 export default ({ Component, route }: PageProps) => {
   return (
-    <Flex>
+    <section class="sm:flex">
       <VerticalNavbar route={route} />
       <Container size="2xl" class="grow pb-8 font-sans">
         <Component />
       </Container>
-    </Flex>
+    </section>
   );
 
   // return (

@@ -18,7 +18,8 @@ export const VerticalNavbarItem = (
     children: ComponentChild;
   },
 ) => {
-  let containerClass = "my-2 block flex items-center rounded px-3 py-2";
+  let containerClass =
+    "my-3 block flex items-center rounded px-3 py-3 max-sm:text-lg sm:my-2 sm:py-2";
 
   containerClass += ` ${isActive ? "font-bold" : "hover:bg-neutral-100"}`;
 

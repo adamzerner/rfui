@@ -11,7 +11,7 @@ export default () => {
   const overviewNotes = null;
   const examples: ExampleType[] = [{
     title: "Basic",
-    demo: <Progress />,
+    demo: <Progress value={0} />,
     code: <CodeBlock class="mt-4" language="tsx" code={`<Progress />`} />,
   }];
   const propsTables = [{

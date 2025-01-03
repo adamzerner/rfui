@@ -1,6 +1,8 @@
 import type { ComponentProps } from "preact";
 
-export type ProgressType = {} & ComponentProps<"div">;
+export type ProgressType = {
+  value: number;
+} & ComponentProps<"div">;
 
 /**
  * @function Progress
@@ -12,22 +14,27 @@ export type ProgressType = {} & ComponentProps<"div">;
  */
 export const Progress = (
   {
+    value,
     ...rest
   }: ProgressType,
 ) => {
   const { class: restClass, ...restWithoutClass } = rest;
-  let className = "h-4 w-[300px] bg-neutral-50";
+  let outerClassName =
+    "box-content h-4 w-[300px] rounded-sm border border-neutral-100 bg-neutral-50";
+  const innerClassName = `h-4 ${
+    value === 100 ? "rounded-sm" : "rounded-l-sm"
+  } bg-neutral-200`;
 
   if (restClass) {
-    className += ` ${restClass}`;
+    outerClassName += ` ${restClass}`;
   }
 
   return (
     <div
       {...restWithoutClass}
-      class={className}
+      class={outerClassName}
     >
-      <div class="h-4 w-2/5 bg-neutral-200"></div>
+      <div class={innerClassName} style={{ width: `${value}%` }}></div>
     </div>
   );
 };

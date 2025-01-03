@@ -28,6 +28,20 @@ export default () => {
     code: (
       <CodeBlock class="mt-4" language="tsx" code={`<Progress value={40} />`} />
     ),
+  }, {
+    title: "Variant",
+    demo: (
+      <Stack class="gap-5">
+        <Progress value={40} variant="neutral" />
+        <Progress value={40} variant="info" />
+        <Progress value={40} variant="success" />
+        <Progress value={40} variant="warning" />
+        <Progress value={40} variant="danger" />
+      </Stack>
+    ),
+    code: (
+      <CodeBlock class="mt-4" language="tsx" code={`<Progress value={40} />`} />
+    ),
   }];
   const propsTables = [{
     title: null,

@@ -1,6 +1,6 @@
 import type { ComponentProps } from "preact";
 
-export type ProgressType = {} & Omit<ComponentProps<"div">, "size">;
+export type ProgressType = {} & ComponentProps<"div">;
 
 /**
  * @function Progress

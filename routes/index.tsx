@@ -10,6 +10,7 @@ import { InlineCode } from "@/components/atoms/inline-code.tsx";
 import { Input } from "@/components/atoms/input.tsx";
 import { Link } from "@/components/atoms/link.tsx";
 import { OL } from "@/components/atoms/ol.tsx";
+import { Progress } from "@/components/atoms/progress.tsx";
 import { RadioButton } from "@/components/atoms/radio-button.tsx";
 import { Select } from "@/components/atoms/select.tsx";
 import { Switch } from "@/components/atoms/switch.tsx";
@@ -125,6 +126,11 @@ export const getComponents = (signal: Signal<null>) => ({
           <li>Bronze</li>
         </OL>
       ),
+    },
+    {
+      name: "Progress",
+      href: "/atoms/progress",
+      demo: <Progress />,
     },
     {
       name: "RadioButton",

@@ -24,6 +24,8 @@ export { Link } from "./components/atoms/link.tsx";
 export type { LinkType } from "./components/atoms/link.tsx";
 export { OL } from "./components/atoms/ol.tsx";
 export type { OLType } from "./components/atoms/ol.tsx";
+export { Progress } from "./components/atoms/progress.tsx";
+export type { ProgressType } from "./components/atoms/progress.tsx";
 export { RadioButton } from "./components/atoms/radio-button.tsx";
 export type { RadioButtonType } from "./components/atoms/radio-button.tsx";
 export { Select } from "./components/atoms/select.tsx";

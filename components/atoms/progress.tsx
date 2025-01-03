@@ -20,10 +20,8 @@ export const Progress = (
 ) => {
   const { class: restClass, ...restWithoutClass } = rest;
   let outerClassName =
-    "box-content h-4 w-[300px] rounded-sm border border-neutral-100 bg-neutral-50";
-  const innerClassName = `h-4 ${
-    value === 100 ? "rounded-sm" : "rounded-l-sm"
-  } bg-neutral-200`;
+    "box-content h-4 w-[300px] rounded-sm border border-neutral-200 bg-neutral-50";
+  const innerClassName = `h-4 bg-neutral-200`;
 
   if (restClass) {
     outerClassName += ` ${restClass}`;

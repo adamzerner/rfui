@@ -6,13 +6,28 @@ import {
   ComponentDocsPage,
   ExampleType,
 } from "@/components/docs-site/component-docs-page/index.tsx";
+import { Stack } from "@/components/helpers/stack.tsx";
 
 export default () => {
   const overviewNotes = null;
   const examples: ExampleType[] = [{
     title: "Basic",
     demo: <Progress value={40} />,
-    code: <CodeBlock class="mt-4" language="tsx" code={`<Progress />`} />,
+    code: (
+      <CodeBlock class="mt-4" language="tsx" code={`<Progress value={40} />`} />
+    ),
+  }, {
+    title: "Size",
+    demo: (
+      <Stack class="gap-5">
+        <Progress value={40} size="sm" />
+        <Progress value={40} size="md" />
+        <Progress value={40} size="lg" />
+      </Stack>
+    ),
+    code: (
+      <CodeBlock class="mt-4" language="tsx" code={`<Progress value={40} />`} />
+    ),
   }];
   const propsTables = [{
     title: null,

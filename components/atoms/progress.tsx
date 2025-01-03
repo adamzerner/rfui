@@ -2,7 +2,8 @@ import type { ComponentProps } from "preact";
 
 export type ProgressType = {
   value: number;
-} & ComponentProps<"div">;
+  size?: "sm" | "md" | "lg";
+} & Omit<ComponentProps<"div">, "size">;
 
 /**
  * @function Progress
@@ -15,13 +16,16 @@ export type ProgressType = {
 export const Progress = (
   {
     value,
+    size = "md",
     ...rest
   }: ProgressType,
 ) => {
   const { class: restClass, ...restWithoutClass } = rest;
   let outerClassName =
-    "box-content h-4 rounded-sm border border-neutral-200 bg-neutral-50";
-  const innerClassName = `h-4 bg-neutral-200`;
+    "box-content rounded-sm border border-neutral-200 bg-neutral-50";
+  const innerClassName = `h-full bg-neutral-200`;
+
+  outerClassName += ` ${size === "lg" ? "h-5" : size === "md" ? "h-4" : "h-3"}`;
 
   if (restClass) {
     outerClassName += ` ${restClass}`;

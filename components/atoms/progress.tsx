@@ -30,15 +30,15 @@ export const Progress = (
   outerClassName += " " + (() => {
     switch (variant) {
       case "neutral":
-        return "bg-neutral-50 border-neutral-900";
+        return "bg-neutral-50 border-neutral-200";
       case "info":
-        return "bg-primary-50 border-primary-900";
+        return "bg-primary-50 border-primary-200";
       case "success":
-        return "bg-supporting-green-50 border-supporting-green-900";
+        return "bg-supporting-green-50 border-supporting-green-200";
       case "warning":
-        return "bg-supporting-yellow-50 border-supporting-yellow-900";
+        return "bg-supporting-yellow-50 border-supporting-yellow-200";
       case "danger":
-        return "bg-supporting-red-50 border-supporting-red-900";
+        return "bg-supporting-red-50 border-supporting-red-200";
     }
   })();
   innerClassName += " " + (() => {

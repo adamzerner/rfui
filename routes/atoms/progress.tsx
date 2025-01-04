@@ -18,6 +18,13 @@ export default () => {
     ),
   }, {
     title: "Size",
+    description: (
+      <div>
+        You can also do something like <InlineCode>class="!h-8"</InlineCode>
+        {" "}
+        to set the height to a specific value.
+      </div>
+    ),
     demo: (
       <Stack class="gap-5">
         <Progress value={40} size="sm" />
@@ -26,7 +33,15 @@ export default () => {
       </Stack>
     ),
     code: (
-      <CodeBlock class="mt-4" language="tsx" code={`<Progress value={40} />`} />
+      <CodeBlock
+        class="mt-4"
+        language="tsx"
+        code={`<Stack class="gap-5">
+  <Progress value={40} size="sm" />
+  <Progress value={40} size="md" />
+  <Progress value={40} size="lg" />
+</Stack>`}
+      />
     ),
   }, {
     title: "Variant",
@@ -40,7 +55,17 @@ export default () => {
       </Stack>
     ),
     code: (
-      <CodeBlock class="mt-4" language="tsx" code={`<Progress value={40} />`} />
+      <CodeBlock
+        class="mt-4"
+        language="tsx"
+        code={`<Stack class="gap-5">
+  <Progress value={40} variant="neutral" />
+  <Progress value={40} variant="info" />
+  <Progress value={40} variant="success" />
+  <Progress value={40} variant="warning" />
+  <Progress value={40} variant="danger" />
+</Stack>`}
+      />
     ),
   }];
   const propsTables = [{

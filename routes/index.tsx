@@ -130,7 +130,7 @@ export const getComponents = (signal: Signal<null>) => ({
     {
       name: "Progress",
       href: "/atoms/progress",
-      demo: <Progress value={40} />,
+      demo: <Progress value={40} class="w-full" />,
     },
     {
       name: "RadioButton",

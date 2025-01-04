@@ -71,6 +71,29 @@ export default () => {
   const propsTables = [{
     title: null,
     props: [{
+      name: "value",
+      required: true,
+      type: "number",
+      default: null,
+      notes: (
+        <div>
+          The value should be a number between 0 and 100 and represents what
+          percentage of the bar is full.
+        </div>
+      ),
+    }, {
+      name: "size",
+      required: false,
+      type: '"sm" | "md" | "lg"',
+      default: '"md"',
+      notes: null,
+    }, {
+      name: "variant",
+      required: false,
+      type: '"success" | "info" | "warning" | "danger" | "neutral"',
+      default: '"neutral"',
+      notes: null,
+    }, {
       name: "...rest",
       required: false,
       type: 'ComponentProps<"div">',
